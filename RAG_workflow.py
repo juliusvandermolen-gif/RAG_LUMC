@@ -137,8 +137,12 @@ def fetch_chunks(conn):
     return cursor.fetchall()
 
 
-def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
+# def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
+#                              force_download=False):
+
+def load_model_and_tokenizer(model_name="distilbert/distilbert-base-uncased",
                              force_download=False):
+
     tokenizer = AutoTokenizer.from_pretrained(model_name,
                                               force_download=force_download)
     model = AutoModel.from_pretrained(model_name,
@@ -319,7 +323,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     try:
         response = client.chat.completions.create(
-            model="o1-preview",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": system_instruction},
                 {"role": "user", "content": prompt}
@@ -356,7 +360,6 @@ def query_expansion(query_text):
     #     max_tokens=100,
     #     temperature=0.2
     # )
-
     return query_text
 
 
@@ -403,7 +406,7 @@ def search_genes(unknown_genes, gene_cache, cache_file):
     return resolved_genes
 
 
-def convert_gene_id_to_symbols(file, data_dir):
+def convert_gene_id_to_symbols(file, data_dir='./Data/JSON/'):
     cache_file = os.path.join(data_dir, 'ncbi_id_to_symbol.json')
     gene_cache = load_gene_id_cache(cache_file)
 
