@@ -2,6 +2,7 @@ import os
 import json
 import hashlib
 import requests
+from langchain_text_splitters import CharacterTextSplitter
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
@@ -17,6 +18,7 @@ from transformers import AutoModel, AutoTokenizer
 import torch
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import warnings
+from rank_bm25 import BM25Okapi
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -138,7 +140,7 @@ def fetch_chunks(conn):
 # def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
 #                              force_download=False):
 
-def load_model_and_tokenizer(model_name="distilbert/distilbert-base-uncased",
+def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
                              force_download=False):
 
     tokenizer = AutoTokenizer.from_pretrained(model_name,
@@ -179,27 +181,48 @@ def load_gz_files(data_dir='./Data/biomart'):
     return documents
 
 
-def chunk_documents(documents, chunk_size=1200, chunk_overlap=300):
-    print("Chunking documents...")
+# def chunk_documents(documents, chunk_size=5000, chunk_overlap=300):
+#     print("Chunking documents...")
+#     if not documents:
+#         print("No documents to chunk. Returning an empty list.")
+#         return []
+#
+#     text_splitter = CharacterTextSplitter(
+#         separator="\n",
+#         chunk_size=chunk_size,
+#         chunk_overlap=chunk_overlap,
+#         length_function=len
+#     )
+#
+#     chunked_docs = []
+#
+#     for idx, document in enumerate(documents):
+#         print(f"Processing Document {idx + 1} with length {len(document)} characters.")
+#         chunks = text_splitter.split_text(document)
+#         print(f"Document {idx + 1} split into {len(chunks)} chunks.")
+#         chunked_docs.extend(chunks)
+#
+#     print(f"Total number of chunks: {len(chunked_docs)}")
+#     return chunked_docs
+
+def chunk_documents(documents):
+    print("Chunking documents by line...")
     if not documents:
         print("No documents to chunk. Returning an empty list.")
         return []
 
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size,
-        chunk_overlap=chunk_overlap,
-        separators=["\n\n", "\n", " ", ""]
-    )
     chunked_docs = []
-
     for idx, document in enumerate(documents):
         print(f"Processing Document {idx + 1} with length {len(document)} characters.")
-        chunks = text_splitter.split_text(document)
-        print(f"Document {idx + 1} split into {len(chunks)} chunks.")
-        chunked_docs.extend(chunks)
 
-    print(f"Total number of chunks: {len(chunked_docs)}")
+        # Split each document by lines and treat each line as its own chunk
+        lines = document.split("\n")
+        chunked_docs.extend(line for line in lines if line.strip())  # Add non-empty lines as chunks
+
+    print(f"Total number of chunks: {len(chunked_docs)} (should match line count)")
     return chunked_docs
+
+
 
 
 def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
@@ -225,10 +248,11 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
             print(f"No lines found in file '{file}'. Skipping embedding.")
             continue
 
-        data_lines = lines[1:]
+        data_lines = lines[1:] if file.endswith('txt.gz') else lines
+
         if not data_lines:
-            print(f"No data lines found in file '{file}' after skipping header. Skipping embedding.")
-            continue
+                print(f"No data lines found in file '{file}' after skipping header. Skipping embedding.")
+                continue
 
         document_content = "\n".join(data_lines)
         print(f"Loaded '{file}' with {len(data_lines)} data lines after skipping header.")
@@ -277,8 +301,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
     save_file_log(file_log, log_path=log_path)
 
 
-def query_faiss_index(query_text, index, tokenizer, model, top_k=5):
-    print("Querying FAISS index...")
+def query_faiss_index(query_text, index, tokenizer, model, top_k=20):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.to(device)
     model.eval()
@@ -292,8 +315,6 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k=5):
     distances, indices = index.search(query_embedding, top_k)
     top_ids = [int(id_) for id_ in indices[0] if id_ != -1]
     top_distances = [float(dist) for dist in distances[0] if dist != -1]
-
-    print(f"Number of top documents retrieved: {len(top_ids)}")
     return top_ids, top_distances
 
 
@@ -305,6 +326,29 @@ def fetch_chunks_by_ids(conn, ids):
     results = cursor.fetchall()
     return [row[0] for row in results]
 
+def build_bm25_index(conn):
+    cursor = conn.cursor()
+    cursor.execute('SELECT id, text FROM chunks')
+    data = cursor.fetchall()
+    chunk_ids = []
+    chunk_texts = []
+    for row in data:
+        chunk_ids.append(row[0])
+        chunk_texts.append(row[1])
+    # Tokenize the documents
+    tokenized_corpus = [doc.lower().split() for doc in chunk_texts]
+    bm25 = BM25Okapi(tokenized_corpus)
+    return bm25, chunk_ids, chunk_texts
+
+def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=5):
+    query_tokens = query_text.lower().split()
+    scores = bm25.get_scores(query_tokens)
+    import numpy as np
+    top_n = np.argsort(scores)[::-1][:top_k]
+    top_ids = [chunk_ids[i] for i in top_n]
+    top_scores = [scores[i] for i in top_n]
+    return top_ids, top_scores
+
 
 def generate_gpt4_turbo_response_with_instructions(query_text,
                                                    document_references):
@@ -312,6 +356,15 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
     You are an efficient and insightful assistant to a molecular biologist.
     Write a critical analysis of the biological processes performed by this system of interacting proteins.
     Be concise and specific; avoid overly general statements. Be factual and avoid opinions.
+    
+    For the documents that are formatted like this:
+    Example:
+    Glutathione metabolism%WikiPathways_20240910%WP100%Homo sapiens https://www.wikipathways.org/instance/WP100
+    [GGT5, GGT-REL, GGTLA1] [GGT1, CD224, D22S672, D22S732, GGT]    [GPX1]  [GSR]
+    
+    Contain the pathway, from the species, in this case Homo Sapiens, with its wikipathways link. The genes are in list.
+    For every list there is the gene with its synonym. If there are multiple, there are multiple synonyms: GGT5 has the
+    synonyms GGT-REL and GGTLA1. GPX1 however, does not have any Synonyms.
     """
 
     combined_documents = "\n\n".join(document_references)
@@ -509,6 +562,7 @@ def main():
     db_path = 'chunks_embeddings.db'
     cache_file = os.path.join(data_dir, 'ncbi_id_to_symbol.json')
 
+    # Process and convert gene IDs in files
     for file in os.listdir(data_dir):
         full_file_path = os.path.join(data_dir, file)
         if os.path.isfile(full_file_path) and file.endswith('.gmt') and file.startswith('wiki'):
@@ -516,9 +570,12 @@ def main():
             converted_lines, unknown_genes = convert_gene_id_to_symbols(file, data_dir)
             print(f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
+    # Initialize database and load models
     conn = initialize_database(db_path=db_path)
     tokenizer, model = load_model_and_tokenizer()
     embedding_dim = model.config.hidden_size
+
+    # Load or create FAISS index
     try:
         index = load_faiss_index(embedding_dim, index_path=index_path)
     except ValueError as ve:
@@ -529,55 +586,107 @@ def main():
             print(f"Deleted FAISS index at {index_path}")
         index = load_faiss_index(embedding_dim, index_path=index_path)
 
+    # Embed documents and save FAISS index
     embed_documents(conn, index, tokenizer, model, data_dir=data_dir, batch_size=64, log_path=log_path)
     save_faiss_index(index, index_path=index_path)
     conn.close()
 
+    # Reload FAISS index and connect to database
     index = load_faiss_index(embedding_dim, index_path=index_path)
     conn = sqlite3.connect(db_path)
 
-    query = "IDH1 Synonyms"
+    # Build BM25 index
+    bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
+
+    # Query and expand queries
+    query = "Pentose phosphate metabolism"
     number_of_expansions = 5
-    expanded_queries = query_expansion(query, number=number_of_expansions)[1:] #As it starts with possible expanded queries
+    expanded_queries = query_expansion(query, number=number_of_expansions)[1:]  # Exclude first line if it's an example
     print(f"Using Expanded Queries: {expanded_queries}")
+    expanded_queries.append(query)
 
-    doc_distance_dict = {}
+    top_k = 5
 
+    # Retrieve documents using FAISS
+    faiss_doc_distance_dict = {}
     for eq in expanded_queries:
-        top_ids, distances = query_faiss_index(eq, index, tokenizer, model, top_k=5)
-
+        top_ids, distances = query_faiss_index(eq, index, tokenizer, model, top_k=top_k)
         for doc_id, distance in zip(top_ids, distances):
-            if doc_id in doc_distance_dict:
-                if distance < doc_distance_dict[doc_id][0]:
-                    doc_distance_dict[doc_id] = (distance, eq)
+            if doc_id in faiss_doc_distance_dict:
+                if distance < faiss_doc_distance_dict[doc_id][0]:
+                    faiss_doc_distance_dict[doc_id] = (distance, eq)
             else:
-                doc_distance_dict[doc_id] = (distance, eq)
+                faiss_doc_distance_dict[doc_id] = (distance, eq)
 
-    sorted_docs = sorted(doc_distance_dict.items(), key=lambda item: item[1][0])
-    top_5_docs = sorted_docs[:5]
-
-    print("\nTop 5 documents with the shortest distances:")
-    for rank, (doc_id, (distance, source_query)) in enumerate(top_5_docs, start=1):
+    sorted_faiss_docs = sorted(faiss_doc_distance_dict.items(), key=lambda item: item[1][0])
+    top_faiss_docs = sorted_faiss_docs[:top_k]
+    print(f"\nTop {top_k} documents with the shortest distances (FAISS):")
+    for rank, (doc_id, (distance, source_query)) in enumerate(top_faiss_docs, start=1):
         print(f"{rank}. Document ID: {doc_id}, Distance: {distance}, Source Query: {source_query}")
 
-    top_5_ids = [doc_id for doc_id, _ in top_5_docs]
+    # Retrieve documents using BM25
+    bm25_doc_scores = {}
+    for eq in expanded_queries:
+        top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids, bm25_chunk_texts, top_k=top_k)
+        for doc_id, score in zip(top_ids_bm25, scores):
+            if doc_id in bm25_doc_scores:
+                if score > bm25_doc_scores[doc_id][0]:  # Higher score is better in BM25
+                    bm25_doc_scores[doc_id] = (score, eq)
+            else:
+                bm25_doc_scores[doc_id] = (score, eq)
 
-    if top_5_ids:
-        retrieved_chunks = fetch_chunks_by_ids(conn, top_5_ids)
-        print(f"Retrieved {len(retrieved_chunks)} unique chunks from the database.")
+    sorted_bm25_docs = sorted(bm25_doc_scores.items(), key=lambda item: item[1][0], reverse=True)
+    top_bm25_docs = sorted_bm25_docs[:top_k]
+    print(f"\nTop {top_k} documents from BM25:")
+    for rank, (doc_id, (score, source_query)) in enumerate(top_bm25_docs, start=1):
+        print(f"{rank}. Document ID: {doc_id}, Score: {score}, Source Query: {source_query}")
 
-        response = generate_gpt4_turbo_response_with_instructions(query, retrieved_chunks)
+    # Combine the document IDs and keep track of their sources
+    combined_docs = {}
+    for rank, (doc_id, (distance, source_query)) in enumerate(top_faiss_docs, start=1):
+        if doc_id not in combined_docs:
+            combined_docs[doc_id] = {'retriever': ['FAISS'], 'rank': rank}
+        else:
+            combined_docs[doc_id]['retriever'].append('FAISS')
+
+    for rank, (doc_id, (score, source_query)) in enumerate(top_bm25_docs, start=1):
+        if doc_id not in combined_docs:
+            combined_docs[doc_id] = {'retriever': ['BM25'], 'rank': rank}
+        else:
+            combined_docs[doc_id]['retriever'].append('BM25')
+
+    # Fetch the combined unique documents
+    combined_top_ids = list(combined_docs.keys())
+    if combined_top_ids:
+        retrieved_chunks = fetch_chunks_by_ids(conn, combined_top_ids)
+        # Create a mapping from doc_id to chunk text
+        doc_id_to_chunk = dict(zip(combined_top_ids, retrieved_chunks))
+
+        # Prepare the documents with labels
+        labeled_documents = []
+        for idx, doc_id in enumerate(combined_top_ids, start=1):
+            retrievers = combined_docs[doc_id]['retriever']
+            retriever_label = ' and '.join(retrievers)
+            chunk_text = doc_id_to_chunk[doc_id]
+            labeled_document = f"Reference {idx} ({retriever_label}):\n{chunk_text}"
+            labeled_documents.append(labeled_document)
+
+        print(f"Retrieved {len(labeled_documents)} unique chunks from the database.")
+
+        response = generate_gpt4_turbo_response_with_instructions(query, labeled_documents)
         if response:
             print(f"GPT-4 Response:\n{response}")
-            combined_documents = "\n\n".join(retrieved_chunks)
+            combined_documents = "\n\n".join(labeled_documents)
             prompt = f"Based on the following documents, answer the question: {query}\n\nDocuments:\n{combined_documents}\n"
-            save_answer_to_file(prompt, response, retrieved_chunks)
+            save_answer_to_file(prompt, response, labeled_documents)
         else:
             print("Failed to generate a response from GPT-4.")
     else:
         print("No documents retrieved for the expanded queries. Skipping GPT-4 response generation.")
 
     conn.close()
+
+
 
 
 

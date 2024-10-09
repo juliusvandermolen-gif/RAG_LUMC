@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/reorder_mart.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/reorder_mart.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/converted_wikipathways-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/to_be_converted/converted_wikipathways-20240910-gmt-Homo_sapiens.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Homo_sapiens.gmt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Homo_sapiens.gmt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/file_log/file_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gene_synonym.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gene_synonym.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,19 +29,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.RAG.executor": "Run",
-    "Python.RAG_workflow.executor": "Run",
-    "Python.Unnamed.executor": "Run",
-    "Python.hugginface_test.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/RAG_LUMC/RAG_workflow.py",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.RAG.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RAG_workflow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hugginface_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/RAG_LUMC/RAG_workflow.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.RAG">
     <configuration name="RAG" type="PythonConfigurationType" factoryName="Python">
       <module name="RAG_LUMC" />
