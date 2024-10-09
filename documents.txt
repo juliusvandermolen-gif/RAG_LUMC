@@ -1,36 +1,18 @@
 Reference 1:
-Caloric restriction and aging%WikiPathways_20240910%WP4191%Homo sapiens	https://www.wikipathways.org/instance/WP4191	[MTOR, FLJ44809, FRAP, FRAP1, FRAP2, RAFT1, RAPT1]	[NAMPT, PBEF, PBEF1]	[PRKAB2]	[SIRT1, SIR2L1]	[IGF1, IGF, IGF-I, IGF1A, IGFI]	[PPARGC1A, PGC-1ALPHA, PGC1, PGC1A, PPARAGCIA, PPARGC1]	[AKT1, AKT, PKB, PRKBA, RAC, RAC-ALPHA]	[TP53, LFS1, P53]
-Hormonal control of pubertal growth spurt%WikiPathways_20240910%WP4194%Homo sapiens	https://www.wikipathways.org/instance/WP4194	[IGF1, IGF, IGF-I, IGF1A, IGFI]	[GNRH1, GNRH, GRH, LHRH]	[GHRH, GHRF]	[SST, SMST, SST1]	[GH1, GH, GH-N, GHN, HGH-N]
+Pentose phosphate metabolism%WikiPathways_20240910%WP134%Homo sapiens	https://www.wikipathways.org/instance/WP134	[G6PD, G6PD1]	[PGLS, 6PGL]	[RPE]	[TALDO1]	[RPIA]	[TKT]	[PGD]
+Phase I biotransformations non P450%WikiPathways_20240910%WP136%Homo sapiens	https://www.wikipathways.org/instance/WP136	[CES5A, CAUXIN, CES4C1, CES5, CES7, FLJ31547]	[ESD]	[LIPA, CESD, LAL]	[PON3]	[CES2, CE-2, CES2A1, ICE]	[PON2]	[CES1, CEH, CES1A1, CES1A2, CES2, HMSE, HMSE1, SES1]	[PON1, ESA, PON]
 
 Reference 2:
-ENSG00000275074,NUDT18,nudix hydrolase 18 [Source:HGNC Symbol;Acc:HGNC:26194],[FLJ22494_MTH3],nudix hydrolase 18,79873.0
-ENSG00000275075,,transmembrane protein 128  (TMEM128) pseudogene,[],,
-ENSG00000275078,,MAD1 mitotic arrest deficient-like 1 (yeast) (MAD1L1) pseudogene,[],,
-ENSG00000275079,LPCAT1,lysophosphatidylcholine acyltransferase 1 [Source:HGNC Symbol;Acc:HGNC:25718],[AGPAT10_AGPAT9_AYTL2_FLJ12443_LPLAT8],lysophosphatidylcholine acyltransferase 1,79888.0
-ENSG00000275080,KIR2DL1,"killer cell immunoglobulin like receptor, two Ig domains and long cytoplasmic tail 1 [Source:HGNC Symbol;Acc:HGNC:6329]",[47.11_CD158A_CL-42_NKAT1_P58.1],"killer cell immunoglobulin like receptor, two Ig domains and long cytoplasmic tail 1",3802.0
-ENSG00000275082,NLRP2,NLR family pyrin domain containing 2 [Source:HGNC Symbol;Acc:HGNC:22948],[CLR19.9_FLJ20510_NALP2_NBS1_PAN1_PYPAF2],NLR family pyrin domain containing 2,55655.0
+Oxytocin signaling%WikiPathways_20240910%WP2889%Homo sapiens	https://www.wikipathways.org/instance/WP2889	[PLCD1]	[OXTR, OTR]	[CD38, CADPR1]	[GNAQ, G-ALPHA-Q, GAQ]
 
 Reference 3:
-ENSG00000275539,LILRA6,leukocyte immunoglobulin like receptor A6 [Source:HGNC Symbol;Acc:HGNC:15495],[CD85B_ILT8_LILRB6],leukocyte immunoglobulin like receptor A6,79168.0
-ENSG00000275540,,ubiquitin specific peptidase 6 (Tre-2 oncogene) (USP6) pseudogene,[],,
-ENSG00000275543,MPV17L,MPV17 mitochondrial inner membrane protein like [Source:HGNC Symbol;Acc:HGNC:26827],[FLJ39599_M-LPH_M-LPH1_M-LPH2_MPV17L1],MPV17 mitochondrial inner membrane protein like,255027.0
-ENSG00000275544,BDH1,3-hydroxybutyrate dehydrogenase 1 [Source:HGNC Symbol;Acc:HGNC:1027],[BDH_SDR9C1],3-hydroxybutyrate dehydrogenase 1,622.0
-ENSG00000275545,KIR3DL1,"killer cell immunoglobulin like receptor, three Ig domains and long cytoplasmic tail 1 [Source:HGNC Symbol;Acc:HGNC:6338]",[AMB11_CD158E1_CD158E1/2_CD158E2_CL-11_CL-2_KIR_NKAT3_NKB1_NKB1B],"killer cell immunoglobulin like receptor, three Ig domains and long cytoplasmic tail 1",3811.0
-ENSG00000275546,,"killer cell immunoglobulin-like receptor, two domains, long cytoplasmic tail, 2",[],,
-ENSG00000275547,,novel zinc finger pseudogene,[],,
+MicroRNA for targeting cancer growth and vascularization in glioblastoma%WikiPathways_20240910%WP3593%Homo sapiens	https://www.wikipathways.org/instance/WP3593	[HES1, BHLHB39, FLJ20408, HES-1, HRY]	[MIR31, HSA-MIR-31, MIRN31]	[VEGFA, VEGF, VEGF-A, VPF]	[HIF1AN, DKFZP762F1811, FIH1, FLJ20615, FLJ22027]	[HEY1, BHLHB31, CHF-2, CHF2, HERP2, HESR-1, HESR1, HRT-1]	[HIF1A, BHLHE78, HIF-1ALPHA, HIF1, MOP1, PASD8]	[VEGFB, VEGFL, VRF]	[VEGFC, VEGF-C, VRP]
 
 Reference 4:
-ENSG00000276380,UBE2NL,ubiquitin conjugating enzyme E2 N like (gene/pseudogene) [Source:HGNC Symbol;Acc:HGNC:31710],[],ubiquitin conjugating enzyme E2 N like (gene/pseudogene),389898.0
-ENSG00000276383,,,[],,
-ENSG00000276384,,"novel transcript, antisense to TNFSF12",[],,
-ENSG00000276385,,"CTAGE family, member 5 (CTAGE5) pseudogene",[],,
-ENSG00000276386,CNTNAP3P2,CNTNAP3 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:49589],[],,
-ENSG00000276387,KIR2DS1,"killer cell immunoglobulin like receptor, two Ig domains and short cytoplasmic tail 1 [Source:HGNC Symbol;Acc:HGNC:6333]",[CD158H_EB6ACTI_EB6ACTII],"killer cell immunoglobulin like receptor, two Ig domains and long cytoplasmic tail 1",3802.0
-ENSG00000276388,,"polymerase (RNA) III (DNA directed) polypeptide K, 12.3 kDa (POLR3K) pseudogene",[],,
-ENSG00000276390,,"novel transcript, sense intronic to RPAP3",[],,
-ENSG00000276391,,"galactosidase, beta 1-like (GLB1L) pseudogene",[],,
+Model for regulation of MSMP expression in cancer cells and its proangiogenic role in ovarian tumors%WikiPathways_20240910%WP4397%Homo sapiens	https://www.wikipathways.org/instance/WP4397	[CCR2, CC-CKR-2, CD192, CKR2, CMKBR2, FLJ78302, MCP-1-R]	[MSMP, PC-3, PSMP]	[CTCF, CFAP108, FAP108]
+MicroRNA network associated with chronic lymphocytic leukemia%WikiPathways_20240910%WP4399%Homo sapiens	https://www.wikipathways.org/instance/WP4399	[ZAP70, SRK, STD, ZAP-70]	[BCL2, BCL-2, PPP1R50]	[TP53, LFS1, P53]	[MIR15A, HSA-MIR-15A, MIRN15A]	[MIR16-1, HSA-MIR-16-1, MIRN16-1]	[ADAMTSL4-AS1, C1ORF138, FLJ45786]	[MCL1, BCL2L3, MCL-1]
+FABP4 in ovarian cancer%WikiPathways_20240910%WP4400%Homo sapiens	https://www.wikipathways.org/instance/WP4400	[FABP4, A-FABP, AP2]
 
 Reference 5:
-Caloric restriction and aging%WikiPathways_20240910%WP4191%Homo sapiens	https://www.wikipathways.org/instance/WP4191	[MTOR, FLJ44809, FRAP, FRAP1, FRAP2, RAFT1, RAPT1]	[NAMPT, PBEF, PBEF1]	[PRKAB2]	[SIRT1, SIR2L1]	[IGF1, IGF, IGF-I, IGF1A, IGFI]	[PPARGC1A, PGC-1ALPHA, PGC1, PGC1A, PPARAGCIA, PPARGC1]	[AKT1, AKT, PKB, PRKBA, RAC, RAC-ALPHA]	[TP53, LFS1, P53]
-Hormonal control of pubertal growth spurt%WikiPathways_20240910%WP4194%Homo sapiens	https://www.wikipathways.org/instance/WP4194	[IGF1, IGF, IGF-I, IGF1A, IGFI]	[GNRH1, GNRH, GRH, LHRH]	[GHRH, GHRF]	[SST, SMST, SST1]	[GH1, GH, GH-N, GHN, HGH-N]
+Conversion of angiotensinogen to angiotensin II %WikiPathways_20240910%WP4818%Homo sapiens	https://www.wikipathways.org/instance/WP4818	[ACE, ACE1, CD143, DCP1]	[CMA1]	[CTSG, CG]	[CTSD, CLN10, CPSD]	[REN]
 

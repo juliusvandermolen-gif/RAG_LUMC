@@ -8,6 +8,7 @@ os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 import gzip
 import sqlite3
 from dotenv import load_dotenv
+import openai
 from openai import OpenAI
 from tqdm import tqdm
 import faiss
@@ -42,7 +43,6 @@ def load_faiss_index(embedding_dim, index_path='faiss_index.bin'):
         if not isinstance(index, faiss.IndexIDMap):
             raise ValueError(
                 f"Loaded FAISS index is of type {type(index)}, but IndexIDMap is required.")
-        print("FAISS IndexIDMap loaded.")
     else:
         faiss_index = faiss.IndexFlatL2(embedding_dim)
         index = faiss.IndexIDMap(faiss_index)
@@ -52,7 +52,6 @@ def load_faiss_index(embedding_dim, index_path='faiss_index.bin'):
 
 def save_faiss_index(index, index_path='faiss_index.bin'):
     faiss.write_index(index, index_path)
-    print(f"FAISS index saved to {index_path}")
 
 
 def load_file_log(log_path='./file_log/file_log.json'):
@@ -117,7 +116,6 @@ def initialize_database(db_path='chunks_embeddings.db'):
         )
     ''')
     conn.commit()
-    print(f"Database initialized at {db_path}")
     return conn
 
 
@@ -277,7 +275,6 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
 
     save_faiss_index(index, index_path='faiss_index.bin')
     save_file_log(file_log, log_path=log_path)
-    print("Embedding process completed and index saved.")
 
 
 def query_faiss_index(query_text, index, tokenizer, model, top_k=5):
@@ -313,7 +310,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
                                                    document_references):
     system_instruction = """
     You are an efficient and insightful assistant to a molecular biologist.
-    Write a critical analysis of the biological processes performed by this system of interacting proteins. 
+    Write a critical analysis of the biological processes performed by this system of interacting proteins.
     Be concise and specific; avoid overly general statements. Be factual and avoid opinions.
     """
 
@@ -323,7 +320,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     try:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": system_instruction},
                 {"role": "user", "content": prompt}
@@ -341,6 +338,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
 
 def save_answer_to_file(prompt, answer, document_references,
                         file_name="answer.txt"):
+
     with open(file_name, "w", encoding='utf-8') as f:
         f.write(f"Prompt:\n{prompt}\n\n")
         f.write(f"Answer:\n{answer}\n\n")
@@ -353,14 +351,49 @@ def save_answer_to_file(prompt, answer, document_references,
             f.write(f"Reference {idx}:\n{doc}\n\n")
 
 
-def query_expansion(query_text):
-    # query_response = client.completions.create(
-    #     model="text-davinci-003",
-    #     prompt=f"Expand the following query: {query_text}",
-    #     max_tokens=100,
-    #     temperature=0.2
-    # )
-    return query_text
+def query_expansion(query_text, number):
+    system_instruction = """
+    You are an expert in query expansion for biomedical literature search.
+    Given a user's query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions.
+    The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
+    However, there is a maximum of {number} alternative queries that are given.
+
+    Example:
+    User query: "GGT5 in glutathione metabolism"
+
+    Possible expanded queries:
+    - "Gamma-glutamyltransferase 5 role in glutathione metabolism"
+    - "GGT5 enzyme function in glutathione pathway"
+    - "GGT5 and its involvement in glutathione homeostasis"
+    - "Impact of GGT5 on glutathione biosynthesis and metabolism"
+    """.format(number=number)
+
+    prompt = f"Based on the user's query, provide expanded queries that include related terms, synonyms, and relevant expansions.\n\nUser query: \"{query_text}\""
+
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_instruction},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=150,
+            temperature=0.7,
+
+        )
+
+        reply = response.choices[0].message.content
+        expanded_queries = reply.strip().split('\n')
+        expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for q in expanded_queries if q.strip()]
+
+        return expanded_queries
+
+    except Exception as e:
+        print(f"An error occurred while expanding the query: {e}")
+        return [query_text]
+
+
 
 
 def load_gene_id_cache(file_path):
@@ -474,16 +507,14 @@ def main():
     log_path = os.path.join(log_dir, 'file_log.json')
     index_path = 'faiss_index.bin'
     db_path = 'chunks_embeddings.db'
+    cache_file = os.path.join(data_dir, 'ncbi_id_to_symbol.json')
+
     for file in os.listdir(data_dir):
         full_file_path = os.path.join(data_dir, file)
-        if os.path.isfile(full_file_path) and file.endswith(
-                '.gmt') and file.startswith('wiki'):
+        if os.path.isfile(full_file_path) and file.endswith('.gmt') and file.startswith('wiki'):
             print(f"Processing file: {file}")
-            converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
-                                                                        data_dir)
-            print(
-                f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
-
+            converted_lines, unknown_genes = convert_gene_id_to_symbols(file, data_dir)
+            print(f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
     conn = initialize_database(db_path=db_path)
     tokenizer, model = load_model_and_tokenizer()
@@ -492,45 +523,63 @@ def main():
         index = load_faiss_index(embedding_dim, index_path=index_path)
     except ValueError as ve:
         print(ve)
-        print(
-            "Deleting existing FAISS index and creating a new one with IndexIDMap.")
+        print("Deleting existing FAISS index and creating a new one with IndexIDMap.")
         if os.path.exists(index_path):
             os.remove(index_path)
             print(f"Deleted FAISS index at {index_path}")
         index = load_faiss_index(embedding_dim, index_path=index_path)
 
-    embed_documents(conn, index, tokenizer, model, data_dir=data_dir,
-                    batch_size=64, log_path=log_path)
+    embed_documents(conn, index, tokenizer, model, data_dir=data_dir, batch_size=64, log_path=log_path)
     save_faiss_index(index, index_path=index_path)
-
     conn.close()
+
     index = load_faiss_index(embedding_dim, index_path=index_path)
-
     conn = sqlite3.connect(db_path)
-    query_text = (
-        "GGT5 in glutathione metabolism")
 
-    query_text = query_expansion(query_text)
-    top_ids, distances = query_faiss_index(query_text, index, tokenizer, model,
-                                           top_k=5)
+    query = "IDH1 Synonyms"
+    number_of_expansions = 5
+    expanded_queries = query_expansion(query, number=number_of_expansions)[1:] #As it starts with possible expanded queries
+    print(f"Using Expanded Queries: {expanded_queries}")
 
-    if top_ids:
-        retrieved_chunks = fetch_chunks_by_ids(conn, top_ids)
-        print(f"Retrieved {len(retrieved_chunks)} chunks from the database.")
-        response = generate_gpt4_turbo_response_with_instructions(query_text,
-                                                                  retrieved_chunks)
+    doc_distance_dict = {}
 
+    for eq in expanded_queries:
+        top_ids, distances = query_faiss_index(eq, index, tokenizer, model, top_k=5)
+
+        for doc_id, distance in zip(top_ids, distances):
+            if doc_id in doc_distance_dict:
+                if distance < doc_distance_dict[doc_id][0]:
+                    doc_distance_dict[doc_id] = (distance, eq)
+            else:
+                doc_distance_dict[doc_id] = (distance, eq)
+
+    sorted_docs = sorted(doc_distance_dict.items(), key=lambda item: item[1][0])
+    top_5_docs = sorted_docs[:5]
+
+    print("\nTop 5 documents with the shortest distances:")
+    for rank, (doc_id, (distance, source_query)) in enumerate(top_5_docs, start=1):
+        print(f"{rank}. Document ID: {doc_id}, Distance: {distance}, Source Query: {source_query}")
+
+    top_5_ids = [doc_id for doc_id, _ in top_5_docs]
+
+    if top_5_ids:
+        retrieved_chunks = fetch_chunks_by_ids(conn, top_5_ids)
+        print(f"Retrieved {len(retrieved_chunks)} unique chunks from the database.")
+
+        response = generate_gpt4_turbo_response_with_instructions(query, retrieved_chunks)
         if response:
             print(f"GPT-4 Response:\n{response}")
             combined_documents = "\n\n".join(retrieved_chunks)
-            prompt = f"Based on the following documents, answer the question: {query_text}\n\nDocuments:\n{combined_documents}\n"
+            prompt = f"Based on the following documents, answer the question: {query}\n\nDocuments:\n{combined_documents}\n"
             save_answer_to_file(prompt, response, retrieved_chunks)
         else:
             print("Failed to generate a response from GPT-4.")
     else:
-        print(
-            "No top documents retrieved. Skipping GPT-4 response generation.")
+        print("No documents retrieved for the expanded queries. Skipping GPT-4 response generation.")
+
     conn.close()
+
+
 
 
 if __name__ == "__main__":
