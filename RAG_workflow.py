@@ -139,6 +139,7 @@ def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
 
     tokenizer = AutoTokenizer.from_pretrained(model_name,
                                               force_download=force_download)
+
     model = AutoModel.from_pretrained(model_name,
                                       force_download=force_download)
     return tokenizer, model
@@ -228,7 +229,6 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
     print(f"Using device: {device}")
     model.to(device)
     model.eval()
-
     for file, document, file_hash in files_documents:
         if file in file_log and file_log[file]['hash'] == file_hash:
             print(f"Skipping unchanged file: {file}")
@@ -259,14 +259,28 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
         embeddings = []
 
         with torch.no_grad():
-            for i in tqdm(range(0, len(chunks), batch_size),
-                          desc=f"Embedding chunks of '{file}'"):
+            #Does not achieve distance = 0 when chunk=query
+            # for i in tqdm(range(0, len(chunks), batch_size),
+            #               desc=f"Embedding chunks of '{file}'"):
+            #     batch = chunks[i:i + batch_size]
+            #     inputs = tokenizer(batch, return_tensors="pt",
+            #                        truncation=True, padding=True,
+            #                        max_length=512).to(device)
+            #     outputs = model(**inputs)
+            #     batch_embeddings = outputs.last_hidden_state[:, 0, :].cpu().numpy()
+            #     embeddings.extend(batch_embeddings)
+
+            #Does achieve distance = 0 when chunk=query, takes longer?
+            for i in tqdm(range(0, len(chunks), batch_size), desc="Processing chunks in batches"):
                 batch = chunks[i:i + batch_size]
-                inputs = tokenizer(batch, return_tensors="pt",
-                                   truncation=True, padding=True,
-                                   max_length=512).to(device)
+                inputs = tokenizer(batch, return_tensors="pt", truncation=True, padding=True, max_length=512).to(device)
                 outputs = model(**inputs)
-                batch_embeddings = outputs.last_hidden_state.mean(dim=1).cpu().numpy()
+                attention_mask = inputs['attention_mask']
+                token_embeddings = outputs.last_hidden_state
+                input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
+                sum_embeddings = torch.sum(token_embeddings * input_mask_expanded, dim=1)
+                sum_mask = input_mask_expanded.sum(dim=1)
+                batch_embeddings = (sum_embeddings / sum_mask).cpu().numpy()
                 embeddings.extend(batch_embeddings)
 
         if not embeddings:
@@ -294,17 +308,31 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
     save_file_log(file_log, log_path=log_path)
 
 
-def query_faiss_index(query_text, index, tokenizer, model, top_k=20):
+def query_faiss_index(query_text, index, tokenizer, model, top_k=20, force_download=False):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    model_name = "michiyasunaga/BioLinkBERT-large"
+
+    loaded_model = AutoModel.from_pretrained(model_name, force_download=force_download)
+    loaded_tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
+
+    if model.config == loaded_model.config:
+        print("The models are identical in configuration.")
+    else:
+        print("The models have different configurations.")
+        model = AutoModel.from_pretrained(model_name, force_download=force_download)
+
+    if str(tokenizer) == str(loaded_tokenizer):
+        print("The tokenizers are identical in configuration.")
+    else:
+        print("The tokenizers have different configurations.")
+        tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
     model.to(device)
     model.eval()
-
     with torch.no_grad():
-        inputs = tokenizer([query_text], return_tensors="pt", truncation=True,
-                           padding=True, max_length=512).to(device)
+        inputs = tokenizer([query_text], return_tensors="pt", truncation=True, padding=True, max_length=512).to(device)
         outputs = model(**inputs)
         query_embedding = outputs.last_hidden_state.mean(dim=1).cpu().numpy()
-
     distances, indices = index.search(query_embedding, top_k)
     top_ids = [int(id_) for id_ in indices[0] if id_ != -1]
     top_distances = [float(dist) for dist in distances[0] if dist != -1]
@@ -584,8 +612,8 @@ def main():
 
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
-    query = "What are the genes that are involved in Pentose phosphate metabolism"
-    number_of_expansions = 5
+    query = "What genes are used in Pentose phosphate metabolism?"
+    number_of_expansions = 1
     expanded_queries = query_expansion(query, number=number_of_expansions)[1:]  # Exclude first line if it's an example
     print(f"Using Expanded Queries: {expanded_queries}")
     expanded_queries.append(query)
