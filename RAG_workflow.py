@@ -2,21 +2,18 @@ import os
 import json
 import hashlib
 import requests
-from langchain_text_splitters import CharacterTextSplitter
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 import gzip
 import sqlite3
 from dotenv import load_dotenv
-import openai
 from openai import OpenAI
 from tqdm import tqdm
 import faiss
 import numpy as np
 from transformers import AutoModel, AutoTokenizer
 import torch
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 import warnings
 from rank_bm25 import BM25Okapi
 
@@ -137,9 +134,6 @@ def fetch_chunks(conn):
     return cursor.fetchall()
 
 
-# def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
-#                              force_download=False):
-
 def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
                              force_download=False):
 
@@ -215,7 +209,6 @@ def chunk_documents(documents):
     for idx, document in enumerate(documents):
         print(f"Processing Document {idx + 1} with length {len(document)} characters.")
 
-        # Split each document by lines and treat each line as its own chunk
         lines = document.split("\n")
         chunked_docs.extend(line for line in lines if line.strip())  # Add non-empty lines as chunks
 
@@ -343,7 +336,6 @@ def build_bm25_index(conn):
 def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=5):
     query_tokens = query_text.lower().split()
     scores = bm25.get_scores(query_tokens)
-    import numpy as np
     top_n = np.argsort(scores)[::-1][:top_k]
     top_ids = [chunk_ids[i] for i in top_n]
     top_scores = [scores[i] for i in top_n]
@@ -362,7 +354,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
     Glutathione metabolism%WikiPathways_20240910%WP100%Homo sapiens https://www.wikipathways.org/instance/WP100
     [GGT5, GGT-REL, GGTLA1] [GGT1, CD224, D22S672, D22S732, GGT]    [GPX1]  [GSR]
     
-    Contain the pathway, from the species, in this case Homo Sapiens, with its wikipathways link. The genes are in list.
+    Contain the pathway with its wikipathways link. The genes are in list.
     For every list there is the gene with its synonym. If there are multiple, there are multiple synonyms: GGT5 has the
     synonyms GGT-REL and GGTLA1. GPX1 however, does not have any Synonyms.
     """
@@ -562,7 +554,6 @@ def main():
     db_path = 'chunks_embeddings.db'
     cache_file = os.path.join(data_dir, 'ncbi_id_to_symbol.json')
 
-    # Process and convert gene IDs in files
     for file in os.listdir(data_dir):
         full_file_path = os.path.join(data_dir, file)
         if os.path.isfile(full_file_path) and file.endswith('.gmt') and file.startswith('wiki'):
@@ -570,12 +561,10 @@ def main():
             converted_lines, unknown_genes = convert_gene_id_to_symbols(file, data_dir)
             print(f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
-    # Initialize database and load models
     conn = initialize_database(db_path=db_path)
     tokenizer, model = load_model_and_tokenizer()
     embedding_dim = model.config.hidden_size
 
-    # Load or create FAISS index
     try:
         index = load_faiss_index(embedding_dim, index_path=index_path)
     except ValueError as ve:
@@ -586,20 +575,16 @@ def main():
             print(f"Deleted FAISS index at {index_path}")
         index = load_faiss_index(embedding_dim, index_path=index_path)
 
-    # Embed documents and save FAISS index
     embed_documents(conn, index, tokenizer, model, data_dir=data_dir, batch_size=64, log_path=log_path)
     save_faiss_index(index, index_path=index_path)
     conn.close()
 
-    # Reload FAISS index and connect to database
     index = load_faiss_index(embedding_dim, index_path=index_path)
     conn = sqlite3.connect(db_path)
 
-    # Build BM25 index
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
-    # Query and expand queries
-    query = "Pentose phosphate metabolism"
+    query = "What are the genes that are involved in Pentose phosphate metabolism"
     number_of_expansions = 5
     expanded_queries = query_expansion(query, number=number_of_expansions)[1:]  # Exclude first line if it's an example
     print(f"Using Expanded Queries: {expanded_queries}")
@@ -607,7 +592,6 @@ def main():
 
     top_k = 5
 
-    # Retrieve documents using FAISS
     faiss_doc_distance_dict = {}
     for eq in expanded_queries:
         top_ids, distances = query_faiss_index(eq, index, tokenizer, model, top_k=top_k)
@@ -622,9 +606,8 @@ def main():
     top_faiss_docs = sorted_faiss_docs[:top_k]
     print(f"\nTop {top_k} documents with the shortest distances (FAISS):")
     for rank, (doc_id, (distance, source_query)) in enumerate(top_faiss_docs, start=1):
-        print(f"{rank}. Document ID: {doc_id}, Distance: {distance}, Source Query: {source_query}")
+        print(f"{rank}. Document ID: {doc_id-1}, Distance: {distance}, Source Query: {source_query}")
 
-    # Retrieve documents using BM25
     bm25_doc_scores = {}
     for eq in expanded_queries:
         top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids, bm25_chunk_texts, top_k=top_k)
@@ -639,9 +622,8 @@ def main():
     top_bm25_docs = sorted_bm25_docs[:top_k]
     print(f"\nTop {top_k} documents from BM25:")
     for rank, (doc_id, (score, source_query)) in enumerate(top_bm25_docs, start=1):
-        print(f"{rank}. Document ID: {doc_id}, Score: {score}, Source Query: {source_query}")
+        print(f"{rank}. Document ID: {doc_id-1}, Score: {score}, Source Query: {source_query}")
 
-    # Combine the document IDs and keep track of their sources
     combined_docs = {}
     for rank, (doc_id, (distance, source_query)) in enumerate(top_faiss_docs, start=1):
         if doc_id not in combined_docs:
@@ -655,41 +637,38 @@ def main():
         else:
             combined_docs[doc_id]['retriever'].append('BM25')
 
-    # Fetch the combined unique documents
     combined_top_ids = list(combined_docs.keys())
     if combined_top_ids:
         retrieved_chunks = fetch_chunks_by_ids(conn, combined_top_ids)
-        # Create a mapping from doc_id to chunk text
-        doc_id_to_chunk = dict(zip(combined_top_ids, retrieved_chunks))
 
-        # Prepare the documents with labels
+        doc_id_to_chunk_unordered = dict(zip(sorted(combined_top_ids), retrieved_chunks))
+
+        retrieved_chunks_ordered = [doc_id_to_chunk_unordered[doc_id] for doc_id in combined_top_ids]
+
         labeled_documents = []
         for idx, doc_id in enumerate(combined_top_ids, start=1):
             retrievers = combined_docs[doc_id]['retriever']
             retriever_label = ' and '.join(retrievers)
-            chunk_text = doc_id_to_chunk[doc_id]
+            chunk_text = retrieved_chunks_ordered[idx - 1]
             labeled_document = f"Reference {idx} ({retriever_label}):\n{chunk_text}"
             labeled_documents.append(labeled_document)
 
-        print(f"Retrieved {len(labeled_documents)} unique chunks from the database.")
 
+
+        print(f"Retrieved {len(labeled_documents)} unique chunks from the database.")
         response = generate_gpt4_turbo_response_with_instructions(query, labeled_documents)
         if response:
             print(f"GPT-4 Response:\n{response}")
             combined_documents = "\n\n".join(labeled_documents)
             prompt = f"Based on the following documents, answer the question: {query}\n\nDocuments:\n{combined_documents}\n"
             save_answer_to_file(prompt, response, labeled_documents)
+
         else:
             print("Failed to generate a response from GPT-4.")
     else:
         print("No documents retrieved for the expanded queries. Skipping GPT-4 response generation.")
 
     conn.close()
-
-
-
-
-
 
 if __name__ == "__main__":
     main()

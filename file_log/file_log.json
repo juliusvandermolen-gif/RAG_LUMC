@@ -1,1 +1,6 @@
-{}
+{
+    "small_wikipathways.gmt.gz": {
+        "hash": "8684db2e9e0c5e8fa121785c4b5ba5997beeb6eb94414044d0ec0022e0111039",
+        "num_embeddings": 100
+    }
+}
