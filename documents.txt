@@ -1,18 +1,40 @@
 Reference 1:
-Pentose phosphate metabolism%WikiPathways_20240910%WP134%Homo sapiens	https://www.wikipathways.org/instance/WP134	[G6PD, G6PD1]	[PGLS, 6PGL]	[RPE]	[TALDO1]	[RPIA]	[TKT]	[PGD]
-Phase I biotransformations non P450%WikiPathways_20240910%WP136%Homo sapiens	https://www.wikipathways.org/instance/WP136	[CES5A, CAUXIN, CES4C1, CES5, CES7, FLJ31547]	[ESD]	[LIPA, CESD, LAL]	[PON3]	[CES2, CE-2, CES2A1, ICE]	[PON2]	[CES1, CEH, CES1A1, CES1A2, CES2, HMSE, HMSE1, SES1]	[PON1, ESA, PON]
+Reference 1 (BM25):
+ENSG00000147003,CLTRN,"collectrin, amino acid transport regulator [Source:HGNC Symbol;Acc:HGNC:29437]",[NX17_TMEM27],"collectrin, amino acid transport regulator",57393.0
 
 Reference 2:
-Oxytocin signaling%WikiPathways_20240910%WP2889%Homo sapiens	https://www.wikipathways.org/instance/WP2889	[PLCD1]	[OXTR, OTR]	[CD38, CADPR1]	[GNAQ, G-ALPHA-Q, GAQ]
+Reference 2 (FAISS):
+ENSG00000248611,,pseudogene similar to part of 5-aminoimidazole-4-carboxamide ribonucleotide formyltransferase/IMP cyclohydrolase (ATIC),[],,
 
 Reference 3:
-MicroRNA for targeting cancer growth and vascularization in glioblastoma%WikiPathways_20240910%WP3593%Homo sapiens	https://www.wikipathways.org/instance/WP3593	[HES1, BHLHB39, FLJ20408, HES-1, HRY]	[MIR31, HSA-MIR-31, MIRN31]	[VEGFA, VEGF, VEGF-A, VPF]	[HIF1AN, DKFZP762F1811, FIH1, FLJ20615, FLJ22027]	[HEY1, BHLHB31, CHF-2, CHF2, HERP2, HESR-1, HESR1, HRT-1]	[HIF1A, BHLHE78, HIF-1ALPHA, HIF1, MOP1, PASD8]	[VEGFB, VEGFL, VRF]	[VEGFC, VEGF-C, VRP]
+Reference 3 (BM25):
+ENSG00000164808,SPIDR,scaffold protein involved in DNA repair [Source:HGNC Symbol;Acc:HGNC:28971],[KIAA0146],scaffold protein involved in DNA repair,23514.0
 
 Reference 4:
-Model for regulation of MSMP expression in cancer cells and its proangiogenic role in ovarian tumors%WikiPathways_20240910%WP4397%Homo sapiens	https://www.wikipathways.org/instance/WP4397	[CCR2, CC-CKR-2, CD192, CKR2, CMKBR2, FLJ78302, MCP-1-R]	[MSMP, PC-3, PSMP]	[CTCF, CFAP108, FAP108]
-MicroRNA network associated with chronic lymphocytic leukemia%WikiPathways_20240910%WP4399%Homo sapiens	https://www.wikipathways.org/instance/WP4399	[ZAP70, SRK, STD, ZAP-70]	[BCL2, BCL-2, PPP1R50]	[TP53, LFS1, P53]	[MIR15A, HSA-MIR-15A, MIRN15A]	[MIR16-1, HSA-MIR-16-1, MIRN16-1]	[ADAMTSL4-AS1, C1ORF138, FLJ45786]	[MCL1, BCL2L3, MCL-1]
-FABP4 in ovarian cancer%WikiPathways_20240910%WP4400%Homo sapiens	https://www.wikipathways.org/instance/WP4400	[FABP4, A-FABP, AP2]
+Reference 4 (FAISS):
+ENSG00000279167,,N-acetylated alpha-linked acidic dipeptidase 2 (Naalad2) pseudogene,[],,
 
 Reference 5:
-Conversion of angiotensinogen to angiotensin II %WikiPathways_20240910%WP4818%Homo sapiens	https://www.wikipathways.org/instance/WP4818	[ACE, ACE1, CD143, DCP1]	[CMA1]	[CTSG, CG]	[CTSD, CLN10, CPSD]	[REN]
+Reference 5 (FAISS and BM25):
+ENSG00000260552,COSMOC,cell fate and sterol metabolism associated divergent transcript of MOCOS [Source:HGNC Symbol;Acc:HGNC:51610],[],cell fate and sterol metabolism associated divergent transcript of MOCOS,101927809.0
+
+Reference 6:
+Reference 6 (FAISS):
+ENSG00000249541,,3-hydroxyisobutyryl-Coenzyme A hydrolase (HIBCH) pseudogene,[],,
+
+Reference 7:
+Reference 7 (FAISS and BM25):
+ENSG00000060982,BCAT1,branched chain amino acid transaminase 1 [Source:HGNC Symbol;Acc:HGNC:976],[BCATC_BCT1],branched chain amino acid transaminase 1,586.0
+
+Reference 8:
+Reference 8 (FAISS):
+ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
+
+Reference 9:
+Reference 9 (BM25):
+ENSG00000105552,BCAT2,branched chain amino acid transaminase 2 [Source:HGNC Symbol;Acc:HGNC:977],[BCAM_BCATM_BCT2],branched chain amino acid transaminase 2,587.0
+
+Reference 10:
+Reference 10 (FAISS):
+ENSG00000227948,,pseudogene similar to part of argininosuccinate synthetase 1 (ASS1),[],,
 

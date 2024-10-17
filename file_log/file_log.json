@@ -1,10 +1,10 @@
 {
-    "wikipathways_synonyms_Homo_sapiens.gmt.gz": {
-        "hash": "20e4703cac977ed157466a0fd430fe2386ac7b811d5cf671ccdd0c7341c8f6fc",
-        "num_embeddings": 1382
-    },
     "genes_consolidated.txt.gz": {
-        "hash": "a553551418cfbf1577aa7e9ab8d1c56b1a77da23577cce068bf26c61389c3827",
-        "num_embeddings": 8440
+        "hash": "c890726b9aa1198d9a75acf66fd97c71262a5b3de7d33cc0efeb2c4beb345be8",
+        "num_embeddings": 70611
+    },
+    "wikipathways_synonyms_Homo_sapiens.gmt.gz": {
+        "hash": "fa786d53793378307b7df7a2e4b4da75e010da3f6a83ef12a8d45b5c4792ddae",
+        "num_embeddings": 887
     }
 }

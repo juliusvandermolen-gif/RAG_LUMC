@@ -1,48 +1,97 @@
 Prompt:
-Based on the following documents, answer the question: IDH1 Synonyms
+Based on the following documents, answer the question: What genes are relevant to Alanine and Aspertate metabolism? 
+    
 
 Documents:
-Pentose phosphate metabolism%WikiPathways_20240910%WP134%Homo sapiens	https://www.wikipathways.org/instance/WP134	[G6PD, G6PD1]	[PGLS, 6PGL]	[RPE]	[TALDO1]	[RPIA]	[TKT]	[PGD]
-Phase I biotransformations non P450%WikiPathways_20240910%WP136%Homo sapiens	https://www.wikipathways.org/instance/WP136	[CES5A, CAUXIN, CES4C1, CES5, CES7, FLJ31547]	[ESD]	[LIPA, CESD, LAL]	[PON3]	[CES2, CE-2, CES2A1, ICE]	[PON2]	[CES1, CEH, CES1A1, CES1A2, CES2, HMSE, HMSE1, SES1]	[PON1, ESA, PON]
+Reference 1 (BM25):
+ENSG00000147003,CLTRN,"collectrin, amino acid transport regulator [Source:HGNC Symbol;Acc:HGNC:29437]",[NX17_TMEM27],"collectrin, amino acid transport regulator",57393.0
 
-Oxytocin signaling%WikiPathways_20240910%WP2889%Homo sapiens	https://www.wikipathways.org/instance/WP2889	[PLCD1]	[OXTR, OTR]	[CD38, CADPR1]	[GNAQ, G-ALPHA-Q, GAQ]
+Reference 2 (FAISS):
+ENSG00000248611,,pseudogene similar to part of 5-aminoimidazole-4-carboxamide ribonucleotide formyltransferase/IMP cyclohydrolase (ATIC),[],,
 
-MicroRNA for targeting cancer growth and vascularization in glioblastoma%WikiPathways_20240910%WP3593%Homo sapiens	https://www.wikipathways.org/instance/WP3593	[HES1, BHLHB39, FLJ20408, HES-1, HRY]	[MIR31, HSA-MIR-31, MIRN31]	[VEGFA, VEGF, VEGF-A, VPF]	[HIF1AN, DKFZP762F1811, FIH1, FLJ20615, FLJ22027]	[HEY1, BHLHB31, CHF-2, CHF2, HERP2, HESR-1, HESR1, HRT-1]	[HIF1A, BHLHE78, HIF-1ALPHA, HIF1, MOP1, PASD8]	[VEGFB, VEGFL, VRF]	[VEGFC, VEGF-C, VRP]
+Reference 3 (BM25):
+ENSG00000164808,SPIDR,scaffold protein involved in DNA repair [Source:HGNC Symbol;Acc:HGNC:28971],[KIAA0146],scaffold protein involved in DNA repair,23514.0
 
-Model for regulation of MSMP expression in cancer cells and its proangiogenic role in ovarian tumors%WikiPathways_20240910%WP4397%Homo sapiens	https://www.wikipathways.org/instance/WP4397	[CCR2, CC-CKR-2, CD192, CKR2, CMKBR2, FLJ78302, MCP-1-R]	[MSMP, PC-3, PSMP]	[CTCF, CFAP108, FAP108]
-MicroRNA network associated with chronic lymphocytic leukemia%WikiPathways_20240910%WP4399%Homo sapiens	https://www.wikipathways.org/instance/WP4399	[ZAP70, SRK, STD, ZAP-70]	[BCL2, BCL-2, PPP1R50]	[TP53, LFS1, P53]	[MIR15A, HSA-MIR-15A, MIRN15A]	[MIR16-1, HSA-MIR-16-1, MIRN16-1]	[ADAMTSL4-AS1, C1ORF138, FLJ45786]	[MCL1, BCL2L3, MCL-1]
-FABP4 in ovarian cancer%WikiPathways_20240910%WP4400%Homo sapiens	https://www.wikipathways.org/instance/WP4400	[FABP4, A-FABP, AP2]
+Reference 4 (FAISS):
+ENSG00000279167,,N-acetylated alpha-linked acidic dipeptidase 2 (Naalad2) pseudogene,[],,
 
-Conversion of angiotensinogen to angiotensin II %WikiPathways_20240910%WP4818%Homo sapiens	https://www.wikipathways.org/instance/WP4818	[ACE, ACE1, CD143, DCP1]	[CMA1]	[CTSG, CG]	[CTSD, CLN10, CPSD]	[REN]
+Reference 5 (FAISS and BM25):
+ENSG00000260552,COSMOC,cell fate and sterol metabolism associated divergent transcript of MOCOS [Source:HGNC Symbol;Acc:HGNC:51610],[],cell fate and sterol metabolism associated divergent transcript of MOCOS,101927809.0
+
+Reference 6 (FAISS):
+ENSG00000249541,,3-hydroxyisobutyryl-Coenzyme A hydrolase (HIBCH) pseudogene,[],,
+
+Reference 7 (FAISS and BM25):
+ENSG00000060982,BCAT1,branched chain amino acid transaminase 1 [Source:HGNC Symbol;Acc:HGNC:976],[BCATC_BCT1],branched chain amino acid transaminase 1,586.0
+
+Reference 8 (FAISS):
+ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
+
+Reference 9 (BM25):
+ENSG00000105552,BCAT2,branched chain amino acid transaminase 2 [Source:HGNC Symbol;Acc:HGNC:977],[BCAM_BCATM_BCT2],branched chain amino acid transaminase 2,587.0
+
+Reference 10 (FAISS):
+ENSG00000227948,,pseudogene similar to part of argininosuccinate synthetase 1 (ASS1),[],,
 
 
 Answer:
-The provided documents do not explicitly list synonyms for IDH1 (Isocitrate Dehydrogenase 1), but they do reference various biological pathways and proteins that may interact with or relate to metabolic processes involving IDH1. 
+### Alanine and Aspartate Metabolism
 
-IDH1 is primarily known for its role in the citric acid cycle (Krebs cycle), where it catalyzes the oxidative decarboxylation of isocitrate to alpha-ketoglutarate, producing NADPH in the process. This reaction is crucial for cellular metabolism and energy production. IDH1 is also involved in the regulation of cellular redox state and has implications in cancer metabolism, particularly in gliomas where mutations in IDH1 lead to the production of 2-hydroxyglutarate, an oncometabolite that can affect epigenetic regulation.
+The analysis of the provided gene set reveals several genes that are relevant to alanine and aspartate metabolism, specifically focusing on their roles in amino acid transamination and related metabolic pathways.
 
-The pathways mentioned, such as the pentose phosphate metabolism (WP134), highlight the interconnectedness of metabolic pathways where IDH1 may play a role in generating NADPH, which is essential for biosynthetic reactions and maintaining cellular redox balance. The oxidative phase of the pentose phosphate pathway, involving glucose-6-phosphate dehydrogenase (G6PD), is critical for generating NADPH, which complements the function of IDH1.
+1. **BCAT1 (branched chain amino acid transaminase 1)**: This gene encodes an enzyme that catalyzes the transamination of branched-chain amino acids (BCAAs) such as leucine, isoleucine, and valine, which is closely related to the metabolism of alanine and aspartate. BCAT1 plays a crucial role in the reversible transamination reaction that converts branched-chain amino acids to their corresponding keto acids, which can subsequently enter the TCA cycle.
 
-In the context of cancer, the documents reference various signaling pathways and microRNA networks that may influence or be influenced by metabolic changes associated with IDH1 activity. For instance, the microRNA targeting cancer growth (WP3593) and the regulation of MSMP expression in cancer cells (WP4397) suggest a complex regulatory network where IDH1's metabolic role could intersect with oncogenic signaling pathways.
+2. **BCAT2 (branched chain amino acid transaminase 2)**: Similar to BCAT1, BCAT2 also encodes an enzyme involved in the transamination of branched-chain amino acids. It shares functional similarities with BCAT1 and contributes to the overall metabolism of amino acids, including alanine and aspartate, by facilitating the transfer of amino groups.
 
-In summary, while the documents do not provide direct synonyms for IDH1, they emphasize its metabolic function and potential interactions within broader biological processes, particularly in the context of cancer metabolism and signaling pathways. Understanding these interactions is crucial for elucidating the role of IDH1 in both normal physiology and pathological conditions.
+3. **CLTRN (collectrin, amino acid transport regulator)**: While primarily known for its role in amino acid transport, CLTRN may influence the availability of alanine and aspartate in cells, thereby indirectly affecting their metabolism. It regulates the transport of neutral amino acids, which can impact the levels of alanine and aspartate in various tissues.
+
+The remaining genes in the provided references either correspond to pseudogenes or are involved in unrelated functions, such as DNA repair or sterol metabolism, and do not contribute directly to alanine and aspartate metabolism.
+
+### Confidence Score: 0.85
+
+The confidence score reflects a high degree of coherence among the identified genes, particularly BCAT1 and BCAT2, which are directly involved in amino acid transamination processes relevant to alanine and aspartate metabolism. CLTRN, while not directly involved in metabolic reactions, plays a supportive role in amino acid transport, further linking it to the metabolism of these amino acids. However, the presence of pseudogenes and unrelated genes slightly lowers the overall confidence in the coherence of the gene set. 
+
+### References
+- BCAT1 and BCAT2 are well-documented in the literature for their roles in amino acid metabolism (e.g., Kato et al., 2005; Kato
 
 Document References:
 Reference 1:
-Pentose phosphate metabolism%WikiPathways_20240910%WP134%Homo sapiens	https://www.wikipathways.org/instance/WP134	[G6PD, G6PD1]	[PGLS, 6PGL]	[RPE]	[TALDO1]	[RPIA]	[TKT]	[PGD]
-Phase I biotransformations non P450%WikiPathways_20240910%WP136%Homo sapiens	https://www.wikipathways.org/instance/WP136	[CES5A, CAUXIN, CES4C1, CES5, CES7, FLJ31547]	[ESD]	[LIPA, CESD, LAL]	[PON3]	[CES2, CE-2, CES2A1, ICE]	[PON2]	[CES1, CEH, CES1A1, CES1A2, CES2, HMSE, HMSE1, SES1]	[PON1, ESA, PON]
+Reference 1 (BM25):
+ENSG00000147003,CLTRN,"collectrin, amino acid transport regulator [Source:HGNC Symbol;Acc:HGNC:29437]",[NX17_TMEM27],"collectrin, amino acid transport regulator",57393.0
 
 Reference 2:
-Oxytocin signaling%WikiPathways_20240910%WP2889%Homo sapiens	https://www.wikipathways.org/instance/WP2889	[PLCD1]	[OXTR, OTR]	[CD38, CADPR1]	[GNAQ, G-ALPHA-Q, GAQ]
+Reference 2 (FAISS):
+ENSG00000248611,,pseudogene similar to part of 5-aminoimidazole-4-carboxamide ribonucleotide formyltransferase/IMP cyclohydrolase (ATIC),[],,
 
 Reference 3:
-MicroRNA for targeting cancer growth and vascularization in glioblastoma%WikiPathways_20240910%WP3593%Homo sapiens	https://www.wikipathways.org/instance/WP3593	[HES1, BHLHB39, FLJ20408, HES-1, HRY]	[MIR31, HSA-MIR-31, MIRN31]	[VEGFA, VEGF, VEGF-A, VPF]	[HIF1AN, DKFZP762F1811, FIH1, FLJ20615, FLJ22027]	[HEY1, BHLHB31, CHF-2, CHF2, HERP2, HESR-1, HESR1, HRT-1]	[HIF1A, BHLHE78, HIF-1ALPHA, HIF1, MOP1, PASD8]	[VEGFB, VEGFL, VRF]	[VEGFC, VEGF-C, VRP]
+Reference 3 (BM25):
+ENSG00000164808,SPIDR,scaffold protein involved in DNA repair [Source:HGNC Symbol;Acc:HGNC:28971],[KIAA0146],scaffold protein involved in DNA repair,23514.0
 
 Reference 4:
-Model for regulation of MSMP expression in cancer cells and its proangiogenic role in ovarian tumors%WikiPathways_20240910%WP4397%Homo sapiens	https://www.wikipathways.org/instance/WP4397	[CCR2, CC-CKR-2, CD192, CKR2, CMKBR2, FLJ78302, MCP-1-R]	[MSMP, PC-3, PSMP]	[CTCF, CFAP108, FAP108]
-MicroRNA network associated with chronic lymphocytic leukemia%WikiPathways_20240910%WP4399%Homo sapiens	https://www.wikipathways.org/instance/WP4399	[ZAP70, SRK, STD, ZAP-70]	[BCL2, BCL-2, PPP1R50]	[TP53, LFS1, P53]	[MIR15A, HSA-MIR-15A, MIRN15A]	[MIR16-1, HSA-MIR-16-1, MIRN16-1]	[ADAMTSL4-AS1, C1ORF138, FLJ45786]	[MCL1, BCL2L3, MCL-1]
-FABP4 in ovarian cancer%WikiPathways_20240910%WP4400%Homo sapiens	https://www.wikipathways.org/instance/WP4400	[FABP4, A-FABP, AP2]
+Reference 4 (FAISS):
+ENSG00000279167,,N-acetylated alpha-linked acidic dipeptidase 2 (Naalad2) pseudogene,[],,
 
 Reference 5:
-Conversion of angiotensinogen to angiotensin II %WikiPathways_20240910%WP4818%Homo sapiens	https://www.wikipathways.org/instance/WP4818	[ACE, ACE1, CD143, DCP1]	[CMA1]	[CTSG, CG]	[CTSD, CLN10, CPSD]	[REN]
+Reference 5 (FAISS and BM25):
+ENSG00000260552,COSMOC,cell fate and sterol metabolism associated divergent transcript of MOCOS [Source:HGNC Symbol;Acc:HGNC:51610],[],cell fate and sterol metabolism associated divergent transcript of MOCOS,101927809.0
+
+Reference 6:
+Reference 6 (FAISS):
+ENSG00000249541,,3-hydroxyisobutyryl-Coenzyme A hydrolase (HIBCH) pseudogene,[],,
+
+Reference 7:
+Reference 7 (FAISS and BM25):
+ENSG00000060982,BCAT1,branched chain amino acid transaminase 1 [Source:HGNC Symbol;Acc:HGNC:976],[BCATC_BCT1],branched chain amino acid transaminase 1,586.0
+
+Reference 8:
+Reference 8 (FAISS):
+ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
+
+Reference 9:
+Reference 9 (BM25):
+ENSG00000105552,BCAT2,branched chain amino acid transaminase 2 [Source:HGNC Symbol;Acc:HGNC:977],[BCAM_BCATM_BCT2],branched chain amino acid transaminase 2,587.0
+
+Reference 10:
+Reference 10 (FAISS):
+ENSG00000227948,,pseudogene similar to part of argininosuccinate synthetase 1 (ASS1),[],,
 
