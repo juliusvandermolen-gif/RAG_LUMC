@@ -1,95 +1,184 @@
 Prompt:
-Based on the following documents, answer the question: What genes are relevant to Alanine and Aspertate metabolism?
+Based on the following documents, answer the question: Alanine and aspartate metabolism
 
 Documents:
-Reference 1 (BM25):
-ENSG00000143162,CREG1,cellular repressor of E1A stimulated genes 1 [Source:HGNC Symbol;Acc:HGNC:2351],[CREG],cellular repressor of E1A stimulated genes 1,8804.0
+Reference 1 (FAISS and BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.9524:
+ENSG00000282259,,bile acid Coenzyme A: amino acid N-acyltransferase (BAAT) pseudogene,[],
 
-Reference 2 (FAISS):
-ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
+Reference 2 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.9091:
+ENSG00000235387,SPAAR,small regulatory polypeptide of amino acid response [Source:HGNC Symbol;Acc:HGNC:27244],[LINC00961_SPAR],158376
 
-Reference 3 (FAISS and BM25):
-ENSG00000233870,,pseudogene similar to part of N-acetylglucosamine kinase (NAGK),[],,
+Reference 3 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.9091:
+ENSG00000270634,,"phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase, pseudogene",[],
 
-Reference 4 (BM25):
-ENSG00000175874,CREG2,cellular repressor of E1A stimulated genes 2 [Source:HGNC Symbol;Acc:HGNC:14272],[],cellular repressor of E1A stimulated genes 2,200407.0
+Reference 4 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.3226:
+ENSG00000147003,CLTRN,"collectrin, amino acid transport regulator [Source:HGNC Symbol;Acc:HGNC:29437]",[NX17_TMEM27],57393
 
-Reference 5 (BM25):
-ENSG00000165917,RAPSN,receptor associated protein of the synapse [Source:HGNC Symbol;Acc:HGNC:9863],[CMS1D_CMS1E_RNF205],receptor associated protein of the synapse,5913.0
+Reference 5 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.3226:
+ENSG00000276149,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
 
-Reference 6 (FAISS):
-ENSG00000276149,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
+Reference 6 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.2439:
+ENSG00000060982,BCAT1,branched chain amino acid transaminase 1 [Source:HGNC Symbol;Acc:HGNC:976],[BCATC_BCT1],586
 
-Reference 7 (FAISS and BM25):
-ENSG00000282259,,bile acid Coenzyme A: amino acid N-acyltransferase (BAAT) pseudogene,[],,
+Reference 7 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.2439:
+ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
 
-Reference 8 (FAISS and BM25):
-ENSG00000227948,,pseudogene similar to part of argininosuccinate synthetase 1 (ASS1),[],,
+Reference 8 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1961:
+ENSG00000105552,BCAT2,branched chain amino acid transaminase 2 [Source:HGNC Symbol;Acc:HGNC:977],[BCAM_BCATM_BCT2],587
 
-Reference 9 (BM25):
-ENSG00000223960,CHROMR,cholesterol induced regulator of metabolism RNA [Source:HGNC Symbol;Acc:HGNC:54059],[CHROME_PRKRA-AS1],cholesterol induced regulator of metabolism RNA,101927027.0
+Reference 9 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1961:
+ENSG00000271272,,"aminolevulinate, delta-, synthase 1 (ALAS1) pseudogene",[],
 
-Reference 10 (BM25):
-ENSG00000260552,COSMOC,cell fate and sterol metabolism associated divergent transcript of MOCOS [Source:HGNC Symbol;Acc:HGNC:51610],[],cell fate and sterol metabolism associated divergent transcript of MOCOS,101927809.0
+Reference 10 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1639:
+ENSG00000140564,FURIN,"furin, paired basic amino acid cleaving enzyme [Source:HGNC Symbol;Acc:HGNC:8568]",[FUR_PACE_PCSK3_SPC1],5045
+
+Reference 11 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1639:
+ENSG00000284124,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
+
+Reference 12 (FAISS and BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders" with RRF Score: 0.1421:
+ENSG00000273171,,"novel protein, readthrough between VTN and SEBOX",[],
+
+Reference 13 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1408:
+ENSG00000256450,,"glutamic-oxaloacetic transaminase 2, mitochondrial (aspartate aminotransferase 2) (GOT2) pseudogene",[],
+
+Reference 14 (BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders" with RRF Score: 0.1235:
+ENSG00000273049,,"novel protein, readthrough between HOXC10 and HOXC5",[],
+
+Reference 15 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1235:
+ENSG00000277024,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
+
+Reference 16 (BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders" with RRF Score: 0.1099:
+ENSG00000258924,,novel transcript readthrough between TMEM199 and SARM1,[],
+
+Reference 17 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1099:
+ENSG00000253520,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
+
+Reference 18 (FAISS and BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders", "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.0993:
+Ultraconserved region 339 modulation of tumor suppressor microRNAs in cancer	WP4284	[TP53, LFS1, P53]	[CCNE2, CYCE2]
+
+Reference 19 (BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders" with RRF Score: 0.0990:
+ENSG00000267629,,"novel transcript, readthrough between TM6SF2 and HAPLN4",[],
+
+Reference 20 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.0990:
+ENSG00000226045,,"glutamyl-tRNA(Gln) amidotransferase, subunit C homolog (bacterial)(GATC) pseudogene",[],
 
 
 Answer:
-### Alanine and Aspartate Metabolism
+### Alanine and Aspartate Metabolism WP100
 
-The analysis of the provided gene set reveals a lack of direct relevance to alanine and aspartate metabolism. The genes listed primarily include pseudogenes and genes associated with other functions, such as cellular repression and synaptic proteins, rather than those directly involved in amino acid metabolism.
+**Gene Set**: 
+- ENSG00000282259 (BAAT pseudogene)
+- ENSG00000235387 (SPAAR)
+- ENSG00000270634 (phosphoribosylaminoimidazole carboxylase pseudogene)
+- ENSG00000147003 (CLTRN)
+- ENSG00000276149 (PTS pseudogene)
+- ENSG00000060982 (BCAT1)
+- ENSG00000275628 (PTS pseudogene)
+- ENSG00000105552 (BCAT2)
+- ENSG00000271272 (ALAS1 pseudogene)
+- ENSG00000140564 (FURIN)
+- ENSG00000284124 (PTS pseudogene)
+- ENSG00000273171 (novel protein, readthrough between VTN and SEBOX)
+- ENSG00000256450 (GOT2 pseudogene)
+- ENSG00000273049 (novel protein, readthrough between HOXC10 and HOXC5)
+- ENSG00000277024 (PTS pseudogene)
+- ENSG00000258924 (novel transcript readthrough between TMEM199 and SARM1)
+- ENSG00000253520 (PTS pseudogene)
+- ENSG00000267629 (novel transcript, readthrough between TM6SF2 and HAPLN4)
+- ENSG00000226045 (GATC pseudogene)
 
-1. **CREG1 (ENSG00000143162)**: This gene encodes the cellular repressor of E1A stimulated genes 1, which is involved in cellular growth and differentiation but does not have a direct role in alanine or aspartate metabolism.
+**Analysis**:
+The gene set includes several pseudogenes and genes involved in amino acid metabolism, particularly focusing on alanine and aspartate. Notably, the presence of **BCAT1** and **BCAT2** indicates a role in branched-chain amino acid transamination, which is critical for the metabolism of amino acids, including alanine and aspartate. **GOT2** (glutamic-oxaloacetic transaminase 2) is directly involved in the transamination process, converting aspartate and α-ketoglutarate to oxaloacetate and glutamate, thus linking to the metabolism of both alanine and aspartate.
 
-2. **CREG2 (ENSG00000175874)**: Similar to CREG1, this gene is also a cellular repressor and does not participate in amino acid metabolism.
+**SPAAR** (small regulatory polypeptide of amino acid response) suggests a regulatory role in amino acid metabolism, potentially influencing the pathways involving alanine and aspartate. **CLTRN** (collectrin) is implicated in amino acid transport regulation, which is essential for maintaining amino acid homeostasis in cells.
 
-3. **RAPSN (ENSG00000165917)**: This gene encodes a protein associated with the synapse, primarily involved in neuromuscular junction formation and maintenance, with no known function in alanine or aspartate metabolism.
+The presence of multiple pseudogenes, particularly those related to **PTS** (6-pyruvoyltetrahydropterin synthase), indicates evolutionary remnants that may not have direct functional roles but could provide insights into the historical context of these metabolic pathways.
 
-4. **Pseudogenes (ENSG00000275628, ENSG00000276149, ENSG00000282259, ENSG00000227948)**: The pseudogenes listed do not have functional roles in metabolism and are not involved in the pathways related to alanine or aspartate.
+**Synthesis**:
+The collective function of this gene set can be summarized as "Regulation and Metabolism of Alanine and Aspartate". This reflects the interconnected roles of these proteins in amino acid metabolism, transport, and regulatory mechanisms.
 
-5. **CHROMR (ENSG00000223960)** and **COSMOC (ENSG00000260552)**: These genes are involved in metabolic regulation and cell fate but do not specifically relate to alanine or aspartate metabolism.
+**Confidence Score**: 0.75
 
-Given the lack of genes directly associated with alanine and aspartate metabolism, the conclusion is that the provided gene set does not contain relevant genes for this metabolic pathway.
-
-**Confidence Score**: 0.00 (No confidence in relevance to alanine and aspartate metabolism).
+This score reflects a moderate to high confidence in the proposed function due to the presence of key metabolic enzymes and regulatory proteins, despite the inclusion of several pseudogenes which may dilute the functional coherence.
 
 Document References:
 Reference 1:
-Reference 1 (BM25):
-ENSG00000143162,CREG1,cellular repressor of E1A stimulated genes 1 [Source:HGNC Symbol;Acc:HGNC:2351],[CREG],cellular repressor of E1A stimulated genes 1,8804.0
+Reference 1 (FAISS and BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.9524:
+ENSG00000282259,,bile acid Coenzyme A: amino acid N-acyltransferase (BAAT) pseudogene,[],
 
 Reference 2:
-Reference 2 (FAISS):
-ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
+Reference 2 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.9091:
+ENSG00000235387,SPAAR,small regulatory polypeptide of amino acid response [Source:HGNC Symbol;Acc:HGNC:27244],[LINC00961_SPAR],158376
 
 Reference 3:
-Reference 3 (FAISS and BM25):
-ENSG00000233870,,pseudogene similar to part of N-acetylglucosamine kinase (NAGK),[],,
+Reference 3 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.9091:
+ENSG00000270634,,"phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase, pseudogene",[],
 
 Reference 4:
-Reference 4 (BM25):
-ENSG00000175874,CREG2,cellular repressor of E1A stimulated genes 2 [Source:HGNC Symbol;Acc:HGNC:14272],[],cellular repressor of E1A stimulated genes 2,200407.0
+Reference 4 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.3226:
+ENSG00000147003,CLTRN,"collectrin, amino acid transport regulator [Source:HGNC Symbol;Acc:HGNC:29437]",[NX17_TMEM27],57393
 
 Reference 5:
-Reference 5 (BM25):
-ENSG00000165917,RAPSN,receptor associated protein of the synapse [Source:HGNC Symbol;Acc:HGNC:9863],[CMS1D_CMS1E_RNF205],receptor associated protein of the synapse,5913.0
+Reference 5 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.3226:
+ENSG00000276149,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
 
 Reference 6:
-Reference 6 (FAISS):
-ENSG00000276149,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
+Reference 6 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.2439:
+ENSG00000060982,BCAT1,branched chain amino acid transaminase 1 [Source:HGNC Symbol;Acc:HGNC:976],[BCATC_BCT1],586
 
 Reference 7:
-Reference 7 (FAISS and BM25):
-ENSG00000282259,,bile acid Coenzyme A: amino acid N-acyltransferase (BAAT) pseudogene,[],,
+Reference 7 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.2439:
+ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
 
 Reference 8:
-Reference 8 (FAISS and BM25):
-ENSG00000227948,,pseudogene similar to part of argininosuccinate synthetase 1 (ASS1),[],,
+Reference 8 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1961:
+ENSG00000105552,BCAT2,branched chain amino acid transaminase 2 [Source:HGNC Symbol;Acc:HGNC:977],[BCAM_BCATM_BCT2],587
 
 Reference 9:
-Reference 9 (BM25):
-ENSG00000223960,CHROMR,cholesterol induced regulator of metabolism RNA [Source:HGNC Symbol;Acc:HGNC:54059],[CHROME_PRKRA-AS1],cholesterol induced regulator of metabolism RNA,101927027.0
+Reference 9 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1961:
+ENSG00000271272,,"aminolevulinate, delta-, synthase 1 (ALAS1) pseudogene",[],
 
 Reference 10:
-Reference 10 (BM25):
-ENSG00000260552,COSMOC,cell fate and sterol metabolism associated divergent transcript of MOCOS [Source:HGNC Symbol;Acc:HGNC:51610],[],cell fate and sterol metabolism associated divergent transcript of MOCOS,101927809.0
+Reference 10 (BM25) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1639:
+ENSG00000140564,FURIN,"furin, paired basic amino acid cleaving enzyme [Source:HGNC Symbol;Acc:HGNC:8568]",[FUR_PACE_PCSK3_SPC1],5045
+
+Reference 11:
+Reference 11 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1639:
+ENSG00000284124,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
+
+Reference 12:
+Reference 12 (FAISS and BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders" with RRF Score: 0.1421:
+ENSG00000273171,,"novel protein, readthrough between VTN and SEBOX",[],
+
+Reference 13:
+Reference 13 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1408:
+ENSG00000256450,,"glutamic-oxaloacetic transaminase 2, mitochondrial (aspartate aminotransferase 2) (GOT2) pseudogene",[],
+
+Reference 14:
+Reference 14 (BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders" with RRF Score: 0.1235:
+ENSG00000273049,,"novel protein, readthrough between HOXC10 and HOXC5",[],
+
+Reference 15:
+Reference 15 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1235:
+ENSG00000277024,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
+
+Reference 16:
+Reference 16 (BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders" with RRF Score: 0.1099:
+ENSG00000258924,,novel transcript readthrough between TMEM199 and SARM1,[],
+
+Reference 17:
+Reference 17 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.1099:
+ENSG00000253520,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],
+
+Reference 18:
+Reference 18 (FAISS and BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders", "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.0993:
+Ultraconserved region 339 modulation of tumor suppressor microRNAs in cancer	WP4284	[TP53, LFS1, P53]	[CCNE2, CYCE2]
+
+Reference 19:
+Reference 19 (BM25) from query: "Relationship between alanine, aspartate, and metabolic disorders" with RRF Score: 0.0990:
+ENSG00000267629,,"novel transcript, readthrough between TM6SF2 and HAPLN4",[],
+
+Reference 20:
+Reference 20 (FAISS) from query: "Role of alanine and aspartate in amino acid metabolism" with RRF Score: 0.0990:
+ENSG00000226045,,"glutamyl-tRNA(Gln) amidotransferase, subunit C homolog (bacterial)(GATC) pseudogene",[],
 

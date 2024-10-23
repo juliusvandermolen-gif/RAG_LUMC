@@ -326,7 +326,7 @@ def build_bm25_index(conn):
     return bm25, chunk_ids, chunk_texts
 
 
-def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=5):
+def query_bm25_index(query_text, bm25, chunk_ids, top_k=20):
     query_tokens = query_text.lower().split()
     scores = bm25.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
@@ -363,16 +363,18 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
 
         For documents formatted as follows:
         Example:
-        Glutathione metabolism%WikiPathways_20240910%WP100%Homo sapiens https://www.wikipathways.org/instance/WP100
+        Glutathione metabolism WP100
         [GGT5, GGT-REL, GGTLA1] [GGT1, CD224, D22S672, D22S732, GGT] [GPX1] [GSR]
 
-        Contain the pathway with its WikiPathways link. The genes are in a list. For each list, there is the gene 
+        Contain the pathway with its WikiPathways ID. The genes are in a list. For each list, there is the gene 
         with its synonym. If there are multiple synonyms, list them (e.g., GGT5 has the synonyms GGT-REL and GGTLA1). 
         If no synonyms exist (e.g., GPX1), leave the gene name as is.
 
         Your goal is to ensure biological accuracy, logical reasoning, and transparency in the analysis. Avoid 
         speculation unless explicitly noted, and format the output to be concise, clear, and structured for easy 
-        reading."""
+        reading.
+    
+        """
 
     combined_documents = "\n\n".join(document_references)
     prompt = (f"Based on the following documents, answer the question: {query_text}\n\nDocuments:\n"
@@ -386,7 +388,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
                 {"role": "system", "content": system_instruction},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=500,
+            max_tokens=5000,
             temperature=0.2
         )
     except Exception as e:
@@ -407,7 +409,7 @@ def save_answer_to_file(prompt, answer, document_references,
     print(f"Answer saved to {file_name}")
     with open("documents.txt", "w", encoding='utf-8') as f:
         for idx, doc in enumerate(document_references, start=1):
-            f.write(f"Reference {idx}:\n{doc}\n\n")
+            f.write(f"Reference {idx}:\n{doc} \n\n")
 
 
 def query_expansion(query_text, number):
@@ -427,31 +429,35 @@ def query_expansion(query_text, number):
 
     Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
     """.format(number=number)
+    print("The amount of queries that are going to be expanded:{number}".format(number=number))
+    if number > 0:
+        prompt = (f"Based on the user's query, provide expanded queries that include related terms, synonyms, "
+                  f"and relevant"
+                  f"expansions.\n\nUser query: \"{query_text}\"")
 
-    prompt = (f"Based on the user's query, provide expanded queries that include related terms, synonyms, and relevant "
-              f"expansions.\n\nUser query: \"{query_text}\"")
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": system_instruction},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=500,
+                temperature=0.7,
 
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": system_instruction},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=500,
-            temperature=0.7,
+            )
 
-        )
+            reply = response.choices[0].message.content
+            expanded_queries = reply.strip().split('\n')
+            expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for
+                                q in expanded_queries if q.strip()]
 
-        reply = response.choices[0].message.content
-        expanded_queries = reply.strip().split('\n')
-        expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for
-                            q in expanded_queries if q.strip()]
+            return expanded_queries
 
-        return expanded_queries
-
-    except Exception as e:
-        print(f"An error occurred while expanding the query: {e}")
+        except Exception as e:
+            print(f"An error occurred while expanding the query: {e}")
+            return [query_text]
+    else:
         return [query_text]
 
 
@@ -582,8 +588,7 @@ def create_top_bm25_docs(expanded_queries, bm25_index, bm25_chunk_ids,
                          bm25_chunk_texts, top_k=20):
     bm25_doc_scores = {}
     for eq in expanded_queries:
-        top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids,
-                                                bm25_chunk_texts, top_k=top_k)
+        top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids, top_k=top_k)
         for doc_id, score in zip(top_ids_bm25, scores):
             if doc_id in bm25_doc_scores:
                 if score > bm25_doc_scores[doc_id][0]:
@@ -663,11 +668,10 @@ def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
                                       bm25_index, bm25_chunk_ids,
                                       bm25_chunk_texts):
     """Expand query and retrieve top documents using FAISS and BM25."""
-    number_of_expansions = 3
+    number_of_expansions = 5
     expanded_queries = query_expansion(query, number=number_of_expansions)[1:]
     expanded_queries.append(query)
 
-    print(f"Original Query: {query}")
     for idx, eq in enumerate(expanded_queries, start=1):
         print(f"Expanded Query {idx}: {eq}")
 
@@ -752,7 +756,7 @@ def main():
 
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
-    query = "What genes are relevant to Alanine and Aspertate metabolism?"
+    query = "Alanine and aspartate metabolism"
     top_faiss_docs, top_bm25_docs = run_query_expansion_and_retrieval(query,
                                                                       index,
                                                                       tokenizer,
@@ -764,10 +768,13 @@ def main():
 
     rrf_scores = rrf(top_bm25_docs, top_faiss_docs)
     retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
-        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=10)
+        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=20)
 
+    # Updated code to include the source query and RRF score
     labeled_documents = [
-        f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}):\n{chunk_text}"
+        (f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) from query:"
+         f" {', '.join(set(combined_docs[doc_id]['source_queries']))} with RRF Score:"
+         f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}")
         for doc_id, chunk_text in
         zip(combined_docs.keys(), retrieved_chunks_ordered)
     ]
