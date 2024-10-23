@@ -177,30 +177,6 @@ def load_gz_files(data_dir='./Data/biomart'):
     return documents
 
 
-# def chunk_documents(documents, chunk_size=5000, chunk_overlap=300):
-#     print("Chunking documents...")
-#     if not documents:
-#         print("No documents to chunk. Returning an empty list.")
-#         return []
-#
-#     text_splitter = CharacterTextSplitter(
-#         separator="\n",
-#         chunk_size=chunk_size,
-#         chunk_overlap=chunk_overlap,
-#         length_function=len
-#     )
-#
-#     chunked_docs = []
-#
-#     for idx, document in enumerate(documents):
-#         print(f"Processing Document {idx + 1} with length {len(document)} characters.")
-#         chunks = text_splitter.split_text(document)
-#         print(f"Document {idx + 1} split into {len(chunks)} chunks.")
-#         chunked_docs.extend(chunks)
-#
-#     print(f"Total number of chunks: {len(chunked_docs)}")
-#     return chunked_docs
-
 def chunk_documents(documents):
     if not documents:
         print("No documents to chunk. Returning an empty list.")
@@ -213,7 +189,7 @@ def chunk_documents(documents):
 
         lines = document.split("\n")
         chunked_docs.extend(line for line in lines if
-                            line.strip())  # Add non-empty lines as chunks
+                            line.strip())
 
     print(
         f"Total number of chunks: {len(chunked_docs)} (should match line count)")
@@ -242,11 +218,6 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
 
         data_lines = lines[1:] if file.endswith('txt.gz') else lines
 
-        if not data_lines:
-            print(
-                f"No data lines found in file '{file}' after skipping header. Skipping embedding.")
-            continue
-
         document_content = "\n".join(data_lines)
 
         chunks = chunk_documents([document_content])
@@ -258,18 +229,6 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
         embeddings = []
 
         with torch.no_grad():
-            #Does not achieve distance = 0 when chunk=query
-            # for i in tqdm(range(0, len(chunks), batch_size),
-            #               desc=f"Embedding chunks of '{file}'"):
-            #     batch = chunks[i:i + batch_size]
-            #     inputs = tokenizer(batch, return_tensors="pt",
-            #                        truncation=True, padding=True,
-            #                        max_length=512).to(device)
-            #     outputs = model(**inputs)
-            #     batch_embeddings = outputs.last_hidden_state[:, 0, :].cpu().numpy()
-            #     embeddings.extend(batch_embeddings)
-
-            #Does achieve distance = 0 when chunk=query, takes longer?
             for i in tqdm(range(0, len(chunks), batch_size),
                           desc="Processing chunks in batches"):
                 batch = chunks[i:i + batch_size]
@@ -380,34 +339,44 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
                                                    document_references):
     system_instruction = """
         You are an efficient and insightful assistant to a molecular biologist.
-        Your role is to analyze gene sets and interpret their collective function based on biological knowledge. Write a critical analysis of the biological processes performed by this system of interacting proteins. Be concise and specific; avoid overly general statements. Be factual and avoid opinions.
+        Your role is to analyze gene sets and interpret their collective function based on biological knowledge.
+        Write a critical analysis of the biological processes performed by this system of interacting proteins.
+        Be concise and specific; avoid overly general statements. Be factual and avoid opinions.
 
         Follow these structured instructions:
 
-        1. **Role Context**: Act as a molecular biology assistant, focusing on relevant technical language and biological processes.
+        1. **Role Context**: Act as a molecular biology assistant, focusing on relevant technical language and
+        biological processes.
 
-        2. **Task Execution**: First, perform an in-depth analysis of the provided gene set. For each gene, review its function, identify patterns or shared pathways among genes, and then synthesize a descriptive name that reflects a coherent function. If no clear function emerges, label it as a “System of unrelated proteins” with a confidence score of 0.
+        2. **Task Execution**: First, perform an in-depth analysis of the provided gene set. For each gene, review its
+        function, identify patterns or shared pathways among genes, and then synthesize a descriptive name that reflects
+        a coherent function. If no clear function emerges, label it as a “System of unrelated proteins” with a
+        confidence score of 0.
 
-        3. **Confidence Scoring**: Assign a confidence score between 0.00 and 1.00 based on the coherence of the proposed function:
-            - **1.00**: Very high confidence (strongly related genes, clear functional theme).
-            - **0.00**: No confidence (unrelated or random gene set).
+        3. **Confidence Scoring**: Assign a confidence score between 0.00 and 1.00 based on the coherence of the 
+        proposed function: - **1.00**: Very high confidence (strongly related genes, clear functional theme). - 
+        **0.00**: No confidence (unrelated or random gene set).
 
-        4. **Output Structure**: 
-            - Place the function name as a title.
-            - Follow with an essay that explains your reasoning, highlights functional relationships, and, where possible, references relevant biological literature or established pathways.
+        4. **Output Structure**: - Place the function name as a title. - Follow with an essay that explains your 
+        reasoning, highlights functional relationships, and, where possible, references relevant biological 
+        literature or established pathways.
 
         For documents formatted as follows:
         Example:
         Glutathione metabolism%WikiPathways_20240910%WP100%Homo sapiens https://www.wikipathways.org/instance/WP100
         [GGT5, GGT-REL, GGTLA1] [GGT1, CD224, D22S672, D22S732, GGT] [GPX1] [GSR]
 
-        Contain the pathway with its WikiPathways link. The genes are in a list. For each list, there is the gene with its synonym. If there are multiple synonyms, list them (e.g., GGT5 has the synonyms GGT-REL and GGTLA1). If no synonyms exist (e.g., GPX1), leave the gene name as is.
+        Contain the pathway with its WikiPathways link. The genes are in a list. For each list, there is the gene 
+        with its synonym. If there are multiple synonyms, list them (e.g., GGT5 has the synonyms GGT-REL and GGTLA1). 
+        If no synonyms exist (e.g., GPX1), leave the gene name as is.
 
-        Your goal is to ensure biological accuracy, logical reasoning, and transparency in the analysis. Avoid speculation unless explicitly noted, and format the output to be concise, clear, and structured for easy reading.
-    """
+        Your goal is to ensure biological accuracy, logical reasoning, and transparency in the analysis. Avoid 
+        speculation unless explicitly noted, and format the output to be concise, clear, and structured for easy 
+        reading."""
 
     combined_documents = "\n\n".join(document_references)
-    prompt = f"Based on the following documents, answer the question: {query_text}\n\nDocuments:\n{combined_documents}\n"
+    prompt = (f"Based on the following documents, answer the question: {query_text}\n\nDocuments:\n"
+              f"{combined_documents}\n")
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     try:
@@ -442,10 +411,9 @@ def save_answer_to_file(prompt, answer, document_references,
 
 
 def query_expansion(query_text, number):
-    system_instruction = """
-    You are an expert in query expansion for biomedical literature search.
-    Given a user's query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions.
-    The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused.
+    system_instruction = """You are an expert in query expansion for biomedical literature search. Given a user's 
+    query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions. 
+    The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
     However, there is a maximum of {number} alternative queries that are given.
 
     Example:
@@ -460,7 +428,8 @@ def query_expansion(query_text, number):
     Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
     """.format(number=number)
 
-    prompt = f"Based on the user's query, provide expanded queries that include related terms, synonyms, and relevant expansions.\n\nUser query: \"{query_text}\""
+    prompt = (f"Based on the user's query, provide expanded queries that include related terms, synonyms, and relevant "
+              f"expansions.\n\nUser query: \"{query_text}\"")
 
     try:
         response = client.chat.completions.create(
@@ -591,60 +560,7 @@ def convert_gene_id_to_symbols(file, data_dir='./Data/JSON/'):
     return output_lines, list(final_unknown_genes)
 
 
-def main():
-    data_dir = './Data/biomart'
-    log_dir = './file_log'
-    log_path = os.path.join(log_dir, 'file_log.json')
-    index_path = 'faiss_index.bin'
-    db_path = 'chunks_embeddings.db'
-    cache_file = os.path.join(data_dir, 'ncbi_id_to_symbol.json')
-
-    for file in os.listdir(data_dir):
-        full_file_path = os.path.join(data_dir, file)
-        if os.path.isfile(full_file_path) and file.endswith(
-                '.gmt') and file.startswith('wiki'):
-            print(f"Processing file: {file}")
-            converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
-                                                                        data_dir)
-            print(
-                f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
-
-    conn = initialize_database(db_path=db_path)
-    tokenizer, model = load_model_and_tokenizer()
-    embedding_dim = model.config.hidden_size
-
-    try:
-        index = load_faiss_index(embedding_dim, index_path=index_path)
-    except ValueError as ve:
-        print(
-            "Deleting existing FAISS index and creating a new one with IndexIDMap.")
-        if os.path.exists(index_path):
-            os.remove(index_path)
-            print(f"Deleted FAISS index at {index_path}")
-        index = load_faiss_index(embedding_dim, index_path=index_path)
-
-    embed_documents(conn, index, tokenizer, model, data_dir=data_dir,
-                    batch_size=64, log_path=log_path)
-    save_faiss_index(index, index_path=index_path)
-    conn.close()
-
-    index = load_faiss_index(embedding_dim, index_path=index_path)
-    conn = sqlite3.connect(db_path)
-
-    bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
-
-    query = """What genes are relevant to Alanine and Aspertate metabolism? 
-    """
-    number_of_expansions = 3
-    expanded_queries = query_expansion(query, number=number_of_expansions)[
-                       1:]
-    print(f"Original Query: {query}")
-    for eq in enumerate(expanded_queries, start=1):
-        print(f"Expanded Query: {eq}\n")
-    expanded_queries.append(query)
-
-    top_k = 1000
-
+def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k=20):
     faiss_doc_distance_dict = {}
     for eq in expanded_queries:
         top_ids, distances = query_faiss_index(eq, index, tokenizer, model,
@@ -659,8 +575,11 @@ def main():
     sorted_faiss_docs = sorted(faiss_doc_distance_dict.items(),
                                key=lambda item: item[1][0])
     top_faiss_docs = sorted_faiss_docs[:top_k]
+    return top_faiss_docs
 
 
+def create_top_bm25_docs(expanded_queries, bm25_index, bm25_chunk_ids,
+                         bm25_chunk_texts, top_k=20):
     bm25_doc_scores = {}
     for eq in expanded_queries:
         top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids,
@@ -675,7 +594,11 @@ def main():
     sorted_bm25_docs = sorted(bm25_doc_scores.items(),
                               key=lambda item: item[1][0], reverse=True)
     top_bm25_docs = sorted_bm25_docs[:top_k]
-    k = 0.1  #Max score is 1.81818181
+    return top_bm25_docs
+
+
+def rrf(top_bm25_docs, top_faiss_docs):
+    k = 0.1  # Max score is 1.81818181
     rrf_scores = {}
 
     for bm25_index, bm25_doc in enumerate(top_bm25_docs):
@@ -698,17 +621,71 @@ def main():
             rrf_scores[faiss_id] = {'score': 0, 'source_queries': []}
         rrf_scores[faiss_id]['score'] += 1 / (k + faiss_score)
         rrf_scores[faiss_id]['source_queries'].append(source_query)
+    return rrf_scores
 
-    amount_docs = 10
-    sorted_rrf_scores = sorted(rrf_scores.items(),
-                               key=lambda item: item[1]['score'], reverse=True)
-    sorted_rrf_scores = sorted_rrf_scores[:amount_docs]
-    for rank, (doc_id, data) in enumerate(sorted_rrf_scores, start=1):
-        score = data['score']
-        source_queries = ', '.join(
-            set(data['source_queries']))
+
+def process_files_in_directory(data_dir):
+    """Process all .gmt files in the given directory that start with 'wiki'."""
+    for file in os.listdir(data_dir):
+        full_file_path = os.path.join(data_dir, file)
+        if os.path.isfile(full_file_path) and file.endswith(
+                '.gmt') and file.startswith('wiki'):
+            print(f"Processing file: {file}")
+            converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
+                                                                        data_dir)
+            print(
+                f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
+
+
+def initialize_faiss_index(embedding_dim, index_path):
+    """Load or recreate a FAISS index."""
+    try:
+        return load_faiss_index(embedding_dim, index_path=index_path)
+    except ValueError:
         print(
-            f"{rank}. Document ID: {doc_id - 1}, RRF Score: {score}, Source Queries: {source_queries}")
+            "Deleting existing FAISS index and creating a new one with IndexIDMap.")
+        if os.path.exists(index_path):
+            os.remove(index_path)
+            print(f"Deleted FAISS index at {index_path}")
+        return load_faiss_index(embedding_dim, index_path=index_path)
+
+
+def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
+                             batch_size, log_path, index_path):
+    """Embed documents, save to FAISS index, and close connection."""
+    embed_documents(conn, index, tokenizer, model, data_dir=data_dir,
+                    batch_size=batch_size, log_path=log_path)
+    save_faiss_index(index, index_path=index_path)
+    conn.close()
+
+
+def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
+                                      bm25_index, bm25_chunk_ids,
+                                      bm25_chunk_texts):
+    """Expand query and retrieve top documents using FAISS and BM25."""
+    number_of_expansions = 3
+    expanded_queries = query_expansion(query, number=number_of_expansions)[1:]
+    expanded_queries.append(query)
+
+    print(f"Original Query: {query}")
+    for idx, eq in enumerate(expanded_queries, start=1):
+        print(f"Expanded Query {idx}: {eq}")
+
+    top_faiss_docs = create_top_faiss_docs(expanded_queries, index, tokenizer,
+                                           model, top_k)
+    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25_index,
+                                         bm25_chunk_ids, bm25_chunk_texts,
+                                         top_k)
+
+    return top_faiss_docs, top_bm25_docs
+
+
+def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs,
+                                top_bm25_docs, amount_docs):
+    """Rank documents and fetch top chunks from the database."""
+    sorted_rrf_scores = sorted(rrf_scores.items(),
+                               key=lambda item: item[1]['score'],
+                               reverse=True)[:amount_docs]
 
     combined_docs = {}
     for rank, (doc_id, data) in enumerate(sorted_rrf_scores, start=1):
@@ -726,39 +703,76 @@ def main():
             combined_docs[doc_id]['retriever'].append('BM25')
 
     combined_top_ids = list(combined_docs.keys())
-    if combined_top_ids:
-        retrieved_chunks = fetch_chunks_by_ids(conn, combined_top_ids)
-        doc_id_to_chunk_unordered = dict(
-            zip(sorted(combined_top_ids), retrieved_chunks))
-        retrieved_chunks_ordered = [doc_id_to_chunk_unordered[doc_id] for
-                                    doc_id in combined_top_ids]
+    retrieved_chunks = fetch_chunks_by_ids(conn,
+                                           combined_top_ids) if combined_top_ids else []
+    doc_id_to_chunk = dict(zip(sorted(combined_top_ids), retrieved_chunks))
 
-        labeled_documents = []
-        for idx, doc_id in enumerate(combined_top_ids, start=1):
-            retrievers = combined_docs[doc_id]['retriever']
-            retriever_label = ' and '.join(
-                retrievers) if retrievers else "Unknown Retriever"
-            chunk_text = retrieved_chunks_ordered[idx - 1]
-            labeled_document = f"Reference {idx} ({retriever_label}):\n{chunk_text}"
-            labeled_documents.append(labeled_document)
+    return [doc_id_to_chunk[doc_id] for doc_id in
+            combined_top_ids], combined_docs
 
-        print(
-            f"Retrieved {len(labeled_documents)} unique chunks from the database.")
-        response = generate_gpt4_turbo_response_with_instructions(query,
-                                                                  labeled_documents)
 
-        if response:
-            print(f"GPT-4 Response:\n{response}")
-            combined_documents = "\n\n".join(labeled_documents)
-            prompt = f"Based on the following documents, answer the question: {query}\n\nDocuments:\n{combined_documents}\n"
-            save_answer_to_file(prompt, response, labeled_documents)
-        else:
-            print("Failed to generate a response from GPT-4.")
+def generate_response_and_save(query, labeled_documents, conn):
+    """Generate GPT-4 response and save the result."""
+    print(
+        f"Retrieved {len(labeled_documents)} unique chunks from the database.")
+    response = generate_gpt4_turbo_response_with_instructions(query,
+                                                              labeled_documents)
+
+    if response:
+        print(f"GPT-4 Response:\n{response}")
+        combined_documents = "\n\n".join(labeled_documents)
+        prompt = f"Based on the following documents, answer the question: {query}\n\nDocuments:\n{combined_documents}\n"
+        save_answer_to_file(prompt, response, labeled_documents)
     else:
-        print(
-            "No documents retrieved for the expanded queries. Skipping GPT-4 response generation.")
-
+        print("Failed to generate a response from GPT-4.")
     conn.close()
+
+
+def main():
+    data_dir = './Data/biomart'
+    log_dir = './file_log'
+    log_path = os.path.join(log_dir, 'file_log.json')
+    index_path = 'faiss_index.bin'
+    db_path = 'chunks_embeddings.db'
+
+    process_files_in_directory(data_dir)
+
+    conn = initialize_database(db_path=db_path)
+    tokenizer, model = load_model_and_tokenizer()
+    embedding_dim = model.config.hidden_size
+
+    index = initialize_faiss_index(embedding_dim, index_path)
+
+    embed_documents_and_save(index, conn, tokenizer, model, data_dir,
+                             batch_size=64, log_path=log_path,
+                             index_path=index_path)
+
+    index = load_faiss_index(embedding_dim, index_path=index_path)
+    conn = sqlite3.connect(db_path)
+
+    bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
+
+    query = "What genes are relevant to Alanine and Aspertate metabolism?"
+    top_faiss_docs, top_bm25_docs = run_query_expansion_and_retrieval(query,
+                                                                      index,
+                                                                      tokenizer,
+                                                                      model,
+                                                                      top_k=1000,
+                                                                      bm25_index=bm25_index,
+                                                                      bm25_chunk_ids=bm25_chunk_ids,
+                                                                      bm25_chunk_texts=bm25_chunk_texts)
+
+    rrf_scores = rrf(top_bm25_docs, top_faiss_docs)
+    retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
+        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=10)
+
+    labeled_documents = [
+        f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}):\n{chunk_text}"
+        for doc_id, chunk_text in
+        zip(combined_docs.keys(), retrieved_chunks_ordered)
+    ]
+
+    generate_response_and_save(query, labeled_documents, conn)
 
 
 if __name__ == "__main__":

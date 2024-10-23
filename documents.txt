@@ -1,40 +1,40 @@
 Reference 1:
 Reference 1 (BM25):
-ENSG00000147003,CLTRN,"collectrin, amino acid transport regulator [Source:HGNC Symbol;Acc:HGNC:29437]",[NX17_TMEM27],"collectrin, amino acid transport regulator",57393.0
+ENSG00000143162,CREG1,cellular repressor of E1A stimulated genes 1 [Source:HGNC Symbol;Acc:HGNC:2351],[CREG],cellular repressor of E1A stimulated genes 1,8804.0
 
 Reference 2:
 Reference 2 (FAISS):
-ENSG00000248611,,pseudogene similar to part of 5-aminoimidazole-4-carboxamide ribonucleotide formyltransferase/IMP cyclohydrolase (ATIC),[],,
+ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
 
 Reference 3:
-Reference 3 (BM25):
-ENSG00000164808,SPIDR,scaffold protein involved in DNA repair [Source:HGNC Symbol;Acc:HGNC:28971],[KIAA0146],scaffold protein involved in DNA repair,23514.0
+Reference 3 (FAISS and BM25):
+ENSG00000233870,,pseudogene similar to part of N-acetylglucosamine kinase (NAGK),[],,
 
 Reference 4:
-Reference 4 (FAISS):
-ENSG00000279167,,N-acetylated alpha-linked acidic dipeptidase 2 (Naalad2) pseudogene,[],,
+Reference 4 (BM25):
+ENSG00000175874,CREG2,cellular repressor of E1A stimulated genes 2 [Source:HGNC Symbol;Acc:HGNC:14272],[],cellular repressor of E1A stimulated genes 2,200407.0
 
 Reference 5:
-Reference 5 (FAISS and BM25):
-ENSG00000260552,COSMOC,cell fate and sterol metabolism associated divergent transcript of MOCOS [Source:HGNC Symbol;Acc:HGNC:51610],[],cell fate and sterol metabolism associated divergent transcript of MOCOS,101927809.0
+Reference 5 (BM25):
+ENSG00000165917,RAPSN,receptor associated protein of the synapse [Source:HGNC Symbol;Acc:HGNC:9863],[CMS1D_CMS1E_RNF205],receptor associated protein of the synapse,5913.0
 
 Reference 6:
 Reference 6 (FAISS):
-ENSG00000249541,,3-hydroxyisobutyryl-Coenzyme A hydrolase (HIBCH) pseudogene,[],,
+ENSG00000276149,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
 
 Reference 7:
 Reference 7 (FAISS and BM25):
-ENSG00000060982,BCAT1,branched chain amino acid transaminase 1 [Source:HGNC Symbol;Acc:HGNC:976],[BCATC_BCT1],branched chain amino acid transaminase 1,586.0
+ENSG00000282259,,bile acid Coenzyme A: amino acid N-acyltransferase (BAAT) pseudogene,[],,
 
 Reference 8:
-Reference 8 (FAISS):
-ENSG00000275628,,6-pyruvoyltetrahydropterin synthase (PTS) pseudogene,[],,
+Reference 8 (FAISS and BM25):
+ENSG00000227948,,pseudogene similar to part of argininosuccinate synthetase 1 (ASS1),[],,
 
 Reference 9:
 Reference 9 (BM25):
-ENSG00000105552,BCAT2,branched chain amino acid transaminase 2 [Source:HGNC Symbol;Acc:HGNC:977],[BCAM_BCATM_BCT2],branched chain amino acid transaminase 2,587.0
+ENSG00000223960,CHROMR,cholesterol induced regulator of metabolism RNA [Source:HGNC Symbol;Acc:HGNC:54059],[CHROME_PRKRA-AS1],cholesterol induced regulator of metabolism RNA,101927027.0
 
 Reference 10:
-Reference 10 (FAISS):
-ENSG00000227948,,pseudogene similar to part of argininosuccinate synthetase 1 (ASS1),[],,
+Reference 10 (BM25):
+ENSG00000260552,COSMOC,cell fate and sterol metabolism associated divergent transcript of MOCOS [Source:HGNC Symbol;Acc:HGNC:51610],[],cell fate and sterol metabolism associated divergent transcript of MOCOS,101927809.0
 
