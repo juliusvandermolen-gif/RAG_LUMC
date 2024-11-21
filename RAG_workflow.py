@@ -163,7 +163,7 @@ def fetch_chunks(conn):
 
 
 @timer
-def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
+def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large", # michiyasunaga/BioLinkBERT-large
                              force_download=False):
     tokenizer = AutoTokenizer.from_pretrained(model_name,
                                               force_download=force_download)
@@ -356,14 +356,23 @@ def build_bm25_index(conn):
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
     # Use regex to tokenize and remove punctuation
-    tokenized_corpus = [re.findall(r'\b\w+\b', doc.lower()) for doc in chunk_texts]
+    tokenized_corpus = [re.findall(r'\b[\w-]+\b', doc.lower()) for doc in chunk_texts] #original: re.findall(r'\b\w+\b', doc.lower())
+    #tokenized_corpus = [doc.lower().replace('[', '').replace(']', '').split(',') for doc in chunk_texts]
     bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
 
 
 @timer
-def query_bm25_index(query_text, bm25, chunk_ids, top_k=1000):
-    query_tokens = re.findall(r'\b\w+\b', query_text.lower())
+def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
+    query_tokens = re.findall(r'\b[\w-]+\b', query_text.lower())
+    #query_tokens = query_text.lower().replace('[', '').replace(']', '').split(',')
+    print("Query tokens",query_tokens)
+
+    print("\nTokens for each line in the database:")
+    for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
+        line_tokens = re.findall(r'\b[\w-]+\b', chunk_text.lower())
+        #line_tokens = chunk_text.lower().replace('[', '').replace(']', '').split(',')
+        print(f"Chunk ID {chunk_id}: {line_tokens}") #Check how everything is chunked
     scores = bm25.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
     top_ids = [chunk_ids[i] for i in top_n]
@@ -371,63 +380,126 @@ def query_bm25_index(query_text, bm25, chunk_ids, top_k=1000):
     return top_ids, top_scores
 
 
+
+
 def generate_gpt4_turbo_response_with_instructions(query_text,
                                                    document_references):
-    system_instruction = """
-        You are an efficient and insightful assistant to a molecular biologist.
-        Your role is to analyze gene sets and interpret their collective function based on biological knowledge.
-        Write a critical analysis of the biological processes performed by this system of interacting proteins.
-        Be concise and specific; avoid overly general statements. Be factual and avoid opinions.
+    system_instruction = """You are a knowledgeable bioinformatics assistant specializing in gene pathway analysis. 
+Your primary task is to help users categorize their provided list of genes based on associated biological 
+pathways, similar to how KEGG and Reactome function in tools like GSEA or g:Profiler.
 
-        Follow these structured instructions:
+When assisting the user, you should:
 
-        1. **Role Context**: Act as a molecular biology assistant, focusing on relevant technical language and
-        biological processes.
+1. **Accept a List of Genes**: Receive the user's list of gene symbols or identifiers.
 
-        2. **Task Execution**: First, perform an in-depth analysis of the provided gene set. For each gene, review its
-        function, identify patterns or shared pathways among genes, and then synthesize a descriptive name that reflects
-        a coherent function. If no clear function emerges, label it as a “System of unrelated proteins” with a
-        confidence score of 0.
+2. **Identify Associated Pathways**: For each gene, determine its associated biological pathways using reputable 
+   databases such as KEGG and Reactome.
 
-        3. **Confidence Scoring**: Assign a confidence score between 0.00 and 1.00 based on the coherence of the 
-        proposed function: - **1.00**: Very high confidence (strongly related genes, clear functional theme). - 
-        **0.00**: No confidence (unrelated or random gene set).
+3. **Categorize Genes by Pathways**: Group the genes based on shared pathways to highlight common biological 
+   functions or processes.
 
-        4. **Output Structure**: - Place the pathway name at the beginning of the analysis. - For each gene, provide in
-        pathway they are relevant to and group them. - Include a confidence score for the entire pathway.
-        
-    
-        """
+4. **Organize Results Like g:Profiler**: Present the pathways in a clear, structured format similar to 
+   g:Profiler, first listing KEGG pathways and then Reactome pathways, sorted by significance or relevance. For each 
+   pathway, include details like:
+   - **Pathway ID**: Use the actual pathway ID from the respective database.
+     - **KEGG Pathways**: Format as `KEGG:<pathway_id>` (e.g., `KEGG:hsa04110`).
+     - **Reactome Pathways**: Format as `Reactome:R-HSA-<pathway_id>` (e.g., `Reactome:R-HSA-1234567`).
+   - **Pathway Name**: The official name of the pathway.
+   - **Adjusted p-value (Padj)**: Statistical significance of the pathway enrichment.
+   - **Relevant Genes**: List of user-provided genes associated with the pathway.
+
+5. **Use Actual Pathway IDs**: - **KEGG**: Retrieve and display the precise KEGG pathway IDs without placeholders. 
+Ensure the format follows `KEGG:<pathway_id>`, such as `KEGG:hsa04110`. - **Reactome**: Retrieve and display the 
+precise Reactome pathway IDs without placeholders. Ensure the format follows `Reactome:R-HSA-<pathway_id>`, 
+such as `Reactome:R-HSA-1234567`. - **Avoid Placeholder IDs**: Do not use generic labels or IDs from other databases 
+like WikiPathways unless specifically required.
+
+6. **Provide Detailed Information**: Offer concise explanations of each pathway's significance, including its 
+   role in biological processes or diseases.
+
+7. **Present Information Clearly**: Organize your response in a clear and accessible format, such as tables or 
+   bullet points, to enhance user understanding.
+
+Your goal is to assist the user in understanding the functional relationships among their genes through pathway 
+categorization, facilitating further analysis or research they may wish to conduct.
+
+Keep in mind that you should use the correct pathway IDs from KEGG and Reactome accordingly and not use 
+placeholder IDs or IDs from other databases like WikiPathways.
+"""
+
+    # system_instruction = """
+    #     You are an efficient and insightful assistant to a molecular biologist.
+    #     Your role is to analyze gene sets and interpret their collective function based on biological knowledge.
+    #     Write a critical analysis of the biological processes performed by this system of interacting proteins.
+    #     Be concise and specific; avoid overly general statements. Be factual and avoid opinions.
+    #
+    #     Follow these structured instructions:
+    #
+    #     1. **Role Context**: Act as a molecular biology assistant, focusing on relevant technical language and
+    #     biological processes.
+    #
+    #     2. **Task Execution**: First, perform an in-depth analysis of the provided gene set. For each gene, review its
+    #     function, identify patterns or shared pathways among genes, and then synthesize a descriptive name that reflects
+    #     a coherent function. If no clear function emerges, label it as a “System of unrelated proteins” with a
+    #     confidence score of 0.
+    #
+    #     3. **Confidence Scoring**: Assign a confidence score between 0.00 and 1.00 based on the coherence of the
+    #     proposed function: - **1.00**: Very high confidence (strongly related genes, clear functional theme). -
+    #     **0.00**: No confidence (unrelated or random gene set).
+    #
+    #     4. **Output Structure**: - Place the pathway name at the beginning of the analysis. - For each gene, provide in
+    #     pathway they are relevant to and group them. - Include a confidence score for the entire pathway.
+    #
+    #
+    #     """
 
     combined_documents = "\n\n".join(document_references)
     prompt = (f"Based on the following documents, answer the question: {query_text}\n\nDocuments:\n"
               f"{combined_documents}\n")
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": system_instruction},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=5000,
-            temperature=0.2
-        )
-    except Exception as e:
-        print(f"An error occurred while generating the GPT-4 response: {e}")
-        return None
+    model = "gpt-4o-mini"
 
-    return response.choices[0].message.content
+    if model == "o1-preview" or model == "o1-mini":
+        adjusted_prompt = system_instruction + prompt
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "user", "content": adjusted_prompt}
+                ],
+                max_completion_tokens=5000
+            )
+        except Exception as e:
+            print(f"An error occurred while generating the GPT-4 response: {e}")
+            return None
+
+        return response.choices[0].message.content
+    else:
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": system_instruction},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=5000,
+                temperature=0.7
+            )
+        except Exception as e:
+            print(f"An error occurred while generating the GPT-4 response: {e}")
+            return None
+
+        return response.choices[0].message.content
 
 
 @timer
 def save_answer_to_file(prompt, answer, document_references,
                         file_name="answer.txt"):
     with open(file_name, "w", encoding='utf-8') as f:
-        f.write(f"Prompt:\n{prompt}\n\n")
+        #f.write(f"Prompt:\n{prompt}\n\n")
         f.write(f"Answer:\n{answer}\n\n")
-        f.write(f"Document References:\n")
+        #f.write(f"Document References:\n")
         for idx, doc in enumerate(document_references, start=1):
             f.write(f"Reference {idx}:\n{doc}\n\n")
     print(f"Answer saved to {file_name}")
@@ -618,8 +690,9 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k=20):
 def create_top_bm25_docs(expanded_queries, bm25_index, bm25_chunk_ids,
                          bm25_chunk_texts, top_k=20):
     bm25_doc_scores = {}
+    print("Bm25", bm25_chunk_texts)
     for eq in expanded_queries:
-        top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids, top_k=top_k)
+        top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids, bm25_chunk_texts, top_k=top_k)
         for doc_id, score in zip(top_ids_bm25, scores):
             if doc_id in bm25_doc_scores:
                 if score > bm25_doc_scores[doc_id][0]:
@@ -716,7 +789,6 @@ def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
     top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25_index,
                                          bm25_chunk_ids, bm25_chunk_texts,
                                          top_k)
-
     return top_faiss_docs, top_bm25_docs
 
 
@@ -761,7 +833,6 @@ def generate_response_and_save(query, labeled_documents, conn):
                                                               labeled_documents)
 
     if response:
-        print(f"GPT-4 Response:\n{response}")
         combined_documents = "\n\n".join(labeled_documents)
         prompt = f"Based on the following documents, answer the question: {query}\n\nDocuments:\n{combined_documents}\n"
         save_answer_to_file(prompt, response, labeled_documents)
@@ -786,6 +857,11 @@ def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="sco
     df.to_excel(file_name, index=False)
     print(f"Scores saved to {file_name}")
 
+@timer
+def save_scores_to_file(scores, file_name):
+    with open(file_name, "w") as f:
+        for doc_id, score in scores.items():
+            f.write(f"Chunk ID: {doc_id}, Score: {score}\n")
 
 @timer
 def main():
@@ -811,9 +887,17 @@ def main():
     conn = sqlite3.connect(db_path)
 
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
+    print(f"Embedding dimensions: {embedding_dim} {index.d} {model.config.hidden_size}")
 
-    query = ("ENSG00000183889,,novel member of the nuclear pore complex interacting protein NPIP gene family,[],"
-             "131675794")
+    query = (
+         "In what pathways are the following genes involved: "
+         "FUCA2, OR3A1, GSS, FGR"
+        # "XKR8, CD36, MYL9, CHCHD2, DSG2, ENPEP, LAMP5, LINC01266, CPE, GPX1, EBF3, "
+        # "CAT, CTSZ, GNG4, MEG3, ACCS, GBP5, LGI2, RCAN3, SLC44A5, TRPC6, CEBPZOS, "
+        # "FAM24B, FGF12, POTEF, ANKS1B, EDNRB, TFPI2, CYP27A1, PLCB2, ARAP3, TMEM47, "
+        # "ANOS1, ZNF439, COL6A2, NFE2L3, COL13A1, PDPN, STRA6, NTRK3, HIVEP2, TUBA1C, "
+    )
+
     top_faiss_docs, top_bm25_docs = run_query_expansion_and_retrieval(query,
                                                                       index,
                                                                       tokenizer,
@@ -827,15 +911,24 @@ def main():
     bm25_scores = {doc[0]: doc[1][0] for doc in top_bm25_docs}
     faiss_scores = {doc[0]: doc[1][0] for doc in top_faiss_docs}
 
+    save_scores_to_file(bm25_scores, "bm25_score.txt")
+    save_scores_to_file(faiss_scores, "faiss_score.txt")
+
     export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx")
 
     retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
-        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=20)
-
+        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=10)
+    # labeled_documents = [
+    #     (f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) from query:"
+    #      f" {', '.join(set(combined_docs[doc_id]['source_queries']))} with RRF Score:"
+    #      f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}")
+    #     for doc_id, chunk_text in
+    #     zip(combined_docs.keys(), retrieved_chunks_ordered)
+    # ]
     labeled_documents = [
-        (f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) from query:"
-         f" {', '.join(set(combined_docs[doc_id]['source_queries']))} with RRF Score:"
-         f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}")
+        (
+            f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) with RRF Score:"
+            f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}")
         for doc_id, chunk_text in
         zip(combined_docs.keys(), retrieved_chunks_ordered)
     ]
@@ -845,3 +938,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#%%
