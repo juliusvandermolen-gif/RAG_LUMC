@@ -27,10 +27,20 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Suppress Warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
-warnings.filterwarnings("ignore", category=FutureWarning,
-                        message=".*resume_download.*")
-warnings.filterwarnings("ignore", category=FutureWarning,
-                        message=".*torch.load.*")
+warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
+warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
+
+
+with open("config.json", "r") as config_file:
+    config = json.load(config_file)
+
+query = config["query"]
+number_of_expansions = config["number_of_expansions"]
+batch_size = config["batch_size"]
+model_name = config["model"]
+amount_docs = config["amount_docs"]
+weight_faiss = config["weight_faiss"]
+weight_bm25 = config["weight_bm25"]
 
 
 def timer(func):
@@ -42,10 +52,10 @@ def timer(func):
         elapsed_time = end_time - start_time
         with open("time.txt", "a") as f:
             f.write(f"Function '{func.__name__}' executed in {elapsed_time:.4f} seconds\n")
-
         return result
 
     return wrapper_timer
+
 
 
 @timer
@@ -163,7 +173,7 @@ def fetch_chunks(conn):
 
 
 @timer
-def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large", # michiyasunaga/BioLinkBERT-large
+def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",  # michiyasunaga/BioLinkBERT-large
                              force_download=False):
     tokenizer = AutoTokenizer.from_pretrained(model_name,
                                               force_download=force_download)
@@ -229,7 +239,7 @@ def chunk_documents(documents):
 
 @timer
 def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
-                    batch_size=64, log_path='./file_log/file_log.json'):
+                    batch_size=batch_size, log_path='./file_log/file_log.json'):
     file_log = load_file_log(log_path=log_path)
     files_documents = load_gz_files(data_dir=data_dir)
     print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
@@ -356,7 +366,7 @@ def build_bm25_index(conn):
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
     # Use regex to tokenize and remove punctuation
-    tokenized_corpus = [re.findall(r'\b[\w-]+\b', doc.lower()) for doc in chunk_texts] #original: re.findall(r'\b\w+\b', doc.lower())
+    tokenized_corpus = [re.findall(r'\b[\w-]+\b', doc.lower()) for doc in chunk_texts]  # original: re.findall(r'\b\w+\b', doc.lower())
     #tokenized_corpus = [doc.lower().replace('[', '').replace(']', '').split(',') for doc in chunk_texts]
     bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
@@ -366,20 +376,52 @@ def build_bm25_index(conn):
 def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     query_tokens = re.findall(r'\b[\w-]+\b', query_text.lower())
     #query_tokens = query_text.lower().replace('[', '').replace(']', '').split(',')
-    print("Query tokens",query_tokens)
+    print("Query tokens:", query_tokens)
 
     print("\nTokens for each line in the database:")
     for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
         line_tokens = re.findall(r'\b[\w-]+\b', chunk_text.lower())
         #line_tokens = chunk_text.lower().replace('[', '').replace(']', '').split(',')
-        print(f"Chunk ID {chunk_id}: {line_tokens}") #Check how everything is chunked
+        print(f"Chunk ID {chunk_id}: {line_tokens}")  # Check how everything is chunked
     scores = bm25.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
     top_ids = [chunk_ids[i] for i in top_n]
     top_scores = [scores[i] for i in top_n]
-    return top_ids, top_scores
 
+    detailed_scores = {}
+    for idx, score in zip(top_n, top_scores):
+        chunk_id = chunk_ids[idx]
+        relevant_tokens = []
+        for token in query_tokens:
+            if token in bm25.idf:
+                tf = bm25.doc_freqs[idx].get(token, 0)
+                if tf > 0:
+                    idf = bm25.idf[token]
+                    # Compute BM25 per-token contribution
+                    k1 = bm25.k1
+                    b = bm25.b
+                    doc_len = bm25.doc_len[idx]
+                    avgdl = bm25.avgdl
+                    numerator = (k1 + 1) * tf
+                    denominator = k1 * ((1 - b) + b * (doc_len / avgdl)) + tf
+                    token_score = idf * (numerator / denominator)
+                    relevant_tokens.append(f"{token} with score {token_score:.4f}")
+            else:
+                pass
+        detailed_scores[chunk_id] = {
+            'score': round(score, 4),
+            'tokens': relevant_tokens if relevant_tokens else None
+        }
 
+    # Print IDF values for query tokens
+    print("\nIDF values for query tokens:")
+    for token in query_tokens:
+        if token in bm25.idf:
+            print(f"Token: {token}, IDF: {bm25.idf[token]:.4f}")
+        else:
+            pass
+
+    return top_ids, top_scores, detailed_scores
 
 
 def generate_gpt4_turbo_response_with_instructions(query_text,
@@ -425,7 +467,7 @@ categorization, facilitating further analysis or research they may wish to condu
 
 Keep in mind that you should use the correct pathway IDs from KEGG and Reactome accordingly and not use 
 placeholder IDs or IDs from other databases like WikiPathways.
-"""
+    """
 
     # system_instruction = """
     #     You are an efficient and insightful assistant to a molecular biologist.
@@ -484,7 +526,7 @@ placeholder IDs or IDs from other databases like WikiPathways.
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=5000,
-                temperature=0.7
+                temperature=0.01 #0 - 2
             )
         except Exception as e:
             print(f"An error occurred while generating the GPT-4 response: {e}")
@@ -511,20 +553,20 @@ def save_answer_to_file(prompt, answer, document_references,
 @timer
 def query_expansion(query_text, number):
     system_instruction = """You are an expert in query expansion for biomedical literature search. Given a user's 
-    query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions. 
-    The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
-    However, there is a maximum of {number} alternative queries that are given.
+query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions. 
+The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
+However, there is a maximum of {number} alternative queries that are given.
 
-    Example:
-    User query: "GGT5 in glutathione metabolism"
+Example:
+User query: "GGT5 in glutathione metabolism"
 
-    Possible expanded queries:
-    - "Gamma-glutamyltransferase 5 role in glutathione metabolism"
-    - "GGT5 enzyme function in glutathione pathway"
-    - "GGT5 and its involvement in glutathione homeostasis"
-    - "Impact of GGT5 on glutathione biosynthesis and metabolism"
+Possible expanded queries:
+- "Gamma-glutamyltransferase 5 role in glutathione metabolism"
+- "GGT5 enzyme function in glutathione pathway"
+- "GGT5 and its involvement in glutathione homeostasis"
+- "Impact of GGT5 on glutathione biosynthesis and metabolism"
 
-    Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
+Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
     """.format(number=number)
     print("The amount of queries that are going to be expanded:{number}".format(number=number))
     if number > 0:
@@ -687,51 +729,73 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k=20):
 
 
 @timer
-def create_top_bm25_docs(expanded_queries, bm25_index, bm25_chunk_ids,
-                         bm25_chunk_texts, top_k=20):
-    bm25_doc_scores = {}
-    print("Bm25", bm25_chunk_texts)
-    for eq in expanded_queries:
-        top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids, bm25_chunk_texts, top_k=top_k)
-        for doc_id, score in zip(top_ids_bm25, scores):
-            if doc_id in bm25_doc_scores:
-                if score > bm25_doc_scores[doc_id][0]:
-                    bm25_doc_scores[doc_id] = (score, eq)
-            else:
-                bm25_doc_scores[doc_id] = (score, eq)
+def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k=20):
+    """
+    Aggregate BM25 scores from expanded queries and return the top_k documents.
 
+    Args:
+        expanded_queries (list): List of expanded query strings.
+        bm25 (BM25Okapi): BM25 index object.
+        chunk_ids (list): List of document chunk IDs.
+        chunk_texts (list): List of document chunk texts.
+        top_k (int): Number of top documents to return.
+
+    Returns:
+        list of tuples: Each tuple contains (doc_id, details), where details is a dictionary
+                        with 'score', 'tokens', and 'source_queries'.
+    """
+    bm25_doc_scores = {}
+
+    for eq in expanded_queries:
+        top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25, chunk_ids, chunk_texts, top_k=top_k)
+        for doc_id, details in detailed_scores.items():
+            if doc_id in bm25_doc_scores:
+                # Keep the highest score for duplicate doc_ids across queries
+                if details['score'] > bm25_doc_scores[doc_id]['score']:
+                    bm25_doc_scores[doc_id]['score'] = details['score']
+                    bm25_doc_scores[doc_id]['tokens'] = details['tokens']
+                # Append the current query to source_queries
+                bm25_doc_scores[doc_id]['source_queries'].append(eq)
+            else:
+                bm25_doc_scores[doc_id] = {
+                    'score': details['score'],
+                    'tokens': details['tokens'],
+                    'source_queries': [eq]
+                }
+
+    # Sort the documents based on the overall BM25 score in descending order
     sorted_bm25_docs = sorted(bm25_doc_scores.items(),
-                              key=lambda item: item[1][0], reverse=True)
+                              key=lambda item: item[1]['score'],
+                              reverse=True)
     top_bm25_docs = sorted_bm25_docs[:top_k]
+
+    # Convert to a list of tuples (doc_id, details)
     return top_bm25_docs
 
 
 @timer
-def rrf(top_bm25_docs, top_faiss_docs):
-    k = 50  # Max score is 0.03921568627
-    rrf_scores = {}
+def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
+    """
+    Combine BM25 and FAISS scores using weights instead of RRF.
+    """
+    total_weight = weight_faiss + weight_bm25
+    weight_faiss /= total_weight
+    weight_bm25 /= total_weight
+    combined_scores = {}
 
-    for bm25_index, bm25_doc in enumerate(top_bm25_docs):
-        bm25_id = bm25_doc[0]
-        bm25_score = bm25_index + 1
-        source_query = bm25_doc[1][1]
+    # Process BM25 scores
+    for bm25_doc in top_bm25_docs:
+        doc_id, details = bm25_doc
+        score = details["score"] * weight_bm25
+        combined_scores[doc_id] = combined_scores.get(doc_id, 0) + score
 
-        if bm25_id not in rrf_scores:
-            rrf_scores[bm25_id] = {'score': 0, 'source_queries': []}
-        rrf_scores[bm25_id]['score'] += 1 / (k + bm25_score)
-        rrf_scores[bm25_id]['source_queries'].append(source_query)
+    # Process FAISS scores
+    for faiss_doc in top_faiss_docs:
+        doc_id, (distance, _) = faiss_doc
+        score = (1 / (1 + distance)) * weight_faiss
+        combined_scores[doc_id] = combined_scores.get(doc_id, 0) + score
 
-    for faiss_index, faiss_doc in enumerate(top_faiss_docs):
-        faiss_id = faiss_doc[0]
-        faiss_score = faiss_index + 1
-        source_query = faiss_doc[1][
-            1]
-
-        if faiss_id not in rrf_scores:
-            rrf_scores[faiss_id] = {'score': 0, 'source_queries': []}
-        rrf_scores[faiss_id]['score'] += 1 / (k + faiss_score)
-        rrf_scores[faiss_id]['source_queries'].append(source_query)
-    return rrf_scores
+    return combined_scores
 
 
 @timer
@@ -774,8 +838,7 @@ def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
 
 @timer
 def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
-                                      bm25_index, bm25_chunk_ids,
-                                      bm25_chunk_texts):
+                                      bm25, bm25_chunk_ids, bm25_chunk_texts):
     """Expand query and retrieve top documents using FAISS and BM25."""
     number_of_expansions = 0
     expanded_queries = query_expansion(query, number=number_of_expansions)[1:]
@@ -786,10 +849,14 @@ def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
 
     top_faiss_docs = create_top_faiss_docs(expanded_queries, index, tokenizer,
                                            model, top_k)
-    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25_index,
+    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25,
                                          bm25_chunk_ids, bm25_chunk_texts,
                                          top_k)
-    return top_faiss_docs, top_bm25_docs
+
+    # Assign bm25_detailed_scores directly from top_bm25_docs
+    bm25_detailed_scores = top_bm25_docs
+
+    return top_faiss_docs, top_bm25_docs, bm25_detailed_scores
 
 
 @timer
@@ -843,25 +910,65 @@ def generate_response_and_save(query, labeled_documents, conn):
 
 @timer
 def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx"):
+    """
+    Export combined RRF, BM25, and FAISS scores to an Excel file.
+
+    Args:
+        rrf_scores (dict): Combined RRF scores with doc_id as keys.
+        bm25_scores (dict): BM25 scores with doc_id as keys.
+        faiss_scores (dict): FAISS scores with doc_id as keys.
+        file_name (str): Name of the Excel file to create.
+    """
     all_doc_ids = set(rrf_scores.keys()).union(bm25_scores.keys()).union(faiss_scores.keys())
 
     data = []
     for doc_id in all_doc_ids:
-        bm25_score = bm25_scores.get(doc_id, 0)
+        bm25_detail = bm25_scores.get(doc_id, {})
+        bm25_score = bm25_detail.get('score', 0) if isinstance(bm25_detail, dict) else bm25_detail
         faiss_score = faiss_scores.get(doc_id, 0)
         rrf_score = rrf_scores.get(doc_id, {}).get('score', 0)
-        data.append({"doc_id": doc_id, "BM25 Score": bm25_score, "FAISS Score": faiss_score, "RRF Score": rrf_score})
+        data.append({
+            "doc_id": doc_id,
+            "BM25 Score": bm25_score,
+            "FAISS Distance": faiss_score,
+            "RRF Score": rrf_score
+        })
 
     df = pd.DataFrame(data)
     df = df.sort_values(by="RRF Score", ascending=False)
     df.to_excel(file_name, index=False)
     print(f"Scores saved to {file_name}")
 
+
 @timer
 def save_scores_to_file(scores, file_name):
-    with open(file_name, "w") as f:
-        for doc_id, score in scores.items():
-            f.write(f"Chunk ID: {doc_id}, Score: {score}\n")
+    """
+    Save scores to a text file, including tokens that contributed to the score.
+
+    Args:
+        scores (dict): Dictionary where each key is a doc_id and each value is either:
+                       - For BM25: a dictionary with 'score', 'tokens', and optionally 'source_queries'.
+                       - For FAISS: a simple score (e.g., distance).
+        file_name (str): Name of the file to save the scores.
+    """
+    with open(file_name, "w", encoding='utf-8') as f:
+        for doc_id, details in scores.items():
+            if isinstance(details, dict):
+                overall_score = details.get('score', 0)
+                tokens = details.get('tokens', [])
+                f.write(f"Chunk ID: {doc_id}, Score: {overall_score}\n")
+                if tokens:
+                    # Format tokens and their scores
+                    tokens_formatted = "\n".join(tokens)
+                    f.write(f"Tokens that were relevant:\n{tokens_formatted}\n")
+                else:
+                    f.write("Tokens that were relevant: None\n")
+                f.write("\n")
+            else:
+                # For FAISS scores which are simple {doc_id: score}
+                f.write(f"Chunk ID: {doc_id}, Score: {details}\n\n")
+    print(f"Scores saved to {file_name}")
+
 
 @timer
 def main():
@@ -874,13 +981,13 @@ def main():
     process_files_in_directory(data_dir)
 
     conn = initialize_database(db_path=db_path)
-    tokenizer, model = load_model_and_tokenizer()
+    tokenizer, model = load_model_and_tokenizer(model_name)
     embedding_dim = model.config.hidden_size
 
     index = initialize_faiss_index(embedding_dim, index_path)
 
     embed_documents_and_save(index, conn, tokenizer, model, data_dir,
-                             batch_size=64, log_path=log_path,
+                             batch_size=batch_size, log_path=log_path,
                              index_path=index_path)
 
     index = load_faiss_index(embedding_dim, index_path=index_path)
@@ -889,27 +996,13 @@ def main():
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
     print(f"Embedding dimensions: {embedding_dim} {index.d} {model.config.hidden_size}")
 
-    query = (
-         "In what pathways are the following genes involved: "
-         "FUCA2, OR3A1, GSS, FGR"
-        # "XKR8, CD36, MYL9, CHCHD2, DSG2, ENPEP, LAMP5, LINC01266, CPE, GPX1, EBF3, "
-        # "CAT, CTSZ, GNG4, MEG3, ACCS, GBP5, LGI2, RCAN3, SLC44A5, TRPC6, CEBPZOS, "
-        # "FAM24B, FGF12, POTEF, ANKS1B, EDNRB, TFPI2, CYP27A1, PLCB2, ARAP3, TMEM47, "
-        # "ANOS1, ZNF439, COL6A2, NFE2L3, COL13A1, PDPN, STRA6, NTRK3, HIVEP2, TUBA1C, "
-    )
+    top_faiss_docs, top_bm25_docs, bm25_detailed_scores = run_query_expansion_and_retrieval(
+        query, index, tokenizer, model, top_k=100000, bm25=bm25_index,
+        bm25_chunk_ids=bm25_chunk_ids, bm25_chunk_texts=bm25_chunk_texts)
 
-    top_faiss_docs, top_bm25_docs = run_query_expansion_and_retrieval(query,
-                                                                      index,
-                                                                      tokenizer,
-                                                                      model,
-                                                                      top_k=100000,
-                                                                      bm25_index=bm25_index,
-                                                                      bm25_chunk_ids=bm25_chunk_ids,
-                                                                      bm25_chunk_texts=bm25_chunk_texts)
-
-    rrf_scores = rrf(top_bm25_docs, top_faiss_docs)
-    bm25_scores = {doc[0]: doc[1][0] for doc in top_bm25_docs}
-    faiss_scores = {doc[0]: doc[1][0] for doc in top_faiss_docs}
+    rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
+    bm25_scores = dict(bm25_detailed_scores)  # Now a dict with detailed scores
+    faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
 
     save_scores_to_file(bm25_scores, "bm25_score.txt")
     save_scores_to_file(faiss_scores, "faiss_score.txt")
@@ -917,18 +1010,13 @@ def main():
     export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx")
 
     retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
-        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=10)
-    # labeled_documents = [
-    #     (f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) from query:"
-    #      f" {', '.join(set(combined_docs[doc_id]['source_queries']))} with RRF Score:"
-    #      f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}")
-    #     for doc_id, chunk_text in
-    #     zip(combined_docs.keys(), retrieved_chunks_ordered)
-    # ]
+        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=amount_docs)
+
     labeled_documents = [
         (
             f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) with RRF Score:"
-            f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}")
+            f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}"
+        )
         for doc_id, chunk_text in
         zip(combined_docs.keys(), retrieved_chunks_ordered)
     ]
@@ -939,4 +1027,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-#%%

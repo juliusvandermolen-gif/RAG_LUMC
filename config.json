@@ -1,0 +1,9 @@
+{
+    "query": "In what pathways are the following genes involved: sup45l1 tb31 eif4ebp1 4ebp1 phasi eif2b3 eif2b eif2bgamma gspt2 erf3b flj10441",
+    "number_of_expansions": 0,
+    "batch_size": 64,
+    "model": "michiyasunaga/BioLinkBERT-large",
+    "amount_docs": 10,
+    "weight_faiss": 20,
+    "weight_bm25": 80
+}

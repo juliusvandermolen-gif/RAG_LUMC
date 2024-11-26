@@ -1,0 +1,36 @@
+ENSG00000000457,SCYL3,SCY1 like pseudokinase 3 [Source:HGNC Symbol;Acc:HGNC:19285],[PACE-1_PACE1],57147
+
+ENSG00000000460,FIRRM,FIGNL1 interacting regulator of recombination and mitosis [Source:HGNC Symbol;Acc:HGNC:25565],[APOLO1_C1ORF112_FLIP_FLJ10706_MEICA1],55732
+
+
+[Source:HGNC Symbol;Acc:HGNC:19285],[PACE-1_PACE1],57147"
+
+Remove all symbols, check whether that works - Check
+Remove things in [] - Check 
+
+
+check how many dimensions
+Find out which retrieval works and which one does not perform.
+Remove ID from biomart (for now) Check
+
+Check _ or change regex (maybe change to dif sep (tab))
+Changed _ to , . Keeps regex otherwise it cant find ( like the original)
+
+Chunk ID: 14, Score: 0.9225 (without other)
+Tokens that were relevant:
+or3a1 with score 0.9225
+
+Chunk ID: 14, Score: 1.845 (with other)
+Tokens that were relevant:
+other with score 0.9225
+or3a1 with score 0.9225
+
+
+For later get some sweeping test for multiple paramters (grid search) 
+exclude some references that contain 0 words present in the query. 
+Maybe include reference from all the databases
+Check the RRF
+Weighting of BM25 and FAISS, be able to put one to 0. 
+Filter out the filler words (and, in like)
+ignore padj, check for most significant
+See whether there is an embeddigns model purely trained on gene names ect. 

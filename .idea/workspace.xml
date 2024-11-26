@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/JSON/genes.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/JSON/genes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Homo_sapiens.gmt.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bm25_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bm25_score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_embeddings.db-journal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/file_log/file_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gene_synonym.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gene_synonym.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faiss_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/faiss_score.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />
     </list>
