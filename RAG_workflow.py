@@ -783,19 +783,24 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
     weight_bm25 /= total_weight
     combined_scores = {}
 
-    # Process BM25 scores
     for bm25_doc in top_bm25_docs:
         doc_id, details = bm25_doc
         score = details["score"] * weight_bm25
-        combined_scores[doc_id] = combined_scores.get(doc_id, 0) + score
+        if doc_id in combined_scores:
+            combined_scores[doc_id]["score"] += score
+        else:
+            combined_scores[doc_id] = {"score": score, "source_queries": details.get("source_queries", [])}
 
-    # Process FAISS scores
     for faiss_doc in top_faiss_docs:
         doc_id, (distance, _) = faiss_doc
         score = (1 / (1 + distance)) * weight_faiss
-        combined_scores[doc_id] = combined_scores.get(doc_id, 0) + score
+        if doc_id in combined_scores:
+            combined_scores[doc_id]["score"] += score
+        else:
+            combined_scores[doc_id] = {"score": score, "source_queries": []}
 
     return combined_scores
+
 
 
 @timer
@@ -860,8 +865,7 @@ def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
 
 
 @timer
-def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs,
-                                top_bm25_docs, amount_docs):
+def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs):
     """Rank documents and fetch top chunks from the database."""
     sorted_rrf_scores = sorted(rrf_scores.items(),
                                key=lambda item: item[1]['score'],
@@ -870,12 +874,10 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs,
     combined_docs = {}
     for rank, (doc_id, data) in enumerate(sorted_rrf_scores, start=1):
         score = data['score']
-        source_queries = data['source_queries']
+        source_queries = data.get('source_queries', [])
 
         if doc_id not in combined_docs:
-            combined_docs[doc_id] = {'retriever': [], 'rank': rank,
-                                     'score': score,
-                                     'source_queries': source_queries}
+            combined_docs[doc_id] = {'retriever': [], 'rank': rank, 'score': score, 'source_queries': source_queries}
 
         if any(faiss_doc[0] == doc_id for faiss_doc in top_faiss_docs):
             combined_docs[doc_id]['retriever'].append('FAISS')
@@ -883,12 +885,11 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs,
             combined_docs[doc_id]['retriever'].append('BM25')
 
     combined_top_ids = list(combined_docs.keys())
-    retrieved_chunks = fetch_chunks_by_ids(conn,
-                                           combined_top_ids) if combined_top_ids else []
+    retrieved_chunks = fetch_chunks_by_ids(conn, combined_top_ids) if combined_top_ids else []
     doc_id_to_chunk = dict(zip(sorted(combined_top_ids), retrieved_chunks))
 
-    return [doc_id_to_chunk[doc_id] for doc_id in
-            combined_top_ids], combined_docs
+    return [doc_id_to_chunk[doc_id] for doc_id in combined_top_ids], combined_docs
+
 
 
 @timer
@@ -926,7 +927,8 @@ def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="sco
         bm25_detail = bm25_scores.get(doc_id, {})
         bm25_score = bm25_detail.get('score', 0) if isinstance(bm25_detail, dict) else bm25_detail
         faiss_score = faiss_scores.get(doc_id, 0)
-        rrf_score = rrf_scores.get(doc_id, {}).get('score', 0)
+        rrf_score = rrf_scores.get(doc_id, 0) if isinstance(rrf_scores.get(doc_id, 0), (int, float)) else rrf_scores.get(doc_id, {}).get('score', 0)
+
         data.append({
             "doc_id": doc_id,
             "BM25 Score": bm25_score,
