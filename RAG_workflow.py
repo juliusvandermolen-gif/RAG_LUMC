@@ -30,7 +30,6 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-
 with open("config.json", "r") as config_file:
     config = json.load(config_file)
 
@@ -55,7 +54,6 @@ def timer(func):
         return result
 
     return wrapper_timer
-
 
 
 @timer
@@ -173,8 +171,8 @@ def fetch_chunks(conn):
 
 
 @timer
-def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",  # michiyasunaga/BioLinkBERT-large
-                             force_download=False):
+def load_model_and_tokenizer(force_download=False):
+
     tokenizer = AutoTokenizer.from_pretrained(model_name,
                                               force_download=force_download)
 
@@ -315,8 +313,6 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k=20,
                       force_download=False):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    model_name = "michiyasunaga/BioLinkBERT-large"
-
     loaded_model = AutoModel.from_pretrained(model_name,
                                              force_download=force_download)
     loaded_tokenizer = AutoTokenizer.from_pretrained(model_name,
@@ -365,9 +361,8 @@ def build_bm25_index(conn):
     for row in data:
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
-    # Use regex to tokenize and remove punctuation
-    tokenized_corpus = [re.findall(r'\b[\w-]+\b', doc.lower()) for doc in chunk_texts]  # original: re.findall(r'\b\w+\b', doc.lower())
-    #tokenized_corpus = [doc.lower().replace('[', '').replace(']', '').split(',') for doc in chunk_texts]
+    tokenized_corpus = [re.findall(r'\b[\w-]+\b', doc.lower()) for doc in
+                        chunk_texts]  # original: re.findall(r'\b\w+\b', doc.lower())
     bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
 
@@ -375,13 +370,11 @@ def build_bm25_index(conn):
 @timer
 def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     query_tokens = re.findall(r'\b[\w-]+\b', query_text.lower())
-    #query_tokens = query_text.lower().replace('[', '').replace(']', '').split(',')
     print("Query tokens:", query_tokens)
 
     print("\nTokens for each line in the database:")
     for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
         line_tokens = re.findall(r'\b[\w-]+\b', chunk_text.lower())
-        #line_tokens = chunk_text.lower().replace('[', '').replace(']', '').split(',')
         print(f"Chunk ID {chunk_id}: {line_tokens}")  # Check how everything is chunked
     scores = bm25.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
@@ -397,7 +390,6 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
                 tf = bm25.doc_freqs[idx].get(token, 0)
                 if tf > 0:
                     idf = bm25.idf[token]
-                    # Compute BM25 per-token contribution
                     k1 = bm25.k1
                     b = bm25.b
                     doc_len = bm25.doc_len[idx]
@@ -413,7 +405,6 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
             'tokens': relevant_tokens if relevant_tokens else None
         }
 
-    # Print IDF values for query tokens
     print("\nIDF values for query tokens:")
     for token in query_tokens:
         if token in bm25.idf:
@@ -469,32 +460,6 @@ Keep in mind that you should use the correct pathway IDs from KEGG and Reactome 
 placeholder IDs or IDs from other databases like WikiPathways.
     """
 
-    # system_instruction = """
-    #     You are an efficient and insightful assistant to a molecular biologist.
-    #     Your role is to analyze gene sets and interpret their collective function based on biological knowledge.
-    #     Write a critical analysis of the biological processes performed by this system of interacting proteins.
-    #     Be concise and specific; avoid overly general statements. Be factual and avoid opinions.
-    #
-    #     Follow these structured instructions:
-    #
-    #     1. **Role Context**: Act as a molecular biology assistant, focusing on relevant technical language and
-    #     biological processes.
-    #
-    #     2. **Task Execution**: First, perform an in-depth analysis of the provided gene set. For each gene, review its
-    #     function, identify patterns or shared pathways among genes, and then synthesize a descriptive name that reflects
-    #     a coherent function. If no clear function emerges, label it as a “System of unrelated proteins” with a
-    #     confidence score of 0.
-    #
-    #     3. **Confidence Scoring**: Assign a confidence score between 0.00 and 1.00 based on the coherence of the
-    #     proposed function: - **1.00**: Very high confidence (strongly related genes, clear functional theme). -
-    #     **0.00**: No confidence (unrelated or random gene set).
-    #
-    #     4. **Output Structure**: - Place the pathway name at the beginning of the analysis. - For each gene, provide in
-    #     pathway they are relevant to and group them. - Include a confidence score for the entire pathway.
-    #
-    #
-    #     """
-
     combined_documents = "\n\n".join(document_references)
     prompt = (f"Based on the following documents, answer the question: {query_text}\n\nDocuments:\n"
               f"{combined_documents}\n")
@@ -526,7 +491,7 @@ placeholder IDs or IDs from other databases like WikiPathways.
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=5000,
-                temperature=0.01 #0 - 2
+                temperature=0.01  #0 - 2
             )
         except Exception as e:
             print(f"An error occurred while generating the GPT-4 response: {e}")
@@ -541,7 +506,6 @@ def save_answer_to_file(prompt, answer, document_references,
     with open(file_name, "w", encoding='utf-8') as f:
         #f.write(f"Prompt:\n{prompt}\n\n")
         f.write(f"Answer:\n{answer}\n\n")
-        #f.write(f"Document References:\n")
         for idx, doc in enumerate(document_references, start=1):
             f.write(f"Reference {idx}:\n{doc}\n\n")
     print(f"Answer saved to {file_name}")
@@ -750,11 +714,9 @@ def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k=2
         top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25, chunk_ids, chunk_texts, top_k=top_k)
         for doc_id, details in detailed_scores.items():
             if doc_id in bm25_doc_scores:
-                # Keep the highest score for duplicate doc_ids across queries
                 if details['score'] > bm25_doc_scores[doc_id]['score']:
                     bm25_doc_scores[doc_id]['score'] = details['score']
                     bm25_doc_scores[doc_id]['tokens'] = details['tokens']
-                # Append the current query to source_queries
                 bm25_doc_scores[doc_id]['source_queries'].append(eq)
             else:
                 bm25_doc_scores[doc_id] = {
@@ -763,13 +725,11 @@ def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k=2
                     'source_queries': [eq]
                 }
 
-    # Sort the documents based on the overall BM25 score in descending order
     sorted_bm25_docs = sorted(bm25_doc_scores.items(),
                               key=lambda item: item[1]['score'],
                               reverse=True)
     top_bm25_docs = sorted_bm25_docs[:top_k]
 
-    # Convert to a list of tuples (doc_id, details)
     return top_bm25_docs
 
 
@@ -800,7 +760,6 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
             combined_scores[doc_id] = {"score": score, "source_queries": []}
 
     return combined_scores
-
 
 
 @timer
@@ -845,7 +804,6 @@ def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
 def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
                                       bm25, bm25_chunk_ids, bm25_chunk_texts):
     """Expand query and retrieve top documents using FAISS and BM25."""
-    number_of_expansions = 0
     expanded_queries = query_expansion(query, number=number_of_expansions)[1:]
     expanded_queries.append(query)
 
@@ -858,7 +816,6 @@ def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
                                          bm25_chunk_ids, bm25_chunk_texts,
                                          top_k)
 
-    # Assign bm25_detailed_scores directly from top_bm25_docs
     bm25_detailed_scores = top_bm25_docs
 
     return top_faiss_docs, top_bm25_docs, bm25_detailed_scores
@@ -889,7 +846,6 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs,
     doc_id_to_chunk = dict(zip(sorted(combined_top_ids), retrieved_chunks))
 
     return [doc_id_to_chunk[doc_id] for doc_id in combined_top_ids], combined_docs
-
 
 
 @timer
@@ -927,7 +883,9 @@ def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="sco
         bm25_detail = bm25_scores.get(doc_id, {})
         bm25_score = bm25_detail.get('score', 0) if isinstance(bm25_detail, dict) else bm25_detail
         faiss_score = faiss_scores.get(doc_id, 0)
-        rrf_score = rrf_scores.get(doc_id, 0) if isinstance(rrf_scores.get(doc_id, 0), (int, float)) else rrf_scores.get(doc_id, {}).get('score', 0)
+        rrf_score = rrf_scores.get(doc_id, 0) if isinstance(rrf_scores.get(doc_id, 0),
+                                                            (int, float)) else rrf_scores.get(doc_id, {}).get('score',
+                                                                                                              0)
 
         data.append({
             "doc_id": doc_id,
@@ -967,7 +925,6 @@ def save_scores_to_file(scores, file_name):
                     f.write("Tokens that were relevant: None\n")
                 f.write("\n")
             else:
-                # For FAISS scores which are simple {doc_id: score}
                 f.write(f"Chunk ID: {doc_id}, Score: {details}\n\n")
     print(f"Scores saved to {file_name}")
 
@@ -983,7 +940,7 @@ def main():
     process_files_in_directory(data_dir)
 
     conn = initialize_database(db_path=db_path)
-    tokenizer, model = load_model_and_tokenizer(model_name)
+    tokenizer, model = load_model_and_tokenizer()
     embedding_dim = model.config.hidden_size
 
     index = initialize_faiss_index(embedding_dim, index_path)
@@ -1003,7 +960,7 @@ def main():
         bm25_chunk_ids=bm25_chunk_ids, bm25_chunk_texts=bm25_chunk_texts)
 
     rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
-    bm25_scores = dict(bm25_detailed_scores)  # Now a dict with detailed scores
+    bm25_scores = dict(bm25_detailed_scores)
     faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
 
     save_scores_to_file(bm25_scores, "bm25_score.txt")
@@ -1028,4 +985,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
