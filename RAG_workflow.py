@@ -13,7 +13,7 @@ from openai import OpenAI
 from transformers import AutoModel, AutoTokenizer
 import faiss
 import warnings
-from rank_bm25 import BM25Okapi
+from rank_bm25 import BM25Okapi, BM25Plus
 import time
 import functools
 
@@ -363,7 +363,8 @@ def build_bm25_index(conn):
         chunk_texts.append(row[1])
     tokenized_corpus = [re.findall(r'\b[\w-]+\b', doc.lower()) for doc in
                         chunk_texts]  # original: re.findall(r'\b\w+\b', doc.lower())
-    bm25 = BM25Okapi(tokenized_corpus)
+    bm25 = BM25Plus(tokenized_corpus)
+    #bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
 
 
@@ -699,7 +700,7 @@ def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k=2
 
     Args:
         expanded_queries (list): List of expanded query strings.
-        bm25 (BM25Okapi): BM25 index object.
+        bm25 (BM25+): BM25 index object.
         chunk_ids (list): List of document chunk IDs.
         chunk_texts (list): List of document chunk texts.
         top_k (int): Number of top documents to return.
