@@ -932,6 +932,7 @@ def save_scores_to_file(scores, file_name):
 
 @timer
 def main():
+    #TODO remove all the entries with len < 3 as they dont seem to contain anything except ensg id
     data_dir = './Data/biomart'
     log_dir = './file_log'
     log_path = os.path.join(log_dir, 'file_log.json')
