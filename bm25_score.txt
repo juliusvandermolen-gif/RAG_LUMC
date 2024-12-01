@@ -1,66 +1,66 @@
-Chunk ID: 12, Score: 13.3191
+Chunk ID: 12, Score: 42.8436
 Tokens that were relevant:
-sup45l1 with score 1.4730
-eif4ebp1 with score 1.4730
-eif2b3 with score 1.4730
-eif2b with score 3.0081
-eif2bgamma with score 1.4730
-gspt2 with score 1.4730
-erf3b with score 1.4730
-flj10441 with score 1.4730
+sup45l1 with score 1.7564
+eif4ebp1 with score 1.7564
+eif2b3 with score 1.7564
+eif2b with score 3.5869
+eif2bgamma with score 1.7564
+gspt2 with score 1.7564
+erf3b with score 1.7564
+flj10441 with score 1.7564
 
-Chunk ID: 13, Score: 0.9994
+Chunk ID: 13, Score: 28.1533
 Tokens that were relevant:
-in with score 0.9994
+in with score 1.1917
 
-Chunk ID: 19, Score: 0.0
+Chunk ID: 19, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 8, Score: 0.0
+Chunk ID: 8, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 2, Score: 0.0
+Chunk ID: 2, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 3, Score: 0.0
+Chunk ID: 3, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 4, Score: 0.0
+Chunk ID: 4, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 5, Score: 0.0
+Chunk ID: 5, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 6, Score: 0.0
+Chunk ID: 6, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 7, Score: 0.0
+Chunk ID: 7, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 10, Score: 0.0
+Chunk ID: 10, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 9, Score: 0.0
+Chunk ID: 9, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 18, Score: 0.0
+Chunk ID: 18, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 11, Score: 0.0
+Chunk ID: 11, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 14, Score: 0.0
+Chunk ID: 14, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 15, Score: 0.0
+Chunk ID: 15, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 16, Score: 0.0
+Chunk ID: 16, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 17, Score: 0.0
+Chunk ID: 17, Score: 26.9616
 Tokens that were relevant: None
 
-Chunk ID: 1, Score: 0.0
+Chunk ID: 1, Score: 26.9616
 Tokens that were relevant: None
 

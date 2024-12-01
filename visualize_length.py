@@ -9,7 +9,6 @@ def length_word(line):
     return len(words)
 
 
-
 def get_length(file_path):
     lengths = []
     if not os.path.exists(file_path):
