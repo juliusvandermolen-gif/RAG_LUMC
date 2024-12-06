@@ -373,9 +373,9 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     print("Query tokens:", query_tokens)
 
     print("\nTokens for each line in the database:")
-    for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
-        line_tokens = re.findall(r'\b[\w-]+\b', chunk_text.lower())
-        print(f"Chunk ID {chunk_id}: {line_tokens}")  # Check how everything is chunked
+    # for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
+    #     line_tokens = re.findall(r'\b[\w-]+\b', chunk_text.lower())
+    #     print(f"Chunk ID {chunk_id}: {line_tokens}")  # Check how everything is chunked
     scores = bm25.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
     top_ids = [chunk_ids[i] for i in top_n]
@@ -406,11 +406,11 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
         }
 
     print("\nIDF values for query tokens:")
-    for token in query_tokens:
-        if token in bm25.idf:
-            print(f"Token: {token}, IDF: {bm25.idf[token]:.4f}")
-        else:
-            pass
+    # for token in query_tokens:
+    #     if token in bm25.idf:
+    #         print(f"Token: {token}, IDF: {bm25.idf[token]:.4f}")
+    #     else:
+    #         pass
 
     return top_ids, top_scores, detailed_scores
 
@@ -470,45 +470,66 @@ categorization, facilitating further analysis or research they may wish to condu
 Keep in mind that you should use the correct pathway IDs from KEGG and Reactome accordingly and not use 
 placeholder IDs or IDs from other databases like WikiPathways.
     """
-
+    testing = False
     combined_documents = "\n\n".join(document_references)
-    prompt = (f"Based on the following documents, answer the question: {query_text}\n\nDocuments:\n"
-              f"{combined_documents}\n")
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     model = "gpt-4o-mini"
 
-    if model == "o1-preview" or model == "o1-mini":
-        adjusted_prompt = system_instruction + prompt
-        try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "user", "content": adjusted_prompt}
-                ],
-                max_completion_tokens=5000
-            )
-        except Exception as e:
-            print(f"An error occurred while generating the GPT-4 response: {e}")
-            return None
-
-        return response.choices[0].message.content
+    if testing:
+        test_list = [True, False]
+        range_limit = 9
     else:
-        try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=5000,
-                temperature=0.01  #0 - 2
-            )
-        except Exception as e:
-            print(f"An error occurred while generating the GPT-4 response: {e}")
-            return None
+        test_list = [False]
+        range_limit = 2
+    for test_status in test_list:
+        for i in range(1, range_limit):
+            if test_status:
+                prompt = (f"Based on the following documents, answer the question and your knowledge: {query_text}\n\nDocuments:\n"
+                          f"{combined_documents}\n")
+            else:
+                prompt = f"Answer the question based on your knowledge {query_text}"
 
-        return response.choices[0].message.content
+            if model == "o1-preview" or model == "o1-mini":
+                adjusted_prompt = system_instruction + prompt
+                try:
+                    response = client.chat.completions.create(
+                        model=model,
+                        messages=[
+                            {"role": "user", "content": adjusted_prompt}
+                        ],
+                        max_completion_tokens=5000
+                    )
+                except Exception as e:
+                    print(response)
+                    print(f"An error occurred while generating the GPT-4 response: {e}")
+                    continue
+            else:
+                try:
+                    response = client.chat.completions.create(
+                        model=model,
+                        messages=[
+                            {"role": "system", "content": system_instruction},
+                            {"role": "user", "content": prompt}
+                        ],
+                        max_tokens=5000,
+                        temperature=0  # 0 - 2
+                    )
+                except Exception as e:
+                    print(response)
+                    print(f"An error occurred while generating the GPT-4 response: {e}")
+                    continue
+
+            answer = response.choices[0].message.content
+
+            test_label = "TEST" if test_status else "NOT_TEST"
+            filename = f"answer_{test_label}_{i}.txt"
+
+            with open(filename, "w") as file:
+                file.write(answer)
+
+            print(f"Answer saved to {filename}")
+    return response.choices[0].message.content
 
 
 @timer
@@ -517,8 +538,8 @@ def save_answer_to_file(prompt, answer, document_references,
     with open(file_name, "w", encoding='utf-8') as f:
         #f.write(f"Prompt:\n{prompt}\n\n")
         f.write(f"Answer:\n{answer}\n\n")
-        for idx, doc in enumerate(document_references, start=1):
-            f.write(f"Reference {idx}:\n{doc}\n\n")
+        # for idx, doc in enumerate(document_references, start=1):
+        #     f.write(f"Reference {idx}:\n{doc}\n\n")
     print(f"Answer saved to {file_name}")
     with open("documents.txt", "w", encoding='utf-8') as f:
         for idx, doc in enumerate(document_references, start=1):

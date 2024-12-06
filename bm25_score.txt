@@ -1,66 +1,331 @@
-Chunk ID: 12, Score: 42.8436
+Chunk ID: 3, Score: 90.0766
 Tokens that were relevant:
-sup45l1 with score 1.7564
-eif4ebp1 with score 1.7564
-eif2b3 with score 1.7564
-eif2b with score 3.5869
-eif2bgamma with score 1.7564
-gspt2 with score 1.7564
-erf3b with score 1.7564
-flj10441 with score 1.7564
+sup45l1 with score 4.3010
+eif4ebp1 with score 2.3631
+eif2b3 with score 4.3010
+eif2b with score 7.3919
+eif2bgamma with score 4.3010
+gspt2 with score 4.3010
+erf3b with score 4.3010
+flj10441 with score 4.3010
 
-Chunk ID: 13, Score: 28.1533
+Chunk ID: 58, Score: 62.2676
 Tokens that were relevant:
-in with score 1.1917
+in with score 3.0753
+genes with score 4.6764
 
-Chunk ID: 19, Score: 26.9616
+Chunk ID: 91, Score: 62.1107
+Tokens that were relevant:
+in with score 3.0131
+genes with score 4.5817
+
+Chunk ID: 31, Score: 60.4167
+Tokens that were relevant:
+in with score 1.9697
+involved with score 3.9310
+
+Chunk ID: 24, Score: 60.0442
+Tokens that were relevant:
+the with score 5.5282
+
+Chunk ID: 78, Score: 59.691
+Tokens that were relevant:
+pathways with score 5.1751
+
+Chunk ID: 90, Score: 59.6717
+Tokens that were relevant:
+genes with score 5.1557
+
+Chunk ID: 36, Score: 58.1257
+Tokens that were relevant:
+in with score 3.6098
+
+Chunk ID: 57, Score: 57.9721
+Tokens that were relevant:
+in with score 3.4561
+
+Chunk ID: 60, Score: 57.7706
+Tokens that were relevant:
+in with score 3.2546
+
+Chunk ID: 61, Score: 57.6342
+Tokens that were relevant:
+in with score 3.1183
+
+Chunk ID: 67, Score: 57.4531
+Tokens that were relevant:
+eif4ebp1 with score 2.9372
+
+Chunk ID: 84, Score: 57.3903
+Tokens that were relevant:
+in with score 1.3710
+eif4ebp1 with score 1.5033
+
+Chunk ID: 21, Score: 57.2406
+Tokens that were relevant:
+eif4ebp1 with score 2.7247
+
+Chunk ID: 80, Score: 57.1597
+Tokens that were relevant:
+eif4ebp1 with score 2.6438
+
+Chunk ID: 12, Score: 56.6155
+Tokens that were relevant:
+eif4ebp1 with score 2.0996
+
+Chunk ID: 69, Score: 56.4122
+Tokens that were relevant:
+eif4ebp1 with score 1.8963
+
+Chunk ID: 66, Score: 56.3727
+Tokens that were relevant:
+eif4ebp1 with score 1.8568
+
+Chunk ID: 4, Score: 56.1415
+Tokens that were relevant:
+in with score 1.6256
+
+Chunk ID: 30, Score: 55.887
+Tokens that were relevant:
+in with score 1.3710
+
+Chunk ID: 29, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 8, Score: 26.9616
+Chunk ID: 28, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 2, Score: 26.9616
+Chunk ID: 27, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 3, Score: 26.9616
+Chunk ID: 100, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 4, Score: 26.9616
+Chunk ID: 32, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 5, Score: 26.9616
+Chunk ID: 34, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 6, Score: 26.9616
+Chunk ID: 35, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 7, Score: 26.9616
+Chunk ID: 37, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 10, Score: 26.9616
+Chunk ID: 38, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 9, Score: 26.9616
+Chunk ID: 39, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 18, Score: 26.9616
+Chunk ID: 40, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 11, Score: 26.9616
+Chunk ID: 41, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 14, Score: 26.9616
+Chunk ID: 42, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 15, Score: 26.9616
+Chunk ID: 33, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 16, Score: 26.9616
+Chunk ID: 23, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 17, Score: 26.9616
+Chunk ID: 26, Score: 54.5159
 Tokens that were relevant: None
 
-Chunk ID: 1, Score: 26.9616
+Chunk ID: 13, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 2, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 5, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 6, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 7, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 8, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 9, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 10, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 11, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 14, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 25, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 15, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 16, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 17, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 18, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 19, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 20, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 22, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 44, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 43, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 50, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 45, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 87, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 76, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 77, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 79, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 81, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 82, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 83, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 85, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 86, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 88, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 74, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 89, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 92, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 93, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 94, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 95, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 96, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 97, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 98, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 75, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 73, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 46, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 55, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 47, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 48, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 49, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 99, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 51, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 52, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 53, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 54, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 56, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 72, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 59, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 62, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 63, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 64, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 65, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 68, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 70, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 71, Score: 54.5159
+Tokens that were relevant: None
+
+Chunk ID: 1, Score: 54.5159
 Tokens that were relevant: None
 
