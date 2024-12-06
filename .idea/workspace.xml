@@ -7,11 +7,31 @@
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/biomart/small_genes.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/small_genes.txt.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jan 9, in person 14 - 15 Leon is bu.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_TEST_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_TEST_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_TEST_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_TEST_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_TEST_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_TEST_6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_TEST_7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer_TEST_8.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bm25_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bm25_score.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/faiss_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/faiss_score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/file_log/file_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gene_synonym.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gene_synonym.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />
     </list>
@@ -52,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Hybrid-Retrieval",
-    "last_opened_file_path": "C:/RAG_LUMC/RAG_workflow.py",
+    "last_opened_file_path": "C:/Python/RAG/RAG_workflow.py",
     "settings.editor.selected.configurable": "preferences.sourceCode"
   },
   "keyToStringList": {
@@ -61,9 +81,9 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Python.RAG">
-    <configuration name="RAG" type="PythonConfigurationType" factoryName="Python">
-      <module name="RAG_LUMC" />
+  <component name="RunManager" selected="Python.RAG_workflow">
+    <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="RAG" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,7 +91,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="minor" />
+      <option name="SDK_NAME" value="RAG" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -94,6 +114,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="RAG" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -107,33 +128,9 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="visualize_length" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="RAG_LUMC" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="minor" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_length.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.visualize_length" />
-      <item itemvalue="Python.RAG" />
       <item itemvalue="Python.insta" />
+      <item itemvalue="Python.RAG_workflow" />
     </list>
   </component>
   <component name="SharedIndexes">
