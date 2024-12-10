@@ -30,7 +30,7 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-with open("config.json", "r") as config_file:
+with open('config.json', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
 query = config["query"]
@@ -40,6 +40,7 @@ model_name = config["model"]
 amount_docs = config["amount_docs"]
 weight_faiss = config["weight_faiss"]
 weight_bm25 = config["weight_bm25"]
+system_instruction_response = config["system_instruction_response"]
 
 
 def timer(func):
@@ -417,54 +418,8 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
 
 def generate_gpt4_turbo_response_with_instructions(query_text,
                                                    document_references):
-    system_instruction = """You are a knowledgeable bioinformatics assistant specializing in gene pathway analysis. 
-        Your primary task is to perform gene set enrichment analysis (GSEA) using the user's provided list of genes, 
-        enriching the information with data from Biomart and WikiPathways. Similar to how KEGG and Reactome function in 
-        tools like GSEA or g:Profiler, you should identify biological pathways that are significantly overrepresented in 
-        the gene list and provide detailed pathway information to aid in understanding the biological context.
-
-        When assisting the user, you should:
-
-        1. Accept a List of Genes: Receive the user's list of gene symbols or identifiers.
-
-        2. Identify Associated Pathways: For all genes, determine their associated biological pathways using 
-        reputable databases such as KEGG and Reactome. For these pathways, check which genes are the most relevant or 
-        significant that were overrepresented.
-
-        3. Organize Results Like g:Profiler: Present the pathways in a clear, structured format similar to g:Profiler, 
-          first listing KEGG pathways and then Reactome pathways, sorted by significance or relevance, where the most 
-          significant should be on top, in a sorted way. For each pathway, include details like:
-
-          - Pathway ID: Use the actual pathway ID from the respective database. 
-            - KEGG Pathways: Format as KEGG:<pathway_id> (e.g., KEGG:hsa04110).
-            - Reactome Pathways: Format as Reactome:R-HSA-<pathway_id> (e.g., Reactome:R-HSA-1234567).
-
-          - Pathway Name: The official name of the pathway.
-
-          - Significance: Provide a detailed explanation of the statistical significance of each pathway, including 
-          p-values or other relevant metrics, and explain why these pathways are significant in the context of the user's 
-          gene list.
-
-          - Relevant Genes: List of user-provided genes associated with the pathway, including their gene IDs, symbols, 
-            official names, and synonyms (e.g., ENSG00000000003, TSPAN6, tetraspanin 6, [T245, TM4SF6, TSPAN-6]).
-
-        4. Provide detailed Information: Provide a comprehensive analysis of all the pathways with their biological 
-        processes in relation to the user's genes, including any potential novel pathways that may not be commonly 
-        associated with these genes.
-
-        5. Present Information Clearly: Organize your response in a clear and accessible format, such as tables or 
-           bullet points, to enhance user understanding.
-
-        6. Encourage an Explorative Summary: When summarizing the results, go beyond a simple listing. Provide a more 
-       narrative interpretation that connects these pathways to broader themes in biology, offers thoughtful 
-       insights.
-
-        Your goal is to assist the user in understanding the functional relationships among their genes through pathway 
-        categorization, facilitating further analysis or research they may wish to conduct.
-
-        Keep in mind that you should use the correct pathway IDs from KEGG and Reactome accordingly and not use 
-        placeholder IDs or IDs from other databases like WikiPathways."""
-    testing = True
+    system_instruction = system_instruction_response
+    testing = False
     combined_documents = "\n\n".join(document_references)
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -479,8 +434,9 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
     for test_status in test_list:
         for i in range(1, range_limit):
             if test_status:
-                prompt = (f"Based on the following documents, answer the question and your knowledge: {query_text}\n\nDocuments:\n"
-                          f"{combined_documents}\n")
+                prompt = (
+                    f"Based on the following documents, answer the question and your knowledge: {query_text}\n\nDocuments:\n"
+                    f"{combined_documents}\n")
             else:
                 prompt = f"Answer the question based on your knowledge {query_text}"
 
@@ -509,6 +465,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
                         max_tokens=5000,
                         temperature=0  # 0 - 2
                     )
+
                 except Exception as e:
                     print(response)
                     print(f"An error occurred while generating the GPT-4 response: {e}")

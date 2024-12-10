@@ -1,10 +1,6 @@
 {
-    "small_genes.txt.gz": {
-        "hash": "d621704185a3cc715c0cebfb4066dabdd210f4053bf4d27dafa1055f12d3952c",
-        "num_embeddings": 9
-    },
-    "small_wiki.gmt.gz": {
-        "hash": "f2e1ab740c1e27b68708604a30690e1f2872c33576d2b0505d9f0d0ef5f16082",
-        "num_embeddings": 10
+    "rat_genes_consolidated.txt.gz": {
+        "hash": "f81d0bdfddd7255fde021af18cfd6b731cda0dce5a1b079faa141a85f8134cb4",
+        "num_embeddings": 30562
     }
 }

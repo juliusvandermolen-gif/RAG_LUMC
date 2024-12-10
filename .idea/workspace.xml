@@ -5,34 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/XML.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/small_genes.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/small_genes.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jan 9, in person 14 - 15 Leon is bu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/JSON/genes.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/JSON/genes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/biomart/reorder_mart.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/reorder_mart.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/biomart/small_genes.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/biomart/small_wiki.gmt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/reordered_mart_export_2.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/to_be_converted/reordered_mart_export_2.txt.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_NOT_TEST_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_TEST_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_TEST_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_TEST_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_TEST_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_TEST_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_TEST_6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_TEST_7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_TEST_8.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bm25_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bm25_score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/faiss_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/faiss_score.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/file_log/file_log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gene_synonym.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gene_synonym.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_With_ref_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_With_ref_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_With_ref_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_With_ref_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_Without_ref_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_Without_ref_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_Without_ref_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_Without_ref_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_Without_ref_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_Without_ref_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_Without_ref_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_Without_ref_4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -59,28 +59,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.RAG.executor": "Run",
-    "Python.RAG_LUMC.executor": "Run",
-    "Python.RAG_workflow.executor": "Run",
-    "Python.Unnamed.executor": "Run",
-    "Python.hugginface_test.executor": "Run",
-    "Python.insta.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.visualize_length.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Hybrid-Retrieval",
-    "last_opened_file_path": "C:/Python/RAG/RAG_workflow.py",
-    "settings.editor.selected.configurable": "preferences.sourceCode"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.RAG.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RAG_LUMC.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RAG_workflow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hugginface_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.insta.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualize_length.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Hybrid-Retrieval&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Python/RAG/RAG_workflow.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.RAG_workflow">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
@@ -136,7 +136,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-80a6976e5986-7ba1f540c4e9-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-242.22855.78" />
+        <option value="bundled-python-sdk-559ba0cadc45-1e0160e1c7f0-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-241.15989.62" />
       </set>
     </attachedChunks>
   </component>
