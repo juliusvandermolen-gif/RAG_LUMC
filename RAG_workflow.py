@@ -18,6 +18,7 @@ import time
 import functools
 import nltk
 from nltk.corpus import stopwords
+import string
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
@@ -40,18 +41,25 @@ number_of_expansions = config["number_of_expansions"]
 batch_size = config["batch_size"]
 model_name = config["model"]
 
+
+
 try:
-    amount_docs = query.split(":")[1]
-    amount_docs = amount_docs.count(" ")
+    amount_docs = query.split(":")[1].count(" ")
+    raw_query_stop_words = query.split(":")[0].split(" ")
+    query_stop_words = [word.strip(string.punctuation).lower() for word in raw_query_stop_words]
+
 except (IndexError, AttributeError):
     amount_docs = 10
+    query_stop_words = ['involved', 'genes']
 
 weight_faiss = config["weight_faiss"]
 weight_bm25 = config["weight_bm25"]
 system_instruction_response = config["system_instruction_response"]
 
 nltk.download('stopwords')
-stop_words = set(stopwords.words('english'))
+stop_words = set(stopwords.words('english')).union(query_stop_words)
+
+
 
 
 def timer(func):
@@ -368,7 +376,6 @@ def tokenize(text):
 
 @timer
 def build_bm25_index(conn):
-    stop_words = ""
     cursor = conn.cursor()
     cursor.execute('SELECT id, text FROM chunks')
     data = cursor.fetchall()
@@ -388,7 +395,7 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     query_tokens = tokenize(query_text)
     print("Query tokens:", query_tokens)
 
-    print("\nTokens for each line in the database:")
+    # print("\nTokens for each line in the database:")
     # for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
     #     line_tokens = re.findall(r'\b[\w-]+\b', chunk_text.lower())
     #     print(f"Chunk ID {chunk_id}: {line_tokens}")  # Check how everything is chunked
@@ -473,10 +480,10 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
                 ]
 
             # Print the exact message being sent to the LLM
-            print("=== Sending the following message to the LLM ===")
-            for message in messages:
-                print(f"Role: {message['role']}\nContent: {message['content']}\n")
-            print("=== End of message ===\n")
+            # print("=== Sending the following message to the LLM ===")
+            # for message in messages:
+            #     print(f"Role: {message['role']}\nContent: {message['content']}\n")
+            # print("=== End of message ===\n")
 
             try:
                 if model in ["o1-preview", "o1-mini"]:
