@@ -16,6 +16,8 @@ import warnings
 from rank_bm25 import BM25Okapi, BM25Plus
 import time
 import functools
+import nltk
+from nltk.corpus import stopwords
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
@@ -41,6 +43,12 @@ amount_docs = config["amount_docs"]
 weight_faiss = config["weight_faiss"]
 weight_bm25 = config["weight_bm25"]
 system_instruction_response = config["system_instruction_response"]
+
+# Download stopwords if not already downloaded
+nltk.download('stopwords')
+
+# Get the English stopword set
+stop_words = set(stopwords.words('english'))
 
 
 def timer(func):
@@ -351,8 +359,13 @@ def fetch_chunks_by_ids(conn, ids):
     return [row[0] for row in results]
 
 
+def tokenize(text):
+    return [word for word in re.findall(r'\b[\w-]+\b', text.lower()) if word not in stop_words]
+
+
 @timer
 def build_bm25_index(conn):
+    stop_words = ""
     cursor = conn.cursor()
     cursor.execute('SELECT id, text FROM chunks')
     data = cursor.fetchall()
@@ -361,8 +374,7 @@ def build_bm25_index(conn):
     for row in data:
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
-    tokenized_corpus = [re.findall(r'\b[\w-]+\b', doc.lower()) for doc in
-                        chunk_texts]  # original: re.findall(r'\b\w+\b', doc.lower())
+    tokenized_corpus = [tokenize(doc) for doc in chunk_texts]  # original: re.findall(r'\b\w+\b', doc.lower())
     bm25 = BM25Plus(tokenized_corpus)
     #bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
@@ -370,7 +382,7 @@ def build_bm25_index(conn):
 
 @timer
 def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
-    query_tokens = re.findall(r'\b[\w-]+\b', query_text.lower())
+    query_tokens = tokenize(query_text)
     print("Query tokens:", query_tokens)
 
     print("\nTokens for each line in the database:")
@@ -419,9 +431,10 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
 import os
 from openai import OpenAI
 
+
 def generate_gpt4_turbo_response_with_instructions(query_text, document_references):
     system_instruction = system_instruction_response  # Ensure this variable is defined elsewhere
-    testing = False
+    testing = True
     combined_documents = "\n\n".join(document_references)
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -429,16 +442,17 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
 
     if testing:
         test_list = [True, False]
-        range_limit = 5
+        range_limit = 1
     else:
-        test_list = [False]
-        range_limit = 2
+        test_list = [True]
+        range_limit = 1
 
     for test_status in test_list:
-        for i in range(1, range_limit):
+        for i in range(1, range_limit+1):
             if test_status:
                 prompt = (
-                    f"Based on the following documents, answer the question using both your knowledge and the provided documents: {query_text}\n\nDocuments:\n"
+                    f"Based on the following documents, answer the question using both your knowledge and the "
+                    f"provided documents: {query_text}\n\nDocuments:\n"
                     f"{combined_documents}\n"
                 )
             else:
@@ -498,7 +512,6 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
 
     # Optionally, return all responses or handle accordingly
     return answer  # Returns the last answer generated
-
 
 
 @timer

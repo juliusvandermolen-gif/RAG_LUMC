@@ -4,5 +4,5 @@ Include multiple genes from different pathways
 Include the whole 
 Maybe add multiple references
 Kees has mouse data, maybe do that?
-Check how to parse the GPML tree
-Read nature paper
+Check how to parse the GPML tree - Ignore
+Read nature paper - check

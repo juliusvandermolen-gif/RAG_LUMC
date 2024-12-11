@@ -1,40 +1,40 @@
 Reference 1:
-Reference 1 (FAISS and BM25) with RRF Score: 205.2463:
-ENSRNOG00000037851,Spidr,scaffold protein involved in DNA repair 
-
-Reference 2:
-Reference 2 (FAISS and BM25) with RRF Score: 204.1541:
-ENSRNOG00000016619,Use1,unconventional SNARE in the ER 1 
-
-Reference 3:
-Reference 3 (FAISS and BM25) with RRF Score: 203.4956:
-ENSRNOG00000006864,Scaper,S-phase cyclin A-associated protein in the ER 
-
-Reference 4:
-Reference 4 (FAISS and BM25) with RRF Score: 203.1828:
+Reference 1 (FAISS and BM25) with RRF Score: 190.7003:
 ENSRNOG00000006784,Sema4f,ssemaphorin 4F 
 
-Reference 5:
-Reference 5 (FAISS and BM25) with RRF Score: 203.1827:
+Reference 2:
+Reference 2 (FAISS and BM25) with RRF Score: 190.7001:
 ENSRNOG00000011599,Gldc,glycine decarboxylase 
 
-Reference 6:
-Reference 6 (FAISS and BM25) with RRF Score: 203.1824:
+Reference 3:
+Reference 3 (FAISS and BM25) with RRF Score: 190.7000:
 ENSRNOG00000043387,Cpe,carboxypeptidase E 
 
-Reference 7:
-Reference 7 (FAISS and BM25) with RRF Score: 203.1823:
+Reference 4:
+Reference 4 (FAISS and BM25) with RRF Score: 190.6998:
 ENSRNOG00000032517,Cntn6,contactin 6 
 
+Reference 5:
+Reference 5 (FAISS and BM25) with RRF Score: 189.9003:
+ENSRNOG00000015353,Prss12,serine protease 12 
+
+Reference 6:
+Reference 6 (FAISS and BM25) with RRF Score: 189.9002:
+ENSRNOG00000014791,Peg3,paternally expressed 3 
+
+Reference 7:
+Reference 7 (FAISS and BM25) with RRF Score: 189.9001:
+ENSRNOG00000020057,Tex101,testis expressed 101 
+
 Reference 8:
-Reference 8 (FAISS and BM25) with RRF Score: 202.3860:
+Reference 8 (FAISS and BM25) with RRF Score: 189.9000:
 ENSRNOG00000000172,Sqor,sulfide quinone oxidoreductase 
 
 Reference 9:
-Reference 9 (FAISS and BM25) with RRF Score: 202.3859:
-ENSRNOG00000015353,Prss12,serine protease 12 
+Reference 9 (FAISS and BM25) with RRF Score: 189.8996:
+ENSRNOG00000003597,Tuba4a,"tubulin, alpha 4A" 
 
 Reference 10:
-Reference 10 (FAISS and BM25) with RRF Score: 202.3856:
-ENSRNOG00000020057,Tex101,testis expressed 101 
+Reference 10 (FAISS and BM25) with RRF Score: 189.2246:
+ENSRNOG00000042620,Marveld1,MARVEL domain containing 1 
 

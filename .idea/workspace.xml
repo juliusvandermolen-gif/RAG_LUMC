@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explore different ways of including.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Explore different ways of including.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faiss_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/faiss_score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bm25_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bm25_score.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/answer_Without_ref_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_Without_ref_1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +41,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.RAG.executor": "Debug",
+    "Python.RAG.executor": "Run",
     "Python.RAG_LUMC.executor": "Run",
     "Python.RAG_workflow.executor": "Run",
     "Python.Unnamed.executor": "Run",
