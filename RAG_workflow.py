@@ -416,14 +416,16 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     return top_ids, top_scores, detailed_scores
 
 
-def generate_gpt4_turbo_response_with_instructions(query_text,
-                                                   document_references):
-    system_instruction = system_instruction_response
+import os
+from openai import OpenAI
+
+def generate_gpt4_turbo_response_with_instructions(query_text, document_references):
+    system_instruction = system_instruction_response  # Ensure this variable is defined elsewhere
     testing = False
     combined_documents = "\n\n".join(document_references)
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    model = "gpt-4o"
+    model = "gpt-4o"  # Verify if "gpt-4o" is the correct model name
 
     if testing:
         test_list = [True, False]
@@ -431,47 +433,60 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
     else:
         test_list = [False]
         range_limit = 2
+
     for test_status in test_list:
         for i in range(1, range_limit):
             if test_status:
                 prompt = (
-                    f"Based on the following documents, answer the question and your knowledge: {query_text}\n\nDocuments:\n"
-                    f"{combined_documents}\n")
+                    f"Based on the following documents, answer the question using both your knowledge and the provided documents: {query_text}\n\nDocuments:\n"
+                    f"{combined_documents}\n"
+                )
             else:
-                prompt = f"Answer the question based on your knowledge {query_text}"
+                prompt = f"Answer the question based on your knowledge: {query_text}"
 
-            if model == "o1-preview" or model == "o1-mini":
+            if model in ["o1-preview", "o1-mini"]:
                 adjusted_prompt = system_instruction + prompt
-                try:
+                messages = [
+                    {"role": "user", "content": adjusted_prompt}
+                ]
+            else:
+                messages = [
+                    {"role": "system", "content": system_instruction},
+                    {"role": "user", "content": prompt}
+                ]
+
+            # Print the exact message being sent to the LLM
+            print("=== Sending the following message to the LLM ===")
+            for message in messages:
+                print(f"Role: {message['role']}\nContent: {message['content']}\n")
+            print("=== End of message ===\n")
+
+            try:
+                if model in ["o1-preview", "o1-mini"]:
                     response = client.chat.completions.create(
                         model=model,
-                        messages=[
-                            {"role": "user", "content": adjusted_prompt}
-                        ],
+                        messages=messages,
                         max_completion_tokens=5000
                     )
-                except Exception as e:
-                    print(response)
-                    print(f"An error occurred while generating the GPT-4 response: {e}")
-                    continue
-            else:
-                try:
+                else:
                     response = client.chat.completions.create(
                         model=model,
-                        messages=[
-                            {"role": "system", "content": system_instruction},
-                            {"role": "user", "content": prompt}
-                        ],
+                        messages=messages,
                         max_tokens=5000,
                         temperature=0  # 0 - 2
                     )
+            except Exception as e:
+                # It's better to print the exception instead of response here
+                print(f"An error occurred while generating the GPT-4 response: {e}")
+                continue
 
-                except Exception as e:
-                    print(response)
-                    print(f"An error occurred while generating the GPT-4 response: {e}")
-                    continue
-
-            answer = response.choices[0].message.content
+            # Ensure that the response has the expected structure
+            try:
+                answer = response.choices[0].message.content
+            except (AttributeError, IndexError) as e:
+                print(f"Unexpected response structure: {response}")
+                print(f"Error: {e}")
+                continue
 
             test_label = "With_ref" if test_status else "Without_ref"
             filename = f"test_files/answer_{test_label}_{i}.txt"
@@ -480,7 +495,10 @@ def generate_gpt4_turbo_response_with_instructions(query_text,
                 file.write(answer)
 
             print(f"Answer saved to {filename}")
-    return response.choices[0].message.content
+
+    # Optionally, return all responses or handle accordingly
+    return answer  # Returns the last answer generated
+
 
 
 @timer
