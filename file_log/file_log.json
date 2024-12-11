@@ -1,6 +1,22 @@
 {
-    "rat_genes_consolidated.txt.gz": {
-        "hash": "f81d0bdfddd7255fde021af18cfd6b731cda0dce5a1b079faa141a85f8134cb4",
-        "num_embeddings": 30562
+    "1_human.gmt.gz": {
+        "hash": "ab431fa380773f16716f535699b924d9c4ed4bb583f36ee2bf92de304fd8d2c9",
+        "num_embeddings": 1
+    },
+    "converted_1_human.gmt": {
+        "hash": "87cb6eff25f8756e9880dfc576d48dafe75159a576d5688b9b45a654bd8fb935",
+        "num_embeddings": 1
+    },
+    "medium_rat.gmt.gz": {
+        "hash": "f3ed022370f0ca1de82483817fa2be05c9ab29e605a687c40066dc723a248078",
+        "num_embeddings": 11
+    },
+    "converted_smallhuman.gmt": {
+        "hash": "87cb6eff25f8756e9880dfc576d48dafe75159a576d5688b9b45a654bd8fb935",
+        "num_embeddings": 1
+    },
+    "smallhuman.gmt.gz": {
+        "hash": "ab431fa380773f16716f535699b924d9c4ed4bb583f36ee2bf92de304fd8d2c9",
+        "num_embeddings": 1
     }
 }

@@ -1,5 +1,5 @@
 {
-    "query": "In what pathways are the following genes, originating from a rat, involved: Zpld1 Cntn6 Prss12 Gldc Adamts17 Aldh1a1 Cobll1 Pcsk5 Tex101 Qsox1 Sema4f Cpe Hapln1 Marveld1 Tuba4a Parm1 Sqor Sbspon Col9a3 Peg3",
+    "query": "In what pathways are the following genes, originating from a rat, involved: Zpld1",
     "number_of_expansions": 0,
     "batch_size": 64,
     "model": "michiyasunaga/BioLinkBERT-large",

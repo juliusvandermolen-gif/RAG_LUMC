@@ -41,8 +41,6 @@ number_of_expansions = config["number_of_expansions"]
 batch_size = config["batch_size"]
 model_name = config["model"]
 
-
-
 try:
     amount_docs = query.split(":")[1].count(" ")
     raw_query_stop_words = query.split(":")[0].split(" ")
@@ -58,8 +56,6 @@ system_instruction_response = config["system_instruction_response"]
 
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english')).union(query_stop_words)
-
-
 
 
 def timer(func):
@@ -458,7 +454,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
         range_limit = 1
 
     for test_status in test_list:
-        for i in range(1, range_limit+1):
+        for i in range(1, range_limit + 1):
             if test_status:
                 prompt = (
                     f"Based on the following documents, answer the question using both your knowledge and the "
@@ -603,6 +599,7 @@ def load_gene_id_cache(file_path):
 
 @timer
 def save_gene_id_cache(cache, file_path):
+    print(f"\n\n\nSaving cache to {file_path}\n\n")
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(cache, f, indent=4)
 
@@ -635,14 +632,23 @@ def search_genes(unknown_genes, gene_cache, cache_file):
 
 
 @timer
-def convert_gene_id_to_symbols(file, data_dir='./Data/JSON/'):
-    cache_file = os.path.join(data_dir, 'ncbi_id_to_symbol.json')
+def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
+    cache_file = os.path.join(ncbi_json_dir, 'ncbi_id_to_symbol.json')
     gene_cache = load_gene_id_cache(cache_file)
-
     output_lines = []
     unknown_genes = set()
     gene_id_map = {}
 
+    # If the file is compressed, decompress it
+    if file.endswith('.gz'):
+        decompressed_file = file[:-3]  # Remove '.gz' extension
+        with gzip.open(os.path.join(data_dir, file), 'rt') as gzfile:
+            with open(os.path.join(data_dir, decompressed_file), 'w') as outfile:
+                for line in gzfile:
+                    outfile.write(line)
+        file = decompressed_file  # Update file to point to the decompressed version
+
+    # Process the file (decompressed or not)
     with open(os.path.join(data_dir, file), 'r') as infile:
         for line_index, line in enumerate(infile):
             parts = line.strip().split('\t')
@@ -663,6 +669,7 @@ def convert_gene_id_to_symbols(file, data_dir='./Data/JSON/'):
 
             new_line = '\t'.join(pathway_info + gene_symbols)
             output_lines.append(new_line)
+            print(unknown_genes)
 
     if unknown_genes:
         resolved_genes = search_genes(unknown_genes, gene_cache, cache_file)
@@ -787,15 +794,17 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
 
 
 @timer
-def process_files_in_directory(data_dir):
+def process_files_in_directory(data_dir,ncbi_json_dir):
     """Process all .gmt files in the given directory that start with 'wiki'."""
     for file in os.listdir(data_dir):
+        print(file)
         full_file_path = os.path.join(data_dir, file)
         if os.path.isfile(full_file_path) and file.endswith(
-                '.gmt') and file.startswith('wiki'):
+                '.gmt.gz'):  # and file.startswith('wiki'):
             print(f"Processing file: {file}")
+
             converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
-                                                                        data_dir)
+                                                                        data_dir, ncbi_json_dir)
             print(
                 f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
@@ -961,8 +970,8 @@ def main():
     log_path = os.path.join(log_dir, 'file_log.json')
     index_path = 'faiss_index.bin'
     db_path = 'chunks_embeddings.db'
-
-    process_files_in_directory(data_dir)
+    ncbi_json_dir='./Data/JSON/'
+    process_files_in_directory(data_dir, ncbi_json_dir)
 
     conn = initialize_database(db_path=db_path)
     tokenizer, model = load_model_and_tokenizer()
