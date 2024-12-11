@@ -610,25 +610,29 @@ def search_genes(unknown_genes, gene_cache, cache_file):
     resolved_genes = {}
 
     for gene_id in unknown_genes:
-        print(f"Searching for gene symbol for {gene_id}...")
+        # Remove brackets from the gene ID if present
+        sanitized_gene_id = gene_id.strip("[]")
+        print(f"Searching for gene symbol for {sanitized_gene_id}...")
         try:
-            response = requests.get(url + gene_id)
+            response = requests.get(url + sanitized_gene_id)
             response.raise_for_status()
             data = response.json()
 
             if 'symbol' in data:
                 gene_symbol = data['symbol']
-                resolved_genes[gene_id] = gene_symbol
-                print(f"Found gene symbol for {gene_id}: {gene_symbol}")
+                resolved_genes[sanitized_gene_id] = gene_symbol
+                print(f"Found gene symbol for {sanitized_gene_id}: {gene_symbol}")
             else:
-                resolved_genes[gene_id] = "Unknown"
+                resolved_genes[sanitized_gene_id] = "Unknown"
         except requests.exceptions.RequestException as e:
-            resolved_genes[gene_id] = "Error"
+            resolved_genes[sanitized_gene_id] = "Error"
+            print(f"Error with gene ID {sanitized_gene_id}: {e}")
 
     gene_cache.update(resolved_genes)
     save_gene_id_cache(gene_cache, cache_file)
 
     return resolved_genes
+
 
 
 @timer
@@ -637,9 +641,8 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
     gene_cache = load_gene_id_cache(cache_file)
     output_lines = []
     unknown_genes = set()
-    gene_id_map = {}
+    sanitized_gene_id_map = {}
 
-    # If the file is compressed, decompress it
     if file.endswith('.gz'):
         decompressed_file = file[:-3]  # Remove '.gz' extension
         with gzip.open(os.path.join(data_dir, file), 'rt') as gzfile:
@@ -657,35 +660,37 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
             gene_symbols = []
 
             for i, gene_id in enumerate(gene_ids):
-                if gene_id in gene_cache:
-                    gene_symbols.append(gene_cache[gene_id])
+                sanitized_gene_id = gene_id.strip("[]")
+                if sanitized_gene_id in gene_cache:
+                    gene_symbols.append(gene_cache[sanitized_gene_id])
                 else:
                     gene_symbols.append("Unknown")
-                    unknown_genes.add(gene_id)
+                    unknown_genes.add(sanitized_gene_id)
 
-                    if line_index not in gene_id_map:
-                        gene_id_map[line_index] = []
-                    gene_id_map[line_index].append((i, gene_id))
+                    if line_index not in sanitized_gene_id_map:
+                        sanitized_gene_id_map[line_index] = []
+                    sanitized_gene_id_map[line_index].append((i, sanitized_gene_id))
 
             new_line = '\t'.join(pathway_info + gene_symbols)
             output_lines.append(new_line)
             print(unknown_genes)
 
     if unknown_genes:
+        print(f"there are unkown genes {unknown_genes}")
         resolved_genes = search_genes(unknown_genes, gene_cache, cache_file)
 
-        for line_index, unknown_gene_positions in gene_id_map.items():
+        for line_index, unknown_gene_positions in sanitized_gene_id_map.items():
             line_parts = output_lines[line_index].split('\t')
             pathway_info = line_parts[:2]
             gene_symbols = line_parts[2:]
 
-            for position, gene_id in unknown_gene_positions:
-                if gene_id in resolved_genes:
-                    gene_symbols[position] = resolved_genes[gene_id]
+            for position, sanitized_gene_id in unknown_gene_positions:
+                if sanitized_gene_id in resolved_genes:
+                    gene_symbols[position] = resolved_genes[sanitized_gene_id]
 
             output_lines[line_index] = '\t'.join(pathway_info + gene_symbols)
 
-        final_unknown_genes = {gene_id for gene_id, symbol in
+        final_unknown_genes = {sanitized_gene_id for sanitized_gene_id, symbol in
                                resolved_genes.items() if symbol == "Unknown"}
     else:
         final_unknown_genes = set()
@@ -797,7 +802,6 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
 def process_files_in_directory(data_dir,ncbi_json_dir):
     """Process all .gmt files in the given directory that start with 'wiki'."""
     for file in os.listdir(data_dir):
-        print(file)
         full_file_path = os.path.join(data_dir, file)
         if os.path.isfile(full_file_path) and file.endswith(
                 '.gmt.gz'):  # and file.startswith('wiki'):
