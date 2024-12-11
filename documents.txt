@@ -38,3 +38,43 @@ Reference 10:
 Reference 10 (FAISS and BM25) with RRF Score: 189.2246:
 ENSRNOG00000042620,Marveld1,MARVEL domain containing 1 
 
+Reference 11:
+Reference 11 (FAISS and BM25) with RRF Score: 189.2243:
+ENSRNOG00000003649,Qsox1,quiescin sulfhydryl oxidase 1 
+
+Reference 12:
+Reference 12 (FAISS and BM25) with RRF Score: 188.6467:
+ENSRNOG00000032002,Hapln1,hyaluronan and proteoglycan link protein 1 
+
+Reference 13:
+Reference 13 (FAISS and BM25) with RRF Score: 188.6467:
+ENSRNOG00000037851,Spidr,scaffold protein involved in DNA repair 
+
+Reference 14:
+Reference 14 (FAISS and BM25) with RRF Score: 188.6467:
+ENSRNOG00000027016,Cobll1,cordon-bleu WH2 repeat protein-like 1 
+
+Reference 15:
+Reference 15 (FAISS and BM25) with RRF Score: 188.6462:
+ENSRNOG00000039517,Zpld1,zona pellucida-like domain containing 1 
+
+Reference 16:
+Reference 16 (FAISS and BM25) with RRF Score: 188.6460:
+ENSRNOG00000002579,Parm1,prostate androgen-regulated mucin-like protein 1 
+
+Reference 17:
+Reference 17 (FAISS and BM25) with RRF Score: 188.1474:
+ENSRNOG00000013991,Creg2,cellular repressor of E1A-stimulated genes 2 
+
+Reference 18:
+Reference 18 (FAISS and BM25) with RRF Score: 188.1471:
+ENSRNOG00000003291,Creg1,cellular repressor of E1A-stimulated genes 1 
+
+Reference 19:
+Reference 19 (FAISS and BM25) with RRF Score: 188.1456:
+ENSRNOG00000012036,Pcsk5,proprotein convertase subtilisin/kexin type 5 
+
+Reference 20:
+Reference 20 (FAISS and BM25) with RRF Score: 188.1456:
+ENSRNOG00000009531,Col9a3,collagen type IX alpha 3 chain 
+

@@ -39,15 +39,18 @@ query = config["query"]
 number_of_expansions = config["number_of_expansions"]
 batch_size = config["batch_size"]
 model_name = config["model"]
-amount_docs = config["amount_docs"]
+
+try:
+    amount_docs = query.split(":")[1]
+    amount_docs = amount_docs.count(" ")
+except (IndexError, AttributeError):
+    amount_docs = 10
+
 weight_faiss = config["weight_faiss"]
 weight_bm25 = config["weight_bm25"]
 system_instruction_response = config["system_instruction_response"]
 
-# Download stopwords if not already downloaded
 nltk.download('stopwords')
-
-# Get the English stopword set
 stop_words = set(stopwords.words('english'))
 
 
