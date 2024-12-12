@@ -13,9 +13,12 @@ from openai import OpenAI
 from transformers import AutoModel, AutoTokenizer
 import faiss
 import warnings
-from rank_bm25 import BM25Okapi
+from rank_bm25 import BM25Okapi, BM25Plus
 import time
 import functools
+import nltk
+from nltk.corpus import stopwords
+import string
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
@@ -27,10 +30,32 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Suppress Warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
-warnings.filterwarnings("ignore", category=FutureWarning,
-                        message=".*resume_download.*")
-warnings.filterwarnings("ignore", category=FutureWarning,
-                        message=".*torch.load.*")
+warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
+warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
+
+with open('config.json', 'r', encoding='utf-8') as config_file:
+    config = json.load(config_file)
+
+query = config["query"]
+number_of_expansions = config["number_of_expansions"]
+batch_size = config["batch_size"]
+model_name = config["model"]
+
+try:
+    amount_docs = query.split(":")[1].count(" ")
+    raw_query_stop_words = query.split(":")[0].split(" ")
+    query_stop_words = [word.strip(string.punctuation).lower() for word in raw_query_stop_words]
+
+except (IndexError, AttributeError):
+    amount_docs = 10
+    query_stop_words = ['involved', 'genes']
+
+weight_faiss = config["weight_faiss"]
+weight_bm25 = config["weight_bm25"]
+system_instruction_response = config["system_instruction_response"]
+
+nltk.download('stopwords')
+stop_words = set(stopwords.words('english')).union(query_stop_words)
 
 
 def timer(func):
@@ -42,7 +67,6 @@ def timer(func):
         elapsed_time = end_time - start_time
         with open("time.txt", "a") as f:
             f.write(f"Function '{func.__name__}' executed in {elapsed_time:.4f} seconds\n")
-
         return result
 
     return wrapper_timer
@@ -163,8 +187,7 @@ def fetch_chunks(conn):
 
 
 @timer
-def load_model_and_tokenizer(model_name="michiyasunaga/BioLinkBERT-large",
-                             force_download=False):
+def load_model_and_tokenizer(force_download=False):
     tokenizer = AutoTokenizer.from_pretrained(model_name,
                                               force_download=force_download)
 
@@ -229,7 +252,7 @@ def chunk_documents(documents):
 
 @timer
 def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
-                    batch_size=64, log_path='./file_log/file_log.json'):
+                    batch_size=batch_size, log_path='./file_log/file_log.json'):
     file_log = load_file_log(log_path=log_path)
     files_documents = load_gz_files(data_dir=data_dir)
     print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
@@ -305,8 +328,6 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k=20,
                       force_download=False):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    model_name = "michiyasunaga/BioLinkBERT-large"
-
     loaded_model = AutoModel.from_pretrained(model_name,
                                              force_download=force_download)
     loaded_tokenizer = AutoTokenizer.from_pretrained(model_name,
@@ -345,6 +366,10 @@ def fetch_chunks_by_ids(conn, ids):
     return [row[0] for row in results]
 
 
+def tokenize(text):
+    return [word for word in re.findall(r'\b[\w-]+\b', text.lower()) if word not in stop_words]
+
+
 @timer
 def build_bm25_index(conn):
     cursor = conn.cursor()
@@ -355,81 +380,154 @@ def build_bm25_index(conn):
     for row in data:
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
-    # Use regex to tokenize and remove punctuation
-    tokenized_corpus = [re.findall(r'\b\w+\b', doc.lower()) for doc in chunk_texts]
-    bm25 = BM25Okapi(tokenized_corpus)
+    tokenized_corpus = [tokenize(doc) for doc in chunk_texts]  # original: re.findall(r'\b\w+\b', doc.lower())
+    bm25 = BM25Plus(tokenized_corpus)
+    #bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
 
 
 @timer
-def query_bm25_index(query_text, bm25, chunk_ids, top_k=1000):
-    query_tokens = re.findall(r'\b\w+\b', query_text.lower())
+def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
+    query_tokens = tokenize(query_text)
+    print("Query tokens:", query_tokens)
+
+    # print("\nTokens for each line in the database:")
+    # for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
+    #     line_tokens = re.findall(r'\b[\w-]+\b', chunk_text.lower())
+    #     print(f"Chunk ID {chunk_id}: {line_tokens}")  # Check how everything is chunked
     scores = bm25.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
     top_ids = [chunk_ids[i] for i in top_n]
     top_scores = [scores[i] for i in top_n]
-    return top_ids, top_scores
+
+    detailed_scores = {}
+    for idx, score in zip(top_n, top_scores):
+        chunk_id = chunk_ids[idx]
+        relevant_tokens = []
+        for token in query_tokens:
+            if token in bm25.idf:
+                tf = bm25.doc_freqs[idx].get(token, 0)
+                if tf > 0:
+                    idf = bm25.idf[token]
+                    k1 = bm25.k1
+                    b = bm25.b
+                    doc_len = bm25.doc_len[idx]
+                    avgdl = bm25.avgdl
+                    numerator = (k1 + 1) * tf
+                    denominator = k1 * ((1 - b) + b * (doc_len / avgdl)) + tf
+                    token_score = idf * (numerator / denominator)
+                    relevant_tokens.append(f"{token} with score {token_score:.4f}")
+            else:
+                pass
+        detailed_scores[chunk_id] = {
+            'score': round(score, 4),
+            'tokens': relevant_tokens if relevant_tokens else None
+        }
+
+    print("\nIDF values for query tokens:")
+    # for token in query_tokens:
+    #     if token in bm25.idf:
+    #         print(f"Token: {token}, IDF: {bm25.idf[token]:.4f}")
+    #     else:
+    #         pass
+
+    return top_ids, top_scores, detailed_scores
 
 
-def generate_gpt4_turbo_response_with_instructions(query_text,
-                                                   document_references):
-    system_instruction = """
-        You are an efficient and insightful assistant to a molecular biologist.
-        Your role is to analyze gene sets and interpret their collective function based on biological knowledge.
-        Write a critical analysis of the biological processes performed by this system of interacting proteins.
-        Be concise and specific; avoid overly general statements. Be factual and avoid opinions.
+import os
+from openai import OpenAI
 
-        Follow these structured instructions:
 
-        1. **Role Context**: Act as a molecular biology assistant, focusing on relevant technical language and
-        biological processes.
-
-        2. **Task Execution**: First, perform an in-depth analysis of the provided gene set. For each gene, review its
-        function, identify patterns or shared pathways among genes, and then synthesize a descriptive name that reflects
-        a coherent function. If no clear function emerges, label it as a “System of unrelated proteins” with a
-        confidence score of 0.
-
-        3. **Confidence Scoring**: Assign a confidence score between 0.00 and 1.00 based on the coherence of the 
-        proposed function: - **1.00**: Very high confidence (strongly related genes, clear functional theme). - 
-        **0.00**: No confidence (unrelated or random gene set).
-
-        4. **Output Structure**: - Place the pathway name at the beginning of the analysis. - For each gene, provide in
-        pathway they are relevant to and group them. - Include a confidence score for the entire pathway.
-        
-    
-        """
-
+def generate_gpt4_turbo_response_with_instructions(query_text, document_references):
+    system_instruction = system_instruction_response  # Ensure this variable is defined elsewhere
+    testing = True
     combined_documents = "\n\n".join(document_references)
-    prompt = (f"Based on the following documents, answer the question: {query_text}\n\nDocuments:\n"
-              f"{combined_documents}\n")
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": system_instruction},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=5000,
-            temperature=0.2
-        )
-    except Exception as e:
-        print(f"An error occurred while generating the GPT-4 response: {e}")
-        return None
+    model = "gpt-4o"  # Verify if "gpt-4o" is the correct model name
 
-    return response.choices[0].message.content
+    if testing:
+        test_list = [True, False]
+        range_limit = 1
+    else:
+        test_list = [True]
+        range_limit = 1
+
+    for test_status in test_list:
+        for i in range(1, range_limit + 1):
+            if test_status:
+                prompt = (
+                    f"Based on the following documents, answer the question using both your knowledge and the "
+                    f"provided documents: {query_text}\n\nDocuments:\n"
+                    f"{combined_documents}\n"
+                )
+            else:
+                prompt = f"Answer the question based on your knowledge: {query_text}"
+
+            if model in ["o1-preview", "o1-mini"]:
+                adjusted_prompt = system_instruction + prompt
+                messages = [
+                    {"role": "user", "content": adjusted_prompt}
+                ]
+            else:
+                messages = [
+                    {"role": "system", "content": system_instruction},
+                    {"role": "user", "content": prompt}
+                ]
+
+            # Print the exact message being sent to the LLM
+            # print("=== Sending the following message to the LLM ===")
+            # for message in messages:
+            #     print(f"Role: {message['role']}\nContent: {message['content']}\n")
+            # print("=== End of message ===\n")
+
+            try:
+                if model in ["o1-preview", "o1-mini"]:
+                    response = client.chat.completions.create(
+                        model=model,
+                        messages=messages,
+                        max_completion_tokens=5000
+                    )
+                else:
+                    response = client.chat.completions.create(
+                        model=model,
+                        messages=messages,
+                        max_tokens=5000,
+                        temperature=0  # 0 - 2
+                    )
+            except Exception as e:
+                # It's better to print the exception instead of response here
+                print(f"An error occurred while generating the GPT-4 response: {e}")
+                continue
+
+            # Ensure that the response has the expected structure
+            try:
+                answer = response.choices[0].message.content
+            except (AttributeError, IndexError) as e:
+                print(f"Unexpected response structure: {response}")
+                print(f"Error: {e}")
+                continue
+
+            test_label = "With_ref" if test_status else "Without_ref"
+            filename = f"test_files/answer_{test_label}_{i}.txt"
+
+            with open(filename, "w", encoding="utf-8") as file:
+                file.write(answer)
+
+            print(f"Answer saved to {filename}")
+
+    # Optionally, return all responses or handle accordingly
+    return answer  # Returns the last answer generated
 
 
 @timer
 def save_answer_to_file(prompt, answer, document_references,
                         file_name="answer.txt"):
     with open(file_name, "w", encoding='utf-8') as f:
-        f.write(f"Prompt:\n{prompt}\n\n")
+        #f.write(f"Prompt:\n{prompt}\n\n")
         f.write(f"Answer:\n{answer}\n\n")
-        f.write(f"Document References:\n")
-        for idx, doc in enumerate(document_references, start=1):
-            f.write(f"Reference {idx}:\n{doc}\n\n")
+        # for idx, doc in enumerate(document_references, start=1):
+        #     f.write(f"Reference {idx}:\n{doc}\n\n")
     print(f"Answer saved to {file_name}")
     with open("documents.txt", "w", encoding='utf-8') as f:
         for idx, doc in enumerate(document_references, start=1):
@@ -439,20 +537,20 @@ def save_answer_to_file(prompt, answer, document_references,
 @timer
 def query_expansion(query_text, number):
     system_instruction = """You are an expert in query expansion for biomedical literature search. Given a user's 
-    query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions. 
-    The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
-    However, there is a maximum of {number} alternative queries that are given.
+query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions. 
+The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
+However, there is a maximum of {number} alternative queries that are given.
 
-    Example:
-    User query: "GGT5 in glutathione metabolism"
+Example:
+User query: "GGT5 in glutathione metabolism"
 
-    Possible expanded queries:
-    - "Gamma-glutamyltransferase 5 role in glutathione metabolism"
-    - "GGT5 enzyme function in glutathione pathway"
-    - "GGT5 and its involvement in glutathione homeostasis"
-    - "Impact of GGT5 on glutathione biosynthesis and metabolism"
+Possible expanded queries:
+- "Gamma-glutamyltransferase 5 role in glutathione metabolism"
+- "GGT5 enzyme function in glutathione pathway"
+- "GGT5 and its involvement in glutathione homeostasis"
+- "Impact of GGT5 on glutathione biosynthesis and metabolism"
 
-    Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
+Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
     """.format(number=number)
     print("The amount of queries that are going to be expanded:{number}".format(number=number))
     if number > 0:
@@ -501,6 +599,7 @@ def load_gene_id_cache(file_path):
 
 @timer
 def save_gene_id_cache(cache, file_path):
+    print(f"\n\n\nSaving cache to {file_path}\n\n")
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(cache, f, indent=4)
 
@@ -511,20 +610,23 @@ def search_genes(unknown_genes, gene_cache, cache_file):
     resolved_genes = {}
 
     for gene_id in unknown_genes:
-        print(f"Searching for gene symbol for {gene_id}...")
+        # Remove brackets from the gene ID if present
+        sanitized_gene_id = gene_id.strip("[]")
+        print(f"Searching for gene symbol for {sanitized_gene_id}...")
         try:
-            response = requests.get(url + gene_id)
+            response = requests.get(url + sanitized_gene_id)
             response.raise_for_status()
             data = response.json()
 
             if 'symbol' in data:
                 gene_symbol = data['symbol']
-                resolved_genes[gene_id] = gene_symbol
-                print(f"Found gene symbol for {gene_id}: {gene_symbol}")
+                resolved_genes[sanitized_gene_id] = gene_symbol
+                print(f"Found gene symbol for {sanitized_gene_id}: {gene_symbol}")
             else:
-                resolved_genes[gene_id] = "Unknown"
+                resolved_genes[sanitized_gene_id] = "Unknown"
         except requests.exceptions.RequestException as e:
-            resolved_genes[gene_id] = "Error"
+            resolved_genes[sanitized_gene_id] = "Error"
+            print(f"Error with gene ID {sanitized_gene_id}: {e}")
 
     gene_cache.update(resolved_genes)
     save_gene_id_cache(gene_cache, cache_file)
@@ -533,14 +635,25 @@ def search_genes(unknown_genes, gene_cache, cache_file):
 
 
 @timer
-def convert_gene_id_to_symbols(file, data_dir='./Data/JSON/'):
-    cache_file = os.path.join(data_dir, 'ncbi_id_to_symbol.json')
+def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
+    cache_file = os.path.join(ncbi_json_dir, 'ncbi_id_to_symbol.json')
     gene_cache = load_gene_id_cache(cache_file)
-
     output_lines = []
     unknown_genes = set()
-    gene_id_map = {}
+    sanitized_gene_id_map = {}
 
+    if file.endswith('.gz'):
+        decompressed_file = file[:-3]  # Remove '.gz' extension
+        with gzip.open(os.path.join(data_dir, file), 'rt') as gzfile:
+
+            #TODO Check whether this is needed, maybe make it so it doesnt have to run gene_synonym twice
+
+            with open(os.path.join(data_dir, decompressed_file), 'w') as outfile:
+                for line in gzfile:
+                    outfile.write(line)
+        file = decompressed_file  # Update file to point to the decompressed version
+
+    # Process the file (decompressed or not)
     with open(os.path.join(data_dir, file), 'r') as infile:
         for line_index, line in enumerate(infile):
             parts = line.strip().split('\t')
@@ -549,41 +662,46 @@ def convert_gene_id_to_symbols(file, data_dir='./Data/JSON/'):
             gene_symbols = []
 
             for i, gene_id in enumerate(gene_ids):
-                if gene_id in gene_cache:
-                    gene_symbols.append(gene_cache[gene_id])
+                sanitized_gene_id = gene_id.strip("[]")
+                if sanitized_gene_id in gene_cache:
+                    gene_symbols.append(gene_cache[sanitized_gene_id])
                 else:
-                    gene_symbols.append("Unknown")
-                    unknown_genes.add(gene_id)
+                    if sanitized_gene_id.isdigit():  #Makes sure that they arent already converted
+                        gene_symbols.append("Unknown")
+                        unknown_genes.add(sanitized_gene_id)
 
-                    if line_index not in gene_id_map:
-                        gene_id_map[line_index] = []
-                    gene_id_map[line_index].append((i, gene_id))
+                        if line_index not in sanitized_gene_id_map:
+                            sanitized_gene_id_map[line_index] = []
+                        sanitized_gene_id_map[line_index].append((i, sanitized_gene_id))
 
             new_line = '\t'.join(pathway_info + gene_symbols)
             output_lines.append(new_line)
 
     if unknown_genes:
+        print(f"there are unkown genes {unknown_genes}")
         resolved_genes = search_genes(unknown_genes, gene_cache, cache_file)
 
-        for line_index, unknown_gene_positions in gene_id_map.items():
+        for line_index, unknown_gene_positions in sanitized_gene_id_map.items():
             line_parts = output_lines[line_index].split('\t')
             pathway_info = line_parts[:2]
             gene_symbols = line_parts[2:]
 
-            for position, gene_id in unknown_gene_positions:
-                if gene_id in resolved_genes:
-                    gene_symbols[position] = resolved_genes[gene_id]
+            for position, sanitized_gene_id in unknown_gene_positions:
+                if sanitized_gene_id in resolved_genes:
+                    gene_symbols[position] = resolved_genes[sanitized_gene_id]
 
             output_lines[line_index] = '\t'.join(pathway_info + gene_symbols)
 
-        final_unknown_genes = {gene_id for gene_id, symbol in
+        final_unknown_genes = {sanitized_gene_id for sanitized_gene_id, symbol in
                                resolved_genes.items() if symbol == "Unknown"}
     else:
         final_unknown_genes = set()
 
-    output_file = os.path.join(data_dir, f"converted_{file}")
-    with open(output_file, 'w') as outfile:
-        outfile.write('\n'.join(output_lines))
+    #TODO Check whether this is needed:
+
+    # output_file = os.path.join(data_dir, f"converted_{file}")
+    # with open(output_file, 'w') as outfile:
+    #     outfile.write('\n'.join(output_lines))
 
     if final_unknown_genes:
         unknown_genes_file = os.path.join(data_dir, 'unknown_genes.txt')
@@ -615,62 +733,86 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k=20):
 
 
 @timer
-def create_top_bm25_docs(expanded_queries, bm25_index, bm25_chunk_ids,
-                         bm25_chunk_texts, top_k=20):
+def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k=20):
+    """
+    Aggregate BM25 scores from expanded queries and return the top_k documents.
+
+    Args:
+        expanded_queries (list): List of expanded query strings.
+        bm25 (BM25+): BM25 index object.
+        chunk_ids (list): List of document chunk IDs.
+        chunk_texts (list): List of document chunk texts.
+        top_k (int): Number of top documents to return.
+
+    Returns:
+        list of tuples: Each tuple contains (doc_id, details), where details is a dictionary
+                        with 'score', 'tokens', and 'source_queries'.
+    """
     bm25_doc_scores = {}
+
     for eq in expanded_queries:
-        top_ids_bm25, scores = query_bm25_index(eq, bm25_index, bm25_chunk_ids, top_k=top_k)
-        for doc_id, score in zip(top_ids_bm25, scores):
+        top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25, chunk_ids, chunk_texts, top_k=top_k)
+        for doc_id, details in detailed_scores.items():
             if doc_id in bm25_doc_scores:
-                if score > bm25_doc_scores[doc_id][0]:
-                    bm25_doc_scores[doc_id] = (score, eq)
+                if details['score'] > bm25_doc_scores[doc_id]['score']:
+                    bm25_doc_scores[doc_id]['score'] = details['score']
+                    bm25_doc_scores[doc_id]['tokens'] = details['tokens']
+                bm25_doc_scores[doc_id]['source_queries'].append(eq)
             else:
-                bm25_doc_scores[doc_id] = (score, eq)
+                bm25_doc_scores[doc_id] = {
+                    'score': details['score'],
+                    'tokens': details['tokens'],
+                    'source_queries': [eq]
+                }
 
     sorted_bm25_docs = sorted(bm25_doc_scores.items(),
-                              key=lambda item: item[1][0], reverse=True)
+                              key=lambda item: item[1]['score'],
+                              reverse=True)
     top_bm25_docs = sorted_bm25_docs[:top_k]
+
     return top_bm25_docs
 
 
 @timer
-def rrf(top_bm25_docs, top_faiss_docs):
-    k = 50  # Max score is 0.03921568627
-    rrf_scores = {}
+def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
+    """
+    Combine BM25 and FAISS scores using weights instead of RRF.
+    """
+    total_weight = weight_faiss + weight_bm25
+    weight_faiss /= total_weight
+    weight_bm25 /= total_weight
+    combined_scores = {}
 
-    for bm25_index, bm25_doc in enumerate(top_bm25_docs):
-        bm25_id = bm25_doc[0]
-        bm25_score = bm25_index + 1
-        source_query = bm25_doc[1][1]
+    for bm25_doc in top_bm25_docs:
+        doc_id, details = bm25_doc
+        score = details["score"] * weight_bm25
+        if doc_id in combined_scores:
+            combined_scores[doc_id]["score"] += score
+        else:
+            combined_scores[doc_id] = {"score": score, "source_queries": details.get("source_queries", [])}
 
-        if bm25_id not in rrf_scores:
-            rrf_scores[bm25_id] = {'score': 0, 'source_queries': []}
-        rrf_scores[bm25_id]['score'] += 1 / (k + bm25_score)
-        rrf_scores[bm25_id]['source_queries'].append(source_query)
+    for faiss_doc in top_faiss_docs:
+        doc_id, (distance, _) = faiss_doc
+        score = (1 / (1 + distance)) * weight_faiss
+        if doc_id in combined_scores:
+            combined_scores[doc_id]["score"] += score
+        else:
+            combined_scores[doc_id] = {"score": score, "source_queries": []}
 
-    for faiss_index, faiss_doc in enumerate(top_faiss_docs):
-        faiss_id = faiss_doc[0]
-        faiss_score = faiss_index + 1
-        source_query = faiss_doc[1][
-            1]
-
-        if faiss_id not in rrf_scores:
-            rrf_scores[faiss_id] = {'score': 0, 'source_queries': []}
-        rrf_scores[faiss_id]['score'] += 1 / (k + faiss_score)
-        rrf_scores[faiss_id]['source_queries'].append(source_query)
-    return rrf_scores
+    return combined_scores
 
 
 @timer
-def process_files_in_directory(data_dir):
+def process_files_in_directory(data_dir, ncbi_json_dir):
     """Process all .gmt files in the given directory that start with 'wiki'."""
     for file in os.listdir(data_dir):
         full_file_path = os.path.join(data_dir, file)
         if os.path.isfile(full_file_path) and file.endswith(
-                '.gmt') and file.startswith('wiki'):
+                '.gmt.gz'):  # and file.startswith('wiki'):
             print(f"Processing file: {file}")
+
             converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
-                                                                        data_dir)
+                                                                        data_dir, ncbi_json_dir)
             print(
                 f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
@@ -701,10 +843,8 @@ def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
 
 @timer
 def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
-                                      bm25_index, bm25_chunk_ids,
-                                      bm25_chunk_texts):
+                                      bm25, bm25_chunk_ids, bm25_chunk_texts):
     """Expand query and retrieve top documents using FAISS and BM25."""
-    number_of_expansions = 0
     expanded_queries = query_expansion(query, number=number_of_expansions)[1:]
     expanded_queries.append(query)
 
@@ -713,16 +853,17 @@ def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
 
     top_faiss_docs = create_top_faiss_docs(expanded_queries, index, tokenizer,
                                            model, top_k)
-    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25_index,
+    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25,
                                          bm25_chunk_ids, bm25_chunk_texts,
                                          top_k)
 
-    return top_faiss_docs, top_bm25_docs
+    bm25_detailed_scores = top_bm25_docs
+
+    return top_faiss_docs, top_bm25_docs, bm25_detailed_scores
 
 
 @timer
-def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs,
-                                top_bm25_docs, amount_docs):
+def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs):
     """Rank documents and fetch top chunks from the database."""
     sorted_rrf_scores = sorted(rrf_scores.items(),
                                key=lambda item: item[1]['score'],
@@ -731,12 +872,10 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs,
     combined_docs = {}
     for rank, (doc_id, data) in enumerate(sorted_rrf_scores, start=1):
         score = data['score']
-        source_queries = data['source_queries']
+        source_queries = data.get('source_queries', [])
 
         if doc_id not in combined_docs:
-            combined_docs[doc_id] = {'retriever': [], 'rank': rank,
-                                     'score': score,
-                                     'source_queries': source_queries}
+            combined_docs[doc_id] = {'retriever': [], 'rank': rank, 'score': score, 'source_queries': source_queries}
 
         if any(faiss_doc[0] == doc_id for faiss_doc in top_faiss_docs):
             combined_docs[doc_id]['retriever'].append('FAISS')
@@ -744,12 +883,10 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs,
             combined_docs[doc_id]['retriever'].append('BM25')
 
     combined_top_ids = list(combined_docs.keys())
-    retrieved_chunks = fetch_chunks_by_ids(conn,
-                                           combined_top_ids) if combined_top_ids else []
+    retrieved_chunks = fetch_chunks_by_ids(conn, combined_top_ids) if combined_top_ids else []
     doc_id_to_chunk = dict(zip(sorted(combined_top_ids), retrieved_chunks))
 
-    return [doc_id_to_chunk[doc_id] for doc_id in
-            combined_top_ids], combined_docs
+    return [doc_id_to_chunk[doc_id] for doc_id in combined_top_ids], combined_docs
 
 
 @timer
@@ -761,7 +898,6 @@ def generate_response_and_save(query, labeled_documents, conn):
                                                               labeled_documents)
 
     if response:
-        print(f"GPT-4 Response:\n{response}")
         combined_documents = "\n\n".join(labeled_documents)
         prompt = f"Based on the following documents, answer the question: {query}\n\nDocuments:\n{combined_documents}\n"
         save_answer_to_file(prompt, response, labeled_documents)
@@ -772,14 +908,32 @@ def generate_response_and_save(query, labeled_documents, conn):
 
 @timer
 def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx"):
+    """
+    Export combined RRF, BM25, and FAISS scores to an Excel file.
+
+    Args:
+        rrf_scores (dict): Combined RRF scores with doc_id as keys.
+        bm25_scores (dict): BM25 scores with doc_id as keys.
+        faiss_scores (dict): FAISS scores with doc_id as keys.
+        file_name (str): Name of the Excel file to create.
+    """
     all_doc_ids = set(rrf_scores.keys()).union(bm25_scores.keys()).union(faiss_scores.keys())
 
     data = []
     for doc_id in all_doc_ids:
-        bm25_score = bm25_scores.get(doc_id, 0)
+        bm25_detail = bm25_scores.get(doc_id, {})
+        bm25_score = bm25_detail.get('score', 0) if isinstance(bm25_detail, dict) else bm25_detail
         faiss_score = faiss_scores.get(doc_id, 0)
-        rrf_score = rrf_scores.get(doc_id, {}).get('score', 0)
-        data.append({"doc_id": doc_id, "BM25 Score": bm25_score, "FAISS Score": faiss_score, "RRF Score": rrf_score})
+        rrf_score = rrf_scores.get(doc_id, 0) if isinstance(rrf_scores.get(doc_id, 0),
+                                                            (int, float)) else rrf_scores.get(doc_id, {}).get('score',
+                                                                                                              0)
+
+        data.append({
+            "doc_id": doc_id,
+            "BM25 Score": bm25_score,
+            "FAISS Distance": faiss_score,
+            "RRF Score": rrf_score
+        })
 
     df = pd.DataFrame(data)
     df = df.sort_values(by="RRF Score", ascending=False)
@@ -788,14 +942,44 @@ def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="sco
 
 
 @timer
+def save_scores_to_file(scores, file_name):
+    """
+    Save scores to a text file, including tokens that contributed to the score.
+
+    Args:
+        scores (dict): Dictionary where each key is a doc_id and each value is either:
+                       - For BM25: a dictionary with 'score', 'tokens', and optionally 'source_queries'.
+                       - For FAISS: a simple score (e.g., distance).
+        file_name (str): Name of the file to save the scores.
+    """
+    with open(file_name, "w", encoding='utf-8') as f:
+        for doc_id, details in scores.items():
+            if isinstance(details, dict):
+                overall_score = details.get('score', 0)
+                tokens = details.get('tokens', [])
+                f.write(f"Chunk ID: {doc_id}, Score: {overall_score}\n")
+                if tokens:
+                    # Format tokens and their scores
+                    tokens_formatted = "\n".join(tokens)
+                    f.write(f"Tokens that were relevant:\n{tokens_formatted}\n")
+                else:
+                    f.write("Tokens that were relevant: None\n")
+                f.write("\n")
+            else:
+                f.write(f"Chunk ID: {doc_id}, Score: {details}\n\n")
+    print(f"Scores saved to {file_name}")
+
+
+@timer
 def main():
+    #TODO remove all the entries with len < 3 as they dont seem to contain anything except ensg id
     data_dir = './Data/biomart'
     log_dir = './file_log'
     log_path = os.path.join(log_dir, 'file_log.json')
     index_path = 'faiss_index.bin'
     db_path = 'chunks_embeddings.db'
-
-    process_files_in_directory(data_dir)
+    ncbi_json_dir = './Data/JSON/'
+    process_files_in_directory(data_dir, ncbi_json_dir)
 
     conn = initialize_database(db_path=db_path)
     tokenizer, model = load_model_and_tokenizer()
@@ -804,38 +988,36 @@ def main():
     index = initialize_faiss_index(embedding_dim, index_path)
 
     embed_documents_and_save(index, conn, tokenizer, model, data_dir,
-                             batch_size=64, log_path=log_path,
+                             batch_size=batch_size, log_path=log_path,
                              index_path=index_path)
 
     index = load_faiss_index(embedding_dim, index_path=index_path)
     conn = sqlite3.connect(db_path)
 
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
+    print(f"Embedding dimensions: {embedding_dim} {index.d} {model.config.hidden_size}")
 
-    query = ("ENSG00000183889,,novel member of the nuclear pore complex interacting protein NPIP gene family,[],"
-             "131675794")
-    top_faiss_docs, top_bm25_docs = run_query_expansion_and_retrieval(query,
-                                                                      index,
-                                                                      tokenizer,
-                                                                      model,
-                                                                      top_k=100000,
-                                                                      bm25_index=bm25_index,
-                                                                      bm25_chunk_ids=bm25_chunk_ids,
-                                                                      bm25_chunk_texts=bm25_chunk_texts)
+    top_faiss_docs, top_bm25_docs, bm25_detailed_scores = run_query_expansion_and_retrieval(
+        query, index, tokenizer, model, top_k=100000, bm25=bm25_index,
+        bm25_chunk_ids=bm25_chunk_ids, bm25_chunk_texts=bm25_chunk_texts)
 
-    rrf_scores = rrf(top_bm25_docs, top_faiss_docs)
-    bm25_scores = {doc[0]: doc[1][0] for doc in top_bm25_docs}
-    faiss_scores = {doc[0]: doc[1][0] for doc in top_faiss_docs}
+    rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
+    bm25_scores = dict(bm25_detailed_scores)
+    faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
+
+    save_scores_to_file(bm25_scores, "bm25_score.txt")
+    save_scores_to_file(faiss_scores, "faiss_score.txt")
 
     export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx")
 
     retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
-        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=20)
+        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=amount_docs)
 
     labeled_documents = [
-        (f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) from query:"
-         f" {', '.join(set(combined_docs[doc_id]['source_queries']))} with RRF Score:"
-         f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}")
+        (
+            f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) with RRF Score:"
+            f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}"
+        )
         for doc_id, chunk_text in
         zip(combined_docs.keys(), retrieved_chunks_ordered)
     ]
