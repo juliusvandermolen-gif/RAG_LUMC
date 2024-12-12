@@ -1,4 +1,4 @@
 Reference 1:
-Reference 1 (FAISS and BM25) with RRF Score: 15.7472:
+Reference 1 (FAISS and BM25) with RRF Score: 15.8267:
 ENSRNOG00000039517,Zpld1,zona pellucida-like domain containing 1 
 

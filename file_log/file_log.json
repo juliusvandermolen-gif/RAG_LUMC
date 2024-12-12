@@ -50,5 +50,17 @@
     "smolllhumano.gmt.gz": {
         "hash": "ab431fa380773f16716f535699b924d9c4ed4bb583f36ee2bf92de304fd8d2c9",
         "num_embeddings": 1
+    },
+    "converted_wikipathways_synonyms_Rattus_norvegicus.gmt": {
+        "hash": "ffd33e73b85436784e0e3c43dbcb3b505f301cb609d8144ad33a1008af1a47e6",
+        "num_embeddings": 129
+    },
+    "rat_genes_consolidated.txt.gz": {
+        "hash": "ab405a2994b02a7f4ab2a215a0c19093f85d96c94006f82e747bebcd78188909",
+        "num_embeddings": 30562
+    },
+    "wikipathways_synonyms_Rattus_norvegicus.gmt.gz": {
+        "hash": "edcdd731b320c6465f0bb392b32745eaef43192b918abb1e5811ac915fca61d9",
+        "num_embeddings": 129
     }
 }
