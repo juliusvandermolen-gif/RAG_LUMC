@@ -1,4 +1,88 @@
 Reference 1:
-Reference 1 (FAISS and BM25) with RRF Score: 15.8267:
-ENSRNOG00000039517,Zpld1,zona pellucida-like domain containing 1 
+Reference 1 (FAISS and BM25) with RRF Score: 152.6769:
+ENSRNOG00000019556,Cd9,CD9 molecule 
+
+Reference 2:
+Reference 2 (FAISS and BM25) with RRF Score: 151.2046:
+ENSRNOG00000049075,Fabp5,fatty acid binding protein 5 
+
+Reference 3:
+Reference 3 (FAISS and BM25) with RRF Score: 149.6202:
+ENSRNOG00000012499,Rarg,"retinoic acid receptor, gamma" 
+
+Reference 4:
+Reference 4 (FAISS and BM25) with RRF Score: 149.6201:
+ENSRNOG00000010573,Stra8,stimulated by retinoic acid 8 
+
+Reference 5:
+Reference 5 (FAISS and BM25) with RRF Score: 149.6201:
+ENSRNOG00000024061,Rarb,"retinoic acid receptor, beta" 
+
+Reference 6:
+Reference 6 (FAISS and BM25) with RRF Score: 149.6200:
+ENSRNOG00000009972,Rara,"retinoic acid receptor, alpha" 
+
+Reference 7:
+Reference 7 (FAISS and BM25) with RRF Score: 149.6200:
+ENSRNOG00000006670,Rai2,retinoic acid induced 2 
+
+Reference 8:
+Reference 8 (FAISS and BM25) with RRF Score: 149.6199:
+ENSRNOG00000060615,Rai1,retinoic acid induced 1 
+
+Reference 9:
+Reference 9 (FAISS and BM25) with RRF Score: 149.6197:
+ENSRNOG00000028872,Rai14,retinoic acid induced 14 
+
+Reference 10:
+Reference 10 (FAISS and BM25) with RRF Score: 148.9143:
+ENSRNOG00000063801,LOC120097698,retinoic acid early-inducible protein 1-gamma-like 
+
+Reference 11:
+Reference 11 (FAISS and BM25) with RRF Score: 148.9143:
+ENSRNOG00000062996,LOC120098769,retinoic acid early-inducible protein 1-gamma-like 
+
+Reference 12:
+Reference 12 (FAISS and BM25) with RRF Score: 148.9143:
+ENSRNOG00000040300,LOC120093164,retinoic acid early-inducible protein 1-gamma-like 
+
+Reference 13:
+Reference 13 (FAISS and BM25) with RRF Score: 148.9139:
+ENSRNOG00000037853,Rarres1,retinoic acid receptor responder 1 
+
+Reference 14:
+Reference 14 (FAISS and BM25) with RRF Score: 148.9137:
+ENSRNOG00000024705,Rarres2,retinoic acid receptor responder 2 
+
+Reference 15:
+Reference 15 (FAISS and BM25) with RRF Score: 148.7192:
+ENSRNOG00000004500,Myc,"MYC proto-oncogene, bHLH transcription factor" 
+
+Reference 16:
+Reference 16 (FAISS and BM25) with RRF Score: 148.5248:
+ENSRNOG00000007946,Bcl2l1,Bcl2-like 1 
+
+Reference 17:
+Reference 17 (FAISS and BM25) with RRF Score: 148.3985:
+ENSRNOG00000052990,Cers5,ceramide synthase 5 
+
+Reference 18:
+Reference 18 (FAISS and BM25) with RRF Score: 148.2993:
+ENSRNOG00000023492,Greb1l,GREB1 like retinoic acid receptor coactivator 
+
+Reference 19:
+Reference 19 (FAISS and BM25) with RRF Score: 148.2992:
+ENSRNOG00000023633,Crabp1,cellular retinoic acid binding protein 1 
+
+Reference 20:
+Reference 20 (FAISS and BM25) with RRF Score: 148.2991:
+ENSRNOG00000023659,AABR07000147.1,retinoic acid early transcript 1L 
+
+Reference 21:
+Reference 21 (FAISS and BM25) with RRF Score: 148.2989:
+ENSRNOG00000022101,Crabp2,cellular retinoic acid binding protein 2 
+
+Reference 22:
+Reference 22 (FAISS and BM25) with RRF Score: 147.7935:
+ENSRNOG00000021726,Tlr3,toll-like receptor 3 
 

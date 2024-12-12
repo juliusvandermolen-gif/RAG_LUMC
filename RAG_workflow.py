@@ -634,7 +634,6 @@ def search_genes(unknown_genes, gene_cache, cache_file):
     return resolved_genes
 
 
-
 @timer
 def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
     cache_file = os.path.join(ncbi_json_dir, 'ncbi_id_to_symbol.json')
@@ -646,6 +645,9 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
     if file.endswith('.gz'):
         decompressed_file = file[:-3]  # Remove '.gz' extension
         with gzip.open(os.path.join(data_dir, file), 'rt') as gzfile:
+
+            #TODO Check whether this is needed, maybe make it so it doesnt have to run gene_synonym twice
+
             with open(os.path.join(data_dir, decompressed_file), 'w') as outfile:
                 for line in gzfile:
                     outfile.write(line)
@@ -664,16 +666,16 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
                 if sanitized_gene_id in gene_cache:
                     gene_symbols.append(gene_cache[sanitized_gene_id])
                 else:
-                    gene_symbols.append("Unknown")
-                    unknown_genes.add(sanitized_gene_id)
+                    if sanitized_gene_id.isdigit():  #Makes sure that they arent already converted
+                        gene_symbols.append("Unknown")
+                        unknown_genes.add(sanitized_gene_id)
 
-                    if line_index not in sanitized_gene_id_map:
-                        sanitized_gene_id_map[line_index] = []
-                    sanitized_gene_id_map[line_index].append((i, sanitized_gene_id))
+                        if line_index not in sanitized_gene_id_map:
+                            sanitized_gene_id_map[line_index] = []
+                        sanitized_gene_id_map[line_index].append((i, sanitized_gene_id))
 
             new_line = '\t'.join(pathway_info + gene_symbols)
             output_lines.append(new_line)
-            print(unknown_genes)
 
     if unknown_genes:
         print(f"there are unkown genes {unknown_genes}")
@@ -695,9 +697,11 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
     else:
         final_unknown_genes = set()
 
-    output_file = os.path.join(data_dir, f"converted_{file}")
-    with open(output_file, 'w') as outfile:
-        outfile.write('\n'.join(output_lines))
+    #TODO Check whether this is needed:
+
+    # output_file = os.path.join(data_dir, f"converted_{file}")
+    # with open(output_file, 'w') as outfile:
+    #     outfile.write('\n'.join(output_lines))
 
     if final_unknown_genes:
         unknown_genes_file = os.path.join(data_dir, 'unknown_genes.txt')
@@ -799,7 +803,7 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
 
 
 @timer
-def process_files_in_directory(data_dir,ncbi_json_dir):
+def process_files_in_directory(data_dir, ncbi_json_dir):
     """Process all .gmt files in the given directory that start with 'wiki'."""
     for file in os.listdir(data_dir):
         full_file_path = os.path.join(data_dir, file)
@@ -974,7 +978,7 @@ def main():
     log_path = os.path.join(log_dir, 'file_log.json')
     index_path = 'faiss_index.bin'
     db_path = 'chunks_embeddings.db'
-    ncbi_json_dir='./Data/JSON/'
+    ncbi_json_dir = './Data/JSON/'
     process_files_in_directory(data_dir, ncbi_json_dir)
 
     conn = initialize_database(db_path=db_path)

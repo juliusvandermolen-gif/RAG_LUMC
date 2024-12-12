@@ -1,66 +1,10 @@
 {
-    "1_human.gmt.gz": {
-        "hash": "ab431fa380773f16716f535699b924d9c4ed4bb583f36ee2bf92de304fd8d2c9",
-        "num_embeddings": 1
-    },
-    "converted_1_human.gmt": {
-        "hash": "87cb6eff25f8756e9880dfc576d48dafe75159a576d5688b9b45a654bd8fb935",
-        "num_embeddings": 1
-    },
-    "medium_rat.gmt.gz": {
-        "hash": "f3ed022370f0ca1de82483817fa2be05c9ab29e605a687c40066dc723a248078",
-        "num_embeddings": 11
-    },
-    "converted_smallhuman.gmt": {
-        "hash": "87cb6eff25f8756e9880dfc576d48dafe75159a576d5688b9b45a654bd8fb935",
-        "num_embeddings": 1
-    },
-    "smallhuman.gmt.gz": {
-        "hash": "ab431fa380773f16716f535699b924d9c4ed4bb583f36ee2bf92de304fd8d2c9",
-        "num_embeddings": 1
-    },
-    "converted_small_rat.gmt": {
-        "hash": "114abfc0324ea489340f3dadbdc1c3e95f2a6469a8cab0ea62a4eb4d25a8edbb",
-        "num_embeddings": 10
-    },
-    "small_rat.gmt.gz": {
-        "hash": "da35427d5444c5bc4b1c7e2e4568cc9c85a6b0c800ea1eb940b12b145ea656ae",
-        "num_embeddings": 10
-    },
-    "converted_smallllllll.gmt": {
-        "hash": "748a7129dd89732f7451376c16c1e119464de41ee4967112c5b43e4d35b495d7",
-        "num_embeddings": 1
-    },
-    "smallllllll.gmt.gz": {
-        "hash": "0ac0149adeadae5dd0e8d5c73f6cae92866323da8b0a0edfe7e8bdb6ddd95447",
-        "num_embeddings": 1
-    },
-    "converted_humansmoll.gmt": {
-        "hash": "82dc22b97161811c6bade60586ad52f36280b1c0c0124d818554baf8fcbeae96",
-        "num_embeddings": 1
-    },
-    "humansmoll.gmt.gz": {
-        "hash": "1ce2cdb2b61b5c911aa68d4e4759e3c38e8f738725da699bd4f9a8f1ad0d12e8",
-        "num_embeddings": 1
-    },
-    "converted_smolllhumano.gmt": {
-        "hash": "87cb6eff25f8756e9880dfc576d48dafe75159a576d5688b9b45a654bd8fb935",
-        "num_embeddings": 1
-    },
-    "smolllhumano.gmt.gz": {
-        "hash": "ab431fa380773f16716f535699b924d9c4ed4bb583f36ee2bf92de304fd8d2c9",
-        "num_embeddings": 1
-    },
-    "converted_wikipathways_synonyms_Rattus_norvegicus.gmt": {
-        "hash": "ffd33e73b85436784e0e3c43dbcb3b505f301cb609d8144ad33a1008af1a47e6",
-        "num_embeddings": 129
-    },
     "rat_genes_consolidated.txt.gz": {
-        "hash": "ab405a2994b02a7f4ab2a215a0c19093f85d96c94006f82e747bebcd78188909",
+        "hash": "f417b2955c905a972f1d489e9578d03bac0441e31f519e50310f8f2c67fe09ad",
         "num_embeddings": 30562
     },
     "wikipathways_synonyms_Rattus_norvegicus.gmt.gz": {
-        "hash": "edcdd731b320c6465f0bb392b32745eaef43192b918abb1e5811ac915fca61d9",
+        "hash": "d3e15d55a83ee50f1254166bd55b661d40e4208c9d91bd3d61ca49a1f1e34a97",
         "num_embeddings": 129
     }
 }
