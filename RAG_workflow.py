@@ -434,89 +434,153 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     return top_ids, top_scores, detailed_scores
 
 
-import os
-from openai import OpenAI
+def process_excel_data(excel_file_path, de_filter_option):
+    # Load Excel file
+    data = pd.read_excel(excel_file_path)
 
+    results = []
 
-def generate_gpt4_turbo_response_with_instructions(query_text, document_references):
-    system_instruction = system_instruction_response  # Ensure this variable is defined elsewhere
-    testing = True
-    combined_documents = "\n\n".join(document_references)
+    if de_filter_option == "combined":
+        # Ensure DE is not 0 for combined mode
+        data = data[data['DE'] != 0]
 
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    model = "gpt-4o"  # Verify if "gpt-4o" is the correct model name
+        # Process combined DE values (all rows in cumulative increments of 50)
+        increment = 50
+        end_row = 50  # Start with the first 50 rows
 
-    if testing:
-        test_list = [True, False]
-        range_limit = 1
+        while end_row <= len(data):
+            # Select rows up to the current end_row
+            subset = data.iloc[:end_row]
+
+            # Check if P.Value exceeds 0.00000813334532191289
+            if subset['P.Value'].max() > 0.00000813334532191289:
+                break
+
+            # Add items from column 'X' to the results list
+            results.append((", ".join(subset['X'].tolist()), "combined"))
+
+            # Increase the end_row by the increment
+            end_row += increment
+
+    elif de_filter_option == "separate":
+        # Process DE = 1 and DE = -1 separately
+        for de_value, regulation in [(1, "upregulated"), (-1, "downregulated")]:
+            filtered_data = data[data['DE'] == de_value]
+            increment = 50
+            end_row = 50  # Start with the first 50 rows
+
+            while end_row <= len(filtered_data):
+                # Select rows up to the current end_row
+                subset = filtered_data.iloc[:end_row]
+
+                # Check if P.Value exceeds 0.0001
+                if subset['P.Value'].max() > 0.0001:
+                    break
+
+                # Add items from column 'X' to the results list
+                results.append((", ".join(subset['X'].tolist()), regulation))
+
+                # Increase the end_row by the increment
+                end_row += increment
+
     else:
-        test_list = [True]
-        range_limit = 1
+        raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
 
-    for test_status in test_list:
-        for i in range(1, range_limit + 1):
-            if test_status:
-                prompt = (
-                    f"Based on the following documents, answer the question using both your knowledge and the "
-                    f"provided documents: {query_text}\n\nDocuments:\n"
-                    f"{combined_documents}\n"
-                )
-            else:
-                prompt = f"Answer the question based on your knowledge: {query_text}"
+    return results
 
-            if model in ["o1-preview", "o1-mini"]:
-                adjusted_prompt = system_instruction + prompt
-                messages = [
-                    {"role": "user", "content": adjusted_prompt}
-                ]
-            else:
-                messages = [
-                    {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": prompt}
-                ]
 
-            # Print the exact message being sent to the LLM
-            # print("=== Sending the following message to the LLM ===")
-            # for message in messages:
-            #     print(f"Role: {message['role']}\nContent: {message['content']}\n")
-            # print("=== End of message ===\n")
+# Function definition
+def generate_gpt4_turbo_response_with_instructions(query_text, document_references):
+    excel_file_path = r".\Data\Kees\PMP22_VS_WT.xlsx"
+    de_filter_option = "combined"
 
-            try:
-                if model in ["o1-preview", "o1-mini"]:
-                    response = client.chat.completions.create(
-                        model=model,
-                        messages=messages,
-                        max_completion_tokens=5000
-                    )
-                else:
-                    response = client.chat.completions.create(
-                        model=model,
-                        messages=messages,
-                        max_tokens=5000,
-                        temperature=0  # 0 - 2
-                    )
-            except Exception as e:
-                # It's better to print the exception instead of response here
-                print(f"An error occurred while generating the GPT-4 response: {e}")
-                continue
+    # Process Excel data
+    results = process_excel_data(excel_file_path, de_filter_option)
 
-            # Ensure that the response has the expected structure
-            try:
-                answer = response.choices[0].message.content
-            except (AttributeError, IndexError) as e:
-                print(f"Unexpected response structure: {response}")
-                print(f"Error: {e}")
-                continue
-
-            test_label = "With_ref" if test_status else "Without_ref"
-            filename = f"test_files/answer_{test_label}_{i}.txt"
-
-            with open(filename, "w", encoding="utf-8") as file:
-                file.write(answer)
-
-            print(f"Answer saved to {filename}")
-
-    # Optionally, return all responses or handle accordingly
+    for items_string, regulation in results:
+        # Add to query_text for each batch
+        batch_query_text = query_text + f" {items_string}"
+        length = batch_query_text.count(' ') - 12
+        print(f"len: {length}Batch query text: {batch_query_text}")
+        # # Remaining parts of the function
+        # system_instruction = system_instruction_response
+        # testing = True
+        # combined_documents = "\n\n".join(document_references)
+        #
+        # client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        # model = "gpt-4o"
+        #
+        # amount_genes = batch_query_text.count(' ') - 12
+        #
+        # if testing:
+        #     test_list = [True, False]
+        #     range_limit = 1
+        # else:
+        #     test_list = [True]
+        #     range_limit = 1
+        #
+        # for test_status in test_list:
+        #     for i in range(1, range_limit + 1):
+        #         if test_status:
+        #             prompt = (
+        #                 f"Based on the following documents, answer the question using both your knowledge and the "
+        #                 f"provided documents: {batch_query_text}\n\nDocuments:\n"
+        #                 f"{combined_documents}\n"
+        #             )
+        #         else:
+        #             prompt = f"Answer the question based on your knowledge: {batch_query_text}"
+        #
+        #         if model in ["o1-preview", "o1-mini"]:
+        #             adjusted_prompt = system_instruction + prompt
+        #             messages = [
+        #                 {"role": "user", "content": adjusted_prompt}
+        #             ]
+        #         else:
+        #             messages = [
+        #                 {"role": "system", "content": system_instruction},
+        #                 {"role": "user", "content": prompt}
+        #             ]
+        #
+        #         try:
+        #             start_time = time.time()
+        #             if model in ["o1-preview", "o1-mini"]:
+        #                 response = client.chat.completions.create(
+        #                     model=model,
+        #                     messages=messages,
+        #                     max_completion_tokens=5000
+        #                 )
+        #             else:
+        #                 response = client.chat.completions.create(
+        #                     model=model,
+        #                     messages=messages,
+        #                     max_tokens=16384,
+        #                     temperature=0  # 0 - 2
+        #                 )
+        #             end_time = time.time()  # End timing
+        #
+        #             time_taken = end_time - start_time
+        #
+        #         except Exception as e:
+        #             print(f"An error occurred while generating the GPT-4 response: {e}")
+        #             continue
+        #
+        #         # Ensure that the response has the expected structure
+        #         try:
+        #             answer = response.choices[0].message.content
+        #         except (AttributeError, IndexError) as e:
+        #             print(f"Unexpected response structure: {response}")
+        #             print(f"Error: {e}")
+        #             continue
+        #
+        #         test_label = "with_ref" if test_status else "without_ref"
+        #         filename = f"test_files/answer_{test_label}_{amount_genes}_genes_{regulation}_{time_taken:.0f}_secs.txt"
+        #
+        #         with open(filename, "w", encoding="utf-8") as file:
+        #             file.write(answer)
+        #
+        #         print(f"Answer saved to {filename}")
+        #         print(f"Time taken for response: {time_taken:.2f} seconds")
+    quit()
     return answer  # Returns the last answer generated
 
 

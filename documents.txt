@@ -1,88 +1,1000 @@
 Reference 1:
-Reference 1 (FAISS and BM25) with RRF Score: 152.6769:
+Reference 1 (FAISS and BM25) with RRF Score: 2028.9719:
 ENSRNOG00000019556,Cd9,CD9 molecule 
 
 Reference 2:
-Reference 2 (FAISS and BM25) with RRF Score: 151.2046:
-ENSRNOG00000049075,Fabp5,fatty acid binding protein 5 
+Reference 2 (FAISS and BM25) with RRF Score: 2028.9719:
+ENSRNOG00000006076,Steap2,STEAP2 metalloreductase 
 
 Reference 3:
-Reference 3 (FAISS and BM25) with RRF Score: 149.6202:
-ENSRNOG00000012499,Rarg,"retinoic acid receptor, gamma" 
+Reference 3 (FAISS and BM25) with RRF Score: 2028.9361:
+ENSRNOG00000063649,, 
 
 Reference 4:
-Reference 4 (FAISS and BM25) with RRF Score: 149.6201:
-ENSRNOG00000010573,Stra8,stimulated by retinoic acid 8 
+Reference 4 (FAISS and BM25) with RRF Score: 2028.9361:
+ENSRNOG00000062503,, 
 
 Reference 5:
-Reference 5 (FAISS and BM25) with RRF Score: 149.6201:
-ENSRNOG00000024061,Rarb,"retinoic acid receptor, beta" 
+Reference 5 (FAISS and BM25) with RRF Score: 2028.8079:
+ENSRNOG00000008996,Dpysl5,dihydropyrimidinase-like 5 
 
 Reference 6:
-Reference 6 (FAISS and BM25) with RRF Score: 149.6200:
-ENSRNOG00000009972,Rara,"retinoic acid receptor, alpha" 
+Reference 6 (FAISS and BM25) with RRF Score: 2028.8077:
+ENSRNOG00000015913,Tspan5,tetraspanin 5 
 
 Reference 7:
-Reference 7 (FAISS and BM25) with RRF Score: 149.6200:
-ENSRNOG00000006670,Rai2,retinoic acid induced 2 
+Reference 7 (FAISS and BM25) with RRF Score: 2028.8076:
+ENSRNOG00000029912,Septin5,septin 5 
 
 Reference 8:
-Reference 8 (FAISS and BM25) with RRF Score: 149.6199:
-ENSRNOG00000060615,Rai1,retinoic acid induced 1 
+Reference 8 (FAISS and BM25) with RRF Score: 2028.8075:
+ENSRNOG00000015972,Ano5,anoctamin 5 
 
 Reference 9:
-Reference 9 (FAISS and BM25) with RRF Score: 149.6197:
-ENSRNOG00000028872,Rai14,retinoic acid induced 14 
+Reference 9 (FAISS and BM25) with RRF Score: 2027.7570:
+ENSRNOG00000024039,Serinc5,serine incorporator 5 
 
 Reference 10:
-Reference 10 (FAISS and BM25) with RRF Score: 148.9143:
-ENSRNOG00000063801,LOC120097698,retinoic acid early-inducible protein 1-gamma-like 
+Reference 10 (FAISS and BM25) with RRF Score: 2027.5695:
+ENSRNOG00000001764,Vps8,VPS8 subunit of CORVET complex 
 
 Reference 11:
-Reference 11 (FAISS and BM25) with RRF Score: 148.9143:
-ENSRNOG00000062996,LOC120098769,retinoic acid early-inducible protein 1-gamma-like 
+Reference 11 (FAISS and BM25) with RRF Score: 2027.1524:
+ENSRNOG00000028623,Agpat5,1-acylglycerol-3-phosphate O-acyltransferase 5 
 
 Reference 12:
-Reference 12 (FAISS and BM25) with RRF Score: 148.9143:
-ENSRNOG00000040300,LOC120093164,retinoic acid early-inducible protein 1-gamma-like 
+Reference 12 (FAISS and BM25) with RRF Score: 2026.9731:
+ENSRNOG00000062573,Cd151,CD151 molecule (Raph blood group) 
 
 Reference 13:
-Reference 13 (FAISS and BM25) with RRF Score: 148.9139:
-ENSRNOG00000037853,Rarres1,retinoic acid receptor responder 1 
+Reference 13 (FAISS and BM25) with RRF Score: 2026.9729:
+ENSRNOG00000047088,Rab10,"RAB10, member RAS oncogene family" 
 
 Reference 14:
-Reference 14 (FAISS and BM25) with RRF Score: 148.9137:
-ENSRNOG00000024705,Rarres2,retinoic acid receptor responder 2 
+Reference 14 (FAISS and BM25) with RRF Score: 2026.9728:
+ENSRNOG00000006646,Vopp1,VOPP1 WW domain binding protein 
 
 Reference 15:
-Reference 15 (FAISS and BM25) with RRF Score: 148.7192:
-ENSRNOG00000004500,Myc,"MYC proto-oncogene, bHLH transcription factor" 
+Reference 15 (FAISS and BM25) with RRF Score: 2026.8625:
+ENSRNOG00000015505,Mfap5,microfibril associated protein 5 
 
 Reference 16:
-Reference 16 (FAISS and BM25) with RRF Score: 148.5248:
-ENSRNOG00000007946,Bcl2l1,Bcl2-like 1 
+Reference 16 (FAISS and BM25) with RRF Score: 2026.7713:
+ENSRNOG00000009653,Numb,"NUMB, endocytic adaptor protein" 
 
 Reference 17:
-Reference 17 (FAISS and BM25) with RRF Score: 148.3985:
-ENSRNOG00000052990,Cers5,ceramide synthase 5 
+Reference 17 (FAISS and BM25) with RRF Score: 2026.4342:
+ENSRNOG00000001314,Fam20c,"FAM20C, golgi associated secretory pathway kinase" 
 
 Reference 18:
-Reference 18 (FAISS and BM25) with RRF Score: 148.2993:
-ENSRNOG00000023492,Greb1l,GREB1 like retinoic acid receptor coactivator 
+Reference 18 (FAISS and BM25) with RRF Score: 2026.4110:
+ENSRNOG00000008203,Synpr,synaptoporin 
 
 Reference 19:
-Reference 19 (FAISS and BM25) with RRF Score: 148.2992:
-ENSRNOG00000023633,Crabp1,cellular retinoic acid binding protein 1 
+Reference 19 (FAISS and BM25) with RRF Score: 2026.4108:
+ENSRNOG00000048273,Apod,apolipoprotein D 
 
 Reference 20:
-Reference 20 (FAISS and BM25) with RRF Score: 148.2991:
-ENSRNOG00000023659,AABR07000147.1,retinoic acid early transcript 1L 
+Reference 20 (FAISS and BM25) with RRF Score: 2026.4107:
+ENSRNOG00000015573,Ctbs,chitobiase 
 
 Reference 21:
-Reference 21 (FAISS and BM25) with RRF Score: 148.2989:
-ENSRNOG00000022101,Crabp2,cellular retinoic acid binding protein 2 
+Reference 21 (FAISS and BM25) with RRF Score: 2026.4107:
+ENSRNOG00000066159,Cpm,carboxypeptidase M 
 
 Reference 22:
-Reference 22 (FAISS and BM25) with RRF Score: 147.7935:
-ENSRNOG00000021726,Tlr3,toll-like receptor 3 
+Reference 22 (FAISS and BM25) with RRF Score: 2026.4106:
+ENSRNOG00000055962,Bgn,biglycan 
+
+Reference 23:
+Reference 23 (FAISS and BM25) with RRF Score: 2026.4106:
+ENSRNOG00000033527,Pappa,pappalysin 
+
+Reference 24:
+Reference 24 (FAISS and BM25) with RRF Score: 2026.4106:
+ENSRNOG00000024082,Gldn,gliomedin 
+
+Reference 25:
+Reference 25 (FAISS and BM25) with RRF Score: 2026.4105:
+ENSRNOG00000018369,Prx,periaxin 
+
+Reference 26:
+Reference 26 (FAISS and BM25) with RRF Score: 2026.4105:
+ENSRNOG00000017628,Tagln,transgelin 
+
+Reference 27:
+Reference 27 (FAISS and BM25) with RRF Score: 2026.4105:
+ENSRNOG00000018681,Nes,nestin 
+
+Reference 28:
+Reference 28 (FAISS and BM25) with RRF Score: 2026.4104:
+ENSRNOG00000060614,Pxdn,peroxidasin 
+
+Reference 29:
+Reference 29 (FAISS and BM25) with RRF Score: 2026.4104:
+ENSRNOG00000000571,Psap,prosaposin 
+
+Reference 30:
+Reference 30 (FAISS and BM25) with RRF Score: 2026.3046:
+ENSRNOG00000015445,Mal,"mal, T-cell differentiation protein" 
+
+Reference 31:
+Reference 31 (FAISS and BM25) with RRF Score: 2026.3020:
+ENSRNOG00000020060,Atf5,activating transcription factor 5 
+
+Reference 32:
+Reference 32 (FAISS and BM25) with RRF Score: 2026.0911:
+ENSRNOG00000010284,St3gal5,"ST3 beta-galactoside alpha-2,3-sialyltransferase 5" 
+
+Reference 33:
+Reference 33 (FAISS and BM25) with RRF Score: 2025.6907:
+ENSRNOG00000028896,A2m,alpha-2-macroglobulin 
+
+Reference 34:
+Reference 34 (FAISS and BM25) with RRF Score: 2025.6903:
+ENSRNOG00000030625,Tf,transferrin 
+
+Reference 35:
+Reference 35 (FAISS and BM25) with RRF Score: 2025.4777:
+ENSRNOG00000056562,Olfml1,olfactomedin-like 1 
+
+Reference 36:
+Reference 36 (FAISS and BM25) with RRF Score: 2025.4776:
+ENSRNOG00000018992,Dpysl3,dihydropyrimidinase-like 3 
+
+Reference 37:
+Reference 37 (FAISS and BM25) with RRF Score: 2025.4775:
+ENSRNOG00000058006,Sncg,"synuclein, gamma" 
+
+Reference 38:
+Reference 38 (FAISS and BM25) with RRF Score: 2025.4774:
+ENSRNOG00000017635,Inpp5a,inositol polyphosphate-5-phosphatase A 
+
+Reference 39:
+Reference 39 (FAISS and BM25) with RRF Score: 2025.4774:
+ENSRNOG00000018952,Sema3g,semaphorin 3G 
+
+Reference 40:
+Reference 40 (FAISS and BM25) with RRF Score: 2025.4774:
+ENSRNOG00000010076,Pkp1,plakophilin 1 
+
+Reference 41:
+Reference 41 (FAISS and BM25) with RRF Score: 2025.4774:
+ENSRNOG00000029810,Tspan4,tetraspanin 4 
+
+Reference 42:
+Reference 42 (FAISS and BM25) with RRF Score: 2025.4774:
+ENSRNOG00000007367,Septin4,septin 4 
+
+Reference 43:
+Reference 43 (FAISS and BM25) with RRF Score: 2025.4774:
+ENSRNOG00000007922,Cldn19,claudin 19 
+
+Reference 44:
+Reference 44 (FAISS and BM25) with RRF Score: 2025.4774:
+ENSRNOG00000006956,Adamtsl1,ADAMTS-like 1 
+
+Reference 45:
+Reference 45 (FAISS and BM25) with RRF Score: 2025.4773:
+ENSRNOG00000001953,Bace2,beta-secretase 2 
+
+Reference 46:
+Reference 46 (FAISS and BM25) with RRF Score: 2025.4773:
+ENSRNOG00000031232,Nrp2,neuropilin 2 
+
+Reference 47:
+Reference 47 (FAISS and BM25) with RRF Score: 2025.4773:
+ENSRNOG00000029939,Gypc,glycophorin C 
+
+Reference 48:
+Reference 48 (FAISS and BM25) with RRF Score: 2025.4773:
+ENSRNOG00000010744,Nrp1,neuropilin 1 
+
+Reference 49:
+Reference 49 (FAISS and BM25) with RRF Score: 2025.4773:
+ENSRNOG00000008816,Gpnmb,glycoprotein nmb 
+
+Reference 50:
+Reference 50 (FAISS and BM25) with RRF Score: 2025.4773:
+ENSRNOG00000034177,Efna5,ephrin A5 
+
+Reference 51:
+Reference 51 (FAISS and BM25) with RRF Score: 2025.4773:
+ENSRNOG00000010840,Adamtsl3,ADAMTS-like 3 
+
+Reference 52:
+Reference 52 (FAISS and BM25) with RRF Score: 2025.4772:
+ENSRNOG00000052247,Manba,mannosidase beta 
+
+Reference 53:
+Reference 53 (FAISS and BM25) with RRF Score: 2025.4772:
+ENSRNOG00000006784,Sema4f,ssemaphorin 4F 
+
+Reference 54:
+Reference 54 (FAISS and BM25) with RRF Score: 2025.4772:
+ENSRNOG00000011150,Arsb,arylsulfatase B 
+
+Reference 55:
+Reference 55 (FAISS and BM25) with RRF Score: 2025.4772:
+ENSRNOG00000003276,Myo1d,myosin ID 
+
+Reference 56:
+Reference 56 (FAISS and BM25) with RRF Score: 2025.4772:
+ENSRNOG00000003931,Arsg,arylsulfatase G 
+
+Reference 57:
+Reference 57 (FAISS and BM25) with RRF Score: 2025.4772:
+ENSRNOG00000029510,Plxnb1,plexin B1 
+
+Reference 58:
+Reference 58 (FAISS and BM25) with RRF Score: 2025.4772:
+ENSRNOG00000020519,Olfm2,olfactomedin 2 
+
+Reference 59:
+Reference 59 (FAISS and BM25) with RRF Score: 2025.4771:
+ENSRNOG00000017427,Pfn2,profilin 2 
+
+Reference 60:
+Reference 60 (FAISS and BM25) with RRF Score: 2025.4771:
+ENSRNOG00000050857,Fut10,fucosyltransferase 10 
+
+Reference 61:
+Reference 61 (FAISS and BM25) with RRF Score: 2025.4771:
+ENSRNOG00000043007,Rcn3,reticulocalbin 3 
+
+Reference 62:
+Reference 62 (FAISS and BM25) with RRF Score: 2025.4771:
+ENSRNOG00000056141,Matn3,matrilin 3 
+
+Reference 63:
+Reference 63 (FAISS and BM25) with RRF Score: 2025.4771:
+ENSRNOG00000043387,Cpe,carboxypeptidase E 
+
+Reference 64:
+Reference 64 (FAISS and BM25) with RRF Score: 2025.4771:
+ENSRNOG00000032517,Cntn6,contactin 6 
+
+Reference 65:
+Reference 65 (FAISS and BM25) with RRF Score: 2025.4770:
+ENSRNOG00000011599,Gldc,glycine decarboxylase 
+
+Reference 66:
+Reference 66 (FAISS and BM25) with RRF Score: 2025.4770:
+ENSRNOG00000014371,Cdh13,cadherin 13 
+
+Reference 67:
+Reference 67 (FAISS and BM25) with RRF Score: 2025.4770:
+ENSRNOG00000010457,Vash1,vasohibin 1 
+
+Reference 68:
+Reference 68 (FAISS and BM25) with RRF Score: 2025.4770:
+ENSRNOG00000010753,Aig1,androgen-induced 1 
+
+Reference 69:
+Reference 69 (FAISS and BM25) with RRF Score: 2025.4769:
+ENSRNOG00000050111,Cenpo,centromere protein O 
+
+Reference 70:
+Reference 70 (FAISS and BM25) with RRF Score: 2025.4575:
+ENSRNOG00000052745,Met,"MET proto-oncogene, receptor tyrosine kinase" 
+
+Reference 71:
+Reference 71 (FAISS and BM25) with RRF Score: 2025.4192:
+ENSRNOG00000012036,Pcsk5,proprotein convertase subtilisin/kexin type 5 
+
+Reference 72:
+Reference 72 (FAISS and BM25) with RRF Score: 2024.8198:
+ENSRNOG00000021023,Mag,myelin-associated glycoprotein 
+
+Reference 73:
+Reference 73 (FAISS and BM25) with RRF Score: 2024.8197:
+ENSRNOG00000009754,Nampt,nicotinamide phosphoribosyltransferase 
+
+Reference 74:
+Reference 74 (FAISS and BM25) with RRF Score: 2024.8196:
+ENSRNOG00000003947,Ntn1,netrin 1 
+
+Reference 75:
+Reference 75 (FAISS and BM25) with RRF Score: 2024.6936:
+ENSRNOG00000003597,Tuba4a,"tubulin, alpha 4A" 
+
+Reference 76:
+Reference 76 (FAISS and BM25) with RRF Score: 2024.6935:
+ENSRNOG00000058572,Nek9,NIMA-related kinase 9 
+
+Reference 77:
+Reference 77 (FAISS and BM25) with RRF Score: 2024.6935:
+ENSRNOG00000008016,Ckap4,cytoskeleton-associated protein 4 
+
+Reference 78:
+Reference 78 (FAISS and BM25) with RRF Score: 2024.6934:
+ENSRNOG00000000565,Sgpl1,sphingosine-1-phosphate lyase 1 
+
+Reference 79:
+Reference 79 (FAISS and BM25) with RRF Score: 2024.6934:
+ENSRNOG00000016351,Frrs1,ferric-chelate reductase 1 
+
+Reference 80:
+Reference 80 (FAISS and BM25) with RRF Score: 2024.6934:
+ENSRNOG00000005249,Snx6,sorting nexin 6 
+
+Reference 81:
+Reference 81 (FAISS and BM25) with RRF Score: 2024.6934:
+ENSRNOG00000024595,Cers6,ceramide synthase 6 
+
+Reference 82:
+Reference 82 (FAISS and BM25) with RRF Score: 2024.6934:
+ENSRNOG00000070242,Tent5c,terminal nucleotidyltransferase 5C 
+
+Reference 83:
+Reference 83 (FAISS and BM25) with RRF Score: 2024.6934:
+ENSRNOG00000016396,Fbxo11,F-box protein 11 
+
+Reference 84:
+Reference 84 (FAISS and BM25) with RRF Score: 2024.6933:
+ENSRNOG00000023195,Defb29,defensin beta 29 
+
+Reference 85:
+Reference 85 (FAISS and BM25) with RRF Score: 2024.6933:
+ENSRNOG00000003600,Pnpt1,polyribonucleotide nucleotidyltransferase 1 
+
+Reference 86:
+Reference 86 (FAISS and BM25) with RRF Score: 2024.6933:
+ENSRNOG00000009449,Trim35,tripartite motif-containing 35 
+
+Reference 87:
+Reference 87 (FAISS and BM25) with RRF Score: 2024.6933:
+ENSRNOG00000014791,Peg3,paternally expressed 3 
+
+Reference 88:
+Reference 88 (FAISS and BM25) with RRF Score: 2024.6933:
+ENSRNOG00000001786,Snx4,sorting nexin 4 
+
+Reference 89:
+Reference 89 (FAISS and BM25) with RRF Score: 2024.6932:
+ENSRNOG00000033280,Pam,peptidylglycine alpha-amidating monooxygenase 
+
+Reference 90:
+Reference 90 (FAISS and BM25) with RRF Score: 2024.6932:
+ENSRNOG00000015654,Ghr,growth hormone receptor 
+
+Reference 91:
+Reference 91 (FAISS and BM25) with RRF Score: 2024.6932:
+ENSRNOG00000017307,Prss23,serine protease 23 
+
+Reference 92:
+Reference 92 (FAISS and BM25) with RRF Score: 2024.6932:
+ENSRNOG00000004854,Has2,hyaluronan synthase 2 
+
+Reference 93:
+Reference 93 (FAISS and BM25) with RRF Score: 2024.6932:
+ENSRNOG00000027859,Tmem26,transmembrane protein 26 
+
+Reference 94:
+Reference 94 (FAISS and BM25) with RRF Score: 2024.6931:
+ENSRNOG00000047734,Chst2,carbohydrate sulfotransferase 2 
+
+Reference 95:
+Reference 95 (FAISS and BM25) with RRF Score: 2024.6931:
+ENSRNOG00000003014,Poglut1,protein O-glucosyltransferase 1 
+
+Reference 96:
+Reference 96 (FAISS and BM25) with RRF Score: 2024.6931:
+ENSRNOG00000015353,Prss12,serine protease 12 
+
+Reference 97:
+Reference 97 (FAISS and BM25) with RRF Score: 2024.6931:
+ENSRNOG00000003171,Mpz,myelin protein zero 
+
+Reference 98:
+Reference 98 (FAISS and BM25) with RRF Score: 2024.6931:
+ENSRNOG00000020264,Dhrs1,dehydrogenase/reductase 1 
+
+Reference 99:
+Reference 99 (FAISS and BM25) with RRF Score: 2024.6931:
+ENSRNOG00000001680,Riox2,ribosomal oxygenase 2 
+
+Reference 100:
+Reference 100 (FAISS and BM25) with RRF Score: 2024.6931:
+ENSRNOG00000020057,Tex101,testis expressed 101 
+
+Reference 101:
+Reference 101 (FAISS and BM25) with RRF Score: 2024.6931:
+ENSRNOG00000012151,Itpripl1,ITPRIP like 1 
+
+Reference 102:
+Reference 102 (FAISS and BM25) with RRF Score: 2024.6930:
+ENSRNOG00000006645,Ryr3,ryanodine receptor 3 
+
+Reference 103:
+Reference 103 (FAISS and BM25) with RRF Score: 2024.6929:
+ENSRNOG00000000699,Selplg,selectin P ligand 
+
+Reference 104:
+Reference 104 (FAISS and BM25) with RRF Score: 2024.6928:
+ENSRNOG00000000172,Sqor,sulfide quinone oxidoreductase 
+
+Reference 105:
+Reference 105 (FAISS and BM25) with RRF Score: 2024.1624:
+ENSRNOG00000009889,Pgm1,phosphoglucomutase 1 
+
+Reference 106:
+Reference 106 (FAISS and BM25) with RRF Score: 2024.0884:
+ENSRNOG00000033143,Cep295nl,CEP295 N-terminal like 
+
+Reference 107:
+Reference 107 (FAISS and BM25) with RRF Score: 2024.0883:
+ENSRNOG00000006652,Ddx1,DEAD-box helicase 1 
+
+Reference 108:
+Reference 108 (FAISS and BM25) with RRF Score: 2024.0882:
+ENSRNOG00000016488,Pltp,phospholipid transfer protein 
+
+Reference 109:
+Reference 109 (FAISS and BM25) with RRF Score: 2024.0882:
+ENSRNOG00000015796,Msh2,mutS homolog 2 
+
+Reference 110:
+Reference 110 (FAISS and BM25) with RRF Score: 2024.0881:
+ENSRNOG00000011178,Lrp2bp,Lrp2 binding protein 
+
+Reference 111:
+Reference 111 (FAISS and BM25) with RRF Score: 2024.0260:
+ENSRNOG00000036592,Zfp518a,zinc finger protein 518A 
+
+Reference 112:
+Reference 112 (FAISS and BM25) with RRF Score: 2024.0257:
+ENSRNOG00000026941,Tril,TLR4 interactor with leucine-rich repeats 
+
+Reference 113:
+Reference 113 (FAISS and BM25) with RRF Score: 2024.0257:
+ENSRNOG00000005371,Klhl29,kelch-like family member 29 
+
+Reference 114:
+Reference 114 (FAISS and BM25) with RRF Score: 2024.0257:
+ENSRNOG00000007370,Rnf144a,ring finger protein 144A 
+
+Reference 115:
+Reference 115 (FAISS and BM25) with RRF Score: 2024.0257:
+ENSRNOG00000008246,Emilin1,elastin microfibril interfacer 1 
+
+Reference 116:
+Reference 116 (FAISS and BM25) with RRF Score: 2024.0256:
+ENSRNOG00000004474,Klhdc2,kelch domain containing 2 
+
+Reference 117:
+Reference 117 (FAISS and BM25) with RRF Score: 2024.0256:
+ENSRNOG00000030880,Hs6st2,heparan sulfate 6-O-sulfotransferase 2 
+
+Reference 118:
+Reference 118 (FAISS and BM25) with RRF Score: 2024.0256:
+ENSRNOG00000062686,Gcnt1,glucosaminyl (N-acetyl) transferase 1 
+
+Reference 119:
+Reference 119 (FAISS and BM25) with RRF Score: 2024.0255:
+ENSRNOG00000023109,Icoslg,inducible T-cell co-stimulator ligand 
+
+Reference 120:
+Reference 120 (FAISS and BM25) with RRF Score: 2024.0255:
+ENSRNOG00000007905,Itga7,integrin subunit alpha 7 
+
+Reference 121:
+Reference 121 (FAISS and BM25) with RRF Score: 2024.0255:
+ENSRNOG00000014215,Klf9,KLF transcription factor 9 
+
+Reference 122:
+Reference 122 (FAISS and BM25) with RRF Score: 2024.0255:
+ENSRNOG00000001156,Msi1,musashi RNA-binding protein 1 
+
+Reference 123:
+Reference 123 (FAISS and BM25) with RRF Score: 2024.0255:
+ENSRNOG00000023993,Kif1a,kinesin family member 1A 
+
+Reference 124:
+Reference 124 (FAISS and BM25) with RRF Score: 2024.0255:
+ENSRNOG00000004908,Smc6,structural maintenance of chromosomes 6 
+
+Reference 125:
+Reference 125 (FAISS and BM25) with RRF Score: 2024.0254:
+ENSRNOG00000019447,Ecel1,endothelin converting enzyme-like 1 
+
+Reference 126:
+Reference 126 (FAISS and BM25) with RRF Score: 2024.0254:
+ENSRNOG00000024808,Stk39,serine threonine kinase 39 
+
+Reference 127:
+Reference 127 (FAISS and BM25) with RRF Score: 2024.0254:
+ENSRNOG00000009951,Aif1l,allograft inflammatory factor 1-like 
+
+Reference 128:
+Reference 128 (FAISS and BM25) with RRF Score: 2024.0254:
+ENSRNOG00000003259,C1qtnf1,C1q and TNF related 1 
+
+Reference 129:
+Reference 129 (FAISS and BM25) with RRF Score: 2024.0254:
+ENSRNOG00000023016,Magea9,MAGE family member A9 
+
+Reference 130:
+Reference 130 (FAISS and BM25) with RRF Score: 2024.0253:
+ENSRNOG00000029598,Robo2,roundabout guidance receptor 2 
+
+Reference 131:
+Reference 131 (FAISS and BM25) with RRF Score: 2024.0253:
+ENSRNOG00000012422,Tnik,TRAF2 and NCK interacting kinase 
+
+Reference 132:
+Reference 132 (FAISS and BM25) with RRF Score: 2024.0253:
+ENSRNOG00000042620,Marveld1,MARVEL domain containing 1 
+
+Reference 133:
+Reference 133 (FAISS and BM25) with RRF Score: 2024.0253:
+ENSRNOG00000003649,Qsox1,quiescin sulfhydryl oxidase 1 
+
+Reference 134:
+Reference 134 (FAISS and BM25) with RRF Score: 2024.0253:
+ENSRNOG00000000017,Steap1,STEAP family member 1 
+
+Reference 135:
+Reference 135 (FAISS and BM25) with RRF Score: 2024.0252:
+ENSRNOG00000049034,Ptrh1,peptidyl-tRNA hydrolase 1 homolog 
+
+Reference 136:
+Reference 136 (FAISS and BM25) with RRF Score: 2024.0252:
+ENSRNOG00000010208,Timp1,TIMP metallopeptidase inhibitor 1 
+
+Reference 137:
+Reference 137 (FAISS and BM25) with RRF Score: 2024.0252:
+ENSRNOG00000026458,Tbccd1,TBCC domain containing 1 
+
+Reference 138:
+Reference 138 (FAISS and BM25) with RRF Score: 2024.0252:
+ENSRNOG00000001657,Cldnd1,claudin domain containing 1 
+
+Reference 139:
+Reference 139 (FAISS and BM25) with RRF Score: 2024.0252:
+ENSRNOG00000002664,Emp2,epithelial membrane protein 2 
+
+Reference 140:
+Reference 140 (FAISS and BM25) with RRF Score: 2024.0252:
+ENSRNOG00000026704,Drp2,dystrophin related protein 2 
+
+Reference 141:
+Reference 141 (FAISS and BM25) with RRF Score: 2024.0252:
+ENSRNOG00000021669,Mybl1,MYB proto-oncogene like 1 
+
+Reference 142:
+Reference 142 (FAISS and BM25) with RRF Score: 2024.0251:
+ENSRNOG00000020637,Hmx3,H6 family homeobox 3 
+
+Reference 143:
+Reference 143 (FAISS and BM25) with RRF Score: 2024.0250:
+ENSRNOG00000020533,Htra1,HtrA serine peptidase 1 
+
+Reference 144:
+Reference 144 (FAISS and BM25) with RRF Score: 2024.0250:
+ENSRNOG00000010248,Serpini1,serpin family I member 1 
+
+Reference 145:
+Reference 145 (FAISS and BM25) with RRF Score: 2024.0249:
+ENSRNOG00000068983,Magea4,MAGE family member A4 
+
+Reference 146:
+Reference 146 (FAISS and BM25) with RRF Score: 2024.0248:
+ENSRNOG00000029408,Mageb16,MAGE family member B16 
+
+Reference 147:
+Reference 147 (FAISS and BM25) with RRF Score: 2023.8736:
+ENSRNOG00000008412,Gprc5a,"G protein-coupled receptor, class C, group 5, member A" 
+
+Reference 148:
+Reference 148 (FAISS and BM25) with RRF Score: 2023.7347:
+ENSRNOG00000019283,P2ry2,purinergic receptor P2Y2 
+
+Reference 149:
+Reference 149 (FAISS and BM25) with RRF Score: 2023.7342:
+ENSRNOG00000005289,Prkd3,protein kinase D3 
+
+Reference 150:
+Reference 150 (FAISS and BM25) with RRF Score: 2023.4835:
+ENSRNOG00000004827,Papola,poly (A) polymerase alpha 
+
+Reference 151:
+Reference 151 (FAISS and BM25) with RRF Score: 2023.4654:
+ENSRNOG00000014516,Hs6st1,heparan sulfate 6-O-sulfotransferase 1 
+
+Reference 152:
+Reference 152 (FAISS and BM25) with RRF Score: 2023.4653:
+ENSRNOG00000011696,Lifr,LIF receptor subunit alpha 
+
+Reference 153:
+Reference 153 (FAISS and BM25) with RRF Score: 2023.4653:
+ENSRNOG00000013954,Alpl,"alkaline phosphatase, biomineralization associated" 
+
+Reference 154:
+Reference 154 (FAISS and BM25) with RRF Score: 2023.4653:
+ENSRNOG00000038489,Sumo3,small ubiquitin-like modifier 3 
+
+Reference 155:
+Reference 155 (FAISS and BM25) with RRF Score: 2023.4653:
+ENSRNOG00000064656,Sumo3,small ubiquitin-like modifier 3 
+
+Reference 156:
+Reference 156 (FAISS and BM25) with RRF Score: 2023.4652:
+ENSRNOG00000003338,Pmp22,peripheral myelin protein 22 
+
+Reference 157:
+Reference 157 (FAISS and BM25) with RRF Score: 2023.4652:
+ENSRNOG00000003840,Slit2,slit guidance ligand 2 
+
+Reference 158:
+Reference 158 (FAISS and BM25) with RRF Score: 2023.4652:
+ENSRNOG00000034190,Ighm,immunoglobulin heavy constant epsilon 
+
+Reference 159:
+Reference 159 (FAISS and BM25) with RRF Score: 2023.4650:
+ENSRNOG00000007237,Id2,inhibitor of DNA binding 2 
+
+Reference 160:
+Reference 160 (FAISS and BM25) with RRF Score: 2023.4650:
+ENSRNOG00000028845,Ebf1,EBF transcription factor 1 
+
+Reference 161:
+Reference 161 (FAISS and BM25) with RRF Score: 2023.4501:
+ENSRNOG00000022337,Slitrk6,"SLIT and NTRK-like family, member 6" 
+
+Reference 162:
+Reference 162 (FAISS and BM25) with RRF Score: 2023.4500:
+ENSRNOG00000047505,Tubb4a,"tubulin, beta 4A class IVa" 
+
+Reference 163:
+Reference 163 (FAISS and BM25) with RRF Score: 2023.4499:
+ENSRNOG00000014874,Zfyve28,zinc finger FYVE-type containing 28 
+
+Reference 164:
+Reference 164 (FAISS and BM25) with RRF Score: 2023.4499:
+ENSRNOG00000040257,Chmp2b,charged multivesicular body protein 2B 
+
+Reference 165:
+Reference 165 (FAISS and BM25) with RRF Score: 2023.4499:
+ENSRNOG00000039517,Zpld1,zona pellucida-like domain containing 1 
+
+Reference 166:
+Reference 166 (FAISS and BM25) with RRF Score: 2023.4499:
+ENSRNOG00000007646,Sipa1l1,signal-induced proliferation-associated 1 like 1 
+
+Reference 167:
+Reference 167 (FAISS and BM25) with RRF Score: 2023.4498:
+ENSRNOG00000002579,Parm1,prostate androgen-regulated mucin-like protein 1 
+
+Reference 168:
+Reference 168 (FAISS and BM25) with RRF Score: 2023.4497:
+ENSRNOG00000018830,Aff3,ALF transcription elongation factor 3 
+
+Reference 169:
+Reference 169 (FAISS and BM25) with RRF Score: 2023.4497:
+ENSRNOG00000013589,Cxcl12,C-X-C motif chemokine ligand 12 
+
+Reference 170:
+Reference 170 (FAISS and BM25) with RRF Score: 2023.4497:
+ENSRNOG00000011984,Cxcl14,C-X-C motif chemokine ligand 14 
+
+Reference 171:
+Reference 171 (FAISS and BM25) with RRF Score: 2023.4497:
+ENSRNOG00000032002,Hapln1,hyaluronan and proteoglycan link protein 1 
+
+Reference 172:
+Reference 172 (FAISS and BM25) with RRF Score: 2023.4496:
+ENSRNOG00000050570,Nrbp1,nuclear receptor binding protein 1 
+
+Reference 173:
+Reference 173 (FAISS and BM25) with RRF Score: 2023.4496:
+ENSRNOG00000036877,Clca4l,chloride channel calcium activated 4-like 
+
+Reference 174:
+Reference 174 (FAISS and BM25) with RRF Score: 2023.4496:
+ENSRNOG00000059344,Tpcn1,two pore segment channel 1 
+
+Reference 175:
+Reference 175 (FAISS and BM25) with RRF Score: 2023.4496:
+ENSRNOG00000005274,Vrk1,VRK serine/threonine kinase 1 
+
+Reference 176:
+Reference 176 (FAISS and BM25) with RRF Score: 2023.4496:
+ENSRNOG00000003494,Ppfia4,PTPRF interacting protein alpha 4 
+
+Reference 177:
+Reference 177 (FAISS and BM25) with RRF Score: 2023.4496:
+ENSRNOG00000054217,Runx3,RUNX family transcription factor 3 
+
+Reference 178:
+Reference 178 (FAISS and BM25) with RRF Score: 2023.4496:
+ENSRNOG00000003172,Serpinf1,serpin family F member 1 
+
+Reference 179:
+Reference 179 (FAISS and BM25) with RRF Score: 2023.4495:
+ENSRNOG00000008697,Ccn3,cellular communication network factor 3 
+
+Reference 180:
+Reference 180 (FAISS and BM25) with RRF Score: 2023.4495:
+ENSRNOG00000007078,Ccn4,cellular communication network factor 4 
+
+Reference 181:
+Reference 181 (FAISS and BM25) with RRF Score: 2023.4494:
+ENSRNOG00000027016,Cobll1,cordon-bleu WH2 repeat protein-like 1 
+
+Reference 182:
+Reference 182 (FAISS and BM25) with RRF Score: 2023.4305:
+ENSRNOG00000016013,Gprc5b,"G protein-coupled receptor, class C, group 5, member B" 
+
+Reference 183:
+Reference 183 (FAISS and BM25) with RRF Score: 2023.2886:
+ENSRNOG00000046468,Ptgfr,prostaglandin F receptor 
+
+Reference 184:
+Reference 184 (FAISS and BM25) with RRF Score: 2023.1378:
+ENSRNOG00000016538,Itga8,integrin subunit alpha 8 
+
+Reference 185:
+Reference 185 (FAISS and BM25) with RRF Score: 2023.1378:
+ENSRNOG00000033134,Mef2c,myocyte enhancer factor 2C 
+
+Reference 186:
+Reference 186 (FAISS and BM25) with RRF Score: 2023.1377:
+ENSRNOG00000015599,Mall,"mal, T-cell differentiation protein-like" 
+
+Reference 187:
+Reference 187 (FAISS and BM25) with RRF Score: 2023.1377:
+ENSRNOG00000022619,Fth1,ferritin heavy chain 1 
+
+Reference 188:
+Reference 188 (FAISS and BM25) with RRF Score: 2023.1374:
+ENSRNOG00000015618,Wnt5a,Wnt family member 5A 
+
+Reference 189:
+Reference 189 (FAISS and BM25) with RRF Score: 2022.9486:
+ENSRNOG00000010841,Col8a2,collagen type VIII alpha 2 chain 
+
+Reference 190:
+Reference 190 (FAISS and BM25) with RRF Score: 2022.9486:
+ENSRNOG00000004147,Abca8a,"ATP-binding cassette, subfamily A (ABC1), member 8a" 
+
+Reference 191:
+Reference 191 (FAISS and BM25) with RRF Score: 2022.9485:
+ENSRNOG00000009531,Col9a3,collagen type IX alpha 3 chain 
+
+Reference 192:
+Reference 192 (FAISS and BM25) with RRF Score: 2022.9485:
+ENSRNOG00000010326,Col20a1,collagen type XX alpha 1 chain 
+
+Reference 193:
+Reference 193 (FAISS and BM25) with RRF Score: 2022.9484:
+ENSRNOG00000060381,Col15a1,collagen type XV alpha 1 chain 
+
+Reference 194:
+Reference 194 (FAISS and BM25) with RRF Score: 2022.9484:
+ENSRNOG00000038480,Ppp1r36,"protein phosphatase 1, regulatory subunit 36" 
+
+Reference 195:
+Reference 195 (FAISS and BM25) with RRF Score: 2022.9484:
+ENSRNOG00000016414,Slc22a17,"solute carrier family 22, member 17" 
+
+Reference 196:
+Reference 196 (FAISS and BM25) with RRF Score: 2022.9483:
+ENSRNOG00000008554,Slc9a9,solute carrier family 9 member A9 
+
+Reference 197:
+Reference 197 (FAISS and BM25) with RRF Score: 2022.9483:
+ENSRNOG00000000800,Man1a1,"mannosidase, alpha, class 1A, member 1" 
+
+Reference 198:
+Reference 198 (FAISS and BM25) with RRF Score: 2022.9483:
+ENSRNOG00000061102,Taf9b,TATA-box binding protein associated factor 9b 
+
+Reference 199:
+Reference 199 (FAISS and BM25) with RRF Score: 2022.9483:
+ENSRNOG00000023143,Nlrp1a,"NLR family, pyrin domain containing 1A" 
+
+Reference 200:
+Reference 200 (FAISS and BM25) with RRF Score: 2022.9483:
+ENSRNOG00000023334,Parp14,"poly (ADP-ribose) polymerase family, member 14" 
+
+Reference 201:
+Reference 201 (FAISS and BM25) with RRF Score: 2022.9482:
+ENSRNOG00000001090,Stard13,StAR-related lipid transfer domain containing 13 
+
+Reference 202:
+Reference 202 (FAISS and BM25) with RRF Score: 2022.9482:
+ENSRNOG00000037909,Ppm1f,"protein phosphatase, Mg2+/Mn2+ dependent, 1F" 
+
+Reference 203:
+Reference 203 (FAISS and BM25) with RRF Score: 2022.9482:
+ENSRNOG00000026466,Lrrtm3,leucine rich repeat transmembrane neuronal 3 
+
+Reference 204:
+Reference 204 (FAISS and BM25) with RRF Score: 2022.9482:
+ENSRNOG00000004603,Srgap1,SLIT-ROBO Rho GTPase activating protein 1 
+
+Reference 205:
+Reference 205 (FAISS and BM25) with RRF Score: 2022.9481:
+ENSRNOG00000005410,Cdca7l,cell division cycle associated 7 like 
+
+Reference 206:
+Reference 206 (FAISS and BM25) with RRF Score: 2022.9481:
+ENSRNOG00000038784,Piezo2,piezo-type mechanosensitive ion channel component 2 
+
+Reference 207:
+Reference 207 (FAISS and BM25) with RRF Score: 2022.9481:
+ENSRNOG00000000718,Cggbp1,CGG triplet repeat binding protein 1 
+
+Reference 208:
+Reference 208 (FAISS and BM25) with RRF Score: 2022.9481:
+ENSRNOG00000024801,Slc35a2,solute carrier family 35 member A2 
+
+Reference 209:
+Reference 209 (FAISS and BM25) with RRF Score: 2022.9481:
+ENSRNOG00000029342,Scn7a,sodium voltage-gated channel alpha subunit 7 
+
+Reference 210:
+Reference 210 (FAISS and BM25) with RRF Score: 2022.9480:
+ENSRNOG00000001681,Vps26c,VPS26 endosomal protein sorting factor C 
+
+Reference 211:
+Reference 211 (FAISS and BM25) with RRF Score: 2022.9479:
+ENSRNOG00000027230,Fhod3,formin homology 2 domain containing 3 
+
+Reference 212:
+Reference 212 (FAISS and BM25) with RRF Score: 2022.9478:
+ENSRNOG00000031222,Magec2l1,MAGE family member C2 like 1 
+
+Reference 213:
+Reference 213 (FAISS and BM25) with RRF Score: 2022.9478:
+ENSRNOG00000011981,Slc39a13,solute carrier family 39 member 13 
+
+Reference 214:
+Reference 214 (FAISS and BM25) with RRF Score: 2022.9282:
+ENSRNOG00000017146,Nfatc1,nuclear factor of activated T-cells 1 
+
+Reference 215:
+Reference 215 (FAISS and BM25) with RRF Score: 2022.9282:
+ENSRNOG00000005733,Cpsf2,cleavage and polyadenylation specific factor 2 
+
+Reference 216:
+Reference 216 (FAISS and BM25) with RRF Score: 2022.9280:
+ENSRNOG00000056184,Lrp2,LDL receptor related protein 2 
+
+Reference 217:
+Reference 217 (FAISS and BM25) with RRF Score: 2022.9280:
+ENSRNOG00000054286,Rrm2,ribonucleotide reductase regulatory subunit M2 
+
+Reference 218:
+Reference 218 (FAISS and BM25) with RRF Score: 2022.9277:
+ENSRNOG00000011994,Perp,p53 apoptosis effector related to PMP22 
+
+Reference 219:
+Reference 219 (FAISS and BM25) with RRF Score: 2022.9277:
+ENSRNOG00000021919,Rhoj,ras homolog family member J 
+
+Reference 220:
+Reference 220 (FAISS and BM25) with RRF Score: 2022.9276:
+ENSRNOG00000021318,Epas1,endothelial PAS domain protein 1 
+
+Reference 221:
+Reference 221 (FAISS and BM25) with RRF Score: 2022.9053:
+ENSRNOG00000002275,Fip1l1,factor interacting with PAPOLA and CPSF1 
+
+Reference 222:
+Reference 222 (FAISS and BM25) with RRF Score: 2022.9051:
+ENSRNOG00000003745,Atf3,activating transcription factor 3 
+
+Reference 223:
+Reference 223 (FAISS and BM25) with RRF Score: 2022.9050:
+ENSRNOG00000037436,Macc1,MET transcriptional regulator MACC1 
+
+Reference 224:
+Reference 224 (FAISS and BM25) with RRF Score: 2022.7246:
+ENSRNOG00000000503,Ppard,peroxisome proliferator-activated receptor delta 
+
+Reference 225:
+Reference 225 (FAISS and BM25) with RRF Score: 2022.6234:
+ENSRNOG00000000805,Gja1,"gap junction protein, alpha 1" 
+
+Reference 226:
+Reference 226 (FAISS and BM25) with RRF Score: 2022.6233:
+ENSRNOG00000058039,Acta2,"actin alpha 2, smooth muscle" 
+
+Reference 227:
+Reference 227 (FAISS and BM25) with RRF Score: 2022.6232:
+ENSRNOG00000008615,Mal2,"mal, T-cell differentiation protein 2" 
+
+Reference 228:
+Reference 228 (FAISS and BM25) with RRF Score: 2022.6232:
+ENSRNOG00000057096,Gnai1,G protein subunit alpha i1 
+
+Reference 229:
+Reference 229 (FAISS and BM25) with RRF Score: 2022.6230:
+ENSRNOG00000010121,Lef1,lymphoid enhancer binding factor 1 
+
+Reference 230:
+Reference 230 (FAISS and BM25) with RRF Score: 2022.5078:
+ENSRNOG00000007258,Sbspon,"somatomedin B and thrombospondin, type 1 domain containing" 
+
+Reference 231:
+Reference 231 (FAISS and BM25) with RRF Score: 2022.5078:
+ENSRNOG00000001730,Acap2,"ArfGAP with coiled-coil, ankyrin repeat and PH domains 2" 
+
+Reference 232:
+Reference 232 (FAISS and BM25) with RRF Score: 2022.5077:
+ENSRNOG00000002171,Phldb2,"pleckstrin homology-like domain, family B, member 2" 
+
+Reference 233:
+Reference 233 (FAISS and BM25) with RRF Score: 2022.5076:
+ENSRNOG00000016368,Ppp1r14c,"protein phosphatase 1, regulatory (inhibitor) subunit 14c" 
+
+Reference 234:
+Reference 234 (FAISS and BM25) with RRF Score: 2022.5076:
+ENSRNOG00000018019,Hspa12a,heat shock protein family A (Hsp70) member 12A 
+
+Reference 235:
+Reference 235 (FAISS and BM25) with RRF Score: 2022.5076:
+ENSRNOG00000025443,Map1lc3a,microtubule-associated protein 1 light chain 3 alpha 
+
+Reference 236:
+Reference 236 (FAISS and BM25) with RRF Score: 2022.5076:
+ENSRNOG00000037080,Adamts17,"ADAM metallopeptidase with thrombospondin type 1 motif, 17" 
+
+Reference 237:
+Reference 237 (FAISS and BM25) with RRF Score: 2022.5073:
+ENSRNOG00000020587,Efemp2,EGF containing fibulin extracellular matrix protein 2 
+
+Reference 238:
+Reference 238 (FAISS and BM25) with RRF Score: 2022.4604:
+ENSRNOG00000026008,Gtf2e1,general transcription factor IIE subunit 1 
+
+Reference 239:
+Reference 239 (FAISS and BM25) with RRF Score: 2022.4604:
+ENSRNOG00000052498,Grb14,growth factor receptor bound protein 14 
+
+Reference 240:
+Reference 240 (FAISS and BM25) with RRF Score: 2022.4603:
+ENSRNOG00000009605,Tfe3,transcription factor binding to IGHM enhancer 3 
+
+Reference 241:
+Reference 241 (FAISS and BM25) with RRF Score: 2022.1753:
+ENSRNOG00000023148,Col11a1,collagen type XI alpha 1 chain 
+
+Reference 242:
+Reference 242 (FAISS and BM25) with RRF Score: 2022.1750:
+ENSRNOG00000028594,Ifnar1,interferon alpha and beta receptor subunit 1 
+
+Reference 243:
+Reference 243 (FAISS and BM25) with RRF Score: 2022.1175:
+ENSRNOG00000058733,Asap1,"ArfGAP with SH3 domain, ankyrin repeat and PH domain 1" 
+
+Reference 244:
+Reference 244 (FAISS and BM25) with RRF Score: 2022.1174:
+ENSRNOG00000008788,Pals1,"protein associated with LIN7 1, MAGUK p55 family member" 
+
+Reference 245:
+Reference 245 (FAISS and BM25) with RRF Score: 2022.1174:
+ENSRNOG00000033090,Ltbp1,latent transforming growth factor beta binding protein 1 
+
+Reference 246:
+Reference 246 (FAISS and BM25) with RRF Score: 2022.1173:
+ENSRNOG00000032798,Slco3a1,"solute carrier organic anion transporter family, member 3a1" 
+
+Reference 247:
+Reference 247 (FAISS and BM25) with RRF Score: 2022.1172:
+ENSRNOG00000025946,Igf2bp2,insulin-like growth factor 2 mRNA binding protein 2 
+
+Reference 248:
+Reference 248 (FAISS and BM25) with RRF Score: 2022.0494:
+ENSRNOG00000001662,Dyrk1a,dual specificity tyrosine phosphorylation regulated kinase 1A 
+
+Reference 249:
+Reference 249 (FAISS and BM25) with RRF Score: 2022.0493:
+ENSRNOG00000001719,Psmd2,"proteasome 26S subunit ubiquitin receptor, non-ATPase 2" 
+
+Reference 250:
+Reference 250 (FAISS and BM25) with RRF Score: 2022.0491:
+ENSRNOG00000068001,Abcb4,ATP binding cassette subfamily B member 4 
 

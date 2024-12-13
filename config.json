@@ -1,5 +1,5 @@
-{   "regex_note": "(?<!\\n)\\n(?=[A-Za-z0-9]) ",
-    "query": "In what pathways are the following genes, originating from a rat, involved: ABCB4, BCL2L1, CAV1, CD9, CERS5, EGLN1, FABP5, FXR/RXRα/FXR ligand/retinoic acid, ILF3, LDLR, mir-148 (includes others), MYC, NGF, PLTP, PTEN, Scd1, TLR3, VLDLR",
+{   "regex_note": "(?<!\\n)\\n(?=[A-Za-z0-9])",
+    "query": "In what pathways are the following genes, originating from a rat, involved: ",
     "number_of_expansions": 0,
     "batch_size": 64,
     "model": "michiyasunaga/BioLinkBERT-large",
