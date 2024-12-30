@@ -434,54 +434,82 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     return top_ids, top_scores, detailed_scores
 
 
-def process_excel_data(excel_file_path, de_filter_option):
+def process_excel_data(excel_file_path, de_filter_option, test):
     # Load Excel file
     data = pd.read_excel(excel_file_path)
     results = []
-    increment = 50
-    end_row = 50
     fdr_threshold = 0.00008802967327
-    if de_filter_option == "combined":
-        data = data[data['DE'] != 0]
 
-        while end_row <= len(data):
-            subset = data.iloc[:end_row]
+    if not test:
+        max_genes = 250
+        data = data.iloc[:max_genes]
 
-            if subset['FDR'].max() > fdr_threshold:
-                break
+        if de_filter_option == "combined":
+            data = data[data['DE'] != 0]
+            if data['FDR'].max() <= fdr_threshold:
+                genes_list = data['X'].tolist()
+                num_genes = len(genes_list)
+                unique_de_values = data['DE'].unique()
 
-            genes_list = subset['X'].tolist()
-            num_genes = len(genes_list)
-            unique_de_values = subset['DE'].unique()
+                regulation = (
+                    "upregulated" if len(unique_de_values) == 1 and unique_de_values[0] == 1 else
+                    "downregulated" if len(unique_de_values) == 1 else
+                    "combined"
+                )
+                results.append((', '.join(genes_list), regulation, num_genes))
 
-            if len(unique_de_values) == 1:
-                if unique_de_values[0] == 1:
-                    regulation = "upregulated"
-                else:
-                    regulation = "downregulated"
-            else:
-                regulation = "combined"
+        elif de_filter_option == "separate":
+            for de_value, regulation in [(1, "upregulated"), (-1, "downregulated")]:
+                filtered_data = data[data['DE'] == de_value]
+                if filtered_data['FDR'].max() <= fdr_threshold:
+                    genes_list = filtered_data['X'].tolist()
+                    num_genes = len(genes_list)
+                    results.append((', '.join(genes_list), regulation, num_genes))
 
-            results.append((", ".join(genes_list), regulation, num_genes))
-            end_row += increment
+        else:
+            raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
 
-    elif de_filter_option == "separate":
-        for de_value, regulation in [(1, "upregulated"), (-1, "downregulated")]:
-            filtered_data = data[data['DE'] == de_value]
+    else:
+        max_genes = len(data)
+        increment = 50
+        end_row = min(increment, max_genes)
 
-            while end_row <= len(filtered_data):
-                subset = filtered_data.iloc[:end_row]
-
+        if de_filter_option == "combined":
+            data = data[data['DE'] != 0]
+            while end_row <= max_genes:
+                subset = data.iloc[:end_row]
                 if subset['FDR'].max() > fdr_threshold:
                     break
 
                 genes_list = subset['X'].tolist()
                 num_genes = len(genes_list)
-                results.append((", ".join(genes_list), regulation, num_genes))
+                unique_de_values = subset['DE'].unique()
+
+                regulation = (
+                    "upregulated" if len(unique_de_values) == 1 and unique_de_values[0] == 1 else
+                    "downregulated" if len(unique_de_values) == 1 else
+                    "combined"
+                )
+                results.append((', '.join(genes_list), regulation, num_genes))
                 end_row += increment
 
-    else:
-        raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
+        elif de_filter_option == "separate":
+            for de_value, regulation in [(1, "upregulated"), (-1, "downregulated")]:
+                filtered_data = data[data['DE'] == de_value]
+                end_row = min(increment, len(filtered_data), max_genes)
+
+                while end_row <= max_genes:
+                    subset = filtered_data.iloc[:end_row]
+                    if subset['FDR'].max() > fdr_threshold:
+                        break
+
+                    genes_list = subset['X'].tolist()
+                    num_genes = len(genes_list)
+                    results.append((', '.join(genes_list), regulation, num_genes))
+                    end_row += increment
+
+        else:
+            raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
 
     return results
 
@@ -490,13 +518,11 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
                                                    conn, index, tokenizer, model,
                                                    bm25, bm25_chunk_ids, bm25_chunk_texts,
                                                    weight_faiss, weight_bm25,
-                                                   system_instruction_response):
+                                                   system_instruction_response, test=False):
     excel_file_path = r".\Data\Kees\PMP22_VS_WT.xlsx"
     de_filter_option = "combined"
 
-    # Process Excel data
-    results = process_excel_data(excel_file_path, de_filter_option)
-
+    results = process_excel_data(excel_file_path, de_filter_option, test)
     openai_model = "gpt-4o"
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -506,7 +532,6 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
 
         print(f"Number of genes: {num_genes}")
 
-        # First, handle query expansion and retrieval to get the correct references
         expanded_queries = query_expansion(batch_query_text, number=number_of_expansions)[1:]
         expanded_queries.append(batch_query_text)
 
@@ -518,11 +543,9 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
             rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=amount_docs
         )
 
-        # Verify we got the correct amount of documents
         if len(retrieved_chunks_ordered) < amount_docs:
             print(f"Warning: Retrieved only {len(retrieved_chunks_ordered)} documents but expected {amount_docs}.")
 
-        # Update document_references with the retrieved documents for the current batch
         document_references = [
             (
                 f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) with RRF Score:"
@@ -531,77 +554,37 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
             for doc_id, chunk_text in zip(combined_docs.keys(), retrieved_chunks_ordered)
         ]
 
-        # Now we have the correct references, proceed with generating GPT-4 answers
         system_instruction = system_instruction_response
-        testing = True
         combined_documents = "\n\n".join(document_references)
 
-        if testing:
-            test_list = [True, False]
-            range_limit = 1
-        else:
-            test_list = [True]
-            range_limit = 1
+        prompt = (
+            f"Based on the following documents, answer the question using both your knowledge and the provided "
+            f"documents: {batch_query_text}\n\nDocuments:\n{combined_documents}\n"
+        )
 
-        for test_status in test_list:
-            for i in range(1, range_limit + 1):
-                if test_status:
-                    prompt = (
-                        f"Based on the following documents, answer the question using both your knowledge and the "
-                        f"provided documents: {batch_query_text}\n\nDocuments:\n"
-                        f"{combined_documents}\n"
-                    )
-                else:
-                    prompt = f"Answer the question based on your knowledge: {batch_query_text}"
+        messages = [
+            {"role": "system", "content": system_instruction},
+            {"role": "user", "content": prompt}
+        ]
 
-                if openai_model in ["o1-preview", "o1-mini"]:
-                    adjusted_prompt = system_instruction + prompt
-                    messages = [{"role": "user", "content": adjusted_prompt}]
-                else:
-                    messages = [
-                        {"role": "system", "content": system_instruction},
-                        {"role": "user", "content": prompt}
-                    ]
+        try:
+            response = client.chat.completions.create(
+                model=openai_model,
+                messages=messages,
+                max_tokens=16384,
+                temperature=0
+            )
+            answer = response.choices[0].message.content
+        except Exception as e:
+            print(f"An error occurred while generating the GPT-4 response: {e}")
+            continue
 
-                try:
-                    start_time = time.time()
-                    if openai_model in ["o1-preview", "o1-mini"]:
-                        response = client.chat.completions.create(
-                            model=openai_model,
-                            messages=messages,
-                            max_completion_tokens=5000
-                        )
-                    else:
-                        response = client.chat.completions.create(
-                            model=openai_model,
-                            messages=messages,
-                            max_tokens=16384,
-                            temperature=0
-                        )
-                    end_time = time.time()
-                    time_taken = end_time - start_time
-                except Exception as e:
-                    print(f"An error occurred while generating the GPT-4 response: {e}")
-                    continue
+        filename = f"test_files/answer_{num_genes}_genes_{regulation}.txt"
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(answer)
+        print(f"Answer saved to {filename}")
 
-                try:
-                    answer = response.choices[0].message.content
-                except (AttributeError, IndexError) as e:
-                    print(f"Unexpected response structure: {response}")
-                    print(f"Error: {e}")
-                    continue
-
-                test_label = "with_ref" if test_status else "without_ref"
-                filename = f"test_files/answer_{test_label}_{num_genes}_genes_{regulation}_{time_taken:.0f}_secs.txt"
-
-                with open(filename, "w", encoding="utf-8") as file:
-                    file.write(answer)
-
-                print(f"Answer saved to {filename}")
-
-    #quit()  # If you need to stop execution, otherwise comment this out.
-    #answer = "No final answer generated."
-    return answer
+    return "Processing complete."
 
 
 @timer

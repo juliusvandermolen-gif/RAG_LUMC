@@ -5,47 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/converted_wikipathways_synonyms_Rattus_norvegicus.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/100_genes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/100_wiki.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/rat_genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/wikipathways_synonyms_Homo_sapiens.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/converted_medium_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/converted_small_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/medium_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/msmall_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/rat_genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/small_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/output/converted_wikipathways_with_synonyms-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/output/genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/rat_genes_consolidated.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/rat_genes_consolidated.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/test/geneless_wikipathway.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/converted_wikipathways-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/to_be_converted/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/mart_export_2.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/reordered_mart_export_2.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/wikipathways-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Rattus_norvegicus.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Rattus_norvegicus.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Explore different ways of including.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Explore different ways of including.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bm25_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bm25_score.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faiss_score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/faiss_score.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/file_log/file_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gene_synonym.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gene_synonym.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semantic_index.faiss/index.faiss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semantic_index.faiss/index.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_With_ref_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/answer_Without_ref_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_Without_ref_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,20 +109,9 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-03dcfb7637b1-fab4200a9dfa-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-243.21565.247" />
+        <option value="bundled-python-sdk-559ba0cadc45-1e0160e1c7f0-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-241.15989.62" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RAG_workflow.py</url>
-          <line>708</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>
