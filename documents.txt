@@ -1,4 +1,76 @@
 Reference 1:
-Reference 1 (FAISS and BM25) with RRF Score: 0.0023:
-ENSRNOG00000003066,Wnt9a,Wnt family member 9A 
+Reference 1 (FAISS and BM25) with RRF Score: 17.8656:
+After the measurement, supernatant from the cells was removed and the cells were ﬁxed by addition of 100 mL 3.7%
+PFA (Merck) for 10 min at RT and air dried. Subsequently, the cells were stained using 0.1% crystal violet (Sigma) solution (in20% Ethanol). For quantiﬁcation, stained plates were incubated with 200 ml of 10% acetic acid per well with shaking for 15 min
+and the resulting solution was analyzed in a plate reader (Multiskan Ascent from Thermo labsystems) at 550 nm and the values
+were used for normalization of the seahorse data. QUANTIFICATION AND STATISTICAL ANALYSIS
+We performed power calculations based on our prior knowledge of variation in tumor latency, frequency, and progression. Thus, we
+used the minimal number of mice sufﬁcient to detect the effect of interest and obtain reproducible, statistically signiﬁcant, and bio-
+logically meaningful results. For example, we expected a two-fold difference in mean (M) tumor size in transgenic models between
+two groups, with a standard deviation (SD) of less than 50%. 
+
+Reference 2:
+Reference 2 (FAISS and BM25) with RRF Score: 15.8538:
+Lipid meta-
+bolism is frequently disrupted in cancers, but the underlying basis is unclear. A multi-institution team of researchers inves-tigated the metabolism of cancers driven by MYC, one of the most powerful oncogenes. Using a highly sensitive imagingapproach called desorption electrospray ionization mass spectrometry, the tissue metabolism of MYC-cancer models
+and MYC-driven human cancers was measured in situ . The team found comprehensive evidence that MYC, in collaboration
+with DNA transcription factor SREBP1, regulates the production of lipids, and that this is necessary to both initiate and sus-tain cancer formation. Therefore, blocking lipid production may be a promising therapeutic strategy to combat MYC-drivencancers. 556 Cell Metabolism 30, 556–572, September 3, 2019 ª2019 Elsevier Inc.
+cells need building blocks for new membranes, which can be
+assembled either from exogenous lipids or via endogenous
+de novo lipogenesis. Whether lipogenesis is regulated solely by
+MYC or collaboratively with other factors is not known. 
+
+Reference 3:
+Reference 3 (FAISS and BM25) with RRF Score: 14.2906:
+This is consistent with the promoter-binding
+data from ChIP-seq in BCL ( Figures S5 A and S5B). Hence,
+MYC regulates genes that increase the production and incorpo-ration of long unsaturated FAs. MYC Alters Glycerophosphatidylinositol Metabolism in a
+Tissue-Dependent MannerNotably, MYC has tissue-speciﬁc effects on glycerophosphati-
+dylinositol (PI) metabolism. Thus, in RCC and T-ALL, MYC
+reversibly decreased PIs, but in LC and HCC MYC ratherincreased these phospholipids as measured by DESI-MSI ( Fig-
+ures 5 A and S5C; for tissue H&E staining, Figure S4 B; for fold
+change, Figure S5 D). PIs have inositol as the phosphate group
+substituent, and they are competitively synthesized with PGs
+from the common CDP-DAG pool ( Figure 6 A) (Batenburg et al.,
+1985; Liu et al., 2014; Quirk et al., 1984 ). Signiﬁcant PGS1 and
+PTPMT1 induction may preferentially promote CDP-DAG con-
+version to PGs, which could then shunt metabolites away from
+PI synthesis. One explanation is that MYC increases PIs in LCbecause of lung surfactants that are rich in both PGs and PIs(Agassandian and Mallampalli, 2013; Fickes et al., 2016; Griese
+et al., 1991 ). 
+
+Reference 4:
+Reference 4 (FAISS and BM25) with RRF Score: 13.9206:
+In
+addition, PS has a strong stimulatory e ﬀect on the activity of the ER-
+localized Sac1 phosphatase [ 54]. The consequence of this regulation is
+that excess PS production, as in the case in the Lenz-Majewski PSS1mutations, stimulates Sac1 activity and therefore a ﬀects the PI4P gra-
+dient across all ER contact sites causing secondary alterations in thetransport of other lipids that rely upon the PI4P-drivenT. Balla, et al. BBA - Molecular and Cell Biology of Lipids 1865 (2020) 158461
+4
+countertransport mechanism [ 12]. The fact that PI4P can be removed from the PM by ORP5 and ORP8
+has important implications to the production of the PI(4,5)P 2within the
+PM, for which PI4P also serves as a precursor. The fact that PM re-
+cruitment of the N-terminal PH domain and adjacent polybasic motifs
+of ORP5 and ORP8 relies on the levels of both PI4P and PI(4,5)P 2in the
+PM ensures that when PI4P or PI(4,5)P 2levels are low, these LTPs cease
+working. Alternatively, when PI(4,5)P 2levels are increasing, ORP8
+joins ORP5 and by delivering more PI4P to the ER, they limit theamount of PI4P available for PI(4,5)P
+2production [ 55]. 
+
+Reference 5:
+Reference 5 (FAISS and BM25) with RRF Score: 13.7687:
+INTRODUCTION
+The MYC oncogene is often activated and/or overexpressed in
+cancers ( Baudino and Cleveland, 2001; Cawley et al., 2004;
+Dang, 2012; Fernandez et al., 2003; Kalkat et al., 2017; Kolket al., 2009; Wang et al., 1999 ). The MYC transcription factor di-
+merizes with MAX, binds to DNA, ampliﬁes gene expression
+genome-wide, and regulates multiple cellular programs,including proliferation, metabolism, self-renewal, angiogenesis,
+and immune evasion ( Blackwood et al., 1992; Casey et al.,
+2018; Dang et al., 2006; Grieb et al., 2016; McMahon, 2014 ). Experimentally, MYC inactivation regresses tumors ( Casey
+et al., 2018; Gabay et al., 2014; Shroff et al., 2015 ); however,
+there are still no therapies that target MYC directly. MYC has
+been shown to generally regulate glycolysis and glutaminolysis,which are required for energy production and macromolecular
+synthesis ( Dang, 2012; Wahlstro ¨m and Henriksson, 2015;
+Wang et al., 2011; Wise et al., 2008 ). MYC-stimulated growing
+Context and Signiﬁcance
+Discoveries about the metabolic requirements of cancer cells can lead to the development of new therapies. 
 

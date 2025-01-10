@@ -19,9 +19,22 @@ import functools
 import nltk
 from nltk.corpus import stopwords
 import string
+from PyPDF2 import PdfReader
+from langchain.docstore.document import Document
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+import json
+from nltk.tokenize import sent_tokenize
+from langchain.docstore.document import Document
+from langchain_huggingface import HuggingFaceEmbeddings
 
+from sklearn.cluster import KMeans
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+os.environ["OMP_NUM_THREADS"] = "8"
+
+
+
+
 
 import torch
 
@@ -36,6 +49,7 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.
 with open('config.json', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
+nltk.download('punkt_tab')
 query = config["query"]
 number_of_expansions = config["number_of_expansions"]
 batch_size = config["batch_size"]
@@ -231,6 +245,35 @@ def load_gz_files(data_dir='./Data/biomart'):
 
 
 @timer
+def load_pdf_files(pdf_dir='./Data/PDF'):
+    pdf_documents = []
+    if not os.path.exists(pdf_dir):
+        print(f"No PDF directory found at '{pdf_dir}'. Skipping PDF import.")
+        return pdf_documents
+
+    for file in os.listdir(pdf_dir):
+        if file.lower().endswith('.pdf'):
+            file_path = os.path.join(pdf_dir, file)
+            file_hash = compute_file_hash(file_path)
+            try:
+                reader = PdfReader(file_path)
+                pages_text = []
+                for page in reader.pages:
+                    pages_text.append(page.extract_text() or "")
+                # Combine all page text
+                content = "\n".join(pages_text).strip()
+                if content:
+                    pdf_documents.append((file, content, file_hash))
+                    print(
+                        f"Loaded PDF '{file}' with {len(pages_text)} pages. Document length: {len(content)} characters.")
+                else:
+                    print(f"Skipped empty PDF '{file}'.")
+            except Exception as e:
+                print(f"Failed to read PDF '{file}': {e}")
+
+    return pdf_documents
+
+@timer
 def chunk_documents(documents):
     if not documents:
         print("No documents to chunk. Returning an empty list.")
@@ -249,18 +292,68 @@ def chunk_documents(documents):
         f"Total number of chunks: {len(chunked_docs)} (should match line count)")
     return chunked_docs
 
+def chunk_pdfs(single_document, gene_list=None, target_length=1000):
+    """
+    Splits a PDF document into chunks based on sentence boundaries
+    and a target character length. Optionally filters chunks by gene_list.
+    """
+    file_name, content, file_hash = single_document[0]
+    sentences = sent_tokenize(content)
+    if not sentences:
+        return []
+
+    chunks = []
+    current_chunk = []
+    current_length = 0
+
+    for sentence in sentences:
+        current_chunk.append(sentence)
+        current_length += len(sentence)
+
+        # If the current chunk has reached the target length, finalize it.
+        if current_length >= target_length:
+            chunk_text = " ".join(current_chunk)
+            # If gene_list is provided, check if the chunk contains any gene.
+            print(gene_list)
+            if not gene_list or any(gene in chunk_text for gene in gene_list):
+                chunks.append(chunk_text)
+            current_chunk = []
+            current_length = 0
+
+    # Add any remaining sentences as the last chunk.
+    if current_chunk:
+        chunk_text = " ".join(current_chunk)
+        if not gene_list or any(gene in chunk_text for gene in gene_list):
+            chunks.append(chunk_text)
+
+    return chunks
+
+
+
+
 
 @timer
 def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
-                    batch_size=batch_size, log_path='./file_log/file_log.json'):
+                    batch_size=batch_size, log_path='./file_log/file_log.json',
+                    pdf_dir='./Data/PDF'):  # <-- Add pdf_dir argument here
     file_log = load_file_log(log_path=log_path)
+
+    # -- Existing code for gz/txt files --
     files_documents = load_gz_files(data_dir=data_dir)
     print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
+
+    # -- Add this block to handle PDF files --
+    pdf_documents = load_pdf_files(pdf_dir=pdf_dir)
+    print(f"Loaded {len(pdf_documents)} PDF documents from '{pdf_dir}'.")
+
+    # Combine all documents into one list to process
+    all_documents = files_documents + pdf_documents
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.to(device)
     model.eval()
-    for file, document, file_hash in files_documents:
+
+    for file, document, file_hash in all_documents:
         if file in file_log and file_log[file]['hash'] == file_hash:
             continue
         else:
@@ -271,11 +364,15 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
             print(f"No lines found in file '{file}'. Skipping embedding.")
             continue
 
-        data_lines = lines[1:] if file.endswith('txt.gz') else lines
+        # If it's a PDF, chunk differently if desired:
+        if file.lower().endswith('.pdf'):
+            chunks = chunk_pdfs([(file, document, file_hash)])
 
-        document_content = "\n".join(data_lines)
 
-        chunks = chunk_documents([document_content])
+        else:
+            document_content = "\n".join(lines[1:]) if file.endswith('txt.gz') else "\n".join(lines)
+            chunks = chunk_documents([document_content])
+
         if not chunks:
             print(f"No chunks created for file '{file}'. Skipping embedding.")
             continue
@@ -285,7 +382,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
 
         with torch.no_grad():
             for i in tqdm(range(0, len(chunks), batch_size),
-                          desc="Processing chunks in batches"):
+                          desc=f"Processing {file} in batches"):
                 batch = chunks[i:i + batch_size]
                 inputs = tokenizer(batch, return_tensors="pt", truncation=True,
                                    padding=True, max_length=512).to(device)
@@ -528,7 +625,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
 
     for items_string, regulation, num_genes in results:
         batch_query_text = query_text + f" {items_string}"
-        amount_docs = num_genes  # Retrieve exactly one document per gene
+        amount_docs = 10  # Retrieve exactly one document per gene
 
         print(f"Number of genes: {num_genes}")
 
@@ -578,7 +675,6 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
         except Exception as e:
             print(f"An error occurred while generating the GPT-4 response: {e}")
             continue
-
         filename = f"test_files/answer_{num_genes}_genes_{regulation}.txt"
         with open(filename, "w", encoding="utf-8") as file:
             file.write(answer)

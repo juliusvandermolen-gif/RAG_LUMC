@@ -1,10 +1,10 @@
 {
-    "rat_genes_consolidated.txt.gz": {
-        "hash": "f417b2955c905a972f1d489e9578d03bac0441e31f519e50310f8f2c67fe09ad",
-        "num_embeddings": 30562
+    "1-s2.0-S1388198119300757-main.pdf": {
+        "hash": "41ab6fa5529cd55a4e48257e21a60082479c7a08c3d1c1f923b828f838cb643b",
+        "num_embeddings": 50
     },
-    "wikipathways_synonyms_Rattus_norvegicus.gmt.gz": {
-        "hash": "d3e15d55a83ee50f1254166bd55b661d40e4208c9d91bd3d61ca49a1f1e34a97",
-        "num_embeddings": 129
+    "1-s2.0-S1550413119303857-main.pdf": {
+        "hash": "352e3bcef53833db9e0272a744403c010729a1f53ccec7886d7f0d69593c984d",
+        "num_embeddings": 82
     }
 }
