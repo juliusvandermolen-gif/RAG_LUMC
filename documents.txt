@@ -1,76 +1,174 @@
 Reference 1:
-Reference 1 (FAISS and BM25) with RRF Score: 17.8656:
-After the measurement, supernatant from the cells was removed and the cells were ﬁxed by addition of 100 mL 3.7%
-PFA (Merck) for 10 min at RT and air dried. Subsequently, the cells were stained using 0.1% crystal violet (Sigma) solution (in20% Ethanol). For quantiﬁcation, stained plates were incubated with 200 ml of 10% acetic acid per well with shaking for 15 min
-and the resulting solution was analyzed in a plate reader (Multiskan Ascent from Thermo labsystems) at 550 nm and the values
-were used for normalization of the seahorse data. QUANTIFICATION AND STATISTICAL ANALYSIS
-We performed power calculations based on our prior knowledge of variation in tumor latency, frequency, and progression. Thus, we
-used the minimal number of mice sufﬁcient to detect the effect of interest and obtain reproducible, statistically signiﬁcant, and bio-
-logically meaningful results. For example, we expected a two-fold difference in mean (M) tumor size in transgenic models between
-two groups, with a standard deviation (SD) of less than 50%. 
+Reference 1 (FAISS and BM25) with RRF Score: 549.1967:
+However, it is still not clear
+whether tethering proteins only form the molecular architecture of
+membrane contact sites or if they also play direct role(s) in the lipid-
+transfer process. Tethering proteins that have SMP domains possess the
+structural features that could serve as hydrophobic lipid tunnels brid-
+ging the aqueous phase between two membranes but do not explain
+how speci ﬁcity of lipid transport can be achieved. The recent devel-
+opments pointing to the importance of PI4P gradients in driving manynon-vesicular lipid transport processes raise the question of how gen-
+eral this principle is among the various LTPs. Additionally, even for
+LTPs with deﬁ ned lipid-binding pockets, there are still outstanding
+questions concerning cargo speci ﬁcity and many LTPs may be more
+promiscuous in their selection of lipid cargoes than currently believed. In fact, it is becoming apparent that the local composition of the
+membranes between which LTPs operate may ultimately determine
+what lipid transport processes they support. 
 
 Reference 2:
-Reference 2 (FAISS and BM25) with RRF Score: 15.8538:
-Lipid meta-
-bolism is frequently disrupted in cancers, but the underlying basis is unclear. A multi-institution team of researchers inves-tigated the metabolism of cancers driven by MYC, one of the most powerful oncogenes. Using a highly sensitive imagingapproach called desorption electrospray ionization mass spectrometry, the tissue metabolism of MYC-cancer models
-and MYC-driven human cancers was measured in situ . The team found comprehensive evidence that MYC, in collaboration
-with DNA transcription factor SREBP1, regulates the production of lipids, and that this is necessary to both initiate and sus-tain cancer formation. Therefore, blocking lipid production may be a promising therapeutic strategy to combat MYC-drivencancers. 556 Cell Metabolism 30, 556–572, September 3, 2019 ª2019 Elsevier Inc.
-cells need building blocks for new membranes, which can be
-assembled either from exogenous lipids or via endogenous
-de novo lipogenesis. Whether lipogenesis is regulated solely by
-MYC or collaboratively with other factors is not known. 
+Reference 2 (FAISS and BM25) with RRF Score: 444.7335:
+3. Lipid transport is critical for the control of lipid synthesis
+The picture that emerges from the above examples is that the
+synthesis of phospholipids must be tightly coupled to the transportprocesses that prevent accumulation of the lipid products at the site of
+synthesis. It is entirely possible, that the activity of lipid synthesizing
+enzymes were found highest in membrane preparations that contained
+contact sites, because the lipid products can be moved away from the
+ER in such preparations. Lipids can be transported out from the ER by
+lipid transfer proteins (LTPs) that often, although not always, function
+at membrane contact sites. Alternatively, lipids can also leave the ER by
+vesicular transport in the form of complete budded membranes. Non-
+vesicular lipid transport is much more selective than bulk membrane
+transport and has received an immense amount of attention in recent
+years. 3.1. Non-vesicular lipid transport at membrane contact sites
+Several excellent recent reviews have covered non-vesicular trans-
+port extensively [ 11,42,43]. 
 
 Reference 3:
-Reference 3 (FAISS and BM25) with RRF Score: 14.2906:
-This is consistent with the promoter-binding
-data from ChIP-seq in BCL ( Figures S5 A and S5B). Hence,
-MYC regulates genes that increase the production and incorpo-ration of long unsaturated FAs. MYC Alters Glycerophosphatidylinositol Metabolism in a
-Tissue-Dependent MannerNotably, MYC has tissue-speciﬁc effects on glycerophosphati-
-dylinositol (PI) metabolism. Thus, in RCC and T-ALL, MYC
-reversibly decreased PIs, but in LC and HCC MYC ratherincreased these phospholipids as measured by DESI-MSI ( Fig-
-ures 5 A and S5C; for tissue H&E staining, Figure S4 B; for fold
-change, Figure S5 D). PIs have inositol as the phosphate group
-substituent, and they are competitively synthesized with PGs
-from the common CDP-DAG pool ( Figure 6 A) (Batenburg et al.,
-1985; Liu et al., 2014; Quirk et al., 1984 ). Signiﬁcant PGS1 and
-PTPMT1 induction may preferentially promote CDP-DAG con-
-version to PGs, which could then shunt metabolites away from
-PI synthesis. One explanation is that MYC increases PIs in LCbecause of lung surfactants that are rich in both PGs and PIs(Agassandian and Mallampalli, 2013; Fickes et al., 2016; Griese
-et al., 1991 ). 
+Reference 3 (FAISS and BM25) with RRF Score: 428.4402:
+Therefore, we will discuss this topic only
+from the standpoint of lipid dynamics at the ER. An early indication
+that phosphoinositide lipids are important for non-vesicular lipid
+transport came from studies that identi ﬁed relatively speci ﬁc binding of
+PI4P to several pleckstrin-homology (PH) domains found within LTPs[44,45]. The connection to PI4P was further established, and the cri-
+tical role of non-vesicular lipid transfer relative to vesicular tra ﬃcking
+was emphasized, by the discovery of the ceramide transfer protein,
+CERT, and its central importance in supplying ceramide from the ER for
+sphingomyelin biosynthesis in the Golgi [ 46]. However, the real
+breakthrough in understanding the importance of PI4P for non-vesi-cular lipid transfer came from the realization that OSBP and its yeast
+orthologue, Osh4/Kes4, use PI4P gradients between the Golgi and ER
+for driving cholesterol export from the ER to Golgi [ 47,48]. This gra-
+dient is set up by phosphatidylinositol 4-kinase (PI4K) beta (PI4KB andPik1 in yeast) on the Golgi side, and perhaps di ﬀerent PI4K, PI4K2A
+functioning in the TGN. 
 
 Reference 4:
-Reference 4 (FAISS and BM25) with RRF Score: 13.9206:
-In
-addition, PS has a strong stimulatory e ﬀect on the activity of the ER-
-localized Sac1 phosphatase [ 54]. The consequence of this regulation is
-that excess PS production, as in the case in the Lenz-Majewski PSS1mutations, stimulates Sac1 activity and therefore a ﬀects the PI4P gra-
-dient across all ER contact sites causing secondary alterations in thetransport of other lipids that rely upon the PI4P-drivenT. Balla, et al. BBA - Molecular and Cell Biology of Lipids 1865 (2020) 158461
-4
-countertransport mechanism [ 12]. The fact that PI4P can be removed from the PM by ORP5 and ORP8
-has important implications to the production of the PI(4,5)P 2within the
-PM, for which PI4P also serves as a precursor. The fact that PM re-
-cruitment of the N-terminal PH domain and adjacent polybasic motifs
-of ORP5 and ORP8 relies on the levels of both PI4P and PI(4,5)P 2in the
-PM ensures that when PI4P or PI(4,5)P 2levels are low, these LTPs cease
-working. Alternatively, when PI(4,5)P 2levels are increasing, ORP8
-joins ORP5 and by delivering more PI4P to the ER, they limit theamount of PI4P available for PI(4,5)P
-2production [ 55]. 
+Reference 4 (FAISS and BM25) with RRF Score: 420.1754:
+The unique localization of the PIS enzyme
+not only in the ER proper but in a highly mobile vesicular structure that
+contacts various membranes, and also spends extended periods (min-
+utes) in repeated contacts with the PM, raised the possibility that PI
+transfer may also take place in more dynamic contact sites between the
+PM and this unique organelle that function in addition to the more
+classical ER-PM contacts discussed above [ 14]. There is a common theme in these examples, namely the close
+connection between all these lipid transport processes and PI or its
+phosphorylated derivatives. The reliance of many lipid transport pro-
+cesses on PI4P gradients really calls for a better understanding of the
+transport pathway(s) responsible for the redistribution of PI between
+membranes. The long-known mammalian PI transfer proteins (PITPs)
+and the Sec14-related proteins in yeast have been the logical candidates
+to fulﬁll this function since they have been shown to be able to trans-
+port PI (and PC) between membranes in vitro. 
 
 Reference 5:
-Reference 5 (FAISS and BM25) with RRF Score: 13.7687:
-INTRODUCTION
-The MYC oncogene is often activated and/or overexpressed in
-cancers ( Baudino and Cleveland, 2001; Cawley et al., 2004;
-Dang, 2012; Fernandez et al., 2003; Kalkat et al., 2017; Kolket al., 2009; Wang et al., 1999 ). The MYC transcription factor di-
-merizes with MAX, binds to DNA, ampliﬁes gene expression
-genome-wide, and regulates multiple cellular programs,including proliferation, metabolism, self-renewal, angiogenesis,
-and immune evasion ( Blackwood et al., 1992; Casey et al.,
-2018; Dang et al., 2006; Grieb et al., 2016; McMahon, 2014 ). Experimentally, MYC inactivation regresses tumors ( Casey
-et al., 2018; Gabay et al., 2014; Shroff et al., 2015 ); however,
-there are still no therapies that target MYC directly. MYC has
-been shown to generally regulate glycolysis and glutaminolysis,which are required for energy production and macromolecular
-synthesis ( Dang, 2012; Wahlstro ¨m and Henriksson, 2015;
-Wang et al., 2011; Wise et al., 2008 ). MYC-stimulated growing
-Context and Signiﬁcance
-Discoveries about the metabolic requirements of cancer cells can lead to the development of new therapies. 
+Reference 5 (FAISS and BM25) with RRF Score: 418.8098:
+As mentioned
+above, recent studies have found that the LTP Nir2 can ful ﬁll both of
+these transport functions [ 27–29] as it is speci ﬁcally recruited to ER-PM
+contact sites during PLC activation [ 57]. Additional mechanisms for PI transfer from the ER to the PM have
+been suggested by studies characterizing TMEM24, which tethers theER to the PM and is important for Ca
+2+signaling as well as insulin
+release from pancreatic beta cells [ 58,59]. TMEM24 has an synapto-
+tagmin-like mitochondrial-lipid-binding (SMP) domain, a characteristicfeature of organelle-tethering proteins that are found in membrane
+contact sites [ 60,61]. SMP domains are thought to act as hydrophobic
+tunnels capable of lipid transport along concentration gradients [ 62]. The SMP domain of TMEM24 was found to deliver PI from the ER to the
+PM during glucose-induced secretion [ 58]. In contrast, the SMP domain
+of the family of extended synaptotagmins (E-Syt1/2/3) appears to beimportant for DG transport from the PM to the ER during high Ca
+2+-
+induced PLC activation [ 63]. 
+
+Reference 6:
+Reference 6 (FAISS and BM25) with RRF Score: 416.6663:
+The im-
+portance of these observations is not clear at present, but they alsoT. Balla, et al. BBA - Molecular and Cell Biology of Lipids 1865 (2020) 158461
+5
+point to the possible role of lyso-lipids and lipid remodeling in mem-
+brane budding processes. 4. Concluding remarks
+The speci ﬁc lipid composition of membranes is critical for de ﬁning
+organelle identity and the proper assembly and function of protein
+complexes that work on those organelles. Lipid synthesis and dis-
+tribution are ﬁne-tuned to maintain the unique lipid composition of
+membranes. The product inhibition characterized in most lipid syn-thesizing enzymes makes lipid transport processes not only important
+for lipid distribution, but also for the dynamic regulation of lipid
+synthesis. Non-vesicular lipid transfer, often con ﬁned to membrane
+contact sites, provides both the speed and speci ﬁcity requisite for the
+intricate control of lipid transport and synthesis. It is also important
+that non-vesicular lipid transport only samples the cytoplasmic lea ﬂet
+of the membrane bilayer, which clearly contrasts vesicular transport,which carries both membrane layers. 
+
+Reference 7:
+Reference 7 (FAISS and BM25) with RRF Score: 415.0870:
+However, it has beenmore di ﬃcult to identify their PI transfer functions in vivo within intact
+cells despite large amount of work devoted to study these proteins. Asalready mentioned, the Class II PITPs, Nir2 and Nir3 (and their ﬂy or-
+thologue, RdgB α) has been identi ﬁed as PA/PI lipid exchangers at ER-
+PM contacts during PLC activation, but it is not clear if that is all that
+these proteins do since Nir2 was also found to be critical for the
+maintenance of DG levels in the Golgi [ 64]. Whether Sec14 or the Class
+I PITPs work as bona ﬁde PI transfer proteins, however, has beenchallenged. It has been suggested that these proteins work by pre-senting PI to speci ﬁc PI kinases [ 65,66] and even function in very
+speciﬁc biological contexts [ 67]. Most lipid transfer proteins work in
+membrane contact sites, but there is no reported enrichment of Class I
+PITPs in such sites, although the TGN localization of PITP β[68] could
+reﬂect localization to ER-Golgi contact sites. It has also been speculated
+that the ER-derived mobile PIS organelle (see above) that makes ample
+contacts with the di ﬀerent membranes may be a way PI is delivered to
+those membranes. 
+
+Reference 8:
+Reference 8 (FAISS and BM25) with RRF Score: 410.5312:
+Importantly, a Sec23-interacting protein (Sec23ip,
+also called p125A), which is also enriched in ER exit sites, is a member
+of a family of three proteins that possess DDHD domains. (DDHD do-
+mains are 180 amino acid protein modules that selectively binds PA and
+can also be found in the lipid transfer proteins, Nir2/3 [ 57]). The other
+two proteins of this family, DDHD1 and DDHD2 are phospholipase A1(PLA) enzymes capable of generating lyso-PI and lyso-PA, respectively
+(PLA activity has not been demonstrated for Sec23ip/p125 [ 74]. That
+said, Sec23ip/p125 was found to be important in the functional as-sembly of ER exit sites [ 75,76] and was shown to depend on both PA
+and PI4P [ 77]. Sar1 was also shown to promote the local generation of
+PI4P, a lipid that promoted Sar1-induced membrane constriction and
+COPII assembly in an in vitro ER-budding assay, presumably through
+the activity of one class of the four PI 4-kinases (PI4Ks), namely the type
+II PI4Ks [ 73]. Another report found that the number of ER exit sites was
+decreased in cells depleted in another PI4K, the type III PI4K, PI4KA[78], although this e ﬀect could be secondary as many changes to cel-
+lular lipid levels have been shown to follow PI4KA depletion [ 79]. 
+
+Reference 9:
+Reference 9 (FAISS and BM25) with RRF Score: 410.4394:
+Since no membrane fusion has been detected be-tween the PIS organelle with any membranes, the transfer of lipid
+would still require a PI transfer protein [ 14]. PITPs have been covered over the years in many excellent reviews
+(for two recent ones see [ 69,70]) and will not be discussed in further
+details. 3.2. Lipid regulation of vesicular transport at the ER
+The assembly of COPII coat components and their roles in ER
+membrane budding in the process of Golgi-destined vesicular carrier
+generation has been elegantly worked out [ 71]. What is less under-
+stood, however, is how lipids contribute to the control of this process.That said, the lipid-modifying enzyme, phospholipase D (PLD) was
+found to be critical for COPII vesicle formation and cargo exit from the
+ER [72]. It has also been shown that Sar1, the small GTPase that is ﬁrst
+recruited to the ER and marks the site of COPII coat formation, sti-mulates PLD activity thereby enriching PA at these sites [ 73]. Sar1
+activation, which includes insertion of its N-terminal helix into the ER
+membrane, recruits the Sec23-Sec24 heterodimer as well as additional
+coat proteins that function to generate the curvature of the growing bud
+(for details see [ 71]). 
+
+Reference 10:
+Reference 10 (FAISS and BM25) with RRF Score: 402.0031:
+In response to oleic acid exposure, CCT α
+associates with intranuclear canalicular membranes and subsequentlymoves out from the nucleus to associate with LDs and promote LD
+formation as well as lipid storage [ 7,9,10]. How PC gets to other
+membranes from its site of synthesis is far from being understood, al-though several PC transport proteins have been identi ﬁed [11]. The PS synthesizing enzymes, phosphatidylserine synthase (PSS)-1
+and−2, that are responsible for exchanging the headgroups of PC and
+PE, respectively, for serine are multi-membrane-spanning proteins lo-calized to the ER [ 12], but their enzymatic activities have been found
+highest in mitochondria-associated membranes (MAMs) [ 13]. MAMs
+are special membrane compartments where the ER and mitochondrial
+outer membrane form close contacts and allow non-vesicular lipid
+transfer. Despite this localization and con ﬁned catalytic activity, the
+bulk of membrane PS is not found in these sites; rather, it is enriched
+within the inner lea ﬂet of the PM. 
 

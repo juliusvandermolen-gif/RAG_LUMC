@@ -293,10 +293,6 @@ def chunk_documents(documents):
     return chunked_docs
 
 def chunk_pdfs(single_document, gene_list=None, target_length=1000):
-    """
-    Splits a PDF document into chunks based on sentence boundaries
-    and a target character length. Optionally filters chunks by gene_list.
-    """
     file_name, content, file_hash = single_document[0]
     sentences = sent_tokenize(content)
     if not sentences:
@@ -310,17 +306,14 @@ def chunk_pdfs(single_document, gene_list=None, target_length=1000):
         current_chunk.append(sentence)
         current_length += len(sentence)
 
-        # If the current chunk has reached the target length, finalize it.
         if current_length >= target_length:
             chunk_text = " ".join(current_chunk)
             # If gene_list is provided, check if the chunk contains any gene.
-            print(gene_list)
             if not gene_list or any(gene in chunk_text for gene in gene_list):
                 chunks.append(chunk_text)
             current_chunk = []
             current_length = 0
 
-    # Add any remaining sentences as the last chunk.
     if current_chunk:
         chunk_text = " ".join(current_chunk)
         if not gene_list or any(gene in chunk_text for gene in gene_list):
@@ -335,18 +328,15 @@ def chunk_pdfs(single_document, gene_list=None, target_length=1000):
 @timer
 def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
                     batch_size=batch_size, log_path='./file_log/file_log.json',
-                    pdf_dir='./Data/PDF'):  # <-- Add pdf_dir argument here
+                    pdf_dir='./Data/PDF'):
     file_log = load_file_log(log_path=log_path)
 
-    # -- Existing code for gz/txt files --
     files_documents = load_gz_files(data_dir=data_dir)
     print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
 
-    # -- Add this block to handle PDF files --
     pdf_documents = load_pdf_files(pdf_dir=pdf_dir)
     print(f"Loaded {len(pdf_documents)} PDF documents from '{pdf_dir}'.")
 
-    # Combine all documents into one list to process
     all_documents = files_documents + pdf_documents
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -364,7 +354,6 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
             print(f"No lines found in file '{file}'. Skipping embedding.")
             continue
 
-        # If it's a PDF, chunk differently if desired:
         if file.lower().endswith('.pdf'):
             chunks = chunk_pdfs([(file, document, file_hash)])
 
@@ -532,7 +521,6 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
 
 
 def process_excel_data(excel_file_path, de_filter_option, test):
-    # Load Excel file
     data = pd.read_excel(excel_file_path)
     results = []
     fdr_threshold = 0.00008802967327
@@ -624,7 +612,8 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     for items_string, regulation, num_genes in results:
-        batch_query_text = query_text + f" {items_string}"
+        #batch_query_text = query_text + f" {items_string}"
+        batch_query_text = query_text
         amount_docs = 10  # Retrieve exactly one document per gene
 
         print(f"Number of genes: {num_genes}")
