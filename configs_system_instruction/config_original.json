@@ -1,5 +1,5 @@
 {   "regex_note": "(?<!\n)\n(?=[A-Za-z0-9])",
-"query": "Despite advances, it's still uncertain if tethering proteins merely establish the molecular framework of membrane contact sites or if they also directly facilitate lipid transfer. Proteins containing SMP domains feature structures that resemble hydrophobic channels capable of bridging the watery space between two membranes, yet this doesn't clarify how they achieve lipid transport specificity.Recent insights highlighting the significance of PI4P gradients in driving numerous non-vesicular lipid transfer events prompt questions about the universality of this mechanism among different lipid transfer proteins (LTPs). Furthermore, even for LTPs with clearly defined lipid-binding sites, questions about cargo specificity remain unanswered. It's increasingly evident that many LTPs might be less selective in their lipid choices than previously assumed. In reality, the local lipid composition of the membranes between which LTPs operate could ultimately dictate the specific lipid transfer processes they support.",
+"query": "In what pathways are the following genes, originating from a rat, involved: ",
 "number_of_expansions": 0,
 "batch_size": 64,
 "model": "michiyasunaga/BioLinkBERT-large",

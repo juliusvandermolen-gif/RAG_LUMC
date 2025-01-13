@@ -1,174 +1,40 @@
 Reference 1:
-Reference 1 (FAISS and BM25) with RRF Score: 549.1967:
-However, it is still not clear
-whether tethering proteins only form the molecular architecture of
-membrane contact sites or if they also play direct role(s) in the lipid-
-transfer process. Tethering proteins that have SMP domains possess the
-structural features that could serve as hydrophobic lipid tunnels brid-
-ging the aqueous phase between two membranes but do not explain
-how speci ﬁcity of lipid transport can be achieved. The recent devel-
-opments pointing to the importance of PI4P gradients in driving manynon-vesicular lipid transport processes raise the question of how gen-
-eral this principle is among the various LTPs. Additionally, even for
-LTPs with deﬁ ned lipid-binding pockets, there are still outstanding
-questions concerning cargo speci ﬁcity and many LTPs may be more
-promiscuous in their selection of lipid cargoes than currently believed. In fact, it is becoming apparent that the local composition of the
-membranes between which LTPs operate may ultimately determine
-what lipid transport processes they support. 
+Reference 1 (BM25) with RRF Score: 2040.3316
+Chunk Text: ENSRNOG00000015913,Tspan5,tetraspanin 5 
 
 Reference 2:
-Reference 2 (FAISS and BM25) with RRF Score: 444.7335:
-3. Lipid transport is critical for the control of lipid synthesis
-The picture that emerges from the above examples is that the
-synthesis of phospholipids must be tightly coupled to the transportprocesses that prevent accumulation of the lipid products at the site of
-synthesis. It is entirely possible, that the activity of lipid synthesizing
-enzymes were found highest in membrane preparations that contained
-contact sites, because the lipid products can be moved away from the
-ER in such preparations. Lipids can be transported out from the ER by
-lipid transfer proteins (LTPs) that often, although not always, function
-at membrane contact sites. Alternatively, lipids can also leave the ER by
-vesicular transport in the form of complete budded membranes. Non-
-vesicular lipid transport is much more selective than bulk membrane
-transport and has received an immense amount of attention in recent
-years. 3.1. Non-vesicular lipid transport at membrane contact sites
-Several excellent recent reviews have covered non-vesicular trans-
-port extensively [ 11,42,43]. 
+Reference 2 (BM25) with RRF Score: 2040.3316
+Chunk Text: ENSRNOG00000029912,Septin5,septin 5 
 
 Reference 3:
-Reference 3 (FAISS and BM25) with RRF Score: 428.4402:
-Therefore, we will discuss this topic only
-from the standpoint of lipid dynamics at the ER. An early indication
-that phosphoinositide lipids are important for non-vesicular lipid
-transport came from studies that identi ﬁed relatively speci ﬁc binding of
-PI4P to several pleckstrin-homology (PH) domains found within LTPs[44,45]. The connection to PI4P was further established, and the cri-
-tical role of non-vesicular lipid transfer relative to vesicular tra ﬃcking
-was emphasized, by the discovery of the ceramide transfer protein,
-CERT, and its central importance in supplying ceramide from the ER for
-sphingomyelin biosynthesis in the Golgi [ 46]. However, the real
-breakthrough in understanding the importance of PI4P for non-vesi-cular lipid transfer came from the realization that OSBP and its yeast
-orthologue, Osh4/Kes4, use PI4P gradients between the Golgi and ER
-for driving cholesterol export from the ER to Golgi [ 47,48]. This gra-
-dient is set up by phosphatidylinositol 4-kinase (PI4K) beta (PI4KB andPik1 in yeast) on the Golgi side, and perhaps di ﬀerent PI4K, PI4K2A
-functioning in the TGN. 
+Reference 3 (BM25) with RRF Score: 2040.3316
+Chunk Text: ENSRNOG00000015972,Ano5,anoctamin 5 
 
 Reference 4:
-Reference 4 (FAISS and BM25) with RRF Score: 420.1754:
-The unique localization of the PIS enzyme
-not only in the ER proper but in a highly mobile vesicular structure that
-contacts various membranes, and also spends extended periods (min-
-utes) in repeated contacts with the PM, raised the possibility that PI
-transfer may also take place in more dynamic contact sites between the
-PM and this unique organelle that function in addition to the more
-classical ER-PM contacts discussed above [ 14]. There is a common theme in these examples, namely the close
-connection between all these lipid transport processes and PI or its
-phosphorylated derivatives. The reliance of many lipid transport pro-
-cesses on PI4P gradients really calls for a better understanding of the
-transport pathway(s) responsible for the redistribution of PI between
-membranes. The long-known mammalian PI transfer proteins (PITPs)
-and the Sec14-related proteins in yeast have been the logical candidates
-to fulﬁll this function since they have been shown to be able to trans-
-port PI (and PC) between membranes in vitro. 
+Reference 4 (BM25) with RRF Score: 2039.7322
+Chunk Text: ENSRNOG00000006076,Steap2,STEAP2 metalloreductase 
 
 Reference 5:
-Reference 5 (FAISS and BM25) with RRF Score: 418.8098:
-As mentioned
-above, recent studies have found that the LTP Nir2 can ful ﬁll both of
-these transport functions [ 27–29] as it is speci ﬁcally recruited to ER-PM
-contact sites during PLC activation [ 57]. Additional mechanisms for PI transfer from the ER to the PM have
-been suggested by studies characterizing TMEM24, which tethers theER to the PM and is important for Ca
-2+signaling as well as insulin
-release from pancreatic beta cells [ 58,59]. TMEM24 has an synapto-
-tagmin-like mitochondrial-lipid-binding (SMP) domain, a characteristicfeature of organelle-tethering proteins that are found in membrane
-contact sites [ 60,61]. SMP domains are thought to act as hydrophobic
-tunnels capable of lipid transport along concentration gradients [ 62]. The SMP domain of TMEM24 was found to deliver PI from the ER to the
-PM during glucose-induced secretion [ 58]. In contrast, the SMP domain
-of the family of extended synaptotagmins (E-Syt1/2/3) appears to beimportant for DG transport from the PM to the ER during high Ca
-2+-
-induced PLC activation [ 63]. 
+Reference 5 (BM25) with RRF Score: 2039.4757
+Chunk Text: ENSRNOG00000008996,Dpysl5,dihydropyrimidinase-like 5 
 
 Reference 6:
-Reference 6 (FAISS and BM25) with RRF Score: 416.6663:
-The im-
-portance of these observations is not clear at present, but they alsoT. Balla, et al. BBA - Molecular and Cell Biology of Lipids 1865 (2020) 158461
-5
-point to the possible role of lyso-lipids and lipid remodeling in mem-
-brane budding processes. 4. Concluding remarks
-The speci ﬁc lipid composition of membranes is critical for de ﬁning
-organelle identity and the proper assembly and function of protein
-complexes that work on those organelles. Lipid synthesis and dis-
-tribution are ﬁne-tuned to maintain the unique lipid composition of
-membranes. The product inhibition characterized in most lipid syn-thesizing enzymes makes lipid transport processes not only important
-for lipid distribution, but also for the dynamic regulation of lipid
-synthesis. Non-vesicular lipid transfer, often con ﬁned to membrane
-contact sites, provides both the speed and speci ﬁcity requisite for the
-intricate control of lipid transport and synthesis. It is also important
-that non-vesicular lipid transport only samples the cytoplasmic lea ﬂet
-of the membrane bilayer, which clearly contrasts vesicular transport,which carries both membrane layers. 
+Reference 6 (BM25) with RRF Score: 2039.1701
+Chunk Text: ENSRNOG00000015505,Mfap5,microfibril associated protein 5 
 
 Reference 7:
-Reference 7 (FAISS and BM25) with RRF Score: 415.0870:
-However, it has beenmore di ﬃcult to identify their PI transfer functions in vivo within intact
-cells despite large amount of work devoted to study these proteins. Asalready mentioned, the Class II PITPs, Nir2 and Nir3 (and their ﬂy or-
-thologue, RdgB α) has been identi ﬁed as PA/PI lipid exchangers at ER-
-PM contacts during PLC activation, but it is not clear if that is all that
-these proteins do since Nir2 was also found to be critical for the
-maintenance of DG levels in the Golgi [ 64]. Whether Sec14 or the Class
-I PITPs work as bona ﬁde PI transfer proteins, however, has beenchallenged. It has been suggested that these proteins work by pre-senting PI to speci ﬁc PI kinases [ 65,66] and even function in very
-speciﬁc biological contexts [ 67]. Most lipid transfer proteins work in
-membrane contact sites, but there is no reported enrichment of Class I
-PITPs in such sites, although the TGN localization of PITP β[68] could
-reﬂect localization to ER-Golgi contact sites. It has also been speculated
-that the ER-derived mobile PIS organelle (see above) that makes ample
-contacts with the di ﬀerent membranes may be a way PI is delivered to
-those membranes. 
+Reference 7 (BM25) with RRF Score: 2039.0210
+Chunk Text: ENSRNOG00000001764,Vps8,VPS8 subunit of CORVET complex 
 
 Reference 8:
-Reference 8 (FAISS and BM25) with RRF Score: 410.5312:
-Importantly, a Sec23-interacting protein (Sec23ip,
-also called p125A), which is also enriched in ER exit sites, is a member
-of a family of three proteins that possess DDHD domains. (DDHD do-
-mains are 180 amino acid protein modules that selectively binds PA and
-can also be found in the lipid transfer proteins, Nir2/3 [ 57]). The other
-two proteins of this family, DDHD1 and DDHD2 are phospholipase A1(PLA) enzymes capable of generating lyso-PI and lyso-PA, respectively
-(PLA activity has not been demonstrated for Sec23ip/p125 [ 74]. That
-said, Sec23ip/p125 was found to be important in the functional as-sembly of ER exit sites [ 75,76] and was shown to depend on both PA
-and PI4P [ 77]. Sar1 was also shown to promote the local generation of
-PI4P, a lipid that promoted Sar1-induced membrane constriction and
-COPII assembly in an in vitro ER-budding assay, presumably through
-the activity of one class of the four PI 4-kinases (PI4Ks), namely the type
-II PI4Ks [ 73]. Another report found that the number of ER exit sites was
-decreased in cells depleted in another PI4K, the type III PI4K, PI4KA[78], although this e ﬀect could be secondary as many changes to cel-
-lular lipid levels have been shown to follow PI4KA depletion [ 79]. 
+Reference 8 (BM25) with RRF Score: 2038.9050
+Chunk Text: ENSRNOG00000024039,Serinc5,serine incorporator 5 
 
 Reference 9:
-Reference 9 (FAISS and BM25) with RRF Score: 410.4394:
-Since no membrane fusion has been detected be-tween the PIS organelle with any membranes, the transfer of lipid
-would still require a PI transfer protein [ 14]. PITPs have been covered over the years in many excellent reviews
-(for two recent ones see [ 69,70]) and will not be discussed in further
-details. 3.2. Lipid regulation of vesicular transport at the ER
-The assembly of COPII coat components and their roles in ER
-membrane budding in the process of Golgi-destined vesicular carrier
-generation has been elegantly worked out [ 71]. What is less under-
-stood, however, is how lipids contribute to the control of this process.That said, the lipid-modifying enzyme, phospholipase D (PLD) was
-found to be critical for COPII vesicle formation and cargo exit from the
-ER [72]. It has also been shown that Sar1, the small GTPase that is ﬁrst
-recruited to the ER and marks the site of COPII coat formation, sti-mulates PLD activity thereby enriching PA at these sites [ 73]. Sar1
-activation, which includes insertion of its N-terminal helix into the ER
-membrane, recruits the Sec23-Sec24 heterodimer as well as additional
-coat proteins that function to generate the curvature of the growing bud
-(for details see [ 71]). 
+Reference 9 (BM25) with RRF Score: 2038.6886
+Chunk Text: ENSRNOG00000006646,Vopp1,VOPP1 WW domain binding protein 
 
 Reference 10:
-Reference 10 (FAISS and BM25) with RRF Score: 402.0031:
-In response to oleic acid exposure, CCT α
-associates with intranuclear canalicular membranes and subsequentlymoves out from the nucleus to associate with LDs and promote LD
-formation as well as lipid storage [ 7,9,10]. How PC gets to other
-membranes from its site of synthesis is far from being understood, al-though several PC transport proteins have been identi ﬁed [11]. The PS synthesizing enzymes, phosphatidylserine synthase (PSS)-1
-and−2, that are responsible for exchanging the headgroups of PC and
-PE, respectively, for serine are multi-membrane-spanning proteins lo-calized to the ER [ 12], but their enzymatic activities have been found
-highest in mitochondria-associated membranes (MAMs) [ 13]. MAMs
-are special membrane compartments where the ER and mitochondrial
-outer membrane form close contacts and allow non-vesicular lipid
-transfer. Despite this localization and con ﬁned catalytic activity, the
-bulk of membrane PS is not found in these sites; rather, it is enriched
-within the inner lea ﬂet of the PM. 
+Reference 10 (BM25) with RRF Score: 2038.6886
+Chunk Text: ENSRNOG00000062573,Cd151,CD151 molecule (Raph blood group) 
 

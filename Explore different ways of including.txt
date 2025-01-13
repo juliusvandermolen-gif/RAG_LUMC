@@ -1,9 +1,0 @@
-Explore different ways of including the chunks.
-Reference currently limit the novel ideas
-Include multiple genes from different pathways
-Include the whole 
-Maybe add multiple references
-Kees has mouse data, maybe do that?
-Check how to parse the GPML tree
-Read nature paper
-extract the exact messages that is being sent to GPT
