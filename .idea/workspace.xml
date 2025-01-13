@@ -6,40 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/1-s2.0-S1550413119303857-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/113943.1-20201218131459-covered-e0fd13ba177f913fd3156f593ead4cfd.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/357.full.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/96499.2-20201218131631-covered-e0fd13ba177f913fd3156f593ead4cfd.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Annals of the New York Academy of Sciences - 2006 - ANDERSON - PLP and PMP22 Distinct Phenotypes Associated with Increasing Dosage.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Cholesterol from neurons PIIS2211124721013590.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Glia - 2018 - Park - The conceptual introduction of the  demyelinating Schwann cell  in peripheral demyelinating.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Journal of Neurochemistry - 2024 - Defilippi - Quantitative proteomics unveils known and previously unrecognized.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/LEZEN APOE4 impairs myelination via cholesterol dysregulation s41586-022-05439-w.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/PMP22 and cholesterol and lipid rafts notterpek 16140.full.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Peroxisomal dysfunction cause lysosomal Storage problems and myelin elife-23332-v1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Plasmologen SCHWANN CELL.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/alles wat je wil weten over SC 1-s2.0-S0969996122003448-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/astrocytes upregulate chol synthesis hypoxia oligoden not 1-s2.0-S0925443924004708-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/awae158 Prior et al.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/cholesterol diet repair MS lesion  brain ncomms14241.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/cholesterol metabolism as druggagble axis Cell paper.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/deze 1-s2.0-S1878747923006979-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/goede review over lipids in myelin 1-s2.0-S2666675822001564-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/jem_20211743.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/nihms-1646968.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/plasmalogen therapy review membranes-11-00838.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/review cholesterol and remyelination PIIS0166223622000133.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/review lipid and demyelination 1-s2.0-S2666675822001564-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/rock 1-s2.0-S0304416524001120-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/s41416-019-0711-3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Explore different ways of including.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bm25_score.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_paper.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faiss_score.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/file_log/file_log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_short.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_short.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_files/answer_250_genes_combined.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/answer_250_genes_combined.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />

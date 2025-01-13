@@ -1,0 +1,135 @@
+Answer 1:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation and Maintenance
+3. Schwann Cell Differentiation and Function
+4. Lipid Metabolism and Cholesterol Biosynthesis
+5. Peripheral Nervous System Development
+6. Neurotransmitter Release Cycle
+7. Synaptic Vesicle Cycle
+8. Neurotrophin Signaling Pathway
+9. Calcium Signaling Pathway
+10. MAPK Signaling Pathway
+11. PI3K-AKT Signaling Pathway
+12. Wnt Signaling Pathway
+13. Integrin Signaling Pathway
+14. ECM-Receptor Interaction
+15. Cell Adhesion Molecules (CAMs)
+16. Regulation of Actin Cytoskeleton
+17. Protein Processing in Endoplasmic Reticulum
+18. Ubiquitin Mediated Proteolysis
+19. Oxidative Phosphorylation
+20. Mitochondrial Dysfunction
+21. Apoptosis
+22. Inflammatory Response
+23. Immune System Process
+24. Response to Oxidative Stress
+25. Regulation of Cell Cycle
+26. DNA Repair
+27. RNA Transport
+28. Protein Export
+29. Endocytosis
+30. Exocytosis
+==================================================
+Answer 2:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation and Maintenance
+3. Peripheral Nervous System Development
+4. Schwann Cell Differentiation and Function
+5. Lipid Metabolism and Cholesterol Biosynthesis
+6. Neurotransmitter Release Cycle
+7. Synaptic Vesicle Cycle
+8. Calcium Signaling Pathway
+9. Integrin Signaling Pathway
+10. PI3K-AKT Signaling Pathway
+11. MAPK Signaling Pathway
+12. Wnt Signaling Pathway
+13. PPAR Signaling Pathway
+14. LXR/RXR Activation
+15. Aryl Hydrocarbon Receptor Signaling
+16. Xenobiotic Metabolism Signaling
+17. Regulation of the EMT Pathway
+18. Leukocyte Extravasation Signaling
+19. Inhibition of Angiogenesis by TSP1
+20. Human Embryonic Stem Cell Pluripotency
+21. Granulocyte Adhesion and Diapedesis
+22. Inhibition of Matrix Metalloproteases
+23. Role of Osteoblasts, Osteoclasts, and Chondrocytes in RA
+24. Glucocorticoid Receptor Signaling
+25. Role of Macrophages, Fibroblasts, and Endothelial Cells in RA
+==================================================
+Answer 3:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation and Maintenance
+3. Peripheral Nervous System Development
+4. Schwann Cell Differentiation and Function
+5. Lipid Metabolism and Cholesterol Biosynthesis
+6. Neurotransmitter Release Cycle
+7. Synaptic Vesicle Cycle
+8. Calcium Signaling Pathway
+9. Integrin Signaling Pathway
+10. PI3K-AKT Signaling Pathway
+11. MAPK Signaling Pathway
+12. Wnt Signaling Pathway
+13. PPAR Signaling Pathway
+14. LXR/RXR Activation
+15. Aryl Hydrocarbon Receptor Signaling
+16. Xenobiotic Metabolism Signaling
+17. Regulation of the EMT Pathway
+18. Leukocyte Extravasation Signaling
+19. Inhibition of Angiogenesis by TSP1
+20. Human Embryonic Stem Cell Pluripotency
+21. Granulocyte Adhesion and Diapedesis
+22. Inhibition of Matrix Metalloproteases
+23. Role of Osteoblasts, Osteoclasts, and Chondrocytes in RA
+24. Glucocorticoid Receptor Signaling
+25. Role of Macrophages, Fibroblasts, and Endothelial Cells in RA
+==================================================
+Answer 4:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation and Maintenance
+3. Peripheral Nervous System Development
+4. Schwann Cell Differentiation and Function
+5. Lipid Metabolism and Cholesterol Biosynthesis
+6. Neurotransmitter Release Cycle
+7. Synaptic Vesicle Cycle
+8. Cell Adhesion Molecules in Neuronal Development
+9. Neurotrophin Signaling Pathway
+10. Regulation of Actin Cytoskeleton
+11. MAPK Signaling Pathway
+12. PI3K-AKT Signaling Pathway
+13. Wnt Signaling Pathway
+14. PPAR Signaling Pathway
+15. LXR/RXR Activation
+16. Integrin Signaling Pathway
+17. ECM-Receptor Interaction
+18. Calcium Signaling Pathway
+19. Oxidative Phosphorylation
+20. Mitochondrial Dysfunction in Neurodegeneration
+==================================================
+Answer 5:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation and Maintenance
+3. Peripheral Nervous System Development
+4. Schwann Cell Differentiation and Function
+5. Lipid Metabolism and Cholesterol Biosynthesis
+6. Neurotransmitter Release Cycle
+7. Synaptic Vesicle Cycle
+8. Calcium Signaling Pathway
+9. Integrin Signaling Pathway
+10. PI3K-AKT Signaling Pathway
+11. MAPK Signaling Pathway
+12. Wnt Signaling Pathway
+13. PPAR Signaling Pathway
+14. LXR/RXR Activation
+15. Aryl Hydrocarbon Receptor Signaling
+16. Xenobiotic Metabolism Signaling
+17. Regulation of the EMT Pathway
+18. Leukocyte Extravasation Signaling
+19. Role of Macrophages, Fibroblasts, and Endothelial Cells in RA
+20. Human Embryonic Stem Cell Pluripotency
+21. Granulocyte Adhesion and Diapedesis
+22. Inhibition of Matrix Metalloproteases
+23. Role of Osteoblasts, Osteoclasts, and Chondrocytes in RA
+24. Glucocorticoid Receptor Signaling
+25. Prostanoid Biosynthesis
+==================================================

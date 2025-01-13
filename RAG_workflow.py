@@ -646,7 +646,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
 
     # Combine gene list with the query text immediately
     batch_query_text = query_text + f" {gene_list_string}"
-    amount_docs = 10  # Retrieve exactly one document per gene
+    amount_docs = 0  # Retrieve exactly one document per gene
 
     print(f"Number of genes: {len(gene_list_string.split(','))}")
 
@@ -685,22 +685,26 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
         {"role": "user", "content": prompt}
     ]
 
-    try:
-        response = client.chat.completions.create(
-            model=openai_model,
-            messages=messages,
-            max_tokens=16384,
-            temperature=0
-        )
-        answer = response.choices[0].message.content
-    except Exception as e:
-        print(f"An error occurred while generating the GPT-4 response: {e}")
-        return "Processing complete.", document_references
+    output_filename = "test_files/all_answers.txt"
 
-    filename = f"test_files/answer_{num_genes}_genes_{regulation}.txt"
-    with open(filename, "w", encoding="utf-8") as file:
-        file.write(answer)
-    print(f"Answer saved to {filename}")
+    for i in range(1, 6):
+        try:
+            response = client.chat.completions.create(
+                model=openai_model,
+                messages=messages,
+                max_tokens=16384,
+                temperature=0
+            )
+            answer = response.choices[0].message.content
+        except Exception as e:
+            print(f"An error occurred while generating the GPT-4 response on iteration {i}: {e}")
+            continue  # Skip to the next iteration if there's an error
+
+        # Append each answer to the same file with a clear delimiter
+        with open(output_filename, "a", encoding="utf-8") as file:
+            file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")  # Add a separator for clarity
+
+        print(f"Answer {i} appended to {output_filename}")
 
     return answer, document_references
 
