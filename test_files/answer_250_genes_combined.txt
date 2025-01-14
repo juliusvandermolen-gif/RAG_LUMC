@@ -1,0 +1,20 @@
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation
+3. Lipid Metabolism
+4. Cholesterol Biosynthesis
+5. Peripheral Nervous System Development
+6. Schwann Cell Differentiation
+7. Neurotransmitter Release Cycle
+8. Synaptic Vesicle Cycle
+9. Neurotrophin Signaling Pathway
+10. Calcium Signaling Pathway
+11. PI3K-AKT Signaling Pathway
+12. MAPK Signaling Pathway
+13. Wnt Signaling Pathway
+14. PPAR Signaling Pathway
+15. LXR/RXR Activation
+16. Aryl Hydrocarbon Receptor Signaling
+17. Xenobiotic Metabolism Signaling
+18. Regulation of the EMT Pathway
+19. Leukocyte Extravasation Signaling
+20. Inhibition of Angiogenesis by TSP1

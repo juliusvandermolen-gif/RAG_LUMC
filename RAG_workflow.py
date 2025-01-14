@@ -2,62 +2,70 @@ import os
 import json
 import hashlib
 import re
-import pandas as pd
-import requests
 import gzip
 import sqlite3
+import warnings
+import string
+import atexit
+import time
+import functools
+
+import pandas as pd
+import requests
 from tqdm import tqdm
 import numpy as np
 from dotenv import load_dotenv
-from openai import OpenAI
-from transformers import AutoModel, AutoTokenizer
-import faiss
-import warnings
-from rank_bm25 import BM25Okapi, BM25Plus
-import time
-import functools
 import nltk
 from nltk.corpus import stopwords
-import string
+from nltk.tokenize import sent_tokenize
+from PyPDF2 import PdfReader
+from transformers import AutoModel, AutoTokenizer
+import faiss
+from rank_bm25 import BM25Okapi, BM25Plus
+from sklearn.cluster import KMeans
+
+from langchain.docstore.document import Document
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from openai import OpenAI
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+os.environ["OMP_NUM_THREADS"] = "8"
 
-import torch
+import torch  #TODO Fix environment so this works
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 
 # Suppress Warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-with open('config.json', 'r', encoding='utf-8') as config_file:
+with open('./configs_system_instruction/config_2.json', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
+#Load in config file
 query = config["query"]
 number_of_expansions = config["number_of_expansions"]
 batch_size = config["batch_size"]
 model_name = config["model"]
-
-try:
-    amount_docs = query.split(":")[1].count(" ")
-    raw_query_stop_words = query.split(":")[0].split(" ")
-    query_stop_words = [word.strip(string.punctuation).lower() for word in raw_query_stop_words]
-
-except (IndexError, AttributeError):
-    amount_docs = 10
-    query_stop_words = ['involved', 'genes']
-
+amount_docs = config["amount_docs"]
 weight_faiss = config["weight_faiss"]
 weight_bm25 = config["weight_bm25"]
 system_instruction_response = config["system_instruction_response"]
 
-nltk.download('stopwords')
-stop_words = set(stopwords.words('english')).union(query_stop_words)
+stop_words = set(stopwords.words('english'))  #.union(query_stop_words)
+
+aggregated_times = {}
+
+with open("time.txt", "w") as f:
+    f.write("")
 
 
+# Utility Timer Functions
 def timer(func):
     @functools.wraps(func)
     def wrapper_timer(*args, **kwargs):
@@ -65,13 +73,26 @@ def timer(func):
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
         elapsed_time = end_time - start_time
-        with open("time.txt", "a") as f:
-            f.write(f"Function '{func.__name__}' executed in {elapsed_time:.4f} seconds\n")
+
+        # Always accumulate elapsed time for the function
+        aggregated_times[func.__name__] = aggregated_times.get(func.__name__, 0) + elapsed_time
+
         return result
 
     return wrapper_timer
 
 
+def flush_aggregated_times():
+    with open("time.txt", "a") as f:
+        for func_name, total_time in aggregated_times.items():
+            if total_time > 0.1:
+                f.write(f"Function '{func_name}' executed in {total_time:.4f} seconds (aggregated)\n")
+
+
+atexit.register(flush_aggregated_times)
+
+
+# Gene ID Related Functions
 @timer
 def compute_file_hash(file_path, block_size=65536):
     hasher = hashlib.sha256()
@@ -79,6 +100,269 @@ def compute_file_hash(file_path, block_size=65536):
         for block in iter(lambda: f.read(block_size), b''):
             hasher.update(block)
     return hasher.hexdigest()
+
+@timer
+def initialize_gene_list(excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx", de_filter_option="combined", test=False):
+    results = process_excel_data(excel_file_path, de_filter_option, test)
+
+    if results:
+        gene_list_string, regulation, num_genes = results[0]
+    else:
+        gene_list_string = ""
+        regulation = ""
+        num_genes = 0
+
+    return gene_list_string, regulation, num_genes
+
+# Excel and Gene List Functions
+@timer
+def process_excel_data(excel_file_path, de_filter_option, test):
+    data = pd.read_excel(excel_file_path)
+    results = []
+    fdr_threshold = 0.00008802967327
+
+    if not test:
+        max_genes = 1
+        data = data.iloc[:max_genes]
+
+        if de_filter_option == "combined":
+            data = data[data['DE'] != 0]
+            if data['FDR'].max() <= fdr_threshold:
+                genes_list = data['X'].tolist()
+                num_genes = len(genes_list)
+                unique_de_values = data['DE'].unique()
+
+                regulation = (
+                    "upregulated" if len(unique_de_values) == 1 and unique_de_values[0] == 1 else
+                    "downregulated" if len(unique_de_values) == 1 else
+                    "combined"
+                )
+                results.append((', '.join(genes_list), regulation, num_genes))
+
+        elif de_filter_option == "separate":
+            for de_value, regulation in [(1, "upregulated"), (-1, "downregulated")]:
+                filtered_data = data[data['DE'] == de_value]
+                if filtered_data['FDR'].max() <= fdr_threshold:
+                    genes_list = filtered_data['X'].tolist()
+                    num_genes = len(genes_list)
+                    results.append((', '.join(genes_list), regulation, num_genes))
+
+        else:
+            raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
+
+    else:
+        max_genes = len(data)
+        increment = 50
+        end_row = min(increment, max_genes)
+
+        if de_filter_option == "combined":
+            data = data[data['DE'] != 0]
+            while end_row <= max_genes:
+                subset = data.iloc[:end_row]
+                if subset['FDR'].max() > fdr_threshold:
+                    break
+
+                genes_list = subset['X'].tolist()
+                num_genes = len(genes_list)
+                unique_de_values = subset['DE'].unique()
+
+                regulation = (
+                    "upregulated" if len(unique_de_values) == 1 and unique_de_values[0] == 1 else
+                    "downregulated" if len(unique_de_values) == 1 else
+                    "combined"
+                )
+                results.append((', '.join(genes_list), regulation, num_genes))
+                end_row += increment
+
+        elif de_filter_option == "separate":
+            for de_value, regulation in [(1, "upregulated"), (-1, "downregulated")]:
+                filtered_data = data[data['DE'] == de_value]
+                end_row = min(increment, len(filtered_data), max_genes)
+
+                while end_row <= max_genes:
+                    subset = filtered_data.iloc[:end_row]
+                    if subset['FDR'].max() > fdr_threshold:
+                        break
+
+                    genes_list = subset['X'].tolist()
+                    num_genes = len(genes_list)
+                    results.append((', '.join(genes_list), regulation, num_genes))
+                    end_row += increment
+
+        else:
+            raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
+
+    return results
+
+
+@timer
+def load_gene_id_cache(file_path):
+    if os.path.exists(file_path):
+        with open(file_path, 'r', encoding='utf-8') as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON file: {e}")
+                return {}
+    else:
+        return {}
+
+
+@timer
+def save_gene_id_cache(cache, file_path):
+    print(f"\n\n\nSaving cache to {file_path}\n\n")
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(cache, f, indent=4)
+
+
+@timer
+def search_genes(unknown_genes, gene_cache, cache_file):
+    url = "https://mygene.info/v3/gene/"
+    resolved_genes = {}
+
+    for gene_id in unknown_genes:
+        sanitized_gene_id = gene_id.strip("[]")
+        print(f"Searching for gene symbol for {sanitized_gene_id}...")
+        try:
+            response = requests.get(url + sanitized_gene_id)
+            response.raise_for_status()
+            data = response.json()
+
+            if 'symbol' in data:
+                gene_symbol = data['symbol']
+                resolved_genes[sanitized_gene_id] = gene_symbol
+                print(f"Found gene symbol for {sanitized_gene_id}: {gene_symbol}")
+            else:
+                resolved_genes[sanitized_gene_id] = "Unknown"
+        except requests.exceptions.RequestException as e:
+            resolved_genes[sanitized_gene_id] = "Error"
+            print(f"Error with gene ID {sanitized_gene_id}: {e}")
+
+    gene_cache.update(resolved_genes)
+    save_gene_id_cache(gene_cache, cache_file)
+
+    return resolved_genes
+
+
+@timer
+def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
+    cache_file = os.path.join(ncbi_json_dir, 'ncbi_id_to_symbol.json')
+    gene_cache = load_gene_id_cache(cache_file)
+    output_lines = []
+    unknown_genes = set()
+    sanitized_gene_id_map = {}
+
+    if file.endswith('.gz'):
+        decompressed_file = file[:-3]  # Remove '.gz' extension
+        with gzip.open(os.path.join(data_dir, file), 'rt') as gzfile:
+            #TODO Check whether this is needed, maybe make it so it doesnt have to run gene_synonym twice
+            with open(os.path.join(data_dir, decompressed_file), 'w') as outfile:
+                for line in gzfile:
+                    outfile.write(line)
+        file = decompressed_file
+
+    with open(os.path.join(data_dir, file), 'r') as infile:
+        for line_index, line in enumerate(infile):
+            parts = line.strip().split('\t')
+            pathway_info = parts[:2]
+            gene_ids = parts[2:]
+            gene_symbols = []
+
+            for i, gene_id in enumerate(gene_ids):
+                sanitized_gene_id = gene_id.strip("[]")
+                if sanitized_gene_id in gene_cache:
+                    gene_symbols.append(gene_cache[sanitized_gene_id])
+                else:
+                    if sanitized_gene_id.isdigit():  #Makes sure that they arent already converted
+                        gene_symbols.append("Unknown")
+                        unknown_genes.add(sanitized_gene_id)
+
+                        if line_index not in sanitized_gene_id_map:
+                            sanitized_gene_id_map[line_index] = []
+                        sanitized_gene_id_map[line_index].append((i, sanitized_gene_id))
+
+            new_line = '\t'.join(pathway_info + gene_symbols)
+            output_lines.append(new_line)
+
+    if unknown_genes:
+        print(f"there are unkown genes {unknown_genes}")
+        resolved_genes = search_genes(unknown_genes, gene_cache, cache_file)
+
+        for line_index, unknown_gene_positions in sanitized_gene_id_map.items():
+            line_parts = output_lines[line_index].split('\t')
+            pathway_info = line_parts[:2]
+            gene_symbols = line_parts[2:]
+
+            for position, sanitized_gene_id in unknown_gene_positions:
+                if sanitized_gene_id in resolved_genes:
+                    gene_symbols[position] = resolved_genes[sanitized_gene_id]
+
+            output_lines[line_index] = '\t'.join(pathway_info + gene_symbols)
+
+        final_unknown_genes = {sanitized_gene_id for sanitized_gene_id, symbol in
+                               resolved_genes.items() if symbol == "Unknown"}
+    else:
+        final_unknown_genes = set()
+
+    if final_unknown_genes:
+        unknown_genes_file = os.path.join(data_dir, 'unknown_genes.txt')
+        with open(unknown_genes_file, 'w') as unknown_file:
+            unknown_file.write('\n'.join(final_unknown_genes))
+
+        print(f"These genes are still unknown: {final_unknown_genes}")
+
+    return output_lines, list(final_unknown_genes)
+
+
+# Database Functions
+@timer
+def initialize_database(db_path='chunks_embeddings.db'):
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS chunks (
+            id INTEGER PRIMARY KEY,
+            file_name TEXT NOT NULL,
+            chunk_index INTEGER NOT NULL,
+            text TEXT NOT NULL
+        )
+    ''')
+    conn.commit()
+    return conn
+
+
+@timer
+def insert_chunk(conn, file_name, chunk_index, text):
+    cursor = conn.cursor()
+    cursor.execute('''
+        INSERT INTO chunks (file_name, chunk_index, text)
+        VALUES (?, ?, ?)
+    ''', (file_name, chunk_index, text))
+    conn.commit()
+    return cursor.lastrowid
+
+
+@timer
+def fetch_chunks(conn):
+    cursor = conn.cursor()
+    cursor.execute('SELECT id, text FROM chunks')
+    return cursor.fetchall()
+
+
+@timer
+def fetch_chunks_by_ids(conn, ids):
+    cursor = conn.cursor()
+    placeholder = ','.join(['?'] * len(ids))
+    query = f"SELECT text FROM chunks WHERE id IN ({placeholder})"
+    cursor.execute(query, ids)
+    results = cursor.fetchall()
+    return [row[0] for row in results]
+
+
+# FAISS Functions
+@timer
+def save_faiss_index(index, index_path='faiss_index.bin'):
+    faiss.write_index(index, index_path)
 
 
 @timer
@@ -96,10 +380,72 @@ def load_faiss_index(embedding_dim, index_path='faiss_index.bin'):
 
 
 @timer
-def save_faiss_index(index, index_path='faiss_index.bin'):
-    faiss.write_index(index, index_path)
+def initialize_faiss_index(embedding_dim, index_path):
+    """Load or recreate a FAISS index."""
+    try:
+        return load_faiss_index(embedding_dim, index_path=index_path)
+    except ValueError:
+        print(
+            "Deleting existing FAISS index and creating a new one with IndexIDMap.")
+        if os.path.exists(index_path):
+            os.remove(index_path)
+            print(f"Deleted FAISS index at {index_path}")
+        return load_faiss_index(embedding_dim, index_path=index_path)
 
 
+# Chunking Functions
+@timer
+def chunk_documents(documents):
+    if not documents:
+        print("No documents to chunk. Returning an empty list.")
+        return []
+
+    chunked_docs = []
+    for idx, document in enumerate(documents):
+        print(
+            f"Processing Document {idx + 1} with length {len(document)} characters.")
+
+        lines = document.split("\n")
+        chunked_docs.extend(line for line in lines if
+                            line.strip())
+
+    print(
+        f"Total number of chunks: {len(chunked_docs)} (should match line count)")
+    return chunked_docs
+
+
+@timer
+def chunk_pdfs(single_document, gene_list=None, target_length=1000):
+    file_name, content, file_hash = single_document[0]
+    sentences = sent_tokenize(content)
+    if not sentences:
+        return []
+
+    chunks = []
+    current_chunk = []
+    current_length = 0
+
+    for sentence in sentences:
+        current_chunk.append(sentence)
+        current_length += len(sentence)
+
+        if current_length >= target_length:
+            chunk_text = " ".join(current_chunk)
+            # If gene_list is provided, check if the chunk contains any gene.
+            if not gene_list or any(gene in chunk_text for gene in gene_list):
+                chunks.append(chunk_text)
+            current_chunk = []
+            current_length = 0
+
+    if current_chunk:
+        chunk_text = " ".join(current_chunk)
+        if not gene_list or any(gene in chunk_text for gene in gene_list):
+            chunks.append(chunk_text)
+
+    return chunks
+
+
+# Embedding & Loading Functions
 @timer
 def load_file_log(log_path='./file_log/file_log.json'):
     log_dir = os.path.dirname(log_path)
@@ -153,40 +499,6 @@ def save_file_log(file_log, log_path='./file_log/file_log.json'):
 
 
 @timer
-def initialize_database(db_path='chunks_embeddings.db'):
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS chunks (
-            id INTEGER PRIMARY KEY,
-            file_name TEXT NOT NULL,
-            chunk_index INTEGER NOT NULL,
-            text TEXT NOT NULL
-        )
-    ''')
-    conn.commit()
-    return conn
-
-
-@timer
-def insert_chunk(conn, file_name, chunk_index, text):
-    cursor = conn.cursor()
-    cursor.execute('''
-        INSERT INTO chunks (file_name, chunk_index, text)
-        VALUES (?, ?, ?)
-    ''', (file_name, chunk_index, text))
-    conn.commit()
-    return cursor.lastrowid
-
-
-@timer
-def fetch_chunks(conn):
-    cursor = conn.cursor()
-    cursor.execute('SELECT id, text FROM chunks')
-    return cursor.fetchall()
-
-
-@timer
 def load_model_and_tokenizer(force_download=False):
     tokenizer = AutoTokenizer.from_pretrained(model_name,
                                               force_download=force_download)
@@ -231,36 +543,58 @@ def load_gz_files(data_dir='./Data/biomart'):
 
 
 @timer
-def chunk_documents(documents):
-    if not documents:
-        print("No documents to chunk. Returning an empty list.")
-        return []
+def load_pdf_files(pdf_dir='./Data/PDF', file_log=None):
+    pdf_documents = []
+    if not os.path.exists(pdf_dir):
+        print(f"No PDF directory found at '{pdf_dir}'. Skipping PDF import.")
+        return pdf_documents
 
-    chunked_docs = []
-    for idx, document in enumerate(documents):
-        print(
-            f"Processing Document {idx + 1} with length {len(document)} characters.")
+    file_log = file_log or {}
 
-        lines = document.split("\n")
-        chunked_docs.extend(line for line in lines if
-                            line.strip())
+    for file in os.listdir(pdf_dir):
+        if file.lower().endswith('.pdf'):
+            if file in file_log:
+                continue
 
-    print(
-        f"Total number of chunks: {len(chunked_docs)} (should match line count)")
-    return chunked_docs
+            file_path = os.path.join(pdf_dir, file)
+            try:
+                reader = PdfReader(file_path)
+                pages_text = []
+                for page in reader.pages:
+                    pages_text.append(page.extract_text() or "")
+                content = "\n".join(pages_text).strip()
+                if content:
+                    file_hash = compute_file_hash(file_path)
+                    pdf_documents.append((file, content, file_hash))
+                    print(
+                        f"Loaded PDF '{file}' with {len(pages_text)} pages. Document length: {len(content)} characters.")
+                else:
+                    print(f"Skipped empty PDF '{file}'.")
+            except Exception as e:
+                print(f"Failed to read PDF '{file}': {e}")
+
+    return pdf_documents
 
 
 @timer
 def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
-                    batch_size=batch_size, log_path='./file_log/file_log.json'):
+                    batch_size=batch_size, log_path='./file_log/file_log.json',
+                    pdf_dir='./Data/PDF'):
     file_log = load_file_log(log_path=log_path)
+
     files_documents = load_gz_files(data_dir=data_dir)
     print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
+
+    pdf_documents = load_pdf_files(pdf_dir=pdf_dir, file_log=file_log)
+    print(f"Loaded {len(pdf_documents)} new PDF documents from '{pdf_dir}'.")
+
+    all_documents = files_documents + pdf_documents
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.to(device)
     model.eval()
-    for file, document, file_hash in files_documents:
+
+    for file, document, file_hash in all_documents:
         if file in file_log and file_log[file]['hash'] == file_hash:
             continue
         else:
@@ -271,11 +605,12 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
             print(f"No lines found in file '{file}'. Skipping embedding.")
             continue
 
-        data_lines = lines[1:] if file.endswith('txt.gz') else lines
+        if file.lower().endswith('.pdf'):
+            chunks = chunk_pdfs([(file, document, file_hash)])
+        else:
+            document_content = "\n".join(lines[1:]) if file.endswith('txt.gz') else "\n".join(lines)
+            chunks = chunk_documents([document_content])
 
-        document_content = "\n".join(data_lines)
-
-        chunks = chunk_documents([document_content])
         if not chunks:
             print(f"No chunks created for file '{file}'. Skipping embedding.")
             continue
@@ -285,7 +620,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
 
         with torch.no_grad():
             for i in tqdm(range(0, len(chunks), batch_size),
-                          desc="Processing chunks in batches"):
+                          desc=f"Processing {file} in batches"):
                 batch = chunks[i:i + batch_size]
                 inputs = tokenizer(batch, return_tensors="pt", truncation=True,
                                    padding=True, max_length=512).to(device)
@@ -323,49 +658,8 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
     save_file_log(file_log, log_path=log_path)
 
 
+# BM25 and Query Functions
 @timer
-def query_faiss_index(query_text, index, tokenizer, model, top_k=20,
-                      force_download=False):
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-    loaded_model = AutoModel.from_pretrained(model_name,
-                                             force_download=force_download)
-    loaded_tokenizer = AutoTokenizer.from_pretrained(model_name,
-                                                     force_download=force_download)
-
-    if model.config != loaded_model.config:
-        print("The models have different configurations.")
-        model = AutoModel.from_pretrained(model_name,
-                                          force_download=force_download)
-
-    if str(tokenizer) != str(loaded_tokenizer):
-        print("The tokenizers have different configurations.")
-        tokenizer = AutoTokenizer.from_pretrained(model_name,
-                                                  force_download=force_download)
-
-    model.to(device)
-    model.eval()
-    with torch.no_grad():
-        inputs = tokenizer([query_text], return_tensors="pt", truncation=True,
-                           padding=True, max_length=512).to(device)
-        outputs = model(**inputs)
-        query_embedding = outputs.last_hidden_state.mean(dim=1).cpu().numpy()
-    distances, indices = index.search(query_embedding, top_k)
-    top_ids = [int(id_) for id_ in indices[0] if id_ != -1]
-    top_distances = [float(dist) for dist in distances[0] if dist != -1]
-    return top_ids, top_distances
-
-
-@timer
-def fetch_chunks_by_ids(conn, ids):
-    cursor = conn.cursor()
-    placeholder = ','.join(['?'] * len(ids))
-    query = f"SELECT text FROM chunks WHERE id IN ({placeholder})"
-    cursor.execute(query, ids)
-    results = cursor.fetchall()
-    return [row[0] for row in results]
-
-
 def tokenize(text):
     return [word for word in re.findall(r'\b[\w-]+\b', text.lower()) if word not in stop_words]
 
@@ -389,7 +683,7 @@ def build_bm25_index(conn):
 @timer
 def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     query_tokens = tokenize(query_text)
-    print("Query tokens:", query_tokens)
+    #print("Query tokens BM25:", query_tokens)
 
     # print("\nTokens for each line in the database:")
     # for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
@@ -424,291 +718,43 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
             'tokens': relevant_tokens if relevant_tokens else None
         }
 
-    print("\nIDF values for query tokens:")
-    # for token in query_tokens:
-    #     if token in bm25.idf:
-    #         print(f"Token: {token}, IDF: {bm25.idf[token]:.4f}")
-    #     else:
-    #         pass
-
     return top_ids, top_scores, detailed_scores
 
 
-import os
-from openai import OpenAI
-
-
-def generate_gpt4_turbo_response_with_instructions(query_text, document_references):
-    system_instruction = system_instruction_response  # Ensure this variable is defined elsewhere
-    testing = True
-    combined_documents = "\n\n".join(document_references)
-
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    model = "gpt-4o"  # Verify if "gpt-4o" is the correct model name
-
-    if testing:
-        test_list = [True, False]
-        range_limit = 1
-    else:
-        test_list = [True]
-        range_limit = 1
-
-    for test_status in test_list:
-        for i in range(1, range_limit + 1):
-            if test_status:
-                prompt = (
-                    f"Based on the following documents, answer the question using both your knowledge and the "
-                    f"provided documents: {query_text}\n\nDocuments:\n"
-                    f"{combined_documents}\n"
-                )
-            else:
-                prompt = f"Answer the question based on your knowledge: {query_text}"
-
-            if model in ["o1-preview", "o1-mini"]:
-                adjusted_prompt = system_instruction + prompt
-                messages = [
-                    {"role": "user", "content": adjusted_prompt}
-                ]
-            else:
-                messages = [
-                    {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": prompt}
-                ]
-
-            # Print the exact message being sent to the LLM
-            # print("=== Sending the following message to the LLM ===")
-            # for message in messages:
-            #     print(f"Role: {message['role']}\nContent: {message['content']}\n")
-            # print("=== End of message ===\n")
-
-            try:
-                if model in ["o1-preview", "o1-mini"]:
-                    response = client.chat.completions.create(
-                        model=model,
-                        messages=messages,
-                        max_completion_tokens=5000
-                    )
-                else:
-                    response = client.chat.completions.create(
-                        model=model,
-                        messages=messages,
-                        max_tokens=5000,
-                        temperature=0  # 0 - 2
-                    )
-            except Exception as e:
-                # It's better to print the exception instead of response here
-                print(f"An error occurred while generating the GPT-4 response: {e}")
-                continue
-
-            # Ensure that the response has the expected structure
-            try:
-                answer = response.choices[0].message.content
-            except (AttributeError, IndexError) as e:
-                print(f"Unexpected response structure: {response}")
-                print(f"Error: {e}")
-                continue
-
-            test_label = "With_ref" if test_status else "Without_ref"
-            filename = f"test_files/answer_{test_label}_{i}.txt"
-
-            with open(filename, "w", encoding="utf-8") as file:
-                file.write(answer)
-
-            print(f"Answer saved to {filename}")
-
-    # Optionally, return all responses or handle accordingly
-    return answer  # Returns the last answer generated
-
-
 @timer
-def save_answer_to_file(prompt, answer, document_references,
-                        file_name="answer.txt"):
-    with open(file_name, "w", encoding='utf-8') as f:
-        #f.write(f"Prompt:\n{prompt}\n\n")
-        f.write(f"Answer:\n{answer}\n\n")
-        # for idx, doc in enumerate(document_references, start=1):
-        #     f.write(f"Reference {idx}:\n{doc}\n\n")
-    print(f"Answer saved to {file_name}")
-    with open("documents.txt", "w", encoding='utf-8') as f:
-        for idx, doc in enumerate(document_references, start=1):
-            f.write(f"Reference {idx}:\n{doc} \n\n")
+def query_faiss_index(query_text, index, tokenizer, model, top_k=20,
+                      force_download=False):
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    loaded_model = AutoModel.from_pretrained(model_name,
+                                             force_download=force_download)
+    loaded_tokenizer = AutoTokenizer.from_pretrained(model_name,
+                                                     force_download=force_download)
+
+    if model.config != loaded_model.config:
+        print("The models have different configurations.")
+        model = AutoModel.from_pretrained(model_name,
+                                          force_download=force_download)
+
+    if str(tokenizer) != str(loaded_tokenizer):
+        print("The tokenizers have different configurations.")
+        tokenizer = AutoTokenizer.from_pretrained(model_name,
+                                                  force_download=force_download)
+
+    model.to(device)
+    model.eval()
+    with torch.no_grad():
+        inputs = tokenizer([query_text], return_tensors="pt", truncation=True,
+                           padding=True, max_length=512).to(device)
+        outputs = model(**inputs)
+        query_embedding = outputs.last_hidden_state.mean(dim=1).cpu().numpy()
+    distances, indices = index.search(query_embedding, top_k)
+    top_ids = [int(id_) for id_ in indices[0] if id_ != -1]
+    top_distances = [float(dist) for dist in distances[0] if dist != -1]
+    return top_ids, top_distances
 
 
-@timer
-def query_expansion(query_text, number):
-    system_instruction = """You are an expert in query expansion for biomedical literature search. Given a user's 
-query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions. 
-The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
-However, there is a maximum of {number} alternative queries that are given.
-
-Example:
-User query: "GGT5 in glutathione metabolism"
-
-Possible expanded queries:
-- "Gamma-glutamyltransferase 5 role in glutathione metabolism"
-- "GGT5 enzyme function in glutathione pathway"
-- "GGT5 and its involvement in glutathione homeostasis"
-- "Impact of GGT5 on glutathione biosynthesis and metabolism"
-
-Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
-    """.format(number=number)
-    print("The amount of queries that are going to be expanded:{number}".format(number=number))
-    if number > 0:
-        prompt = (f"Based on the user's query, provide expanded queries that include related terms, synonyms, "
-                  f"and relevant"
-                  f"expansions.\n\nUser query: \"{query_text}\"")
-
-        try:
-            response = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[
-                    {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=500,
-                temperature=0.7,
-
-            )
-
-            reply = response.choices[0].message.content
-            expanded_queries = reply.strip().split('\n')
-            expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for
-                                q in expanded_queries if q.strip()]
-
-            return expanded_queries
-
-        except Exception as e:
-            print(f"An error occurred while expanding the query: {e}")
-            return [query_text]
-    else:
-        return [query_text]
-
-
-@timer
-def load_gene_id_cache(file_path):
-    if os.path.exists(file_path):
-        with open(file_path, 'r', encoding='utf-8') as f:
-            try:
-                return json.load(f)
-            except json.JSONDecodeError as e:
-                print(f"Error decoding JSON file: {e}")
-                return {}
-    else:
-        return {}
-
-
-@timer
-def save_gene_id_cache(cache, file_path):
-    print(f"\n\n\nSaving cache to {file_path}\n\n")
-    with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(cache, f, indent=4)
-
-
-@timer
-def search_genes(unknown_genes, gene_cache, cache_file):
-    url = "https://mygene.info/v3/gene/"
-    resolved_genes = {}
-
-    for gene_id in unknown_genes:
-        # Remove brackets from the gene ID if present
-        sanitized_gene_id = gene_id.strip("[]")
-        print(f"Searching for gene symbol for {sanitized_gene_id}...")
-        try:
-            response = requests.get(url + sanitized_gene_id)
-            response.raise_for_status()
-            data = response.json()
-
-            if 'symbol' in data:
-                gene_symbol = data['symbol']
-                resolved_genes[sanitized_gene_id] = gene_symbol
-                print(f"Found gene symbol for {sanitized_gene_id}: {gene_symbol}")
-            else:
-                resolved_genes[sanitized_gene_id] = "Unknown"
-        except requests.exceptions.RequestException as e:
-            resolved_genes[sanitized_gene_id] = "Error"
-            print(f"Error with gene ID {sanitized_gene_id}: {e}")
-
-    gene_cache.update(resolved_genes)
-    save_gene_id_cache(gene_cache, cache_file)
-
-    return resolved_genes
-
-
-
-@timer
-def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
-    cache_file = os.path.join(ncbi_json_dir, 'ncbi_id_to_symbol.json')
-    gene_cache = load_gene_id_cache(cache_file)
-    output_lines = []
-    unknown_genes = set()
-    sanitized_gene_id_map = {}
-
-    if file.endswith('.gz'):
-        decompressed_file = file[:-3]  # Remove '.gz' extension
-        with gzip.open(os.path.join(data_dir, file), 'rt') as gzfile:
-            with open(os.path.join(data_dir, decompressed_file), 'w') as outfile:
-                for line in gzfile:
-                    outfile.write(line)
-        file = decompressed_file  # Update file to point to the decompressed version
-
-    # Process the file (decompressed or not)
-    with open(os.path.join(data_dir, file), 'r') as infile:
-        for line_index, line in enumerate(infile):
-            parts = line.strip().split('\t')
-            pathway_info = parts[:2]
-            gene_ids = parts[2:]
-            gene_symbols = []
-
-            for i, gene_id in enumerate(gene_ids):
-                sanitized_gene_id = gene_id.strip("[]")
-                if sanitized_gene_id in gene_cache:
-                    gene_symbols.append(gene_cache[sanitized_gene_id])
-                else:
-                    gene_symbols.append("Unknown")
-                    unknown_genes.add(sanitized_gene_id)
-
-                    if line_index not in sanitized_gene_id_map:
-                        sanitized_gene_id_map[line_index] = []
-                    sanitized_gene_id_map[line_index].append((i, sanitized_gene_id))
-
-            new_line = '\t'.join(pathway_info + gene_symbols)
-            output_lines.append(new_line)
-            print(unknown_genes)
-
-    if unknown_genes:
-        print(f"there are unkown genes {unknown_genes}")
-        resolved_genes = search_genes(unknown_genes, gene_cache, cache_file)
-
-        for line_index, unknown_gene_positions in sanitized_gene_id_map.items():
-            line_parts = output_lines[line_index].split('\t')
-            pathway_info = line_parts[:2]
-            gene_symbols = line_parts[2:]
-
-            for position, sanitized_gene_id in unknown_gene_positions:
-                if sanitized_gene_id in resolved_genes:
-                    gene_symbols[position] = resolved_genes[sanitized_gene_id]
-
-            output_lines[line_index] = '\t'.join(pathway_info + gene_symbols)
-
-        final_unknown_genes = {sanitized_gene_id for sanitized_gene_id, symbol in
-                               resolved_genes.items() if symbol == "Unknown"}
-    else:
-        final_unknown_genes = set()
-
-    output_file = os.path.join(data_dir, f"converted_{file}")
-    with open(output_file, 'w') as outfile:
-        outfile.write('\n'.join(output_lines))
-
-    if final_unknown_genes:
-        unknown_genes_file = os.path.join(data_dir, 'unknown_genes.txt')
-        with open(unknown_genes_file, 'w') as unknown_file:
-            unknown_file.write('\n'.join(final_unknown_genes))
-
-        print(f"These genes are still unknown: {final_unknown_genes}")
-
-    return output_lines, list(final_unknown_genes)
-
-
+# Document Ranking and Combination
 @timer
 def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k=20):
     faiss_doc_distance_dict = {}
@@ -799,71 +845,13 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
 
 
 @timer
-def process_files_in_directory(data_dir,ncbi_json_dir):
-    """Process all .gmt files in the given directory that start with 'wiki'."""
-    for file in os.listdir(data_dir):
-        full_file_path = os.path.join(data_dir, file)
-        if os.path.isfile(full_file_path) and file.endswith(
-                '.gmt.gz'):  # and file.startswith('wiki'):
-            print(f"Processing file: {file}")
-
-            converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
-                                                                        data_dir, ncbi_json_dir)
-            print(
-                f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
-
-
-@timer
-def initialize_faiss_index(embedding_dim, index_path):
-    """Load or recreate a FAISS index."""
-    try:
-        return load_faiss_index(embedding_dim, index_path=index_path)
-    except ValueError:
-        print(
-            "Deleting existing FAISS index and creating a new one with IndexIDMap.")
-        if os.path.exists(index_path):
-            os.remove(index_path)
-            print(f"Deleted FAISS index at {index_path}")
-        return load_faiss_index(embedding_dim, index_path=index_path)
-
-
-@timer
-def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
-                             batch_size, log_path, index_path):
-    """Embed documents, save to FAISS index, and close connection."""
-    embed_documents(conn, index, tokenizer, model, data_dir=data_dir,
-                    batch_size=batch_size, log_path=log_path)
-    save_faiss_index(index, index_path=index_path)
-    conn.close()
-
-
-@timer
-def run_query_expansion_and_retrieval(query, index, tokenizer, model, top_k,
-                                      bm25, bm25_chunk_ids, bm25_chunk_texts):
-    """Expand query and retrieve top documents using FAISS and BM25."""
-    expanded_queries = query_expansion(query, number=number_of_expansions)[1:]
-    expanded_queries.append(query)
-
-    for idx, eq in enumerate(expanded_queries, start=1):
-        print(f"Expanded Query {idx}: {eq}")
-
-    top_faiss_docs = create_top_faiss_docs(expanded_queries, index, tokenizer,
-                                           model, top_k)
-    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25,
-                                         bm25_chunk_ids, bm25_chunk_texts,
-                                         top_k)
-
-    bm25_detailed_scores = top_bm25_docs
-
-    return top_faiss_docs, top_bm25_docs, bm25_detailed_scores
-
-
-@timer
 def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs):
     """Rank documents and fetch top chunks from the database."""
     sorted_rrf_scores = sorted(rrf_scores.items(),
                                key=lambda item: item[1]['score'],
                                reverse=True)[:amount_docs]
+
+    unique_ids = set(doc_id for doc_id, _ in sorted_rrf_scores)
 
     combined_docs = {}
     for rank, (doc_id, data) in enumerate(sorted_rrf_scores, start=1):
@@ -885,21 +873,213 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs,
     return [doc_id_to_chunk[doc_id] for doc_id in combined_top_ids], combined_docs
 
 
+# Query Expansion and Response Generation
 @timer
-def generate_response_and_save(query, labeled_documents, conn):
-    """Generate GPT-4 response and save the result."""
-    print(
-        f"Retrieved {len(labeled_documents)} unique chunks from the database.")
-    response = generate_gpt4_turbo_response_with_instructions(query,
-                                                              labeled_documents)
+def query_expansion(query_text, number):
+    system_instruction = """You are an expert in query expansion for biomedical literature search. Given a user's 
+query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions. 
+The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
+However, there is a maximum of {number} alternative queries that are given.
 
-    if response:
-        combined_documents = "\n\n".join(labeled_documents)
-        prompt = f"Based on the following documents, answer the question: {query}\n\nDocuments:\n{combined_documents}\n"
-        save_answer_to_file(prompt, response, labeled_documents)
+Example:
+User query: "GGT5 in glutathione metabolism"
+
+Possible expanded queries:
+- "Gamma-glutamyltransferase 5 role in glutathione metabolism"
+- "GGT5 enzyme function in glutathione pathway"
+- "GGT5 and its involvement in glutathione homeostasis"
+- "Impact of GGT5 on glutathione biosynthesis and metabolism"
+
+Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
+    """.format(number=number)
+    if number > 0:
+        prompt = (f"Based on the user's query, provide expanded queries that include related terms, synonyms, "
+                  f"and relevant"
+                  f"expansions.\n\nUser query: \"{query_text}\"")
+
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": system_instruction},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=500,
+                temperature=0.7,
+
+            )
+
+            reply = response.choices[0].message.content
+            expanded_queries = reply.strip().split('\n')
+            expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for
+                                q in expanded_queries if q.strip()]
+
+            return expanded_queries
+
+        except Exception as e:
+            print(f"An error occurred while expanding the query: {e}")
+            return [query_text]
+    else:
+        return [query_text]
+
+
+@timer
+def generate_gpt4_turbo_response_with_instructions(query_text, document_references,
+                                                   conn, index, tokenizer, model,
+                                                   bm25, bm25_chunk_ids, bm25_chunk_texts,
+                                                   weight_faiss, weight_bm25,
+                                                   system_instruction_response,
+                                                   gene_list_string, regulation, num_genes,
+                                                   test=False):
+    openai_model = "gpt-4o"
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+    # Combine gene list with the query text immediately
+    batch_query_text = query_text + f" {gene_list_string}"
+    #amount_docs = 50  # Retrieve exactly one document per gene
+
+    print(f"Number of genes: {len(gene_list_string.split(','))}")
+
+    expanded_queries = query_expansion(batch_query_text, number=number_of_expansions)[1:]
+    expanded_queries.append(batch_query_text)
+
+    top_faiss_docs = create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k=100000)
+    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25, bm25_chunk_ids, bm25_chunk_texts, top_k=100000)
+
+    rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
+    print(f"Retrieving top {amount_docs} documents based on RRF scores.")
+    retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
+        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=amount_docs
+    )
+
+    if len(retrieved_chunks_ordered) < amount_docs:
+        print(f"Warning: Retrieved only {len(retrieved_chunks_ordered)} documents but expected {amount_docs}.")
+
+    document_references = []
+    for doc_id in combined_docs.keys():
+        chunk_text = retrieved_chunks_ordered.pop(0) if retrieved_chunks_ordered else "No text available"
+        document_references.append(
+            f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) with "
+            f"RRF Score: {combined_docs[doc_id]['score']:.4f}\nChunk Text: {chunk_text}"
+        )
+    combined_documents = "\n\n".join(document_references)
+
+    system_instruction = system_instruction_response
+    prompt = (
+        f"Based on the following documents, answer the question using both your knowledge and the provided "
+        f"documents: {batch_query_text}\n\nDocuments:\n{combined_documents}\n"
+    )
+
+    messages = [
+        {"role": "system", "content": system_instruction},
+        {"role": "user", "content": prompt}
+    ]
+
+    output_filename = "test_files/all_answers.txt"
+
+    for i in range(1, 6):
+
+        try:
+            response = client.chat.completions.create(
+                model=openai_model,
+                messages=messages,
+                max_tokens=16384,
+                temperature=0
+            )
+            answer = response.choices[0].message.content
+        except Exception as e:
+            print(f"An error occurred while generating the GPT-4 response on iteration {i}: {e}")
+            continue
+
+        with open(output_filename, "a", encoding="utf-8") as file:
+            file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")
+
+        print(f"Answer {i} appended to {output_filename}")
+
+    return answer, document_references
+
+
+@timer
+def generate_response_and_save(query,
+                               conn, index, tokenizer, model,
+                               bm25_index, bm25_chunk_ids, bm25_chunk_texts,
+                               weight_faiss, weight_bm25,
+                               system_instruction_response,
+                               gene_list_string, regulation, num_genes):
+    answer, document_references = generate_gpt4_turbo_response_with_instructions(
+        query, [],
+        conn, index, tokenizer, model,
+        bm25_index, bm25_chunk_ids, bm25_chunk_texts,
+        weight_faiss, weight_bm25,
+        system_instruction_response,
+        gene_list_string, regulation, num_genes,
+        test=False
+    )
+
+    if answer and answer != "Processing complete.":
+        prompt = f"Based on the following documents, answer the question: {query}\n\n"
+        save_answer_to_file(prompt, answer, document_references)
     else:
         print("Failed to generate a response from GPT-4.")
     conn.close()
+
+
+
+
+# File Saving and Processing Helpers
+@timer
+def save_answer_to_file(prompt, answer, document_references, file_name="answer.txt"):
+    with open(file_name, "w", encoding='utf-8') as f:
+        # f.write(f"Prompt:\n{prompt}\n\n")
+        f.write(f"Answer:\n{answer}\n\n")
+    print(f"Answer saved to {file_name}")
+    with open("documents.txt", "w", encoding='utf-8') as f:
+        for idx, doc in enumerate(document_references, start=1):
+            f.write(f"Reference {idx}:\n{doc} \n\n")
+
+
+@timer
+def process_files_in_directory(data_dir, ncbi_json_dir):
+    """Process all .gmt files in the given directory that start with 'wiki'."""
+    for file in os.listdir(data_dir):
+        full_file_path = os.path.join(data_dir, file)
+        if os.path.isfile(full_file_path) and file.endswith(
+                '.gmt.gz'):
+            print(f"Processing file: {file}")
+
+            converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
+                                                                        data_dir, ncbi_json_dir)
+            print(
+                f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
+
+
+@timer
+def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
+                             batch_size, log_path, index_path):
+    """Embed documents, save to FAISS index, and close connection."""
+    embed_documents(conn, index, tokenizer, model, data_dir=data_dir,
+                    batch_size=batch_size, log_path=log_path)
+    save_faiss_index(index, index_path=index_path)
+    conn.close()
+
+
+@timer
+def run_query_expansion_and_retrieval(query_text, gene_text, index, tokenizer, model, top_k,
+                                      bm25, bm25_chunk_ids, bm25_chunk_texts):
+    """Expand query (including gene text) and retrieve top documents using FAISS and BM25."""
+    combined_query = f"{query_text} {gene_text}".strip()
+
+    #expanded_queries = query_expansion(combined_query, number=number_of_expansions)[1:]
+    #expanded_queries.append(combined_query)
+    expanded_queries = [combined_query]
+    # for idx, eq in enumerate(expanded_queries, start=1):
+    #     print(f"Expanded Query {idx}: {eq}")
+
+    top_faiss_docs = create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k)
+    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25, bm25_chunk_ids, bm25_chunk_texts, top_k)
+
+    bm25_detailed_scores = top_bm25_docs
+    return top_faiss_docs, top_bm25_docs, bm25_detailed_scores
 
 
 @timer
@@ -955,7 +1135,6 @@ def save_scores_to_file(scores, file_name):
                 tokens = details.get('tokens', [])
                 f.write(f"Chunk ID: {doc_id}, Score: {overall_score}\n")
                 if tokens:
-                    # Format tokens and their scores
                     tokens_formatted = "\n".join(tokens)
                     f.write(f"Tokens that were relevant:\n{tokens_formatted}\n")
                 else:
@@ -966,15 +1145,18 @@ def save_scores_to_file(scores, file_name):
     print(f"Scores saved to {file_name}")
 
 
+# Main Function
 @timer
 def main():
-    #TODO remove all the entries with len < 3 as they dont seem to contain anything except ensg id
+    gene_list_string, regulation, num_genes = initialize_gene_list()
+
     data_dir = './Data/biomart'
     log_dir = './file_log'
     log_path = os.path.join(log_dir, 'file_log.json')
     index_path = 'faiss_index.bin'
     db_path = 'chunks_embeddings.db'
-    ncbi_json_dir='./Data/JSON/'
+    ncbi_json_dir = './Data/JSON/'
+
     process_files_in_directory(data_dir, ncbi_json_dir)
 
     conn = initialize_database(db_path=db_path)
@@ -991,34 +1173,24 @@ def main():
     conn = sqlite3.connect(db_path)
 
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
-    print(f"Embedding dimensions: {embedding_dim} {index.d} {model.config.hidden_size}")
 
     top_faiss_docs, top_bm25_docs, bm25_detailed_scores = run_query_expansion_and_retrieval(
-        query, index, tokenizer, model, top_k=100000, bm25=bm25_index,
-        bm25_chunk_ids=bm25_chunk_ids, bm25_chunk_texts=bm25_chunk_texts)
+        query, gene_list_string, index, tokenizer, model, top_k=100000,
+        bm25=bm25_index, bm25_chunk_ids=bm25_chunk_ids, bm25_chunk_texts=bm25_chunk_texts
+    )
 
     rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
     bm25_scores = dict(bm25_detailed_scores)
     faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
 
-    save_scores_to_file(bm25_scores, "bm25_score.txt")
-    save_scores_to_file(faiss_scores, "faiss_score.txt")
-
     export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx")
 
-    retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
-        rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=amount_docs)
-
-    labeled_documents = [
-        (
-            f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) with RRF Score:"
-            f" {combined_docs[doc_id]['score']:.4f}:\n{chunk_text}"
-        )
-        for doc_id, chunk_text in
-        zip(combined_docs.keys(), retrieved_chunks_ordered)
-    ]
-
-    generate_response_and_save(query, labeled_documents, conn)
+    generate_response_and_save(query,
+                               conn, index, tokenizer, model,
+                               bm25_index, bm25_chunk_ids, bm25_chunk_texts,
+                               weight_faiss, weight_bm25,
+                               system_instruction_response,
+                               gene_list_string, regulation, num_genes)
 
 
 if __name__ == "__main__":
