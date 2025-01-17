@@ -6,49 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/2203.15827v1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/converted_wikipathways_synonyms_Rattus_norvegicus.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/100_genes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/100_wiki.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/rat_genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/wikipathways_synonyms_Homo_sapiens.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/hold/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/converted_medium_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/converted_small_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/medium_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/msmall_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/rat_genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/small_rat.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/holddd/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/output/converted_wikipathways_with_synonyms-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/output/genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/rat_genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/test/geneless_wikipathway.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/converted_wikipathways-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/biomart/to_be_converted/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/mart_export_2.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/reordered_mart_export_2.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/to_be_converted/wikipathways-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Rattus_norvegicus.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/biomart/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Explore different ways of including.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bm25_score.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/New Text Document.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_original.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_original.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_paper.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_paper.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_short.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_short.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_test.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faiss_score.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/file_log/file_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gene_synonym.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gene_synonym.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semantic_index.faiss/index.faiss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semantic_index.faiss/index.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/answer_With_ref_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/answer_Without_ref_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/all_answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/all_answers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/all_answers_config_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/all_answers_config_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/all_answers_config_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/all_answers_genes_set_analyses_paper.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_files/answer_250_genes_combined.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,29 +51,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.RAG.executor": "Run",
-    "Python.RAG_LUMC.executor": "Run",
-    "Python.RAG_workflow.executor": "Run",
-    "Python.Unnamed.executor": "Run",
-    "Python.hugginface_test.executor": "Run",
-    "Python.insta.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.visualize_length.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Hybrid-Retrieval",
-    "last_opened_file_path": "C:/RAG_LUMC",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.RAG.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RAG_LUMC.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RAG_workflow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hugginface_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.insta.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualize_length.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Hybrid-Retrieval&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/RAG_LUMC/RAG_workflow.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.RAG_workflow">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
@@ -151,7 +127,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-a8e928d85084-fab4200a9dfa-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-243.22562.236" />
+        <option value="bundled-python-sdk-559ba0cadc45-1e0160e1c7f0-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-241.15989.62" />
       </set>
     </attachedChunks>
   </component>

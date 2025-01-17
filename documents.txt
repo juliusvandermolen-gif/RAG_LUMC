@@ -1,5 +1,245 @@
 Reference 1:
-Reference 1 (FAISS and BM25) with RRF Score: 17.1853
+Reference 1 (FAISS and BM25) with RRF Score: 158.0361
+Chunk Text: DiVincenzo
+et al. described the frequency, detection rate, and mutation types in 14 representative
+genes ( PMP22 ,GJB1 ,MPZ ,MFN2 ,SH3TC2 ,GDAP1 ,NEFL ,LITAF ,GARS ,HSPB1 ,FIG4 ,
+EGR2 ,PRX , and RAB7A ) related to CMT in a cohort study of 17,880 patients tested in a
+commercial genetic laboratory. Genetic anomalies were detected in 18.5% (n = 3312) of the
+total population. Sanger sequencing and multiplex ligation-dependent probe ampliﬁcation
+revealed that duplications (56.7%) or deletions (21.9%) in PMP22 were reported for most of
+the positive results; next, mutations were detected in GJB1 (6.7%), MPZ (5.3%), and MFN2
+(4.3%). GJB1 deletions and mutations in the residual genes were 5.3% of the anomalies. Of
+the individuals presenting a positive genetic outcome in a CMT-related gene, 94.9% had a
+mutation in one of the following four genes ( PMP22 ,GJB1 ,MPZ , orMFN2 ) [8]. Effective pharmacological treatments for CMT are currently lacking. This review dis-
+cusses the treatment of CMT with the four main causative genes. 
+
+Reference 2:
+Reference 2 (FAISS and BM25) with RRF Score: 158.0156
+Chunk Text: To test the efficacy of ASO6 in reducing rat Pmp22 mRNA, 
+we treated 6-week-old CMT1A rats weekly for 12 weeks with PBS, control ASO (12.5 mg/kg), or ASO6 (12.5 mg/kg) and sacrificed the rats following electrophysiological testing performed 1 week in RT4-D6P2T cells and in vivo screening of ASOs in Sprague- Dawley rats and identified an active ASO (ASO6) that effectively suppressed rat Pmp22 mRNA in a dose-dependent manner, but had no effect on mouse Pmp22 mRNA (Supplemental Figure 5, 
+Figure 2. Transcriptional changes in C22 mice following ASO treatment. (A) Hierarchical clustering of the expression profiles of 76 DEGs. (B) Subset of lip-
+id biosynthetic genes, Schwann cell differentiation markers, myelin inhibitors, and myelin-related genes altered by 9 weeks after ASO1 treatment. (C) PCA of 76 DEGs. Correlation analyses of CMAP amplitude and mRNA expression of (D) Bzw2 (Pearson r
+2 = 0.51, P < 0.01), (E) Ugt8a (Pearson r2 = 0.52, P < 0.01), 
+and (F) Sc5d (Pearson r2 = 0.48, P < 0.01). (G–J) qRT-PCR confirmation of mRNA expression of Sc5d, Mpz, Pou3f1, and Id2 in ASO1-treated sciatic nerves. 
+
+Reference 3:
+Reference 3 (FAISS and BM25) with RRF Score: 157.6119
+Chunk Text: ●Compounds preventing axonal degeneration or rescuing altered axo-
+nal transport have the potentiality to cure many hereditary neuro -
+pathies irrespective of the primary triggering defect: this is the case 
+for the inhibitors of SARM1 and of HDAC6, an active field of research. ●Intervention on more specific metabolic pathways is also promising, 
+such as for L-Serine to treat HSN1 by reducing neurotoxic deoxy -
+sphingolipids, or compounds acting on the PYKfive enzyme in the 
+phosphoinositides metabolism in CMT4B, or S-adenosylmethionine 
+(SAM) to supply purine nucleotides in CMTX5 and its allelic disorders. ●Mutations in sorbitol dehydrogenase has been very recently asso -
+ciated with a relatively common form of CMT2/dHMN and high levels 
+of sorbitol. Inhibitors of aldose reductase, developed in the past for 
+diabetic neuropathy, are good candidates for its treatment. Table 1. List of CMT genes associated with the different types of CMT and related neuropathies. Charcot-Marie-Tooth disease and related neuropathies
+Demyelinating CMT Intermediate CMT Axonal CMT dHMN HSAN
+AD AR X- linked AD AR X- linked AD AR X- linked AD/AR/X-linked AD/AR
+PMP22 GDAP1 GJB1 DNM2 KARS GJB1 MFN2 HARS MFN2 AIFM1 HSPB8 ATP7A SPTCL1 CLTCL1
+MPZ MTMR2 
+MTMR13 
+MTMR5YARS PLEKHG5 AIFM1 RAB7A VCP LMNA PRPS1 HSPB1 DYNC1H1 SPTCL2 PRNP
+LITAF MPZ COX6A1 DRP2 TRPV4 MORC2 MED25 PDK3 HSPB3 BICD2 ATL1 CCT5
+EGR2 IFN2 GARS NEFH GDAP1 FBXO38 MYH14 DNMT1 FLVCR1
+NEFL SH3TC2 GNB4 NEFL ATP1A1 MME BSCL2 AARS ATL3 ZFHX2
+PMP2 NDRG1 NEFL HSPB1 TFG SPG11 GARS HARS WNK1
+FBLN5 EGR2 MPZ BSCL2 MPV17 REEP1 HINT1 FAM134B
+ARHGEF10 PRX GDAP1 NAGLU HINT1 SLC5A7 VRK1 KIF1A
+HK1 HSPB8 KIF5A IGHMBP2 DCTN1 SETX SCN9A
+FGD4 DNM2 MTATP6 TRIM2 TRPV4 CHCHD10 IκBKAP
+FIG4 AARS DCAF8 DNAJB2 DNAJB2 SORD NTRK1
+SURF1 LRSAM1 TUBB3 C12orf65 IGHMBP2 TBX5 β-NGF
+CTDP1 DHTKD1 DGAT2 SORD PLEKHG5 DST
+MME SLC25A46 SIGMAR1 SCN11A
+MARS SACS LAS1L PRDM12
+AD = autosomal dominant, AR = autosomal recessive, CMT = Charcot-Marie-Tooth disease, dHMN = distal hereditary motor neuropathy, HSAN = hereditary sensory 
+and autonomic neuropathy 702
+ C. PISCIOTTA ET AL. 
+
+Reference 4:
+Reference 4 (FAISS and BM25) with RRF Score: 155.8984
+Chunk Text: The intracellular domain of dystroglycan interacts 
+with DRP2 and L-PRX. DG (dystroglycan) conditional KO in Schwann cells display a neuropathic phenotype morpho-logically characterized by irregular folding of myelin, dis-organization of microvilli, and consequent altered clustering of 
+ Na+ channels at the node [14]. These features are not 
+typical of laminin mutants and their receptors in develop-ment such as β1 integrin, suggesting that this phenotype is not due to altered ECM-Schwann cell communication. One hypothesis is that loss of function of proteins within the DG complex in Schwann cells leads to myelin instability [14]. DRP2 and L-PRX anchor DG in the Schwann cell apposi-tions, which defines the boundaries of the cytoplasm-filled adjacent regions, the Cajal bands (Fig. 1b, d) [13, 15, 17]. Consistent with this, in addition to Cajal bands disruption, loss of either PRX or of DRP2 is associated with myelin abnormalities that share similarities with those observed in the DG mutant. Other adhesion molecules involved in myelin stability in 
+this region is the integrin α6 β4. 
+
+Reference 5:
+Reference 5 (FAISS and BM25) with RRF Score: 154.4311
+Chunk Text: Next, we asked whether the disease biomarkers identified in 
+the C22 transcriptomic study can be confirmed in the CMT1A rat 
+model. Consistent with findings in C22 mice, the mRNA levels of lipid biosynthetic genes such as Sc5d and Ugt8a were decreased in CMT1A rats, although to a lesser extent than in C22 mouse nerves. ASO6 treatment trended toward increased mRNA levels of these genes (Figure 3G). Furthermore, the mRNA levels of Id2  
+and Bzw2  were significantly increased in CMT1A rats compared 
+with WT rats and were substantially decreased following ASO6 treatment (Figure 3G). Finally, we sought to identify a target engagement biomarker 
+in the CMT1A rats. Toward this end, we collected blood and foot -
+pad skin biopsies from treated CMT1A rats. Although there was detectable rat Pmp22 mRNA in the blood, there was no change in Pmp22 levels following ASO6 treatment (Supplemental Fig -
+ure 5E). The level of rat Pmp22 mRNA in the footpad (containing dermal nerves and Schwann cells) was significantly reduced in ASO6- compared with control-treated rats, suggesting this could serve as a biomarker of target engagement (Figure 3H). 
+
+Reference 6:
+Reference 6 (FAISS and BM25) with RRF Score: 153.7212
+Chunk Text: Yellow lines with a B represent binding proteins, red indicates the upregulated, and blue signifies 
+downregulated genes in TrJ samples ( n = 10 nerves, from 5 mice), as compared with Wt ( n = 8 nerves, from 4 mice). 14714159, 2024, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jnc.16189 by Leiden University Libraries, Wiley Online Library on [20/11/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+   |  3163
+DEFILIPPI  et al. TABLE 1  Differentially expressed protein groups within TrJ 
+sciatic nerves corresponding to myelin and axonal compartments. Group Gene log2FC Pval
+Myelin Actr1a −0.63 0.0144
+Myelin Alb 0.75 0.0364
+Myelin Arf6 −0.91 0.025
+Myelin Aspa −1.25 0.0065
+Myelin Atp1a2 −0.57 0.0417
+Myelin Atp1b1 −0.88 0.0344
+Myelin Cd59a −3.39 0.0312
+Myelin Cd9 −2.51 0.0044
+Myelin Cers2 −0.94 0.0217
+Myelin Ckmt1 −0.98 0.0134
+Myelin Cnrip1 −0.91 0.0488
+Myelin Drp2 −3.13 0.0016
+Myelin Ehd1 −0.97 0.0254
+Myelin Ehd3 −1.1 0.0213
+Myelin Ezr 1.14 0.0142
+Myelin Galc −0.83 0.0275
+Myelin Gjb1 −2.34 0.0032
+Myelin Gnao1 −1.2 0.0062
+Myelin Mpz −1.72 0.0044
+Myelin Napb −1.21 0.0342
+Myelin Napg −0.82 0.0388
+Myelin Ncstn 1.36 0.0114
+Myelin Ndrg1 −0.68 0.0136
+Myelin Nsf −0.81 0.0492
+Myelin Pdia3 0.93 0.0392
+Myelin Pgam1 −1.08 0.0425
+Myelin Plcb1 −2.01 0.0101
+Myelin Pllp −2.01 0.0043
+Myelin Pmp2 −2.11 0.0014
+Myelin Ppp3r1 −2.3 0.0089
+Myelin Prx −1.57 0.008
+Myelin Psap 1.31 0.0138
+Myelin Rala −1.83 0.0114
+Myelin Rheb −1.55 0.0062
+Myelin Serinc5 1.92 0.0024
+Myelin Syn2 −0.89 0.0449
+Myelin Tagln3 −1.74 0.0128
+Myelin Tufm 0.69 0.0295
+Myelin Vcp 0.67 0.0261
+Myelin Hspd1 0.55 0.023
+Myelin Hspg2 0.77 0.0294
+Myelin Ina −1.37 0.0226
+Axon Aak1 −0.96 0.0214
+Axon Adam10 −0.75 0.0308
+Axon Alcam −0.87 0.0191
+Axon Aldoc −1.59 0.0089Group Gene log2FC Pval
+Axon Amph −1.19 0.0131
+Axon Ank3 −0.67 0.0201
+Axon Ap3b1 0.99 0.0124
+Axon Ap3m1 0.67 0.0274
+Axon Apbb1 −1.55 0.043
+Axon Atp6v0d1 0.67 0.022
+Axon Avil −0.98 0.0248
+Axon C4b 0.76 0.0402
+Axon Cadm1 −1.28 0.0056
+Axon Calb1 −2.49 0.0062
+Axon Calb2 −2.6 0.0101
+Axon Cdh2 −1.14 0.0317
+Axon Cplx1 −2.92 0.0026
+Axon Cpne6 −1.36 0.0228
+Axon Crmp1 −0.67 0.0384
+Axon Csf1r 1.87 0.0282
+Axon Ctsz 1.73 0.0121
+Axon Cttn 1.23 0.0082
+Axon Dclk1 0.94 0.0229
+Axon Dctn1 −0.59 0.0205
+Axon Dctn2 −0.86 0.0087
+Axon Dip2b 0.62 0.0466
+Axon Dlg3 1.3 0.0076
+Axon Dnm3 −1.13 0.0483
+Axon Dpysl3 −1.09 0.0126
+Axon Dpysl5 −1.16 0.0162
+Axon Dync1i1 −2.16 0.0028
+Axon Exoc8 −1.89 0.0044
+Axon Fez1 −2.87 0.0101
+Axon Fkbp1a −1.35 0.0299
+Axon Flna 0.71 0.0275
+Axon Flot1 −0.85 0.0103
+Axon Fn1 1.16 0.0206
+Axon G3bp1 1.01 0.0141
+Axon Gars −0.8 0.0222
+Axon Gldn 2.44 8.00E-  
+04
+Axon Golga2 1.39 0.0493
+Axon Gpm6a −3.21 0.0307
+Axon Grcc10 −1.42 0.017
+Axon Grk2 −0.82 0.0492
+Axon Gsk3b −1.07 0.0268
+Axon Hnrnpk 0.85 0.0492
+Axon Hpca −0.91 0.008
+Axon Hsp90ab1 0.72 0.0486
+Axon Impa1 −0.82 0.0254
+Axon Kcnab2 −1.97 0.0082TABLE 1  (Continued)
+ 14714159, 2024, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jnc.16189 by Leiden University Libraries, Wiley Online Library on [20/11/2024]. 
+
+Reference 7:
+Reference 7 (FAISS and BM25) with RRF Score: 152.9739
+Chunk Text: Somewhat surprisingly, of the 2,080 DEGs that are induced in the C22 model, only 43 were found to be induced in 
+expression analyses of different time points after nerve injury (41, 
+44, 45), including the Pou3f1 transcription factor expressed in pro -
+myelinating Schwann cells as well as other transcription factors, 
+such as Sox4 and Id2  (Supplemental Figure 2, E and F). Indeed, 
+none of the previously described c-Jun  target genes (41) were 
+induced in the C22 model, indicating that other transcriptional 
+programs were enacted by PMP22 overexpression in this model. Relatively few cytokines/chemokines were induced in the C22 model, with the exception of Cxcl14  (46), and immune cell mark -
+ers were not an enriched gene ontology category with this data set 
+(Supplemental Figure 2G). We next determined whether ASO-mediated suppression 
+could restore gene-expression levels toward WT levels and 
+found 97 DEGs that behaved in this manner. Among this set, 76 overlapped with the 746 DEGs that significantly changed in the comparison of C22 and WT cohorts at 5 or 15 weeks (Sup -
+The Journal of Clinical Investigation    
+RESEARCH ARTICLE
+363 jci.org   Volume 128   Number 1   January 2018
+A–D). 
+
+Reference 8:
+Reference 8 (FAISS and BM25) with RRF Score: 152.5522
+Chunk Text: This also implies reversibility of the symptoms, since unmyelinated axons are apparent in the CMT1A rat model even at 5 weeks of age (12). Therefore, dramatic improvement is observed with cellular, elec-
+trophysiological, and functional measures of peripheral neuropa -
+thy. Despite the promising results, there remain several important questions, including whether sustained treatment will lead to continued improvement, whether it will prevent axonal loss, and whether it will work in older animals, in which axonal loss con-tributes to clinical manifestation (49). Future work will also be required to determine optimal dosing route and frequency as well as detailed characterization of ASO pharmacokinetic and pharma -
+codynamic properties in peripheral nerves. In addition to the improvements induced by ASOs, these stud-
+ies also afforded the opportunity to perform an RNA-seq profile of the C22 model, which identified several genes that were previous-ly shown to be upregulated in CMT1A models (c-Jun , Pou3f1, and 
+Cxcl14 ) and also those that are downregulated (lipid biosynthetic 
+genes and other myelin-related genes). 
+
+Reference 9:
+Reference 9 (FAISS and BM25) with RRF Score: 152.0463
+Chunk Text: n = 10 per group. (A) Rat Pmp22 mRNA in various nerves of control and ASO6-treated rats. ASO6-treated group was compared with control group in each nerve using Student’s t test. *P < 0.05; ***P < 0.001. (B) Pou3f1 mRNA in various nerves of control and ASO6-treated rats. PMP22 ASO–treated group was compared with control group in each nerve using Student’s t test. *P < 0.05; ***P < 0.001. (C and D) MNCV and CMAP were measured at 12 weeks following treatment. (E) Representative histological image of cross-sectioned femoral motor nerves of CMT1A rats treated with control or ASO6. Arrows and arrowheads indicate unmyelinated and myelinated axon of greater than 1 micron in diameter, respectively. Scale bar: 5 μm. (F) Quantification of percentage of myelinated and percentage of unmyelinated axons. ASO6-treated group was compared with control group using Student’s t test. **P < 0.01. (G) qRT-PCR confirmation of mRNA expression of lipid biosynthetic (Sc5dl and Ugt8a), myelin inhibitor (Id2), and translational repressor (Bzw2) genes in the sciatic nerve of control vs. ASO6-treated rats. 
+
+Reference 10:
+Reference 10 (FAISS and BM25) with RRF Score: 151.7248
+Chunk Text: At 4 days, NDRG1and MAG staining are still found in the outer or abaxonal and inner or
+adaxonal regions, respectively, and they overlap in incisures (yellow). At 12
+days, the architecture of myelin sheaths is largely obliterated. There is muchless NDRG1 and MAG immunoreactivity, which partially overlap in large
+blobs. At 58 days, there are small bspeckles Qof NDRG1 immunoreactivity
+in Schwann cells and scattered small blobs of MAG immunoreactivity inmacrophages. Scale bar: 10 Am. Fig. 7. Expression of NDRG1 mRNA in lesioned adult rat sciatic nerve. Each lane contains 10 Ag of total RNA isolated from the distal nerve stumps
+of adult rat sciatic nerves following transection for the indicated number ofdays; the b0dQsample is from unlesioned adult nerves. For crushed nerves,
+the distal stumps were divided into proximal (D1) and distal (D2) segments
+to illustrate better the proximal-to-distal changes in gene expression that
+accompany remyelination of regenerated axons. The blots were hybridizedtogether, sequentially, with radiolabeled cDNA probes for NDRG1,GAPDH, and P0 and exposed to film 7 days, 10 days, and 16 h,
+respectively.P . 
+
+Reference 11:
+Reference 11 (FAISS and BM25) with RRF Score: 151.7189
+Chunk Text: These findings were consistent with the motor behavior and electrophysiology charac-terizations of the C22 cohort described in Figure 1. This was, to our knowledge, the first RNA-seq profiling of 
+a CMT1A model, and the analysis showed some categories of 
+genes in common with microarray profiles of other CMT1A mod-
+els (34, 37 , 38). For example, there was a significant decrease in cholesterol and lipid biosynthetic genes as well as myelin-related genes in 5-week-old C22 compared with WT littermates (Supple -
+mental Figure 2, C and F). The increased gene categories include a number involved in cell signaling, as well as those involved in axon guidance mechanisms (RhoA , Plxna1, and Rac1 ) and inte -
+grin signaling (Itgb8 ) (Supplemental Figure 2D). Expression of 
+myelin inhibitors such as Id2 , Id4, and Ednrb  was also increased, 
+suggesting an unfavorable environment for remyelination (Sup -
+plemental Figure 2E). Dysregulation of several transcription fac-tors regulating Schwann cell differentiation was also observed in the C22 mice (Supplemental Figure 2F). 
+
+Reference 12:
+Reference 12 (FAISS and BM25) with RRF Score: 151.1441
 Chunk Text: 2018)
 [25]. mRNA expression of both lipid catabolizing and anabolizing transcripts were affected. This study further
 showed that during development, lipid metabolism genes (including those of sterol metabolism) failed to
@@ -12,19 +252,446 @@ species [ 25,26]. The two studies tested regimens of lipid supplementation (by e
 components of different lipid biosynthetic pathways) and observed improvements in myelination. A transcriptomic analysis of C3 (CMT1A model) mice found that the most severely down-regulated genes
 were those involved in cholesterol biosynthesis [ 27]. 
 
-Reference 2:
-Reference 2 (FAISS and BM25) with RRF Score: 16.2654
-Chunk Text: Next, we asked whether the disease biomarkers identified in 
-the C22 transcriptomic study can be confirmed in the CMT1A rat 
-model. Consistent with findings in C22 mice, the mRNA levels of lipid biosynthetic genes such as Sc5d and Ugt8a were decreased in CMT1A rats, although to a lesser extent than in C22 mouse nerves. ASO6 treatment trended toward increased mRNA levels of these genes (Figure 3G). Furthermore, the mRNA levels of Id2  
-and Bzw2  were significantly increased in CMT1A rats compared 
-with WT rats and were substantially decreased following ASO6 treatment (Figure 3G). Finally, we sought to identify a target engagement biomarker 
-in the CMT1A rats. Toward this end, we collected blood and foot -
-pad skin biopsies from treated CMT1A rats. Although there was detectable rat Pmp22 mRNA in the blood, there was no change in Pmp22 levels following ASO6 treatment (Supplemental Fig -
-ure 5E). The level of rat Pmp22 mRNA in the footpad (containing dermal nerves and Schwann cells) was significantly reduced in ASO6- compared with control-treated rats, suggesting this could serve as a biomarker of target engagement (Figure 3H). 
+Reference 13:
+Reference 13 (FAISS and BM25) with RRF Score: 150.9026
+Chunk Text: In line with this idea, stimulation of the rat
+sciatic nerve with ATP induces increases in the Ca
+2? concentration in both the cytosol and mitochondrial matrix
+in myelinating SCs. The ATP-induced cytoplasmic Ca2? increase is mediated by the signaling cascade consisting of
+the activation of the P2Y2 purinergic receptor (P2RY2),production of inositol 1,4,5-trisphosphate (IP
+3) via
+hydrolysis of phosphatidylinositol 4,5-bisphosphate by
+phospholipase C, and Ca2?release from intracellular Ca2? stores via IP 3receptors. This P2Y2-IP 3-mediated cyto-
+plasmic Ca2?mobilization subsequently induces
+mitochondrial Ca2?signaling via the MCU. The physiological signiﬁcance of mitochondrial Ca2? signaling in myelinating SCs has been examined in vivo by
+disrupting the P2RY2-IP 3-MCU pathway using shRNA for
+P2RY2 (shP2RY2), or IP 3-5 phosphatase (5ppase), an
+enzyme that suppress IP 3receptor-mediated Ca2?release
+by rapidly hydrolyzing IP 3[56–62], or shRNA for MCU
+(shMCU). Expression of shP2RY2, 5ppase, or shMCU in
+myelinating SCs results in increased levels of phosphory-
+lated AMPK, suggesting a critical role for P2RY2-IP 3-
+MCU signaling in energy metabolism in myelinating SCs. 
 
-Reference 3:
-Reference 3 (FAISS and BM25) with RRF Score: 15.9541
+Reference 14:
+Reference 14 (FAISS and BM25) with RRF Score: 150.6246
+Chunk Text: How-
+ever, the exact contribution of these enzymes to these respective
+pathways is still not all that clear. Similarly, some of the AGPAT (acyl-
+glycero-phosphate acyl transferase) enzymes that catalyze the acylation
+of lyso-phospholipids are found in the outer mitochondrial membrane
+(e.g. AGPAT4 and AGPAT5) [ 3], whereas others are found in the ER. AGPAT enzymes are mostly believed to use lyso-PA to generate PA inthe de novo lipid synthetic pathway, but which isozymes are most
+important for phospholipid synthesis is not yet known. Interestingly,
+Agpat4−/−mice show signi ﬁcant decreases in phosphatidylinositol
+(PI), phosphatidylcholine (PC), and phosphatidylethanolamine (PE) butnot in phosphatidic acid (PA), phosphatidylserine (PS), phosphati-
+dylglycerol (PG) or cardiolipin levels in the brain [ 6]; suggesting that
+PA made on the outer surface of the mitochondria by this enzyme has toﬁnd its way to the ER, where the a ﬀected phospholipids are known to
+be made, and that not all phospholipid synthetic pathways are fed
+uniformly through the action of this enzyme. 
+
+Reference 15:
+Reference 15 (FAISS and BM25) with RRF Score: 150.5398
+Chunk Text: Histological examination confirmed emergingtumors to express MYC and to be solid ILCs, consistent with thepredominant tumor type emerging from mammary glands ofK14-Cre ;Cdh1
+F/F;Trp53F/Ffemale mice ( Derksen et al., 2006 ;
+Klarenbeek et al., 2020 ;Doornebal et al., 2013 ). We orthotopi-
+cally transplanted EP- MycERT2tumors into the mammary fat
+pads of immunocompetent female mice. When allografts became
+palpable, recipient mice were allocated to either normal orand one-way ANOVA and Tukey ’s post-hoc test were performed to compute adjusted P values (*P < 0.05; **P < 0.01; ***P < 0.001). (C and D) TF target and
+motif enrichment analyses for upregulated and downregulated genes in resistant vs. sensitive and resistant vs. control comparisons (RNA-seq profi les derived
+from 9 control, 10 sensitive, and 14 resistant KEP tumors). TF targets and motifs were obtained from ChEA2016 (C) and TRANSFAC_and_JASPAR_PWMs (D), a ll
+collected in the EnrichR database ( Kuleshov et al., 2016 ). TF enrichment scores were defined as −log10(FDR) for upregulated genes in each comparison and as
+the additive inverse of −log10(FDR) for downregulated genes in each comparison and computed by Fisher ’s exact test followed by Benjamini & Hochberg
+correction. 
+
+Reference 16:
+Reference 16 (FAISS and BM25) with RRF Score: 150.4722
+Chunk Text: One extensively stud-ied example is myelin-associated glycoprotein (MAG). Although MAG also contains a CRAC motif (Saher and Simons 2010), it most likely does not associate with cho-lesterol. MAG is a member of the noncompact fraction of PNS and CNS myelin. In accordance with its localiza-tion, MAG is not found in detergent-resistant membranes (Erne and others 2002; Saher and others 2009). MAG is a single-span transmembrane glycoprotein with five extra-cellular Ig-like domains that are involved in adhesion of glial cells to axons. MAG supports long-term axon-myelin stability, despite its low abundance (Schnaar and Lopez 2009). Axonal degeneration of MAG null mice is preceded by alterations of the axonal cytoskeleton (Schnaar and Lopez 2009). Especially at the node of Ranvier, the correct distribution of axonal proteins (i.e., adhesion mol-ecules and ion channels) is influenced by MAG. To date, sialoglycans and Nogo receptors have been described as functional receptors for MAG (Kelm and others 1994; McGee and Strittmatter 2003). 
+
+Reference 17:
+Reference 17 (FAISS and BM25) with RRF Score: 150.4494
+Chunk Text: For further details on the molecular composition of these domains, we address the reader to seminal reviews on this topic [9 –12]. The outermost region of a myelinated fiber is not uni-
+form but interrupted by appositions between the abaxonal Schwann cell membrane (the layer facing ECM, which is opposite to the adaxonal membrane) and the outer layer of the compact myelin [13] (Fig. 1b, d). These contacts are formed by the interaction between the ECM and the βDG (dystroglycan)-DRP2 (dystrophyn-related 2)-PRX (Peri-axin) complex, which intracellularly is linked to the F-actin cytoskeleton [14– 17]. These membrane appositions thus 
+form longitudinal cytoplasmic channels called Cajal bands, which represent fast tracks for transport of molecules and organelles from the perinuclear region to the periphery [13]. Consistent with this, these channels contain microtubules, intermediate filaments, and F-actin. Cajal bands are also enriched in caveolae-mediating endocytosis from the extra-cellular environment, thus suggesting that these structures are also relevant for Schwann cell metabolism [1 , 4]. 
+
+Reference 18:
+Reference 18 (FAISS and BM25) with RRF Score: 150.1797
+Chunk Text: S2g –i). However, we did ﬁnd that the total
+mitochondrial acetyl-carnitine level was >4 times higher in MYC
+HME cells compared to TERT HME cells (Supplementary Fig. S2j –l),
+suggesting a much higher rate of acetyl-carnitine production inMYC HME cells. In addition, we detected ef ﬂux of acetyl-carnitine
+into the medium from MYC and T58A HME cells, but not TERT and
+HER2 HME cells, further evidence of highly active FAO in MYC HMEcells (Supplementary Fig. S2m). Overall, these results suggest that
+demRNA expression
+mRNA expression
+TERTMYCT58AHER2 TERTMYCT58AHER2
+TERT
+MYC
+T58A
+HER2LPL Activity
+(Relative to [protein])
+Time (min)003 × 106
+1 × 1062 × 106
+20 40 60******f
+TERT
+MYCTERTCounts
+Alexa488αCD36αGFP
+(isotype control)MYCg
+FAO in MYC HuMEC
+OCR (fmol/min/cell)*****
+pTRIPZ
+shCD36#2shCD36#3mRNA expression
+pTRIPZ
+shCD36#2shCD36#3hi****
+********
+****
+N.S. N.S. **N.S.Associated IPA Network 4
+Lipid metabolismb a
+MYC
+HER2
+TERTLipid metabolism associated genescCD36
+1500
+1000
+50080
+60
+40
+20
+0 0LPL
+CD36 1.5 5
+4
+3
+2
+1
+01.0
+0.5
+0.0CD36
+CYP4X1
+LPL
+ALDH3A1
+ACSL5
+LRP3
+SLC27A5
+PDK4
+PLIN
+APOD
+DAGLA
+FABP3
+ACSM3
+FABP4
+CES1
+GPD1
+ACADL
+ACSL1
+APOE
+ABCD2
+SLC27A2
+TXNIP
+LRP4
+CRAT
+FADS1
+NR1H3/LXRA
+ACADS
+ACOT2
+ACOT1
+FADS2
+CHPT1
+ECH1
+SCARB1
+IDH2
+CPT1A
+SUCLG2
+ACAT1
+SDHD
+CIDEC
+HMGCL
+ACACB
+LPIN2
+ACAD10
+ACAA2
+SDHB
+HADH
+ACO2
+DAGLB
+ETFB
+FH
+ML YCD
+ACADM
+FABP5
+PECI
+SUCLG1
+DECR2
+ETFDH
+HADHB
+VDAC1
+PDHX
+MDH2
+CPT2
+IDH3B
+BDH
+SLC27A1
+PDH1A
+GPAM
+UCP3
+SLC10A1
+GYS2
+CES3
+SCI
+ACO T4
+ADFP
+ABCG1
+RAB9A
+ACO T7
+VLDLR
+LIPG
+AQP3
+LDLR
+ABCG2
+SLC10A2
+ABCA1
+ABCA1
+ANGPTL4
+ELOVL7
+MGLL
+ABCB4
+ADIPOR2
+ACSL4
+CAV1
+LIPE
+ACO T9
+PLTP
+NPC1
+NR1I3/FXR
+SCD
+CPT1B
+ACSL3
+PCTP
+AGPAT6
+ACAA1
+LEPR
+AGPAT2
+NR1H2/LXRB
+ACOT8
+EHHADH
+LDHA
+HACL1
+GPD2
+ELOVL6
+IDH1
+CROT
+ACADVL
+ACOX1
+LIPA
+SLC22A5
+SLC27A4
+HIBCH
+DECR1
+HMGCRS1
+DGAT2
+UCP2
+HMGCR
+DGAT1
+FASN
+MDH1
+ALDH3A2
+SLC25A10
+IDH3G
+PDHB
+CS
+ACSS2
+CYP27A1
+ACACA
+PNPLA2
+AGPA T5
+HSD17B4
+PEX11A
+ETFA
+OGDH
+SCARB2SCARB2
+ACAD8
+SLC25A20
+AC
+LY
+SDHC
+HSD17B12
+HADHA
+PDK1
+VDAC3
+SREBF1
+ELOVL5
+IDH3A
+SUCLA2
+VDAC2
+ACAD9
+ABCD3
+AGPAT3
+SDHA
+ALDH9A1
+ACO1−1 −0.5 0 0.5 1
+Column Z−ScoreColor key0 2 4
+–log10FDR618 Osteoarthritis pathway
+Axonal guidance signalling
+Atherosclerosis signalling
+LPS/IL-1 mediated inhibition of RXR functionHepatic fibrosis/hepatic stellate cell activation
+LXR/RXR activation
+PPAR signalling
+Role of tissue factor in cancer
+HOTAIR regulatory pathway
+Basal cell carcinoma signalling
+Regulation of the EMT pathway
+Leukocyte extravasation signalling
+Wnt/beta-catenin signalling
+Inhibition of angiogenesis by TSPI
+Aryl hydrocarbon receptor signalling
+Xenobiotic metabolism signallingRole of macrophages, fibroblasts and endothelial cells in RAProstanoid biosynthesis
+Human embryonic stem cell pluripotencyGranulocyte adhesion and diapedesis
+Inhibition of matriz metalloproteases
+Role of osteoblasts, osteoclasts and chondrocytes in RAGlucocorticoid receptor signalling26
+13
+14
+14
+10
+17
+12
+6 N
+%total
+≥10%
+≤5%9%
+8%
+7%
+6%changed
+genes13
+8
+3
+9
+14
+8
+9
+6
+10
+10
+9
+4
+8
+12MYC regulates fatty acid metabolism through a multigenic program in. 
+
+Reference 19:
+Reference 19 (FAISS and BM25) with RRF Score: 149.9103
+Chunk Text: 2 B ). This indicated functional ac-
+tivation of MYC in AZD8055-resistant tumors. We next per-formed transcription factor (TF) target enrichment analysisusing the TF target information collected from previouslypublished genome-wide chromatin immunoprecipitation (ChIP)assays and motif-based prediction, as deposited in the EnrichRresource ( Kuleshov et al., 2016 ). Upregulated genes in resistant
+tumors showed the strongest enrichment for genes containing
+binding sites for MYC as well as MYC-binding motifs ( Fig. 2, C
+and D ). Finally, MS-expression proteomics data similarly re-
+vealed the activation of MYC targets in resistant tumors ascompared with control and sensitive tumors ( Fig. 2, E and F ). Taken together, these data show that during long-term AZD8055treatment, MYC governs a transcriptional program potentiallydriving resistance to mTORi. MYC directs biological processes associated with
+mTORi responseTo gain insight into the resistance-associated transcriptionalprograms mediated by MYC, we further explored the GSVAresults ( Fig. 
+
+Reference 20:
+Reference 20 (FAISS and BM25) with RRF Score: 149.9075
+Chunk Text: Organic phasewas dried under nitrogen stream, and the dried lipid extraction wasdissolved in 150
+/H9262l of cholesterol assay buffer (Abcam) and analyzed
+using the colorimetric method. Biochemical studies. Sciatic nerves from WT and PMP22/H11002//H11002mice ( n/H11005
+3– 6 animals per group, per experiment) were processed for Western
+blotting ( Amici et al., 2006 ). Cultured cells were lysed in SDS gel sample
+buffer (62.5 m MTris, pH 6.8, 10% glycerol, and 3% SDS), supplemented
+with complete protease (Roche) and phosphatase (Sigma) inhibitors.Samples were separated on 7.5% or 10% acrylamide gels under reducingconditions and transferred to nitrocellulose membranes (Bio-Rad). Blotswere probed with the following antibodies: rabbit anti-PMP22 (
+Pareek et
+al., 1997 ;Amici et al., 2006 ); rabbit anti- /H9252-galactosidase ( /H9252-gal; Abcam);
+rat anti-E-cadherin (Sigma); goat anti-ApoE (Millipore); mouse anti-myelin associated glycoprotein (MAG, Millipore); anti-
+/H9251-tubulin and
+anti-actin (Sigma); anti-glyceraldehyde-3-phosphate dehydrogenase(GAPDH; EnCor Biotechnology); vinculin (Sigma); and flotillin-1 (Ab-cam). 
+
+Reference 21:
+Reference 21 (FAISS and BM25) with RRF Score: 149.8021
+Chunk Text: 4A; Verheijen and others 2009; Saher and others 2009). In both mutants, affected Schwann cells take up at least some cholesterol/lipids from other (nonrecombined) cells of the nerve, such as fibroblasts and macrophages. Consequently, the expres-sion of genes involved in cholesterol uptake, such as Apoe 
+and Apod , is increased in peripheral nerves of SQS mutant 
+mice (Saher and others 2009). In SCAP mutants, the altered 
+Figure 4. PNS phenotype of squalene synthase (SQS) and SCAP conditional mouse mutants. (A) Severely delayed myelination in 
+sciatic nerves from conditional SQS mutants at the age P360 or conditional SCAP mutants at the age P210. (B–C) P0 detection by immunoelectron microscopy on P14 sciatic nerve of SQS mutants. P0 is present in compact myelin and absent from noncompact myelin areas. In addition to compact myelin, P0 is found in vesicular/tubular profiles within the Schwann cell ER (arrows and details of boxed area in top right). The diagram clarifies structures of the picture. 
+
+Reference 22:
+Reference 22 (FAISS and BM25) with RRF Score: 149.5202
+Chunk Text: Several of the deregulat -
+ed genes (c-Jun , Pou3f1, Id2, Ednrb ) have been shown to inhibit 
+myelination and/or myelin gene expression (41, 50–52). The pro -
+filing of ASO-treated animals provided further insight into those gene expression changes, such as those observed for Id2  and 
+Bzw2 , that are restored upon ASO treatment. Since this group is 
+relatively small (<100), this provides important information on treatment-responsive gene expression changes that help normal-
+ize Schwann cell function. Future measurement of these genes 
+along with PMP22 mRNA in skin biopsies (as done in the foot pad analysis) could provide important biomarkers that can be used in clinical trials. Since overreduction of PMP22 levels could theoreti-cally cause the HNPP neuropathy caused by loss of a PMP22 allele, evaluation of PMP22 mRNA and other biomarkers can be used to monitor for this clinically. Overall, these studies demonstrate the potential therapeutic utility of ASOs in treating CMT1A and eluci-date the gene expression networks that respond to successful res-
+toration of normalized PMP22 levels. 
+
+Reference 23:
+Reference 23 (FAISS and BM25) with RRF Score: 149.4192
+Chunk Text: Ca2?uptake by energized
+mitochondria was discovered about half century ago
+LKB1?a
+b? Myelination
+DemyelinationAxonLipid LipidAxonal electrical activity
+Abnormal mitochondriamutationsnDNA
+mtDNAMetabolic
+Stress
+degenerationsynthesis oxidationROS
+productionCell
+death
+? ? ?Expression of 
+metabolic enzymes Production 
+of citrate[Ca2+]mt
+Lipid
+synthesisEnergy
+productionIP3RP2RY2
+Ca2+ATP
+MCUbFig. 1 Schematic diagram depicting how SC mitochondria are
+involved in the myelination ( a) and pathogenesis of peripheral axons
+(b).aSignaling that regulates mitochondrial metabolism in SCs
+during myelination. Lkb1 plays a key role in the upregulation ofmitochondrial metabolic enzymes and production of citrate, animportant metabolite for mitochondrial energy production and lipid
+synthesis. Upstream and downstream regulators of Lkb1 in SC have
+not been well characterized. However, stimulation of P2RY2, a Gq-coupled receptor, by ATP released from ﬁring axons increases the
+cytoplasmic Ca
+2?concentration via IP 3receptor-mediated Ca2? 
+
+Reference 24:
+Reference 24 (FAISS and BM25) with RRF Score: 149.3616
+Chunk Text: However, it was
+found that ABCA1-dependent cholesterol ef ﬂux was decreased. This was detected as a sharp decrease in ApoE
+secretion (along with cholesterol) in PMP22 KO SC cultures. Decreased cholesterol ef ﬂux was explained by
+observation that traf ﬁcking of ABCA1 to the plasma membrane was signi ﬁcantly decreased. This was found
+when cyclosporin A-blocking endocytosis of plasma membrane-associated ABCA1 resulted in no effect on
+levels of secreted cholesterol, suggesting minimal levels of ABCA1 at the plasma membrane of PMP22 KOmouse SCs. Reduced levels of ABCA1 at the plasma membrane were con ﬁrmed by cell surface immuno ﬂuores-
+cence microscopy in both nerves and cultured SCs. These results in PMP22 KO mice suggest an important role for PMP22 in promoting ABCA1-mediated chol-
+esterol export from SCs, although the mechanism remains uncertain. Interestingly, PMP22 protein levels in
+ABCA1 KO mouse nerves were increased 1.5-fold over WT while other myelin genes MAG, MPZ, and p75
+remained relatively unchanged. 
+
+Reference 25:
+Reference 25 (FAISS and BM25) with RRF Score: 149.2177
+Chunk Text: The only network in MYC HME cells
+associated with metabolism was “lipid metabolism ”(IPA Network
+4), whose components are shown in Fig. 2a. The IPA also indicated
+that some of the most signi ﬁcantly altered canonical signalling
+pathways (377 genes; FDR < 5%; Min. fold: 6.81) in MYC HME cellswere involved in lipid metabolism, including atherosclerosissignalling, LXR/RXR activation, and PPAR signalling (Fig. 2b, black
+boxes). Gene expression analysis of an unbiased list of 163
+different genes (Supplementary Table S4) associated with lipid
+metabolism across TERT, MYC, and HER2 HME cells revealed asigni ﬁcant enrichment of upregulation in MYC versus TERT (1.4-
+fold over all upregulated genes, p=5×1 0
+−8by Fisher Exact Test). Notable functions for those genes were related to lipid transport,
+acyl-CoA metabolism, mitochondrial β-oxidation, and lipases. Our
+ﬁndings agree with Camarda et al. who also reported a strong
+representation of fatty acid metabolism genes in TNBC patients.10
+We next performed a lipidomic analysis that revealed that
+phosphatidylcholine (PC) and cardiolipin contained longer, moreunsaturated fatty acyl chains compared to TERT cells (Supple-mentary Fig. 
+
+Reference 26:
+Reference 26 (FAISS and BM25) with RRF Score: 149.1794
+Chunk Text: We characterized this pattern further by costaining
+with markers of specific subcellular compartments. A partial
+overlap with ubiquitin was observed ( Fig. 1 D), but no overlap
+was found with markers of late endosomes (LBPA; Fig. 1 E), the
+endoplasmatic reticulum (PDI; Fig. 1 F), lysosomes, the Golgi, or
+mitochondria (data not shown). Fig. 3. Localization of NDRG1 in the adult peripheral nerve. (A and B) Fixed teased fibers were double labeled with a rabbit antiserum against NDRG1 (re d)
+and a monoclonal antibody against MAG (green). NDRG1 colocalizes with MAG in incisures (arrowheads), the inner mesaxon (arrow), and in paranodes (th e
+region flanking the nodes; apposed arrowheads). The Schwann cell nucleus is marked with an asterisk. (C) Longitudinal section through the rat sciati c nerve. NDRG1 (red) is mainly localized in the abaxonal cytoplasm (arrow) but colocalizes with MAG (green) in incisures (arrowheads). (D) Transverse sectio no f
+ventral roots. NDRG1 staining is stronger in the abaxonal cytoplasm (arrowhead) than the MAG staining localized at the innermost myelin membrane (ar row). 
+
+Reference 27:
+Reference 27 (FAISS and BM25) with RRF Score: 149.1755
 Chunk Text: LIPID DYSMETABOLISM CONTRIBUTES TO MYELIN DISORDERS
 To summarize the relevance of myelin lipid physiology to human diseases, a
 brief discussion regarding the interrelationship between myelin-related disorders
@@ -42,8 +709,8 @@ in peroxisomes ( Figure 4 A).151,152VLCFA accumulation in the CNS following
 ABCD1 loss is considered detrimental for white matter integrity and possibly
 causative for ALD. 
 
-Reference 4:
-Reference 4 (FAISS and BM25) with RRF Score: 15.9541
+Reference 28:
+Reference 28 (FAISS and BM25) with RRF Score: 149.1755
 Chunk Text: LIPID DYSMETABOLISM CONTRIBUTES TO MYELIN DISORDERS
 To summarize the relevance of myelin lipid physiology to human diseases, a
 brief discussion regarding the interrelationship between myelin-related disorders
@@ -61,8 +728,8 @@ in peroxisomes ( Figure 4 A).151,152VLCFA accumulation in the CNS following
 ABCD1 loss is considered detrimental for white matter integrity and possibly
 causative for ALD. 
 
-Reference 5:
-Reference 5 (FAISS and BM25) with RRF Score: 15.9294
+Reference 29:
+Reference 29 (FAISS and BM25) with RRF Score: 149.1352
 Chunk Text: Because neuronal upregulation of genes related to choles-
 terol metabolism could be a general response to chronic myelinalterations, we analyzed transcriptional proﬁles of isolated
 cortical neurons following acute experimental autoimmune
@@ -74,8 +741,18 @@ gene expression related to cholesterol metabolism ( Figure 2 E). In contrast, du
 cholesterol metabolism was increased ( Figure 2 E;Table S3 ). To test whether the upregulation of cholesterol synthesis geneswas functionally relevant, we determined the abundance of ste-rols by gas chromatography coupled to mass spectrometry
 (GC/MS) in the chronic remyelination paradigm. 
 
-Reference 6:
-Reference 6 (FAISS and BM25) with RRF Score: 15.9279
+Reference 30:
+Reference 30 (FAISS and BM25) with RRF Score: 149.1338
+Chunk Text: Mutations in the CRAC motif resulted in a decoupling of PMP22 and cholesterol
+trafﬁcking with PMP22 primarily being retained in the ER and Golgi in SCs. The above observation suggests that at least one other factor may be involved in shunting cholesterol to the
+Golgi, post-synthesis. MPZ is a possible candidate since it is known that its ER exit to the Golgi is cholesterol-
+dependent, a phenomenon diminished by mutations in its putative cholesterol binding sequence [ 53]. MPZ
+and PMP22 were recently shown to directly interact in a cholesterol-dependent manner via their transmem-brane segments (the ectoplasmic end of the 2nd transmembrane helix of PMP22 interacts with the ectoplasmic
+end of the MPZ transmembrane helix) [ 54]. This interaction seems to be functionally important as evidenced
+by the fact that the A67T mutation, which causes a mild form of CMT, maps to this putative binding interface.However, traf ﬁcking of either protein to the PM does not appear to be dependent on the other [ 54,55]. 
+
+Reference 31:
+Reference 31 (FAISS and BM25) with RRF Score: 149.1330
 Chunk Text: The transcriptional program involved in the c-Myc-dependent downmodulation of the F-actin cytoskeleton remains to be determined, but it could be identified in the near future by comparing the tran -
 scriptomes of c-Myc-expressing fibroblasts and parental cells. Given the availabil -
 ity of inducible c- Myc knock-in mice, an 
@@ -84,8 +761,8 @@ interesting experiment in the future will be to verify whether the inactivation 
 cells display more robust and abundant stress fibers and focal adhesions than their wild type TGR-1 counterparts (Sauzeau V, Berenjeno IM, Citterio C and Bustelo XR, unpublished data). Further work in this area will allow us to obtain a better view of the influence of c-Myc on the cytoskeletal dynamics of normal and can -
 cer cells and to identify all the molecules/pathways involved in this negative feed-back mechanism. 
 
-Reference 7:
-Reference 7 (FAISS and BM25) with RRF Score: 15.8760
+Reference 32:
+Reference 32 (FAISS and BM25) with RRF Score: 149.0488
 Chunk Text: How can PMP22  overexpression  change  MYC expression  as rationalized by chatGPT  
  
 Certainly! Let’s explore how overexpression of  PMP22 
@@ -104,17 +781,220 @@ like PI3K -AKT or MAP K.
 • These pathways can modulate  MYC expression directly or indirectly through upstream 
 regulators such as  mTO R or transcription factors like  NF-κB. 
 
-Reference 8:
-Reference 8 (FAISS and BM25) with RRF Score: 15.6044
-Chunk Text: To test the efficacy of ASO6 in reducing rat Pmp22 mRNA, 
-we treated 6-week-old CMT1A rats weekly for 12 weeks with PBS, control ASO (12.5 mg/kg), or ASO6 (12.5 mg/kg) and sacrificed the rats following electrophysiological testing performed 1 week in RT4-D6P2T cells and in vivo screening of ASOs in Sprague- Dawley rats and identified an active ASO (ASO6) that effectively suppressed rat Pmp22 mRNA in a dose-dependent manner, but had no effect on mouse Pmp22 mRNA (Supplemental Figure 5, 
-Figure 2. Transcriptional changes in C22 mice following ASO treatment. (A) Hierarchical clustering of the expression profiles of 76 DEGs. (B) Subset of lip-
-id biosynthetic genes, Schwann cell differentiation markers, myelin inhibitors, and myelin-related genes altered by 9 weeks after ASO1 treatment. (C) PCA of 76 DEGs. Correlation analyses of CMAP amplitude and mRNA expression of (D) Bzw2 (Pearson r
-2 = 0.51, P < 0.01), (E) Ugt8a (Pearson r2 = 0.52, P < 0.01), 
-and (F) Sc5d (Pearson r2 = 0.48, P < 0.01). (G–J) qRT-PCR confirmation of mRNA expression of Sc5d, Mpz, Pou3f1, and Id2 in ASO1-treated sciatic nerves. 
+Reference 33:
+Reference 33 (FAISS and BM25) with RRF Score: 148.9363
+Chunk Text: CMT1A exhibits dysregulated lipid biosynthesis
+Comparative microarrays were used to compare gene expression from sciatic nerves of WT rats with mildly and
+severely affected CMT1A model rats expressing a 3rd WT PMP22 allele [ 24]. It was found that dysregulation of
+22 lipid metabolism genes correlated with disease severity. In both mildly and severely affected animals mostexamined lipid metabolism genes were down-regulated at both 1 week and 9 weeks of age. Interestingly, there
+was an age-dependent switch between mildly affected and severely affected rats with mildly affected rats exhibit-
+ing more lipid biosynthetic gene dysregulation at 1 week of age and severely affected rats exhibiting more lipidbiosynthesis gene dysregulation at 9 weeks of age. Follow-up quantitative PCR experiments validated Adipoq,
+Lpl, Scd1, Pparg, Prkar2b, Ssg1, and Thrsp as being dysregulated. Figure 1. Cartoon representation for the AlphaFold2-predicted structure of PMP22. Highlighted are locations of the CRAC motif in TM4 (residues 147 –159, red), CARC motif in TM3 (residues 92 –104, blue), and
+palmitoylation site (residue C85, yellow sticks). 
 
-Reference 9:
-Reference 9 (FAISS and BM25) with RRF Score: 15.3688
+Reference 34:
+Reference 34 (FAISS and BM25) with RRF Score: 148.9323
+Chunk Text: Library con-
+structions were generated fro m2 6t o3 4n tf o o t p r i n tf r a g m e n t s
+and sequenced with 75-bp single-reads using the NextSeq HIGHsystem (Illumina). Sequencing reads were first trimmed to re-move adaptor sequences in reads using the Cutadapt (version 3.5;Martin, 2011 ) and resulting reads shorter than 20 bp were dis-
+carded. Reads derived from rRNAs and tRNAs were filtered byalignment to sets of mouse rRNA and tRNA references usingbowtie2 (version 2.4.5; Langmead and Salzberg, 2012 ). The re-
+maining reads were aligned to the mouse reference genome
+Mouse_M15_CTAT_lib_Nov012017 using the Tophat2 (version2.1.1; Kim et al., 2013 ). Only primary alignments with mapping
+qualities of 10 or greater were used for the quantification of arepresentative transcript for each gene using HTSeq (version1.99.2; Anders et al., 2015 ). The transcript that shared most exons
+with other transcripts in the gene w as selected as a representative
+transcript using CGAT (version 0.6.5; Sims et al., 2014 ). 
+
+Reference 35:
+Reference 35 (FAISS and BM25) with RRF Score: 148.8301
+Chunk Text: 7 B), however, NDRG1 transcript levels
+also fell initially but returned by 24 days, reaching normal levels
+after 2 months when remyelination of regenerated axons iscomplete. To determine the effect of nerve injury on NDRG1 protein, we
+examined the distal nerve stumps of adult rat sciatic nervesbetween 4 and 58 days postlesion. At 4 days posttransection, themyelin sheaths looked largely intact and NDRG1 and MAG
+stainings resemble that in unlesioned nerves ( Fig. 8 A). At 12 days,
+the architecture of most myelin sheaths was obliterated, and there
+Fig. 5. NDRG1 is not detected in PNS neurons. These are images of
+sections of the spinal cord (A), dorsal root ganglia (B), double labeled witha rabbit antiserum against NDRG1 (red), and a monoclonal antibody
+against MAG (green); DAPI nuclear counterstaining (blue) is included in
+the merged image shown in A. In the spinal cord, NDRG1 is not detected inmotor neurons (asterisks); the NDRG1-positive cells (arrowheads) areoligodendrocytes. In the DRG, NDRG1 is not detected in sensory neurons
+(asterisks); the NDRG1-positive cells are satellite cells (arrowheads) and
+myelinating Schwann cells. 
+
+Reference 36:
+Reference 36 (FAISS and BM25) with RRF Score: 148.6012
+Chunk Text: 2 A ). Apart from terms directly connected to MYC
+activity, we also observed dynamic changes of immune-relatedpathways in the process of acquiring AZD8055 resistance ( Fig. S2, A and B ). The interferon α/γresponse pathways were
+significantly downregulated in resistant tumors ( Fig. 3 A ),
+indicating a potential role of MYC in suppressing interferonsignaling ( Muthalagu et al., 2020 ;Swaminathan et al., 2020 ;Kim
+et al., 2016 ;Zimmerli et al., 2022 ). TF target enrichment analysis
+demonstrated that downregulated genes in resistant tumorswere significantly enriched by the targets of immune-associatedtranscription regulators such as IRF8 and SMRT, supporting the
+suppression of immune response in resistant tumors ( Fig. 2, C
+and D ). Likewise, other immune processes such as IL6 –JAK–STAT3 signaling, IL2 –STAT5 signaling, inflammatory response,
+and complement were similarly triggered by short-term treat-ment of AZD8055 but became suppressed during resistance ac-quisition ( Fig. 3 A andFig. S2 C ). Moreover, immune infiltration
+as assessed by Estimation of Stromal and Immune cells in Ma-
+lignant Tumours using Expression data (ESTIMATE; Yoshihara
+et al., 2013 ) was predicted to be enriched in sensitive tumors,
+while resistant tumors showed an immune exclusion phenotype(Fig. 
+
+Reference 37:
+Reference 37 (FAISS and BM25) with RRF Score: 148.4991
+Chunk Text: Keywords
+ Schwann cell · Myelin · Peripheral nervous system · Peripheral neuropathy
+Abbreviations
+ADAM17   ADAM metallopeptidase domain 17
+Akt  V-Akt murine thymoma viral oncogene-like protein
+AMPK
+  5′-Adenosine monophosphate- activated 
+protein kinase
+BAF   Brahma-associated factor
+cAMP   Cyclic adenosine monophosphate
+Clp  Claw paw
+CNS   Central nervous system
+Crb3   Crumbs cell polarity complex component 3
+c-Jun   Jun proto-oncogene
+AP-1   Transcription factor subunit
+CADM   Cell adhesion molecule
+CMT   Charcot–Marie–Tooth
+CX32   Connexin 32
+DG  Dystroglycan
+Dlg1/SAP97   Discs large 1/synapse-associated protein 97
+DRG   Dorsal root ganglia
+DRP   Dystrophin-related protein 2
+ECM   Extracellular matrix
+Egr2   Early growth response 2Erb-B2   Receptor tyrosine kinase 2
+GJB1   Gap junction protein beta 1, the Connexin 32 gene
+GPR126
+  G protein-coupled receptor 126
+GPR44   G protein-coupled receptor 44
+HDAC   Histone deacetylase
+HMN   Hereditary motor neuropathy
+HSAN   Hereditary sensory and autonomic neuropathy
+HSN
+  Hereditary sensory neuropathy
+IMA   Inner mesaxon
+IPL  Intraperiod line
+IPN  Inherited peripheral neuropathy
+iSCs   Immature Schwann cells
+JAG1   Jagged 1
+MAG   Myelin-associated glycoprotein
+MAGUK   Membrane-associated guanylate like kinase
+MAPK   Mitogen-activated protein kinase
+MBP   Myelin basic protein
+MCT1   Monocarboxylate transporter 1
+MPZ   Myelin protein zero gene
+MTMR   Myotubularin-related
+mTOR   Mechanistic target of rapamycin kinase
+MUPP1   Multi-PDZ domain protein
+NDRG1   N-Myc downstream regulated 1
+Necl   Nectin-like protein
+NFATc4   Nuclear factor of activated T cells 4
+NF-kB   Nuclear factor kappa-light-chain-enhancer of activated B cells * Alessandra Bolino 
+ bolino.alessandra@hsr.it
+1 Human Inherited Neuropathies Unit, Institute 
+of Experimental Neurology INSPE, Division of Neuroscience, IRCCS Ospedale San Raffaele, Via Olgettina 60, 20132 Milan, Italy/ Published online: 9 July 2021Neurotherapeutics (2021) 18:2169–2184
+1 3NF186   Neurofascin 186
+NF2  Neurofibromin
+Notch-1   Notch homolog 1, translocation-associated
+Nrcam   Neuronal cell adhesion molecule
+NRG1   Neuregulin
+N-WASP   Wiskott–Aldrich syndrome protein
+Lgi4   Leucine-rich repeat LGI family member 4
+LKB1   Liver kinase B1
+L-PGDS   Prostaglandin D2 synthase
+Oct6   (Pou3f1, POU Class 3 Homeobox 1)
+OMA   Outer mesaxon
+Pals1/MPP5   Membrane palmitoylated protein 5
+Par3  Partitioning defective protein
+PatJ  PATJ crumbs cell polarity complex 
+component
+PGD2   Prostaglandin D2
+PLCɣ  Phospholipase C gamma
+PKA   Protein kinase A
+PKC   Protein kinase C
+PMP22   Peripheral myelin protein 22
+PNS  Peripheral nervous system
+PrP  Prion protein
+PTEN   Phosphatase and tensin homolog
+P0  Myelin protein zero
+RBPJ   Recombination signal binding protein for immunoglobulin kappa J region
+REDD1
+  Regulated in development and DNA dam-age responses 1
+PIK3CA
+  Phosphatidyl-inositol 3 kinase (PI3K) class I
+PRX
+  Periaxin
+PTEN   Phosphatase and tensin homolog
+SC  Schwann cells
+SCPs   Schwann cell precursors
+SGK1   Serum/glucocorticoid regulated kinase 1
+SHP2   Src homology region 2 (SH2)-containing protein tyrosine phosphatase 2
+Sox10
+  SRY-box transcription factor 10
+SREBP   Sterol regulatory element-binding protein
+TACE   TNF-alpha convertase enzyme
+TAZ   YAP co-activator with PDZ binding domain
+TEAD
+  TEA domain transcription factor
+TF  Transcription factor
+TSC  Tuberous sclerosis complex
+YAP   Transcription co-activator Yes-associated protein 1
+YY1
+  Yin-Yang transcription factor 1
+Zeb2   Zinc finger E-box binding homeobox 2
+ZO-1   Tight junction protein 1Organization of Myelinated Fibers in the PNS
+In the peripheral nervous system (PNS), myelin is formed by the spiral wrapping of the Schwann cell plasma mem-brane around the axon [1 –3]. 
+
+Reference 38:
+Reference 38 (FAISS and BM25) with RRF Score: 148.4157
+Chunk Text: Mutations in MPZ 
+can prevent the mutant protein from reaching the membrane 
+and cause its retention and accumulation in the ER inducing 
+apoptosis and subsequent neuropathy. Retention of the 
+mutant proteins in the ER leads to activation of the UPR, an 
+adaptive and protective process to relieve stress from mis-
+folded proteins (Figure 2). However, when cells are in chronic 
+stress, such as in CMT1B, the UPR becomes inadequate, and it 
+activates apoptotic pathways resulting in cell death or abnor -
+mal signaling. Many MPZ mutations were shown to activate 
+the UPR and cause CMT1B, and these mutations may be 
+susceptible to future therapies targeting the UPR [32]. The 
+first studies showed a potential benefit from curcumin, 
+which is able to modulate the UPR among its many activities 
+[33,34]. More recently, Sephin-1 (IFB-088) – an inhibitor of the 
+dephosphorylation of eIF2a, a kinase belonging to the PERK 
+arm of the UPR – that prolongs protein translation attenuation 
+in response to stress, was shown to be beneficial in the S63del 
+and R98C MPZ mouse models, prolonging the response and 
+preventing the molecular, morphological and motor defects of 
+the neuropathy [35,36]. 
+
+Reference 39:
+Reference 39 (FAISS and BM25) with RRF Score: 148.3657
+Chunk Text: The drug was administered to explant cultures of C22 mice, which im-
+proved processing of PMP22 and enhanced myelin internodal proﬁle; it also increased the
+production of other myelin-related proteins; nevertheless, despite these potential in vitro
+outcomes, rapamycin did not recover neuromuscular performance in the Tr-J mouse model
+in vivo [50]. 3.2.8. Sox2 and Id2
+The myelination status of SCs appears to be detected by the stability between opposing
+signaling systems. Positive regulators such as Krox-20, Oct-6, Sox-10, Brn2, and NF- B are
+predominant in normal nerves, but the balance shifts to negative regulators such as c-Jun,
+Notch, Pax-3, Sox2, and Id2 in the injured and pathological nerves. In addition, negative
+regulators may be important in the onset and myelination rate during growth (59). The
+continued expression of Sox2 and Id2 seems to perform a protective function in neuropathy
+since their elimination in P0S63del mice—a CMT1B mouse model—led to an exacerbation
+of the dysmyelinating phenotype [ 51]. 
+
+Reference 40:
+Reference 40 (FAISS and BM25) with RRF Score: 148.3292
+Chunk Text: 2 MYC HME cells use LPL and CD36 to mobilise and take up fatty acids. a Interaction map of the lipid metabolism gene network in
+MYC HME cells. Ingenuity Pathway Analysis was used to create the interaction map. Black circles highlight lipid metabolism genes CD36 and
+LPL.bTop canonical signalling pathways in MYC versus TERT HME cells based on RNA sequencing data (377 genes; FDR < 5%; minimum fold
+change: 6.81). Ingenuity Pathway Analysis was used to identify the pathways. Black boxes highlight gene ontologies associated with lipidmetabolism. The value next to each bar represents the number of altered genes within the indicated signalling pathway. The colour of the barindicates the percent of genes within the pathway that are differentially regulated. The black dotted line marks signi ﬁcance (FDR < 5%). cHeat
+map showing the relative expression of 163 genes associated with lipid metabolism in TERT, MYC, and HER2 HME cells (1.4 over all
+upregulated genes in MYC HME cells; p=5×1 0
+−8by Fisher Exact Test). 
+
+Reference 41:
+Reference 41 (FAISS and BM25) with RRF Score: 148.2392
 Chunk Text: Mitochondrial Dysfunction Alters SC Lipid Metabolism
 Homeostasis
 The diverse etiology of mitochondrial neuropathies modeled by
@@ -130,59 +1010,8 @@ over, we found that acetyl-CoA carboxylase (ACC) phosphoryla-tion, which inhibit
 increased 3-fold in 2-month-old Tfam-SCKO nerves ( Figures
 4D and 4E). 
 
-Reference 10:
-Reference 10 (FAISS and BM25) with RRF Score: 15.0480
-Chunk Text: Shrivastava et al. BBA - Molecular  Basis of Disease  1870  (2024)  167476  
-3 
-Fig. 1.Transcriptomic analysis of hypoxia exposed FNSC derived-astrocytes. a: Representative western blot of HIF1 α expression in astrocytes exposed to different 
-concentrations of oxygen (β-actin is used as loading control). b: Differentially expressed genes in astrocytes exposed to 0.2 % oxygen (hypoxia) as compared to those 
-exposed to 20 % oxygen (normoxia). Gene set enrichment analysis of gene ontology terms (c) and pathways (d) differentially enriched in hypoxic astrocytes.V. Shrivastava et al. BBA - Molecular  Basis of Disease  1870  (2024)  167476  
-4 
-0.03) pathways were positively enriched in astrocytes exposed to hyp-
-oxia (Fig. 1d). Pathway mapping showed that the gene expression of 
-most of the enzymes involved in terpenoid backbone synthesis and 
-steroid biosynthesis was increased on exposure to hypoxia (Fig. 2a). Cholesterol synthesis increases after hypoxia in FNSC-derived as-
-trocytes as well as in a cell line model. 
-
-Reference 11:
-Reference 11 (FAISS and BM25) with RRF Score: 15.0351
-Chunk Text: The only network in MYC HME cells
-associated with metabolism was “lipid metabolism ”(IPA Network
-4), whose components are shown in Fig. 2a. The IPA also indicated
-that some of the most signi ﬁcantly altered canonical signalling
-pathways (377 genes; FDR < 5%; Min. fold: 6.81) in MYC HME cellswere involved in lipid metabolism, including atherosclerosissignalling, LXR/RXR activation, and PPAR signalling (Fig. 2b, black
-boxes). Gene expression analysis of an unbiased list of 163
-different genes (Supplementary Table S4) associated with lipid
-metabolism across TERT, MYC, and HER2 HME cells revealed asigni ﬁcant enrichment of upregulation in MYC versus TERT (1.4-
-fold over all upregulated genes, p=5×1 0
-−8by Fisher Exact Test). Notable functions for those genes were related to lipid transport,
-acyl-CoA metabolism, mitochondrial β-oxidation, and lipases. Our
-ﬁndings agree with Camarda et al. who also reported a strong
-representation of fatty acid metabolism genes in TNBC patients.10
-We next performed a lipidomic analysis that revealed that
-phosphatidylcholine (PC) and cardiolipin contained longer, moreunsaturated fatty acyl chains compared to TERT cells (Supple-mentary Fig. 
-
-Reference 12:
-Reference 12 (FAISS and BM25) with RRF Score: 14.5383
-Chunk Text: Many different pathways are involved in the pathomechan -
-isms of CMT and related neuropathies: myelin formation and 
-CONTACT Davide Pareyson 
- davide.pareyson@istituto-besta.it 
- Unit of Rare Neurodegenerative and Neurometabolic Diseases, Department of Clinical 
-Neurosciences, Fondazione IRCCS Istituto Neurologico Carlo Besta, Via Celoria 11, Milan 20133, ItalyEXPERT REVIEW OF NEUROTHERAPEUTICS                                                                                                                     
-2021, VOL. 21, NO. 6, 701–713
-https://doi.org/10.1080/14737175.2021.1935242
-© 2021 Informa UK Limited, trading as Taylor & Francis Group
-maintenance, transcription factors of myelin genes, gap junc -
-tions and channels, axonal transport (retrograde and antero -
-grade, kinesins, dynein, dynactin), mitochondrial dynamics, 
-and vesicle trafficking are the main ones. Therapies may be 
-aimed at correcting the specific defect in selected CMT types 
-or be addressed to treat common pathomechanisms in a more general approach valid for wider categories of CMT and pos-
-sibly for other neuropathies (i.e. 
-
-Reference 13:
-Reference 13 (FAISS and BM25) with RRF Score: 14.5215
+Reference 42:
+Reference 42 (FAISS and BM25) with RRF Score: 148.0484
 Chunk Text: [ 1,2](Fig. 1)). These intricate metabolic pathways became
 increasingly complicated in the genomic era after the identi ﬁcation of
 multiple genes encoding enzymes that seemingly carry out the same
@@ -197,561 +1026,218 @@ cerol-3-phosphate (G3P) as the ﬁrst step in de novo lipid synthesis. GPAT3 and
 membrane [ 3,4]. Some of these enzymes, such as GPAT4 [ 5], are cri-
 tical for triacylglycerol (TG) synthesis and lipid droplet (LD) biogenesiswhile others are involved in controlling phospholipid synthesis. 
 
-Reference 14:
-Reference 14 (FAISS and BM25) with RRF Score: 14.5212
-Chunk Text: These hFNSC-derived astrocytes were 
-exposed to hypoxia for 48 h which was validated by an increase in the 
-expression of the hypoxia-responsive protein, HIF1 α. Transcriptomic 
-changes in hypoxia-exposed astrocytes interestingly revealed upregu -
-lation of pathways involved in steroid biosynthesis. The upregulated 
-genes included key enzymes of the cholesterol biosynthetic pathway 
-including HMG-coA reductase (HMGCR), mevalonate kinase (MK) and 
-squalene epoxidase (SQLE). Cholesterol within the central nervous system is produced de novo, as 
-cholesterol from the circulation cannot cross the blood-brain barrier. Within the CNS, cholesterol is produced by astrocytes, neurons as well as 
-oligodendrocytes with astrocytes serving as a source for cholesterol for 
-other cell types during times of need [13]. Cholesterol is transported in 
-the form of ApoE-containing lipoproteins. Astrocytes express ABCA1 for 
-the efflux of cholesterol and form lipoprotein-like particles which are 
-taken up by oligodendrocytes and neurons using LDL-receptor (LDLR), scavenger receptor class B type 1 (SRB1) or LDL-R related protein 1/2 
-(LRP1/2) [14]. 
+Reference 43:
+Reference 43 (FAISS and BM25) with RRF Score: 147.9373
+Chunk Text: See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
-Reference 15:
-Reference 15 (FAISS and BM25) with RRF Score: 14.3885
-Chunk Text: These findings were consistent with the motor behavior and electrophysiology charac-terizations of the C22 cohort described in Figure 1. This was, to our knowledge, the first RNA-seq profiling of 
-a CMT1A model, and the analysis showed some categories of 
-genes in common with microarray profiles of other CMT1A mod-
-els (34, 37 , 38). For example, there was a significant decrease in cholesterol and lipid biosynthetic genes as well as myelin-related genes in 5-week-old C22 compared with WT littermates (Supple -
-mental Figure 2, C and F). The increased gene categories include a number involved in cell signaling, as well as those involved in axon guidance mechanisms (RhoA , Plxna1, and Rac1 ) and inte -
-grin signaling (Itgb8 ) (Supplemental Figure 2D). Expression of 
-myelin inhibitors such as Id2 , Id4, and Ednrb  was also increased, 
-suggesting an unfavorable environment for remyelination (Sup -
-plemental Figure 2E). Dysregulation of several transcription fac-tors regulating Schwann cell differentiation was also observed in the C22 mice (Supplemental Figure 2F). 
+3164  |   
+DEFILIPPI  et al. mechanisms (Khoo et al., 2020; Klingler et al., 2021). Recognizing per-
+turbations in subcellular cytoskeletal networks in CMT1E neuropathic 
+nerves is an additional novel finding, likely a reflection of abnormal my-
+elination and altered axo- glial communications (Robertson et al., 1997). Furthermore, the protein abnormalities in CMT1E mouse nerves re-
+late highly with amyotrophic lateral sclerosis (ALS), also known as Lou 
+Gehrig's disease, which is considered a disorder of CNS motor neurons 
+and does involve proteostatic imbalance (Cicardi et al., 2021). CMT 
+and ALS have been investigated for overlapping pathophysiologies, in-
+cluding comparison of nerve degeneration by ultrasound (Hildebrand 
+et al., 2023). While the TrJ mouse is used to study CMT1E neuropa-
+thy, these results suggest that this spontaneous animal model could be 
+valuable for investigating various therapeutic targets.Group Gene log2FC Pval
+Axon Kif21a −1.06 0.0214
+Axon Kif5a −2.01 0.0091
+Axon Kif5b −0.66 0.0475
+Axon Kif5c −1.05 0.0058
+Axon Klc1 −0.8 0.0065
+Axon L1cam −1.1 0.0109
+Axon Lgi1 −1.58 0.0384
+Axon Map1a −0.93 0.015
+Axon Map1b −0.87 0.0245
+Axon Map1lc3b −0.68 0.0264
+Axon Map1s 0.53 0.0246
+Axon Map6 −1.21 0.0268
+Axon Mapk8ip3 −1.88 0.0142
+Axon Marcks −1.91 0.0466
+Axon Matn2 1.17 0.0114
+Axon Mical1 0.94 0.0104
+Axon Mink1 0.73 0.0203
+Axon Ncam2 −0.98 0.0236
+Axon Ngfr 1.1 0.2301
+Axon P2rx7 −1.39 0.016
+Axon Palm −1.72 0.0089
+Axon Pcp4 −2.12 0.0014
+Axon Pip5k1c −1.84 0.0203
+Axon Plxnb3 0.85 0.0323
+Axon Ppt1 0.72 0.0122
+Axon Prrt2 −2.07 0.0154
+Axon Pygb −0.98 0.0235
+Axon Rab3a −0.75 0.0296
+Axon Rab5a −1.21 0.0205
+Axon Rap1gap 1.56 0.0018
+Axon Rpl4 1 0.0378
+Axon Rufy3 −1.43 0.0138
+Axon Shtn1 2.5 0.0025
+Axon Snap91 −1.99 0.0128
+Axon Snca −1.79 0.0113
+Axon Sncb −1.57 0.0032
+Axon Sri −0.7 0.0457
+Axon Stat1 0.93 0.0082
+Axon Stmn1 −2.1 0.0065
+Axon Stmn3 −0.94 0.0236
+Axon Stx1a −1.92 0.0368
+Axon Stx1b −1.9 0.0048
+Axon Syp −2.05 0.0403
+Axon Th −2.13 0.0066
+Axon Top2b 1.1 0.0338
+Axon Ttl −1.06 0.0205
+Axon Tubb3 −1.02 0.0255TABLE 1  (Continued)
+Group Gene log2FC Pval
+Axon Twf2 0.56 0.0352
+Axon Vim 0.97 0.0123
+Axon Ywhae −0.54 0.0425
+Axon Zeb2 0.95 0.0483
+Both Adam22 −1.5 0.0082
+Both Apoe 1.71 0.0162
+Both Atp1a3 −1.66 0.0014
+Both Calm1 −0.79 0.0276
+Both Cnp −0.81 0.0093
+Both Cntn1 −1.38 0.021
+Both Cntn2 −1.83 0.0364
+Both Cryab 0.69 0.0376
+Both Dnm1 −1.64 0.0067
+Both Eno2 −1.6 0.0227
+Both Gdi1 −0.91 0.0116
+Both Hepacam −1.05 0.0128
+Both Hsp90aa1 0.56 0.049
+Both Thy1 −0.91 0.0498
+Both Tubb4a −1.03 0.0197
+Both Htt 0.83 0.0248
+Both Igsf8 −0.64 0.0163
+Both Myo1d −2.61 0.0093
+Both Ncam1 −0.59 0.0284
+Both Nefh −1.4 0.0236
+Both Nefl −1.2 0.0241
+Both Nefm −1.15 0.0206
+Both Pacsin1 −2.04 0.0119
+Both Pitpna −1 0.019
+Both Plp1 −2.04 0.006
+Both Pten 0.99 0.0405
+Both Sirt2 −1.74 0.0014
+Both Snap25 −2.83 0.0176
+Both Sncg −1.85 0.0287
+Both Stxbp1 −1.12 0.0196TABLE 1  (Continued)
+ 14714159, 2024, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jnc.16189 by Leiden University Libraries, Wiley Online Library on [20/11/2024]. 
 
-Reference 16:
-Reference 16 (FAISS and BM25) with RRF Score: 14.3522
+Reference 44:
+Reference 44 (FAISS and BM25) with RRF Score: 147.9347
+Chunk Text: This time course is based on the currently described data as well as 
+the previously published work described in the Discussion. myelinating Schwann cells (Mahley, 1988). More recently, sev- 
+eral apolipoproteins, including some produced locally within 
+the nerve (apoE, apoD) and others derived from the plasma 
+(apoA-I, apoA-IV), have been postulated to play a role in the 
+intraneural salvage and reutilization of cholesterol (Boyles et 
+al., 1989, 1990; Spreyer et al., 1990). The present data are relevant to several aspects ofthis process 
+of cholesterol salvage and reutilization. First, based on the bio- 
+chemical literature discussed above and the early labeling of Schwann-cell lipid droplets demonstrated here, it is apparent 
+that Schwann cells begin to catabolize their own myelin lipids 
+within a day following nerve crush. The early appearance of 
+labeled myelin lipids in Schwann-cell lipid droplets clearly rep- 
+resents, in part, the recycling of free fatty acids by esterification 
+of glycerol, as described above. 
+
+Reference 45:
+Reference 45 (FAISS and BM25) with RRF Score: 147.7809
 Chunk Text: The ten pathways withthe most signiﬁcant enrichment among differen-tially expressed genes in Tfam-SCKO nerves areshown. (B) qRT-PCR analysis conﬁrms that a numberof lipid-synthesis-related enzymes are down-regulated in 2-month-old Tfam-SCKO versus Ctrlnerves. Srebp1 , sterol regulatory element binding
 transcription factor 1; Acly, ATP citrate lyase;
 Acc2 , ACC beta (primarily localized to mitochon-
 dria). N = 5 mice per genotype. Error bars repre-sent SEM; *p < 0.05. (C) Diagram depicting the regulation by ACC ofthe balance between fatty acid synthesis andoxidation, and how it is altered by ACC’s phos-phorylation status. (D and E) Immunoblot analysis (D) and quantiﬁ-cation of band intensity (E) show increased phos-phorylation of ACC in 2-month-old Tfam-SCKOnerves. Phosphorylation inhibits this centralregulator of the balance between lipid synthesisand oxidation, indicating (together with gene-expression results) a shift in lipid metabolism awayfrom new lipid synthesis and toward increasedlipid oxidation in SC following mitochondrialdysfunction. 
 
-Reference 17:
-Reference 17 (FAISS and BM25) with RRF Score: 14.2947
-Chunk Text: 2 MYC HME cells use LPL and CD36 to mobilise and take up fatty acids. a Interaction map of the lipid metabolism gene network in
-MYC HME cells. Ingenuity Pathway Analysis was used to create the interaction map. Black circles highlight lipid metabolism genes CD36 and
-LPL.bTop canonical signalling pathways in MYC versus TERT HME cells based on RNA sequencing data (377 genes; FDR < 5%; minimum fold
-change: 6.81). Ingenuity Pathway Analysis was used to identify the pathways. Black boxes highlight gene ontologies associated with lipidmetabolism. The value next to each bar represents the number of altered genes within the indicated signalling pathway. The colour of the barindicates the percent of genes within the pathway that are differentially regulated. The black dotted line marks signi ﬁcance (FDR < 5%). cHeat
-map showing the relative expression of 163 genes associated with lipid metabolism in TERT, MYC, and HER2 HME cells (1.4 over all
-upregulated genes in MYC HME cells; p=5×1 0
-−8by Fisher Exact Test). 
-
-Reference 18:
-Reference 18 (FAISS and BM25) with RRF Score: 14.2406
-Chunk Text: Since ACs can cross the plasma membrane ( Houten and
-Wanders, 2010 ) and SCs are intimately associated with axons
-in peripheral nerves, we hypothesized that release of ACs fromSCs onto the surrounding axons could alter axonal membrane
-properties and ion homeostasis, and contribute to the severe
-axon degeneration phenotype in Tfam-SCKO nerves as well asin neuropathies that present with prominent axonal loss. To test this hypothesis, we ﬁrst examined whether long-
-chain ACs are released from SCs onto surrounding axons.Two-month-old Ctrl and Tfam-SCKO nerves were cultured asexplants for 2.5 days. At the end of this time, we measured the
-amount of long-chain ACs released from the nerves into the
-culture media. Whereas Ctrl nerves released very low levels oflong-chain ACs into the surrounding media, Tfam-SCKO nerves
-secreted 35-fold more long-chain ACs (primarily C16 and C18;
-Figure 6 D). Remarkably, the buildup of long-chain ACs from
-Figure 4. SC Mitochondrial Dysfunction
-Causes a Shift in Lipid Metabolism awayfrom Lipid Biosynthesis and toward FattyAcid Oxidation
-(A) Differentially expressed mRNAs in 2-month-old
-Tfam-SCKO nerves as determined by microarrayanalysis are enriched for genes involved in lipidmetabolism pathways. 
-
-Reference 19:
-Reference 19 (FAISS and BM25) with RRF Score: 14.2163
-Chunk Text: A role for apolipoprotein E, apolipoprotein A-I, and low density
-lipoprotein receptors in cholesterol transport during
-regeneration and remyelination of the rat sciatic nerve. J K Boyles, … , P J Gebicke-Haerter, M J Ignatius
-J Clin Invest. 1989;
-83(3)
-:1015-1031. 
-https://doi.org/10.1172/JCI113943
-. Recent work has demonstrated that apo E secretion and accumulation increase in the regenerating peripheral nerve. The
-fact that apoE, in conjunction with apoA-I and LDL receptors, participates in a well-established lipid transfer system raised
-the possibility that apoE is also involved in lipid transport in the injured nerve. In the present study of the crushed rat
-sciatic nerve, a combination of techniques was used to trace the cellular associations of apoE, apoA-I, and the LDL
-receptor during nerve repair and to determine the distribution of lipid at each stage. After a crush injury, as axons died
-and Schwann cells reabsorbed myelin, resident and monocyte-derived macrophages produced large quantities of apoE
-distal to the injury site. 
-
-Reference 20:
-Reference 20 (FAISS and BM25) with RRF Score: 14.1715
-Chunk Text: n = 10 per group. (A) Rat Pmp22 mRNA in various nerves of control and ASO6-treated rats. ASO6-treated group was compared with control group in each nerve using Student’s t test. *P < 0.05; ***P < 0.001. (B) Pou3f1 mRNA in various nerves of control and ASO6-treated rats. PMP22 ASO–treated group was compared with control group in each nerve using Student’s t test. *P < 0.05; ***P < 0.001. (C and D) MNCV and CMAP were measured at 12 weeks following treatment. (E) Representative histological image of cross-sectioned femoral motor nerves of CMT1A rats treated with control or ASO6. Arrows and arrowheads indicate unmyelinated and myelinated axon of greater than 1 micron in diameter, respectively. Scale bar: 5 μm. (F) Quantification of percentage of myelinated and percentage of unmyelinated axons. ASO6-treated group was compared with control group using Student’s t test. **P < 0.01. (G) qRT-PCR confirmation of mRNA expression of lipid biosynthetic (Sc5dl and Ugt8a), myelin inhibitor (Id2), and translational repressor (Bzw2) genes in the sciatic nerve of control vs. ASO6-treated rats. 
-
-Reference 21:
-Reference 21 (FAISS and BM25) with RRF Score: 14.1713
-Chunk Text: Equal amounts (10 Ag) of total RNA were
-electrophoresed in 1% agarose, 2.2 M formaldehyde gels, trans-ferred to nylon membranes (Duralon, Stratagene) in 6 /C2SSC, and
-UV cross-linked (0.12 joules). Blots were prehybridized, hybri-
-dized, and washed using standard techniques; the final stringency ofthe wash was 0.2 /C2SSC at 65 8C for 30 min ( Sambrook et al., 1989 ). The following cDNAs were used as probes: a 1.1-kb fragment of
-mouse NDRG1, a full-length cDNA of rat P0 ( Lemke and Axel,
-1985 ), a 2.0-kb fragment of rat MBP (gift of Dr. J. Kamholz,
-Detroit), and a full-length cDNA of rat glyceraldehyde 3-phosphate
-dehydrogenase (GAPDH) ( Fort et al., 1985 ). Plasmid inserts were
-isolated after restriction endonuclease digestion by agarose gelelectrophoresis and purified by electroelution. 32P-labeled cDNA
-probes with specific activities of 2–5 /C2109cpm/Ag were prepared
-by primer extension with random hexamers using the Prim-a-genekit (Promega) according to the manufacturer’s instructions. Quantitative RT-PCR was carried out on a ABI Prism 7000
-Sequence Detection System using TaqMan technology (AppliedBiosystems). 
-
-Reference 22:
-Reference 22 (FAISS and BM25) with RRF Score: 14.0226
-Chunk Text: Free. Radic. Res. 2015 ,49,
-599–617. [CrossRef]
-7. Koivuniemi, A. The Biophysical Properties of Plasmalogens Originating from Their Unique Molecular Architecture. FEBS Lett. 2017 ,591, 2700–2713. [CrossRef]
-8. Gorgas, K.; Teigler, A.; Komljenovic, D.; Just, W.W. The Ether Lipid-Deﬁcient Mouse: Tracking down Plasmalogen Functions. Biochim. Biophys. Acta—Mol. Cell Res. 2006 ,1763 , 1511–1526. [CrossRef]
-9. Han, X.; Gross, R.W. Plasmenylcholine and Phosphatidylcholine Membrane Bilayers Possess Distinct Conformational Motifs. Biochemistry 1990 ,29, 4992–4996. [CrossRef]
-10. Malthaner, M.; Hermetter, A.; Paltauf, F.; Seelig, J. Structure and Dynamics of Plasmalogen Model Membranes Containing
-Cholesterol: A Deuterium NMR Study. Biochim. Biophys. Acta—Biomembr. 1987 ,900, 191–197. [CrossRef]
-11. Malthaner, M.; Seelig, J.; Johnston, N.C.; Goldﬁne, H. Deuterium Nuclear Magnetic Resonance Studies on the Plasmalogens
-and the Glycerol Acetals of Plasmalogens of Clostridium butyricum and Clostridium beijerinckii .Biochemistry 1987 ,26, 5826–5833. 
-
-Reference 23:
-Reference 23 (FAISS and BM25) with RRF Score: 14.0083
-Chunk Text: Nebula 
-results are reported in Supplementary Table 14. Single-cell differential gene expression. Differential gene expression 
-between groups of individual cells was estimated using a Wilcoxon 
-rank-sum test, as implemented in the R package presto (v.1.0.0; https://
-github.com/immunogenomics/presto ). Wilcoxon results are reported 
-in Supplementary Table 13. Pseudo-bulk differential gene expression. Individual-level normal -
-ized gene expression averages were fitted with the following linear mod -
-el: gene expression ≈ β0 × APOE4 + β1 × amyloid + β2 × nft + β3 × age_death + β4 × msex + β5 × pmi. The linear models were fitted using the 
-lmfit() function and t -statistics were computed using the eBayes() 
-function from the Limma R package (v.3.50.3). Estimates are reported 
-in Supplementary Table 15. Pathway analyses
-Databases. Both the APOE-associated and lipid-associated pathway 
-databases were curated by filtering the union of pathways (down -
-loaded from the Mayaan laboratory; https://maayanlab.cloud/
-Enrichr/#libraries) from Gene Ontology biological processes (2018), 
-KEGG (2019), Reactome (2016) and HumanCyc (2016) pathways ei-
-ther for gene sets that contain the gene APOE or for gene sets of which 
-the name contains at least one of the following terms: sterol, athero, 
-cholest, LDL, HDL, lipoprotein, triglyceride, TAG, DAG, lipid, steroid, 
-fatty acid and ceramide. 
-
-Reference 24:
-Reference 24 (FAISS and BM25) with RRF Score: 13.9836
-Chunk Text: 1a and 
-Supplementary Table 4). Thus, dysregulation of energy production, 
-transport and use may be central pathogenic mechanisms of APOE4. Overall, our analysis confirms established APOE4 neurobiol -
-ogy7, reveals disturbances and assigns cell type specificity to known 
-APOE4-associated alterations. A cell-type-specific molecular atlas of 
-APOE4 pathway-level effects is provided in Supplementary Tables 4–6. APOE4 affects lipid pathways in the brain
-We next performed a targeted pathway analysis focusing on specific 
-molecular pathways that are probably affected by APOE4 by integration 
-Nature | Vol 611 | 24 November 2022 | 771of previous literature (Methods). We created a curated database of 
-193 brain-expressed and APOE-related pathways comprising 8,759 
-unique genes (Extended Data Fig. 2a). Most pathways exhibited 
-cell-type-specific activity, yet a subset was active across all major cell types, suggesting the potential for both cell-type-specific and 
-broad effects of APOE alterations (Extended Data Fig. 2b). 
-
-Reference 25:
-Reference 25 (FAISS and BM25) with RRF Score: 13.9194
-Chunk Text: The results show that a disease originating in the glial cell disrupts 
-the myelin proteome and impacts the axonal proteome to even a 
-greater extent. There are almost three times as many differentially 
-expressed axonal proteins as myelin proteins (Table 1), and the al-
-terations between these axonal proteins show extensive complexity. Among the identified myelin proteins, we found a 4.3- fold highly 
-significant (p  < 0.001) decrease in peripheral myelin protein 2 (PMP2) 
-(Table 1), a gene that has yet to be examined in PMP22- linked neu-
-ropathies. In normal nerves, the PMP2 protein is concentrated 
-around densely myelinated axons (Yim et al., 2022), and mutations 
-in this cytosolic glial gene cause demyelinating neuropathies (Motley 
-et al., 2016). In agreement, cross- sections of sciatic nerves from 
-Wt mice display the characteristic mosaic distribution of PMP2-  
-positive myelinated axons, identified by immunolabeling for NF- M 
-(Figure 4a). Analysis of age- matched P21 TrJ mouse sciatic nerves is 
-consistent with the proteomic data and shows an overall reduction 
-PMP2- like reactivity around NF- positive axons (Figure 4b). 
-
-Reference 26:
-Reference 26 (FAISS and BM25) with RRF Score: 13.8893
-Chunk Text: At 4 days, NDRG1and MAG staining are still found in the outer or abaxonal and inner or
-adaxonal regions, respectively, and they overlap in incisures (yellow). At 12
-days, the architecture of myelin sheaths is largely obliterated. There is muchless NDRG1 and MAG immunoreactivity, which partially overlap in large
-blobs. At 58 days, there are small bspeckles Qof NDRG1 immunoreactivity
-in Schwann cells and scattered small blobs of MAG immunoreactivity inmacrophages. Scale bar: 10 Am. Fig. 7. Expression of NDRG1 mRNA in lesioned adult rat sciatic nerve. Each lane contains 10 Ag of total RNA isolated from the distal nerve stumps
-of adult rat sciatic nerves following transection for the indicated number ofdays; the b0dQsample is from unlesioned adult nerves. For crushed nerves,
-the distal stumps were divided into proximal (D1) and distal (D2) segments
-to illustrate better the proximal-to-distal changes in gene expression that
-accompany remyelination of regenerated axons. The blots were hybridizedtogether, sequentially, with radiolabeled cDNA probes for NDRG1,GAPDH, and P0 and exposed to film 7 days, 10 days, and 16 h,
-respectively.P . 
-
-Reference 27:
-Reference 27 (FAISS and BM25) with RRF Score: 13.8578
-Chunk Text: ASO6-treated group was compared with control group in each nerve using Student’s t test. ***P < 0.001. (H) Rat Pmp22 mRNA in footpad following control or ASO6 treatment. ASO6-treated group was compared with control group using Student’s t test. *P < 0.05. The Journal of Clinical Investigation    
-RESEARCH ARTICLE
-365 jci.org   Volume 128   Number 1   January 2018
-that were comparable to those of their WT littermates (Figure 3C). ASO6 also increased the CMAP amplitude compared with that in control-treated CMT1A rats, suggesting more motor axons made functional connections to the corresponding tibialis anterior mus-
-cle (Figure 3D). CMT1A rat nerves had unmyelinated axons great -
-er than 1 micron in diameter even at 5 weeks of age (12) prior to 
-onset of the treatment at 6 weeks. Histological analysis of the fem-oral motor nerve demonstrated CMT1A rats treated with ASO6 had fewer unmyelinated axons of more than 1 micron in diameter than did the animals that were treated with the control, whereas the total number of myelinated and unmyelinated axons was not 
-significantly different (Figure 3, E and F). 
-
-Reference 28:
-Reference 28 (FAISS and BM25) with RRF Score: 13.8530
-Chunk Text: Together our ﬁndings establish proof of concept for the de-
-velopment toward direct MYC-inhibition as a future approach to
-Fig. 5. Lipid accumulation occurs after inhibition of oxidative phosphorylation or β-oxidation and mitochondrial structure is perturbed by 10058-F4. ( A)
-Number of down-regulated metabolism-related proteins of indicated categories, according to quantitative LC-MS/MS proteomic data (cutoff ratio: 0.667)
-from the two experimental conditions. ( B) Schematic ﬁgure shows catalytic steps in metabolic pathways affected by 10058-F4, according to LC-MS/MS
-proteomic analysis data. Red arrow lines indicate down-regulation of enzymes involved in regulating the respective metabolic steps. ( C) Oil Red O staining of
-lipid accumulation in SK-N-BE(2) cells in response to 3 d treatment with inhibitors of metabolic pathways as indicated. (Scale bar, 20 μm.) (D) Oil red O staining
-of SK-N-BE(2) cells treated with 10058-F4 in combination with TOFA or cerulenin for 3 d. (Scale bar, 20 μM). (E) Electron microscopic pictures of SK-N-BE(2) cells
-treated with 10058-F4 (50 μM) for 8 d. Arrows indicate affected mitochondria in the 10058-F4-treated cells. 
-
-Reference 29:
-Reference 29 (FAISS and BM25) with RRF Score: 13.7613
-Chunk Text: Indeed, the secretion of M. Bosch-Queralt et al. Neurobiology of Disease 176 (2023) 105952
-9neurotrophic factors by SCs has been shown to depend on their locali -
-zation and repair SCs may keep a molecular identity depending on their 
-motor or sensory specification (Brushart et al., 2013 ; Contreras et al., 
-2022 ; Hoke et al., 2006 ; Martini et al., 1992, 1994 ; Tham et al., 1997 ). However, the interpretation of many of these findings is complex and 
-further studies are required to better understand the role of SC for se-
-lective axonal pathfinding and regeneration (Bolívar et al., 2020 ; 
-Brushart et al., 2013 ; Contreras et al., 2022 ). Notably, in zebrafish 
-mutants lacking SCs, regenerating axons grow at similar rates to wild 
-types despite following erroneous paths (Rosenberg et al., 2014 ), sug-
-gesting that SCs might be rather involved in the guidance of regrowing 
-axons than in the regulation of their growth rate (Gonzalez and Allende, 
-2021 ). Indeed, SC-derived signals, including the glycosyltransferase 
-IH3, an enzyme involved in collagen and ECM modification, have been 
-shown to promote target selective regeneration of axons after injury in 
-zebrafish (Isaacman-Beck et al., 2015 ; Murphy et al., 2022 ). 
-
-Reference 30:
-Reference 30 (FAISS and BM25) with RRF Score: 13.7608
-Chunk Text: Boxplots indicate median, 25
-th and 75th 
-percentiles. i, Pairwise correlations of cell-type-specific individual-level 
-transcriptomic profiles (average expression values across cells of a given type, N = 32 profiles per cell type). j , Median number of cells per subject by cell type. k, Fraction of subjects lacking cells of a given type. l, Individual distributions 
-across cell types. m, Individual cell-type fractions organized by pathological 
-diagnosis and APOE genotype. Extended Data Fig. 2 | APOE-associated and lipid pathway changes in 
-APOE4 and AD. a, Curation process for APOE-associated pathway database. Brain cell type expression was defined as nonzero detection of a gene in >10% of cells of that cell type. b , Transcriptional activity scores of APOE-associated 
-pathways that show cell-type-specific patterns. c , Individual-level average 
-expression of cholesterol biosynthesis genes from Fig. 2a in oligodendrocytes. d, Overrepresentation of lipid-related pathways (database from Fig. 1c) within 
-genes differentially expressed in APOE4 relative to APOE3 in human post-mortem oligodendrocytes as estimated by a negative binomial mixed model (NBMM). 
-
-Reference 31:
-Reference 31 (FAISS and BM25) with RRF Score: 13.6735
-Chunk Text: This also implies reversibility of the symptoms, since unmyelinated axons are apparent in the CMT1A rat model even at 5 weeks of age (12). Therefore, dramatic improvement is observed with cellular, elec-
-trophysiological, and functional measures of peripheral neuropa -
-thy. Despite the promising results, there remain several important questions, including whether sustained treatment will lead to continued improvement, whether it will prevent axonal loss, and whether it will work in older animals, in which axonal loss con-tributes to clinical manifestation (49). Future work will also be required to determine optimal dosing route and frequency as well as detailed characterization of ASO pharmacokinetic and pharma -
-codynamic properties in peripheral nerves. In addition to the improvements induced by ASOs, these stud-
-ies also afforded the opportunity to perform an RNA-seq profile of the C22 model, which identified several genes that were previous-ly shown to be upregulated in CMT1A models (c-Jun , Pou3f1, and 
-Cxcl14 ) and also those that are downregulated (lipid biosynthetic 
-genes and other myelin-related genes). 
-
-Reference 32:
-Reference 32 (FAISS and BM25) with RRF Score: 13.6630
-Chunk Text: After 
-quantification of pre-mRNA using the Cell Ranger count pipeline, the Cell Ranger aggr pipeline was used to aggregate all of the libraries (without equalizing the read depth between groups) to generate a 
-gene-count matrix. The Cell Ranger (v.3.0) default parameters were 
-used to call cell barcodes. Quality control for cell inclusion
-Outlier cells with less than 500 or more than 10,000 genes detected 
-were excluded, and only genes detected in at least 10 cells were consid -
-ered. The following quality measures were quantified for each cell: (1) 
-the number of genes for which at least one read was mapped (indica-tive of library complexity); (2) the total number of counts; and (3) the 
-percentage of reads mapped to mitochondrial genes (used to approxi -
-mate the relative amount of endogenous RNA and commonly used as a 
-measure of cell quality). Cells with a discriminatively high ratio of mito -
-chondrial to non-mitochondrial read counts were excluded using unbi -
-ased k-means clustering-based binarization (k = 2). 
-
-Reference 33:
-Reference 33 (FAISS and BM25) with RRF Score: 13.6572
-Chunk Text: ( G)
-Oil Red O staining of rat embryonic ﬁbroblasts with different c-myc status
-after treatment with 10058-F4 (100 μM) for 7 d. (Scale bars, 20 μmi na l l
-panels unless speci ﬁed otherwise.) Fig. 4. Downstream MYC signaling pathways are targeted by 10058-F4. ( A–
-C) Quantitative LC-MS/MS –based proteomic analysis using SK-N-BE(2) cells
-treated for 20 h with 10058-F4 (60 μM), or after 24 h induction of retrovirally
-transduced SK-N-BE(2) cells with anti- MYCN shRNA. Ingenuity software and
-PANTHER classi ﬁcation were used for data analysis and predictions. ( A)G O
-analysis shows signi ﬁcantly affected biological processes. ( B) The most sig-
-niﬁcantly affected canonical cell signaling pathways in the two different
-conditions as indicated. Zirath et al. PNAS |June 18, 2013 |vol. 110 |no. 25 |10261
-MEDICAL SCIENCES
-Downloaded from https://www.pnas.org by "LEIDS UNIVERS MEDISCH CENTRUM LUMC, WALAEUS BIBL - C1-Q64" on December 12, 2024 from IP address 145.88.209.33.
-
-indicating that MYC can promote either fatty acid synthesis or
-fatty acid oxidation under different conditions (35, 36). 
-
-Reference 34:
-Reference 34 (FAISS and BM25) with RRF Score: 13.6569
-Chunk Text: An alternative, promising approach to CMT2A treatment 
-involves the use of mitofusin agonists, small molecule 
-mimicking the MFN2 peptide–peptide interface, which 
-improved mitochondrial dysfunction in neuron cultures 
-expressing MFN2 mutants and in sciatic nerves of 
-MFN2T105M transgenic mice [27]. 2.3. Lipid biosynthesis
-Another potential therapeutic path, particularly for 
-CMT1A, involves modification of lipid metabolism. Transcription of genes for myelin lipid biosynthesis was 
-found to be reduced in myelinating Schwann cells in the 
-CMT1A rat model and lipid incorporation into myelin 
-was therefore reduced. Dietary lipid supplementation EXPERT REVIEW OF NEUROTHERAPEUTICS
- 705
-with phosphatidylcholine and phosphatidylethanolamine 
-modulated the myelination deficit of affected Schwann 
-cells in cultures and resulted in improved myelin bio-
-synthesis and reduced neuropathic symptoms in the 
-CMT1A rat model [28]. Since dietary phospholipids are 
-devoid of significant side effects, clinical translation is 
-easy and a clinical trial with oral lecithin supplementa -
-tion is planned. 
-
-Reference 35:
-Reference 35 (FAISS and BM25) with RRF Score: 13.6553
-Chunk Text: 6A). Further, in the developing rat sciatic nerve, a striking
-parallel between NDRG1 and PMP22 mRNA ( Snipes et al.,
-1992 ) expression was found ( Fig. 6 B)—their levels rise sharply
-soon after birth, remain high throughout the major myelination
-period (P8-P20), and decline in the adult nerve (P120). Many myelin-related genes show this pattern of expression in
-developing nerves. This expression typically depends on the
-integrity of axon–Schwann cell interactions, which can be
-experimentally disrupted by nerve injury ( Scherer and Salzer,
-2001 ). Thus, we examined the expression of NDRG1 mRNA in
-adult rat sciatic nerves that were either transected (to cause axonal
-degeneration and to prevent axonal regeneration) or crushed (to
-cause axonal degeneration but allow axonal regeneration and henceremyelination of regenerated axons). As shown in Fig. 7 A,
-NDRG1 mRNA levels were strongly reduced distal to the injury
-by 4 days posttransection and remained low even 2 months later.After nerve crush ( Fig. 
-
-Reference 36:
-Reference 36 (FAISS and BM25) with RRF Score: 13.6245
-Chunk Text: https://doi.org/10.1002/
-jemt.10108
-Hirata, K., Mitoma, H., Ueno, N., He, J. W., & Kawabuchi, M. (1999). Differ-
-ential response of macrophage subpopulations to myelin degradationin the injured rat sciatic nerve. Journal of Neurocytology ,28(8),
-685–695. Holtzman, E., & Novikoff, A. B. (1965). Lysomes in the rat sciatic nerve
-following crush. The Journal of Cell Biology ,27(3), 651 –669. Hu, B., Mccollum, M., Ravi, V., Arpag, S., Moiseev, D., Castoro, R., …Li, J. (2018). Myelin abnormality in CMT4J recapitulates features of
-acquired demyelination. Annals of Neurology ,83(4), 756 –770. https://
-doi.org/10.1002/ana.25198
-Hutton, E. J., Carty, L., Laurá, M., Houlden, H., Lunn, M. P. T., Brandner, S.,
-…Reilly, M. M. (2011). C-Jun expression in human neuropathies: APARK ET AL. 579
- 10981136, 2019, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/glia.23509 by University Of Leiden, Wiley Online Library on [06/03/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
-
-pilot study. 
-
-Reference 37:
-Reference 37 (FAISS and BM25) with RRF Score: 13.6037
-Chunk Text: The ﬁnding that dietary cholesterol
-supplementation also supports myelin repair ( Berghoff et al.,
-2017b ;Saher et al., 2012 ) suggests that endogenous cholesterol
-synthesis is insufﬁcient for complete remyelination. In the currentstudy, we provide evidence that neuronal cholesterol synthesis
-is essential for repair of chronically demyelinated lesions. Neuronal cholesterol synthesis during remyelination
-Following chronic demyelination, we found impaired remyelina-
-tion in animals lacking neuronal cholesterol synthesis. In agree-ment, neuronal expression of cholesterol synthesis genes isincreased in human non-lesion MS tissue and following chronic
-experimental demyelination. In neuronal mutants of cholesterol
-synthesis, but not in corresponding oligodendroglial mutants,we showed a marked reduction in the density of oligodendrocyte
-lineage cells. This ﬁnding points to an inference with repair that
-precedes myelin membrane synthesis, likely in OPC proliferationand oligodendrocyte differentiation. 
-
-Reference 38:
-Reference 38 (FAISS and BM25) with RRF Score: 13.6018
-Chunk Text: Drawings illustrate chosen
-categories of oligodendrocyte differentiation. In each category, signiﬁcance was assessed by two-way ANOVA and Sidak’s post tests. ( b) Myelination at
-20–28 days in vitro (DIV) in myelinating cocultures in the presence or absence of cholesterol ( n¼5–9 cultures). Myelin segments and axons were counted
-(see Supplementary Fig. 8b; two-way ANOVA and Sidak’s post tests). ( c–h) Quantitative RT-PCR analysis on dissected corpus callosi from mice after
-‘induced remyelination’ (4 þ1 weeks) and controls determining the expression of oligodendrocyte and myelin related genes ( c;Car2, Plp1, Olig2 ), marker
-genes for microglia ( Aif1) and astrocytes ( Gfap)(d), genes involved in cholesterol synthesis ( e;Hmgcr, Fdft1, Srebf2 ) and uptake ( f;Ldlr, Lrp1 ), and growth
-factors downregulated ( g;Pdgfa, Fgf2 ) and upregulated by cholesterol supplementation ( h;Fgf1, Fgf9, Fgf12, Shh, Fgf17, Fgf22 ). Bars represent the means
-(n¼4 animals) with individual data points (Student’s t tests) normalized to untreated control mice (set to 1, grey line). 
-
-Reference 39:
-Reference 39 (FAISS and BM25) with RRF Score: 13.6005
-Chunk Text: Thus, MYC appears to regulate the genes involved sequentially
-in lipid synthesis: ﬁrst inducing glucose and glutamine andthen FA synthesis associated genes. By RNA sequencing
-(RNA-seq), increasing levels of MYC elicited the nonlinear induc-
-tion of mRNA of glycolysis ( Figure S2 A), glutaminolysis ( Fig-
-ure S2 B), and FA synthesis ( Figure S2 C). Third, we found that MYC binds to the promoters of choles-
-terol biosynthesis genes ( Figures S1 C and S1D), induces key
-enzyme for cholesterol biosynthesis ( Figure S2 C), and regulates
-SREBP1 (Figure S2 D). Further, MYC regulates both SREBP1
-andSCAP in BCL and HCC, as seen by mRNA expression by
-RNA-seq ( Figure S2 D) and by protein analysis by western
-blot ( Figure S2 E). This indicates that MYC’s regulation of lipo-
-genesis is both through direct binding as well as through
-SREBP1. Fourth, our results implicated that SREBP1 regulates FA syn-
-thesis genes in the presence of MYC ( Figures S1 E and S1F). To
-determine whether FA synthesis can be run by MYC indepen-dent of SREBP1, we knocked down SREBP1, through small
-interfering RNA (siRNA) in a readily transfectable cell line,
-EC4, a MYC-induced HCC cell line ( Beer et al., 2004 ). 
-
-Reference 40:
-Reference 40 (FAISS and BM25) with RRF Score: 13.5929
-Chunk Text: More than 40 loci and about 30
-genes, which are associated with CMT, have been identi-ﬁed to date, and several genes encode mitochondrial
-proteins. The ganglioside-induced differentiation associ-
-ated protein 1 gene ( GDAP1 ), mutations of which are
-found in CMT4A (recessive, demyelinating form) and
-CMT2K (dominant, axonal form), encodes a mitochondrial828 D. Ino, M. Iino
-123
-outer membrane protein that has a key role in mitochon-
-drial ﬁssion [ 22]. Indeed, overexpression of GDAP1
-promotes fragmentation of mitochondria, whereas either
-knockdown of GDAP1 or overexpression of a disease-re-lated mutant of GDAP1 causes mitochondria to assume an
-elongated structure in vitro [ 22]. Although most genes
-associated with mitochondria-related CMT are mainlyexpressed in neurons, GDAP1 is expressed both in myeli-
-nating SCs and neurons [ 22]. Niemann and colleagues have
-recently shown that myelinating SC-speciﬁc Gdap1 dele-
-tion in mice results in decreased conduction velocity and
-hypomyelination in the sciatic nerve, whereas motor neu-ron-speciﬁc Gdap1 deletion does not affect conduction
-velocity and the structure of myelin [ 23], suggesting that
-SC mitochondria without normal GDAP1 activity arelikely to be involved in the progression of peripheral
-neuropathy. 
-
-Reference 41:
-Reference 41 (FAISS and BM25) with RRF Score: 13.5872
-Chunk Text: DiVincenzo
-et al. described the frequency, detection rate, and mutation types in 14 representative
-genes ( PMP22 ,GJB1 ,MPZ ,MFN2 ,SH3TC2 ,GDAP1 ,NEFL ,LITAF ,GARS ,HSPB1 ,FIG4 ,
-EGR2 ,PRX , and RAB7A ) related to CMT in a cohort study of 17,880 patients tested in a
-commercial genetic laboratory. Genetic anomalies were detected in 18.5% (n = 3312) of the
-total population. Sanger sequencing and multiplex ligation-dependent probe ampliﬁcation
-revealed that duplications (56.7%) or deletions (21.9%) in PMP22 were reported for most of
-the positive results; next, mutations were detected in GJB1 (6.7%), MPZ (5.3%), and MFN2
-(4.3%). GJB1 deletions and mutations in the residual genes were 5.3% of the anomalies. Of
-the individuals presenting a positive genetic outcome in a CMT-related gene, 94.9% had a
-mutation in one of the following four genes ( PMP22 ,GJB1 ,MPZ , orMFN2 ) [8]. Effective pharmacological treatments for CMT are currently lacking. This review dis-
-cusses the treatment of CMT with the four main causative genes. 
-
-Reference 42:
-Reference 42 (FAISS and BM25) with RRF Score: 13.5747
-Chunk Text: (legend continued on next page)
-4Cell Reports 37, 109889, October 26, 2021Reportll
-OPEN ACCESS
-Cnp1 knockout mice, with the Thy1-EYFPnuc transgene ( Wehr
-et al., 2006 ). Despite the axonal pathology, CPN loss was not a
-feature of Plp1 and Cnp1 mutants as quantiﬁed by EYFPnuc+
-cell counting ( Figure S2 D). We then isolated CPNs from cortical
-layer ﬁve by ﬂuorescence-directed laser microdissection from 1
-to 12 months of age for transcriptional proﬁling ( Figures 2 A and
-S2E). Transcriptional proﬁling revealed 412 differentially ex-
-pressed genes in CPN from Cnp1 knockout mice and 104
-genes from Plp1 knockout mice compared with Thy1-EYFPnuc
-controls (adjusted [adj.] p < 0.001, Benjamin-Hochberg correc-
-tion > 1.8-fold changes) ( Figure S2 F). Surprisingly, by gene set
-enrichment analysis (GSEA), the gene set ‘‘cholesterol meta-
-bolism’’ was upregulated in CPNs of both mutants ( Figure 2 B). This included genes involved in cholesterol synthesis ( Hmgcr ,
-Fdft1 ,Cyp51 ,Dhcr24 ) and transport ( Ldlr,Apoe )(Figure 2 C;
-Table S2 ). 
-
-Reference 43:
-Reference 43 (FAISS and BM25) with RRF Score: 13.5405
-Chunk Text: MYC enhances the translation efficiency of ribosomal genes. (A) [35S]-methionine incorporation assay performed with KEP1.23 cells over-
-expressing GFPorMycand treated for 2 h with vehicle, 50 nM AZD8055, or 10 nM everolimus prior to a 1 h pulse with [35S]-labeled methionine. 100 μg/ml
-cycloheximide (CHX) was added as a positive control to stop protein translation. Incorporation of [35S]-methionine was quantified by scintillation counting and
-normalized to total protein. Data are represented as mean ± standard deviation of n= 2 technical replica per group ( GFP-DMSO, GFP-everolimus, GFP-CHX,
-Myc-AZD8055, and Myc-CHX) or n= 1 replica ( GFP-AZD8055, Myc-DMSO, and Myc-everolimus) of one experiment and normalized to their corresponding DMSO
-treated condition. (B)Correlations of log 2(FC) values between Ribo-seq reads and RNA-seq reads in indicated comparisons. Blue and red dots indicate genes
-showing enhanced or suppressed TEs, respectively. (C)Functional enrichment analysis using Kyoto Encyclopedia of Genes and Genomes pathways for genes
-with significantly altered TEs upon Myc overexpression, AZD8055 treatment, or the both, each compared to GFP-DMSO. 
-
-Reference 44:
-Reference 44 (FAISS and BM25) with RRF Score: 13.5308
-Chunk Text: PCR primers were as follows: forward, 5
-0-
-CTGCTGCCCACCCCGCCCCTGGCCCCTAGCCGCCGCTCCGGGCTC-30; reverse,
-50-GAGCCCGGAGCGGCGGCTAGGGGCCAGGGGCGGGGTGGGCAGCAG-30. Wt or mutant c-Myc complementary DNA was constructed into the pCMV-
-Tag2 expression vector. Plasmid DNA was transfected into PC3 cells usingLipofectamine 2000 (Invitrogen, Carlsbad, CA, USA) following a standardprotocol provided by the manufacturer. The cells were washed with coldPBS and collected into lysis buffer 48 h after transfection, and westernblotting was then performed. Quantitative reverse transcriptase–PCR analysis
-Total RNAs were isolated from cells using Trizol (Invitrogen) following themanufacturer’s instructions. Quantitative measurements of gene expres-sion were recorded with DNA Engine Opticon 2 (Bio-Rad, Richmond, CA,USA) equipped with Opticon Monitor 2 software (MJ Research, Waltham,
-MA, USA). Glyceraldehyde 3-phosphate dehydrogenase was used as the
-internal control. The primer sequences for genes in quantitative reversetranscriptase–PCR analysis are presented in Supplementary Table 2. 
-
-Reference 45:
-Reference 45 (FAISS and BM25) with RRF Score: 13.5126
-Chunk Text: Here, we identify the regulatoryrole of MYC in FA synthesis. FA synthesis in normal cells is regulated by transcription fac-
-tors called sterol regulatory element-binding proteins (SREBPs)
-(Lewis et al., 2011; Shao and Espenshade, 2014 ), which consist
-of two splice variants of SREBP1, SREBP1a and SREBP1c, and
-SREBP2. SREBPs are synthesized as precursors anchored in
-the endoplasmic reticulum (ER). Upon activation by diminishedcholesterol, the SREBP cleavage-activating protein (SCAP) dis-
-sociates SREBPs from the ER into the nucleus ( Shao and Espen-
-shade, 2014; Swinnen et al., 2006 ), where SREBPs activate
-lipogenesis genes ( Sun et al., 2015 ). SREBP1 activates fatty syn-
-thesis genes, whereas SREBP2 activates genes involved in me-
-valonate and cholesterol synthesis ( Li et al., 2016 ). In cancer
-metabolism, in addition to SREBPs, other regulators such asmTOR, YAP/TAZ, XBP, and MondoA control lipogenesis ( Carroll
-et al., 2015; Lewis et al., 2011; Santinon et al., 2016; Xie et al.,
-2018; Zhao et al., 2018 ), while SREBPs also regulate YAP/TAZ
-activity ( Sorrentino et al., 2014 ). 
-
 Reference 46:
-Reference 46 (FAISS and BM25) with RRF Score: 13.5064
-Chunk Text: Heat-
-map visualization was computed using R package pheatmap v.1.0.12 (Pretty Heatmaps). Spinal cord co-cultures
-Spinal cord co-cultures were established as described ( Bijland et al., 2019 ) from embryonic day 13 mouse embryos. Cells were
-plated initially in 12.5% horse serum and fed the following day and every second or third day thereafter with serum-free differentiationmedium. On day in vitro (DIV) 14 (before myelination commences around DIV 17), cultures were treated with cholesterol (10 mg/mL),
-cholesterol and tetrodotoxin (TTX) (1 mM, Tocris), or 0.1% ethanol (vehicle control) for 3 days. On DIV 17, bromodeoxyuridine (BrdU;
-10mM) was added to the cultures for 2 h. Cultures were ﬁxed with PFA and washed in PBS. Cells were permeabilized for 10 min in
-0.5% Triton X in PBS and incubated for 48 h at 4
-/C14C in rabbit anti-NG2 (AB5320, Merck Millipore; 1:500) and rat anti-MBP (MCA409,
-Biorad, 1:500) in 10% goat serum, 1% bovine serum albumin in PBS. Following application of Alexa 596 anti-rabbit IgG and Alexa 488
-anti-rat IgG (Invitrogen, 1:1000 for 1 h), cells were ﬁxed in 50:50 acetic acid and ethanol for 10 min and DNA was denatured in 2M HCl
-for 30 min. 
+Reference 46 (FAISS and BM25) with RRF Score: 147.7242
+Chunk Text: Shrivastava et al. BBA - Molecular  Basis of Disease  1870  (2024)  167476  
+3 
+Fig. 1.Transcriptomic analysis of hypoxia exposed FNSC derived-astrocytes. a: Representative western blot of HIF1 α expression in astrocytes exposed to different 
+concentrations of oxygen (β-actin is used as loading control). b: Differentially expressed genes in astrocytes exposed to 0.2 % oxygen (hypoxia) as compared to those 
+exposed to 20 % oxygen (normoxia). Gene set enrichment analysis of gene ontology terms (c) and pathways (d) differentially enriched in hypoxic astrocytes.V. Shrivastava et al. BBA - Molecular  Basis of Disease  1870  (2024)  167476  
+4 
+0.03) pathways were positively enriched in astrocytes exposed to hyp-
+oxia (Fig. 1d). Pathway mapping showed that the gene expression of 
+most of the enzymes involved in terpenoid backbone synthesis and 
+steroid biosynthesis was increased on exposure to hypoxia (Fig. 2a). Cholesterol synthesis increases after hypoxia in FNSC-derived as-
+trocytes as well as in a cell line model. 
 
 Reference 47:
-Reference 47 (FAISS and BM25) with RRF Score: 13.5013
-Chunk Text: 2). The functional role of this interaction Fig. 2  Interactions at the axon-
-Schwann cell interface (peri-
-axonal space) in the internode. AX, axon; SC, Schwann cell. Some signaling pathways in the Schwann cell cytoplasm are also indicated, mainly downstream of the NRG1 type III-ErbB2/B3 interaction. Note that NRG1 is also present as a soluble factor, NRG1 type I, which acts as a paracrine signaling
-2174 A. Bolino
-1 3is not completely assessed, but PGD2-GPR44 should be 
-involved in the induction of myelination, thus reinforc-ing NRG1-ErbB2 signaling, and, at later stages, in myelin maintenance. Consistent with this, nerves from L-Pgds KO mice are hypomyelinated, whereas myelin degeneration is observed in adult nerves [67]. Interestingly, the prion protein 
- PrPC is another axonal 
-membrane-tethered protein that has been shown to have a role in myelin maintenance [68]. Loss of 
- PrPC specifically 
-in neurons leads to normal myelin development but to a late onset peripheral neuropathy with myelin degeneration [68]. 
+Reference 47 (FAISS and BM25) with RRF Score: 147.6819
+Chunk Text: 2.4. P2X7 purinoreceptors and calcium influx
+An abnormally high, potentially toxic, intracellular Ca2+ con-
+centration was observed in Schwann cells from CMT1A rats, 
+and there is evidence that this is at least partly caused by 
+the PMP22-mediated overexpression of the P2X7 purinocep -
+tor, which acts as a calcium channel and is involved in 
+apoptosis, regulation of receptor trafficking, and inflamma -
+tion [29]. A pharmacological inhibitor of P2X7 receptors, A438079, 
+was tested in CMT1A rats and ameliorated their strength and 
+histological parameters (increased number of tibial nerve mye -
+linated axons, decrease in hypermyelinated small fibers, and 
+increase in large diameter myelinated fibers) [30]. The transla -
+tion to clinical trials in CMT1A is facilitated by previous Phase II 
+clinical trials in rheumatoid arthritis with a P2X7 antagonist 
+which showed acceptable safety and tolerability [31].2.5. Endoplasmic Reticulum (ER) stress and Unfolded 
+Protein Response (UPR) activation
+CMT1B is caused by mutations of MPZ, which is the major 
+protein constituent of peripheral myelin. 
 
 Reference 48:
-Reference 48 (FAISS and BM25) with RRF Score: 13.4960
-Chunk Text: 7e,f), likely indicating enhanced remyelination. In
-contrast, expression of LXR family genes, which inﬂuence OPC
-differentiation36, was not affected by cholesterol (Supplementary
-Table 1). The expression of growth factors involved in OPC survival,
-proliferation, migration or differentiation28, including Igf1
-(insulin-like growth factor), Cntf (ciliary neurotrophic factor),
-Inhba (inhibin beta-A, also called activin beta-A) and Egf
-(epidermal growth factor) was strongly increased (2–20 fold) by
-cuprizone, but was not further regulated by cholesterol
-supplementation (Supplementary Table 1). A set of genes
-whose products are known to inhibit differentiation of OPCs,
-such as Fgf2 (ﬁbroblast growth factor 2) and Pdgfa (platelet
-derived growth factor alpha)37–39, was also strongly upregulated
-by cuprizone (8–12 fold higher than untreated controls). Strikingly, the expression of these mitogens was attenuated
-in cholesterol fed animals to levels only 3–8 fold higher than
-in untreated controls (Fig. 
+Reference 48 (FAISS and BM25) with RRF Score: 147.6261
+Chunk Text: A consistent slow NCV of < 38 m/s in the
+arms represents the demyelinating form of CMT1, whereas a value >38 m/s is distinctive
+of the axonal form of CMT2. Transitional NCVs (25–45 m/s) are often observed in males
+with CMTX1 and in patients with other transitional patterns of CMT [4]. The genetic diagnosis of CMT has been conducted by implementing the targeted next-
+generation sequencing and whole-exome sequencing approaches. Over 120 gene mutations
+are related to the pathogenesis of CMT and associated neuropathies [ 5,6]. The frequency of
+the various types of CMT varies by region and the age at which they were published. In
+the study by Saporta et al., 787 out of 1024 patients were diagnosed with CMT; a genetic
+subtype was identiﬁed in 527 (67%) of these patients, while the remaining 260 patients did
+not present with any identiﬁable mutation. Among the genetically deﬁned cases, CMT1A
+(PMP22 ) emerged as the most prevalent subtype, comprising 55% of the cases, followed
+by CMTX1 ( GJB1 ; 15.2%), hereditary neuropathy with liability to pressure palsy (HNPP;
+Genes 2023 ,14, 1391. https://doi.org/10.3390/genes14071391 https://www.mdpi.com/journal/genes
+Genes 2023 ,14, 1391 2 of 17
+9.2%), CMT1B ( myelin protein zero (MPZ ); 8.5%), and CMT2A ( MFN2 ; 4%) [ 7]. 
 
 Reference 49:
-Reference 49 (FAISS and BM25) with RRF Score: 13.4594
-Chunk Text: Animals . Adult C57BL/6J females of 8 to 10 weeks of age were pur-
-chased from the Jackson Laboratory. C22 mice, which harbor 7 cop -
-ies of a human PMP22 transgene (13), were obtained and generated 
-by Taconic via a rapid expansion method. CMT1A rats, which harbor 3 copies of a mouse Pmp22 cosmid (12), were bred and maintained 
-on the Sprague-Dawley background. Adult Sprague-Dawley rats of 
-approximately 200 g were purchased from Envigo. Oligonucleotides. Synthesis and purification of all chemically puri-
-fied ASOs were performed as previously described (53), and 16-mer chimeric (gapmer) phosphothioate oligonucleotides containing cEt 
-groups at positions 1–3 and 14–16 were targeted to human/mouse 
-PMP22 (ASO1), rat Pmp22 (ASO6), or a control. The sequences evalu-
-ated are listed in Supplemental Table 2. Lead ASO identification. Approximately 500 ASOs were designed 
-against the full human PMP22 or rat Pmp22 genes, respectively. Electro -
-poration of ASOs was carried out using the HT-200 BTX Electroporator 
-with ElectroSquare Porator (ECM830) voltage source at 140 V in 96-well 
-electroporation plates (BTX, 2 mm; Harvard Apparatus). 
+Reference 49 (FAISS and BM25) with RRF Score: 147.5816
+Chunk Text: For RNA extraction, the left and sciatic nerves were dissected 
+in mice, while the left sciatic, ulnar, femoral motor, and femoral sensory 
+nerves were dissected in rats. Tissues were homogenized in 500 μ l of 
+RLT buffer containing 1% (v /v) BME. RNA was isolated from 20 μ l of 
+lysate with an RNeasy 96 Kit (QIAGEN) that included in-column DNA 
+digestion with 50 U of DNase I (Invitrogen). RT-PCR was done using 
+the StepOne Realtime PCR system (Applied Biosystems), as described previously (28). The sequences of primers and probes used are listed in 
+Supplemental Table 3. PCR results were normalized by housekeeping 
+genes, cyclophilin A/Ppia  or Gapdh, or Gldn  for foot pad skin biopsy and 
+further normalized to the levels in PBS-treated mice or untreated cells. Histological analyses. Semi-thin sections of mouse sciatic nerve (2 
+mm piece cut from sciatic notch on the right side) were prepared as 
+The Journal of Clinical Investigation    
+RESEARCH ARTICLE
+367 jci.org   Volume 128   Number 1   January 2018
+Author contributions
+HTZ, GH, EES, MAS, and HBK conceived and coordinated the 
+studies. 
 
 Reference 50:
-Reference 50 (FAISS and BM25) with RRF Score: 13.4551
-Chunk Text: This study additionally found that blocking the innate
-immunity complement system in C3 mice did not rescue cholesterol biosynthesis, nor did it improve motorfunction, ruling out a role for an immune cause in CMT1A pathology. More recently, C3 CMT1A mice and
-human patient-derived induced CMT1A pluripotent stem cell SC precursors (iPSC-SCPs) were used to
-examine lipid metabolism [ 28]. In lipidomic and transcriptomic experiments in C3 mice, decreased sphingoli-
-pids and cholesterol and their corresponding biosynthetic genes were observed. This study also demonstrated
-dysregulated transcriptional and lipidome networks in CMT1A iPSC-SCPs. Lipid metabolism gene expression
-was altered compared with the isogenic (WT) condition. These changes correlated with decreased lipid speciesin the CMT1A iPSC-SCPs lipidomic analysis. Sphingomyelin was signi ﬁcantly decreased in the CMT1A
-iPSC-SCPs. In summary, data from multiple studies in rat, mouse, and human derived CMT models demonstrate dysregu-
-lated expression of numerous lipid biosynthesis genes including cholesterol. 
+Reference 50 (FAISS and BM25) with RRF Score: 147.5366
+Chunk Text: Patients typically present a “classical
+Genes 2023 ,14, 1391 3 of 17
+CMT phenotype” within the ﬁrst 20 years of life, characterized by progressive muscle
+feebleness, atrophy, decreased sensory function, hyporeﬂexia, and skeletal malformations. Although the disorder progresses slowly and patients may require ankle–foot orthotics,
+they generally maintain ambulation and experience no signiﬁcant impact during their life
+span. Extensive research on PMP22 and its role in CMT1A has advanced our knowledge of
+the illness and improved the potential therapeutic techniques [3]. 2.1.2. CMT1B (MPZ)
+CMT1B accounts for 10% of the total CMT1 cases and arises from MPZ mutations,
+located on chromosome 1q22-q23; the majority of the peripheral nerve myelin protein
+is encoded by CMT1B. The role of Po protein as a homophilic adhesion molecule is to
+enable myelin compaction [ 10].MPZ variants lead to the etiology of demyelinating neu-
+ropathy CMT1B (OMIM 118200). Some mutations result in axonal neuropathy CMT2I/J
+(OMIM 607677/607736) and the additionally critical juvenile-onset Dejerine–Sottas syn-
+drome (OMIM 145900) and congenital hypomyelination neuropathy 2 (OMIM 618184). 
 

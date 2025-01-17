@@ -44,7 +44,7 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-with open('./configs_system_instruction/config_2.json', 'r', encoding='utf-8') as config_file:
+with open('./configs_system_instruction/config_paper.json', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
 #Load in config file
@@ -122,7 +122,7 @@ def process_excel_data(excel_file_path, de_filter_option, test):
     fdr_threshold = 0.00008802967327
 
     if not test:
-        max_genes = 1
+        max_genes = 150
         data = data.iloc[:max_genes]
 
         if de_filter_option == "combined":
