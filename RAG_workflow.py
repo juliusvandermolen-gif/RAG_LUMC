@@ -44,7 +44,8 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-with open('./configs_system_instruction/config_paper.json', 'r', encoding='utf-8') as config_file:
+config_name = "config_role_based.json"
+with open(f'./configs_system_instruction/{config_name}', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
 #Load in config file
@@ -55,7 +56,17 @@ model_name = config["model"]
 amount_docs = config["amount_docs"]
 weight_faiss = config["weight_faiss"]
 weight_bm25 = config["weight_bm25"]
-system_instruction_response = config["system_instruction_response"]
+if config_name == "config_role_based.json":
+    persona = config["persona"]
+    instruction = config["instruction"]
+    context = config["context"]
+    context_with_example_pathways = config["context_with_example_pathways"]
+    user_input = config["user_input"]
+    examples = config["examples"]
+    output_indicator = config["output_indicator"]
+    system_instruction_response = persona + instruction + context + user_input + output_indicator  #+ examples context_with_example_pathways
+else:
+    system_instruction_response = config["system_instruction_response"]
 
 stop_words = set(stopwords.words('english'))  #.union(query_stop_words)
 
@@ -101,6 +112,7 @@ def compute_file_hash(file_path, block_size=65536):
             hasher.update(block)
     return hasher.hexdigest()
 
+
 @timer
 def initialize_gene_list(excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx", de_filter_option="combined", test=False):
     results = process_excel_data(excel_file_path, de_filter_option, test)
@@ -114,6 +126,7 @@ def initialize_gene_list(excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx", de_fil
 
     return gene_list_string, regulation, num_genes
 
+
 # Excel and Gene List Functions
 @timer
 def process_excel_data(excel_file_path, de_filter_option, test):
@@ -122,7 +135,7 @@ def process_excel_data(excel_file_path, de_filter_option, test):
     fdr_threshold = 0.00008802967327
 
     if not test:
-        max_genes = 150
+        max_genes = 250
         data = data.iloc[:max_genes]
 
         if de_filter_option == "combined":
@@ -959,8 +972,8 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
     for doc_id in combined_docs.keys():
         chunk_text = retrieved_chunks_ordered.pop(0) if retrieved_chunks_ordered else "No text available"
         document_references.append(
-            f"Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) with "
-            f"RRF Score: {combined_docs[doc_id]['score']:.4f}\nChunk Text: {chunk_text}"
+            f"|Reference {combined_docs[doc_id]['rank']} ({' and '.join(combined_docs[doc_id]['retriever'])}) with "
+            f"RRF Score: {combined_docs[doc_id]['score']:.4f}\n{chunk_text}"
         )
     combined_documents = "\n\n".join(document_references)
 
@@ -1024,8 +1037,6 @@ def generate_response_and_save(query,
     conn.close()
 
 
-
-
 # File Saving and Processing Helpers
 @timer
 def save_answer_to_file(prompt, answer, document_references, file_name="answer.txt"):
@@ -1035,7 +1046,7 @@ def save_answer_to_file(prompt, answer, document_references, file_name="answer.t
     print(f"Answer saved to {file_name}")
     with open("documents.txt", "w", encoding='utf-8') as f:
         for idx, doc in enumerate(document_references, start=1):
-            f.write(f"Reference {idx}:\n{doc} \n\n")
+            f.write(f"{doc} \n\n")
 
 
 @timer

@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/convert_txt_to_csv.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/New Text Document.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_original.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_original.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_paper.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_paper.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_short.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_short.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_test.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/all_answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/all_answers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/all_answers_config_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/all_answers_config_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/all_answers_config_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/all_answers_genes_set_analyses_paper.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/answer_250_genes_combined.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
