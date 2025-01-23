@@ -1,5 +1,5 @@
 {   "regex_note": "(?<!\n)\n(?=[A-Za-z0-9])",
-"query": "In what pathways are the following genes, originating from a rat, involved: ",
+"query": "In what pathways are the following genes involved with: ",
 "number_of_expansions": 0,
 "batch_size": 64,
 "model": "michiyasunaga/BioLinkBERT-large",

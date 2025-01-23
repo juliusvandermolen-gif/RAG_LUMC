@@ -16,9 +16,11 @@ from tqdm import tqdm
 import numpy as np
 from dotenv import load_dotenv
 import nltk
+from nltk import sent_tokenize
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
 from PyPDF2 import PdfReader
+import pdfplumber
 from transformers import AutoModel, AutoTokenizer
 import faiss
 from rank_bm25 import BM25Okapi, BM25Plus
@@ -44,7 +46,7 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-config_name = "config_role_based.json"
+config_name = "config_1.json"
 with open(f'./configs_system_instruction/{config_name}', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
@@ -135,7 +137,7 @@ def process_excel_data(excel_file_path, de_filter_option, test):
     fdr_threshold = 0.00008802967327
 
     if not test:
-        max_genes = 250
+        max_genes = 1000
         data = data.iloc[:max_genes]
 
         if de_filter_option == "combined":
@@ -990,7 +992,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
 
     output_filename = "test_files/all_answers.txt"
 
-    for i in range(1, 6):
+    for i in range(1, 2):
 
         try:
             response = client.chat.completions.create(
@@ -1160,7 +1162,6 @@ def save_scores_to_file(scores, file_name):
 @timer
 def main():
     gene_list_string, regulation, num_genes = initialize_gene_list()
-
     data_dir = './Data/biomart'
     log_dir = './file_log'
     log_path = os.path.join(log_dir, 'file_log.json')
