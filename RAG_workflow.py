@@ -46,7 +46,7 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-config_name = "config_1.json"
+config_name = "config_GPT_generated.json"
 with open(f'./configs_system_instruction/{config_name}', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
@@ -137,7 +137,7 @@ def process_excel_data(excel_file_path, de_filter_option, test):
     fdr_threshold = 0.00008802967327
 
     if not test:
-        max_genes = 1000
+        max_genes = 250
         data = data.iloc[:max_genes]
 
         if de_filter_option == "combined":
@@ -992,7 +992,7 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
 
     output_filename = "test_files/all_answers.txt"
 
-    for i in range(1, 2):
+    for i in range(1, 6):
 
         try:
             response = client.chat.completions.create(

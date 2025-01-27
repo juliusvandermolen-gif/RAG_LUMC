@@ -1,32 +1,22 @@
 Answer:
-1. Axonal Guidance Signaling
-2. Myelin Sheath Formation
-3. Peripheral Nervous System Development
-4. Schwann Cell Differentiation
-5. Lipid Metabolism
-6. Cholesterol Homeostasis
-7. Neurotransmitter Release Cycle
-8. Synaptic Vesicle Cycle
-9. Neurogenesis
-10. Neural Crest Cell Development
-11. Cell Adhesion Molecules (CAMs) in Neuronal Development
-12. Wnt/β-catenin Signaling
-13. MAPK Signaling Pathway
-14. PI3K-Akt Signaling Pathway
-15. mTOR Signaling Pathway
-16. PPAR Signaling Pathway
-17. LXR/RXR Activation
-18. Aryl Hydrocarbon Receptor Signaling
-19. Regulation of Actin Cytoskeleton
-20. Integrin Signaling Pathway
-21. Notch Signaling Pathway
-22. TGF-beta Signaling Pathway
-23. Hedgehog Signaling Pathway
-24. Calcium Signaling Pathway
-25. Oxidative Stress Response
-26. Inhibition of Matrix Metalloproteases
-27. Xenobiotic Metabolism Signaling
-28. Human Embryonic Stem Cell Pluripotency
-29. Granulocyte Adhesion and Diapedesis
-30. Leukocyte Extravasation Signaling
+1. Synaptic Plasticity Pathway
+2. Neural Signaling Pathway
+3. Axon Guidance Pathway
+4. Neurotransmitter Release Cycle
+5. Myelination Pathway
+6. Schwann Cell Differentiation Pathway
+7. Cholesterol Biosynthesis Pathway
+8. Lipid Metabolism Pathway
+9. Autophagy Pathway
+10. PI3K-AKT Signaling Pathway
+11. MAPK Signaling Pathway
+12. PPAR Signaling Pathway
+13. ER Stress Response Pathway
+14. Unfolded Protein Response Pathway
+15. Neurogenesis Pathway
+16. Cell Adhesion Molecules (CAMs) Pathway
+17. Integrin Signaling Pathway
+18. Calcium Signaling Pathway
+19. Wnt Signaling Pathway
+20. Notch Signaling Pathway
 
