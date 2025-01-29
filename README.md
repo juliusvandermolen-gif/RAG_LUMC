@@ -1,7 +1,7 @@
 
 # Biomedical Literature Query Processor
 
-![Project Logo](./Data/picture/LUMC_logo.png)
+![Project Logo](./Data/LUMC_logo.png)
 
 ## Table of Contents
 
