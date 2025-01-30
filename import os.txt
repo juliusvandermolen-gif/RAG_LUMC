@@ -1,17 +1,17 @@
-# Import necessary libraries
-import pandas as pd
-import gzip
-import csv
 import os
-import time
 import json
 import hashlib
 import re
+import gzip
 import sqlite3
 import warnings
 import string
 import atexit
+import time
 import functools
+import csv
+
+import pandas as pd
 import requests
 from tqdm import tqdm
 import numpy as np
@@ -32,12 +32,11 @@ from openai import OpenAI
 import google.generativeai as genai
 from anthropic import Anthropic
 
-import torch
-
-# Environment Setup
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 os.environ["OMP_NUM_THREADS"] = "8"
+
+import torch  #TODO Fix environment so this works
 
 load_dotenv()
 
@@ -47,7 +46,7 @@ gemini_api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_api_key)
 
 client_claude = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 # Suppress Warnings
@@ -55,12 +54,11 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-# Load Configuration
 config_name = "config_with_rats_and_encourage"
 with open(f'./configs_system_instruction/{config_name}.json', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
-# Load Configuration Parameters
+#Load in config file
 query = config["query"]
 number_of_expansions = config["number_of_expansions"]
 batch_size = config["batch_size"]
@@ -68,7 +66,6 @@ model_name = config["model"]
 amount_docs = config["amount_docs"]
 weight_faiss = config["weight_faiss"]
 weight_bm25 = config["weight_bm25"]
-
 if config_name == "config_role_based.json":
     persona = config["persona"]
     instruction = config["instruction"]
@@ -77,11 +74,11 @@ if config_name == "config_role_based.json":
     user_input = config["user_input"]
     examples = config["examples"]
     output_indicator = config["output_indicator"]
-    system_instruction_response = persona + instruction + context + user_input + output_indicator  # + examples + context_with_example_pathways
+    system_instruction_response = persona + instruction + context + user_input + output_indicator  #+ examples context_with_example_pathways
 else:
     system_instruction_response = config["system_instruction_response"]
 
-stop_words = set(stopwords.words('english'))
+stop_words = set(stopwords.words('english'))  #.union(query_stop_words)
 
 aggregated_times = {}
 
@@ -126,17 +123,17 @@ def compute_file_hash(file_path, block_size=65536):
     return hasher.hexdigest()
 
 
-@timer
 def initialize_gene_list(excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx", de_filter_option="combined", test=False):
     results = process_excel_data(excel_file_path, de_filter_option, test)
+
     if results:
         gene_list_string, regulation, num_genes = results[0]
     else:
         gene_list_string = ""
         regulation = ""
         num_genes = 0
-    return gene_list_string, regulation, num_genes
 
+    return gene_list_string, regulation, num_genes
 
 @timer
 def process_excel_data(excel_file_path, de_filter_option, test):
@@ -145,7 +142,7 @@ def process_excel_data(excel_file_path, de_filter_option, test):
     fdr_threshold = 0.00008802967327
 
     if not test:
-        max_genes = 50
+        max_genes = 250
         data = data.iloc[:max_genes]
 
         if de_filter_option == "combined":
@@ -217,20 +214,20 @@ def process_excel_data(excel_file_path, de_filter_option, test):
 
     return results
 
-
 @timer
-def extract_gene_descriptions(gene_list_string,
-                              gene_data_file=r'.\Data\biomart\without_biomart_wik\rat_genes_consolidated.txt.gz'):
+def extract_gene_descriptions(gene_list_string, gene_data_file=r'.\Data\biomart\without_biomart_wik\rat_genes_consolidated.txt.gz'):
     if not gene_list_string:
         print("Gene list is empty. No descriptions to extract.")
         return {}
 
+    # Step 1: Parse the gene list string into a list
     gene_names = [gene.strip() for gene in gene_list_string.split(',') if gene.strip()]
     gene_names_set = set(gene_names)  # For faster lookup
 
     print(f"Total genes to process: {len(gene_names_set)}")
     print(f"Genes: {gene_names_set}")
 
+    # Step 2: Extract gene descriptions from the compressed file
     gene_description_dict = {}
 
     if not os.path.exists(gene_data_file):
@@ -253,11 +250,13 @@ def extract_gene_descriptions(gene_list_string,
         print(f"Error processing the gene data file: {e}")
         return gene_description_dict
 
+    # Step 3: Report missing genes
     missing_genes = gene_names_set
     if missing_genes:
         print(f"The following genes were not found in the gene data file: {', '.join(missing_genes)}")
 
     return gene_description_dict
+
 
 
 @timer
@@ -320,6 +319,7 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
     if file.endswith('.gz'):
         decompressed_file = file[:-3]  # Remove '.gz' extension
         with gzip.open(os.path.join(data_dir, file), 'rt') as gzfile:
+            #TODO Check whether this is needed, maybe make it so it doesnt have to run gene_synonym twice
             with open(os.path.join(data_dir, decompressed_file), 'w') as outfile:
                 for line in gzfile:
                     outfile.write(line)
@@ -337,7 +337,7 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
                 if sanitized_gene_id in gene_cache:
                     gene_symbols.append(gene_cache[sanitized_gene_id])
                 else:
-                    if sanitized_gene_id.isdigit():  # Makes sure that they aren't already converted
+                    if sanitized_gene_id.isdigit():  #Makes sure that they arent already converted
                         gene_symbols.append("Unknown")
                         unknown_genes.add(sanitized_gene_id)
 
@@ -349,7 +349,7 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
             output_lines.append(new_line)
 
     if unknown_genes:
-        print(f"There are unknown genes: {unknown_genes}")
+        print(f"there are unkown genes {unknown_genes}")
         resolved_genes = search_genes(unknown_genes, gene_cache, cache_file)
 
         for line_index, unknown_gene_positions in sanitized_gene_id_map.items():
@@ -495,6 +495,7 @@ def chunk_pdfs(single_document, gene_list=None, target_length=1000):
 
         if current_length >= target_length:
             chunk_text = " ".join(current_chunk)
+            # If gene_list is provided, check if the chunk contains any gene.
             if not gene_list or any(gene in chunk_text for gene in gene_list):
                 chunks.append(chunk_text)
             current_chunk = []
@@ -669,7 +670,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
             continue
 
         if file.lower().endswith('.pdf'):
-            chunks = chunk_pdfs([(file, document, file_hash)], gene_list=None)
+            chunks = chunk_pdfs([(file, document, file_hash)])
         else:
             document_content = "\n".join(lines[1:]) if file.endswith('txt.gz') else "\n".join(lines)
             chunks = chunk_documents([document_content])
@@ -737,14 +738,21 @@ def build_bm25_index(conn):
     for row in data:
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
-    tokenized_corpus = [tokenize(doc) for doc in chunk_texts]
+    tokenized_corpus = [tokenize(doc) for doc in chunk_texts]  # original: re.findall(r'\b\w+\b', doc.lower())
     bm25 = BM25Plus(tokenized_corpus)
+    #bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
 
 
 @timer
 def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
     query_tokens = tokenize(query_text)
+    #print("Query tokens BM25:", query_tokens)
+
+    # print("\nTokens for each line in the database:")
+    # for chunk_id, chunk_text in zip(chunk_ids, chunk_texts):
+    #     line_tokens = re.findall(r'\b[\w-]+\b', chunk_text.lower())
+    #     print(f"Chunk ID {chunk_id}: {line_tokens}")  # Check how everything is chunked
     scores = bm25.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
     top_ids = [chunk_ids[i] for i in top_n]
@@ -767,6 +775,8 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
                     denominator = k1 * ((1 - b) + b * (doc_len / avgdl)) + tf
                     token_score = idf * (numerator / denominator)
                     relevant_tokens.append(f"{token} with score {token_score:.4f}")
+            else:
+                pass
         detailed_scores[chunk_id] = {
             'score': round(score, 4),
             'tokens': relevant_tokens if relevant_tokens else None
@@ -776,7 +786,7 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
 
 
 @timer
-def query_faiss_index(query_text, index, tokenizer, model, top_k,
+def query_faiss_index(query_text, index, tokenizer, model, top_k=20,
                       force_download=False):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -810,67 +820,56 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k,
 
 # Document Ranking and Combination
 @timer
-def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
-    print(top_k)
-    doc_distances = {}
-
-    for eq in expanded_queries:
-        top_ids, distances = query_faiss_index(eq, index, tokenizer, model, top_k=top_k)
-        for doc_id, distance in zip(top_ids, distances):
-            if doc_id not in doc_distances:
-                doc_distances[doc_id] = []
-            doc_distances[doc_id].append(distance)
-
+def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k=20):
     faiss_doc_distance_dict = {}
-    for doc_id, dist_list in doc_distances.items():
-        avg_dist = sum(dist_list) / len(dist_list)
-        faiss_doc_distance_dict[doc_id] = (avg_dist, "avg")
+    for eq in expanded_queries:
+        top_ids, distances = query_faiss_index(eq, index, tokenizer, model,
+                                               top_k=top_k)
+        for doc_id, distance in zip(top_ids, distances):
+            if doc_id in faiss_doc_distance_dict:
+                if distance < faiss_doc_distance_dict[doc_id][0]:
+                    faiss_doc_distance_dict[doc_id] = (distance, eq)
+            else:
+                faiss_doc_distance_dict[doc_id] = (distance, eq)
 
-    sorted_faiss_docs = sorted(faiss_doc_distance_dict.items(), key=lambda item: item[1][0])
+    sorted_faiss_docs = sorted(faiss_doc_distance_dict.items(),
+                               key=lambda item: item[1][0])
     top_faiss_docs = sorted_faiss_docs[:top_k]
-
     return top_faiss_docs
 
 
-
-
-
-
-
-
-
-
-
-
-
 @timer
-def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k):
+def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k=20):
+    """
+    Aggregate BM25 scores from expanded queries and return the top_k documents.
 
+    Args:
+        expanded_queries (list): List of expanded query strings.
+        bm25 (BM25+): BM25 index object.
+        chunk_ids (list): List of document chunk IDs.
+        chunk_texts (list): List of document chunk texts.
+        top_k (int): Number of top documents to return.
+
+    Returns:
+        list of tuples: Each tuple contains (doc_id, details), where details is a dictionary
+                        with 'score', 'tokens', and 'source_queries'.
+    """
     bm25_doc_scores = {}
 
     for eq in expanded_queries:
         top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25, chunk_ids, chunk_texts, top_k=top_k)
-
         for doc_id, details in detailed_scores.items():
-            if doc_id not in bm25_doc_scores:
+            if doc_id in bm25_doc_scores:
+                if details['score'] > bm25_doc_scores[doc_id]['score']:
+                    bm25_doc_scores[doc_id]['score'] = details['score']
+                    bm25_doc_scores[doc_id]['tokens'] = details['tokens']
+                bm25_doc_scores[doc_id]['source_queries'].append(eq)
+            else:
                 bm25_doc_scores[doc_id] = {
-                    'scores': [],
-                    'tokens': "",
-                    'best_tokens_score': float('-inf'),
-                    'source_queries': []
+                    'score': details['score'],
+                    'tokens': details['tokens'],
+                    'source_queries': [eq]
                 }
-
-            bm25_doc_scores[doc_id]['scores'].append(details['score'])
-
-            bm25_doc_scores[doc_id]['source_queries'].append(eq)
-
-            if details['score'] > bm25_doc_scores[doc_id]['best_tokens_score']:
-                bm25_doc_scores[doc_id]['best_tokens_score'] = details['score']
-                bm25_doc_scores[doc_id]['tokens'] = details['tokens']
-
-    for doc_id, info in bm25_doc_scores.items():
-        avg_score = sum(info['scores']) / len(info['scores'])
-        info['score'] = avg_score
 
     sorted_bm25_docs = sorted(bm25_doc_scores.items(),
                               key=lambda item: item[1]['score'],
@@ -880,11 +879,10 @@ def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k):
     return top_bm25_docs
 
 
-
 @timer
 def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
     """
-    Combine BM25 and FAISS scores using specified weights.
+    Combine BM25 and FAISS scores using weights instead of RRF.
     """
     total_weight = weight_faiss + weight_bm25
     weight_faiss /= total_weight
@@ -942,28 +940,29 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs,
 # Query Expansion and Response Generation
 @timer
 def query_expansion(query_text, number):
-    system_instruction = f"""You are an expert in query expansion for biomedical literature search. Given a user's 
-query, generate exactly {number} alternative queries that capture related concepts, synonyms, and relevant expansions. 
-Each alternative query should be concise and directly related to the original query.
+    system_instruction = """You are an expert in query expansion for biomedical literature search. Given a user's 
+query, generate a list of alternative queries that capture related concepts, synonyms, and relevant expansions. 
+The number of alternative queries should be appropriate to cover the topic comprehensively but remain focused. 
+However, there is a maximum of {number} alternative queries that are given.
 
-Example of a query expansion:
+Example:
 User query: "GGT5 in glutathione metabolism"
 
 Possible expanded queries:
-1. "Gamma-glutamyltransferase 5 role in glutathione metabolism"
-2. "GGT5 enzyme function in glutathione pathway"
-3. "GGT5 and its involvement in glutathione homeostasis"
-4. "Impact of GGT5 on glutathione biosynthesis and metabolism"
+- "Gamma-glutamyltransferase 5 role in glutathione metabolism"
+- "GGT5 enzyme function in glutathione pathway"
+- "GGT5 and its involvement in glutathione homeostasis"
+- "Impact of GGT5 on glutathione biosynthesis and metabolism"
 
 Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
-    """
-
+    """.format(number=number)
     if number > 0:
-        prompt = (f"Based on the user's query, provide exactly {number} expanded queries that include related terms, synonyms, "
-                  f"and relevant expansions.\n\nUser query: \"{query_text}\"")
+        prompt = (f"Based on the user's query, provide expanded queries that include related terms, synonyms, "
+                  f"and relevant"
+                  f"expansions.\n\nUser query: \"{query_text}\"")
 
         try:
-            response = client_open_ai.chat.completions.create(
+            response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": system_instruction},
@@ -971,17 +970,13 @@ Also, consider the context of the user query and ensure that the expanded querie
                 ],
                 max_tokens=500,
                 temperature=0.7,
+
             )
 
             reply = response.choices[0].message.content
-
             expanded_queries = reply.strip().split('\n')
-            expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for q in expanded_queries if q.strip()]
-
-            if len(expanded_queries) > number:
-                expanded_queries = expanded_queries[:number]
-            elif len(expanded_queries) < number:
-                print(f"Warning: Expected {number} queries but received {len(expanded_queries)}.")
+            expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for
+                                q in expanded_queries if q.strip()]
 
             return expanded_queries
 
@@ -989,20 +984,16 @@ Also, consider the context of the user query and ensure that the expanded querie
             print(f"An error occurred while expanding the query: {e}")
             return [query_text]
     else:
-        print("Number of expanded queries requested is not positive. Returning the original query.")
         return [query_text]
-
-    # else:
-    #     return [query_text]
 
 
 def query_open_ai(messages):
-    openai_model = "gpt-4o-mini"
+    openai_model = "gpt-4o"
     client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     output_filename = "test_files/all_answers_openai.txt"
     answers = []
 
-    for i in range(1, 2):
+    for i in range(1, 3):
         try:
             response = client_open_ai.chat.completions.create(
                 model=openai_model,
@@ -1050,6 +1041,9 @@ def query_gemini(system_instruction, prompt):
     return answers[-1] if answers else None
 
 
+
+
+
 def query_claude(messages):
     claude_model = "claude-3-5-sonnet-20241022"
     output_filename = "test_files/all_answers_claude.txt"
@@ -1093,31 +1087,22 @@ def query_claude(messages):
 
 
 @timer
-def generate_llm_response(query_text, gene_descriptions_string, gene_list_string,
-                          document_references,
+def generate_llm_response(query_text, document_references,
                           conn, index, tokenizer, model,
                           bm25, bm25_chunk_ids, bm25_chunk_texts,
                           weight_faiss, weight_bm25,
                           system_instruction_response,
-                          api_type='openai', test=False):
+                          gene_list_string, regulation, num_genes,
+                          api_type='gemini', test=False):
+    batch_query_text = query_text + f" {gene_list_string}"
+    print(f"Number of genes: {len(gene_list_string.split(','))}")
 
-    # Expand the retrieval query
-    expanded_queries = query_expansion(query_text, number=number_of_expansions)
-    print(f"Expanded query: {expanded_queries}")
-    if not expanded_queries:
-        expanded_queries = [query_text]
-    else:
-        expanded_queries.append(query_text)
-    # Include the original retrieval query
+    expanded_queries = query_expansion(batch_query_text, number=number_of_expansions)[1:]
+    expanded_queries.append(batch_query_text)
 
-    query_expanded_queries = [f"{eq} {gene_descriptions_string}" for eq in expanded_queries]
-    query_text = query_text + gene_list_string
+    top_faiss_docs = create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k=100000)
+    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25, bm25_chunk_ids, bm25_chunk_texts, top_k=100000)
 
-    # Retrieve documents using FAISS and BM25
-    top_faiss_docs = create_top_faiss_docs(query_expanded_queries, index, tokenizer, model, top_k=50)
-    top_bm25_docs = create_top_bm25_docs(query_expanded_queries, bm25, bm25_chunk_ids, bm25_chunk_texts, top_k=50)
-
-    # Combine scores using weighted RRF
     rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
     print(f"Retrieving top {amount_docs} documents based on RRF scores.")
     retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
@@ -1136,57 +1121,52 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
         )
     combined_documents = "\n\n".join(document_references)
 
-    # Prepare the prompt for the LLM using the simplified query
+    system_instruction = system_instruction_response
     prompt = (
         f"Based on the following documents, answer the question using both your knowledge and the provided "
-        f"documents: {query_text}\n\nDocuments:\n{combined_documents}\n"
+        f"documents: {batch_query_text}\n\nDocuments:\n{combined_documents}\n"
     )
 
     messages = [
-        {"role": "system", "content": system_instruction_response},
+        {"role": "system", "content": system_instruction},
         {"role": "user", "content": prompt}
     ]
-    print(f"Using API type: {api_type}")
+
     # Choose the appropriate query function based on the API type
     if api_type.lower() == 'openai':
         answer = query_open_ai(messages)
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)  # Adjust based on Claude's expected input
     elif api_type.lower() == 'gemini':
-        answer = query_gemini(system_instruction_response, prompt)  # Adjust based on Gemini's expected input
+        answer = query_gemini(system_instruction, prompt)  # Adjust based on Gemini's expected input
     else:
         raise ValueError("Unsupported API type. Choose from 'openai', 'claude', 'gemini'.")
 
-    # Prepare scores for exporting
-    bm25_scores = dict([ (doc_id, details['score']) for doc_id, details in top_bm25_docs ])
-    faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
+    return answer, document_references
 
-    return answer, document_references, rrf_scores, bm25_scores, faiss_scores
 
 @timer
 def generate_response_and_save(query,
-                               gene_descriptions_string, gene_list_string,
                                conn, index, tokenizer, model,
                                bm25_index, bm25_chunk_ids, bm25_chunk_texts,
                                weight_faiss, weight_bm25,
-                               system_instruction_response):
-    answer, document_references, rrf_scores, bm25_scores, faiss_scores = generate_llm_response(
-        query, gene_descriptions_string, gene_list_string,
-        [],
+                               system_instruction_response,
+                               gene_list_string, regulation, num_genes):
+    answer, document_references = generate_llm_response(
+        query, [],
         conn, index, tokenizer, model,
         bm25_index, bm25_chunk_ids, bm25_chunk_texts,
         weight_faiss, weight_bm25,
         system_instruction_response,
+        gene_list_string, regulation, num_genes,
+        test=False
     )
 
     if answer and answer != "Processing complete.":
         prompt = f"Based on the following documents, answer the question: {query}\n\n"
         save_answer_to_file(prompt, answer, document_references)
-
-        # Export scores after generating the response
-        export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx")
     else:
-        print("Failed to generate a response from the LLM.")
+        print("Failed to generate a response from GPT-4.")
     conn.close()
 
 
@@ -1204,10 +1184,11 @@ def save_answer_to_file(prompt, answer, document_references, file_name="answer.t
 
 @timer
 def process_files_in_directory(data_dir, ncbi_json_dir):
-    """Process all .gmt.gz files in the given directory."""
+    """Process all .gmt files in the given directory that start with 'wiki'."""
     for file in os.listdir(data_dir):
         full_file_path = os.path.join(data_dir, file)
-        if os.path.isfile(full_file_path) and file.endswith('.gmt.gz'):
+        if os.path.isfile(full_file_path) and file.endswith(
+                '.gmt.gz'):
             print(f"Processing file: {file}")
 
             converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
@@ -1227,9 +1208,34 @@ def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
 
 
 @timer
+def run_query_expansion_and_retrieval(query_text, gene_text, index, tokenizer, model, top_k,
+                                      bm25, bm25_chunk_ids, bm25_chunk_texts):
+    """Expand query (including gene text) and retrieve top documents using FAISS and BM25."""
+    combined_query = f"{query_text} {gene_text}".strip()
+
+    #expanded_queries = query_expansion(combined_query, number=number_of_expansions)[1:]
+    #expanded_queries.append(combined_query)
+    expanded_queries = [combined_query]
+    # for idx, eq in enumerate(expanded_queries, start=1):
+    #     print(f"Expanded Query {idx}: {eq}")
+
+    top_faiss_docs = create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k)
+    top_bm25_docs = create_top_bm25_docs(expanded_queries, bm25, bm25_chunk_ids, bm25_chunk_texts, top_k)
+
+    bm25_detailed_scores = top_bm25_docs
+    return top_faiss_docs, top_bm25_docs, bm25_detailed_scores
+
+
+@timer
 def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx"):
     """
     Export combined RRF, BM25, and FAISS scores to an Excel file.
+
+    Args:
+        rrf_scores (dict): Combined RRF scores with doc_id as keys.
+        bm25_scores (dict): BM25 scores with doc_id as keys.
+        faiss_scores (dict): FAISS scores with doc_id as keys.
+        file_name (str): Name of the Excel file to create.
     """
     all_doc_ids = set(rrf_scores.keys()).union(bm25_scores.keys()).union(faiss_scores.keys())
 
@@ -1259,6 +1265,12 @@ def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="sco
 def save_scores_to_file(scores, file_name):
     """
     Save scores to a text file, including tokens that contributed to the score.
+
+    Args:
+        scores (dict): Dictionary where each key is a doc_id and each value is either:
+                       - For BM25: a dictionary with 'score', 'tokens', and optionally 'source_queries'.
+                       - For FAISS: a simple score (e.g., distance).
+        file_name (str): Name of the file to save the scores.
     """
     with open(file_name, "w", encoding='utf-8') as f:
         for doc_id, details in scores.items():
@@ -1279,22 +1291,24 @@ def save_scores_to_file(scores, file_name):
 
 @timer
 def main():
-    # Initialize the gene list
     gene_list_string, regulation, num_genes = initialize_gene_list(
         excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx",
-        de_filter_option="combined",
-        test=False
+        de_filter_option="combined",  # Change to "separate" if needed
+        test=False  # Set to True for test mode
     )
 
     print(f"Regulation: {regulation}")
+    print(f"Number of genes: {num_genes}")
+    print(f"Gene List String: {gene_list_string}")
 
     gene_list = extract_gene_descriptions(
         gene_list_string=gene_list_string,
         gene_data_file=r'.\Data\biomart\without_biomart_wik\rat_genes_consolidated.txt.gz'
     )
 
-    gene_descriptions_string = ', '.join([f"{gene}: {desc}" for gene, desc in gene_list.items()])
+    print(f"Gene List Dictionary: {gene_list}")
 
+    quit()
     data_dir = './Data/biomart'
     log_dir = './file_log'
     log_path = os.path.join(log_dir, 'file_log.json')
@@ -1319,13 +1333,24 @@ def main():
 
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
-    # Directly generate and save the response without separate retrieval
+    top_faiss_docs, top_bm25_docs, bm25_detailed_scores = run_query_expansion_and_retrieval(
+        query, gene_list_string, index, tokenizer, model, top_k=100000,
+        bm25=bm25_index, bm25_chunk_ids=bm25_chunk_ids, bm25_chunk_texts=bm25_chunk_texts
+    )
+
+    rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
+    bm25_scores = dict(bm25_detailed_scores)
+    faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
+
+    export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx")
+
     generate_response_and_save(query,
-                               gene_descriptions_string, gene_list_string,
                                conn, index, tokenizer, model,
                                bm25_index, bm25_chunk_ids, bm25_chunk_texts,
                                weight_faiss, weight_bm25,
-                               system_instruction_response)
+                               system_instruction_response,
+                               gene_list_string, regulation, num_genes)
+
 
 if __name__ == "__main__":
     main()
