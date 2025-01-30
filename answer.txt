@@ -1,22 +1,29 @@
 Answer:
-1. Synaptic Plasticity Pathway
-2. Neural Signaling Pathway
-3. Axon Guidance Pathway
-4. Neurotransmitter Release Cycle
-5. Myelination Pathway
-6. Schwann Cell Differentiation Pathway
-7. Cholesterol Biosynthesis Pathway
-8. Lipid Metabolism Pathway
-9. Autophagy Pathway
-10. PI3K-AKT Signaling Pathway
-11. MAPK Signaling Pathway
-12. PPAR Signaling Pathway
-13. ER Stress Response Pathway
-14. Unfolded Protein Response Pathway
-15. Neurogenesis Pathway
-16. Cell Adhesion Molecules (CAMs) Pathway
-17. Integrin Signaling Pathway
-18. Calcium Signaling Pathway
-19. Wnt Signaling Pathway
-20. Notch Signaling Pathway
+response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Cholesterol biosynthesis\nLipid metabolism\nSynaptic plasticity\nAxonal transport\nAxon development\nAutophagy\nNeuroinflammation\nNerve axon development\nPhosphoinositide metabolism\nUnfolded protein response\nRemyelination\nSchwann cell differentiation\nMyelination\nNeural crest cell migration\nSterol metabolism\nSphingolipid metabolism\nGlycerophospholipid metabolism\nFatty acid metabolism\nAtherosclerosis signaling\nLXR/RXR activation\nPPAR signaling\nER stress\nNeuregulin signaling pathway\nPolyol pathway\nDeoxysphingolipid metabolism\nPurine nucleotide metabolism\nVoltage-gated calcium channel activity\nERK1/2 signaling\nEndosomal transport\nBlood-brain barrier regulation\nTight junction regulation\n\n\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.23660897888593227
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 18437,
+        "candidates_token_count": 149,
+        "total_token_count": 18586
+      },
+      "model_version": "gemini-1.5-pro-002"
+    }),
+)
 

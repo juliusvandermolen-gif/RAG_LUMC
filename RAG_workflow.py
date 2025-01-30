@@ -20,7 +20,6 @@ from nltk import sent_tokenize
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
 from PyPDF2 import PdfReader
-import pdfplumber
 from transformers import AutoModel, AutoTokenizer
 import faiss
 from rank_bm25 import BM25Okapi, BM25Plus
@@ -29,6 +28,8 @@ from sklearn.cluster import KMeans
 from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from openai import OpenAI
+import google.generativeai as genai
+from anthropic import Anthropic
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
@@ -37,7 +38,13 @@ os.environ["OMP_NUM_THREADS"] = "8"
 import torch  #TODO Fix environment so this works
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=gemini_api_key)
+
+client_claude = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 nltk.download('punkt_tab')
 nltk.download('stopwords')
 
@@ -46,8 +53,8 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-config_name = "config_GPT_generated.json"
-with open(f'./configs_system_instruction/{config_name}', 'r', encoding='utf-8') as config_file:
+config_name = "config_with_rats_and_encourage"
+with open(f'./configs_system_instruction/{config_name}.json', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
 #Load in config file
@@ -938,21 +945,114 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-@timer
-def generate_gpt4_turbo_response_with_instructions(query_text, document_references,
-                                                   conn, index, tokenizer, model,
-                                                   bm25, bm25_chunk_ids, bm25_chunk_texts,
-                                                   weight_faiss, weight_bm25,
-                                                   system_instruction_response,
-                                                   gene_list_string, regulation, num_genes,
-                                                   test=False):
+def query_open_ai(messages):
     openai_model = "gpt-4o"
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    output_filename = "test_files/all_answers_openai.txt"
+    answers = []
 
-    # Combine gene list with the query text immediately
+    for i in range(1, 3):
+        try:
+            response = client_open_ai.chat.completions.create(
+                model=openai_model,
+                messages=messages,
+                max_tokens=16384,
+                temperature=0
+            )
+            answer = response.choices[0].message.content
+        except Exception as e:
+            print(f"An error occurred while generating the GPT-4 response on iteration {i}: {e}")
+            continue
+
+        with open(output_filename, "a", encoding="utf-8") as file:
+            file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")
+
+        print(f"Answer {i} appended to {output_filename}")
+        answers.append(answer)
+
+    return answers[-1] if answers else None
+
+
+def query_gemini(system_instruction, prompt):
+    model = genai.GenerativeModel("gemini-1.5-pro")
+    output_filename = "test_files/all_answers_gemini.txt"
+    answers = []
+    for i in range(1, 2):
+        answer = model.generate_content(
+            f"Your system instructions:\n {system_instruction}. The user prompt:\n {prompt}")
+        answers.append(answer)
+
+        text_content = ""
+        if answer.candidates:
+            for candidate in answer.candidates:
+                for part in candidate.content.parts:
+                    if hasattr(part, 'text'):
+                        text_content += part.text
+        else:
+            text_content = "No text content found in the response."
+
+        with open(output_filename, "a", encoding="utf-8") as file:
+            file.write(f"Answer {i}:\n{text_content}\n{'=' * 50}\n")
+
+        print(f"Answer {i} appended to {output_filename}")
+
+    return answers[-1] if answers else None
+
+
+
+
+
+def query_claude(messages):
+    claude_model = "claude-3-5-sonnet-20241022"
+    output_filename = "test_files/all_answers_claude.txt"
+    answers = []
+
+    system_message = next((msg["content"] for msg in messages if msg["role"] == "system"), "")
+    user_messages = [msg["content"] for msg in messages if msg["role"] == "user"]
+    assistant_messages = [msg["content"] for msg in messages if msg["role"] == "assistant"]
+
+    # Combine messages into a single conversation string
+    conversation = ""
+    for user, assistant in zip(user_messages, assistant_messages + [""]):
+        conversation += f"\n\nHuman: {user}"
+        if assistant:
+            conversation += f"\n\nAssistant: {assistant}"
+
+    for i in range(1, 2):
+        try:
+            response = client_claude.messages.create(
+                model=claude_model,
+                max_tokens=8192,
+                temperature=0,
+                system=system_message,
+                messages=[{
+                    "role": "user",
+                    "content": conversation.strip()
+                }]
+            )
+            answer = response.content[0].text
+        except Exception as e:
+            print(f"An error occurred while generating the Claude response on iteration {i}: {e}")
+            continue
+
+        with open(output_filename, "a", encoding="utf-8") as file:
+            file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")
+
+        print(f"Answer {i} appended to {output_filename}")
+        answers.append(answer)
+
+    return answers[-1] if answers else None
+
+
+@timer
+def generate_llm_response(query_text, document_references,
+                          conn, index, tokenizer, model,
+                          bm25, bm25_chunk_ids, bm25_chunk_texts,
+                          weight_faiss, weight_bm25,
+                          system_instruction_response,
+                          gene_list_string, regulation, num_genes,
+                          api_type='gemini', test=False):
     batch_query_text = query_text + f" {gene_list_string}"
-    #amount_docs = 50  # Retrieve exactly one document per gene
-
     print(f"Number of genes: {len(gene_list_string.split(','))}")
 
     expanded_queries = query_expansion(batch_query_text, number=number_of_expansions)[1:]
@@ -990,26 +1090,15 @@ def generate_gpt4_turbo_response_with_instructions(query_text, document_referenc
         {"role": "user", "content": prompt}
     ]
 
-    output_filename = "test_files/all_answers.txt"
-
-    for i in range(1, 6):
-
-        try:
-            response = client.chat.completions.create(
-                model=openai_model,
-                messages=messages,
-                max_tokens=16384,
-                temperature=0
-            )
-            answer = response.choices[0].message.content
-        except Exception as e:
-            print(f"An error occurred while generating the GPT-4 response on iteration {i}: {e}")
-            continue
-
-        with open(output_filename, "a", encoding="utf-8") as file:
-            file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")
-
-        print(f"Answer {i} appended to {output_filename}")
+    # Choose the appropriate query function based on the API type
+    if api_type.lower() == 'openai':
+        answer = query_open_ai(messages)
+    elif api_type.lower() == 'claude':
+        answer = query_claude(messages)  # Adjust based on Claude's expected input
+    elif api_type.lower() == 'gemini':
+        answer = query_gemini(system_instruction, prompt)  # Adjust based on Gemini's expected input
+    else:
+        raise ValueError("Unsupported API type. Choose from 'openai', 'claude', 'gemini'.")
 
     return answer, document_references
 
@@ -1021,7 +1110,7 @@ def generate_response_and_save(query,
                                weight_faiss, weight_bm25,
                                system_instruction_response,
                                gene_list_string, regulation, num_genes):
-    answer, document_references = generate_gpt4_turbo_response_with_instructions(
+    answer, document_references = generate_llm_response(
         query, [],
         conn, index, tokenizer, model,
         bm25_index, bm25_chunk_ids, bm25_chunk_texts,
