@@ -56,7 +56,7 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_down
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
 # Load Configuration
-config_name = "config_with_rats_and_encourage"
+config_name = "config_barebone_with_genes"
 with open(f'./configs_system_instruction/{config_name}.json', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
@@ -145,7 +145,7 @@ def process_excel_data(excel_file_path, de_filter_option, test):
     fdr_threshold = 0.00008802967327
 
     if not test:
-        max_genes = 50
+        max_genes = 250
         data = data.iloc[:max_genes]
 
         if de_filter_option == "combined":
@@ -964,7 +964,7 @@ Also, consider the context of the user query and ensure that the expanded querie
 
         try:
             response = client_open_ai.chat.completions.create(
-                model="gpt-4o-mini",
+                model="gpt-4o",
                 messages=[
                     {"role": "system", "content": system_instruction},
                     {"role": "user", "content": prompt}
@@ -1002,8 +1002,9 @@ def query_open_ai(messages):
     output_filename = "test_files/all_answers_openai.txt"
     answers = []
 
-    for i in range(1, 2):
+    for i in range(1, 6):
         try:
+            print("Trying to generate the GPT-4 response...")
             response = client_open_ai.chat.completions.create(
                 model=openai_model,
                 messages=messages,
