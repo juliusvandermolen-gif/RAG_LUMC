@@ -1,0 +1,1190 @@
+(role: system, content: You are a knowledgeable bioinformatics assistant specializing in gene pathway analysis. Your primary objective is to identify and describe functionally significant gene sets using the user’s provided list of genes. Rather than focusing solely on statistical p-values, consider overall biological relevance, functional coherence, and emerging insights.
+
+When assisting the user, you should:
+
+1. **Input Acceptance and Data Context**:
+   - Accept a list of user-provided genes (symbols or identifiers).
+   - If additional analysis text or a proposed pathway/function name is provided, carefully review it to understand the rationale behind suggesting a particular function.
+
+2. **Identifying and Interpreting Pathways**:
+   - Identify associated biological pathways, both known and novel, based on the provided information and established literature.
+   - Go beyond known annotations by integrating broader literature knowledge and biological reasoning.
+
+3. **Structured Presentation of Results**:
+   - Organize identified pathways by their functional relevance and biological plausibility.
+   - Present each identified pathway along with the list of all associated genes in the following format:
+     
+     Pathway Name:
+     Genes involved: Gene A, Gene B, Gene C, ...
+
+4. **Handling Synonyms and Ambiguities**:
+   - Treat acronyms or alternative gene names as equivalent if they refer to the same gene.
+
+5. **Final Output and Interpretative Narrative**:
+   - Present findings as a clear, concise list of pathways with their corresponding genes, focusing solely on biological relevance and functional coherence.
+   - Do not be bound to a set number of pathways.
+   - Avoid narrative summaries, explanations, or detailed gene-level discussions beyond the listing of genes.
+   - Ensure the list focuses on pathways directly relevant to the user’s query and integrates potential novel or underexplored pathways.
+   - Focus particularly on neural genetic-related pathways.
+
+6. **Do Not Critique the User’s Proposed Name or Analysis**:
+   - Base evaluations solely on the user’s data and your domain knowledge.
+   - Focus on clarity, coherence, and helpfulness in your response.
+
+---
+
+**Additional Guidelines for Presenting Results**:
+
+- Organize identified pathways by grouping genes into coherent functional categories when possible.
+- Provide a comprehensive list of all potential pathways that the genes are present in, including a complete list of associated genes (gene symbols only) for each pathway, even if some genes are less relevant.
+- Instead of a simple list of genes and their pathways, focus on a small number of biologically meaningful pathways or themes and show how the genes support these themes.
+role: user, content: Based on the following documents, answer the question using both your knowledge and the provided documents: I have the following list of genes identified in a recent study related to neural development in rats, based on insights from academic literature, these genes are suspected to be involved in synaptic plasticity and neural signaling pathways. Please identify the associated biological pathways, particularly those related to neural genetic mechanisms, and present the findings as a clear, concise list of pathway names. The genes: Zpld1, Cntn6, Prss12, Gldc, Adamts17, Aldh1a1, Cobll1, Pcsk5, Tex101, Qsox1, Sema4f, Cpe, Hapln1, Marveld1, Tuba4a, Parm1, Sqor, Sbspon, Col9a3, Peg3, Emp2, Clca4l, Chst2, Acta2, Htra1, Igfbp3, Tril, Synpr, A2m, Myo1d, Ccn3, Prss23, Sumo3, Grb14, Steap2, Id2, Tf, Adamtsl3, Ltbp1, Prx, Defb29, Cdca7l, Gypc, Manba, Serpini1, Ntn1, Mag, Nrbp1, Srgap1, Ptgfr, Vopp1, Pltp, Man1a1, Drp2, Slc22a17, Tagln, Cep295nl, Aif1l, Mfap5, Mpz, Ctbs, P2ry2, Hs6st2, Tubb4a, Abca8a, Cxcl14, Ighm, Pxdn, Serinc5, Tent5c, Nrp1, Piezo2, Apod, Matn3, Sncg, Slc9a9, Riox2, Cdh13, Abcb4, Scn7a, Magec2l1, Pkp1, Epas1, Gprc5b, Efemp2, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ecel1, Serpinf1, Atf3, Icoslg, Ppp1r36, Trim35, Gldn, Krtap1-5, Alpl, Robo2, Tspan4, Nrp2, Gprc5a, Rnf144a, Frrs1, St3gal5, Kif1a, Adamtsl1, Lifr, Slit2, Tnik, Gnai1, Col20a1, Snx6, Mageb16, Prkd3, Dpysl5, Prkar2b, Cd9, Ebf1, Cldn19, Lrp2, Col15a1, Sipa1l1, Emilin1, Ppp1r14c, Tmem26, Dyrk1a, Ryr3, Septin4, Lrrtm3, Nek9, Cd151, Pfn2, Selplg, Psmd2, Ifnar1, Fhod3, Nfatc1, Cggbp1, Sgpl1, Runx3, Vps26c, Itpripl1, Fbxo11, Msi1, Slco3a1, Zfp518a, Hs6st1, Agpat5, Pam, Phldb2, Pnpt1, Poglut1, Acap2, Gja1, Tspan5, Tpcn1, Nes, Sema3g, Met, Nampt, Pmp22, Aff3, Ccn4, Taf9b, Magea4, Dpysl3, Rhoj, Asap1, Itga8, Mef2c, Cldnd1, Olfm2, Magea9, Msh2, Cers6, Hadhb, Atf5, Vash1, Smc6, ENSRNOG00000062503, Ppm1f, Klf9, Psap, Fth1, Numb, Klhl29, Itga7, Mal, C1qtnf1, Arsg, Timp1, Rcn3, Ppfia4, Cxcl12, Nlrp1a, Vrk1, Fam20c, Wnt5a, Plxnb1, Arsb, Ano5, Cenpo, ENSRNOG00000063649, Ppard, Has2, Fut10, Slitrk6, Lef1, Inpp5a, Tnfrsf1a, Parp14, Ghr, Zfyve28, Pgm1, Chmp2b, Olfml1, Bace2, Gpnmb, Mybl1, Col11a1, Efna5, Papola, Pals1, Col8a2, Hspa12a, Hmx3, Vps8, Dhrs1, Hsp90aa1, Bgn, Snx4, Ptrh1, Ckap4, Slc35a2, Gcnt1, Klhdc2, Slc39a13, Rab10, Septin5, Stard13, Cpsf2, Tbccd1, Map1lc3a, Stk39, Igf2bp2, Steap1, Gtf2e1, Cpm
+
+Documents:
+|Reference 1 (FAISS and BM25) with RRF Score: 3918.7941
+These are genes that di-erentially regulated in immortalized schwann cells (derived from a rat, rattus nrovegicus) expressing the human transgene PMP22. This is data found by RNAseq by comparing PMP22 transgene expressing cells with the same cells  immortalized Schwann cells without the transgene. The pmp22 gene in the list below is the endogenous pmp22 gene  
+   SymbolSynonym(s)Entrez Gene NameGene Symbol - rat (Entrez Gene)/EnsemblExpr Log RatioExpr False Discovery Rate (q-value)ABCA1ABC-1, ATP binding cassette subfamily A member 1, ATP-binding cassette, sub-family A member 1, CERP, HDLCQTL13, HDLDT1, HPALP1, TGDATP binding cassette subfamily A member 1ENSRNOG00000018126-0.517792470.011610082ABCB4ABC21, ATP binding cassette subfamily B member 4, GBD1, ICP3, MDR2, MDR2/3, MDR3, PFIC-3, P-GP, PGY3, PHOSPHOLIPID FLIPPASEATP binding cassette subfamily B member 4ENSRNOG00000068001-0.6852788727.05335E-09ABLIM12210411C18RIK, 2610209L21Rik, 4833406P10Rik, 9330196J19RIK, ABLIM, ABLM1, actin-binding LIM protein 1, LIMAB1, LIMATIN, LOC102550100, mKIAA0059, RGD1565768actin binding LIM protein 1ENSRNOG000000463331.2534711311.63242E-05AMFRautocrine motility factor receptor, GP78, RNF45, SPG89autocrine motility factor receptorENSRNOG00000055446-0.1914996830.000178827ANXA2annexin A2, annexin II, ANX2, ANX2L4, CAL1H, HEL-S-270, LIP2, lipocortin 2, LPC2, LPC2D, P36, PAP-IVannexin A2ENSRNOG00000010362-0.2305445425.87174E-05ATF4activating transcription factor 4, C/ATF, CREB-2, TAXREB67, TXREBactivating transcription factor 4ENSRNOG00000017801-0.2568853972.17399E-05ATP2B4ATP2B2, ATPase, Ca++ transporting, plasma membrane 4, ATPase plasma membrane Ca2+ transporting 4, LOC108352534, MXRA1, PMCA4, Pmca4bATPase plasma membrane Ca2+ transporting 4ENSRNOG000000030311.3728215710.000193668BDNFANON2, Brain derived neurotrophic factor, BULN2, OCD1, tBDNFbrain derived neurotrophic factorENSRNOG00000047466-1.4823748796.29551E-06CD3GCD3 antigen, gamma polypeptide, CD3 antigen, γ polypeptide, CD3-GAMMA, CD3 gamma subunit of T-cell receptor complex, Cd3g γ, CD3-γ, CD3 γ subunit of T-cell receptor complex, Ctg-3, IMD17, T3GCD3 gamma subunit of T-cell receptor complexENSRNOG00000015945-0.5550443360.000733908CD9BTCC-1, CD9 ANTIGEN, CD9 molecule, DRAP-27, MIC3, MRP-1, TSPAN-29CD9 moleculeENSRNOG00000019556-0.8679201812.53368E-08CREB3cAMP responsive element binding protein 3, CREBP3, LUMAN, LZIP, LZIP-1, LZIP-2cAMP responsive element binding protein 3ENSRNOG00000016452-0.280209785.15149E-06CREB3L1C16DELp11.2, cAMP responsive element binding protein 3-like 1, DEL16p11.2, OASIS, OI16cAMP responsive element binding protein 3 like 1ENSRNOG00000005413-0.4891787819.86872E-05CTNNB1armadillo, Beta-cat, beta CATENIN, Bfc, CATENIN beta, catenin beta 1, CATENIN β, catenin β 1, CATNB, CTNB1, CTNNB, CTNN beta, CTNN β, EVR7, Mesc, MRD19, NEDSDV, β-cat, β-catenincatenin beta 1ENSRNOG000000541720.1770855734.8526E-05DDOSTAGE-R1, CDG1R, dolichyl-diphosphooligosaccharide--protein glycosyltransferase non-catalytic subunit, dolichyl-di-phosphooligosaccharide-protein glycotransferase, GATD6, LOC100504754, OKSWcl45, OST, OST48, WBP1dolichyl-diphosphooligosaccharide--protein glycosyltransferase non-catalytic subunitENSRNOG00000015079-0.2908241285.96201E-07DLX1DII B, distal-less homeobox 1, Dlxdistal-less homeobox 1ENSRNOG00000001520-0.2727697870.000301488DRP2dystrophin related protein 2dystrophin related protein 2ENSRNOG00000026704-1.9642318942.11811E-09EBF1B120IND2, COE1, early B cell factor 1, EBF, EBF transcription factor 1, O/E-1, OE-1, OLF1EBF transcription factor 1ENSRNOG000000288451.1306914142.53368E-08EDAECTD1, Ectodysplasin, ectodysplasin-A, ED1, ED1-A1, ED1-A2, EDA1, EDA2, HED, HED1, ODT1, RGD1563178, STHAGX1, Ta, tabby, TNLG7C, XHED, XLHEDectodysplasin AENSRNOG00000032208-0.3453555420.000821096EMP1CL-20, ENP1MR, epithelial membrane protein 1, I-8-09, TMPepithelial membrane protein 1ENSRNOG00000008676-0.3066535052.34552E-06EMP3epithelial membrane protein 3, epithelial membrane protein 3 (MAM blood group), H-4, haematoPOIETIC NEURAL MEMBRANE, HEMATOPOIETIC NEURAL MEMBRANE, HNMP-1, MI-35, YMPepithelial membrane protein 3 (MAM blood group)ENSRNOG00000021104-0.250786390.000134288ENO1ENO1-IT1, ENO1L1, ENOA, ENOLASE, ENOLASE 1, Enolase 1 alpha, enolase 1, alpha non-neuron, Enolase 1 α, enolase 1, α non-neuron, Enolase α, HEL-S-17, LOC100503183, MBP-1, MPB1, NNE, Phosphopyruvate hydratase, PPH, α enolaseenolase 1ENSRNOG000000178950.4466186433.23275E-06ERGIC32310015B14Rik, AV318804, C20orf47, C2orf47, CGI-54, D2Ucla1, dJ477O4.2, ERGIC, ERGIC and golgi 3, Erv46, NY-BR-84, PRO0989, SDBCAG84ERGIC and golgi 3ENSRNOG00000031085-0.2826642628.41426E-06ERLIN2BC036333, C87251, C8orf2, ER lipid raft associated 2, NET32, RGD1309010, SPFH2, SPG18, SPG18A, SPG18BER lipid raft associated 2ENSRNOG000000137630.269184179.5115E-06ETV51110005E01Rik, 8430401F14Rik, ERM, ets variant 5, Ets variant gene 5, ETS variant transcription factor 5ETS variant transcription factor 5ENSRNOG000000017850.8162569251.22316E-05FCGRTalpha-chain, Fc fragment of IgG receptor and transporter, Fc gamma receptor and transporter, Fc Receptor Igg Alpha Chain Transporter, Fc Receptor Igg α Chain Transporter, Fc receptor subunit p51, Fc γ receptor and transporter, FcgammaRn, FCRN, α-chainFc gamma receptor and transporterENSRNOG00000020583-0.6607310124.67214E-07FLOT1Flotillin-1, Rareg, reggie-2flotillin 1ENSRNOG00000000826-0.2724882530.00060245GLDCb2b2679Clo, D030049L12Rik, D19Wsu57e, GCE, GCE1, GCSP, glycine decarboxylase, HYGN1, LOC100911814glycine decarboxylaseENSRNOG00000011599-6.2466178972.10017E-12HDAC5HD5, Hdac4, histone deacetylase 5, mHDA1, mKIAA0600, NY-CO-9histone deacetylase 5ENSRNOG00000020905-0.5054423525.28755E-05HM131200006O09Rik, 4930443L17Rik, 5031424B04Rik, H13, histocompatibility 13, histocompatibility minor 13, IMP1, IMPAS, IMPAS-1, MSTP086, PSENL3, PSL3, SPP, SPPL1histocompatibility minor 13ENSRNOG00000007738-0.2353791732.84746E-05IGF1C730016P09Rik, IGF, IGF-I, IGF-I-smC, INSULIN-LIKE GROWTH FACTOR 1, insulin like growth factor I, insulin-like somatomedin peptide I, MAD isoform 4, mecasermin, mecasermin recombinant, MGF, Preproinsulin-like growth factor ia, somatomedin Cinsulin like growth factor 1ENSRNOG00000004517-0.7850881780.00038809LMAN12610020P13Rik, C730041J05, ERGIC-53, F5F8D, FMFD1, Golgi 58k, gp58, lectin, mannose binding 1, lectin, mannose-binding, 1, MCFD1, MR60, P58lectin, mannose binding 1ENSRNOG00000024470-0.2140536371.7901E-05MLEC2410014A08Rik, ESTM19, KIAA0152, malectin, mKIAA0152, RGD1307736malectinENSRNOG00000064601-0.1808341520.000534336MPZCHM, CHN2, CMT1, CMT1B, CMT2I, CMT2J, CMT4E, CMTDI3, CMTDID, DSS, GLYCOPROTEIN P0, HMSNIB, MPP, myelin protein zero, P0, protein ZERO, P-zeromyelin protein zeroENSRNOG00000003171-0.5073084663.11302E-09MYCbHLHe39, CMYC, C-MYC-P64, mMyc, MRTL, Myc2, MYCC, MYC proto-oncogene, bHLH transcription factor, myelocytomatosis oncogene, Niard, Nird, RNCMYCMYC proto-oncogene, bHLH transcription factorENSRNOG00000004500-0.95106320.000932828NGF (family)Nerve growth factorPALS13830420B02Rik, MPP5, protein associated with LIN7 1, MAGUK family member, protein associated with LIN7 1, MAGUK p55 family memberprotein associated with LIN7 1, MAGUK p55 family memberENSRNOG000000087880.3764384382.8473E-07PDGFBc-sis, IBGC5, PDGF-2, PDGF-BB, PDGF beta, PDGFbetaR, Pdgfrb, PDGFRbeta, PDGF β, platelet derived growth factor, B polypeptide, platelet derived growth factor subunit B, SIS, SSVplatelet derived growth factor subunit BENSRNOG000000171970.5468019622.48332E-06PLTPBPIFE, HDLCQ9, Lipid transfer protein II, OD107, phospholipid transfer protein, Plasma phospholipid transfer, Pltp1phospholipid transfer proteinENSRNOG00000016488-0.9142234541.91613E-09PMP22CIDP, CMT1A, CMT1E, DSS, GAS-3, HMSNIA, HNPP, PERIPHERAL MYELIN protein 22, Sp110, Sr13, Tr, TRE002, tremblerperipheral myelin protein 22ENSRNOG00000003338-0.3886352167.953E-08PRXCMT4F, L-Periaxin, periaxinperiaxinENSRNOG00000018369-0.9015273259.64492E-10QSOX11300003H02Rik, b2b2673Clo, BPGF1, FLJ23867, Q6, QSCN6, QSOX, quiescin Q6 sulfhydryl oxidase 1, quiescin Q6 sulphydryl oxidase 1, quiescin sulfhydryl oxidase 1, quiescin sulphydryl oxidase 1, rSOx, SOx, Sox-2, Sulfhydryl oxidase 1, sulphydryl oxidase 1quiescin sulfhydryl oxidase 1ENSRNOG00000003649-2.2584191921.25114E-11SAR1A1600019H17Rik, masra2, SAR1, SARA, SARA1, secretion associated Ras related GTPase 1A, secretion associated, Ras related GTPase 1Asecretion associated Ras related GTPase 1AENSRNOG00000000557-0.2861818915.89893E-05SERPINE1beta MIGRATING PLAS ACTIVATOR, beta-MIGRATING PLASMINOGEN ACTIVATOR INHIBITOR I, PAI, PAI-1, PAI1A, Pai1aa, Planh, PLANH1, Plasminogen activator inhibitor 1, RATPAI1A, serine (or cysteine) peptidase inhibitor, clade E, member 1, SERPINE, serpin family E member 1, β MIGRATING PLAS ACTIVATOR, β-MIGRATING PLASMINOGEN ACTIVATOR INHIBITOR Iserpin family E member 1ENSRNOG00000001414-0.8631497126.24071E-07SMIM32010002N04Rik, C5orf62, cI-41, MST150, NID67, small integral membrane protein 3small integral membrane protein 3ENSRNOG00000019536-0.2839404790.000378117SPTAN12610027H02Rik, (alpha)II-SPECTRIN, (α)II-SPECTRIN, A2a, Alpha fodrin, Alpha spectrin, alpha SPECTRIN 2, Alpha-spectorin, AlphaII spectrin, DEE5, DEVEP, EIEE5, HMN11, HMND11, IPF, NEAS, Spectrin alpha 2, spectrin alpha, non-erythrocytic 1, Spectrin α 2, spectrin α, non-erythrocytic 1, spectrin, alpha, non-erythrocytic 1, spectrin, α, non-erythrocytic 1, SPG91, SPNA2, SPTA2, α fodrin, α spectrin, α SPECTRIN 2, α-spectorinspectrin alpha, non-erythrocytic 1ENSRNOG00000015396-0.301875110.00049344STOMBND7, EPB7, EPB72, EPB7.2, StomatinstomatinENSRNOG00000019147-0.477220833.65653E-06SUMO32810014B19Rik, AA409334, D10Ertd345e, small ubiquitin-like modifier 3, SMT3A, Smt3B, SMT3H1small ubiquitin like modifier 3ENSRNOG00000064656-2.5568845692.00577E-10SYVN11200010C09Rik, D530017H19Rik, DER3, HRD1, RGD1310488, synovial apoptosis inhibitor 1, synoviolin, Synoviolin, synoviolin 1synoviolin 1ENSRNOG00000020950-0.2676928286.24459E-05TJP1Gm1693, tight junction protein 1, ZO-1, zona occludens 1tight junction protein 1ENSRNOG00000011077-0.2766251162.03097E-06TJP2C9DUPq21.11, DFNA51, DUP9q21.11, FHCA1, LOC108349129, PFIC4, tight junction protein 2, X104, ZO-2tight junction protein 2ENSRNOG00000015030-0.3172828684.75674E-06TLR3CD283, IIAE2, IMD83, toll-like receptor 3toll like receptor 3ENSRNOG000000217260.9331685211.47209E-06TMED101110014C03Rik, p23, p24d1, P24(DELTA), p24 delta1, P24(δ), S31I125, S31III125, TMP21, Tmp-21-I, transmembrane p24 trafficking protein 10transmembrane p24 trafficking protein 10ENSRNOG000000079010.24146071.48977E-05TMED41110014L17Rik, EMP24, ERS25, GMP25iso, HNLF, p24a3, P24-alpha-2, p24alpha3, P24-α-2, RGD1306319, TRANSMEMBRANE EMP24 protein TRANSPORT domain containing 4, transmembrane p24 trafficking protein 4transmembrane p24 trafficking protein 4ENSRNOG00000005016-0.3652671451.90376E-05TMX12810425A04Rik, PDIA11, thioredoxin-related transmembrane protein 1, TMX, TXNDC, TXNDC1thioredoxin related transmembrane protein 1ENSRNOG000000579340.3203813662.98769E-05TP53bbl, BCC7, bfy, bhy, BMFS5, LFS1, p44, P53, P53 cellular tumour antigen, p53 tumor suppressor, transformation related protein 53, TRP53, tumor protein p53, tumour protein p53tumor protein p53ENSRNOG000000107560.169259270.000224124
+
+|Reference 2 (BM25) with RRF Score: 3749.4708
+Keywords
+ Schwann cell · Myelin · Peripheral nervous system · Peripheral neuropathy
+Abbreviations
+ADAM17   ADAM metallopeptidase domain 17
+Akt  V-Akt murine thymoma viral oncogene-like protein
+AMPK
+  5′-Adenosine monophosphate- activated 
+protein kinase
+BAF   Brahma-associated factor
+cAMP   Cyclic adenosine monophosphate
+Clp  Claw paw
+CNS   Central nervous system
+Crb3   Crumbs cell polarity complex component 3
+c-Jun   Jun proto-oncogene
+AP-1   Transcription factor subunit
+CADM   Cell adhesion molecule
+CMT   Charcot–Marie–Tooth
+CX32   Connexin 32
+DG  Dystroglycan
+Dlg1/SAP97   Discs large 1/synapse-associated protein 97
+DRG   Dorsal root ganglia
+DRP   Dystrophin-related protein 2
+ECM   Extracellular matrix
+Egr2   Early growth response 2Erb-B2   Receptor tyrosine kinase 2
+GJB1   Gap junction protein beta 1, the Connexin 32 gene
+GPR126
+  G protein-coupled receptor 126
+GPR44   G protein-coupled receptor 44
+HDAC   Histone deacetylase
+HMN   Hereditary motor neuropathy
+HSAN   Hereditary sensory and autonomic neuropathy
+HSN
+  Hereditary sensory neuropathy
+IMA   Inner mesaxon
+IPL  Intraperiod line
+IPN  Inherited peripheral neuropathy
+iSCs   Immature Schwann cells
+JAG1   Jagged 1
+MAG   Myelin-associated glycoprotein
+MAGUK   Membrane-associated guanylate like kinase
+MAPK   Mitogen-activated protein kinase
+MBP   Myelin basic protein
+MCT1   Monocarboxylate transporter 1
+MPZ   Myelin protein zero gene
+MTMR   Myotubularin-related
+mTOR   Mechanistic target of rapamycin kinase
+MUPP1   Multi-PDZ domain protein
+NDRG1   N-Myc downstream regulated 1
+Necl   Nectin-like protein
+NFATc4   Nuclear factor of activated T cells 4
+NF-kB   Nuclear factor kappa-light-chain-enhancer of activated B cells * Alessandra Bolino 
+ bolino.alessandra@hsr.it
+1 Human Inherited Neuropathies Unit, Institute 
+of Experimental Neurology INSPE, Division of Neuroscience, IRCCS Ospedale San Raffaele, Via Olgettina 60, 20132 Milan, Italy/ Published online: 9 July 2021Neurotherapeutics (2021) 18:2169–2184
+1 3NF186   Neurofascin 186
+NF2  Neurofibromin
+Notch-1   Notch homolog 1, translocation-associated
+Nrcam   Neuronal cell adhesion molecule
+NRG1   Neuregulin
+N-WASP   Wiskott–Aldrich syndrome protein
+Lgi4   Leucine-rich repeat LGI family member 4
+LKB1   Liver kinase B1
+L-PGDS   Prostaglandin D2 synthase
+Oct6   (Pou3f1, POU Class 3 Homeobox 1)
+OMA   Outer mesaxon
+Pals1/MPP5   Membrane palmitoylated protein 5
+Par3  Partitioning defective protein
+PatJ  PATJ crumbs cell polarity complex 
+component
+PGD2   Prostaglandin D2
+PLCɣ  Phospholipase C gamma
+PKA   Protein kinase A
+PKC   Protein kinase C
+PMP22   Peripheral myelin protein 22
+PNS  Peripheral nervous system
+PrP  Prion protein
+PTEN   Phosphatase and tensin homolog
+P0  Myelin protein zero
+RBPJ   Recombination signal binding protein for immunoglobulin kappa J region
+REDD1
+  Regulated in development and DNA dam-age responses 1
+PIK3CA
+  Phosphatidyl-inositol 3 kinase (PI3K) class I
+PRX
+  Periaxin
+PTEN   Phosphatase and tensin homolog
+SC  Schwann cells
+SCPs   Schwann cell precursors
+SGK1   Serum/glucocorticoid regulated kinase 1
+SHP2   Src homology region 2 (SH2)-containing protein tyrosine phosphatase 2
+Sox10
+  SRY-box transcription factor 10
+SREBP   Sterol regulatory element-binding protein
+TACE   TNF-alpha convertase enzyme
+TAZ   YAP co-activator with PDZ binding domain
+TEAD
+  TEA domain transcription factor
+TF  Transcription factor
+TSC  Tuberous sclerosis complex
+YAP   Transcription co-activator Yes-associated protein 1
+YY1
+  Yin-Yang transcription factor 1
+Zeb2   Zinc finger E-box binding homeobox 2
+ZO-1   Tight junction protein 1Organization of Myelinated Fibers in the PNS
+In the peripheral nervous system (PNS), myelin is formed by the spiral wrapping of the Schwann cell plasma mem-brane around the axon [1 –3].
+
+|Reference 3 (FAISS and BM25) with RRF Score: 3659.1782
+cDNA was synthesized with Superscript III (Invitrogen) and
+quantitative PCRs were done in triplicates with the GoTaq master mix (Promega)on a 7500 Fast Real-Time PCR System (Applied Biosystems). Expression values
+were normalized to the geometric mean of two housekeeping genes, Hprt
+(Hypoxanthin-Phosphoribosyl-Transferase 1) and Rplp0 (60S acidic ribosomal
+protein P) and analysed by the DDCtmethod. Expression of the following genes was measured: Abca1 (ATP-binding cassette
+transporter A1), Actb (beta actin), Aif1 (allograft inﬂammatory factor 1), Apoe
+(apolipoprotein E), Bdnf (Brain-derived neurotropic factor), Bmp2 and Bmp4
+(Bone morphogenic protein 2 and 4), Car2 (carbonic anhydrase 2), Ch25h
+(Cholesterol 25-Hydroxylase ), Cntf (ciliary neurotrophic factor), Cyp27a1 (Sterol
+27-hydroxylase ), Cyp46a1 (Cholesterol 24-hydroxylase), Cyp51a1 (Sterol 14 alpha-
+demethylase), Dhcr24 (24-Dehydrocholesterol reductase), Egf(epidermal growth
+factor), Fdft1 (Farnesyl-Diphosphate Farnesyltransferase 1), members of the Fgf
+(ﬁbroblast growth factor) gene family, Gfap (glial ﬁbrillary acidic protein), Gmcsf(granulocyte-macrophage colony-stimulating factor, CSF2), H2-DMb2 (MHCII,
+major histocompatibility complex class II), Hmgcr (3-Hydroxy-3-Methylglutaryl-
+CoA Reductase), Hmgcs1 (3-Hydroxy-3-methylgutaryl-CoA synthase 1), Ifng
+(interferon gamma), Igf1(insulin-like growth factor 1), Il2(interleukin 2), Il17,
+Inhba (inhibin beta-A, also called activin beta-A), Ldlr (Low density lipoprotein
+receptor), Lrp1 (Low density lipoprotein receptor-related protein 1), Mvk
+(Mevalonate kinase), Ntf3 (Neurotrophin 3), Ngf(Nerve growth factor ), Nr1h3
+(Liver X receptor alpha, LXR alpha), Nr1h2 (Liver X receptor beta, LXR beta), Olig2
+(oligodendrocyte lineage transcription factor 2), Pdgfa (platelet derived growth
+factor alpha), Plp1 (proteolipid protein 1), Ptn (Pleiotrophin), Rxrg (Retinoic X
+receptor gamma, RXR gamma), S100b (S100 calcium-binding protein B), Shh
+(sonic hedgehog), Srbf2 (sterol regulatory element binding transcription factor 2),
+Tnf(tumour necrosis factor), Vldlr (Very low density lipoprotein receptor).
+
+|Reference 4 (FAISS and BM25) with RRF Score: 3512.2419
+In addition, neural 
+crest derived satellite glia maintain a tight communication with the 
+soma of sensory, sympathetic, and parasympathetic neurons and neural 
+crest derivatives are furthermore an indispensable part of the enteric 
+nervous system. The remarkable plasticity of SCs becomes evident in the 
+context of a nerve injury, where SC transdifferentiate into intriguing 
+repair cells, which orchestrate a regenerative response that promotes 
+nerve repair. Indeed, the multiple adaptations of SCs are captivating, but 
+remain often ill-resolved on the molecular level. Here, we summarize 
+and discuss the knowns and unknowns of the vast array of functions that 
+this single cell type can cover in peripheral nervous system develop -
+ment, maintenance, and repair. Abbreviations: c-JUN, c-JUN transcription factor; C3, complement component 3; CCL2, CC motif chemokine ligand 2; CNS, central nervous system; CR3, com-
+plement receptor 3; CXCL12, C-X-C motif chemokine 12; CXCR4, C-X-C motif chemokine receptor 4; DCC, deleted in colorectal cancer, Netrin-1 receptor; DHH, desert 
+hedgehog protein; ERBB, Erb-B receptor tyrosine kinase; GDNF, glial cell derived neurotrophic factor; GPCR/GPCRs, G-protein coupled receptor/receptors; HLA, 
+human leucocyte antigen; IH3, Diwanka; LAMA2, laminin subunit alpha 2; MCP1, monocyte chemoattractant protein 1; MHCII, major histocompatibility complex II; 
+NG2, neuron-glial antigen 2; NMJ/NMJs, neuromuscular junction/junctions; NRG1, neuregulin 1; p75NTR, neurotrophin receptor p75; PNS, peripheral nervous 
+system; RNA, Ribonucleic acid; SC/SCs, Schwann cell/cells; scRNAseq, single cell RNA sequencing; SGC/SGCs, satellite glial cell/cells; SOX10, Sry-related HMg-Box 
+gene 10; TRAP1, Tumor necrosis factor receptor associated protein 1; USH2A, usherin; VEGFR1, vascular endothelial growth factor receptor 1.
+
+|Reference 5 (FAISS and BM25) with RRF Score: 3509.2726
+(B) lactate dehydrogenase (LDH) released into the media (mean±SEM, n³3). (C) Effect of atorvastatin and atorvastatin washout on pThr231Tau/tTau ratio in APPdp1-6. Neurons were treated for 5 days with DMSO or Atorvastatin and directly harvested, or after 5 days atorvastatin was washed-out and cells were harvested 2-4 days after wash out. (D) Purified neurons (NDC line B11 and B10) were treated for three days with atorvastatin or DMSO and harvested for quantitative mass spectrometry. In total three runs from three independent experiments were performed (two different experiments with B11 and one experiment with B10). All proteins that were increased >1.5 fold in all three runs were selected as hits and plotted by their effect on fold change (mean±sem). For complete dataset see Table S4. Proteins with a role in cholesterol synthesis are indicated in blue. HMGCR, 3-Hydroxy-3-Methylglutaryl-CoA Reductase; CYP51A1, Cytochrome P450 Family 51 Subfamily A Member 1 aka Lanosterol 14α-demethylase; SQLE, Squalene Epoxidase; VCL, Vinculin; SPTAN1, spectrin alpha, non-erythrocytic 1; RBM22, RNA Binding Motif Protein 22; CKMT1A, Creatine Kinase, Mitochondrial 1A; PSMC2, 26S proteasome regulatory subunit 7; CPT2, carnitine palmitoyltransferase 2; DHRS7, Dehydrogenase/Reductase 7.
+
+|Reference 6 (BM25) with RRF Score: 3376.4444
+The cognate molecule in the Schwann cell membrane 
+binding to 
+ PrPC remains to be identified. Moreover, it is not 
+known whether the  PrPC-mediated signaling may converge 
+on the NRG1-ErbB2 axis in Schwann cells. Lgi4 and ADAM22. ADAM22 in the axon has no 
+secretase activity but rather acts as receptor for Lgi4 (leucine-rich repeat LGI family member 4) secreted by Schwann cells (Fig. 2) [69]. Analysis of the spontaneous 
+mutant claw paw (clp) carrying a recessive mutation in Lgi4 revealed a key role for this molecule in promoting myelina-tion during development [70]. Nerves from the claw paw mutant are severely hypomyelinated and present defects in radial sorting. Consistent with this, nerves from conditional mutants lacking ADAM22 are also hypomyelinated [69]. The precise mechanisms of action of Lgi4 and ADAM22 in the PNS, which are not restricted to the axo-glia juxtacrine interaction, remain to be clarified. Notch-1 . Notch-1 (Notch homolog 1, translocation-
+associated) signaling in Schwann cells, driven by inter -
+action with its axonal ligand Jagged 1 (JAG1) (Fig.
+
+|Reference 7 (FAISS and BM25) with RRF Score: 3363.2285
+PIKfyve enzyme 
+inhibitorsIntraperitoneal injection 
+(mice)CMT4B1, CMT4B2 Inhibition of PIKfyve and decrease of 
+PI3,5P2 levelsTo be considered for CMT4B1 and 
+CMT4B2
+SARM1 inhibitors Intrathecal virus injection 
+(mice)All CMT and related 
+neuropathiesPrevention of axonal degeneration –
+HDAC6 inhibitors Oral (mice) CMT2F, dHMN 2A Reduction of microtubules acetylation, 
+action axonal transportUnder consideration
+ACE-083 Intramuscular (humans) CMT1, CMTX1 Action on myostatin pathway Phase I+II 
+(n = 62 overall) trial did not 
+produce significant clinical 
+improvement
+CSF1R inhibitors Oral (mice) CMT1A, CMT1B, CMTX1 Decline in nerve macrophages –
+FLX-787 Oral (humans: 30 mg 
+three times a day)CMT Activation of TRPA1 and TRPV1 
+channels, for crampsPhase II (n = 120) stopped for oral 
+intolerability in a subset of 
+patients
+Aldose reductase 
+inhibitorsTo be defined CMT and dHMN associated 
+with biallelic SORD 
+mutationsInhibition of aldose reductase, the 
+enzyme converting glucose into 
+sorbitolUnder consideration
+L-Serine Oral (mice and humans: 
+high doses)HSN1 Reduction of neurotoxic 
+deoxysphingolipidsPhase II trial (n = 18) performed, 
+primary endpoint not reached, 
+but underpowered trial
+S-adenosylmethionine 
+(SAM)Oral 
+(Arts syndrome 
+patients)CMTX5, Arts syndrome and 
+the X-linked non 
+syndromic sensorineural 
+deafness DFN2Purine nucleotides supply Anectodal report
+AAV1-NT-3 = adeno-associated virus–mediated neurotrophin-3, ASO = antisense oligonucleotide, cAMP = cyclic adenosine monophosphate, CMT = Charcot-Marie- 
+Tooth disease, CSF1R = colony stimulating factor 1 receptor, FDA = Food and Drug Administration, GABA B = gamma-aminobutyric acid B receptor, 
+HDAC6 = histone deacetylase 6, dHMN = distal hereditary motor neuropathy, HNPP = hereditary neuropathy with liability to pressure palsies, 
+HSN = hereditary sensory neuropathy, IRE1 = inositol-requiring enzyme 1, PIKfyve = phosphatidylinositol 3-phosphate 5-kinase, SARM1 = sterile alpha and TIR 
+motif containing 1, shRNA = small hairpin RNA, siRNA = small interfering RNA, TRPA1 = transient receptor potential cation channel, subfamily A, member 1, 
+TRPV1 = transient receptor potential cation channel subfamily V member 1, UPR = unfolded protein response 704
+ C. PISCIOTTA ET AL.
+
+|Reference 8 (BM25) with RRF Score: 3328.3753
+7e,f), likely indicating enhanced remyelination. In
+contrast, expression of LXR family genes, which inﬂuence OPC
+differentiation36, was not affected by cholesterol (Supplementary
+Table 1). The expression of growth factors involved in OPC survival,
+proliferation, migration or differentiation28, including Igf1
+(insulin-like growth factor), Cntf (ciliary neurotrophic factor),
+Inhba (inhibin beta-A, also called activin beta-A) and Egf
+(epidermal growth factor) was strongly increased (2–20 fold) by
+cuprizone, but was not further regulated by cholesterol
+supplementation (Supplementary Table 1). A set of genes
+whose products are known to inhibit differentiation of OPCs,
+such as Fgf2 (ﬁbroblast growth factor 2) and Pdgfa (platelet
+derived growth factor alpha)37–39, was also strongly upregulated
+by cuprizone (8–12 fold higher than untreated controls). Strikingly, the expression of these mitogens was attenuated
+in cholesterol fed animals to levels only 3–8 fold higher than
+in untreated controls (Fig.
+
+|Reference 9 (FAISS and BM25) with RRF Score: 3301.2681
+Cont. Compound CMT Type Mechanism Clinical Trials
+HDAC6 inhibitors
+(CKD504)CMT2F, dHMN2Reduces microtubles acetylation,
+action axonal transportN.A
+SARM1 inhibitors CMT2 Prevents axonal degeneration N.A
+CSF1R inhibitors,
+CSF1 receptor antagonistsCMT1A, CMT1B,
+CMTX1Decline in nerve macrophages N.A
+eIF2and Gadd34 CMT1BUpregulation of eIF2 
+phosphorylation
+controlling translationN.A
+Sox2 and Id2 CMT1B Negatively regulates myelination, N.A
+Isoquinoline CMT2AInhibits the activity of the
+SARM1 NADaseN.A
+MFN2 agonists CMT2A Improves mitochondrial trafﬁcking N.A
+6-phenylhexanamide
+derivative
+mitofusin activatorsCMT2A Improves mitochondrial motility N.A
+cAMP , cyclic adenosine monophosphate; CMT, Charcot–Marie–Tooth disease. CSF1R, colony-stimulating factor
+1 receptor; eIF2 , eukaryotic translation initiation factor 2 kinase; ER, endoplasmic reticulum; FDA, Food and
+Drug Administration; GABAB, gammaaminobutyric acid B receptor; GADD34, growth arrest and DNA damage
+gene; HDAC6, histone deacetylase 6; dHMN, distal hereditary motor neuropathy; HNPP , hereditary neuropathy
+with liability to pressure palsies; Id2, Inhibitor of DNA binding 2; MFN2, mitofusin 2; N.A., not applicable;
+NAD, nicotinamide adenine dinucleotide; SARM1, sterile and TIR motif containing 1; SCs, Schwann cells;
+UPR, unfolded protein response.
+
+|Reference 10 (BM25) with RRF Score: 3297.2534
+Egr2/Krox20 is a master transcription factor of myelina-
+tion whose loss in mice results in the arrest of Schwann cells at the pro-myelinating stage in a 1:1 relationship with the axon and in a-myelinated axons [ 39, 48]. Krox20 cooper -
+ates with Sox10 to promote myelination and activates the expression of myelin genes, encoding structural proteins of compact myelin such as P0 and PMP22 [33]. Myelin biosyn-thesis also involves the activation of SREBP (sterol regula-tory element-binding protein) transcription factors, which promote lipid biosynthesis [49, 50] (see following section 
+on myelin biogenesis). To induce myelination, inhibitors of myelination must 
+also be repressed at the transcriptional level. Of note, Krox20 itself acts to inhibit Oct6, c-Jun (Jun proto-oncogene, AP-1 
+transcription factor subunit) and Sox2, which are elevated in 
+iSCs [33, 34, 51]. At the induction of myelination, c-Jun and 
+Sox2 are also repressed by the transcription factor Zeb2 (zinc finger E-box binding homeobox 2) [52, 53].
+
+|Reference 11 (BM25) with RRF Score: 3288.8511
+Pro‑myelinating Signals from the Axon
+Neuregulin 1. In the PNS, axons with a diameter bigger than  
+1 µm are myelinated, whereas axons smaller than 1 µm in diameter are unmyelinated and form Remak bundles [1 , 26]. This observation led to the hypothesis that an “axonal deter -
+minant” dictates the fate of Schwann cells at the transition from iSCs to myelin-forming or non-myelin forming, but the identity of this factor remained elusive for many decades [26]. NRG1 (neuregulin) signaling influences all develop-
+mental stages of Schwann cells, starting from SCPs, when Schwann cells are dependent on axons for their migration, proliferation, and survival [25, 57]. NRG1 is a member of 
+the epidermal growth factor (EGF) superfamily, which com-prises several alternatively spliced transmembrane protein isoforms [1 ]. NRG1 isoforms are classified on six different 
+classes, of which types I–III are the most abundant. NRG1 type I is a soluble isoform acting as a paracrine 
+signal mainly expressed by Schwann cells.
+
+|Reference 12 (BM25) with RRF Score: 3277.0881
+Within the nervous system, the intercellular transport 
+of cholesterol and other lipids is mediated by lipoprotein particles (Herz and Chen 2006; Bu 2009). The lipoprotein particle receptors belong to the low-density lipoprotein receptor (LDLR) family with LDLR and LRP1 (LDLR-related protein 1) as the main receptors involved in cho-lesterol homeostasis. Proteins of the LDLR family are 
+Saher et al. 81
+Figure 1. The cholesterol biosynthesis pathway. The isoprenoid biosynthetic pathway ( top) produces numerous biologically 
+active compounds (i.e., isoprenoids) involved in a variety of important cellular processes. In addition to sterol biosynthesis 
+(bottom ), isoprenoids give rise to farnesyl and geranylgeranyl moieties (protein modification), dolichol (protein glycosylation), 
+ubiquinone, and heme A (respiratory chain). Enzyme activity of mevalonate kinase (1) is lost in patients with mevalonic aciduria and strongly reduced in patients with hyperimmunoglobulinemia D and periodic fever syndrome (HIDS) (Houten and others 1999; Drenth and others 1999) (red bar).
+
+|Reference 13 (BM25) with RRF Score: 3270.5289
+Here, 
+we will specifically discuss signaling pathways that promote the transition of iSCs to pro-myelinating and fully differenti-ated myelin-forming Schwann cells. Transcriptional Regulation of Myelination
+Schwann cell differentiation into a myelin-forming pheno-type requires a sequential activation of transcription factors (TFs). In the transition to a pro-myelinating phenotype, 2172 A. Bolino
+1 3NF-kB (nuclear factor kappa-light-chain-enhancer of acti-
+vated B cells), Oct6 (Pou3f1, POU class 3 homeobox 1), Brn2 (Pou3f2, POU class 3 homeobox 2), Sox10 (SRY-box transcription factor 10), NFATc4 (nuclear factor of activated T cells 4), and YY1 (Yin-Yang transcription factor 1) are all upregulated and activated [33, 34]. Of note, NF-kB is 
+required for Schwann cell myelination in vitro, whereas its role in vivo is unclear [35]. Sox10 activates Oct6, which together with Brn2 promote the expression and activation of Egr2 (early growth response 2/Krox20) [36]. Krox20, the master transcription factor of myelination, is also activated by NFATc4 and YY1, cooperatively with Sox10 [ 37–39] 
+and by Tead1 (TEA domain) with YAP/TAZ co-activators downstream of the tumor suppressor Hippo signaling path-way [ 40].
+
+|Reference 14 (BM25) with RRF Score: 3269.3906
+95. Braissant, O., and Wahli, W. (1998). Differential expression of peroxisome proliferator-acti-
+vated receptor-alpha, -beta, and -gamma during rat embryonic development. Endocrinology 139, 2748 –2754 . 96. Granneman, J., Skoff, R., and Yang, X. (1998). Member of the peroxisome proliferator-acti-
+vated receptor family of transcription factors is differentially expressed by oligodendro-cytes. J. Neurosci. Res. 51, 563 –573. 97. Higashiyama, H., Kinoshita, M., and Asano, S. (2007). Expression pro ﬁling of liver recep-
+tor homologue 1 (LRH-1) in mouse tissues using tissue microarray. J. Mol. Histol. 38,4 5–52. 98. Woods, J.W., Tanen, M., and Berger, J.P. (2003). Localization of PPARdelta in murine cen-
+tral nervous system: expression in oligodendrocytes and neurons. Brain Res. 975,1 0–21. 99. Saluja, I., Granneman, J.G., and Skoff, R.P. (2001). PPAR delta agonists stimulate oligoden-
+drocyte differentiation in tissue culture. Glia 33, 191 –204. 100. Jana, M., Mondal, S., Gonzalez, F.J., and Pahan, K. (2012). Gem ﬁbrozil, a lipid-lowering drug,
+increases myelin genes in human oligodendrocytes via peroxisome proliferator-activated
+receptor-beta.
+
+|Reference 15 (BM25) with RRF Score: 3269.3906
+95. Braissant, O., and Wahli, W. (1998). Differential expression of peroxisome proliferator-acti-
+vated receptor-alpha, -beta, and -gamma during rat embryonic development. Endocrinology 139, 2748 –2754 . 96. Granneman, J., Skoff, R., and Yang, X. (1998). Member of the peroxisome proliferator-acti-
+vated receptor family of transcription factors is differentially expressed by oligodendro-cytes. J. Neurosci. Res. 51, 563 –573. 97. Higashiyama, H., Kinoshita, M., and Asano, S. (2007). Expression pro ﬁling of liver recep-
+tor homologue 1 (LRH-1) in mouse tissues using tissue microarray. J. Mol. Histol. 38,4 5–52. 98. Woods, J.W., Tanen, M., and Berger, J.P. (2003). Localization of PPARdelta in murine cen-
+tral nervous system: expression in oligodendrocytes and neurons. Brain Res. 975,1 0–21. 99. Saluja, I., Granneman, J.G., and Skoff, R.P. (2001). PPAR delta agonists stimulate oligoden-
+drocyte differentiation in tissue culture. Glia 33, 191 –204. 100. Jana, M., Mondal, S., Gonzalez, F.J., and Pahan, K. (2012). Gem ﬁbrozil, a lipid-lowering drug,
+increases myelin genes in human oligodendrocytes via peroxisome proliferator-activated
+receptor-beta.
+
+|Reference 16 (BM25) with RRF Score: 3261.9125
+Clinical translation is feasible due to the
+absence of any signiﬁcant side effects with dietary phospholipids; therefore, a clinical
+experiment with oral lecithin supplementation has been set [22]. 3.2. Preclinical Research
+3.2.1. Neuregulin-1 Type I (NRG1)
+The peripheral myelination of the nerves is endorsed by axonal neuregulin 1 type
+III (Nrg1-III) through downstream signaling pathways activation, such as PI3K/Akt and
+mitogen-activated protein kinase (MAPK)/ERK, which ultimately regulate the master
+transcriptional regulators of myelin genes, such as Krox20 [30]. The thickness of the
+myelin is controlled by the amount of Nrg1-III, whose action is moderated by the secre-
+tases -site amyloid precursor protein cleaving enzyme 1 (BACE1) and tumor necrosis
+factor- converting enzyme (TACE) through distinct extracellular cleavage mechanisms [ 9]. Niacin/Niaspan (nicotinic acid) may improve focal hypermyelination, avoid myelin deteri-
+Genes 2023 ,14, 1391 7 of 17
+oration, and reserve axonal physiology by increasing TACE activity and downregulating
+Nrg1 type III.
+
+|Reference 17 (BM25) with RRF Score: 3259.0352
+Importantly, a Sec23-interacting protein (Sec23ip,
+also called p125A), which is also enriched in ER exit sites, is a member
+of a family of three proteins that possess DDHD domains. (DDHD do-
+mains are 180 amino acid protein modules that selectively binds PA and
+can also be found in the lipid transfer proteins, Nir2/3 [ 57]). The other
+two proteins of this family, DDHD1 and DDHD2 are phospholipase A1(PLA) enzymes capable of generating lyso-PI and lyso-PA, respectively
+(PLA activity has not been demonstrated for Sec23ip/p125 [ 74]. That
+said, Sec23ip/p125 was found to be important in the functional as-sembly of ER exit sites [ 75,76] and was shown to depend on both PA
+and PI4P [ 77]. Sar1 was also shown to promote the local generation of
+PI4P, a lipid that promoted Sar1-induced membrane constriction and
+COPII assembly in an in vitro ER-budding assay, presumably through
+the activity of one class of the four PI 4-kinases (PI4Ks), namely the type
+II PI4Ks [ 73]. Another report found that the number of ER exit sites was
+decreased in cells depleted in another PI4K, the type III PI4K, PI4KA[78], although this e ﬀect could be secondary as many changes to cel-
+lular lipid levels have been shown to follow PI4KA depletion [ 79].
+
+|Reference 18 (BM25) with RRF Score: 3249.9230
+Active lesions: in response to des truction of the lipid-rich myelin sheet, expression of cholesterol synth esis genes is reduced in
+most glial cells and neurons ( ‘Shutdown ’). Myelin clearance by CNS phagocytes, predominantly microglia, is essential for the resolution of in ﬂammation and the
+establishment of a local proregenerative microenvironment that allows oligodendrocyte differentiation. Following myelin uptake, which involve s TAM receptor tyrosine
+kinases (Tyro3, Axl, MerTK), microg lia synthesize the liver X receptor (LXR) ligand desmoste rol to enable ATP binding cas sette subfamily A member 1 ( ABCA1)-
+mediated cholesterol ef ﬂux ( ‘Lipid recycling ’) and adaption of an anti-in ﬂammatory expression pro ﬁle [e.g., interleukin-10 (IL-10), arginase 1 (Arg1)]. Thus, in acute
+experimental lesions, oligodendrocytes rely on lipid import, presumabl y by upregulating lipid receptors such as scavenger receptor class B, membe r 3 (CD36), for
+differentiation and myelination. Chronic lesion: chronic experimental demyelination leads to suboptimal lipid recycling and the appearance of nu merous foamy phagocytes,
+possibly a consequence of ineffective LXR signaling ( ‘Exhausted microglia ’).
+
+|Reference 19 (BM25) with RRF Score: 3242.7941
+Concerning radial myelin growth and thickness, several negative regulators have been identified most of them converging on the NRG1 pathway [1 ]. As 
+described before, TACE secretase cleaves NRG1 type III and negatively regulates its activity and myelination [65]. PTEN phosphatase downregulates 
+ PIP3 levels and Akt-mTORC1 
+activation, thus also negatively regulating myelination [86, 87]. Of note, the Dlg1/SAP97 (Discs Large 1/synapse asso-ciated protein 97) is a scaffolding protein of the MAGUK family that has been shown to potentiate PTEN activity and to negatively regulate the Akt-mTORC1 signaling [103]. In turn, Dlg1 is negatively regulated by the Kif13b unconven-tional kinesin motor protein, that promotes p38ɣ -MAPK 
+Dlg1 phosphorylation and ubiquitination [104]. Kif13b is thus a positive regulator of myelination. REDD1 (Regu-lated in development and DNA damage responses 1/Ddti4) is another negative regulator of mTORC1, which acts by stimulating TSC1/2. Consistent with this, Ddit4 KO nerves display increased myelin thickness [105].
+
+|Reference 20 (BM25) with RRF Score: 3239.4882
+Epilepsia 55, 539 –550. 129. Feng, Y., and Bankston, A. (2010). The star family member QKI and cell signaling. Adv. Exp. Med. Biol. 693,2 5–36. 130. Larocque, D., and Richard, S. (2005). QUAKING KH domain proteins as regulators of glial
+cell fate and myelination. RNA Biol. 2,3 7–40. 131. Sidman, R.L., Dickie, M.M., and Appel, S.H. (1964). Mutant mice (quaking and jimpy) with
+deﬁcient myelination in the central nervous system. Science 144, 309 –311. 132. Ebersole, T.A., Chen, Q., Justice, M.J., and Artzt, K. (1996). The quaking gene product neces-
+sary in embryogenesis and myelination combines features of RNA binding and signal trans-duction proteins. Nat. Genet. 12,2 6 0–265. 133. Darbelli, L., Vogel, G., Almazan, G., and Richard, S. (2016). Quaking regulates neurofascin
+155 expression for myelin and axoglial junction maintenance. J. Neurosci. 36, 4106 –4120 . 134. Larocque, D., Pilotte, J., and Richard, S. (2002). Nuclear retention of MBP mRNAs in the
+quaking viable mice. Neuron 36, 815 –829. 135. Li, Z., Zhang, Y., Li, D., and Feng, Y.
+
+|Reference 21 (BM25) with RRF Score: 3239.4882
+Epilepsia 55, 539 –550. 129. Feng, Y., and Bankston, A. (2010). The star family member QKI and cell signaling. Adv. Exp. Med. Biol. 693,2 5–36. 130. Larocque, D., and Richard, S. (2005). QUAKING KH domain proteins as regulators of glial
+cell fate and myelination. RNA Biol. 2,3 7–40. 131. Sidman, R.L., Dickie, M.M., and Appel, S.H. (1964). Mutant mice (quaking and jimpy) with
+deﬁcient myelination in the central nervous system. Science 144, 309 –311. 132. Ebersole, T.A., Chen, Q., Justice, M.J., and Artzt, K. (1996). The quaking gene product neces-
+sary in embryogenesis and myelination combines features of RNA binding and signal trans-duction proteins. Nat. Genet. 12,2 6 0–265. 133. Darbelli, L., Vogel, G., Almazan, G., and Richard, S. (2016). Quaking regulates neurofascin
+155 expression for myelin and axoglial junction maintenance. J. Neurosci. 36, 4106 –4120 . 134. Larocque, D., Pilotte, J., and Richard, S. (2002). Nuclear retention of MBP mRNAs in the
+quaking viable mice. Neuron 36, 815 –829. 135. Li, Z., Zhang, Y., Li, D., and Feng, Y.
+
+|Reference 22 (FAISS and BM25) with RRF Score: 3233.8078
+Impaired sphingolipid metabolism is also associated with myelin abnormal-
+ities. Dihydroceramide desaturase (DEGS1) contributes to the synthesis of
+ceramide, the simplest form of sphingolipid. DEGS1 mutations cause hypomyeli-
+nating leukodystrophy-18, which is characterized by accumulations in theREVIEW
+ll The Innovation 4(1): 100360, January 30, 2023 7
+Table 1. Hereditary myelin disorders secondary to mutations in lipid metabolic pathway-related genes
+Name OMIM Gene Gene product/function Description Ref. Peroxisomal acyl-CoA
+oxidase de ﬁciency264470 ACOX1 Peroxisomal acyl-
+coenzyme A oxidase 1;
+catalyzes 1st reaction in
+peroxisomal fatty acid b-
+oxidationLeukodystrophy,
+hypotonia, seizures,
+developmental regression,
+mean survival of 5 yearsFerdinandusse et al.,153
+Watkins et al.216
+D-bifunctional protein
+deﬁciency261515 HSD17B4 D-bifunctional protein;
+catalyzes 2nd and 3rd
+reactions in peroxisomal
+fatty acid b-oxidationLeukodystrophy, seizures,
+hypotonia, delayed
+development, neuronal
+migration defects, mean
+survival of <2 yearsFerdinandusse et al.154,217
+X-linked
+adrenoleukodystrophy300100 ABCD1 ATP-binding cassette
+subfamily D member 1;
+importation of very long
+chain fatty acids into
+peroxisomesLeukodystrophy, dementia,
+adrenal insuf ﬁciency,
+paralysis, audiovisual
+impairmentMoser et al.,151,152,
+Schamburg et al.218
+Fatty acid hydroxylase-
+associated
+neurodegeneration612319 FA2H Fatty acid 2-hydroxylase;
+hydroxylation of position 2
+of the N-acyl chain of
+ceramide moietiesLeukodystrophy, spastic
+paraplegia, cognitive
+impairmentEdvardson et al.,171Kruer
+et al.,172Dick et al.219
+Sjogren-Larsson
+syndrome270200 ALDH3A2 Aldehyde dehydrogenase
+family-3 member A2;
+oxidation of lipid-derived
+aldehydesLeukoencephalopathy,
+intellectual disability,
+macular dystrophy, spastic
+paresisLossos et al.,220Sjogren et
+al.,221Willemsen et al.222
+Metachromaticleukodystrophy250100 ,249900 ARSA Arylsulfatase A; catalyzes
+hydrolyzation of sulfatidesLate infantile: seizures,
+hypotonia, developmental
+regression
+Juvenile/adult: behavioral
+disturbances, dementia,
+ataxia, pyramidal signs,neuropathyMahmood et al.,
+177
+MacFaul et al.,223Zafeiriou
+et al.224
+PSAP Prosaposin; precursor of
+saposins A-D, catalyzes
+hydrolysis ofglycosphingolipids
+Globoid cell
+leukodystrophy245200 GALC Galactosylceramidase;
+catalyzes hydrolysis of
+galactoceramideInfantile: developmental
+delay, hypotonia,
+quadriparesis, seizures,
+survival of <2 years
+Juvenile/adult: behavioraldisturbances, motor-
+sensory neuropathy,
+cognitive declineKomatsuzaki et al.,
+178
+Wenger et al.179
+Hypomyelinating
+leukodystrophy-18618404 DEGS1 Dihydroceramide
+desaturase 1; catalyzes
+ﬁnal step of ceramide de
+novo synthesisFailure to thrive, poor
+psychomotor
+development, severeintellectual disabilityKarsai et al.,175Pant et
+al.,176Dolgin et al.225
+Smith-Lemli-Opitz 270400 DHCR7 7-dehydrocholesterol
+reductase; catalyzes
+reduction and conversion
+of 7-dehydrocholesterol
+into cholesterolCongenital malformations,
+photosensitivity,
+intellectual disability,
+abnormal brain MRI
+(corpus callosum, whitematter lesions)Anstey et al.,226Irons et
+al.,227Lee et al.228,229
+Rhizomelic
+chondrodysplasia
+punctata (types 1, 2, 3
+and 5)215100, 222765, 600121,
+616716PEX7 Peroxin 7; import of PTS2
+peroxisome matrix
+proteinsAbnormal facies,
+rhizomelia, congenital
+cataracts, intellectual
+disability, developmental
+delay, joint deformities,myelination abnormalitiesBams-Mengerink et al.,159
+Sztriha et al.,160Barøy
+et al.163
+GNPAT Dihydroxyacetone
+phosphate
+acyltransferase; catalyzessynthesis of plasmalogens
+AGPS Alkyl dihydroxyacetone
+phosphate synthase;
+catalyzes synthesis of
+plasmalogens
+PEX5-L Peroxin 5, long isoform; co-
+transporter for PTS2
+peroxisome matrix
+proteins
+Peroxisomal fatty acyl-
+CoA reductase 1 disorder616154 FAR1 Fatty acyl-CoA reductase
+1; catalyzes reduction oflong chain fatty acyl-CoA
+to fatty alcoholsIntellectual disability,
+epilepsy, growthretardation, spastic
+paresis, cataractsBuchert et al.,
+164
+Ferdinandusse et al.165
+(Continued on next page )REVIEW
+8 The Innovation 4(1): 100360, January 30, 2023 www.cell.com/the-innovationwww.the-innovation.org
+enzyme substrate dihydroceramide and possibly toxic ceramide isoform
+ceramide-14Z.175,176Metachromatic leukodystrophy (MLD) is secondary to mu-
+tations of either ARSA orPSAP , which encode lysosomal enzyme aryl sulfatase A
+and prosaposin, respectively.177Loss of function of ARSA, or impaired activation
+secondary to mutant prosaposin, arrests the degradation of sulfatides.
+
+|Reference 23 (FAISS and BM25) with RRF Score: 3233.8078
+Impaired sphingolipid metabolism is also associated with myelin abnormal-
+ities. Dihydroceramide desaturase (DEGS1) contributes to the synthesis of
+ceramide, the simplest form of sphingolipid. DEGS1 mutations cause hypomyeli-
+nating leukodystrophy-18, which is characterized by accumulations in theREVIEW
+ll The Innovation 4(1): 100360, January 30, 2023 7
+Table 1. Hereditary myelin disorders secondary to mutations in lipid metabolic pathway-related genes
+Name OMIM Gene Gene product/function Description Ref. Peroxisomal acyl-CoA
+oxidase de ﬁciency264470 ACOX1 Peroxisomal acyl-
+coenzyme A oxidase 1;
+catalyzes 1st reaction in
+peroxisomal fatty acid b-
+oxidationLeukodystrophy,
+hypotonia, seizures,
+developmental regression,
+mean survival of 5 yearsFerdinandusse et al.,153
+Watkins et al.216
+D-bifunctional protein
+deﬁciency261515 HSD17B4 D-bifunctional protein;
+catalyzes 2nd and 3rd
+reactions in peroxisomal
+fatty acid b-oxidationLeukodystrophy, seizures,
+hypotonia, delayed
+development, neuronal
+migration defects, mean
+survival of <2 yearsFerdinandusse et al.154,217
+X-linked
+adrenoleukodystrophy300100 ABCD1 ATP-binding cassette
+subfamily D member 1;
+importation of very long
+chain fatty acids into
+peroxisomesLeukodystrophy, dementia,
+adrenal insuf ﬁciency,
+paralysis, audiovisual
+impairmentMoser et al.,151,152,
+Schamburg et al.218
+Fatty acid hydroxylase-
+associated
+neurodegeneration612319 FA2H Fatty acid 2-hydroxylase;
+hydroxylation of position 2
+of the N-acyl chain of
+ceramide moietiesLeukodystrophy, spastic
+paraplegia, cognitive
+impairmentEdvardson et al.,171Kruer
+et al.,172Dick et al.219
+Sjogren-Larsson
+syndrome270200 ALDH3A2 Aldehyde dehydrogenase
+family-3 member A2;
+oxidation of lipid-derived
+aldehydesLeukoencephalopathy,
+intellectual disability,
+macular dystrophy, spastic
+paresisLossos et al.,220Sjogren et
+al.,221Willemsen et al.222
+Metachromaticleukodystrophy250100 ,249900 ARSA Arylsulfatase A; catalyzes
+hydrolyzation of sulfatidesLate infantile: seizures,
+hypotonia, developmental
+regression
+Juvenile/adult: behavioral
+disturbances, dementia,
+ataxia, pyramidal signs,neuropathyMahmood et al.,
+177
+MacFaul et al.,223Zafeiriou
+et al.224
+PSAP Prosaposin; precursor of
+saposins A-D, catalyzes
+hydrolysis ofglycosphingolipids
+Globoid cell
+leukodystrophy245200 GALC Galactosylceramidase;
+catalyzes hydrolysis of
+galactoceramideInfantile: developmental
+delay, hypotonia,
+quadriparesis, seizures,
+survival of <2 years
+Juvenile/adult: behavioraldisturbances, motor-
+sensory neuropathy,
+cognitive declineKomatsuzaki et al.,
+178
+Wenger et al.179
+Hypomyelinating
+leukodystrophy-18618404 DEGS1 Dihydroceramide
+desaturase 1; catalyzes
+ﬁnal step of ceramide de
+novo synthesisFailure to thrive, poor
+psychomotor
+development, severeintellectual disabilityKarsai et al.,175Pant et
+al.,176Dolgin et al.225
+Smith-Lemli-Opitz 270400 DHCR7 7-dehydrocholesterol
+reductase; catalyzes
+reduction and conversion
+of 7-dehydrocholesterol
+into cholesterolCongenital malformations,
+photosensitivity,
+intellectual disability,
+abnormal brain MRI
+(corpus callosum, whitematter lesions)Anstey et al.,226Irons et
+al.,227Lee et al.228,229
+Rhizomelic
+chondrodysplasia
+punctata (types 1, 2, 3
+and 5)215100, 222765, 600121,
+616716PEX7 Peroxin 7; import of PTS2
+peroxisome matrix
+proteinsAbnormal facies,
+rhizomelia, congenital
+cataracts, intellectual
+disability, developmental
+delay, joint deformities,myelination abnormalitiesBams-Mengerink et al.,159
+Sztriha et al.,160Barøy
+et al.163
+GNPAT Dihydroxyacetone
+phosphate
+acyltransferase; catalyzessynthesis of plasmalogens
+AGPS Alkyl dihydroxyacetone
+phosphate synthase;
+catalyzes synthesis of
+plasmalogens
+PEX5-L Peroxin 5, long isoform; co-
+transporter for PTS2
+peroxisome matrix
+proteins
+Peroxisomal fatty acyl-
+CoA reductase 1 disorder616154 FAR1 Fatty acyl-CoA reductase
+1; catalyzes reduction oflong chain fatty acyl-CoA
+to fatty alcoholsIntellectual disability,
+epilepsy, growthretardation, spastic
+paresis, cataractsBuchert et al.,
+164
+Ferdinandusse et al.165
+(Continued on next page )REVIEW
+8 The Innovation 4(1): 100360, January 30, 2023 www.cell.com/the-innovationwww.the-innovation.org
+enzyme substrate dihydroceramide and possibly toxic ceramide isoform
+ceramide-14Z.175,176Metachromatic leukodystrophy (MLD) is secondary to mu-
+tations of either ARSA orPSAP , which encode lysosomal enzyme aryl sulfatase A
+and prosaposin, respectively.177Loss of function of ARSA, or impaired activation
+secondary to mutant prosaposin, arrests the degradation of sulfatides.
+
+|Reference 24 (BM25) with RRF Score: 3231.0350
+Clin Genet . 1974;6(2):98–118. 2. Lupski JR, et al. DNA duplication associated 
+with Charcot-Marie-Tooth disease type 1A. Cell . 1991;66(2):219–232. 3. Raeymaekers P, et al. Duplication in chromosome 
+17p11.2 in Charcot-Marie-Tooth neuropathy type 
+1a (CMT 1a). The HMSN Collaborative Research Group. Neuromuscul Disord. 1991;1(2):93–97 . 4. Patel PI, et al. The gene for the peripheral  
+myelin protein PMP-22 is a candidate for  
+Charcot-Marie-Tooth disease type 1A. Nat Genet . 1992;1(3):159–165. 5. Timmerman V, et al. The peripheral myelin pro -
+tein gene PMP-22 is contained within the Char-cot-Marie-Tooth disease type 1A duplication. Nat Genet . 1992;1(3):171–175. 6. Valentijn LJ, et al. The peripheral myelin gene PMP-
+22/GAS-3 is duplicated in Charcot-Marie-Tooth disease type 1A. Nat Genet . 1992;1(3):166–170. 7 . Matsunami N, et al. Peripheral myelin protein-22 
+gene maps in the duplication in chromosome 
+17p11.2 associated with Charcot-Marie-Tooth 1A. Nat Genet . 1992;1(3):176–179. 8. Lee S, et al. PMP22 is critical for actin-mediated 
+cellular functions and for establishing lipid rafts.
+
+|Reference 25 (BM25) with RRF Score: 3224.7545
+These hFNSC-derived astrocytes were 
+exposed to hypoxia for 48 h which was validated by an increase in the 
+expression of the hypoxia-responsive protein, HIF1 α. Transcriptomic 
+changes in hypoxia-exposed astrocytes interestingly revealed upregu -
+lation of pathways involved in steroid biosynthesis. The upregulated 
+genes included key enzymes of the cholesterol biosynthetic pathway 
+including HMG-coA reductase (HMGCR), mevalonate kinase (MK) and 
+squalene epoxidase (SQLE). Cholesterol within the central nervous system is produced de novo, as 
+cholesterol from the circulation cannot cross the blood-brain barrier. Within the CNS, cholesterol is produced by astrocytes, neurons as well as 
+oligodendrocytes with astrocytes serving as a source for cholesterol for 
+other cell types during times of need [13]. Cholesterol is transported in 
+the form of ApoE-containing lipoproteins. Astrocytes express ABCA1 for 
+the efflux of cholesterol and form lipoprotein-like particles which are 
+taken up by oligodendrocytes and neurons using LDL-receptor (LDLR), scavenger receptor class B type 1 (SRB1) or LDL-R related protein 1/2 
+(LRP1/2) [14].
+
+|Reference 26 (BM25) with RRF Score: 3223.4562
+no.MX0760) 
+and stored in liquid nitrogen until use. Samples were sectioned at 
+10 μm thickness and allowed to dry for 1 h, followed by rehydration 
+and fixing in 4% paraformaldehyde (Electron Microscopy Sciences, 
+cat. no. 15714) for 10 min and processed for immunolabeling. For 
+anti- G3BP1 detection, after permeabilization with 0.1% Triton- X 100 
+(Sigma- Aldrich, cat. no. T8787) with 20 mM glycine (Sigma- Aldrich, 
+cat. no.G8898) in phosphate- buffered saline (PBS), (pH: 7.2), blocking 
+for nonspecific antibody binding was done at 22°C for 1 h in 20% nor-
+mal goat serum (Sigma- Aldrich, cat. no.S26- M) in PBS, supplemented 
+with 20 mM glycine (Sahoo et al., 2020). For Peripheral Myelin Protein 
+2 (PMP2) detection, the samples were similarly fixed, followed by 
+permeabilization with 100% cold methanol at −20°C for 5 min (Hong 
+et al., 2024). Primary antibodies against PMP2 (rabbit anti- PMP2; 
+RRID:AB_2166978; 1:250), Ras GTPase- activating protein- binding 
+protein 1 (G3BP1; rabbit anti- G3BP1; RRID:AB_1849348; 1:250), 
+neurofilament (chicken anti- NF- M; RRID: AB 2572367, EnCor 
+Biotechnology Inc) and lysosome- associated membrane protein 1 
+(LAMP1, RRID:AB 528127) were applied in blocking solution over-
+night at 4°C.
+
+|Reference 27 (BM25) with RRF Score: 3219.5880
+Those 
+include, depending on the cell context, the induction of too rigid stress fibers and focal adhesions that inhibit polarity and migration or, alternatively, the stimula -
+tion of abnormally high levels of acto -
+myosin contractility that could lead to cell detachment and anoikis. To deal with this problem, cancer cells have implemented a number of negative regulatory steps to tune down the activity of the RhoA path -
+way ( Fig. 1) . Those include, among oth -
+ers, the release of RhoA from the plasma membrane via phosphorylation by protein kinase A (PKA) and protein kinase G (PKG)
+3,4 (Fig. 1) , the proteosomal degra -
+dation of RhoA induced by E3 ubiquitin ligases (Smurf1, Cullin)
+5,6 (Fig. 1) , the 
+interference with the RhoA activation cycle via inhibition of RhoA guanosine nucleotide exchange factors (GEFs) and stimulation of GTPase activating pro -
+teins (GAPs),
+7-9 the obstruction of effec -
+tor binding by the previous interaction of RhoA with cell cycle inhibitors (p27
+Kip1),10 
+or the inhibition of Rock activity by the direct interaction of this serine/threo -
+nine kinase with GTPases (RhoE/Rnd3, Gem, R-Rad)
+11-13 and cell cycle inhibitors 
+(p21Waf1)14 (Fig.
+
+|Reference 28 (BM25) with RRF Score: 3207.0158
+Below, we summarize currently
+described mechanisms by which these regulators contribute to myelin and
+myelin lipid homeostasis. PPAR bis a regulator of myelin lipid metabolism
+The PPARs comprise a family of three closely related ligand-activated tran-
+scription factors, namely PPAR a, PPAR b, and PPAR g.
+88,89Lipids, including eicos-
+anoids and phospholipids, serve as endogenous ligands for PPARs. Heterodime-
+rization with retinoic X receptor (RXR), binding to PPAR-response elements, and
+ligand-dependent activation are requisite for PPAR-mediated gene transcrip-
+tion.88–90PPARs regulate multiple pathways that contribute to various biological
+processes, including mitochondrial homeostasis, adipogenesis, and in ﬂamma-
+tion.90–93Within the PPAR family, PPAR bhas been particularly associated with
+myelination and myelin homeostasis. PPAR bis abundantly expressed in the
+brain, with differential expression in neurons and OLs.94–98PPAR bactivation
+in vitro can increase OL sheet deposition, myelin protein expression, and OL dif-
+ferentiation.99–101In addition, PPAR bexpression is upregulated in OLs during tis-
+sue repair following spinal cord injury.102Interrogating the effects of whole-body
+Pparbdeﬁciency using a hypomorphic Pparballele revealed partial hypomyelina-
+tion in the corpus callosum, indicating a role for PPAR bin myelination.103More
+recently, inactivation of Ppar bin adult OLs was shown to disrupt myelin mainte-
+nance in the CNS through dysregulation of fatty acid biosynthesis, ﬁndings which
+were replicated when Ppar bwas conditionally depleted in OLs.104Pparband its
+heterodimerization partner, Rxr a, interact and functionally cooperate with the KH-
+domain RNA-binding protein QKI, which is necessary for the transcriptional acti-
+vation of fatty acid biosynthesis genes ( Figure 3 F).
+
+|Reference 29 (BM25) with RRF Score: 3207.0158
+Below, we summarize currently
+described mechanisms by which these regulators contribute to myelin and
+myelin lipid homeostasis. PPAR bis a regulator of myelin lipid metabolism
+The PPARs comprise a family of three closely related ligand-activated tran-
+scription factors, namely PPAR a, PPAR b, and PPAR g.
+88,89Lipids, including eicos-
+anoids and phospholipids, serve as endogenous ligands for PPARs. Heterodime-
+rization with retinoic X receptor (RXR), binding to PPAR-response elements, and
+ligand-dependent activation are requisite for PPAR-mediated gene transcrip-
+tion.88–90PPARs regulate multiple pathways that contribute to various biological
+processes, including mitochondrial homeostasis, adipogenesis, and in ﬂamma-
+tion.90–93Within the PPAR family, PPAR bhas been particularly associated with
+myelination and myelin homeostasis. PPAR bis abundantly expressed in the
+brain, with differential expression in neurons and OLs.94–98PPAR bactivation
+in vitro can increase OL sheet deposition, myelin protein expression, and OL dif-
+ferentiation.99–101In addition, PPAR bexpression is upregulated in OLs during tis-
+sue repair following spinal cord injury.102Interrogating the effects of whole-body
+Pparbdeﬁciency using a hypomorphic Pparballele revealed partial hypomyelina-
+tion in the corpus callosum, indicating a role for PPAR bin myelination.103More
+recently, inactivation of Ppar bin adult OLs was shown to disrupt myelin mainte-
+nance in the CNS through dysregulation of fatty acid biosynthesis, ﬁndings which
+were replicated when Ppar bwas conditionally depleted in OLs.104Pparband its
+heterodimerization partner, Rxr a, interact and functionally cooperate with the KH-
+domain RNA-binding protein QKI, which is necessary for the transcriptional acti-
+vation of fatty acid biosynthesis genes ( Figure 3 F).
+
+|Reference 30 (BM25) with RRF Score: 3203.8137
+How can PMP22  overexpression  change  MYC expression  as rationalized by chatGPT  
+ 
+Certainly! Let’s explore how overexpression of  PMP22 
+(Peripheral Myelin Protein 22 ) could influence  MYC expression, considering mechanisms 
+in cell biology and biochemistry . Backgroun d 
+• PMP2 2 is a transmembrane glycoprotein primarily 
+expressed in Schwann cells, contributing to myelin 
+sheath formation. It is also involved in regulating cell 
+growth, adhesion, and apoptosis. • MYC is a transcription factor that regulates genes 
+involved in proliferation , metabolism, and apoptosis. Possible Mechanisms Linking PMP22 
+Overexpression to MYC Expressio n 
+1. Altered Signaling Pathway s: 
+• PMP22 is known to interact with signaling pathways, particularly those involving cell 
+growth and differentiation. Overexpressi on may activate or inhibit signaling cascades 
+like PI3K -AKT or MAP K. 
+• These pathways can modulate  MYC expression directly or indirectly through upstream 
+regulators such as  mTO R or transcription factors like  NF-κB.
+
+|Reference 31 (BM25) with RRF Score: 3200.3261
+In adult mice with inducible whole-body deple-
+tion of low-density lipoprotein receptor-related protein 1 (LRP1), a cholesterol
+importer, remyelination was signi ﬁcantly impaired after toxin-induced demyelin-
+ation ( Figure 2 B).23Inducible and conditional knockout of Lrp1 in OL precursor
+cells (OPCs) replicated the remyelination de ﬁcits; moreover, depletion of Lrp1
+across the OL lineage led to hypomyelination, indicating that cholesterol uptake
+speci ﬁcally by OLs is important to myelin development and repair.23Mechanisti-
+cally, Lrp1 depletion in OPCs reduced cellular cholesterol and hindered their differ-
+entiation to myelinating OLs. Of interest, myelination was partially rescued by di-
+etary cholesterol supplementation.23
+In addition to lipid transporters, structural myelin proteins have been shown to
+play a critical role in maintaining myelin cholesterol levels.16,24Loss of proteolipid
+protein (PLP) alone or concomitant with knockout of a homolog glycoprotein,
+M6B, reduced myelin cholesterol, with the double knockout also causing hypo-
+myelination.25,26More recently, one of the major peripheral myelin proteins, pe-
+ripheral myelin protein 22 (PMP22), was shown to be critical for proper choles-
+terol homeostasis in myelin via its interaction with and regulation of the
+cholesterol ef ﬂux transporter ATP-binding cassette family protein 1 (ABCA1)
+in SCs.27
+ll The Innovation 4(1): 100360, January 30, 2023 1REVIEW
+Complementary approaches reinforcing cholesterol ’s role in myelination have
+included pharmaceutical and genetic targeting of upstream regulators of
+cholesterol synthesis.
+
+|Reference 32 (BM25) with RRF Score: 3200.3261
+In adult mice with inducible whole-body deple-
+tion of low-density lipoprotein receptor-related protein 1 (LRP1), a cholesterol
+importer, remyelination was signi ﬁcantly impaired after toxin-induced demyelin-
+ation ( Figure 2 B).23Inducible and conditional knockout of Lrp1 in OL precursor
+cells (OPCs) replicated the remyelination de ﬁcits; moreover, depletion of Lrp1
+across the OL lineage led to hypomyelination, indicating that cholesterol uptake
+speci ﬁcally by OLs is important to myelin development and repair.23Mechanisti-
+cally, Lrp1 depletion in OPCs reduced cellular cholesterol and hindered their differ-
+entiation to myelinating OLs. Of interest, myelination was partially rescued by di-
+etary cholesterol supplementation.23
+In addition to lipid transporters, structural myelin proteins have been shown to
+play a critical role in maintaining myelin cholesterol levels.16,24Loss of proteolipid
+protein (PLP) alone or concomitant with knockout of a homolog glycoprotein,
+M6B, reduced myelin cholesterol, with the double knockout also causing hypo-
+myelination.25,26More recently, one of the major peripheral myelin proteins, pe-
+ripheral myelin protein 22 (PMP22), was shown to be critical for proper choles-
+terol homeostasis in myelin via its interaction with and regulation of the
+cholesterol ef ﬂux transporter ATP-binding cassette family protein 1 (ABCA1)
+in SCs.27
+ll The Innovation 4(1): 100360, January 30, 2023 1REVIEW
+Complementary approaches reinforcing cholesterol ’s role in myelination have
+included pharmaceutical and genetic targeting of upstream regulators of
+cholesterol synthesis.
+
+|Reference 33 (BM25) with RRF Score: 3200.0345
+We point out, of course, that
+co-immunoprecipitation ( ‘interaction ’) of any given protein with PMP22 does not prove direct interaction with
+that protein, only that they populate the same complex. However, in light of the limited number of proteins
+identi ﬁed in the proteomic screen and given that many other interactors are proteins that are known or
+expected to interact with PMP22, it seems unlikely that co-IP of PMP22 with six different proteins all related
+to cholesterol homeostasis re ﬂects experimental noise or another form of artifact. PGRMC1 (the progesterone receptor membrane component 1) is an ER protein known to interact with pro-
+teins of the cholesterol biosynthesis pathway [ 32]. PGRMC1 has been shown to bind to and stabilize various
+members of the cytochrome P450 enzyme family in various steroidogenic pathways [ 32]. Its primary role in
+cholesterol homeostasis has been shown to be through regulation of sterol 14 α-demethylase (CYP51) in
+Schizosaccharomyces pombe , HEK 293 cells, and in breast cancers cells where it promotes ergosterol/cholesterol
+biosynthesis [ 32–34].
+
+|Reference 34 (BM25) with RRF Score: 3200.0243
+For FAO measurements, cells were washed twice in KHB
+buffer (111 mM NaCl, 4.7 mM KCl, 2 mM MgSO
+4, 1.25 mM CaCl 2,
+1.2 mM Na 2HPO 4, 100 μM L-carnitine, 5 mM HEPES and pH
+adjusted to 7.4 with NaOH) before the addition of 100 μM BSA-
+conjugated palmitate. Cells were incubated for 1 h to adjust to the
+buffer before analysis using a Seahorse Bioanalyzer XF24 (Agilent).Antimycin A and rotenone were added to establish the back-ground oxygen consumption rate (OCR) and subtracted from the
+basal OCR that is reported. For platelet-derived growth factor
+receptor beta (PDGFRB) and epidermal growth factor receptor(EGFR) studies on FAO, cells were pre-treated for 1 h with 25 ng/mlPDGF-BB or EGF before addition of 100 μMα-cyclodextrin
+conjugated palmitate. STO-609 was added at 10 μM and etomoxir
+at 40 μM. For extracellular acidi ﬁcation rate (ECAR) measurements, TERT
+and MYC HME cells were seeded in HME serum-free medium in a
+96-well Seahorse Bioanalyzer plate 24 h prior to analysis. Cellswere washed once with PBS before addition of Seahorse mediumsupplemented with 5.50 mM glucose, 0.65 mM glutamine, and
+0.10 mM pyruvate.
+
+|Reference 35 (FAISS and BM25) with RRF Score: 3195.5463
+Institutional Review Board Statement: Not applicable. Informed Consent Statement: Not applicable. Data Availability Statement: Data used in this article were obtained from the scientiﬁc literature;
+references given below. Conﬂicts of Interest: JoséC. Bozelli, Jr. and Richard M. Epand declare that they have no conﬂict
+of interest. Abbreviations
+AA arachidonic acid
+AADHAP-R acyl/alkyl-DHAP reductase
+AAG3P-AT lysophosphatidate acyltransferase
+AD Alzheimer’s disease
+AG alkylglycerols
+AGP 1-alkyl-2-lyso- sn-glycero-3-phosphate
+AGPS Alkyl-DHAP synthase
+AKT protein kinase B
+BTHS Barth syndrome
+CAD coronary artery diseases
+DHA docosahexaenoic acid
+DHAP dihydroxyacetone phosphate
+EPA eicosapentaenoic acid
+EPT ethanolamine phosphotransferase
+ER Endoplasmic reticulum
+ERK extracellular signal-regulated kinases
+Far1 fatty acyl-CoA reductase 1
+GNPAT glyceronephosphate O-acyltransferase
+HG 1-O-hexadecyl- sn-glycerol
+MAPK mitogen-activated protein kinase
+MPTP 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine
+OeG 1-O-octadecenyl- sn-glycerol
+OG 1-O-octadecyl- sn-glycerol
+PAP-1 phosphatidate phosphohydrolase 1
+PC phosphatidylcholine
+PC-Pls plasmenyl-PC
+PD Parkinson’s disease
+PE phosphatidylethanolamine
+PEDS1 plasmanylethanolamine desaturase 1
+Membranes 2021 ,11, 838 13 of 18
+PE-Pls plasmenyl-PE
+Pex7 peroxisomal biogenesis factor 7
+PI3K Phosphoinositide 3-kinase
+PLA2 phospholipase A2
+PLC phospholipase C
+PLD phospholipase D
+pPA plasmanyl phosphatidic acid
+pPE plasmanyl ethanolamine
+PPI-1011 an alkyl-diacyl plasmalogen precursor with DHA at the sn-2 position
+PPI-1025 an alkyl-diacyl plasmalogen precursor with oleoyl at the sn-2 position
+PPI-1040 a PE-Pls analog with a proprietary cyclic PE headgroup
+PRT plasmalogen replacement therapy
+PUFA Polyunsaturated fatty acids
+RCDP rhizomelic chondrodysplasia punctata
+RNS reactive nitrogen species
+ROS reactive oxygen species
+TLR4 Toll-like receptor 4
+ZS Zellweger Syndrome
+References
+1.
+
+|Reference 36 (BM25) with RRF Score: 3194.1174
+Disruption of this complex in mice leads to aberrant folding in older animals [76]. In the abaxonal membrane, the G protein-coupled receptor GPR56 has been found to have a role in myelin mainte-nance [77]. Gpr56 mutants display increased myelin thick -
+ness, Cajal band disorganization, and progressive defects of myelin maintenance in older mice. The cytoskeletal scaf-folding protein Plectin has been identified as an interact-ing partner of GPR56 to regulate myelin development and homeostasis [77].2175 Myelin Biology
+1 3Another G protein-coupled receptor, GPR126, on the 
+abaxonal membrane binds collagen IV and Laminin 211 and 
+is required for radial sorting and therefore for differentiation and myelination [78– 80]. GPR126 has also a separate role in 
+controlling cAMP (cyclic adenosine monophosphate) levels in Schwann cells through activation of adenylate cyclase. cAMP in turn activates PKA (protein kinase A), which converges on Oct-6 and Krox-20 transcription factors for myelination [79, 81].
+
+|Reference 37 (BM25) with RRF Score: 3193.6550
+At the onset of myeli -
+nation, mTORC1 activation declines but still at sufficient levels to allow lipid and protein synthesis downstream of Krox20 activation and membrane wrapping [91]. To further corroborate this conclusion, moderate mTORC1 activa-tion has been recently shown to be associated with aber -
+rant myelin formation, as observed in mutants with loss of the MTMR2 (myotubularin-related protein 2) phosphatase and its activator Rab35 GTPase [92– 94]. MTMR2 is a cata-
+lytically active phosphatase, which regulates the turnover of PtdIns(3,5)P
+2 in Schwann cells [95]. MTMR2 acts in com-
+plex with MTMR13, another myotubularin which instead is catalytically inactive, but potentiates MTMR2 activity also by regulating its subcellular localization [96]. In Rab35 and Mtmr2 KO mutants, elevated PtdIns(3,5)P
+2 levels overacti-
+vate mTORC1 and cause aberrant myelin [93, 94]. YAP/TAZ. Transcription co-activator Yes-associated pro-
+tein 1 (YAP) and its coactivator with PDZ-binding domain  
+(TAZ) are key promoters of myelination, recently reviewed in Feltri et al.
+
+|Reference 38 (BM25) with RRF Score: 3192.8455
+A modified NEB Next RNA Ultra 
+protocol was used to prepare the libraries for total RNA sequencing. Whole transcriptome sequencing was performed using Illumina HiSeq 
+4000 system to generate 60 million reads, 2 ×100 bp reads/sample. Sequenced data was processed to generate FASTQ files. The quality of Abbreviations
+ABCA1 ATP-binding cassette transporter 1
+ApoE apolipoprotein E
+BSA bovine serum albumin
+CA9 carbonic anhydrase IX
+DMEM Dulbecco ’s modified Eagle ’s medium
+EAAT excitatory amino acid transporter
+FBS fetal bovine serum
+FNSC fetal neural stem cell
+GFAP glial fibrillary acidic protein
+HIF1 α hypoxia inducible factor 1 α
+HMGCR hydroxy-methyl-glutaryl-coenzyme A reductase
+LDLR low density lipoprotein receptor
+MBP myelin basic protein
+NES normalised enrichment score
+OPC oligodendrocyte progenitor cells
+PMA phorbol myristate acetate
+SQLE squalene epoxidase
+SRB1 (SCARB1) scavenger receptor B1
+Table 1 
+Sequences of primers used for gene expression analysis. Gene Forward primer Reverse primer
+18S rRNA GTAACCCGTTGAACCCCATT CCATCCAATCGGTAGTAGCG
+HMGCR TAGTGAGATCTGGAGGATCCAA CTGTCCCCACTATGACTTCCC
+SQLE GGTGCTCTCCTACCGCTGTC GGTTCCTTTTCTGCGCCTCC
+ABCA1 AATCCTGACCGGGTTGTTCC TCTGCATTCCACCTGACAGC
+APOE TGGAGCAAGCGGTGGAGACAG TCTCGTCCATCAGCGCCCTC
+LDLR CAAGCTCTGGGCGACGTT AAAGGAAGACGAGGAGCACGAT
+SCARB1 CTTTCCAGGCATGTTCCCCT ATGCCAGAAGTCAACCTTGCV.
+
+|Reference 39 (BM25) with RRF Score: 3189.5344
+Cell pelle ts were subsequently collected at
+days 4 (t2) and 6 (t3) of initial blas ticidin selection start, respec-
+tively. Cell pellets were lysed with DirectPCR Lysis Reagent (#302-
+C; Viagen), PCR-amplified, and sent for Sanger sequencing using
+primers designed with SnapGene (version 6.1.2; Dotmatics) and
+compatible with TIDE analysis ( Brinkman et al., 2014 ). Sequencing
+results were used to estimate the spectrum and frequency of smallinsertions and deletions (indel s) generated in the different sam-
+ples and time points following t h eT I D Ea n a l y s i sm e t h o d o l o g y
+(Brinkman et al., 2014 ). Protein isolation and Western blotting
+Cells were lysed in radioimmunospecipitation buffer (50 mM
+Tris-HCl, pH 8, 100 mM NaCl, 1 mM EDTA, 1% NP40, 0.5%sodium deoxycholate, and 0.1% sodium dodecyl sulfate)
+containing Halt Protease and Phosphatase Inhibitor Cocktail(#78440; Thermo Fisher Scientific). Lysates were cleared bycentrifugation at 4°C and protein concentrations were deter-mined with the BCA Protein Assay Kit (#23227; Thermo FisherScientific) using an Infinite 200 PRO plate reader.
+
+|Reference 40 (BM25) with RRF Score: 3187.7322
+[97]. YAP/TAZ can be phosphorylated and localized in the cytosol, or viceversa, not phosphorylated and translocate in the nucleus, promoting transcription by binding to TEAD (TEA domain transcription factor) tran-scription factors. Phosphorylation and thus inactivation of YAP/TAZ is mediated by the canonical Hippo pathway, which consists of a cascade of kinases activated by a pleth-ora of extracellular and intracellular biological stimuli. Spe-cifically, in Schwann cells, NF2 (neurofibromin, also called merlin or Schwannomin) activates the Hippo cascade simi-larly to the Crb3 polarity protein, which is localized at the edge of mature Schwann cell internodes [19, 23]. When 
+final internodal length is achieved, Crb3 is expressed and localizes at microvilli, leading to activation of the Hippo pathway, and inhibition of YAP/TAZ. On the contrary, dur -
+ing longitudinal myelin growth, Crb3 is not expressed and localized at microvilli, Hippo is inactive, YAP/TAZ are not 2176 A. Bolino
+1 3phosphorylated and localize in the nucleus.
+
+|Reference 41 (BM25) with RRF Score: 3187.3038
+Therefore, the overexpression of these genes may
+have a therapeutic effect on CMT1B. 3.2.9. Colony-Stimulating Factor 1 Receptor Inhibitor
+The neuropathic phenotype is promoted by low-grade inﬂammation from phagocytiz-
+ing macrophages in mice models for CMT1A, CMT1B, and CMTX1. Colony-stimulating
+factor (CSF1) is a macrophage activator expressed by endoneurial ﬁbroblasts. It mediates
+macrophage-related neural impairment in mice and humans with CMT. Consequently, oral
+administration of the CSF1 receptor (CSF1R) inhibitor PLX5622 followed by a vigorous
+decrease in the number of macrophages in the peripheral nerves of Cx32def mice; more-
+over, long-term CSF1R inhibition was reported to improve axonal integrity in these mice. However, although long-term CSF1R inhibition reduced the neuropathic patterns in P0het
+mutants, it did not produce the same effect in PMP22 tg mutants [52]. 3.2.10. Sodium Channel Blockers
+Dysmyelination in Mpz knockout mice associates with the ectopic expression of the
+sensory neuron-speciﬁc sodium channel isoform NaV1.8 on motor axons.
+
+|Reference 42 (BM25) with RRF Score: 3186.9766
+DOI: 10.7554/eLife.23332 3 of 17Short report Neuroscience
+Figure 1. Schwann cell-specific PEX5-deficiency causes peroxisome dysfunction and peripheral neuropathy in the absence of axonal loss or
+dysmyelination. ( A) Scheme of normal (left) and impaired (right) PEX5-dependent peroxisomal protein import. PTS1, peroxisomal targeting signal type
+1; PEX5, peroxisomal biogenesis factor peroxin 5. ( B) Catalase (red) is present in peroxisomes (PMP70; green) of controls, but is localized in the
+cytoplasm of mutant fibers. PMP70, peroxisomal membrane protein 70; DAPI-stained SC nuclei are depicted in blue; Scale bar, 10 mm. (C, D ) Lipid
+mass spectrometry of nerve lysates from controls and mutants aged 9 months indicates peroxisomal dysfunction. Peroxisomal products (PE O-) and its
+corresponding plasmalogens (PE P-) are reduced. Specific substrates of peroxisomal b-oxidation, VLCFA, are accumulated in mutant nerves. Statistics:
+means ±s.d. ; n = 6; Student’s T-test; ***p<0.001. ( E–G) Functional impairment of mutant compared to control sciatic nerves is assessed by
+electrophysiology at the age of 2 months (n = 4).
+
+|Reference 43 (BM25) with RRF Score: 3186.5210
+Together, our results reveal that dur -
+ing normal development and following nerve regeneration, plas -
+malogens are crucial for Schwann cells to sort axons, myelinate, and to sustain axons and myelin levels in the PNS. Plasmalogens regulate AKT activation at the plasma membrane. To 
+elucidate the mechanisms underlying the effects of plasmalogen deficiency in Schwann cells, we analyzed key kinases in sciatic 
+nerves from P15 WT and Gnpat-KO mice. Levels of phosphorylated 
+c-Jun N-terminal kinase (JNK), signal transducer and activator of transcription 3 (STAT3), extracellular signal–regulated kinase 1/2 (ERK1/2), and downstream targets of the GTP-binding proteins of 
+the Rho family (namely, N-WASP, myosin light chain, and cofilin) 
+were normal in Gnpat-KO nerves (data not shown). However, we observed a 3-fold decrease in AKT phosphorylation (Figure 5A) and in the phosphorylation of two of its targets, GSK3β  (Figure 5B) 
+and c-RAF (Figure 5C). The defective phosphorylation of AKT was 
+unrelated to altered levels of phosphorylated PDK1 (Figure 5D) or PTEN (Figure 5E), two upstream regulators of AKT activation.
+
+|Reference 44 (BM25) with RRF Score: 3186.2131
+Moreover, improvements in mitochondrial membrane potential and integrity
+were observed, resulting in improved myelination and nerve function [38]. 3.2.3. Sephin-1
+Sephin-1 (IFB-088), which inhibits eIF2a dephosphorylation (a kinase in the PERK arm
+of the UPR) and lengthens protein translation reduction in response to stress, showed to
+be beneﬁcial in both S63del and R98C Mpz mouse models by sustaining the response and
+avoiding molecular, morphological, and motor ﬂaws of neuropathy [39]. At present, Sephin-1 is being evaluated in CMT1A rodent models, making it a potential
+candidate for clinical experiments in both CMT1A and CMT1B [ 22]. Theoretically, this
+technique may also be useful for other mutants retained in the ER. Genes 2023 ,14, 1391 8 of 17
+3.2.4. Eukaryotic Initiation Factor 2-Phosphorylation (eIF2 ) and Gadd34
+Human CMT1B neuropathy and similar demyelinating in transgenic mice are caused
+by the mutant P0S63del, which is reserved in the ER, activating a UPR. In the presence of ER
+stress, protein kinase R-like endoplasmic reticulum kinase (PERK) phosphorylates eIF2 to
+decrease the global translation, thus lessening the misfolded protein overload in the ER.
+
+|Reference 45 (BM25) with RRF Score: 3185.8613
+3.3  |  Proteomic profiling confirms and extends 
+known disturbances in subcellular degradative 
+pathways and the inflammatory response
+Previously, we described the presence of PMP22 protein aggre-
+gates and upregulation of the ubiquitin- proteasome and autophagy-  
+lysosomal pathways in nerves of TrJ mice (Fortun et al., 2003; Notterpek et al., 1997). In accord, the KEGG pathway represent-
+ing the mouse proteasome distinguishes 47 proteins known to be 
+annotated to the proteasome in the corresponding literature. Of 
+the 37 proteasomal protein peptide signatures identified within the 
+nerves of TrJ mice, 21 are differentially expressed. Those with dif-
+ferential expressions cause a disturbance in the subunit composi-
+tion of the proteasome (Figure 5a). The overproduced proteins are 
+known to interact, creating the proteasomal complex, and are regu-
+lated by the single reduced protein, the proteasome inhibitor subu-
+nit 1 (Figure 5b). The elevated expression of proteins encompassing 
+each subunit of the proteasome suggests an attempt to enhance 
+proteolysis within affected neuropathic nerves.
+
+|Reference 46 (BM25) with RRF Score: 3185.6052
+The peripheral myelin 
+protein gene PMP-22 is contained within the Charcot-Marie- 
+Tooth disease type 1A duplication. Nat Genet. 1992;1:171-175. 2.Raeymaekers P, Timmerman V, Nelis E, et al. Duplication in 
+chromosome 17p11.2 in Charcot-Marie-Tooth neuropathy 
+type 1a (CMT 1a). Neuromuscul Disord. 1991;1:93-97. 3.van Paassen BW, van der Kooi AJ, van Spaendonck-Zwarts KY, 
+Verhamme C, Baas F, de Visser M. PMP22 related neuropathies: 
+Charcot-Marie-Tooth disease type 1A and Hereditary Neuropathy 
+with liability to Pressure Palsies. Orphanet J Rare Dis. 2014;9:38. 4.Amici SA, Dunn WA, Notterpek L. Developmental abnormalities 
+in the nerves of peripheral myelin protein 22-deficient mice. J Neurosci Res. 2007;85:238-249. 5.Brady ST, Witt AS, Kirkpatrick LL, et al. Formation of compact 
+myelin is required for maturation of the axonal cytoskeleton. J Neurosci. 1999;19:7278-7288. 6.Salzer JL. Schwann cell myelination. Cold Spring Harb Perspect 
+Biol. 2015;7:a020529. 7.Martini R. The effect of myelinating Schwann cells on axons.
+
+|Reference 47 (BM25) with RRF Score: 3183.3790
+Absolute levels of cholesterol, Related to Figure 2.      free cholesterol ng/ug protein total cholesterol ng/ug protein  mean stdev mean  stdev DMSO 85.9 1.6 119.1 10.1 Atorvastatin 89.5 6.3 99.4 8.3 AY-9944 67.2 2.5 76.6 4.5 T0901317 73.0 6.9 104.2 8.2 Efavirenz 75.1 6.6 88.1 4.5 Avasimibe 88.2 8.4 98.7 9.8  Table depicts the absolute levels of free cholesterol (N=8) and total cholesterol (N=4) over protein corresponding to the relative levels plotted in figure 2d and e.                                    
+ 15   Supplemental Table 6. Oligonucleotides used in this study, Related to STAR methods. Oligonucleotides Source Identifier 5’tattgcatttagaaattaaaattctttttcttaatttgttttcaaggtgttctttgcagccgatgtgggttcaaacaaaggtgcaatcattggactcatggtgggcggtgttgtcatagc3’ This Paper E693A Repair Oligo 5’ttatattgcatttagaaattaaaattctttttcttaatttgttttcaaggtgttcgctgcagccgatgtgggttcaaacaaaggtgcaatcattggactcatggtgggcggtgttgtcat3’ This Paper E693A+F691A Repair Oligo  5’CTTCCTCGAACTGGGGAAGC3’ This Paper APP Chol mut region forward primer  5’TCACGGTAAGTTGCAATGAATGA3’ This Paper APP Chol mut region reverse primer 5’CCAACCAGTTGGGCAGAGAA3’ This Paper APP Chol mut genomic DNA Sequencing Primer  5’CGTGGAATGGCAATTTTAGGTCC3’ This Paper HMGCR-F (qPCR) HMGCR-R (qPCR): 5’ATTTCAAGCTGACGTACCCCT3’ This Paper HMGCR-R (qPCR) LDLR-F (qPCR): 5’GTCTTGGCACTGGAACTCGT3’ This Paper LDLR-F (qPCR) LDLR-R (qPCR): 5’CTGGAAATTGCGCTGGAC3’ This Paper LDLR-R (qPCR) 5’GCTACCGGTGAACCAGCG3’ This Paper PSMB5 FW (qPCR) 5’CAACTATGACTCCATGGCGGA3’ This Paper PSMB5 RV (qPCR) 5’TGAGAGTGGGCGTGGATAGA3’ This Paper PSMC2 FW (qPCR)  5’GTACCGGGTGGACCAAAGAG3’ This Paper PSMC2 RV (qPCR) 5’AAACCGCAGTTTCTGGAAGA3’ This Paper RPL27-F (qPCR) 5’TGGATATCCCCTTGGACAAA3’ This Paper RPL27-R (qPCR) 5’gtacaaaaaagcaggcttaaatggactacaaagaccatgacgg3’ This paper CYP46A1 PCR primer 1 5’GTACAAGAAAGCTGGGTAGCggatccTCAGCAGGGGGGTGGT3’ This paper CYP46A1 PCR primer 2
+
+|Reference 48 (BM25) with RRF Score: 3181.4043
+Amplification of Myc together with other oncogenes ( e.g., 
+epidermal growth factor receptor 1  gene) was associated with emergence of hormone-
+resistant (castration-resistant) prostate cancer [ 12]. Studies have also indicated that increased 
+nuclear Myc protein level is an early event in the pathogenesis of human prostate cancer and 
+evident in luminal cells of PIN lesions [ 13]. Moreover, Myc overexpression was observed in 
+roughly 70% of early stage prostate cancer [ 14]. Nuclear Myc protein expression was 
+associated with prostate cancer progression and it was suggested to be a possible predictor 
+of two-year overall survival [ 15]. At the biochemical level, deregulated metabolism is one of the hallmarks of different cancers 
+including prostate adenocarcinoma [ 16–18]. Prostate cancers frequently exhibit increased de 
+novo  synthesis of fatty acids, which is very low in normal prostate gland [ 17, 18]. In prostate 
+cancer, citrate from tricarboxylic acid cycle is utilized for the synthesis of acetyl-CoA that is 
+eventually converted to saturated fatty acids ( e.g., C16:0 palmitic acid) and further 
+metabolized to unsaturated fatty acids ( e.g., oleic acid, an omega-9 monounsaturated fatty 
+acid) through a series of catalytic reactions facilitated by ATP citrate lyase (ACLY), acetyl-
+CoA carboxylase 1 (a rate limiting enzyme; ACC1 or ACACA), fatty acid synthase (FASN) 
+complex, elongases, and desaturases [ 17, 18].
+
+|Reference 49 (BM25) with RRF Score: 3181.3480
+Ten to 15 nonoverlapping images were obtained and used for all determinations. Cell culture and in vitro myelination. MEFs were prepared from E12 
+embryos and cultured in high-glucose DMEM with 10% FBS and anti-biotics. Primary Schwann cells were isolated from sciatic nerves of 4-day-old WT and Gnpat-KO mice and cultured in high-glucose DMEM with 10% normal horse serum (NHS) and antibiotics. Schwann cells were serum starved for 12 hours before stimulation with 30 ng/ml recombi-nant human neuregulin 1 β  EGF-like domain (R&D Systems). The lysates 
+were prepared after 0, 7, and 15 minutes at 37°C. Serum-starved MEFs were stimulated with 10% FBS for 0, 1, 3, and 5 minutes. The lysates were prepared in PBS containing 0.3% Triton X-100, protease inhibitors  
+(cOmplete, Mini; Roche), and 2 mM orthovanadate. In vitro myelination was performed as described (45). Mixed cultures 
+of DRG neurons and Schwann cells from WT (n  = 7) and Gnpat -KO  
+(n = 4) embryos were maintained in high-glucose MEM with 2 mM  
+L-glutamine, 10% FBS, 50 ng/ml nerve growth factor (NGF) (2.5S; Millipore), and 1% penicillin-streptomycin, and were then plated onto 13-mm-diameter  
+Matrigel-coated coverslides (1:10 in DMEM).
+
+|Reference 50 (BM25) with RRF Score: 3180.9852
+On the basis of the above results, further validation was carried out 
+to assess cholesterol synthesis and transport in FNSC-derived astrocytes 
+exposed to hypoxia. Hypoxia-exposed astrocytes showed an upregula -
+tion of cholesterol synthetic genes hydroxy-methyl-glutaryl CoA reduc -
+tase (HMGCR; fold change 3.9 ±0.83, p 0.02) and squalene epoxidase 
+(SQLE; fold change 4 ±2.4, p 0.008) on qPCR (Fig. 2b and c). There 
+was also an upregulation of cholesterol efflux protein ABCA1 (fold 
+change 2.4 ±0.5, p 0.03) and transport apolipoprotein ApoE (fold 
+change 1.29 ±0.16, p 0.027) on qPCR (Fig. 2d, e). Protein expression 
+of HMGCR (normalised expression 0.7 ±0.17 in normoxia and 1.13 ±
+0.14 in hypoxia, p 0.015), SQLE (normalised expression 0.4 ±0.08 in 
+normoxia and 1.1 ±0.27 in hypoxia, p 0.031), ABCA1 (normalised 
+expression 0.9 ±0.18 in normoxia and 1.1 ±0.3 in hypoxia, p 0.6)and 
+ApoE (normalised expression 0.3 ±0.004 in normoxia and 0.5 ±0.1 in 
+hypoxia, p 0.125) was also measured by western blot and was found to 
+be increased after hypoxia (Fig.
+)

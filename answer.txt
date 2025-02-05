@@ -1,4 +1,19 @@
 Answer:
-Pathway Name: Synaptic Plasticity and Neural Signaling
-Genes involved: Zpld1, Cntn6, Prss12, Gldc, Adamts17, Aldh1a1, Cobll1, Pcsk5, Tex101, Qsox1, Sema4f, Cpe, Hapln1, Marveld1, Tuba4a, Parm1, Sqor, Sbspon, Col9a3, Peg3, Emp2, Clca4l, Chst2, Acta2, Htra1, Igfbp3, Tril, Synpr, A2m, Myo1d, Ccn3, Prss23, Sumo3, Grb14, Steap2, Id2, Tf, Adamtsl3, Ltbp1, Prx, Defb29, Cdca7l, Gypc, Manba, Serpini1, Ntn1, Mag, Nrbp1, Srgap1, Ptgfr, Vopp1, Pltp, Man1a1, Drp2, Slc22a17, Tagln, Cep295nl, Aif1l, Mfap5, Mpz, Ctbs, P2ry2, Hs6st2, Tubb4a, Abca8a, Cxcl14, Ighm, Pxdn, Serinc5, Tent5c, Nrp1, Piezo2, Apod, Matn3, Sncg, Slc9a9, Riox2, Cdh13, Abcb4, Scn7a, Magec2l1, Pkp1, Epas1, Gprc5b, Efemp2, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ecel1, Serpinf1, Atf3, Icoslg, Ppp1r36, Trim35, Gldn, Krtap1-5, Alpl, Robo2, Tspan4, Nrp2, Gprc5a, Rnf144a, Frrs1, St3gal5, Kif1a, Adamtsl1, Lifr, Slit2, Tnik, Gnai1, Col20a1, Snx6, Mageb16, Prkd3, Dpysl5, Prkar2b, Cd9, Ebf1, Cldn19, Lrp2, Col15a1, Sipa1l1, Emilin1, Ppp1r14c, Tmem26, Dyrk1a, Ryr3, Septin4, Lrrtm3, Nek9, Cd151, Pfn2, Selplg, Psmd2, Ifnar1, Fhod3, Nfatc1, Cggbp1, Sgpl1, Runx3, Vps26c, Itpripl1, Fbxo11, Msi1, Slco3a1, Zfp518a, Hs6st1, Agpat5, Pam, Phldb2, Pnpt1, Poglut1, Acap2, Gja1, Tspan5, Tpcn1, Nes, Sema3g, Met
+**Axon Guidance Pathway:**
+Genes involved: Sema4f, Sema3g, Nrp1, Nrp2, Ntn1, Robo2, Slit2, Efna5, Dpysl3, Dpysl5
+
+**Myelination and Schwann Cell Differentiation Pathway:**
+Genes involved: Pmp22, Mag, Mpz, Prx, Mal, Gldn, Cldn19, Mbp, Mal
+
+**Synaptic Plasticity and Neurotransmission Pathway:**
+Genes involved: Synpr, Sncg, Atf3, Mef2c, Grb14, Pfn2
+
+**PI3K-Akt Signaling Pathway:**
+Genes involved: Igfbp3, Nrp1, Nrp2, Pappa, Dyrk1a, Grb14, Itga8, Pdgfr, Grb14
+
+**Wnt Signaling Pathway:**
+Genes involved: Wnt5a, Lef1, Dvl1, Dvl2
+
+**Cytoskeleton Organization and Neuronal Morphogenesis Pathway:**
+Genes involved: Tuba4a, Kif1a, Dpysl3, Dpysl5, Septin4, Pfn2, Nes
 

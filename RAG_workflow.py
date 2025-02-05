@@ -832,20 +832,8 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
     return top_faiss_docs
 
 
-
-
-
-
-
-
-
-
-
-
-
 @timer
 def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k):
-
     bm25_doc_scores = {}
 
     for eq in expanded_queries:
@@ -878,7 +866,6 @@ def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k):
     top_bm25_docs = sorted_bm25_docs[:top_k]
 
     return top_bm25_docs
-
 
 
 @timer
@@ -959,8 +946,9 @@ Also, consider the context of the user query and ensure that the expanded querie
     """
 
     if number > 0:
-        prompt = (f"Based on the user's query, provide exactly {number} expanded queries that include related terms, synonyms, "
-                  f"and relevant expansions.\n\nUser query: \"{query_text}\"")
+        prompt = (
+            f"Based on the user's query, provide exactly {number} expanded queries that include related terms, synonyms, "
+            f"and relevant expansions.\n\nUser query: \"{query_text}\"")
 
         try:
             response = client_open_ai.chat.completions.create(
@@ -996,29 +984,43 @@ Also, consider the context of the user query and ensure that the expanded querie
     #     return [query_text]
 
 
-def query_open_ai(messages):
-    openai_model = "gpt-4o-mini"
+def query_open_ai(messages, system_instruction_response, prompt, model="o1-preview", reasoning_effort="medium"):
     client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     output_filename = "test_files/all_answers_openai.txt"
     answers = []
 
     for i in range(1, 6):
         try:
-            print("Trying to generate the GPT-4 response...")
-            response = client_open_ai.chat.completions.create(
-                model=openai_model,
-                messages=messages,
-                max_tokens=16384,
-                temperature=0
-            )
+            print(f"Trying to generate a response using model {model} (attempt {i})...")
+            if model == "gpt-4o-mini":
+                response = client_open_ai.chat.completions.create(
+                    model=model,
+                    messages=messages,
+                    max_tokens=16384,
+                    temperature=0
+                )
+            elif model.startswith("o"):
+                adjusted_prompt = system_instruction_response + prompt
+                messages = [{"role": "user", "content": adjusted_prompt}]
+                response = client_open_ai.chat.completions.create(
+                    model=model,
+                    messages=messages,
+                    max_completion_tokens=32768,  #For mini: 65536, for preview: 32768
+                )
+            else:
+                response = client_open_ai.chat.completions.create(
+                    model=model,
+                    messages=messages,
+                    max_tokens=16384,
+                    temperature=0
+                )
             answer = response.choices[0].message.content
         except Exception as e:
-            print(f"An error occurred while generating the GPT-4 response on iteration {i}: {e}")
+            print(f"An error occurred on iteration {i} using model {model}: {e}")
             continue
 
         with open(output_filename, "a", encoding="utf-8") as file:
             file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")
-
         print(f"Answer {i} appended to {output_filename}")
         answers.append(answer)
 
@@ -1101,7 +1103,6 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
                           weight_faiss, weight_bm25,
                           system_instruction_response,
                           api_type='openai', test=False):
-
     # Expand the retrieval query
     expanded_queries = query_expansion(query_text, number=number_of_expansions)
     print(f"Expanded query: {expanded_queries}")
@@ -1147,10 +1148,13 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
         {"role": "system", "content": system_instruction_response},
         {"role": "user", "content": prompt}
     ]
+    save_message = f"(role: system, content: {system_instruction_response}\nrole: user, content: {prompt})"
+    with open("messages.txt", "w", encoding="utf-8") as file:
+        file.write(save_message)
     print(f"Using API type: {api_type}")
     # Choose the appropriate query function based on the API type
     if api_type.lower() == 'openai':
-        answer = query_open_ai(messages)
+        answer = query_open_ai(messages, system_instruction_response, prompt)
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)  # Adjust based on Claude's expected input
     elif api_type.lower() == 'gemini':
@@ -1159,10 +1163,11 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
         raise ValueError("Unsupported API type. Choose from 'openai', 'claude', 'gemini'.")
 
     # Prepare scores for exporting
-    bm25_scores = dict([ (doc_id, details['score']) for doc_id, details in top_bm25_docs ])
+    bm25_scores = dict([(doc_id, details['score']) for doc_id, details in top_bm25_docs])
     faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
 
     return answer, document_references, rrf_scores, bm25_scores, faiss_scores
+
 
 @timer
 def generate_response_and_save(query,
@@ -1327,6 +1332,7 @@ def main():
                                bm25_index, bm25_chunk_ids, bm25_chunk_texts,
                                weight_faiss, weight_bm25,
                                system_instruction_response)
+
 
 if __name__ == "__main__":
     main()
