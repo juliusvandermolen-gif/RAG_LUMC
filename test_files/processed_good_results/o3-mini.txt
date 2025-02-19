@@ -1,0 +1,20 @@
+Axon Guidance and Neuronal Migration:
+Genes involved: Ntn1, Robo2, Slit2, Sema4f, Slitrk6, Efna5, Plxnb1, Nrp1, Nrp2
+
+Synaptic Plasticity and Signaling:
+Genes involved: Prss12, Synpr, Cntn6, Sipa1l1, Sncg
+
+Myelination and Glial Signaling:
+Genes involved: Mpz, Pmp22, Mag, Prx, Drp2, Mal
+
+Extracellular Matrix and Cell Adhesion:
+Genes involved: Hapln1, Col9a3, Col15a1, Cdh13, Emilin1, Matn3
+
+Neurotrophin and Growth Factor Signaling:
+Genes involved: Igfbp3, Peg3, Lifr, Runx3, Mef2c, Atf3
+
+Cytoskeletal Dynamics and Neurite Outgrowth:
+Genes involved: Tuba4a, Kif1a, Pfn2, Septin4
+
+Lipid Metabolism and Cholesterol Homeostasis:
+Genes involved: Pltp, Abca8a, Apod

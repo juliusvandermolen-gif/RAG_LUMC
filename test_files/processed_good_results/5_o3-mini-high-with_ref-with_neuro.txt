@@ -1,0 +1,8 @@
+Axon Guidance and Neurite Outgrowth Pathway:
+Genes involved: Cntn6, Sema4f, Ntn1, Slit2, Robo2, Efna5, Plxnb1, Nrp1, Nrp2, Dpysl5, Slitrk6, Dpysl3
+
+Synaptic Plasticity and Neurotransmission Pathway:
+Genes involved: Prss12, Synpr, Sipa1l1, Septin5, Mef2c, Atf3, Klf9, Dyrk1a, Cdh13
+
+Ion Channel and Calcium Signaling Pathway:
+Genes involved: Scn7a, Piezo2, Ryr3, P2ry2, Tpcn1

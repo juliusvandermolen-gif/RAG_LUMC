@@ -56,7 +56,7 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_down
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
 # Load Configuration
-config_name = "config_barebone_with_genes"
+config_name = "config_without_neuro_without_ref"
 with open(f'./configs_system_instruction/{config_name}.json', 'r', encoding='utf-8') as config_file:
     config = json.load(config_file)
 
@@ -992,7 +992,7 @@ def query_open_ai(messages, system_instruction_response, prompt, model="o1-previ
     for i in range(1, 6):
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
-            if model == "gpt-4o-mini":
+            if model.startswith("gpt-4"):
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
