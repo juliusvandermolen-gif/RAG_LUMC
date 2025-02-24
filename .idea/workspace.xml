@@ -5,36 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculate_overlap.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_overlap.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_GPT_generated.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_barebone.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_barebone_with_genes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_barebone_with_genes_2nd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_curated.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_curated_without_ref.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_original.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_paper.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_role_based.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_with_rats_and_encourage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_with_rats_without_encourage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_without_rats_with_encourage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_without_rats_without_encourage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/messages.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scores.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/gpt_o3-mini-high-noref-no_scope.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/gpt_o3-mini-high-noref.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/gpt_o3-mini-high.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/gpt_o3-mini.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/time.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
