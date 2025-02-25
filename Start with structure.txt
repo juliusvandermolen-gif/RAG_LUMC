@@ -1,0 +1,25 @@
+Start with structure
+Abstract is 10 lines: GSEA difficult, IPA is expensive, using LLM might work, small models are not able do GSEA. RAG might be helpful?( similar to presentation).
+By 15:00 handin BioSB
+
+
+
+Ask GPT to compare output from LLM to compare with gprofiler (blue terms from go) and IPA
+Check gene size for GO annotations, everything above 500 genes are too general
+Feb 26th Handin  in temp report to Leon
+(Check whether calculating distance requires CUDA/FP32/FP64)
+Add speed testing to the results
+Server (requirement.txt)
+
+Check whether there is a difference between the different users.
+Remove the role part
+
+Searching for novel pathways? Maybe don't limit
+Otherwise, maybe limit
+Cholesterol is due to reference data? → with scope cholesterol isn't noticed because it's irrelevant. However, it could be novel, but is it mentioned in the pathway?  → reference add a part to the outcome. Lots of papers focussed on cholesterol
+Ask GPT for the list of pathways/genes, show why they are there. Indicate which genes are with the article. (Not including my own reference papers). Don't really recommend: Either curate PDFs, or trust that all of your PDFs are of use. RAG + scope → specific. May found pathways that aren't that interesting but they are relevant and factual.
+
+Use API, to query the pathways/genes combinations, do it per pathway with genes. Use o1-mini + batch requests. Try to include an article to proof that its true. Output This gene has to do with this pathway, with this article as proof (citation/ref if possible). If search is not possible, use 4o
+
+
+Can we use biolinkbert as replacement for FAISS? for retrieval. FAISS is only to compare distance? or could it be used for more
