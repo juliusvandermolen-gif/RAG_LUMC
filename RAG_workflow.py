@@ -380,7 +380,7 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
 
 # Database Functions
 @timer
-def initialize_database(db_path='chunks_embeddings.db'):
+def initialize_database(db_path='reference_chunks.db'):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     cursor.execute('''
@@ -1305,7 +1305,7 @@ def main():
     log_dir = './file_log'
     log_path = os.path.join(log_dir, 'file_log.json')
     index_path = 'faiss_index.bin'
-    db_path = 'chunks_embeddings.db'
+    db_path = 'reference_chunks.db'
     ncbi_json_dir = './Data/JSON/'
 
     process_files_in_directory(data_dir, ncbi_json_dir)
