@@ -929,7 +929,7 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs,
 # Query Expansion and Response Generation
 @timer
 def query_expansion(query_text, number):
-    system_instruction = f"""You are an expert in query expansion for biomedical literature search. Given a user's 
+    system_instruction = f"""You are an expert in query expansion for biomedical literature searches. Given a user's 
 query, generate exactly {number} alternative queries that capture related concepts, synonyms, and relevant expansions. 
 Each alternative query should be concise and directly related to the original query.
 
