@@ -55,31 +55,30 @@ warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-# Load Configuration
 config_name = "config_without_neuro_without_ref"
-with open(f'./configs_system_instruction/{config_name}.json', 'r', encoding='utf-8') as config_file:
-    config = json.load(config_file)
 
-# Load Configuration Parameters
-query = config["query"]
-number_of_expansions = config["number_of_expansions"]
-batch_size = config["batch_size"]
-model_name = config["model"]
-amount_docs = config["amount_docs"]
-weight_faiss = config["weight_faiss"]
-weight_bm25 = config["weight_bm25"]
+
+def load_config(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
+        raw_content = f.read()
+
+    def escape_newlines_in_string_literal(match):
+        s = match.group(0)
+        inner = s[1:-1]
+        inner = inner.replace('\n', '\\n')
+        return '"' + inner + '"'
+
+    pattern = r'"(?:\\.|[^"\\])*"'
+    processed_content = re.sub(pattern, escape_newlines_in_string_literal, raw_content, flags=re.DOTALL)
+    return json.loads(processed_content)
+
+
+config = load_config(f'./configs_system_instruction/{config_name}.json')
+for key, value in config.items():
+    globals()[key] = value
 
 if config_name == "config_role_based.json":
-    persona = config["persona"]
-    instruction = config["instruction"]
-    context = config["context"]
-    context_with_example_pathways = config["context_with_example_pathways"]
-    user_input = config["user_input"]
-    examples = config["examples"]
-    output_indicator = config["output_indicator"]
-    system_instruction_response = persona + instruction + context + user_input + output_indicator  # + examples + context_with_example_pathways
-else:
-    system_instruction_response = config["system_instruction_response"]
+    system_instruction_response = persona + instruction + context + user_input + output_indicator
 
 stop_words = set(stopwords.words('english'))
 
@@ -984,12 +983,12 @@ Also, consider the context of the user query and ensure that the expanded querie
     #     return [query_text]
 
 
-def query_open_ai(messages, system_instruction_response, prompt, model="o1-preview", reasoning_effort="medium"):
+def query_open_ai(messages, system_instruction_response, prompt, model="o1-mini", reasoning_effort="medium"):
     client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     output_filename = "test_files/all_answers_openai.txt"
     answers = []
 
-    for i in range(1, 6):
+    for i in range(1, 2):
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
             if model.startswith("gpt-4"):

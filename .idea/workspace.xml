@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize_length.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize_length.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_without_neuro_without_ref.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_without_neuro_without_ref.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.visualize_length">
+  <component name="RunManager" selected="Python.RAG_workflow">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
