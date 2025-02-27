@@ -9,7 +9,6 @@ import hashlib
 import re
 import sqlite3
 import warnings
-import string
 import atexit
 import functools
 import requests
@@ -19,50 +18,57 @@ from dotenv import load_dotenv
 import nltk
 from nltk import sent_tokenize
 from nltk.corpus import stopwords
-from nltk.tokenize import sent_tokenize
 from PyPDF2 import PdfReader
 from transformers import AutoModel, AutoTokenizer
 import faiss
 from rank_bm25 import BM25Okapi, BM25Plus
-from sklearn.cluster import KMeans
 
+# Importing LLM libraries
 from langchain.docstore.document import Document
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from openai import OpenAI
 import google.generativeai as genai
 from anthropic import Anthropic
-
 import torch
 
 # Environment Setup
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 os.environ["OMP_NUM_THREADS"] = "8"
-
 load_dotenv()
 
+# Setting up API keys
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_api_key)
-
 client_claude = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-nltk.download('punkt')
-nltk.download('stopwords')
 
 # Suppress Warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
-config_name = "config_without_neuro_without_ref"
-
 
 def load_config(filename):
-    with open(filename, 'r', encoding='utf-8') as f:
-        raw_content = f.read()
+    """
+    Loads the config file
+    Args:
+        filename: The file name for the config file.
+    Returns:
+
+    """
+    with open(filename, 'r', encoding='utf-8') as config_file:
+        raw_content = config_file.read()
 
     def escape_newlines_in_string_literal(match):
+        """
+        Takes all the lines for the config, checks for a manual new line and changes it accordingly to JSON format.
+
+        Args:
+            match: The lines that match the escape newline character.
+
+        Returns: A escaped string literal.
+
+        """
         s = match.group(0)
         inner = s[1:-1]
         inner = inner.replace('\n', '\\n')
@@ -73,6 +79,8 @@ def load_config(filename):
     return json.loads(processed_content)
 
 
+# Call the config
+config_name = "config_without_neuro_without_ref"
 config = load_config(f'./configs_system_instruction/{config_name}.json')
 for key, value in config.items():
     globals()[key] = value
@@ -80,16 +88,30 @@ for key, value in config.items():
 if config_name == "config_role_based.json":
     system_instruction_response = persona + instruction + context + user_input + output_indicator
 
+# Downloads and sets stopwords for BM25
+nltk.download('punkt')
+nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
+# Creates dictionary for timer, opens the time.txt file
 aggregated_times = {}
-
 with open("time.txt", "w") as f:
     f.write("")
 
 
 # Utility Timer Functions
 def timer(func):
+    """
+    Decorator that measures the execution time of the decorated function and accumulates it.
+    Args:
+        func: The function to be decorated.
+
+    Returns:
+        A wrapper function that executes the original function, accumulates its execution time in the
+         global "aggregated_times" dictionary.
+
+    """
+
     @functools.wraps(func)
     def wrapper_timer(*args, **kwargs):
         start_time = time.perf_counter()
@@ -106,10 +128,16 @@ def timer(func):
 
 
 def flush_aggregated_times():
-    with open("time.txt", "a") as f:
+    """
+    Writes the aggregated execution times of the functions to the file 'time.txt'.
+    Returns:
+        None
+
+    """
+    with open("time.txt", "a") as file:
         for func_name, total_time in aggregated_times.items():
             if total_time > 0.1:
-                f.write(f"Function '{func_name}' executed in {total_time:.4f} seconds (aggregated)\n")
+                file.write(f"Function '{func_name}' executed in {total_time:.4f} seconds (aggregated)\n")
 
 
 atexit.register(flush_aggregated_times)
@@ -118,16 +146,41 @@ atexit.register(flush_aggregated_times)
 # Gene ID Related Functions
 @timer
 def compute_file_hash(file_path, block_size=65536):
+    """
+    Computes the SHA-256 has of a file's content.
+
+    Args:
+        file_path: The path to the file to hash.
+        block_size: The size (in bytes) of each block to hash.
+
+    Returns:
+        A hexadecimal string representing the SHA-256 hash of the file.
+
+    """
     hasher = hashlib.sha256()
-    with open(file_path, 'rb') as f:
-        for block in iter(lambda: f.read(block_size), b''):
+    with open(file_path, 'rb') as hash_file:
+        for block in iter(lambda: hash_file.read(block_size), b''):
             hasher.update(block)
     return hasher.hexdigest()
 
 
 @timer
-def initialize_gene_list(excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx", de_filter_option="combined", test=False):
-    results = process_excel_data(excel_file_path, de_filter_option, test)
+def initialize_gene_list(excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx", de_filter_option="combined"):
+    """
+    Creates a list of genes, taken from the file, based on filters
+    Args:
+        excel_file_path: The path to the excel file.
+        de_filter_option: The filter that says either "combined" or "separate", based on whether the up and down
+         regulated should be combined or separated.
+
+    Returns:
+        A tuple containing:
+        - gene_list: The list of genes, separated by comma.
+        - regulation: A string indicating the regulation of the genes ('upregulated', 'downregulated').
+        - num_genes: The number of genes processed.
+
+    """
+    results = process_excel_data(excel_file_path, de_filter_option)
     if results:
         gene_list_string, regulation, num_genes = results[0]
     else:
@@ -138,81 +191,51 @@ def initialize_gene_list(excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx", de_fil
 
 
 @timer
-def process_excel_data(excel_file_path, de_filter_option, test):
+def process_excel_data(excel_file_path, de_filter_option):
+    """
+    Processes an Excel file to filter and extract gene data based on differential expression and FDR threshold.
+
+    Args:
+        excel_file_path: The file path to the Excel file containing gene data.
+        de_filter_option: The differential expression filter option ('combined' or 'separate').
+
+    Returns:
+        A list of tuples. Each tuple contains:
+            - A comma-separated string of gene names.
+            - A regulation label ('upregulated', 'downregulated', or 'combined').
+            - The number of genes included in that subset.
+    """
     data = pd.read_excel(excel_file_path)
     results = []
     fdr_threshold = 0.00008802967327
 
-    if not test:
-        max_genes = 250
-        data = data.iloc[:max_genes]
+    max_genes = 250
+    data = data.iloc[:max_genes]
 
-        if de_filter_option == "combined":
-            data = data[data['DE'] != 0]
-            if not data.empty and data['FDR'].max() <= fdr_threshold:
-                genes_list = data['X'].tolist()
+    if de_filter_option == "combined":
+        data = data[data['DE'] != 0]
+        if not data.empty and data['FDR'].max() <= fdr_threshold:
+            genes_list = data['X'].tolist()
+            num_genes = len(genes_list)
+            unique_de_values = data['DE'].unique()
+
+            regulation = (
+                "upregulated" if len(unique_de_values) == 1 and unique_de_values[0] == 1 else
+                "downregulated" if len(unique_de_values) == 1 and unique_de_values[0] == -1 else
+                "combined"
+            )
+            results.append((', '.join(genes_list), regulation, num_genes))
+
+    elif de_filter_option == "separate":
+        for de_value, regulation_label in [(1, "upregulated"), (-1, "downregulated")]:
+            filtered_data = data[data['DE'] == de_value]
+            if not filtered_data.empty and filtered_data['FDR'].max() <= fdr_threshold:
+                genes_list = filtered_data['X'].tolist()
                 num_genes = len(genes_list)
-                unique_de_values = data['DE'].unique()
-
-                regulation = (
-                    "upregulated" if len(unique_de_values) == 1 and unique_de_values[0] == 1 else
-                    "downregulated" if len(unique_de_values) == 1 and unique_de_values[0] == -1 else
-                    "combined"
-                )
-                results.append((', '.join(genes_list), regulation, num_genes))
-
-        elif de_filter_option == "separate":
-            for de_value, regulation_label in [(1, "upregulated"), (-1, "downregulated")]:
-                filtered_data = data[data['DE'] == de_value]
-                if not filtered_data.empty and filtered_data['FDR'].max() <= fdr_threshold:
-                    genes_list = filtered_data['X'].tolist()
-                    num_genes = len(genes_list)
-                    results.append((', '.join(genes_list), regulation_label, num_genes))
-
-        else:
-            raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
+                results.append((', '.join(genes_list), regulation_label, num_genes))
 
     else:
-        max_genes = len(data)
-        increment = 50
-        end_row = min(increment, max_genes)
-
-        if de_filter_option == "combined":
-            data = data[data['DE'] != 0]
-            while end_row <= max_genes:
-                subset = data.iloc[:end_row]
-                if subset['FDR'].max() > fdr_threshold:
-                    break
-
-                genes_list = subset['X'].tolist()
-                num_genes = len(genes_list)
-                unique_de_values = subset['DE'].unique()
-
-                regulation = (
-                    "upregulated" if len(unique_de_values) == 1 and unique_de_values[0] == 1 else
-                    "downregulated" if len(unique_de_values) == 1 else
-                    "combined"
-                )
-                results.append((', '.join(genes_list), regulation, num_genes))
-                end_row += increment
-
-        elif de_filter_option == "separate":
-            for de_value, regulation_label in [(1, "upregulated"), (-1, "downregulated")]:
-                filtered_data = data[data['DE'] == de_value]
-                end_row = min(increment, len(filtered_data), max_genes)
-
-                while end_row <= max_genes:
-                    subset = filtered_data.iloc[:end_row]
-                    if subset['FDR'].max() > fdr_threshold:
-                        break
-
-                    genes_list = subset['X'].tolist()
-                    num_genes = len(genes_list)
-                    results.append((', '.join(genes_list), regulation_label, num_genes))
-                    end_row += increment
-
-        else:
-            raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
+        raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
 
     return results
 
@@ -220,6 +243,17 @@ def process_excel_data(excel_file_path, de_filter_option, test):
 @timer
 def extract_gene_descriptions(gene_list_string,
                               gene_data_file=r'.\Data\biomart\without_biomart_wik\rat_genes_consolidated.txt.gz'):
+    """
+    Extracts gene descriptions for the genes provided in a comma-separated string by looking up a gene data file.
+
+    Args:
+        gene_list_string: A comma-separated string of gene names.
+        gene_data_file: The file path to a compressed CSV file containing gene names and their descriptions.
+
+    Returns:
+        A dictionary mapping gene names to their descriptions. If the gene list is empty, the gene data file
+        is missing, or an error occurs during processing, an empty dictionary is returned.
+    """
     if not gene_list_string:
         print("Gene list is empty. No descriptions to extract.")
         return {}
@@ -237,8 +271,8 @@ def extract_gene_descriptions(gene_list_string,
         return gene_description_dict
 
     try:
-        with gzip.open(gene_data_file, 'rt', newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
+        with gzip.open(gene_data_file, 'rt', newline='', encoding='utf-8') as gene_file:
+            reader = csv.DictReader(gene_file)
             for row in reader:
                 gene_name = row.get('Gene name', '').strip()
                 if gene_name in gene_names_set:
@@ -262,9 +296,9 @@ def extract_gene_descriptions(gene_list_string,
 @timer
 def load_gene_id_cache(file_path):
     if os.path.exists(file_path):
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(file_path, 'r', encoding='utf-8') as gene_id_file:
             try:
-                return json.load(f)
+                return json.load(gene_id_file)
             except json.JSONDecodeError as e:
                 print(f"Error decoding JSON file: {e}")
                 return {}
@@ -275,8 +309,8 @@ def load_gene_id_cache(file_path):
 @timer
 def save_gene_id_cache(cache, file_path):
     print(f"\n\n\nSaving cache to {file_path}\n\n")
-    with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(cache, f, indent=4)
+    with open(file_path, 'w', encoding='utf-8') as gene_id_file:
+        json.dump(cache, gene_id_file, indent=4)
 
 
 @timer
@@ -521,8 +555,8 @@ def load_file_log(log_path='./file_log/file_log.json'):
 
     if os.path.exists(log_path):
         try:
-            with open(log_path, 'r', encoding='utf-8') as f:
-                file_log = json.load(f)
+            with open(log_path, 'r', encoding='utf-8') as file_logs:
+                file_log = json.load(file_logs)
             print(f"File log loaded from '{log_path}'.")
         except json.JSONDecodeError:
             file_log = {}
@@ -553,8 +587,8 @@ def save_file_log(file_log, log_path='./file_log/file_log.json'):
             return
 
     try:
-        with open(log_path, 'w', encoding='utf-8') as f:
-            json.dump(file_log, f, indent=4)
+        with open(log_path, 'w', encoding='utf-8') as file_logs:
+            json.dump(file_log, file_logs, indent=4)
         print(f"File log successfully saved to '{log_path}'.")
     except Exception as e:
         print(f"An error occurred while saving the file log: {e}")
@@ -573,9 +607,9 @@ def load_model_and_tokenizer(force_download=False):
 @timer
 def load_gz_files(data_dir='./Data/biomart'):
     files = [
-        f for f in os.listdir(data_dir)
+        gz_files for gz_files in os.listdir(data_dir)
         if
-        f.endswith('.gz') or (f.startswith('converted') and f.endswith('.gmt'))
+        gz_files.endswith('.gz') or (gz_files.startswith('converted') and gz_files.endswith('.gmt'))
     ]
 
     documents = []
@@ -586,11 +620,11 @@ def load_gz_files(data_dir='./Data/biomart'):
         file_hash = compute_file_hash(file_path)
 
         if file.endswith('.gz'):
-            with gzip.open(file_path, 'rt', encoding='utf-8') as f:
-                content = f.read().strip()
+            with gzip.open(file_path, 'rt', encoding='utf-8') as gz_files:
+                content = gz_files.read().strip()
         else:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read().strip()
+            with open(file_path, 'r', encoding='utf-8') as gz_files:
+                content = gz_files.read().strip()
 
         if content:
             lines = content.splitlines()
@@ -629,7 +663,8 @@ def load_pdf_files(pdf_dir='./Data/PDF', file_log=None):
                     file_hash = compute_file_hash(file_path)
                     pdf_documents.append((file, content, file_hash))
                     print(
-                        f"Loaded PDF '{file}' with {len(pages_text)} pages. Document length: {len(content)} characters.")
+                        f"Loaded PDF '{file}' with {len(pages_text)} pages. Document length: {len(content)}"
+                        f" characters.")
                 else:
                     print(f"Skipped empty PDF '{file}'.")
             except Exception as e:
@@ -742,9 +777,9 @@ def build_bm25_index(conn):
 
 
 @timer
-def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
+def query_bm25_index(query_text, bm25_index, chunk_ids, top_k=1000):
     query_tokens = tokenize(query_text)
-    scores = bm25.get_scores(query_tokens)
+    scores = bm25_index.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
     top_ids = [chunk_ids[i] for i in top_n]
     top_scores = [scores[i] for i in top_n]
@@ -754,14 +789,14 @@ def query_bm25_index(query_text, bm25, chunk_ids, chunk_texts, top_k=1000):
         chunk_id = chunk_ids[idx]
         relevant_tokens = []
         for token in query_tokens:
-            if token in bm25.idf:
+            if token in bm25_index.idf:
                 tf = bm25.doc_freqs[idx].get(token, 0)
                 if tf > 0:
-                    idf = bm25.idf[token]
-                    k1 = bm25.k1
-                    b = bm25.b
-                    doc_len = bm25.doc_len[idx]
-                    avgdl = bm25.avgdl
+                    idf = bm25_index.idf[token]
+                    k1 = bm25_index.k1
+                    b = bm25_index.b
+                    doc_len = bm25_index.doc_len[idx]
+                    avgdl = bm25_index.avgdl
                     numerator = (k1 + 1) * tf
                     denominator = k1 * ((1 - b) + b * (doc_len / avgdl)) + tf
                     token_score = idf * (numerator / denominator)
@@ -810,7 +845,7 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k,
 # Document Ranking and Combination
 @timer
 def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
-    print(top_k)
+    print("Creating top faiss", top_k)
     doc_distances = {}
 
     for eq in expanded_queries:
@@ -832,11 +867,11 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
 
 
 @timer
-def create_top_bm25_docs(expanded_queries, bm25, chunk_ids, chunk_texts, top_k):
+def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
     bm25_doc_scores = {}
 
     for eq in expanded_queries:
-        top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25, chunk_ids, chunk_texts, top_k=top_k)
+        top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25_index, chunk_ids, top_k=top_k)
 
         for doc_id, details in detailed_scores.items():
             if doc_id not in bm25_doc_scores:
@@ -897,32 +932,37 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
 
 
 @timer
+@timer
 def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs):
     """Rank documents and fetch top chunks from the database."""
     sorted_rrf_scores = sorted(rrf_scores.items(),
                                key=lambda item: item[1]['score'],
                                reverse=True)[:amount_docs]
 
-    unique_ids = set(doc_id for doc_id, _ in sorted_rrf_scores)
+    unique_ids = {doc_id for doc_id, _ in sorted_rrf_scores}
 
     combined_docs = {}
     for rank, (doc_id, data) in enumerate(sorted_rrf_scores, start=1):
         score = data['score']
         source_queries = data.get('source_queries', [])
-
-        if doc_id not in combined_docs:
-            combined_docs[doc_id] = {'retriever': [], 'rank': rank, 'score': score, 'source_queries': source_queries}
-
+        combined_docs[doc_id] = {
+            'retriever': [],
+            'rank': rank,
+            'score': score,
+            'source_queries': source_queries
+        }
         if any(faiss_doc[0] == doc_id for faiss_doc in top_faiss_docs):
             combined_docs[doc_id]['retriever'].append('FAISS')
         if any(bm25_doc[0] == doc_id for bm25_doc in top_bm25_docs):
             combined_docs[doc_id]['retriever'].append('BM25')
 
-    combined_top_ids = list(combined_docs.keys())
-    retrieved_chunks = fetch_chunks_by_ids(conn, combined_top_ids) if combined_top_ids else []
-    doc_id_to_chunk = dict(zip(sorted(combined_top_ids), retrieved_chunks))
+    unique_ids_list = list(unique_ids)
+    retrieved_chunks = fetch_chunks_by_ids(conn, unique_ids_list) if unique_ids_list else []
+    doc_id_to_chunk = dict(zip(unique_ids_list, retrieved_chunks))
 
-    return [doc_id_to_chunk[doc_id] for doc_id in combined_top_ids], combined_docs
+    ordered_chunks = [doc_id_to_chunk[doc_id] for doc_id, _ in sorted_rrf_scores if doc_id in doc_id_to_chunk]
+
+    return ordered_chunks, combined_docs
 
 
 # Query Expansion and Response Generation
@@ -946,8 +986,8 @@ Also, consider the context of the user query and ensure that the expanded querie
 
     if number > 0:
         prompt = (
-            f"Based on the user's query, provide exactly {number} expanded queries that include related terms, synonyms, "
-            f"and relevant expansions.\n\nUser query: \"{query_text}\"")
+            f"Based on the user's query, provide exactly {number} expanded queries that include related terms,"
+            f" synonyms, and relevant expansions.\n\nUser query: \"{query_text}\"")
 
         try:
             response = client_open_ai.chat.completions.create(
@@ -983,8 +1023,7 @@ Also, consider the context of the user query and ensure that the expanded querie
     #     return [query_text]
 
 
-def query_open_ai(messages, system_instruction_response, prompt, model="o1-mini", reasoning_effort="medium"):
-    client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+def query_open_ai(messages, system_instruction_for_response, prompt, model="o1-mini"):
     output_filename = "test_files/all_answers_openai.txt"
     answers = []
 
@@ -999,12 +1038,12 @@ def query_open_ai(messages, system_instruction_response, prompt, model="o1-mini"
                     temperature=0
                 )
             elif model.startswith("o"):
-                adjusted_prompt = system_instruction_response + prompt
+                adjusted_prompt = system_instruction_for_response + prompt
                 messages = [{"role": "user", "content": adjusted_prompt}]
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
-                    max_completion_tokens=32768,  #For mini: 65536, for preview: 32768
+                    max_completion_tokens=32768,  # For mini: 65536, for preview: 32768
                 )
             else:
                 response = client_open_ai.chat.completions.create(
@@ -1096,12 +1135,11 @@ def query_claude(messages):
 
 @timer
 def generate_llm_response(query_text, gene_descriptions_string, gene_list_string,
-                          document_references,
                           conn, index, tokenizer, model,
-                          bm25, bm25_chunk_ids, bm25_chunk_texts,
+                          bm25_index, bm25_chunk_ids,
                           weight_faiss, weight_bm25,
-                          system_instruction_response,
-                          api_type='openai', test=False):
+                          system_instruction_for_response,
+                          api_type='openai'):
     # Expand the retrieval query
     expanded_queries = query_expansion(query_text, number=number_of_expansions)
     print(f"Expanded query: {expanded_queries}")
@@ -1116,7 +1154,7 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
 
     # Retrieve documents using FAISS and BM25
     top_faiss_docs = create_top_faiss_docs(query_expanded_queries, index, tokenizer, model, top_k=50)
-    top_bm25_docs = create_top_bm25_docs(query_expanded_queries, bm25, bm25_chunk_ids, bm25_chunk_texts, top_k=50)
+    top_bm25_docs = create_top_bm25_docs(query_expanded_queries, bm25_index, bm25_chunk_ids, top_k=50)
 
     # Combine scores using weighted RRF
     rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
@@ -1144,20 +1182,20 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
     )
 
     messages = [
-        {"role": "system", "content": system_instruction_response},
+        {"role": "system", "content": system_instruction_for_response},
         {"role": "user", "content": prompt}
     ]
-    save_message = f"(role: system, content: {system_instruction_response}\nrole: user, content: {prompt})"
+    save_message = f"(role: system, content: {system_instruction_for_response}\nrole: user, content: {prompt})"
     with open("messages.txt", "w", encoding="utf-8") as file:
         file.write(save_message)
     print(f"Using API type: {api_type}")
     # Choose the appropriate query function based on the API type
     if api_type.lower() == 'openai':
-        answer = query_open_ai(messages, system_instruction_response, prompt)
+        answer = query_open_ai(messages, system_instruction_for_response, prompt)
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)  # Adjust based on Claude's expected input
     elif api_type.lower() == 'gemini':
-        answer = query_gemini(system_instruction_response, prompt)  # Adjust based on Gemini's expected input
+        answer = query_gemini(system_instruction_for_response, prompt)  # Adjust based on Gemini's expected input
     else:
         raise ValueError("Unsupported API type. Choose from 'openai', 'claude', 'gemini'.")
 
@@ -1172,21 +1210,19 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
 def generate_response_and_save(query,
                                gene_descriptions_string, gene_list_string,
                                conn, index, tokenizer, model,
-                               bm25_index, bm25_chunk_ids, bm25_chunk_texts,
+                               bm25_index, bm25_chunk_ids,
                                weight_faiss, weight_bm25,
-                               system_instruction_response):
+                               system_instruction_for_response):
     answer, document_references, rrf_scores, bm25_scores, faiss_scores = generate_llm_response(
         query, gene_descriptions_string, gene_list_string,
-        [],
         conn, index, tokenizer, model,
-        bm25_index, bm25_chunk_ids, bm25_chunk_texts,
+        bm25_index, bm25_chunk_ids,
         weight_faiss, weight_bm25,
-        system_instruction_response,
+        system_instruction_for_response,
     )
 
     if answer and answer != "Processing complete.":
-        prompt = f"Based on the following documents, answer the question: {query}\n\n"
-        save_answer_to_file(prompt, answer, document_references)
+        save_answer_to_file(answer, document_references)
 
         # Export scores after generating the response
         export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx")
@@ -1197,14 +1233,13 @@ def generate_response_and_save(query,
 
 # File Saving and Processing Helpers
 @timer
-def save_answer_to_file(prompt, answer, document_references, file_name="answer.txt"):
-    with open(file_name, "w", encoding='utf-8') as f:
-        # f.write(f"Prompt:\n{prompt}\n\n")
-        f.write(f"Answer:\n{answer}\n\n")
+def save_answer_to_file(answer, document_references, file_name="answer.txt"):
+    with open(file_name, "w", encoding='utf-8') as answer_file:
+        answer_file.write(f"Answer:\n{answer}\n\n")
     print(f"Answer saved to {file_name}")
-    with open("documents.txt", "w", encoding='utf-8') as f:
+    with open("documents.txt", "w", encoding='utf-8') as answer_file:
         for idx, doc in enumerate(document_references, start=1):
-            f.write(f"{doc} \n\n")
+            answer_file.write(f"{doc} \n\n")
 
 
 @timer
@@ -1265,18 +1300,18 @@ def save_scores_to_file(scores, file_name):
     """
     Save scores to a text file, including tokens that contributed to the score.
     """
-    with open(file_name, "w", encoding='utf-8') as f:
+    with open(file_name, "w", encoding='utf-8') as scores_file:
         for doc_id, details in scores.items():
             if isinstance(details, dict):
                 overall_score = details.get('score', 0)
                 tokens = details.get('tokens', [])
-                f.write(f"Chunk ID: {doc_id}, Score: {overall_score}\n")
+                scores_file.write(f"Chunk ID: {doc_id}, Score: {overall_score}\n")
                 if tokens:
                     tokens_formatted = "\n".join(tokens)
-                    f.write(f"Tokens that were relevant:\n{tokens_formatted}\n")
+                    scores_file.write(f"Tokens that were relevant:\n{tokens_formatted}\n")
                 else:
-                    f.write("Tokens that were relevant: None\n")
-                f.write("\n")
+                    scores_file.write("Tokens that were relevant: None\n")
+                scores_file.write("\n")
             else:
                 f.write(f"Chunk ID: {doc_id}, Score: {details}\n\n")
     print(f"Scores saved to {file_name}")
@@ -1288,7 +1323,6 @@ def main():
     gene_list_string, regulation, num_genes = initialize_gene_list(
         excel_file_path=r".\Data\Kees\PMP22_VS_WT.xlsx",
         de_filter_option="combined",
-        test=False
     )
 
     print(f"Regulation: {regulation}")
@@ -1328,7 +1362,7 @@ def main():
     generate_response_and_save(query,
                                gene_descriptions_string, gene_list_string,
                                conn, index, tokenizer, model,
-                               bm25_index, bm25_chunk_ids, bm25_chunk_texts,
+                               bm25_index, bm25_chunk_ids,
                                weight_faiss, weight_bm25,
                                system_instruction_response)
 
