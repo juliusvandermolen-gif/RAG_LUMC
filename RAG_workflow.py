@@ -470,7 +470,7 @@ def load_faiss_index(embedding_dim, index_path='faiss_index.bin'):
             raise ValueError(
                 f"Loaded FAISS index is of type {type(index)}, but IndexIDMap is required.")
     else:
-        faiss_index = faiss.IndexFlatL2(embedding_dim)
+        faiss_index = faiss.IndexFlatIP(embedding_dim)
         index = faiss.IndexIDMap(faiss_index)
         print("New FAISS IndexIDMap created.")
     return index
@@ -737,6 +737,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/biomart',
             continue
 
         embeddings_np = np.vstack(embeddings).astype('float32')
+        faiss.normalize_L2(embeddings_np)
 
         chunk_ids = []
         for idx, chunk_text in enumerate(chunks):
@@ -810,25 +811,16 @@ def query_bm25_index(query_text, bm25_index, chunk_ids, top_k=1000):
 
 
 @timer
-def query_faiss_index(query_text, index, tokenizer, model, top_k,
-                      force_download=False):
+def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download=False):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-    loaded_model = AutoModel.from_pretrained(model_name,
-                                             force_download=force_download)
-    loaded_tokenizer = AutoTokenizer.from_pretrained(model_name,
-                                                     force_download=force_download)
-
+    loaded_model = AutoModel.from_pretrained(model_name, force_download=force_download)
+    loaded_tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
     if model.config != loaded_model.config:
         print("The models have different configurations.")
-        model = AutoModel.from_pretrained(model_name,
-                                          force_download=force_download)
-
+        model = AutoModel.from_pretrained(model_name, force_download=force_download)
     if str(tokenizer) != str(loaded_tokenizer):
         print("The tokenizers have different configurations.")
-        tokenizer = AutoTokenizer.from_pretrained(model_name,
-                                                  force_download=force_download)
-
+        tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
     model.to(device)
     model.eval()
     with torch.no_grad():
@@ -836,6 +828,7 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k,
                            padding=True, max_length=512).to(device)
         outputs = model(**inputs)
         query_embedding = outputs.last_hidden_state.mean(dim=1).cpu().numpy()
+        faiss.normalize_L2(query_embedding)  # Normalize query vector for cosine similarity
     distances, indices = index.search(query_embedding, top_k)
     top_ids = [int(id_) for id_ in indices[0] if id_ != -1]
     top_distances = [float(dist) for dist in distances[0] if dist != -1]
