@@ -1,7 +1,7 @@
 
 # Biomedical Literature Query Processor
 
-![Project Logo](./Data/LUMC_logo.png)
+![Project Logo](./Data/PNG/LUMC_logo.png)
 
 ## Table of Contents
 
@@ -22,6 +22,9 @@
 
 The **Modular RAG pipeline for LUMC** is a pipeline designed to facilitate information retrieval from biomedical literature using Retrieval-Augmented Generation (RAG). Leveraging natural language processing (NLP) techniques, embedding models, and efficient search algorithms, this tool provides accurate and relevant responses to user queries. 
 
+The overview of the pipeline can be seen the in the figure below
+
+![Pipeline overview](./Data/PNG/pipeline.drawio.png)
 ## Features
 
 - **Customizable Configurations:** Easily adjust settings and parameters through configuration files
