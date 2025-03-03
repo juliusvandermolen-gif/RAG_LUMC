@@ -1,0 +1,17 @@
+Myelination and Schwann Cell Differentiation Pathway:
+Genes involved: Pmp22, Mpz, Prx, Mag, Drp2, Mal, Gldn
+
+Cholesterol and Lipid Metabolism Pathway:
+Genes involved: Pltp, Abca8a, Abcb4, Apod, Ppard, Agpat5, Sgpl1, Cers6
+
+Extracellular Matrix Organization and Remodeling Pathway:
+Genes involved: Adamts17, Adamtsl3, Adamtsl1, Hapln1, Col9a3, Col20a1, Col15a1, Matn3, Bgn, Emilin1, Ltbp1, Ccn3, Ccn4
+
+Axon Guidance and Neural Connectivity Pathway:
+Genes involved: Cntn6, Sema4f, Ntn1, Slit2, Robo2, Efna5, Plxnb1, Srgap1, Dpysl3, Dpysl5, Nrp1, Nrp2, Sema3g
+
+Cytoskeletal Organization and Axonal Transport Pathway:
+Genes involved: Tuba4a, Tubb4a, Tagln, Myo1d, Kif1a, Pfn2, Septin4, Septin5, Rab10, Tbccd1
+
+Inflammatory and Immune Response Pathway:
+Genes involved: A2m, Defb29, Ighm, Icoslg, Nlrp1a, Cxcl12, Tnfrsf1a

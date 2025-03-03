@@ -1,0 +1,23 @@
+Pathway Name: Axon Guidance and Synapse Formation
+Genes involved: Cntn6, Sema4f, Ntn1, Robo2, Slit2, Srgap1, Efna5, Plxnb1, Slitrk6, Sema3g
+
+Pathway Name: Synaptic Vesicle Cycle and Neurotransmitter Processing
+Genes involved: Prss12, Synpr, Cpe, Sncg, Pam, P2ry2
+
+Pathway Name: Neural Cell Adhesion and Extracellular Matrix Remodeling
+Genes involved: Zpld1, Hapln1, Adamts17, Col9a3, Matn3, Cdh13, Ltbp1, Adamtsl3, Emilin1
+
+Pathway Name: Intracellular Signaling and Transcriptional Regulation in Neural Development
+Genes involved: Peg3, Id2, Mef2c, Ebf1, Runx3, Klf9, Atf3, Dyrk1a, Taf9b, Ppp1r36
+
+Pathway Name: Cytoskeletal Dynamics and Axonal Transport
+Genes involved: Tuba4a, Tubb4a, Kif1a, Septin4, Myo1d, Drp2
+
+Pathway Name: GPCR-Mediated Neural Signaling
+Genes involved: Nrp1, Nrp2, Gprc5b, Gprc5a, Gnai1, Ptgfr
+
+Pathway Name: Calcium and Ion Channel Signaling
+Genes involved: Scn7a, Piezo2, Ryr3, Tpcn1
+
+Pathway Name: Wnt and Notch Signaling Pathways
+Genes involved: Wnt5a, Lef1, Poglut1

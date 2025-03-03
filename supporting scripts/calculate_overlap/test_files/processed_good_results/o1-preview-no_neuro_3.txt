@@ -1,0 +1,22 @@
+Answer 5:
+Pathway Name: Myelination and Peripheral Nerve Development
+Genes involved: PMP22, MPZ, PRX, MAG, DRP2, EBF1, NFATC1, LRP2, MAL
+
+Pathway Name: Axon Guidance and Neuronal Connectivity
+Genes involved: NRP1, NRP2, SEMA3G, SEMA4F, SLIT2, NTN1, ROBO2, EFNA5, GNAI1
+
+Pathway Name: Extracellular Matrix Organization
+Genes involved: COL9A3, COL11A1, COL15A1, COL20A1, EMILIN1, HAPLN1, MFAP5, PXDN, MATN3
+
+Pathway Name: Wnt Signaling Pathway
+Genes involved: WNT5A, LEF1, RUNX3
+
+Pathway Name: Cell Adhesion Molecules (CAMs)
+Genes involved: CD9, CD151, CLDN19, CLDND1, CNTN6, CDH13, GJA1
+
+Pathway Name: Growth Factor Signaling
+Genes involved: IGF2BP2, IGFBP3, GHR, EFEMP2, PDGFB
+
+Pathway Name: Lipid Metabolism and Transport
+Genes involved: ABCA8A, APOD, PLTP, LRP2
+==================================================

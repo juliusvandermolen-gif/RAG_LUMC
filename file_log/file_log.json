@@ -1,7 +1,11 @@
 {
-    "Berger_ND2004.pdf": {
-        "hash": "3be6c32aa4f286d89ed7bc1b1a47b993837dadc235fc4641e786ab28912c55c5",
-        "num_embeddings": 45
+    "rat_genes_consolidated.txt.gz": {
+        "hash": "61f0f4e8e86698b56713e191592683a31dbc7b6c4303bc25710b0d266a30252f",
+        "num_embeddings": 30562
+    },
+    "wikipathways_synonyms_Rattus_norvegicus.gmt.gz": {
+        "hash": "c50956d833da045e6b9b06ccbb936c854705f0eb8be802becb28521091795153",
+        "num_embeddings": 129
     },
     "1-s2.0-S1388198119300757-main.pdf": {
         "hash": "41ab6fa5529cd55a4e48257e21a60082479c7a08c3d1c1f923b828f838cb643b",
@@ -50,6 +54,10 @@
     "belang mitochondrien voor FA synthese SC myelin 1-s2.0-S0896627313000561-main.pdf": {
         "hash": "ccf6dc6d7de7887e79a5b90d052f49ebb32e2d5e322be814ec981984be491d34",
         "num_embeddings": 60
+    },
+    "Berger_ND2004.pdf": {
+        "hash": "3be6c32aa4f286d89ed7bc1b1a47b993837dadc235fc4641e786ab28912c55c5",
+        "num_embeddings": 45
     },
     "bst-2023-1359c PMP22 in disease.pdf": {
         "hash": "dd467b334f12379b883d8b2f89a6f70433e4d219a0f84b82d9cb072235960de4",

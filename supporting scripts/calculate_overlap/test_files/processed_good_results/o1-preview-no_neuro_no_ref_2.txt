@@ -1,0 +1,19 @@
+Answer 2:
+**Axon Guidance Pathway:**
+Genes involved: Sema4f, Slit2, Robo2, Ntn1, Nrp1, Nrp2, Srgap1, Dpysl3, Dpysl5
+
+**Extracellular Matrix Organization:**
+Genes involved: Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Efemp2, Emilin1, Timp1, Adamts17, Adamtsl1, Adamtsl3, Pxdn, Hapln1, Has2
+
+**Myelination and Schwann Cell Function:**
+Genes involved: Mpz, Pmp22, Mag, Mal, Cldn19
+
+**Cell Adhesion Molecules:**
+Genes involved: Cdh13, Itga7, Itga8, Cldn19, Cldnd1, Gja1, Cntn6
+
+**Wnt Signaling Pathway:**
+Genes involved: Wnt5a, Lef1, Runx3
+
+**Immune Response and Inflammation:**
+Genes involved: Cxcl12, Cxcl14, Igfbp3, Ighm, Nlrp1a, Ifnar1, Tnfrsf1a
+==================================================

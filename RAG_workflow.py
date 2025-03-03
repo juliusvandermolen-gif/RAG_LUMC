@@ -80,7 +80,7 @@ def load_config(filename):
 
 
 # Call the config
-config_name = "config_without_neuro_without_ref"
+config_name = "GSEA"
 config = load_config(f'./configs_system_instruction/{config_name}.json')
 for key, value in config.items():
     globals()[key] = value
@@ -95,7 +95,7 @@ stop_words = set(stopwords.words('english'))
 
 # Creates dictionary for timer, opens the time.txt file
 aggregated_times = {}
-with open("./text_files/time.txt", "w") as f:
+with open("./logs/time.txt", "w") as f:
     f.write("")
 
 
@@ -134,7 +134,7 @@ def flush_aggregated_times():
         None
 
     """
-    with open("./text_files/time.txt", "a") as file:
+    with open("./output/text_files/time.txt", "a") as file:
         for func_name, total_time in aggregated_times.items():
             if total_time > 0.1:
                 file.write(f"Function '{func_name}' executed in {total_time:.4f} seconds (aggregated)\n")
@@ -242,7 +242,7 @@ def process_excel_data(excel_file_path, de_filter_option):
 
 @timer
 def extract_gene_descriptions(gene_list_string,
-                              gene_data_file=r'.\Data\GSEA\without_biomart_wik\rat_genes_consolidated.txt.gz'):
+                              gene_data_file=r'.\Data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'):
     """
     Extracts gene descriptions for the genes provided in a comma-separated string by looking up a gene data file.
 
@@ -402,7 +402,7 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
         final_unknown_genes = set()
 
     if final_unknown_genes:
-        unknown_genes_file = os.path.join('./text_files/unknown_genes.txt')
+        unknown_genes_file = os.path.join('./output/text_files/unknown_genes.txt')
         with open(unknown_genes_file, 'w') as unknown_file:
             unknown_file.write('\n'.join(final_unknown_genes))
 
@@ -413,7 +413,7 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
 
 # Database Functions
 @timer
-def initialize_database(db_path='reference_chunks.db'):
+def initialize_database(db_path='./database/reference_chunks.db'):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     cursor.execute('''
@@ -458,12 +458,12 @@ def fetch_chunks_by_ids(conn, ids):
 
 # FAISS Functions
 @timer
-def save_faiss_index(index, index_path='faiss_index.bin'):
+def save_faiss_index(index, index_path='./database/faiss_index.bin'):
     faiss.write_index(index, index_path)
 
 
 @timer
-def load_faiss_index(embedding_dim, index_path='faiss_index.bin'):
+def load_faiss_index(embedding_dim, index_path='./database/faiss_index.bin'):
     if os.path.exists(index_path):
         index = faiss.read_index(index_path)
         if not isinstance(index, faiss.IndexIDMap):
@@ -605,7 +605,7 @@ def load_model_and_tokenizer(force_download=False):
 
 
 @timer
-def load_gz_files(data_dir='./Data/GSEA'):
+def load_gz_files(data_dir='./Data/GSEA/external_gene_data'):
     files = [
         gz_files for gz_files in os.listdir(data_dir)
         if
@@ -674,7 +674,7 @@ def load_pdf_files(pdf_dir='./Data/PDF', file_log=None):
 
 
 @timer
-def embed_documents(conn, index, tokenizer, model, data_dir='./Data/GSEA',
+def embed_documents(conn, index, tokenizer, model, data_dir='./Data/GSEA/external_gene_data',
                     batch_size=batch_size, log_path='./file_log/file_log.json',
                     pdf_dir='./Data/PDF'):
     file_log = load_file_log(log_path=log_path)
@@ -752,7 +752,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir='./Data/GSEA',
             'num_embeddings': embeddings_np.shape[0]
         }
 
-    save_faiss_index(index, index_path='faiss_index.bin')
+    save_faiss_index(index, index_path='./database/faiss_index.bin')
     save_file_log(file_log, log_path=log_path)
 
 
@@ -791,7 +791,7 @@ def query_bm25_index(query_text, bm25_index, chunk_ids, top_k=1000):
         relevant_tokens = []
         for token in query_tokens:
             if token in bm25_index.idf:
-                tf = bm25.doc_freqs[idx].get(token, 0)
+                tf = bm25_index.doc_freqs[idx].get(token, 0)
                 if tf > 0:
                     idf = bm25_index.idf[token]
                     k1 = bm25_index.k1
@@ -1016,7 +1016,7 @@ Also, consider the context of the user query and ensure that the expanded querie
     #     return [query_text]
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, model="o1-mini"):
+def query_open_ai(messages, system_instruction_for_response, prompt, model="gpt-4o"):
     output_filename = "test_files/all_answers_openai.txt"
     answers = []
 
@@ -1179,7 +1179,7 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
         {"role": "user", "content": prompt}
     ]
     save_message = f"(role: system, content: {system_instruction_for_response}\nrole: user, content: {prompt})"
-    with open("./text_files/messages.txt", "w", encoding="utf-8") as file:
+    with open("./output/text_files/messages.txt", "w", encoding="utf-8") as file:
         file.write(save_message)
     print(f"Using API type: {api_type}")
     # Choose the appropriate query function based on the API type
@@ -1218,7 +1218,7 @@ def generate_response_and_save(query,
         save_answer_to_file(answer, document_references)
 
         # Export scores after generating the response
-        export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx")
+        export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./output/scores.xlsx")
     else:
         print("Failed to generate a response from the LLM.")
     conn.close()
@@ -1226,11 +1226,11 @@ def generate_response_and_save(query,
 
 # File Saving and Processing Helpers
 @timer
-def save_answer_to_file(answer, document_references, file_name="./text_files/answer.txt"):
+def save_answer_to_file(answer, document_references, file_name="./output/text_files/answer.txt"):
     with open(file_name, "w", encoding='utf-8') as answer_file:
         answer_file.write(f"Answer:\n{answer}\n\n")
     print(f"Answer saved to {file_name}")
-    with open("./text_files/documents.txt", "w", encoding='utf-8') as answer_file:
+    with open("./output/text_files/documents.txt", "w", encoding='utf-8') as answer_file:
         for idx, doc in enumerate(document_references, start=1):
             answer_file.write(f"{doc} \n\n")
 
@@ -1260,7 +1260,7 @@ def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
 
 
 @timer
-def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="scores.xlsx"):
+def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./output/scores.xlsx"):
     """
     Export combined RRF, BM25, and FAISS scores to an Excel file.
     """
@@ -1322,16 +1322,16 @@ def main():
 
     gene_list = extract_gene_descriptions(
         gene_list_string=gene_list_string,
-        gene_data_file=r'.\Data\GSEA\without_biomart_wik\rat_genes_consolidated.txt.gz'
+        gene_data_file=r'.\Data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'
     )
 
     gene_descriptions_string = ', '.join([f"{gene}: {desc}" for gene, desc in gene_list.items()])
 
-    data_dir = './Data/GSEA'
+    data_dir = './Data/GSEA/external_gene_data'
     log_dir = './file_log'
     log_path = os.path.join(log_dir, 'file_log.json')
-    index_path = './Database/faiss_index.bin'
-    db_path = './Database/reference_chunks.db'
+    index_path = './database/faiss_index.bin'
+    db_path = './database/reference_chunks.db'
     ncbi_json_dir = './Data/JSON/'
 
     process_files_in_directory(data_dir, ncbi_json_dir)

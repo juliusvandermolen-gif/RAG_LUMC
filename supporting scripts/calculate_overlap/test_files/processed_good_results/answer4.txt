@@ -1,0 +1,30 @@
+Answer 4:
+**Axon Guidance Signaling Pathway:**
+Genes involved: Sema4f, Sema3g, Slit2, Robo2, Ntn1, Nrp1, Nrp2
+
+**Wnt Signaling Pathway:**
+Genes involved: Wnt5a, Lef1, CTNNB1
+
+**Myelination and Schwann Cell Differentiation Pathway:**
+Genes involved: Pmp22, Mpz, Mag, Myo1d, Lrp2, Serpini1
+
+**Cholesterol Metabolism Pathway:**
+Genes involved: ABCA1, ABCA8a, ABCB4, Ppard, Lrp2
+
+**Ubiquitin-Mediated Proteolysis Pathway:**
+Genes involved: Psmd2, Trim35, Fbxo11
+
+**TGF-beta Signaling Pathway:**
+Genes involved: Adamts17, Adamtsl1, Ltbp1
+
+**Rho GTPase Signaling Pathway:**
+Genes involved: Rhoj, Gnai1
+
+**ECM-Receptor Interaction Pathway:**
+Genes involved: Col9a3, Col15a1, Hapln1, Col20a1, Col11a1, Col8a2
+
+**Transcription Factor Regulation Pathway:**
+Genes involved: Myc, Id2, Ebf1, Runx3, Lef1, Zfp518a, Atf3
+
+**GPCR Signaling Pathway:**
+Genes involved: Gprc5a, Gprc5b, Gnai1

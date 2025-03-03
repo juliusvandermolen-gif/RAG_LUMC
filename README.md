@@ -1,22 +1,36 @@
 
-# Biomedical Literature Query Processor
+# RAG Pipeline for LUMC
 
 ![Project Logo](./Data/PNG/LUMC_logo.png)
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Input and Output](#input-and-output)
-- [Running the Application](#running-the-application)
-- [Customization](#customization)
-- [Code Structure](#code-structure)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+   - [Prerequisites](#prerequisites)
+   - [Clone the Repository](#clone-the-repository)
+   - [Create a Virtual Environment (Recommended)](#create-a-virtual-environment-recommended)
+   - [Install Dependencies](#install-dependencies)
+4. [Configuration](#configuration)
+   - [Configuration Files](#configuration-files)
+   - [Key Configuration Parameters](#key-configuration-parameters)
+   - [Environment Variables](#environment-variables)
+5. [Input and Output](#input-and-output)
+   - [Input Directories](#input-directories)
+   - [Output Directories](#output-directories)
+6. [Running the Application](#running-the-application)
+   - [Prepare Your Data](#prepare-your-data)
+   - [Execute the Script](#execute-the-script)
+   - [Monitoring Execution](#monitoring-execution)
+   - [Adding New Data](#adding-new-data)
+7. [Troubleshooting](#troubleshooting)
+   - [Common Issues](#common-issues)
+   - [Logs and Monitoring](#logs-and-monitoring)
+8. [Contact](#contact)
+
+
+
 
 ## Introduction
 
@@ -27,11 +41,11 @@ The overview of the pipeline can be seen the in the figure below
 ![Pipeline overview](./Data/PNG/pipeline.drawio.png)
 ## Features
 
-- **Customizable Configurations:** Easily adjust settings and parameters through configuration files
-- **PDF and Data Processing:** Extracts and processes information from PDFs and structured data files
 - **Query Expansion:** Enhances user queries by generating related terms and synonyms using OpenAI's GPT-4o model
-- **Search Algorithms:** Implements both FAISS for vector-based similarity search and BM25 for keyword-based ranking
-- **Retrieval Augmented Generation**: A search engine to help answer your research questions by leveraging LLMs.
+- **Domain knowledge indexing:** Processing, chunking and indexes biomedical literature and gene information for efficient retrieval
+- **Hybrid retrieval**: Combines FAISS and BM25, that are ranked, for document ranking and retrieval
+- **Response Generation:** Utilizes GPT-o3-mini-high to generate informative and contextually relevant responses using the system instruction, query and retrieved documents
+
 
 
 ## Installation
@@ -60,8 +74,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
-
-Some libraries like torch may require specific installation steps based on your system and hardware. Refer to the [PyTorch Installation Guide](https://pytorch.org/get-started/locally/) for detailed instructions.
+The requirements.txt file contains all the necessary packages for the project. However, some libraries like torch may require specific installation steps based on your system and hardware. Refer to the [PyTorch Installation Guide](https://pytorch.org/get-started/locally/) for detailed instructions. Make sure that [CUDA](https://developer.nvidia.com/cuda-downloads) is installed and configured correctly if you are using a GPU, 
 
 ## Configuration
 
@@ -69,7 +82,7 @@ All configurations are managed through JSON files located in the `./configs_syst
 
 ### Configuration Files
 
-- Default Configuration: `default_config.json`
+- Default Configuration: `config_template.json`
 - GSEA Configuration: `GSEA.json`
 
 ### Key Configuration Parameters
@@ -102,42 +115,28 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
 ### Input Directories
 
 - Configuration Files: `./configs_system_instruction/`
-- Data Files: `./Data/GSEA/` (contains `.gmt.gz` and `.txt.gz` files)
+- Data Files: `./Data/GSEA/external_gene_data` (contains `.gmt.gz` and `.txt.gz` files)
 - PDF Documents: `./Data/PDF/`
-- Gene ID to Symbol Cache: `./Data/JSON/ncbi_id_to_symbol.json`
 
 ### Output Directories
 
-- Database: `reference_chunks.db` (SQLite database storing document chunks)
-- FAISS Index: `faiss_index.bin`
+- Database: `./database/reference_chunks.db` (SQLite database storing document chunks)
+- FAISS Index: `./database/faiss_index.bin`
 - Logs:
-  - `./file_log/file_log.json`
-  - `time.txt`
+  - `./logs/file_log.json`
+  - `./logs/time.txt`
 - Responses:
-  - `answer.txt`
-  - `documents.txt`
-  - `scores.xlsx`
-  - `unknown_genes.txt`
+  - `./text_file/tanswer.txt`
+  - `./text_file/documents.txt`
+  - `./text_file/scores.xlsx`
 
-### Data Flow
-
-1. Input Data: Data files and PDFs are ingested from the specified input directories
-2. Processing:
-   - Gene IDs are resolved and converted to symbols
-   - Documents are chunked and embedded
-   - Embeddings are stored in the FAISS index and SQLite database
-3. Querying:
-   - User queries are expanded
-   - Relevant documents are retrieved using FAISS and BM25
-   - Responses are generated using the GPT-4 model
-4. Output: Responses and relevant scores are saved to output files
 
 ## Running the Application
 
 ### Prepare Your Data
 
 Ensure that your data files are placed in the appropriate directories:
-- `.gmt.gz` and `.txt.gz` files in `./Data/biomart/`
+- `.gmt.gz` and `.txt.gz` files in `./Data/GSEA/external_gene_data`
 - PDF documents in `./Data/PDF/`
 
 ### Execute the Script
@@ -152,75 +151,10 @@ Replace `your_script_name.py` with the actual name of your Python script.
 
 Execution times for various functions are logged in `time.txt`. Check this file to monitor performance and identify potential bottlenecks.
 
-## Customization
 
-### Configuration Parameters
+### Adding New Data
+As this current pipeline is build for specific usecases, it can be extended to other usecases by changing the input data. This new input data has to be chunked and processed accordingly fit into the current pipeline.
 
-Adjust the following parameters in your configuration JSON files:
-
-Query Settings:
-- `query`: Modify the default search query
-- `number_of_expansions`: Change the number of query expansions generated
-
-Model Settings:
-- `model`: Switch between different transformer models (e.g., bert-base-uncased, roberta-large)
-
-Search Settings:
-- `amount_docs`: Determine how many top documents to retrieve
-- `weight_faiss` & `weight_bm25`: Adjust the weighting between FAISS and BM25 scores for ranking
-
-Batch Processing:
-- `batch_size`: Increase or decrease the number of documents processed per batch based on your system's capabilities
-
-### Environment Variables
-
-Update the `.env` file with your OpenAI API key and any other necessary environment variables.
-
-### Extending Functionality
-
-- Adding New Data Sources: Modify the `load_gz_files` and `load_pdf_files` functions to include additional data formats or sources
-- Custom Embedding Models: Change the transformer model by updating the model parameter in the configuration and ensuring compatibility
-- Adjusting Tokenization: Customize the `tokenize` function to include or exclude specific tokens or to change tokenization rules
-
-## Code Structure
-
-### Main Components
-
-Data Processing:
-- `process_excel_data()`
-- `convert_gene_id_to_symbols()`
-- `chunk_documents()`
-- `chunk_pdfs()`
-
-Embedding and Indexing:
-- `load_model_and_tokenizer()`
-- `embed_documents()`
-- `initialize_faiss_index()`
-- `build_bm25_index()`
-
-Search and Retrieval:
-- `query_faiss_index()`
-- `query_bm25_index()`
-- `weighted_rrf()`
-- `rank_and_retrieve_documents()`
-
-Query Expansion and Response:
-- `query_expansion()`
-- `generate_gpt4_turbo_response_with_instructions()`
-- `generate_response_and_save()`
-
-Utilities:
-- Timer decorators for performance monitoring
-- File handling and caching mechanisms
-
-### Database
-
-Utilizes SQLite (`chunks_embeddings.db`) to store and retrieve document chunks efficiently.
-
-### Indexing
-
-- FAISS: Handles vector-based similarity search for embeddings
-- BM25: Manages keyword-based ranking of documents
 
 ## Troubleshooting
 

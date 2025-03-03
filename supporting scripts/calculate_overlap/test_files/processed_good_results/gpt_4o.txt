@@ -1,0 +1,40 @@
+Synaptic Plasticity and Neurotransmission Regulation
+
+Pathway Name: Synaptic Vesicle Cycle
+Genes involved: Synpr, Pfn2, Mpz, Slc22a17, Tnik, Dpysl3, Dpysl5, Ryr3, Ecel1, Nes, P2ry2, Tubb4a, Slc9a9, Scn7a
+Neural Development and Axon Guidance
+
+Pathway Name: Axon Guidance
+Genes involved: Ntn1, Sema4f, Robo2, Sema3g, Slit2, Ccnt6, Tnik, Efna5
+Neural Myelination and Schwann Cell Function
+
+Pathway Name: Myelination and Schwann Cell Differentiation
+Genes involved: Mpz, Mag, Pmp22, Lrp2, Col15a1, Emilin1, Plxnb1, Tubb4a, Cers6, Pex5, Cldn19, Slc39a13
+Neurotrophic Factor Signaling and Cell Survival
+
+Pathway Name: PI3K-AKT and Neurotrophic Factor Signaling
+Genes involved: Igfbp3, Igf2bp2, Ghr, Wnt5a, Met, Pappa, Dyrk1a, Pfn2, Itga8, Ccn3, Ccn4, Slc35a2
+Neural Extracellular Matrix (ECM) Organization
+
+Pathway Name: Extracellular Matrix Organization in Neural Tissues
+Genes involved: Col9a3, Col11a1, Col20a1, Matn3, Hapln1, Adamtsl3, Adamts17, Mfap5, Efemp2, Peg3, Chst2, Pltp
+Inflammation and Neuroimmune Interactions
+
+Pathway Name: Neuroinflammatory Signaling
+Genes involved: Cxcl12, Cxcl14, Aif1l, C1qtnf1, Selplg, Nlrp1a, Ifnar1, Parp14, Tnfrsf1a, P2ry2
+Cytoskeletal Dynamics and Neurite Outgrowth
+
+Pathway Name: Cytoskeletal Remodeling in Neurons
+Genes involved: Tuba4a, Tubb4a, Nek9, Fhod3, Acta2, Itga7, Myo1d, Cep295nl, Vash1
+Neural Cell Adhesion and Communication
+
+Pathway Name: Cell Adhesion Molecules (CAMs) in Neural Tissues
+Genes involved: Cdh13, Cldn19, Gja1, Sgpl1, Magec2l1, Slitrk6, Nrp1, Nrp2, Efna5
+Calcium Signaling in Neural Function
+
+Pathway Name: Calcium Signaling Pathway
+Genes involved: Ryr3, Prkar2b, Gnai1, Itpripl1, Eif2ak2, Ptgfr, Pkd1, Adamtsl1
+Transcriptional Regulation of Neural Differentiation
+
+Pathway Name: Transcriptional Regulation in Neural Development
+Genes involved: Lef1, Atf3, Klf9, Runx3, Atf5, Vrk1, Ebf1, Ddx1, Taf9b, Aff3
