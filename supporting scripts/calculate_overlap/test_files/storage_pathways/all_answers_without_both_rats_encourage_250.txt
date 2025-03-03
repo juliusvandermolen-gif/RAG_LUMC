@@ -1,0 +1,130 @@
+Answer 1:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation
+3. Lipid Metabolism
+4. Peripheral Nervous System Development
+5. Schwann Cell Differentiation
+6. Neurotransmitter Release Cycle
+7. Synaptic Vesicle Cycle
+8. Cholesterol Biosynthesis
+9. Fatty Acid Metabolism
+10. ECM-Receptor Interaction
+11. Cell Adhesion Molecules (CAMs)
+12. PI3K-AKT Signaling Pathway
+13. MAPK Signaling Pathway
+14. Wnt Signaling Pathway
+15. PPAR Signaling Pathway
+16. LXR/RXR Activation
+17. P2Y2 Receptor-Mediated Signaling
+18. UPR (Unfolded Protein Response)
+19. Integrin Signaling Pathway
+20. Actin Cytoskeleton Organization
+==================================================
+Answer 2:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation
+3. Schwann Cell Differentiation
+4. Lipid Metabolism
+5. Cholesterol Biosynthesis
+6. Peripheral Nervous System Development
+7. Neurotransmitter Release Cycle
+8. Synaptic Vesicle Cycle
+9. Neurogenesis
+10. Cell Adhesion Molecules (CAMs)
+11. Extracellular Matrix Organization
+12. Integrin Signaling Pathway
+13. PI3K-AKT Signaling Pathway
+14. MAPK Signaling Pathway
+15. Wnt Signaling Pathway
+16. PPAR Signaling Pathway
+17. LXR/RXR Activation
+18. P2Y2 Purinergic Receptor Signaling
+19. Unfolded Protein Response (UPR)
+20. Fatty Acid Metabolism
+21. Mitochondrial Dysfunction
+22. Inhibition of Matrix Metalloproteases
+23. Regulation of Actin Cytoskeleton
+24. Protein Ubiquitination
+25. Apoptotic Signaling Pathway
+==================================================
+Answer 3:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation
+3. Lipid Metabolism
+4. Peripheral Nervous System Development
+5. Schwann Cell Differentiation
+6. Cholesterol Biosynthesis
+7. Neurotransmitter Release Cycle
+8. Synaptic Vesicle Cycle
+9. Neurogenesis
+10. Cell Adhesion Molecules (CAMs) Pathway
+11. Extracellular Matrix Organization
+12. Integrin Signaling Pathway
+13. PI3K-AKT Signaling Pathway
+14. MAPK Signaling Pathway
+15. Wnt Signaling Pathway
+16. PPAR Signaling Pathway
+17. LXR/RXR Activation
+18. Aryl Hydrocarbon Receptor Signaling
+19. Regulation of Actin Cytoskeleton
+20. Protein Processing in Endoplasmic Reticulum
+==================================================
+Answer 4:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation
+3. Lipid Metabolism
+4. Peripheral Nervous System Development
+5. Schwann Cell Differentiation
+6. Neurotransmitter Release Cycle
+7. Synaptic Vesicle Cycle
+8. Neurogenesis
+9. Cell Adhesion Molecules (CAMs)
+10. Extracellular Matrix Organization
+11. Integrin Signaling Pathway
+12. PI3K-AKT Signaling Pathway
+13. MAPK Signaling Pathway
+14. Wnt Signaling Pathway
+15. PPAR Signaling Pathway
+16. LXR/RXR Activation
+17. Cholesterol Metabolism
+18. Fatty Acid Oxidation
+19. Mitochondrial Dysfunction
+20. Unfolded Protein Response (UPR)
+21. Immune Response Pathways
+22. Inhibition of Matrix Metalloproteases
+23. Regulation of Actin Cytoskeleton
+24. Protein Ubiquitination
+25. Apoptotic Signaling Pathway
+==================================================
+Answer 5:
+1. Axonal Guidance Signaling
+2. Myelin Sheath Formation
+3. Schwann Cell Differentiation
+4. Lipid Metabolism
+5. Cholesterol Biosynthesis
+6. Peripheral Nervous System Development
+7. Neurotransmitter Release Cycle
+8. Synaptic Vesicle Cycle
+9. Neurogenesis
+10. Cell Adhesion Molecules (CAMs)
+11. Extracellular Matrix Organization
+12. Integrin Signaling Pathway
+13. PI3K-AKT Signaling Pathway
+14. MAPK Signaling Pathway
+15. mTOR Signaling Pathway
+16. Wnt Signaling Pathway
+17. PPAR Signaling Pathway
+18. LXR/RXR Activation
+19. Aryl Hydrocarbon Receptor Signaling
+20. Xenobiotic Metabolism Signaling
+21. Regulation of Actin Cytoskeleton
+22. Protein Processing in Endoplasmic Reticulum
+23. Unfolded Protein Response
+24. Apoptotic Signaling Pathway
+25. Immune System Process
+26. Inflammatory Response
+27. Oxidative Phosphorylation
+28. Fatty Acid Metabolism
+29. Glycolysis / Gluconeogenesis
+30. TCA Cycle
+==================================================

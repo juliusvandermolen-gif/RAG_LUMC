@@ -1,0 +1,86 @@
+Answer 1:
+1. Synaptic Plasticity Pathway
+2. Neural Signaling Pathway
+3. Axon Guidance Pathway
+4. Myelination Pathway
+5. Schwann Cell Differentiation Pathway
+6. Lipid Metabolism Pathway
+7. Cholesterol Biosynthesis Pathway
+8. Autophagy Pathway
+9. Proteasome Pathway
+10. Lysosome Pathway
+11. ERK/MAPK Signaling Pathway
+12. PI3K-AKT Signaling Pathway
+13. NF-κB Signaling Pathway
+14. PPAR Signaling Pathway
+15. Integrin Signaling Pathway
+==================================================
+Answer 2:
+1. Synaptic Plasticity Pathway
+2. Neural Signaling Pathway
+3. Axon Guidance Pathway
+4. Myelination Pathway
+5. Schwann Cell Differentiation Pathway
+6. Lipid Metabolism Pathway
+7. Cholesterol Biosynthesis Pathway
+8. Autophagy Pathway
+9. Proteasome Pathway
+10. Lysosome Pathway
+11. ERK/MAPK Signaling Pathway
+12. PI3K-AKT Signaling Pathway
+13. NF-κB Signaling Pathway
+14. PPAR Signaling Pathway
+15. Integrin Signaling Pathway
+==================================================
+Answer 3:
+1. Synaptic Plasticity Pathway
+2. Neural Signaling Pathway
+3. Axon Guidance Pathway
+4. Myelination Pathway
+5. Schwann Cell Differentiation Pathway
+6. Lipid Metabolism Pathway
+7. Cholesterol Biosynthesis Pathway
+8. Autophagy Pathway
+9. Proteasome Pathway
+10. Lysosome Pathway
+11. ERK/MAPK Signaling Pathway
+12. PI3K-AKT Signaling Pathway
+13. NF-κB Signaling Pathway
+14. PPAR Signaling Pathway
+15. Integrin Signaling Pathway
+==================================================
+Answer 4:
+1. Synaptic Plasticity Pathway
+2. Neural Signaling Pathway
+3. Axon Guidance Pathway
+4. Myelination Pathway
+5. Schwann Cell Differentiation Pathway
+6. Neurotrophin Signaling Pathway
+7. PI3K-AKT Signaling Pathway
+8. MAPK Signaling Pathway
+9. Calcium Signaling Pathway
+10. Cholesterol Biosynthesis Pathway
+11. Lipid Metabolism Pathway
+12. Autophagy Pathway
+13. Proteasome Pathway
+14. Lysosome Pathway
+15. Inflammatory Response Pathway
+==================================================
+Answer 5:
+1. Synaptic Plasticity Pathway
+2. Neural Signaling Pathway
+3. Axon Guidance Pathway
+4. Myelination Pathway
+5. Schwann Cell Differentiation Pathway
+6. Lipid Metabolism Pathway
+7. Autophagy Pathway
+8. PI3K-AKT Signaling Pathway
+9. MAPK Signaling Pathway
+10. ERK1/2 Signaling Pathway
+11. NF-κB Signaling Pathway
+12. PPAR Signaling Pathway
+13. Cholesterol Biosynthesis Pathway
+14. Proteasome Pathway
+15. Lysosome Pathway
+16. Spliceosome Pathway
+==================================================

@@ -1,0 +1,29 @@
+# Core libraries
+pandas==2.2.3
+numpy
+requests
+tqdm
+
+# Environment & utility libraries
+python-dotenv
+nltk
+PyPDF2==3.0.1
+
+# Machine Learning / NLP libraries
+transformers==4.48.0
+# For CPU-only systems, use faiss-cpu. If you have an NVIDIA GPU, you can install faiss-gpu instead.
+faiss-cpu==1.9.0
+rank-bm25==0.2.2
+
+# LLM and chain libraries
+langchain==0.3.14
+openai==1.59.6
+google-generativeai==0.8.4
+anthropic==0.45.2
+# torch: the version below is the CPU version.
+# For NVIDIA GPU support, install the CUDA-enabled version per instructions at https://pytorch.org/get-started/locally/
+torch==2.5.1
+
+# Visualization libraries
+plotly==6.0.0
+matplotlib==3.10.0
