@@ -20,14 +20,16 @@
 
 ## Introduction
 
-The **Modular RAG LUMC** is a comprehensive workflow designed to facilitate advanced querying and information retrieval from biomedical literature. Leveraging natural language processing (NLP) techniques, embedding models, and efficient search algorithms, this tool provides accurate and relevant responses to user queries. 
+The **Modular RAG pipeline for LUMC** is a pipeline designed to facilitate information retrieval from biomedical literature using Retrieval-Augmented Generation (RAG). Leveraging natural language processing (NLP) techniques, embedding models, and efficient search algorithms, this tool provides accurate and relevant responses to user queries. 
 
 ## Features
 
-- **Query Expansion:** Enhances user queries by generating related terms and synonyms using OpenAI's GPT-4 model
-- **Search Algorithms:** Implements both FAISS for vector-based similarity search and BM25 for keyword-based ranking
-- **PDF and Data Processing:** Extracts and processes information from PDFs and structured data files
 - **Customizable Configurations:** Easily adjust settings and parameters through configuration files
+- **PDF and Data Processing:** Extracts and processes information from PDFs and structured data files
+- **Query Expansion:** Enhances user queries by generating related terms and synonyms using OpenAI's GPT-4o model
+- **Search Algorithms:** Implements both FAISS for vector-based similarity search and BM25 for keyword-based ranking
+- **Retrieval Augmented Generation**: A search engine to help answer your research questions by leveraging LLMs.
+
 
 ## Installation
 
@@ -56,7 +58,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Some libraries like torch may require specific installation steps based on your system and hardware. Refer to the PyTorch Installation Guide for detailed instructions.
+Some libraries like torch may require specific installation steps based on your system and hardware. Refer to the [PyTorch Installation Guide](https://pytorch.org/get-started/locally/) for detailed instructions.
 
 ## Configuration
 
@@ -64,34 +66,32 @@ All configurations are managed through JSON files located in the `./configs_syst
 
 ### Configuration Files
 
-- Default Configuration: `insert_name_here.json`
-- Role-Based Configuration: `config_role_based.json`
+- Default Configuration: `default_config.json`
+- GSEA Configuration: `GSEA.json`
 
 ### Key Configuration Parameters
 
-- `query`: The user's search query
-- `number_of_expansions`: Number of query expansions to generate
+- `query`: The user's search question
+- `number_of_expansions`: Number of different versions of the query to generate
 - `batch_size`: Number of documents to process in each batch
-- `model`: Name of the transformer model to use for embeddings
+- `model`: Name of the transformer model to use for embeddings (see https://huggingface.co/ for different models.)
 - `amount_docs`: Number of top documents to retrieve
 - `weight_faiss`: Weight assigned to FAISS scores during ranking
 - `weight_bm25`: Weight assigned to BM25 scores during ranking
-
-Role-Based Parameters (only if using `config_role_based.json`):
-- persona
-- instruction
-- context
-- context_with_example_pathways
-- user_input
-- examples
-- output_indicator
+- `system_instruction_response`: An instruction for the LLM to specify the input, output, structure.
 
 ### Environment Variables
 
-Create a `.env` file in the root directory:
+Create a `.env` file in the root directory. Depending on which model you'd want to use, add different api keys.
+Per different vendor for LLMs, check out the quick start, where you can create your own API key.
+- [OpenAI](https://platform.openai.com/docs/quickstart)
+- [Gemini](https://ai.google.dev/gemini-api/docs/quickstart?lang=python)
+- [Anthropic](https://docs.anthropic.com/en/api/getting-started)
 
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
 ```
 
 ## Input and Output
@@ -99,13 +99,13 @@ OPENAI_API_KEY=your_openai_api_key_here
 ### Input Directories
 
 - Configuration Files: `./configs_system_instruction/`
-- Data Files: `./Data/biomart/` (contains `.gmt.gz` and `.txt.gz` files)
+- Data Files: `./Data/GSEA/` (contains `.gmt.gz` and `.txt.gz` files)
 - PDF Documents: `./Data/PDF/`
 - Gene ID to Symbol Cache: `./Data/JSON/ncbi_id_to_symbol.json`
 
 ### Output Directories
 
-- Database: `chunks_embeddings.db` (SQLite database storing document chunks)
+- Database: `reference_chunks.db` (SQLite database storing document chunks)
 - FAISS Index: `faiss_index.bin`
 - Logs:
   - `./file_log/file_log.json`
@@ -256,5 +256,6 @@ For any questions or support, please contact:
 
 - Name: Mathieu Huibregtse
 - Email: mghuibregtse@gmail.com
-- LinkedIn: https://www.linkedin.com/in/mghuibregtse/
-- GitHub: https://github.com/mghuibregtse
+- [LinkedIn](https://www.linkedin.com/in/mghuibregtse/)
+- [GitHub](https://github.com/mghuibregtse)
+

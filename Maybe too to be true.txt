@@ -1,8 +1,0 @@
-Maybe too to be true
-Check which genes are within these gene pathways
-lipid stuff are not present in IPA
-Cholesterol metabolism forinstance is not in IPA. Check which genes are supposedly invested in these. --> make sure that the pathway are rightly called
-kees tested without_rats_with_encourage
-1000 is quite nice, however Xenobiotic Metabolism Signaling is always bullshit!
-There is a baked in bias, this is however not a problem as you know what experiment was run. 
-IPA/Reactome/Gprofiler has lower amount of bias --> researchers have to filter out the bullshit pathways themself --> gpt removes this by introducing bias.
