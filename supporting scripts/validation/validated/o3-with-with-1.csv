@@ -1,0 +1,12 @@
+Pathway,Hit,Overlap %,Original Genes
+Axon Guidance and Neuronal Migration Pathway,Axonal Guidance Signaling,84.62,"CDH13, CNTN6, DPYSL5, EFNA5, NRP1, NRP2, NTN1, PLXNB1, ROBO2, SEMA3G, SEMA4F, SLIT2, SRGAP1"
+Synaptic Plasticity and Neural Signaling Pathway,Signaling by ROBO receptors,15.38,"ATF3, CPE, DYRK1A, GPRC5A, GPRC5B, KIF1A, MEF2C, MSI1, PFN2, PRSS12, SCN7A, SIPA1L1, SYNPR"
+Myelination and Glial Function Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,71.43,"DRP2, GLDN, MAG, MAL, MPZ, PMP22, PRX"
+Cytoskeletal Dynamics and Axonal Transport Pathway,Nuclear Cytoskeleton Signaling Pathway,44.44,"ACTA2, KIF1A, MYO1D, RAB10, SEPTIN4, TAGLN, TBCCD1, TUBA4A, TUBB4A"
+Extracellular Matrix and Cell Adhesion Pathway,Hepatic Fibrosis / Hepatic Stellate Cell Activation,38.46,"ADAMTS17, ADAMTSL1, ADAMTSL3, BGN, COL11A1, COL15A1, COL20A1, COL8A2, COL9A3, EMILIN1, HAPLN1, MATN3, PKP1"
+Growth Factor and Neurotrophic Signaling Pathway,Regulation of Insulin-like Growth Factor (IGF) transport and uptake by IGFBPs,44.44,"A2M, CCN3, GHR, IGFBP3, LIFR, LTBP1, PAPPA, PTGFR, TF"
+Lipid Metabolism and Cholesterol Homeostasis Pathway,LXR/RXR Activation,40.00,"ABCA8A, ABCB4, APOD, PLTP, SERINC5"
+Wnt and Hippo Signaling Pathway,Osteoarthritis Pathway,25.00,"DYRK1A, LEF1, MEF2C, NUMB, RUNX3, TAF9B, TNIK, WNT5A"
+Neuroimmune and Inflammatory Signaling Pathway,Pathogen Induced Cytokine Storm Signaling Pathway,25.00,"A2M, CXCL12, CXCL14, DEFB29, ICOSLG, IGHM, NLRP1A, TRIL"
+Gene Expression and RNA Processing Regulation Pathway,SUMOylation of immune response proteins,18.18,"CPSF2, DDX1, EIF2AK2, FBXO11, GTF2E1, IGF2BP2, KLF9, PPM1F, RRM2, SUMO3, TENT5C"
+Ion Channel and Calcium Signaling Pathway,NAD Signaling Pathway,50.00,"GJA1, ITPRIPL1, PIEZO2, RYR3, SCN7A, TPCN1"

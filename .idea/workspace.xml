@@ -5,92 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/external_gene_data/gene_descriptions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/external_gene_data/gene_descriptions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/external_gene_data/rat_genes_consolidated.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/external_gene_data/rat_genes_consolidated.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/external_gene_data/wikipathways_synonyms_Rattus_norvegicus.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/external_gene_data/wikipathways_synonyms_Rattus_norvegicus.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/external_gene_data/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/external_gene_data/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/genes_of_interest/data canonical S16 PMP vs WT.xls" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/genes_of_interest/data canonical S16 PMP vs WT.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/converted_wikipathways-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/converted_wikipathways-20240910-gmt-Homo_sapiens.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/hold/100_genes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/hold/100_genes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/hold/100_wiki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/hold/100_wiki.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/hold/genes_consolidated.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/hold/genes_consolidated.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/hold/rat_genes_consolidated.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/hold/rat_genes_consolidated.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/hold/wikipathways_synonyms_Homo_sapiens.gmt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/hold/wikipathways_synonyms_Homo_sapiens.gmt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/hold/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/hold/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/mart_export_2.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/mart_export_2.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/reordered_mart_export_2.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/reordered_mart_export_2.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/reordered_rat_data.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/reordered_rat_data.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/Not rats/wikipathways-20240910-gmt-Homo_sapiens.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/Not rats/wikipathways-20240910-gmt-Homo_sapiens.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/rat_data.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/rat_data.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/reordered_rat_data.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/reordered_rat_data.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/wikipathways-20241210-gmt-Rattus_norvegicus.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/data/GSEA/to_be_converted/wikipathways-20241210-gmt-Rattus_norvegicus.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/JSON/genes.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/JSON/genes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/JSON/ncbi_id_to_symbol.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/JSON/ncbi_id_to_symbol.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/1-s2.0-S1388198119300757-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/1-s2.0-S1388198119300757-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/1-s2.0-S1550413119303857-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/1-s2.0-S1550413119303857-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/113943.1-20201218131459-covered-e0fd13ba177f913fd3156f593ead4cfd.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/113943.1-20201218131459-covered-e0fd13ba177f913fd3156f593ead4cfd.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/357.full.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/357.full.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/96499.2-20201218131631-covered-e0fd13ba177f913fd3156f593ead4cfd.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/96499.2-20201218131631-covered-e0fd13ba177f913fd3156f593ead4cfd.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/A transcriptional cross talk between RhoA and c Myc inhibits the RhoA Rock dependent cytoskeleton.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/A transcriptional cross talk between RhoA and c Myc inhibits the RhoA Rock dependent cytoskeleton.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Aged nervous system and cholesterol clearance.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/Aged nervous system and cholesterol clearance.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Annals of the New York Academy of Sciences - 2006 - ANDERSON - PLP and PMP22 Distinct Phenotypes Associated with Increasing Dosage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/Annals of the New York Academy of Sciences - 2006 - ANDERSON - PLP and PMP22 Distinct Phenotypes Associated with Increasing Dosage.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Berger_ND2004.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/Berger_ND2004.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Cholesterol from neurons PIIS2211124721013590.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/Cholesterol from neurons PIIS2211124721013590.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Glia - 2018 - Park - The conceptual introduction of the  demyelinating Schwann cell  in peripheral demyelinating.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/Glia - 2018 - Park - The conceptual introduction of the  demyelinating Schwann cell  in peripheral demyelinating.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/How can PMP22 overexpression change MYC expression as rationalized by chatGPT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/How can PMP22 overexpression change MYC expression as rationalized by chatGPT.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Journal of Neurochemistry - 2024 - Defilippi - Quantitative proteomics unveils known and previously unrecognized.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/Journal of Neurochemistry - 2024 - Defilippi - Quantitative proteomics unveils known and previously unrecognized.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/LEZEN APOE4 impairs myelination via cholesterol dysregulation s41586-022-05439-w.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/LEZEN APOE4 impairs myelination via cholesterol dysregulation s41586-022-05439-w.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/PLASMALOGEN EN CHOLESTEROL SYNTHESIS 1-s2.0-S036192302300014X-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/PLASMALOGEN EN CHOLESTEROL SYNTHESIS 1-s2.0-S036192302300014X-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/PMP22 and cholesterol and lipid rafts notterpek 16140.full.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/PMP22 and cholesterol and lipid rafts notterpek 16140.full.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Peroxisomal dysfunction cause lysosomal Storage problems and myelin elife-23332-v1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/Peroxisomal dysfunction cause lysosomal Storage problems and myelin elife-23332-v1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/Plasmologen SCHWANN CELL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/Plasmologen SCHWANN CELL.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/These are genes that differentially regulated in immortalized schwann cells.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/These are genes that differentially regulated in immortalized schwann cells.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/alles wat je wil weten over SC 1-s2.0-S0969996122003448-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/alles wat je wil weten over SC 1-s2.0-S0969996122003448-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/astrocytes upregulate chol synthesis hypoxia oligoden not 1-s2.0-S0925443924004708-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/astrocytes upregulate chol synthesis hypoxia oligoden not 1-s2.0-S0925443924004708-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/awae158 Prior et al.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/awae158 Prior et al.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/belang mitochondrien voor FA synthese SC myelin 1-s2.0-S0896627313000561-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/belang mitochondrien voor FA synthese SC myelin 1-s2.0-S0896627313000561-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/bst-2023-1359c PMP22 in disease.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/bst-2023-1359c PMP22 in disease.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/cells-09-00812-v3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/cells-09-00812-v3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/cholesterol diet repair MS lesion  brain ncomms14241.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/cholesterol diet repair MS lesion  brain ncomms14241.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/cholesterol metabolism as druggagble axis Cell paper.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/cholesterol metabolism as druggagble axis Cell paper.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/cholesterol-a-novel-regulatory-role-in-myelin-formationsaher-et-al-2011-.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/cholesterol-a-novel-regulatory-role-in-myelin-formationsaher-et-al-2011-.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/deze 1-s2.0-S1878747923006979-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/deze 1-s2.0-S1878747923006979-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/genes-14-01391-v2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/genes-14-01391-v2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/goede review over lipids in myelin 1-s2.0-S2666675822001564-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/goede review over lipids in myelin 1-s2.0-S2666675822001564-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/jem_20211743.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/jem_20211743.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/nihms-1646968.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/nihms-1646968.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/nm.2833.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/nm.2833.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/onc2013505.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/onc2013505.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/ou-et-al-2001-unsaturated-fatty-acids-inhibit-transcription-of-the-sterol-regulatory-element-binding-protein-1c-(srebp.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/ou-et-al-2001-unsaturated-fatty-acids-inhibit-transcription-of-the-sterol-regulatory-element-binding-protein-1c-(srebp.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/plasmalogen therapy review membranes-11-00838.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/plasmalogen therapy review membranes-11-00838.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/review cholesterol and remyelination PIIS0166223622000133.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/review cholesterol and remyelination PIIS0166223622000133.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/review lipid and demyelination 1-s2.0-S2666675822001564-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/review lipid and demyelination 1-s2.0-S2666675822001564-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/rock 1-s2.0-S0304416524001120-main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/rock 1-s2.0-S0304416524001120-main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/s00018-016-2364-1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/s00018-016-2364-1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/s41416-019-0711-3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/s41416-019-0711-3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/therapeutic strategies for Charcot-Marie-Tooth disease.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/therapeutic strategies for Charcot-Marie-Tooth disease.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/yoshioka-et-al-2020-a-key-mammalian-cholesterol-synthesis-enzyme-squalene-monooxygenase-is-allosterically-stabilized-by.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/yoshioka-et-al-2020-a-key-mammalian-cholesterol-synthesis-enzyme-squalene-monooxygenase-is-allosterically-stabilized-by.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PDF/zirath-et-al-2013-myc-inhibition-induces-metabolic-changes-lipid-droplets.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PDF/zirath-et-al-2013-myc-inhibition-induces-metabolic-changes-lipid-droplets.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PNG/LUMC_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/PNG/LUMC_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/PNG/pipeline.drawio.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/PNG/pipeline.drawio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/time.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/output/scores.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_files/all_answers_openai.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/test_files/all_answers_openai.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/messages.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/time.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supporting scripts/visualize.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/supporting scripts/visualize.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,31 +35,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.RAG.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RAG_LUMC.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RAG_workflow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hugginface_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.insta.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.visualize_length.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;automated__validation&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/RAG_LUMC/visualize_length.py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.RAG.executor": "Run",
+    "Python.RAG_LUMC.executor": "Run",
+    "Python.RAG_workflow.executor": "Run",
+    "Python.Unnamed.executor": "Run",
+    "Python.automated_validation.executor": "Run",
+    "Python.hugginface_test.executor": "Run",
+    "Python.insta.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.visualize_length.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "git-widget-placeholder": "automated__validation",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/RAG_LUMC/automated_validation.py",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Python.RAG_workflow">
+}]]></component>
+  <component name="RunManager" selected="Python.automated_validation">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
@@ -150,11 +71,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="rag" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAG_workflow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="automated_validation" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="RAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="rag" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/automated_validation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -209,6 +154,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.RAG_workflow" />
+      <item itemvalue="Python.automated_validation" />
       <item itemvalue="Python.insta" />
       <item itemvalue="Python.visualize_length" />
     </list>
