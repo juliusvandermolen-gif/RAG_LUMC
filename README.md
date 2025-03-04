@@ -1,7 +1,7 @@
 
 # RAG Pipeline for LUMC
 
-![Project Logo](./Data/PNG/LUMC_logo.png)
+![Project Logo](./data/PNG/LUMC_logo.png)
 
 ## Table of Contents
 
@@ -38,7 +38,7 @@ The **Modular RAG pipeline for LUMC** is a pipeline designed to facilitate infor
 
 The overview of the pipeline can be seen the in the figure below
 
-![Pipeline overview](./Data/PNG/pipeline.drawio.png)
+![Pipeline overview](./data/PNG/pipeline.drawio.png)
 ## Features
 
 - **Query Expansion:** Enhances user queries by generating related terms and synonyms using OpenAI's GPT-4o model
@@ -115,8 +115,8 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
 ### Input Directories
 
 - Configuration Files: `./configs_system_instruction/`
-- Data Files: `./Data/GSEA/external_gene_data` (contains `.gmt.gz` and `.txt.gz` files)
-- PDF Documents: `./Data/PDF/`
+- Data Files: `./data/GSEA/external_gene_data` (contains `.gmt.gz` and `.txt.gz` files)
+- PDF Documents: `./data/PDF/`
 
 ### Output Directories
 
@@ -126,9 +126,9 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
   - `./logs/file_log.json`
   - `./logs/time.txt`
 - Responses:
-  - `./text_file/tanswer.txt`
-  - `./text_file/documents.txt`
-  - `./text_file/scores.xlsx`
+  - `./output/text_file/tanswer.txt`
+  - `./output/text_file/documents.txt`
+  - `./output/text_file/scores.xlsx`
 
 
 ## Running the Application
@@ -136,8 +136,8 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
 ### Prepare Your Data
 
 Ensure that your data files are placed in the appropriate directories:
-- `.gmt.gz` and `.txt.gz` files in `./Data/GSEA/external_gene_data`
-- PDF documents in `./Data/PDF/`
+- `.gmt.gz` and `.txt.gz` files in `./data/GSEA/external_gene_data`
+- PDF documents in `./data/PDF/`
 
 ### Execute the Script
 
