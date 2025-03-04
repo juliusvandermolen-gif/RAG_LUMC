@@ -93,13 +93,11 @@ nltk.download('punkt')
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
-# Creates dictionary for timer, opens the time.txt file
 aggregated_times = {}
 with open("./logs/time.txt", "w") as f:
     f.write("")
 
 
-# Utility Timer Functions
 def timer(func):
     """
     Decorator that measures the execution time of the decorated function and accumulates it.
@@ -118,8 +116,6 @@ def timer(func):
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
         elapsed_time = end_time - start_time
-
-        # Always accumulate elapsed time for the function
         aggregated_times[func.__name__] = aggregated_times.get(func.__name__, 0) + elapsed_time
 
         return result
@@ -134,7 +130,7 @@ def flush_aggregated_times():
         None
 
     """
-    with open("./output/text_files/time.txt", "a") as file:
+    with open("./logs/time.txt", "a") as file:
         for func_name, total_time in aggregated_times.items():
             if total_time > 0.1:
                 file.write(f"Function '{func_name}' executed in {total_time:.4f} seconds (aggregated)\n")
@@ -259,7 +255,7 @@ def extract_gene_descriptions(gene_list_string,
         return {}
 
     gene_names = [gene.strip() for gene in gene_list_string.split(',') if gene.strip()]
-    gene_names_set = set(gene_names)  # For faster lookup
+    gene_names_set = set(gene_names)
 
     print(f"Total genes to process: {len(gene_names_set)}")
     print(f"Genes: {gene_names_set}")
@@ -543,7 +539,7 @@ def chunk_pdfs(single_document, gene_list=None, target_length=1000):
 
 # Embedding & Loading Functions
 @timer
-def load_file_log(log_path='./file_log/file_log.json'):
+def load_file_log(log_path='./logs/file_log.json'):
     log_dir = os.path.dirname(log_path)
     if not os.path.exists(log_dir):
         try:
@@ -576,7 +572,7 @@ def load_file_log(log_path='./file_log/file_log.json'):
 
 
 @timer
-def save_file_log(file_log, log_path='./file_log/file_log.json'):
+def save_file_log(file_log, log_path='./logs/file_log.json'):
     log_dir = os.path.dirname(log_path)
     if not os.path.exists(log_dir):
         try:
@@ -605,7 +601,7 @@ def load_model_and_tokenizer(force_download=False):
 
 
 @timer
-def load_gz_files(data_dir='./Data/GSEA/external_gene_data'):
+def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
     files = [
         gz_files for gz_files in os.listdir(data_dir)
         if
@@ -639,7 +635,7 @@ def load_gz_files(data_dir='./Data/GSEA/external_gene_data'):
 
 
 @timer
-def load_pdf_files(pdf_dir='./Data/PDF', file_log=None):
+def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
     pdf_documents = []
     if not os.path.exists(pdf_dir):
         print(f"No PDF directory found at '{pdf_dir}'. Skipping PDF import.")
@@ -674,9 +670,9 @@ def load_pdf_files(pdf_dir='./Data/PDF', file_log=None):
 
 
 @timer
-def embed_documents(conn, index, tokenizer, model, data_dir='./Data/GSEA/external_gene_data',
-                    batch_size=batch_size, log_path='./file_log/file_log.json',
-                    pdf_dir='./Data/PDF'):
+def embed_documents(conn, index, tokenizer, model, data_dir='./data/GSEA/external_gene_data',
+                    batch_size=batch_size, log_path='./logs/file_log.json',
+                    pdf_dir='./data/PDF'):
     file_log = load_file_log(log_path=log_path)
 
     files_documents = load_gz_files(data_dir=data_dir)
@@ -828,7 +824,7 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
                            padding=True, max_length=512).to(device)
         outputs = model(**inputs)
         query_embedding = outputs.last_hidden_state.mean(dim=1).cpu().numpy()
-        faiss.normalize_L2(query_embedding)  # Normalize query vector for cosine similarity
+        faiss.normalize_L2(query_embedding)
     distances, indices = index.search(query_embedding, top_k)
     top_ids = [int(id_) for id_ in indices[0] if id_ != -1]
     top_distances = [float(dist) for dist in distances[0] if dist != -1]
@@ -1012,12 +1008,10 @@ Also, consider the context of the user query and ensure that the expanded querie
         print("Number of expanded queries requested is not positive. Returning the original query.")
         return [query_text]
 
-    # else:
-    #     return [query_text]
 
 
 def query_open_ai(messages, system_instruction_for_response, prompt, model="gpt-4o"):
-    output_filename = "test_files/all_answers_openai.txt"
+    output_filename = "./output/test_files/all_answers_openai.txt"
     answers = []
 
     for i in range(1, 2):
@@ -1060,7 +1054,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, model="gpt-
 
 def query_gemini(system_instruction, prompt):
     model = genai.GenerativeModel("gemini-1.5-pro")
-    output_filename = "test_files/all_answers_gemini.txt"
+    output_filename = "./output/test_files/all_answers_gemini.txt"
     answers = []
     for i in range(1, 2):
         answer = model.generate_content(
@@ -1086,14 +1080,13 @@ def query_gemini(system_instruction, prompt):
 
 def query_claude(messages):
     claude_model = "claude-3-5-sonnet-20241022"
-    output_filename = "test_files/all_answers_claude.txt"
+    output_filename = "./output/test_files/all_answers_claude.txt"
     answers = []
 
     system_message = next((msg["content"] for msg in messages if msg["role"] == "system"), "")
     user_messages = [msg["content"] for msg in messages if msg["role"] == "user"]
     assistant_messages = [msg["content"] for msg in messages if msg["role"] == "assistant"]
 
-    # Combine messages into a single conversation string
     conversation = ""
     for user, assistant in zip(user_messages, assistant_messages + [""]):
         conversation += f"\n\nHuman: {user}"
@@ -1140,8 +1133,6 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
         expanded_queries = [query_text]
     else:
         expanded_queries.append(query_text)
-    # Include the original retrieval query
-
     query_expanded_queries = [f"{eq} {gene_descriptions_string}" for eq in expanded_queries]
     query_text = query_text + gene_list_string
 
@@ -1168,7 +1159,6 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
         )
     combined_documents = "\n\n".join(document_references)
 
-    # Prepare the prompt for the LLM using the simplified query
     prompt = (
         f"Based on the following documents, answer the question using both your knowledge and the provided "
         f"documents: {query_text}\n\nDocuments:\n{combined_documents}\n"
@@ -1182,17 +1172,16 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
     with open("./output/text_files/messages.txt", "w", encoding="utf-8") as file:
         file.write(save_message)
     print(f"Using API type: {api_type}")
-    # Choose the appropriate query function based on the API type
+
     if api_type.lower() == 'openai':
         answer = query_open_ai(messages, system_instruction_for_response, prompt)
     elif api_type.lower() == 'claude':
-        answer = query_claude(messages)  # Adjust based on Claude's expected input
+        answer = query_claude(messages)
     elif api_type.lower() == 'gemini':
-        answer = query_gemini(system_instruction_for_response, prompt)  # Adjust based on Gemini's expected input
+        answer = query_gemini(system_instruction_for_response, prompt)
     else:
         raise ValueError("Unsupported API type. Choose from 'openai', 'claude', 'gemini'.")
 
-    # Prepare scores for exporting
     bm25_scores = dict([(doc_id, details['score']) for doc_id, details in top_bm25_docs])
     faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
 
@@ -1217,7 +1206,6 @@ def generate_response_and_save(query,
     if answer and answer != "Processing complete.":
         save_answer_to_file(answer, document_references)
 
-        # Export scores after generating the response
         export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./output/scores.xlsx")
     else:
         print("Failed to generate a response from the LLM.")
@@ -1312,7 +1300,6 @@ def save_scores_to_file(scores, file_name):
 
 @timer
 def main():
-    # Initialize the gene list
     gene_list_string, regulation, num_genes = initialize_gene_list(
         excel_file_path=r".\Data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
         de_filter_option="combined",
@@ -1327,12 +1314,12 @@ def main():
 
     gene_descriptions_string = ', '.join([f"{gene}: {desc}" for gene, desc in gene_list.items()])
 
-    data_dir = './Data/GSEA/external_gene_data'
-    log_dir = './file_log'
+    data_dir = './data/GSEA/external_gene_data'
+    log_dir = './logs'
     log_path = os.path.join(log_dir, 'file_log.json')
     index_path = './database/faiss_index.bin'
     db_path = './database/reference_chunks.db'
-    ncbi_json_dir = './Data/JSON/'
+    ncbi_json_dir = './data/JSON/'
 
     process_files_in_directory(data_dir, ncbi_json_dir)
 
@@ -1351,7 +1338,6 @@ def main():
 
     bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
-    # Directly generate and save the response without separate retrieval
     generate_response_and_save(query,
                                gene_descriptions_string, gene_list_string,
                                conn, index, tokenizer, model,
