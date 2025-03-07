@@ -1,0 +1,12 @@
+Answer 9:
+Neuronal Development and Axon Guidance Pathway:
+Genes involved: Cntn6, Sema4f, Ntn1, Slit2, Robo2, Sema3g, Nrp1, Nrp2, Plxnb1, Dpysl5, Srgap1, Synpr, Mpz, Pmp22, Mag, Drp2, Gldn, Efna5, Dpysl3, Nes, Slitrk6, Msi1
+
+Extracellular Matrix Organization and Remodeling Pathway:
+Genes involved: Adamts17, Adamtsl3, Adamtsl1, Col9a3, Ltbp1, Hapln1, Matn3, Col20a1, Col15a1, Col11a1, Col8a2, Bgn, Emilin1, Has2, Timp1, Acta2, Tagln, Mfap5, Chst2, Marveld1, Sbspon, Olfml1, Pxdn
+
+Proteolysis and Protein Processing Pathway:
+Genes involved: Prss12, Prss23, Pcsk5, Cpe, Qsox1, Pappa, Serpinf1, Serpini1, Htra1, Ecel1, Bace2, Pam, Cpm
+
+Metabolic Regulation and Redox Homeostasis Pathway:
+Genes involved: Aldh1a1, Gldc, Sqor, Manba, Tf, Nampt, Pgm1, Ppard, Steap2, Hadhb, Pltp, Abca8a, Serinc5, St3gal5, Dhrs1, Sgpl1, Arsb, Fth1

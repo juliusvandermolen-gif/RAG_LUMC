@@ -1,0 +1,27 @@
+Answer 4:
+Axon Guidance / Neural Development:
+Genes involved: Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Mag, Dpysl5, Dpysl3, Cdh13, Efna5, Plxnb1, Slitrk6, Gldn, Rhoj, Kif1a, Mef2c
+
+Extracellular Matrix Organization and Cell Adhesion:
+Genes involved: Col9a3, Hapln1, Col20a1, Col15a1, Col11a1, Col8a2, Bgn, Emilin1, Has2, Ltbp1, Adamts17, Adamtsl3, Adamtsl1, Timp1, Mfap5, Matn3, Ccn3, Htra1, Sbspon, Efemp2, Cldn19, Itga8, Itga7, Cldnd1, Pals1, Olfm2, Olfml1, Ccn4
+
+Protein Processing and Proteolysis:
+Genes involved: Prss12, Pcsk5, Qsox1, Prss23, Sumo3, Pappa, Parp14, Serpini1, Serpinf1, Cpe, Pam, Papola, Cpm
+
+Signal Transduction / Growth Factor Signaling:
+Genes involved: Igfbp3, Met, Wnt5a, Lef1, Ghr, Ptgfr, Gprc5a, Gprc5b, Epas1, Poglut1, Inpp5a
+
+Cytoskeletal Dynamics and Intracellular Transport:
+Genes involved: Tuba4a, Tubb4a, Acta2, Tagln, Pfn2, Septin4, Septin5, Asap1, Acap2, Drp2, Cep295nl, Ckap4, Gja1, Stard13, Tbccd1
+
+Immune and Inflammatory Signaling:
+Genes involved: Ifnar1, Ighm, Icoslg, Cxcl14, Cxcl12, Nlrp1a, Tnfrsf1a, Defb29, Selplg
+
+Metabolic and Mitochondrial Function:
+Genes involved: Aldh1a1, Ppard, Nampt, Gldc, Sqor, Manba, Man1a1, Pgm1, Hadhb, Cers6, Agpat5, Dhrs1, Steap1
+
+Cell Cycle, DNA Repair, and Transcription Regulation:
+Genes involved: Peg3, Cdca7l, Rrm2, Msh2, Smc6, Fbxo11, Nek9, Vrk1, Cenpo, Taf9b, Eif2ak2, Dyrk1a, Atf3, Atf5, Klf9, Ebf1, Ddx1, Zfp518a, Cggbp1, Msi1, Runx3, Magea4, Magea9, Mybl1, Gtf2e1
+
+Vesicular Transport and Membrane Trafficking:
+Genes involved: Lrp2, P2ry2, Slc22a17, Vps26c, Vps8, Chmp2b, Tpcn1, Rab10, Slco3a1, Slc35a2, Slc39a13, Snx4

@@ -1,0 +1,30 @@
+Answer 6:
+Below is one way to organize many of the study‐derived genes into several coherent biological themes. Each “pathway” is presented with its associated gene symbols.
+
+──────────────────────────────
+Pathway 1: Extracellular Matrix Organization and Remodeling  
+Genes involved: Zpld1, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Hapln1, Sbspon, Col9a3, Matn3, Emilin1, Col20a1, Col15a1, Col11a1, Col8a2, Has2, Timp1, Chst2, Hs6st2, Hs6st1, Pxdn, Qsox1, Fam20c, Olfml1, Gpnmb, Bgn
+
+──────────────────────────────
+Pathway 2: Neuronal Development, Axon Guidance, and Synaptic Function  
+Genes involved: Cntn6, Prss12, Sema4f, Cpe, Synpr, Id2, Prx, Serpini1, Ntn1, Mag, Mpz, Srgap1, Robo2, Slit2, Sema3g, Plxnb1, Efna5, Nrp1, Nrp2, Piezo2, Sncg, Scn7a, Dpysl5, Dpysl3, Kif1a, Gldn, Ecel1, Serpinf1, Lrrtm3, Msi1, Pmp22, Numb, Slitrk6
+
+──────────────────────────────
+Pathway 3: Growth Factor, Developmental, and Signal Transduction  
+Genes involved: Aldh1a1, Pcsk5, Tex101, Peg3, Igfbp3, A2m, Ccn3, Grb14, Tf, Cdca7l, Nrbp1, Ptgfr, P2ry2, Magec2l1, Epas1, Met, Gprc5b, Gprc5a, Pappa, Ppp1r36, Lifr, Runx3, Magea4, Magea9, Mef2c, Nampt, Ghr, Tmem26, Mageb16, Prkar2b, Ebf1, Ppp1r14c, Tnik, Gnai1, Zfp518a, Poglut1, Igf2bp2, Gtf2e1, Aff3, Ccn4, Mybl1, Hmx3, Klhdc2, C1qtnf1, Wnt5a, Lef1
+
+──────────────────────────────
+Pathway 4: Cytoskeletal Organization, Cell Adhesion, and Intracellular Transport  
+Genes involved: Cobll1, Marveld1, Tuba4a, Myo1d, Clca4l, Acta2, Tagln, Cep295nl, Vopp1, Drp2, Slc22a17, Gypc, Tubb4a, Abca8a, Pkp1, Cdh13, Itga8, Itga7, Pfn2, Ckap4, Septin4, Septin5, Rab10, Gja1, Tspan4, Tspan5, Slc9a9, Abcb4, Snx6, Zfyve28, Tbccd1, Vps26c, Itpripl1, Slco3a1, Acap2, Pals1, Ryr3, Fhod3, Rhoj, Asap1, Krtap1-5, Cldnd1, Nek9, Cd151, Klhl29, Vrk1, Ano5, Cenpo, Stk39, Slc35a2, Slc39a13
+
+──────────────────────────────
+Pathway 5: Metabolic Regulation and Enzymatic Processes  
+Genes involved: Gldc, Sqor, Manba, Man1a1, Rrm2, Hadhb, Pgm1, Cers6, Ppard, Agpat5, Dhrs1, Pltp, Apod, St3gal5, Riox2, Alpl, Bace2
+
+──────────────────────────────
+Pathway 6: Immune and Inflammatory Responses  
+Genes involved: Tril, Defb29, Ighm, Aif1l, Cxcl14, Icoslg, Nlrp1a, Cxcl12, Tnfrsf1a, Selplg, Trim35
+
+──────────────────────────────
+Pathway 7: Protein Homeostasis, Stress Response, and Post‐Translational Modifications  
+Genes involved: Sumo3, Ctbs, Tent5c, Eif2ak2, Atf3, Rnf144a, Ddx1, Papola, Fbxo11, Psmd2, Parp14, Msh2, Map1lc3a, Cpsf2, Hsp90aa1, Hspa12a, Ptrh1, Chmp2b

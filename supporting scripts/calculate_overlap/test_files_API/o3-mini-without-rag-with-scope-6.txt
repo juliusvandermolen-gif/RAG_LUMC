@@ -1,0 +1,18 @@
+Answer 6:
+Axon Guidance and Neuronal Pathfinding:  
+Genes involved: Cntn6, Sema4f, Sema3g, Ntn1, Nrp1, Nrp2, Slit2, Robo2, Efna5, Srgap1, Plxnb1, Slitrk6, Dpysl5, Dpysl3, Hs6st2, Hs6st1
+
+Neural Differentiation and Neurogenesis:  
+Genes involved: Nes, Msi1, Id2, Atf3, Atf5, Dyrk1a, Mef2c, Peg3, Lef1, Klf9, Ebf1, Runx3, Taf9b, Ppard, Mybl1, Numb
+
+Myelination and Glial Development:  
+Genes involved: Mag, Mpz, Pmp22, Prx, Mal, Gldn, Cldn19
+
+Cytoskeletal Dynamics and Axonal Transport:  
+Genes involved: Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Pfn2, Myo1d, Rab10, Rhoj, Asap1, Drp2, Tagln, Fhod3, Stard13
+
+Extracellular Matrix Organization and Neuronal Migration:  
+Genes involved: Adamts17, Adamtsl3, Adamtsl1, Hapln1, Ltbp1, Col9a3, Col15a1, Emilin1, Timp1, Has2, Matn3, Col8a2, Col11a1, Bgn, Sbspon, Efemp2, Pxdn, Chst2
+
+Neural Signaling and Ion Channel Activity:  
+Genes involved: Scn7a, P2ry2, Gnai1, Itpripl1, Ryr3, Piezo2, Gja1, Sgpl1, Tpcn1, Inpp5a, Cxcl12, Gprc5a, Gprc5b

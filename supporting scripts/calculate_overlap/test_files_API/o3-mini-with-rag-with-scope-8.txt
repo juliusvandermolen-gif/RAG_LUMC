@@ -1,0 +1,27 @@
+Answer 8:
+Axon Guidance and Neural Patterning:
+Genes involved: Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Slitrk6, Sema3g, Srgap1, Dpysl5, Dpysl3, Wnt5a, Lef1
+
+Synaptic Function and Plasticity:
+Genes involved: Prss12, Synpr, Kif1a, Sipa1l1, Lrrtm3, Cdh13, Septin4, Septin5, Pfn2
+
+Myelination and Glial Support:
+Genes involved: Prx, Mpz, Mag, Mal, Drp2
+
+Neural Stem Cell Differentiation and Neurogenesis:
+Genes involved: Nes, Id2, Msi1, Numb, Mef2c, Dyrk1a, Klf9, Lifr
+
+Extracellular Matrix Remodeling and Cell Adhesion:
+Genes involved: Adamts17, Adamtsl3, Adamtsl1, Hapln1, Sbspon, Chst2, Col9a3, Ltbp1, Matn3, Emilin1, Bgn, Has2, Itga8, Itga7, Cdh13
+
+Calcium and Ion Channel Signaling in Neurons:
+Genes involved: P2ry2, Ryr3, Scn7a, Piezo2, Tpcn1, Itpripl1
+
+Growth Factor and Neural Signaling:
+Genes involved: Igfbp3, Tf, Epas1, Met, Gprc5b, Gprc5a, Pappa
+
+Cytoskeletal Dynamics and Intracellular Transport:
+Genes involved: Tuba4a, Tubb4a, Myo1d, Kif1a, Rab10, Tbccd1
+
+Protein Homeostasis and Stress Response:
+Genes involved: Hsp90aa1, Hspa12a, Eif2ak2, Atf3, Atf5

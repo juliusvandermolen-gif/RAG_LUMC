@@ -1,0 +1,24 @@
+Answer 1:
+Pathway Name: Axon Guidance & Neurite Outgrowth  
+Genes involved: Ntn1, Robo2, Slit2, Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Efna5, Srgap1, Dpysl5, Dpysl3, Cntn6
+
+Pathway Name: Synaptic Transmission & Plasticity  
+Genes involved: Prss12, Synpr, P2ry2, Lrrtm3, Ppfia4, Frrs1
+
+Pathway Name: Neural Stem/Progenitor Development & Differentiation  
+Genes involved: Nes, Msi1, Id2, Dyrk1a, Atf5, Klf9, Mef2c, Numb, Lifr, Lef1, Ebf1, Runx3
+
+Pathway Name: Myelination & Glial Support  
+Genes involved: Mag, Mpz, Pmp22, Mal, Prx, Gldn, Drp2
+
+Pathway Name: Extracellular Matrix & Cell Adhesion  
+Genes involved: Hapln1, Sbspon, Col9a3, Col15a1, Col20a1, Emilin1, Adamts17, Adamtsl3, Adamtsl1, Efemp2, Cdh13, Itga8, Itga7, Bgn, Pals1
+
+Pathway Name: Cytoskeletal Dynamics & Axonal Transport  
+Genes involved: Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Rab10, Rhoj, Asap1
+
+Pathway Name: Ion Channel & Calcium Signaling  
+Genes involved: Ryr3, Itpripl1, Tpcn1, Piezo2, Scn7a
+
+Pathway Name: Neurodevelopmental Signal Transduction  
+Genes involved: Wnt5a, Ltbp1, Htra1, Igfbp3, Ghr, Poglut1

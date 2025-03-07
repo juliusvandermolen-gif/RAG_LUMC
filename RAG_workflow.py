@@ -80,7 +80,7 @@ def load_config(filename):
 
 
 # Call the config
-config_name = "GSEA"
+config_name = "with-rag-with-scope"
 config = load_config(f'./configs_system_instruction/{config_name}.json')
 for key, value in config.items():
     globals()[key] = value
@@ -161,7 +161,8 @@ def compute_file_hash(file_path, block_size=65536):
 
 
 @timer
-def initialize_gene_list(excel_file_path=r".\Data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx", de_filter_option="combined"):
+def initialize_gene_list(excel_file_path=r".\Data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
+                         de_filter_option="combined"):
     """
     Creates a list of genes, taken from the file, based on filters
     Args:
@@ -1009,12 +1010,10 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-
-def query_open_ai(messages, system_instruction_for_response, prompt, model="gpt-4o"):
-    output_filename = "./output/test_files/all_answers_openai.txt"
+def query_open_ai(messages, system_instruction_for_response, prompt, model="o3-mini"):
     answers = []
 
-    for i in range(1, 2):
+    for i in range(1, 11):  # Adjust the range as needed for multiple runs
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
             if model.startswith("gpt-4"):
@@ -1031,6 +1030,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, model="gpt-
                     model=model,
                     messages=messages,
                     max_completion_tokens=32768,  # For mini: 65536, for preview: 32768
+                    reasoning_effort="high",
                 )
             else:
                 response = client_open_ai.chat.completions.create(
@@ -1044,12 +1044,15 @@ def query_open_ai(messages, system_instruction_for_response, prompt, model="gpt-
             print(f"An error occurred on iteration {i} using model {model}: {e}")
             continue
 
-        with open(output_filename, "a", encoding="utf-8") as file:
-            file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")
+        # Build a unique filename for each run
+        output_filename = f"./output/test_files/{model}-{config_name}-{i}.txt"
+        with open(output_filename, "w", encoding="utf-8") as file:
+            file.write(f"{answer}")
         print(f"Answer {i} appended to {output_filename}")
         answers.append(answer)
 
     return answers[-1] if answers else None
+
 
 
 def query_gemini(system_instruction, prompt):

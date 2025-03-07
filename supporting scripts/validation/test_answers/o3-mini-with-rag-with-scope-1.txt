@@ -1,0 +1,21 @@
+Answer 1:
+Axon Guidance and Neuronal Migration:
+Genes involved: Cntn6, Ntn1, Robo2, Slit2, Srgap1, Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Efna5, Dpysl5, Slitrk6
+
+Synaptic Function and Plasticity:
+Genes involved: Prss12, Synpr, Cpe, Serpini1, Kif1a, Ppfia4, Mef2c, Sncg, Atf3, Atf5, Sipa1l1
+
+Myelination and Glial Development:
+Genes involved: Mag, Mpz, Pmp22, Drp2, Mal, Gldn, Cldn19
+
+Cytoskeletal Dynamics and Axonal Transport:
+Genes involved: Tuba4a, Tubb4a, Septin4, Septin5, Pfn2, Rab10, Myo1d, Tagln
+
+Extracellular Matrix Remodeling and Neural Cell Adhesion:
+Genes involved: Hapln1, Sbspon, Col9a3, Col15a1, Col11a1, Col8a2, Adamts17, Adamtsl3, Adamtsl1, Htra1, Cdh13, Emilin1, Timp1, Matn3, Has2
+
+Neural Growth Factor Signaling and Transcriptional Regulation:
+Genes involved: Aldh1a1, Igfbp3, Lifr, Met, Cxcl12, Wnt5a, Lef1, Id2, Klf9, Runx3, Numb, Dyrk1a, Hmx3
+
+Ion Channel and Calcium Signaling:
+Genes involved: Scn7a, Ryr3, P2ry2, Tpcn1, Itpripl1, Gnai1, Piezo2

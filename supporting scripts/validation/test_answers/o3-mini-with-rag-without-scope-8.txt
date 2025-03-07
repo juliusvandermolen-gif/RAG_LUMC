@@ -1,0 +1,15 @@
+Answer 8:
+Neuronal Development and Axon Guidance:
+Genes involved: Cntn6, Prss12, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Sema3g, Efna5, Plxnb1, Dpysl3, Dpysl5, Kif1a, Mag, Gldn, Srgap1
+
+Extracellular Matrix Organization:
+Genes involved: Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Hapln1, Emilin1, Has2, Timp1, Ltbp1
+
+Metabolic Processes and Redox Homeostasis:
+Genes involved: Aldh1a1, Gldc, Sqor, Nampt, Pgm1, Rrm2
+
+Immune Response and Inflammatory Signaling:
+Genes involved: Defb29, Ighm, Icoslg, Cxcl14, Cxcl12, Ifnar1, Nlrp1a, Runx3, Tnfrsf1a
+
+Stress Response and Protein Quality Control:
+Genes involved: Hsp90aa1, Hspa12a, Eif2ak2, Atf3, Atf5

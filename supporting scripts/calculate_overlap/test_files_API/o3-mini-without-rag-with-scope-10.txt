@@ -1,0 +1,21 @@
+Answer 10:
+Axon Guidance and Neuronal Migration Pathway:
+Genes involved: Cntn6, Sema4f, Ntn1, Robo2, Slit2, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Srgap1, Dpysl5, Dpysl3, Slitrk6, Hs6st2, Hs6st1
+
+Synaptic Transmission and Neural Communication Pathway:
+Genes involved: Prss12, Cpe, Synpr, Scn7a, Kif1a, P2ry2, Gja1, St3gal5, Sipa1l1, Septin5, Ppfia4, Drp2
+
+Neural Progenitor Maintenance and Neurogenesis Pathway:
+Genes involved: Nes, Mef2c, Id2, Numb, Msi1, Peg3, Atf3, Atf5, Ebf1, Klf9, Dyrk1a, Lifr, Lef1, Met, Igfbp3
+
+Myelination and Neural Structural Integrity Pathway:
+Genes involved: Mag, Mpz, Pmp22, Prx, Mal, Drp2, Gldn, Cldn19
+
+Wnt Signaling and Neural Patterning Pathway:
+Genes involved: Wnt5a, Lef1, Tnik
+
+Neuronal Cell Adhesion and Extracellular Matrix Organization Pathway:
+Genes involved: Cdh13, Hapln1, Col9a3, Col15a1, Col20a1, Col8a2, Col11a1, Emilin1, Matn3, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Timp1, Has2
+
+Growth Factor and Neurotrophic Signaling Pathway:
+Genes involved: Igfbp3, Tf, Met, Pappa, Ghr, Psap, Nampt

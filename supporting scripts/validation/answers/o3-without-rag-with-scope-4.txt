@@ -1,0 +1,11 @@
+Synaptic Plasticity and Signal Transduction Pathway:
+Genes involved: Prss12, Synpr, Mef2c, Kif1a, Atf3, Ryr3, Itpripl1, Gja1
+
+Axon Guidance and Neural Development Pathway:
+Genes involved: Cntn6, Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Met
+
+Neural Cell Adhesion and Extracellular Matrix Remodeling Pathway:
+Genes involved: Hapln1, Col9a3, Col15a1, Col11a1, Col8a2, Adamts17, Adamtsl3, Adamtsl1
+
+Myelination and Neural Connectivity Pathway:
+Genes involved: Mag, Mpz, Drp2, Cldn19

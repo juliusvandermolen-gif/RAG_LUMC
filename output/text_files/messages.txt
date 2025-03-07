@@ -2,72 +2,192 @@
 
 When assisting the user, you should:
 
-1. **Input Acceptance and Data Context**:
+1. Input Acceptance and Data Context:
    - Accept a list of user-provided genes (symbols or identifiers).
    - If additional analysis text or a proposed pathway/function name is provided, carefully review it to understand the rationale behind suggesting a particular function.
 
-2. **Identifying and Interpreting Pathways**:
-   - Identify associated biological pathways, both known and novel, based on the provided information and established literature.
-   - Go beyond known annotations by integrating broader literature knowledge and biological reasoning.
+2. Identifying and Interpreting Pathways:
+   - Identify associated biological pathways, both known and novel, based on the provided information and established literature.,
+   - Focus on pathways and processes related to neural genetic mechanisms, such as neural development, synaptic function, neurotransmitter pathways, neural signaling, and neurogenesis.
+   - Go beyond known annotations by integrating broader literature knowledge and biological reasoning.,
 
-3. **Structured Presentation of Results**:
+
+3. Structured Presentation of Results:
    - Organize identified pathways by their functional relevance and biological plausibility.
    - Present each identified pathway along with the list of all associated genes in the following format:
      
      Pathway Name:
      Genes involved: Gene A, Gene B, Gene C, ...
 
-4. **Handling Synonyms and Ambiguities**:
+4. Handling Synonyms and Ambiguities:
    - Treat acronyms or alternative gene names as equivalent if they refer to the same gene.
 
-5. **Final Output and Interpretative Narrative**:
+5. Final Output and Interpretative Narrative:
    - Present findings as a clear, concise list of pathways with their corresponding genes, focusing solely on biological relevance and functional coherence.
    - Do not be bound to a set number of pathways.
    - Avoid narrative summaries, explanations, or detailed gene-level discussions beyond the listing of genes.
    - Ensure the list focuses on pathways directly relevant to the user’s query and integrates potential novel or underexplored pathways.
    - Focus particularly on neural genetic-related pathways.
 
-6. **Do Not Critique the User’s Proposed Name or Analysis**:
+6. Do Not Critique the User’s Proposed Name or Analysis:
    - Base evaluations solely on the user’s data and your domain knowledge.
    - Focus on clarity, coherence, and helpfulness in your response.
 
----
-
-**Additional Guidelines for Presenting Results**:
+Additional Guidelines for Presenting Results:
 
 - Organize identified pathways by grouping genes into coherent functional categories when possible.
 - Provide a comprehensive list of all potential pathways that the genes are present in, including a complete list of associated genes (gene symbols only) for each pathway, even if some genes are less relevant.
 - Instead of a simple list of genes and their pathways, focus on a small number of biologically meaningful pathways or themes and show how the genes support these themes.
-role: user, content: Based on the following documents, answer the question using both your knowledge and the provided documents: I have the following list of genes identified in a recent study related to neural development in rats, based on insights from academic literature, these genes are suspected to be involved in synaptic plasticity and neural signaling pathways. Please identify the associated biological pathways, particularly those related to neural genetic mechanisms, and present the findings as a clear, concise list of pathway names. The genes:Zpld1, Cntn6, Prss12, Gldc, Adamts17, Aldh1a1, Cobll1, Pcsk5, Tex101, Qsox1, Sema4f, Cpe, Hapln1, Marveld1, Tuba4a, Parm1, Sqor, Sbspon, Col9a3, Peg3, Emp2, Clca4l, Chst2, Acta2, Htra1, Igfbp3, Tril, Synpr, A2m, Myo1d, Ccn3, Prss23, Sumo3, Grb14, Steap2, Id2, Tf, Adamtsl3, Ltbp1, Prx, Defb29, Cdca7l, Gypc, Manba, Serpini1, Ntn1, Mag, Nrbp1, Srgap1, Ptgfr, Vopp1, Pltp, Man1a1, Drp2, Slc22a17, Tagln, Cep295nl, Aif1l, Mfap5, Mpz, Ctbs, P2ry2, Hs6st2, Tubb4a, Abca8a, Cxcl14, Ighm, Pxdn, Serinc5, Tent5c, Nrp1, Piezo2, Apod, Matn3, Sncg, Slc9a9, Riox2, Cdh13, Abcb4, Scn7a, Magec2l1, Pkp1, Epas1, Gprc5b, Efemp2, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ecel1, Serpinf1, Atf3, Icoslg, Ppp1r36, Trim35, Gldn, Krtap1-5, Alpl, Robo2, Tspan4, Nrp2, Gprc5a, Rnf144a, Frrs1, St3gal5, Kif1a, Adamtsl1, Lifr, Slit2, Tnik, Gnai1, Col20a1, Snx6, Mageb16, Prkd3, Dpysl5, Prkar2b, Cd9, Ebf1, Cldn19, Lrp2, Col15a1, Sipa1l1, Emilin1, Ppp1r14c, Tmem26, Dyrk1a, Ryr3, Septin4, Lrrtm3, Nek9, Cd151, Pfn2, Selplg, Psmd2, Ifnar1, Fhod3, Nfatc1, Cggbp1, Sgpl1, Runx3, Vps26c, Itpripl1, Fbxo11, Msi1, Slco3a1, Zfp518a, Hs6st1, Agpat5, Pam, Phldb2, Pnpt1, Poglut1, Acap2, Gja1, Tspan5, Tpcn1, Nes, Sema3g, Met, Nampt, Pmp22, Aff3, Ccn4, Taf9b, Magea4, Dpysl3, Rhoj, Asap1, Itga8, Mef2c, Cldnd1, Olfm2, Magea9, Msh2, Cers6, Hadhb, Atf5, Vash1, Smc6, ENSRNOG00000062503, Ppm1f, Klf9, Psap, Fth1, Numb, Klhl29, Itga7, Mal, C1qtnf1, Arsg, Timp1, Rcn3, Ppfia4, Cxcl12, Nlrp1a, Vrk1, Fam20c, Wnt5a, Plxnb1, Arsb, Ano5, Cenpo, ENSRNOG00000063649, Ppard, Has2, Fut10, Slitrk6, Lef1, Inpp5a, Tnfrsf1a, Parp14, Ghr, Zfyve28, Pgm1, Chmp2b, Olfml1, Bace2, Gpnmb, Mybl1, Col11a1, Efna5, Papola, Pals1, Col8a2, Hspa12a, Hmx3, Vps8, Dhrs1, Hsp90aa1, Bgn, Snx4, Ptrh1, Ckap4, Slc35a2, Gcnt1, Klhdc2, Slc39a13, Rab10, Septin5, Stard13, Cpsf2, Tbccd1, Map1lc3a, Stk39, Igf2bp2, Steap1, Gtf2e1, Cpm
+role: user, content: Based on the following documents, answer the question using both your knowledge and the provided documents: I have the following list of genes identified in a recent study related to neural development in rats, based on insights from academic literature please identify the associated biological pathways, particularly those related to neural genetic mechanisms, and present the findings as a clear, concise list of pathway names. The genes:Zpld1, Cntn6, Prss12, Gldc, Adamts17, Aldh1a1, Cobll1, Pcsk5, Tex101, Qsox1, Sema4f, Cpe, Hapln1, Marveld1, Tuba4a, Parm1, Sqor, Sbspon, Col9a3, Peg3, Emp2, Clca4l, Chst2, Acta2, Htra1, Igfbp3, Tril, Synpr, A2m, Myo1d, Ccn3, Prss23, Sumo3, Grb14, Steap2, Id2, Tf, Adamtsl3, Ltbp1, Prx, Defb29, Cdca7l, Gypc, Manba, Serpini1, Ntn1, Mag, Nrbp1, Srgap1, Ptgfr, Vopp1, Pltp, Man1a1, Drp2, Slc22a17, Tagln, Cep295nl, Aif1l, Mfap5, Mpz, Ctbs, P2ry2, Hs6st2, Tubb4a, Abca8a, Cxcl14, Ighm, Pxdn, Serinc5, Tent5c, Nrp1, Piezo2, Apod, Matn3, Sncg, Slc9a9, Riox2, Cdh13, Abcb4, Scn7a, Magec2l1, Pkp1, Epas1, Gprc5b, Efemp2, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ecel1, Serpinf1, Atf3, Icoslg, Ppp1r36, Trim35, Gldn, Krtap1-5, Alpl, Robo2, Tspan4, Nrp2, Gprc5a, Rnf144a, Frrs1, St3gal5, Kif1a, Adamtsl1, Lifr, Slit2, Tnik, Gnai1, Col20a1, Snx6, Mageb16, Prkd3, Dpysl5, Prkar2b, Cd9, Ebf1, Cldn19, Lrp2, Col15a1, Sipa1l1, Emilin1, Ppp1r14c, Tmem26, Dyrk1a, Ryr3, Septin4, Lrrtm3, Nek9, Cd151, Pfn2, Selplg, Psmd2, Ifnar1, Fhod3, Nfatc1, Cggbp1, Sgpl1, Runx3, Vps26c, Itpripl1, Fbxo11, Msi1, Slco3a1, Zfp518a, Hs6st1, Agpat5, Pam, Phldb2, Pnpt1, Poglut1, Acap2, Gja1, Tspan5, Tpcn1, Nes, Sema3g, Met, Nampt, Pmp22, Aff3, Ccn4, Taf9b, Magea4, Dpysl3, Rhoj, Asap1, Itga8, Mef2c, Cldnd1, Olfm2, Magea9, Msh2, Cers6, Hadhb, Atf5, Vash1, Smc6, ENSRNOG00000062503, Ppm1f, Klf9, Psap, Fth1, Numb, Klhl29, Itga7, Mal, C1qtnf1, Arsg, Timp1, Rcn3, Ppfia4, Cxcl12, Nlrp1a, Vrk1, Fam20c, Wnt5a, Plxnb1, Arsb, Ano5, Cenpo, ENSRNOG00000063649, Ppard, Has2, Fut10, Slitrk6, Lef1, Inpp5a, Tnfrsf1a, Parp14, Ghr, Zfyve28, Pgm1, Chmp2b, Olfml1, Bace2, Gpnmb, Mybl1, Col11a1, Efna5, Papola, Pals1, Col8a2, Hspa12a, Hmx3, Vps8, Dhrs1, Hsp90aa1, Bgn, Snx4, Ptrh1, Ckap4, Slc35a2, Gcnt1, Klhdc2, Slc39a13, Rab10, Septin5, Stard13, Cpsf2, Tbccd1, Map1lc3a, Stk39, Igf2bp2, Steap1, Gtf2e1, Cpm
 
 Documents:
-|Reference 1 (BM25) with RRF Score: 6634.5036
-ENSRNOG00000019834,Hsp90ab1,heat shock protein 90 alpha family class B member 1
+|Reference 1 (BM25) with RRF Score: 6595.3041
+ENSRNOG00000051782,AABR07004061.1,POTE ankyrin domain family member 2
 
-|Reference 2 (BM25) with RRF Score: 6615.7374
-ENSRNOG00000056007,AABR07049228.1,heat shock protein family D (Hsp60) member 1 like 2
+|Reference 2 (BM25) with RRF Score: 6589.6366
+ENSRNOG00000010659,Gabpb1,GA binding protein transcription factor subunit beta 1
 
-|Reference 3 (BM25) with RRF Score: 6608.6727
-ENSRNOG00000026243,Ap2a1,adaptor related protein complex 2 subunit alpha 1
-
-|Reference 4 (BM25) with RRF Score: 6601.8975
-ENSRNOG00000068391,Hsp90aa1-ps17,"heat shock protein 90 alpha family class A member 1, pseudogene 17"
-
-|Reference 5 (BM25) with RRF Score: 6593.9141
-ENSRNOG00000001893,Ppp2cal1,protein phosphatase 2 catalytic subunit alpha like 1
-
-|Reference 6 (BM25) with RRF Score: 6589.2537
-ENSRNOG00000061543,Ap2b1,adaptor related protein complex 2 subunit beta 1
-
-|Reference 7 (BM25) with RRF Score: 6581.3254
-ENSRNOG00000062084,Hsp90aa1-ps16,"heat shock protein 90 alpha family class A member 1, pseudogene 16"
-
-|Reference 8 (BM25) with RRF Score: 6578.9142
-ENSRNOG00000067665,Hsp90ab1-ps13,"heat shock protein 90 alpha family class B member 1, pseudogene 13"
-
-|Reference 9 (BM25) with RRF Score: 6573.8372
+|Reference 3 (BM25) with RRF Score: 6582.5719
 ENSRNOG00000059714,Hsp90aa1,heat shock protein 90 alpha family class A member 1
 
-|Reference 10 (BM25) with RRF Score: 6572.1508
+|Reference 4 (BM25) with RRF Score: 6575.7967
+ENSRNOG00000014891,Ptar1,protein prenyltransferase alpha subunit repeat containing 1
+
+|Reference 5 (BM25) with RRF Score: 6567.8133
+ENSRNOG00000001050,Eif2ak1,eukaryotic translation initiation factor 2 alpha kinase 1
+
+|Reference 6 (BM25) with RRF Score: 6563.1529
+ENSRNOG00000026963,Hsp90b1,heat shock protein 90 beta family member 1
+
+|Reference 7 (BM25) with RRF Score: 6555.2246
+ENSRNOG00000001893,Ppp2cal1,protein phosphatase 2 catalytic subunit alpha like 1
+
+|Reference 8 (BM25) with RRF Score: 6552.8135
+ENSRNOG00000019834,Hsp90ab1,heat shock protein 90 alpha family class B member 1
+
+|Reference 9 (BM25) with RRF Score: 6547.7364
+ENSRNOG00000067665,Hsp90ab1-ps13,"heat shock protein 90 alpha family class B member 1, pseudogene 13"
+
+|Reference 10 (BM25) with RRF Score: 6544.9466
+ENSRNOG00000047966,Hspa1l,heat shock protein family A (Hsp70) member 1 like
+
+|Reference 11 (BM25) with RRF Score: 6538.8313
+ENSRNOG00000026243,Ap2a1,adaptor related protein complex 2 subunit alpha 1
+
+|Reference 12 (BM25) with RRF Score: 6536.6745
+ENSRNOG00000058543,Pdia6l1,"protein disulfide isomerase family A, member 6 like 1"
+
+|Reference 13 (BM25) with RRF Score: 6535.5260
+ENSRNOG00000071200,Spopfm2l1,speckle-type BTB/POZ protein family member 2 like 1
+
+|Reference 14 (BM25) with RRF Score: 6534.2085
+ENSRNOG00000014928,Apba1,amyloid beta precursor protein binding family A member 1
+
+|Reference 15 (BM25) with RRF Score: 6533.9998
+ENSRNOG00000014252,Irf2bp1,interferon regulatory factor 2 binding protein 1
+
+|Reference 16 (BM25) with RRF Score: 6533.3078
+ENSRNOG00000069720,Ppp1r2-ps1,"protein phosphatase 1, regulatory (inhibitor) subunit 2, pseudogene 1"
+
+|Reference 17 (BM25) with RRF Score: 6533.0759
+ENSRNOG00000008788,Pals1,"protein associated with LIN7 1, MAGUK p55 family member"
+
+|Reference 18 (BM25) with RRF Score: 6530.6633
+ENSRNOG00000001733,Ppp1r2,"protein phosphatase 1, regulatory (inhibitor) subunit 2"
+
+|Reference 19 (BM25) with RRF Score: 6529.7498
+ENSRNOG00000061543,Ap2b1,adaptor related protein complex 2 subunit beta 1
+
+|Reference 20 (BM25) with RRF Score: 6529.5662
+ENSRNOG00000029979,Slc5a1l1,solute carrier family 5 member 1 like 1
+
+|Reference 21 (BM25) with RRF Score: 6529.5662
+ENSRNOG00000025443,Map1lc3a,microtubule-associated protein 1 light chain 3 alpha
+
+|Reference 22 (BM25) with RRF Score: 6527.3498
+ENSRNOG00000060963,Rbmy1j,"RNA binding motif protein, Y-linked, family 1, member J"
+
+|Reference 23 (BM25) with RRF Score: 6524.7782
+ENSRNOG00000029996,Eef1a1l2,eukaryotic translation elongation factor 1 alpha 1 like 2
+
+|Reference 24 (BM25) with RRF Score: 6524.3236
+ENSRNOG00000012799,Prkaa1,protein kinase AMP-activated catalytic subunit alpha 1
+
+|Reference 25 (BM25) with RRF Score: 6524.2747
+ENSRNOG00000068391,Hsp90aa1-ps17,"heat shock protein 90 alpha family class A member 1, pseudogene 17"
+
+|Reference 26 (BM25) with RRF Score: 6524.1108
+ENSRNOG00000069800,Spopfm2l2,speckle-type BTB/POZ protein family member 2 like 1
+
+|Reference 27 (BM25) with RRF Score: 6523.2553
+ENSRNOG00000065120,Hspd1l1,heat shock protein family D (Hsp60) member 1 like 1
+
+|Reference 28 (BM25) with RRF Score: 6518.1434
+ENSRNOG00000005479,Slc1a2,solute carrier family 1 member 2
+
+|Reference 29 (BM25) with RRF Score: 6517.8615
+ENSRNOG00000023546,Hspb1,heat shock protein family B (small) member 1
+
+|Reference 30 (BM25) with RRF Score: 6516.8449
+ENSRNOG00000062084,Hsp90aa1-ps16,"heat shock protein 90 alpha family class A member 1, pseudogene 16"
+
+|Reference 31 (BM25) with RRF Score: 6515.3219
+ENSRNOG00000066325,Cntnap5bl1,contactin associated protein family member 5B like 1
+
+|Reference 32 (BM25) with RRF Score: 6515.2899
+ENSRNOG00000030494,AABR07072761.1,nuclear receptor binding factor 2 like 1
+
+|Reference 33 (BM25) with RRF Score: 6514.6288
+ENSRNOG00000017678,Ap2b1-ps1,"adaptor related protein complex 2 subunit beta 1, pseudogene 1"
+
+|Reference 34 (BM25) with RRF Score: 6514.5091
+ENSRNOG00000015632,Taf1c,"TATA-box binding protein associated factor, RNA polymerase 1 subunit C"
+
+|Reference 35 (BM25) with RRF Score: 6514.3945
+ENSRNOG00000004901,Slc4a1ap,solute carrier family 4 member 1 adaptor protein
+
+|Reference 36 (BM25) with RRF Score: 6514.3885
+ENSRNOG00000006122,Igf2bp1,insulin-like growth factor 2 mRNA binding protein 1
+
+|Reference 37 (BM25) with RRF Score: 6513.9000
+ENSRNOG00000015975,Ppp1r2l1,"protein phosphatase 1, regulatory (inhibitor) subunit 2 like 1"
+
+|Reference 38 (BM25) with RRF Score: 6512.3165
+ENSRNOG00000033090,Ltbp1,latent transforming growth factor beta binding protein 1
+
+|Reference 39 (BM25) with RRF Score: 6511.9293
+ENSRNOG00000007284,Slc2a1,solute carrier family 2 member 1
+
+|Reference 40 (BM25) with RRF Score: 6508.2311
+ENSRNOG00000059402,Itgb1bp1,integrin subunit beta 1 binding protein 1
+
+|Reference 41 (BM25) with RRF Score: 6508.2311
 ENSRNOG00000017803,Apbb1ip,amyloid beta precursor protein binding family B member 1 interacting protein
+
+|Reference 42 (BM25) with RRF Score: 6507.9058
+ENSRNOG00000018020,Apbb1,amyloid beta precursor protein binding family B member 1
+
+|Reference 43 (BM25) with RRF Score: 6507.7303
+ENSRNOG00000024562,Tgfbrap1,"transforming growth factor, beta receptor associated protein 1"
+
+|Reference 44 (BM25) with RRF Score: 6507.4988
+ENSRNOG00000051034,Cks2l1,CDC28 protein kinase regulatory subunit 2 like 1
+
+|Reference 45 (BM25) with RRF Score: 6507.4335
+ENSRNOG00000003596,Itgb1bp2,integrin subunit beta 1 binding protein 2
+
+|Reference 46 (BM25) with RRF Score: 6507.2008
+ENSRNOG00000011234,Taf5l-ps1,"TATA-box binding protein associated factor 5 like, pseudogene 1"
+
+|Reference 47 (BM25) with RRF Score: 6505.2512
+ENSRNOG00000018027,Taf5l1,TATA-box binding protein associated factor 5 like 1
+
+|Reference 48 (BM25) with RRF Score: 6504.0297
+ENSRNOG00000051671,Herc1,HECT and RLD domain containing E3 ubiquitin protein ligase family member 1
+
+|Reference 49 (BM25) with RRF Score: 6502.2072
+ENSRNOG00000056007,AABR07049228.1,heat shock protein family D (Hsp60) member 1 like 2
+
+|Reference 50 (BM25) with RRF Score: 6501.5334
+ENSRNOG00000038106,Map1lc3b2,microtubule-associated protein 1 light chain 3 beta 2
 )

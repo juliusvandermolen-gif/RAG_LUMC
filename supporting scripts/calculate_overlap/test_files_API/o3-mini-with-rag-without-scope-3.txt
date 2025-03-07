@@ -1,0 +1,24 @@
+Answer 3:
+Neuronal Development and Axon Guidance Pathway:
+Genes involved: Cntn6, Prss12, Sema4f, Sema3g, Robo2, Slit2, Ntn1, Nrp1, Nrp2, Mag, Synpr, Srgap1, Cdh13, Gldn, Prx, Serpini1, Mpz, Ecel1, Dpysl5, Dpysl3, Nes, Slitrk6, Bace2, Efna5, Sipa1l1, Lrrtm3, Numb, Pmp22, Msi1, Olfm2
+
+Extracellular Matrix Organization and Remodeling Pathway:
+Genes involved: Zpld1, Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Hapln1, Ltbp1, Mfap5, Emilin1, Bgn, Timp1, Matn3, Sbspon, Qsox1, Cpe, Prss23, Pappa, Serpinf1, Chst2, A2m, Pxdn, Htra1, Efemp2, Poglut1, Itga8, Rcn3, Fam20c, Has2, Fut10, Olfml1, Alpl, Gcnt1, Cpm
+
+Metabolic Processes and Energy Homeostasis Pathway:
+Genes involved: Gldc, Aldh1a1, Sqor, Nampt, Cers6, Hadhb, Ppard, Pgm1, Tf, Steap2, Manba, Pltp, Man1a1, Serinc5, Apod, Riox2, Frrs1, St3gal5, Agpat5, Pam, Arsg, Psap, Fth1, Arsb, Inpp5a, Steap1, Dhrs1, Ptrh1
+
+Cellular Signaling and Transcription Regulation Pathway:
+Genes involved: Igfbp3, Ccn3, Ccn4, Sumo3, Id2, Grb14, Epas1, Eif2ak2, Atf3, Atf5, Nfatc1, Runx3, Ebf1, Dyrk1a, Klf9, Taf9b, Mef2c, Lef1, Wnt5a, Ghr, Plxnb1, Parp14, Tex101, Peg3, Emp2, Parm1, Tril, Nrbp1, Ptgfr, Tent5c, Gprc5b, Gprc5a, Rnf144a, Lifr, Tnik, Gnai1, Mageb16, Prkd3, Prkar2b, Cd9, Ppp1r14c, Tmem26, Cd151, Ppp1r36, Trim35, Tspan4, Itpripl1, Cggbp1, Zfp518a, Phldb2, Tspan5, Magea4, Magea9, Vash1, Ppm1f, Ppfia4, Zfyve28, Mybl1, Hspa12a, Hmx3, Hsp90aa1, Stk39, Igf2bp2, Gtf2e1, Klhdc2, Magec2l1, Aig1
+
+Cytoskeletal Dynamics and Intracellular Transport Pathway:
+Genes involved: Tuba4a, Tubb4a, Kif1a, Drp2, Septin4, Pfn2, Rab10, Septin5, Snx6, Acta2, Tagln, Cobll1, Marveld1, Vopp1, Myo1d, Pkp1, Snx4, Ckap4, Acap2, Rhoj, Asap1, Klhl29, Chmp2b, Vps26c, Map1lc3a, Stard13, Vps8
+
+Membrane Transport and Ion Channel Regulation Pathway:
+Genes involved: Clca4l, Slc22a17, Slc9a9, Slc35a2, Slc39a13, P2ry2, Tpcn1, Scn7a, Piezo2, Gypc, Cldn19, Lrp2, Ryr3, Slco3a1, Gja1, Cldnd1, Ano5, Pals1
+
+Immune Response and Inflammatory Signaling Pathway:
+Genes involved: Ighm, Icoslg, Ifnar1, Nlrp1a, Cxcl12, Cxcl14, Defb29, C1qtnf1, Tril, Selplg, Tnfrsf1a, Gpnmb
+
+Cell Cycle and DNA Repair Pathway:
+Genes involved: Cdca7l, Cep295nl, Ddx1, Rrm2, Msh2, Nek9, Smc6, Vrk1, Cenpo, Fbxo11, Pnpt1, Cpsf2, Tbccd1, Papola, Psmd2

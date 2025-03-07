@@ -1,0 +1,18 @@
+Answer 10:
+Neuronal Development and Axon Guidance:
+Genes involved: Cntn6, Prss12, Sema4f, Ntn1, Robo2, Slit2, Sema3g, Nrp1, Nrp2, Dpysl5, Kif1a, Synpr, Gldn, Lrrtm3, Plxnb1, Efna5, Mpz, Pmp22, Nes, Slitrk6
+
+Extracellular Matrix Organization and Cell Adhesion:
+Genes involved: Adamts17, Adamtsl1, Adamtsl3, Hapln1, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Matn3, Emilin1, Timp1, Bgn, Chst2, Sbspon, Pxdn, Efemp2, Cdh13, Pkp1, Has2
+
+Developmental and Growth Factor Signaling:
+Genes involved: Aldh1a1, Ltbp1, Igfbp3, Pappa, Lifr, Wnt5a, Lef1, Met, Nfatc1, Dyrk1a, Runx3, Ghr, Nampt, Ppard, Ccn3
+
+Protein Processing and Post-translational Modification:
+Genes involved: Pcsk5, Qsox1, Cpe, Sumo3, Eif2ak2, Trim35, Rnf144a, Fbxo11, Psmd2, Pam
+
+Cytoskeletal Dynamics and Intracellular Transport:
+Genes involved: Acta2, Tuba4a, Tubb4a, Myo1d, Kif1a, Septin4, Septin5, Pfn2, Fhod3, Rab10
+
+Immune Response and Inflammation:
+Genes involved: Cxcl14, Ighm, Ifnar1, Icoslg, Nlrp1a, Tnfrsf1a, Selplg
