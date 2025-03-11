@@ -1010,10 +1010,11 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, model="o3-mini"):
+def query_open_ai(messages, system_instruction_for_response, prompt, save, model="o3-mini"):
+
     answers = []
 
-    for i in range(1, 11):  # Adjust the range as needed for multiple runs
+    for i in range(1, 2):  # Adjust the range as needed for multiple runs
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
             if model.startswith("gpt-4"):
@@ -1043,12 +1044,11 @@ def query_open_ai(messages, system_instruction_for_response, prompt, model="o3-m
         except Exception as e:
             print(f"An error occurred on iteration {i} using model {model}: {e}")
             continue
-
-        # Build a unique filename for each run
-        output_filename = f"./output/test_files/{model}-{config_name}-{i}.txt"
-        with open(output_filename, "w", encoding="utf-8") as file:
-            file.write(f"{answer}")
-        print(f"Answer {i} appended to {output_filename}")
+        if save:
+            output_filename = f"./output/test_files/{model}-{config_name}-{i}.txt"
+            with open(output_filename, "w", encoding="utf-8") as file:
+                file.write(f"{answer}")
+            print(f"Answer {i} appended to {output_filename}")
         answers.append(answer)
 
     return answers[-1] if answers else None
@@ -1177,7 +1177,8 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
     print(f"Using API type: {api_type}")
 
     if api_type.lower() == 'openai':
-        answer = query_open_ai(messages, system_instruction_for_response, prompt)
+        save = True
+        answer = query_open_ai(messages, system_instruction_for_response, prompt, save)
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)
     elif api_type.lower() == 'gemini':
