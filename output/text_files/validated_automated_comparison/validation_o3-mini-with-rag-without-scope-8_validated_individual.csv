@@ -1,0 +1,6 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Neuronal Development and Axon Guidance,Hit,Not Novel,Axon guidance,Axonal Guidance Signaling,70.6,42.9,56.8
+Extracellular Matrix Organization,Hit,Not Novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,46.2,50.0,48.1
+Metabolic Processes and Redox Homeostasis,no hit,Novel,,Osteoarthritis Pathway,16.7,8.3,12.5
+Immune Response and Inflammatory Signaling,no hit,Novel,,Pathogen Induced Cytokine Storm Signaling Pathway,44.4,36.4,40.4
+Stress Response and Protein Quality Control,no hit,Novel,,Role of PKR in Interferon Induction and Antiviral Response,60.0,60.0,60.0

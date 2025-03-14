@@ -1,0 +1,24 @@
+Answer 9:
+Pathway Name: Axon Guidance and Neuronal Wiring  
+Genes involved: Ntn1, Robo2, Slit2, Sema3g, Sema4f, Efna5, Cntn6, Plxnb1, Srgap1, Slitrk6, Nrp1, Nrp2, Dpysl5, Dpysl3
+
+Pathway Name: Synaptic Function and Neurotransmitter Processing  
+Genes involved: Synpr, Cpe, Kif1a, P2ry2, Sncg, Prss12, Serpini1, Sipa1l1, Pam, Lrrtm3, Ppfia4, Frrs1, Septin5
+
+Pathway Name: Neurogenesis and Neural Differentiation  
+Genes involved: Nes, Mef2c, Id2, Dyrk1a, Atf3, Numb, Lef1, Wnt5a, Msi1, Igf2bp2, Ebf1, Klf9, Serpinf1, Lrp2, Runx3, Olfm2, Atf5, Aff3, Taf9b, Psap, Cxcl12
+
+Pathway Name: Myelination and Glial Support  
+Genes involved: Mag, Mpz, Pmp22, Drp2, Gja1, Gldn, Mal, Cldn19
+
+Pathway Name: Extracellular Matrix, Cell Adhesion, and Neural Migration  
+Genes involved: Hapln1, Col9a3, Col15a1, Col20a1, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Emilin1, Cdh13, Timp1, Sbspon, Htra1, Mfap5, Hs6st1, Matn3, Pkp1, Cd9, Itga8, Itga7, Has2, Fut10, Col11a1, Col8a2, Bgn, Ckap4, Gcnt1, Slc35a2
+
+Pathway Name: Wnt and Growth Factor Signaling in Neural Development  
+Genes involved: Wnt5a, Met, Lifr, Igfbp3, Ccn3, Ccn4, Pappa, Ghr, Nampt
+
+Pathway Name: Neural Signaling and Ion Channel Dynamics  
+Genes involved: Scn7a, Piezo2, Tpcn1, Gnai1, Inpp5a, Ryr3, Septin4, Nfatc1, Sgpl1, Itpripl1, Ppm1f, Tnfrsf1a, Chmp2b, Bace2, Slc9a9, St3gal5
+
+Pathway Name: Cytoskeletal Dynamics and Neurite Outgrowth  
+Genes involved: Tuba4a, Tubb4a, Pfn2, Tagln, Fhod3, Acap2, Rhoj, Asap1, Phldb2, Stard13

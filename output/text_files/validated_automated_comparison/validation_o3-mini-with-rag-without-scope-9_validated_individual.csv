@@ -1,0 +1,5 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Neuronal Development and Axon Guidance Pathway,hit,not novel,Axon guidance,Axonal Guidance Signaling,54.5,42.9,48.7
+Extracellular Matrix Organization and Remodeling Pathway,hit,not novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,30.4,58.3,44.3
+Proteolysis and Protein Processing Pathway,no hit,novel,,Regulation of Insulin-like Growth Factor (IGF) transport and uptake by IGFBPs,23.1,30.0,26.6
+Metabolic Regulation and Redox Homeostasis Pathway,no hit,novel,,Neutrophil degranulation,22.2,36.4,29.3

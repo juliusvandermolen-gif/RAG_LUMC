@@ -1,0 +1,10 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Axon Guidance / Neural Development,Hit,Not novel,Axonal Guidance Signaling,Axonal Guidance Signaling,57.9,39.3,48.6
+Extracellular Matrix Organization and Cell Adhesion,Hit,Not novel,Extracellular matrix organization; cell adhesion,Extracellular matrix organization,25.0,100.0,62.5
+Protein Processing and Proteolysis,no hit,Novel,,Regulation of Insulin-like Growth Factor (IGF) transport and uptake by IGFBPs,23.1,30.0,26.6
+Signal Transduction / Growth Factor Signaling,Hit,Not novel,Growth Hormone Signaling; HGF Signaling,Molecular Mechanisms of Cancer,54.5,40.0,47.2
+Cytoskeletal Dynamics and Intracellular Transport,Hit,Not novel,Regulation of Actin-based Motility by Rho; Kinesins,Sertoli Cell-Sertoli Cell Junction Signaling,26.7,40.0,33.4
+Immune and Inflammatory Signaling,Hit,Not novel,Pathogen Induced Cytokine Storm Signaling Pathway; Leukocyte Extravasation Signaling; Neutrophil degranulation,Pathogen Induced Cytokine Storm Signaling Pathway,44.4,36.4,40.4
+Metabolic and Mitochondrial Function,no hit,Novel,,Osteoarthritis Pathway,15.4,16.7,16.1
+"Cell Cycle, DNA Repair, and Transcription Regulation",no hit,Novel,,Androgen Signaling,8.0,33.3,20.6
+Vesicular Transport and Membrane Trafficking,Hit,Not novel,Clathrin-mediated Endocytosis Signaling; Caveolar-mediated Endocytosis Signaling,Gap Junction Signaling,8.3,9.1,8.7

@@ -1,0 +1,8 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Extracellular Matrix Organization and Remodeling,Hit,Not Novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,27.3,50.0,38.6
+Neural Development and Axon Guidance,Hit,Not Novel,Axon guidance,Axonal Guidance Signaling,52.2,42.9,47.5
+Signal Transduction and Growth Factor Signaling,no hit,Novel,,Molecular Mechanisms of Cancer,31.2,33.3,32.2
+Immune and Inflammatory Response,no hit,Novel,,Pathogen Induced Cytokine Storm Signaling Pathway,33.3,27.3,30.3
+Cytoskeletal Organization and Cell Adhesion,Hit,Not Novel,cell adhesion,Integrin Signaling,37.5,66.7,52.1
+Metabolic Processes and Mitochondrial Function,no hit,Novel,,Osteoarthritis Pathway,15.4,16.7,16.1
+"Protein Processing, Folding, and Stress Response",no hit,Novel,,Neutrophil degranulation,28.6,18.2,23.4

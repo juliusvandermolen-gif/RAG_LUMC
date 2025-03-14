@@ -1,0 +1,3 @@
+I’ve noted that you provided the full list of ground truth pathways but I don’t see a separate list of the pathways that you “found” (i.e. your identified pathways). In order to generate the requested validation table—comparing each of your found pathways against the ground truth and indicating if any appear novel—I’ll need you to provide your list of identified pathways.
+
+Could you please share your found pathways? Once I have that information, I can create the comparison table and summary narrative as requested.

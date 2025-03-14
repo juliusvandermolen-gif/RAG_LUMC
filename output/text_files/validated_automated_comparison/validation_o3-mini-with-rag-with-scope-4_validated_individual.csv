@@ -1,0 +1,9 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Axon Guidance and Neurite Outgrowth,Hit,Not Novel,Axonal Guidance Signaling,Axonal Guidance Signaling,84.6,39.3,61.9
+Synaptic Formation and Plasticity,No Hit,Novel,,Osteoarthritis Pathway,20.0,8.3,14.2
+Neural Progenitor Differentiation and Neurogenesis,No Hit,Novel,,Hepatic Fibrosis Signaling Pathway,25.0,14.3,19.6
+Myelination and Glial Cell Function,Hit,Not Novel,EGR2 and SOX10-mediated initiation of Schwann cell myelination; Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,71.4,100.0,85.7
+Extracellular Matrix Organization and Remodeling in Neural Development,Hit,Not Novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,27.8,41.7,34.8
+Wnt/Retinoic Acid and Growth Factor Signaling in Neural Patterning,No Hit,Novel,,Axonal Guidance Signaling,33.3,10.7,22.0
+Ion Channel and Neuronal Signaling,No Hit,Novel,,NAD Signaling Pathway,50.0,60.0,55.0
+Protein Folding and Cellular Stress Response,No Hit,Novel,,,,,

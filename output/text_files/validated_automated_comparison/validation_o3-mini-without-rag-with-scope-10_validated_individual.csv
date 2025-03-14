@@ -1,0 +1,8 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Axon Guidance and Neuronal Migration Pathway,Hit,Not novel,Axon guidance,Axonal Guidance Signaling,68.8,39.3,54.0
+Synaptic Transmission and Neural Communication Pathway,Hit,Not novel,Activation of NMDA receptors and postsynaptic events,Gap Junction Signaling,16.7,18.2,17.4
+Neural Progenitor Maintenance and Neurogenesis Pathway,Hit,Not novel,Notch Signaling,Cachexia Signaling Pathway,20.0,33.3,26.6
+Myelination and Neural Structural Integrity Pathway,Hit,Not novel,Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,62.5,100.0,81.2
+Wnt Signaling and Neural Patterning Pathway,Hit,Not novel,Beta-catenin independent WNT signaling,,,,
+Neuronal Cell Adhesion and Extracellular Matrix Organization Pathway,Hit,Not novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,40.0,50.0,45.0
+Growth Factor and Neurotrophic Signaling Pathway,Hit,Not novel,NGF processing,Regulation of Insulin-like Growth Factor (IGF) transport and uptake by IGFBPs,42.9,30.0,36.5

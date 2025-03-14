@@ -1,0 +1,18 @@
+Answer 5:
+Axon Guidance and Neuronal Migration:
+Genes involved: Cntn6, Ntn1, Robo2, Sema4f, Sema3g, Slit2, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl5, Srgap1, Slitrk6
+
+Synaptic Function and Vesicular Transport:
+Genes involved: Prss12, Synpr, Cpe, Kif1a, Gnai1, P2ry2, Ryr3
+
+Myelination and Neural Insulation:
+Genes involved: Mpz, Drp2, Mag, Pmp22
+
+Neural Stem Cell Maintenance and Neurogenesis:
+Genes involved: Nes, Msi1, Mef2c, Lef1, Id2, Numb, Peg3, Dyrk1a, Klf9, Ebf1, Wnt5a, Met
+
+Extracellular Matrix Regulation in Neural Development:
+Genes involved: Hapln1, Col9a3, Col15a1, Col20a1, Col8a2, Col11a1, Emilin1, Cdh13, Ltbp1, Matn3, Bgn, Has2, Timp1, C1qtnf1
+
+Neuronal Plasticity and Stress Response:
+Genes involved: Atf3, Atf5

@@ -1,0 +1,24 @@
+Answer 3:
+Neurodevelopment, Axon Guidance, and Myelination:
+Genes involved: Cntn6, Prss12, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Efna5, Plxnb1, Dpysl5, Dpysl3, Srgap1, Gldn, Mpz, Prx, Pmp22, Synpr, Nes, Slitrk6, Sipa1l1, Lrrtm3, Mal
+
+Extracellular Matrix Organization and Remodeling:
+Genes involved: Adamts17, Adamtsl1, Adamtsl3, Hapln1, Sbspon, Col9a3, Col20a1, Col15a1, Matn3, Col11a1, Col8a2, Bgn, Timp1, Ltbp1, Pxdn, Mfap5, Chst2, Hs6st1, Hs6st2, Ccn3, Ccn4, Emilin1, Has2, Efemp2, Poglut1, Fam20c, Fut10, Gcnt1, Olfml1
+
+Proteolysis and Protein Processing:
+Genes involved: Prss12, Prss23, Pcsk5, Htra1, Serpini1, Serpinf1, A2m, Cpe, Ctbs, Bace2, Ecel1, Pappa, Pam, Arsg, Hsp90aa1, Cpm
+
+Metabolic and Redox Regulation:
+Genes involved: Aldh1a1, Sqor, Tf, Nampt, Ppard, Hadhb, Rrm2, Steap2, Steap1, Pgm1, Agpat5, Dhrs1, Fth1, Psap, Serinc5
+
+Signal Transduction and Transcriptional Regulation:
+Genes involved: Igfbp3, Grb14, Id2, Atf3, Runx3, Epas1, Lifr, Mef2c, Tnik, Gnai1, Rnf144a, Prkar2b, Ebf1, Dyrk1a, Atf5, Klf9, Tnfrsf1a, Ghr, Lef1, Met, Cxcl12, Icoslg, Nfatc1, Prkd3, Inpp5a, Parp14, Taf9b, Hmx3, Ppm1f, Numb, Aff3, Wnt5a, Stk39
+
+Cytoskeletal Dynamics and Intracellular Transport:
+Genes involved: Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Pfn2, Rab10, Tbccd1, Ckap4, Drp2, Myo1d, Fhod3, Asap1, Rhoj, Tagln, Map1lc3a, Phldb2, Acap2, Stard13
+
+Cell Adhesion and Junction Organization:
+Genes involved: Marveld1, Pkp1, Cd9, Itga8, Itga7, Cldn19, Cldnd1, Cdh13, Gja1, Tspan4, Tspan5, Ppfia4
+
+Immune Response and Inflammatory Processes:
+Genes involved: Defb29, Ighm, Trim35, Nlrp1a, Ifnar1, Cxcl14, Selplg, Gpnmb

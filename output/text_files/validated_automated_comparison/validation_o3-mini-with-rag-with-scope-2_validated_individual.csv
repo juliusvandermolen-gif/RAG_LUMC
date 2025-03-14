@@ -1,0 +1,9 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Axon Guidance and Neural Circuit Formation,Hit,Not Novel,Axonal Guidance Signaling,Axonal Guidance Signaling,77.8,25.0,51.4
+Synaptic Function and Neurotransmitter Processing,no hit,Novel,,Sertoli Cell-Sertoli Cell Junction Signaling,25.0,10.0,17.5
+Myelination and Neural Insulation,Hit,Not Novel,Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,100.0,80.0,90.0
+Neural Stem Cell Differentiation and Neurogenesis,no hit,Novel,,Osteoarthritis Pathway,28.6,16.7,22.6
+Wnt Signaling in Neural Development,Hit,Not Novel,Beta-catenin independent WNT signaling,,,,
+Extracellular Matrix Organization and Cell Adhesion in Neural Development,Hit,Not Novel,Extracellular matrix organization; cell adhesion,Hepatic Fibrosis / Hepatic Stellate Cell Activation,45.5,41.7,43.6
+Cytoskeletal Dynamics and Intracellular Transport in Neurons,Hit,Not Novel,Regulation of Actin-based Motility by Rho; Signaling by Rho Family GTPases; Kinesins,Axonal Guidance Signaling,37.5,10.7,24.1
+Neuronal Signal Transduction and Calcium Signaling,Hit,Not Novel,Activation of NMDA receptors and postsynaptic events,Axonal Guidance Signaling,40.0,7.1,23.6

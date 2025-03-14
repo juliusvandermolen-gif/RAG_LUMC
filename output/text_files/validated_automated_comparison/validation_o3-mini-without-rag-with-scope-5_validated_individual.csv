@@ -1,0 +1,7 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Axon Guidance and Neuronal Migration,Hit,Not Novel,Axonal Guidance Signaling,Axonal Guidance Signaling,84.6,39.3,61.9
+Synaptic Function and Vesicular Transport,no hit,Novel,,Gap Junction Signaling,28.6,18.2,23.4
+Myelination and Neural Insulation,Hit,Not Novel,Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,100.0,80.0,90.0
+Neural Stem Cell Maintenance and Neurogenesis,no hit,Novel,,Hepatic Fibrosis Signaling Pathway,25.0,21.4,23.2
+Extracellular Matrix Regulation in Neural Development,Hit,Not Novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,42.9,50.0,46.5
+Neuronal Plasticity and Stress Response,no hit,Novel,,,,,

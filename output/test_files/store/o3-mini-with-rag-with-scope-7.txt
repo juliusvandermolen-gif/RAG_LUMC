@@ -1,0 +1,18 @@
+Answer 7:
+Axon Guidance and Neuronal Migration:
+Genes involved: Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Efna5, Plxnb1, Cntn6, Srgap1, Slitrk6, Dpysl5, Dpysl3
+
+Myelination and Glial Support:
+Genes involved: Mpz, Prx, Pmp22, Mal, Mag, Drp2, Gldn
+
+Neural Progenitor Maintenance and Neurogenesis:
+Genes involved: Nes, Msi1, Id2, Dyrk1a, Numb, Peg3, Atf5, Hmx3
+
+Synaptic Function and Plasticity:
+Genes involved: Synpr, Sipa1l1, Ppfia4, Kif1a, Ryr3, P2ry2, Cpe, Prss12
+
+Extracellular Matrix Remodeling and Cell Adhesion:
+Genes involved: Hapln1, Col9a3, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Emilin1, Matn3, Col15a1, Col20a1, Col11a1, Col8a2, Bgn, Cdh13, Htra1, Chst2, Sbspon, Qsox1
+
+Neurotrophic and Growth Factor Signaling:
+Genes involved: Aldh1a1, Igfbp3, Wnt5a, Lifr, Met, Lef1, Runx3, Epas1

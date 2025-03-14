@@ -1,0 +1,24 @@
+Answer 2:
+Axon Guidance and Neural Circuit Formation:
+Genes involved: Cntn6, Ntn1, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Efna5, Slitrk6
+
+Synaptic Function and Neurotransmitter Processing:
+Genes involved: Prss12, Synpr, Cpe, Cdh13
+
+Myelination and Neural Insulation:
+Genes involved: Mpz, Pmp22, Mag, Drp2
+
+Neural Stem Cell Differentiation and Neurogenesis:
+Genes involved: Nes, Msi1, Mef2c, Id2, Numb, Atf3, Lef1
+
+Wnt Signaling in Neural Development:
+Genes involved: Wnt5a, Lef1, Dyrk1a
+
+Extracellular Matrix Organization and Cell Adhesion in Neural Development:
+Genes involved: Hapln1, Col9a3, Col20a1, Col15a1, Col8a2, Col11a1, Emilin1, Adamts17, Adamtsl3, Adamtsl1, Ltbp1
+
+Cytoskeletal Dynamics and Intracellular Transport in Neurons:
+Genes involved: Tuba4a, Tubb4a, Dpysl5, Dpysl3, Kif1a, Septin4, Septin5, Rab10
+
+Neuronal Signal Transduction and Calcium Signaling:
+Genes involved: Gnai1, Ryr3, Itpripl1, P2ry2, Met

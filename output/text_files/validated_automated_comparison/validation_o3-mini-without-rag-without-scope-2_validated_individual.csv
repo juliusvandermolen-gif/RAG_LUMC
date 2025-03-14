@@ -1,0 +1,7 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+"Neuronal Development, Axon Guidance, and Synaptic Function",Hit,Not Novel,Axon guidance,Axonal Guidance Signaling,55.6,35.7,45.7
+Myelination and Neural Insulation,Hit,Not Novel,Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,80.0,80.0,80.0
+Extracellular Matrix Organization and Remodeling,Hit,Not Novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,25.0,50.0,37.5
+Immune and Inflammatory Signaling,no hit,Novel,,Pathogen Induced Cytokine Storm Signaling Pathway,33.3,36.4,34.8
+Signal Transduction and Growth Factor Signaling,no hit,Novel,,Molecular Mechanisms of Cancer,38.5,33.3,35.9
+Cytoskeletal Dynamics and Intracellular Transport,Hit,Not Novel,Regulation of Actin-based Motility by Rho; Kinesins,Sertoli Cell-Sertoli Cell Junction Signaling,25.0,30.0,27.5

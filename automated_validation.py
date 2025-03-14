@@ -58,30 +58,37 @@ def validate(gpt_answer, ground_truth, instruction):
         {"role": "system", "content": instruction},
         {"role": "user", "content": prompt}
     ]
-    print(messages)
     save = False
     answer = query_open_ai(messages, instruction, prompt, save)
     return answer
 
 
 def main():
-    gpt_answer_file = "./output/text_files/answer.txt"
+    answer_dir = r".\supporting scripts\validation\test_answers"  # Directory containing GPT answer files
     ground_truth_file = "./output/text_files/ground_truth_pathways.txt"
     system_instruction_file = "./output/text_files/system_instruction.txt"
 
-    gpt_answer, ground_truth, instruction = open_file(gpt_answer_file, ground_truth_file, system_instruction_file)
-    validation_answer = validate(gpt_answer, ground_truth, instruction)
-    print(validation_answer)
+    # Read ground truth and system instruction once since they're reused for each answer file.
+    with open(ground_truth_file, 'r', encoding="utf8") as f:
+        ground_truth = f.read().strip()
+    with open(system_instruction_file, 'r', encoding="utf8") as f:
+        instruction = f.read().strip()
 
     output_directory = "./output/text_files/automated_comparison"
     os.makedirs(output_directory, exist_ok=True)
 
-    existing_files = os.listdir(output_directory)
-    iteration = len([f for f in existing_files if f.startswith("comparison_") and f.endswith(".txt")]) + 1
-    output_file = os.path.join(output_directory, f"comparison_{iteration}.txt")
-
-    with open(output_file, 'w', encoding="utf-8") as f:
-        f.write(validation_answer)
+    # Process each GPT answer file in the answer_dir
+    for filename in os.listdir(answer_dir):
+        if not filename.endswith('.txt'):
+            continue
+        gpt_answer_file = os.path.join(answer_dir, filename)
+        with open(gpt_answer_file, 'r', encoding="utf8") as f:
+            gpt_answer = f.read().strip()
+        validation_answer = validate(gpt_answer, ground_truth, instruction)
+        # Save the validation answer with the new file name: validation_{original_file_name}
+        validation_file = os.path.join(output_directory, f"validation_{filename}")
+        with open(validation_file, 'w', encoding="utf8") as f:
+            f.write(validation_answer)
 
 
 if __name__ == "__main__":

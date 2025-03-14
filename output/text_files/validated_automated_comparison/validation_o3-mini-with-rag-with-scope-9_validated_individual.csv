@@ -1,0 +1,7 @@
+Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
+Axon Guidance and Neuronal Migration,Hit,Common,Axonal Guidance Signaling,Axonal Guidance Signaling,80.0,42.9,61.5
+Synaptic Function and Plasticity,Hit,Common,Activation of NMDA receptors and postsynaptic events,Signaling by Rho Family GTPases,30.0,33.3,31.6
+ECM Organization and Cell Adhesion in Neural Development,Hit,Common,Extracellular matrix organization,Extracellular matrix organization,38.9,100.0,69.5
+Myelination and Glial Function,Hit,Common,Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,57.1,80.0,68.5
+Neural Development and Transcriptional Regulation/Growth Factor Signaling,no hit,Novel,,Hepatic Fibrosis Signaling Pathway,20.0,21.4,20.7
+Calcium Signaling and Intracellular Communication in Neurons,no hit,Novel,,NAD Signaling Pathway,40.0,40.0,40.0
