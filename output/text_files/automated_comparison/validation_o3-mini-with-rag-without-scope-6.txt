@@ -1,1 +1,0 @@
-It appears that only the list of ground truth pathways was provided. I don’t see the list of your identified (found) pathways that you’d like me to compare against the ground truth. Could you please share the list of found pathways so I can validate them and build the requested comparison table?

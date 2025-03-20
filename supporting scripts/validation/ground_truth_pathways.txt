@@ -1,157 +1,56 @@
-Axonal Guidance Signaling
-Regulation of Insulin-like Growth Factor (IGF) transport and uptake by IGFBPs
-Hepatic Fibrosis / Hepatic Stellate Cell Activation
-Post-translational protein phosphorylation
-Semaphorin Signaling in Neurons
-Semaphorin interactions
-Osteoarthritis Pathway
-EGR2 and SOX10-mediated initiation of Schwann cell myelination
-Semaphorin Neuronal Repulsive Signaling Pathway
-Assembly of collagen fibrils and other multimeric structures
-Hepatic Fibrosis Signaling Pathway
-Elastic fibre formation
-Collagen chain trimerization
-Extracellular matrix organization
-Sphingolipid metabolism
-Signaling by ROBO receptors
-Sertoli Cell-Sertoli Cell Junction Signaling
-Integrin Signaling
-L1CAM interactions
-Response to elevated platelet cytosolic Ca2+
-Gap Junction Signaling
-Collagen biosynthesis and modifying enzymes
-Regulation of Actin-based Motility by Rho
-O-linked glycosylation
-Microautophagy Signaling Pathway
-Signaling by Rho Family GTPases
-Pathogen Induced Cytokine Storm Signaling Pathway
-Formation of the ureteric bud
-Pulmonary Fibrosis Idiopathic Signaling Pathway
-Germ Cell-Sertoli Cell Junction Signaling
-Glycosaminoglycan metabolism
-ROBO SLIT Signaling Pathway
-GP6 Signaling Pathway
-Netrin Signaling
-Leukocyte Extravasation Signaling
-Collagen degradation
-Hedgehog 'off' state
-Remodeling of Epithelial Adherens Junctions
-Cardiac Hypertrophy Signaling (Enhanced)
-RHOGDI Signaling
-Nuclear Cytoskeleton Signaling Pathway
-Xenobiotic Metabolism PXR Signaling Pathway
-Growth Hormone Signaling
-Agranulocyte Adhesion and Diapedesis
-Neutrophil degranulation
-Oxytocin Signaling Pathway
-RHOA Signaling
-Androgen Signaling
-SUMOylation of immune response proteins
-Cleavage and Polyadenylation of Pre-mRNA
-Mechanisms of Viral Exit from Host Cells
-Tight Junction Signaling
-LXR/RXR Activation
-Transport of vitamins, nucleosides, and related molecules
-Cachexia Signaling Pathway
-Aggrephagy
-Integrin cell surface interactions
-Activation of NMDA receptors and postsynaptic events
-Response of EIF2AK1 (HRI) to heme deficiency
-Carboxyterminal post-translational modifications of tubulin
-Wound Healing Signaling Pathway
-Role of PKR in Interferon Induction and Antiviral Response
-Role of Osteoclasts in Rheumatoid Arthritis Signaling Pathway
-Tuberculosis Latent Signaling Pathway
-Ephrin A Signaling
-Cell junction organization
-DHCR24 Signaling Pathway
-Pulmonary Healing Signaling Pathway
-Ephrin Receptor Signaling
-Gap junction trafficking and regulation
-Immunogenic Cell Death Signaling Pathway
-Granulocyte Adhesion and Diapedesis
-Mitotic Prometaphase
-NAD Signaling Pathway
-Colorectal Cancer Metastasis Signaling
-Molecular Mechanisms of Cancer
-Receptor-type tyrosine-protein phosphatases
-HSP90 chaperone cycle for steroid hormone receptors in the presence of ligand
-Eicosanoid Signaling
-Ovarian Cancer Signaling
-ERK/MAPK Signaling
-Paxillin Signaling
-Signaling by VEGF
-Iron uptake and transport
-Dermatan Sulfate Biosynthesis (Late Stages)
-Gamma carboxylation, hypusinylation, hydroxylation, and arylsulfatase activation
-Kinesins
-CXCR4 Signaling
-Chondroitin Sulfate Biosynthesis (Late Stages)
-LPS/IL-1 Mediated Inhibition of RXR Function
-Xenobiotic Metabolism CAR Signaling Pathway
-Sertoli Cell-Germ Cell Junction Signaling Pathway (Enhanced)
-Mitotic Metaphase and Anaphase
-Pyridoxal 5'-phosphate Salvage Pathway
-Neuregulin Signaling
-RHO GTPase cycle
-Cardiogenesis
-Pancreatic Secretion Signaling Pathway
-Chondroitin Sulfate Biosynthesis
-Th1 Pathway
-Translocation of SLC2A4 (GLUT4) to the plasma membrane
-Processing of Capped Intronless Pre-mRNA
-Dermatan Sulfate Biosynthesis
-Melatonin Signaling
-Neuroprotective Role of THOP1 in Alzheimer's Disease
-Production of Nitric Oxide and Reactive Oxygen Species in Macrophages
-Myelination Signaling Pathway
-Nicotinate metabolism
-Sonic Hedgehog Signaling
-Plasma lipoprotein assembly, remodeling, and clearance
-HGF Signaling
-14-3-3-mediated Signaling
-RHO GTPases activate IQGAPs
-Surfactant metabolism
-VDR/RXR Activation
-PKR-mediated signaling
-Role of WNT/GSK-3β Signaling in the Pathogenesis of Influenza
-P2Y Purinergic Receptor Signaling Pathway
-NGF processing
-Galactose catabolism
-Lysosomal oligosaccharide catabolism
-NAD Biosynthesis III
-Neutrophil Extracellular Trap Signaling Pathway
-Caveolar-mediated Endocytosis Signaling
-IL-7 Signaling Pathway
-Sialic acid metabolism
-IL-17A Signaling in Fibroblasts
-Mitotic G2-G2/M phases
-Human Embryonic Stem Cell Pluripotency
-PI3K/AKT Signaling
-Role of JAK family kinases in IL-6-type Cytokine Signaling
-RHO GTPases Activate Formins
-Cilium Assembly
-Sheddase Signaling Pathway
-Beta-catenin independent WNT signaling
-Clathrin-mediated Endocytosis Signaling
-VEGF Family Ligand-Receptor Interactions
-Opioid Signaling Pathway
-Endocannabinoid Cancer Inhibition Pathway
-Inhibition of Matrix Metalloproteases
-Notch Signaling
-ABRA Signaling Pathway
-multicellular organismal process
-regulation of cell motility
-response to external stimulus
-enzyme-linked receptor protein signaling pathway
-cell adhesion
-extracellular matrix assembly
-regulation of biological quality
-regulation of cellular component organization
-localization
-olfactory bulb interneuron development
-negative regulation of cell projection organization
-cell-matrix adhesion
-axon extension involved in axon guidance
-Axon guidance
-Extracellular matrix organization
+Pathway	annotation term
+cell periphery	GO:0071944
+multicellular organismal process	GO:0032501
+extracellular region	GO:0005576
+regulation of cell motility	GO:2000145
+system development	GO:0048731
+regulation of locomotion	GO:0040012
+locomotion	GO:0040011
+anatomical structure development	GO:0048856
+cell migration	GO:0016477
+vesicle	GO:0031982
+developmental process	GO:0032502
+cell motility	GO:0048870
+protein binding	GO:0005515
+endomembrane system	GO:0012505
+response to external stimulus	GO:0009605
+extracellular matrix	GO:0031012
+positive regulation of biological process	GO:0048518
+Extracellular matrix organization	REAC:R-RNO-1474244
+Axon guidance	KEGG:04360
+cytoplasm	GO:0005737
+blood vessel morphogenesis	GO:0048514
+membrane	GO:0016020
+enzyme-linked receptor protein signaling pathway	GO:0007167
+integrin binding	GO:0005178
+tube morphogenesis	GO:0035239
+cell adhesion	GO:0007155
+response to endogenous stimulus	GO:0009719
+extracellular matrix assembly	GO:0085029
+regulation of biological quality	GO:0065008
+extracellular matrix organization	GO:0030198
+external encapsulating structure organization	GO:0045229
+extracellular structure organization	GO:0043062
+cell surface receptor signaling pathway	GO:0007166
+regulation of cellular component organization	GO:0051128
+regulation of response to stimulus	GO:0048583
+localization	GO:0051179
+somatodendritic compartment	GO:0036477
+regulation of endothelial cell migration	GO:0010594
+olfactory bulb interneuron development	GO:0021891
+negative regulation of cell projection organization	GO:0031345
+tissue morphogenesis	GO:0048729
+cell-matrix adhesion	GO:0007160
+response to chemical	GO:0042221
+cellular response to growth factor stimulus	GO:0071363
+embryo development	GO:0009790
+apical part of cell	GO:0045177
+axon extension involved in axon guidance	GO:0048846
+neuron projection extension involved in neuron projection guidance	GO:1902284
+bounding membrane of organelle	GO:0098588
+regulation of signaling	GO:0023051
+regulation of cell communication	GO:0010646
+response to stimulus	GO:0050896
+myelin sheath	GO:0043209
+negative chemotaxis	GO:0050919
+early endosome	GO:0005769

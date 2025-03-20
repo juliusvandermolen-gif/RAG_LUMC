@@ -1,20 +1,97 @@
-Below is the tab‐separated table comparing your pathways with the ground truth:
+Below is the evaluation of your seven user‐provided pathways against the ground truth list. In our analysis, we compare each term by its description and biological function. A pathway is considered a “hit” if it exactly matches or is functionally similar to one of the ground truth pathways. When a hit is found, the matched ground truth pathway along with its annotation term is provided. Otherwise, the pathway is flagged as “No Hit” and considered novel relative to the provided ground truth.
 
-Pathway	               Validation (Hit or no hit)	Novel or not	                                    Matched Ground Truth Pathway
-──────────────────────────────  ────────────────  ──────────────  ─────────────────────────────────────────────────────────
-Axon Guidance and Neurite Outgrowth	    Hit	        Not Novel	                                Axonal Guidance Signaling
-Synapse Formation and Plasticity	        no hit	    Novel	                                        
-Myelination and Glial Function	            Hit	        Not Novel	  Myelination Signaling Pathway; EGR2 and SOX10-mediated initiation of Schwann cell myelination
-Neural Differentiation and Neurogenesis	    no hit	    Novel	                                        
-Extracellular Matrix Remodeling and Cell Adhesion in Neural Development	Hit	        Not Novel	  Extracellular matrix organization; cell adhesion
-Neuronal Signaling and Neurotransmitter Processing	no hit	    Novel	                                        
-Cytoskeletal Dynamics and Intracellular Transport	Hit	        Not Novel	  Regulation of Actin-based Motility by Rho; Kinesins
+─────────────────────────────────────────────  
+User Pathway Evaluation  
+─────────────────────────────────────────────  
+Pathway	                  Validation (Hit or no hit)	Novel or not	    Matched Ground Truth Pathway	                                               Annotation term  
+─────────────────────────────────────────────  
+Axon Guidance and Neurite Outgrowth	    Hit	              Common	          Axon guidance	                                                   KEGG:04360  
+Synapse Formation and Plasticity	          No Hit	          Novel	            —	                                                           —  
+Myelination and Glial Function	            Hit	              Common	          myelin sheath	                                                   GO:0043209  
+Neural Differentiation and Neurogenesis	    No Hit	          Novel	            —	                                                           —  
+Extracellular Matrix Remodeling and Cell Adhesion in Neural Development	  Hit	              Common	          Extracellular matrix organization; cell adhesion	           REAC:R-RNO-1474244; GO:0007155  
+Neuronal Signaling and Neurotransmitter Processing	    No Hit	          Novel	            —	                                                           —  
+Cytoskeletal Dynamics and Intracellular Transport	    No Hit	          Novel	            —	                                                           —  
+─────────────────────────────────────────────  
 
-──────────────────────────────
-Interpretative Summary:
+─────────────────────────────────────────────  
+Interpretative Summary  
+─────────────────────────────────────────────  
+• The pathway “Axon Guidance and Neurite Outgrowth” is confirmed as a hit by matching the ground truth term “Axon guidance” (KEGG:04360).  
+• “Myelination and Glial Function” is also validated through similarity with “myelin sheath” (GO:0043209).  
+• “Extracellular Matrix Remodeling and Cell Adhesion in Neural Development” overlaps with two well‐defined ground truth terms—“Extracellular matrix organization” (REAC:R-RNO-1474244) and “cell adhesion” (GO:0007155)—and is therefore considered a hit.  
+• The other pathways [“Synapse Formation and Plasticity”, “Neural Differentiation and Neurogenesis”, “Neuronal Signaling and Neurotransmitter Processing”, and “Cytoskeletal Dynamics and Intracellular Transport”] were not identified in the ground truth list; accordingly, they are flagged as novel in this context.  
 
-Your list includes several pathways that align well with the ground truth. For example, “Axon Guidance and Neurite Outgrowth” clearly matches the “Axonal Guidance Signaling” pathway, while “Myelination and Glial Function” maps to established myelination processes (captured by both the generic “Myelination Signaling Pathway” and the more specific “EGR2 and SOX10-mediated initiation of Schwann cell myelination”). Also, the pathway involving extracellular matrix remodeling paired with cell adhesion shows a strong correspondence with the “Extracellular matrix organization” and “cell adhesion” entries.
+Biologically, the validated pathways confirm key elements of neural development (axon guidance, myelination, and extracellular matrix organization with adhesion), which are well represented in established annotations. The novel pathways—especially those related to synapse-related processes, neural differentiation, and the dynamics of intracellular transport—may represent either more specialized or emerging aspects of neuroscience that are not captured by the current ground truth set and might warrant further investigation.
 
-On the other hand, three of your proposed pathways—“Synapse Formation and Plasticity,” “Neural Differentiation and Neurogenesis,” and “Neuronal Signaling and Neurotransmitter Processing”—do not have direct matches in the ground truth. Although these represent well‐studied biological processes, they are not explicitly captured in the provided ground truth list and therefore may be considered novel in this context.
+─────────────────────────────────────────────  
+Complete Ground Truth Pathway List with Associated Annotation Terms  
+─────────────────────────────────────────────  
+(Note: Gene associations were not provided in the input data.)
 
-Overall, the pathways that hit the ground truth underscore well‐characterized mechanisms in neural development and function, whereas the ones without a match could provide avenues for exploring alternative or underrepresented aspects of neural biology.
+cell periphery	                           GO:0071944  
+multicellular organismal process	           GO:0032501  
+extracellular region	                       GO:0005576  
+regulation of cell motility	               GO:2000145  
+system development	                       GO:0048731  
+regulation of locomotion	                   GO:0040012  
+locomotion	                                   GO:0040011  
+anatomical structure development	           GO:0048856  
+cell migration	                           GO:0016477  
+vesicle	                                   GO:0031982  
+developmental process	                       GO:0032502  
+cell motility	                           GO:0048870  
+protein binding	                           GO:0005515  
+endomembrane system	                       GO:0012505  
+response to external stimulus	           GO:0009605  
+extracellular matrix	                       GO:0031012  
+positive regulation of biological process	   GO:0048518  
+Extracellular matrix organization	           REAC:R-RNO-1474244  
+Axon guidance	                           KEGG:04360  
+cytoplasm	                                   GO:0005737  
+blood vessel morphogenesis	               GO:0048514  
+membrane	                                   GO:0016020  
+enzyme-linked receptor protein signaling pathway	GO:0007167  
+integrin binding	                           GO:0005178  
+tube morphogenesis	                       GO:0035239  
+cell adhesion	                           GO:0007155  
+response to endogenous stimulus	           GO:0009719  
+extracellular matrix assembly	           GO:0085029  
+regulation of biological quality	           GO:0065008  
+extracellular matrix organization	           GO:0030198  
+external encapsulating structure organization	GO:0045229  
+extracellular structure organization	       GO:0043062  
+cell surface receptor signaling pathway	   GO:0007166  
+regulation of cellular component organization   GO:0051128  
+regulation of response to stimulus	       GO:0048583  
+localization	                               GO:0051179  
+somatodendritic compartment	               GO:0036477  
+regulation of endothelial cell migration	   GO:0010594  
+olfactory bulb interneuron development	       GO:0021891  
+negative regulation of cell projection organization	GO:0031345  
+tissue morphogenesis	                       GO:0048729  
+cell-matrix adhesion	                       GO:0007160  
+response to chemical	                       GO:0042221  
+cellular response to growth factor stimulus	   GO:0071363  
+embryo development	                       GO:0009790  
+apical part of cell	                       GO:0045177  
+axon extension involved in axon guidance	   GO:0048846  
+neuron projection extension involved in neuron projection guidance	GO:1902284  
+bounding membrane of organelle	           GO:0098588  
+regulation of signaling	                   GO:0023051  
+regulation of cell communication	           GO:0010646  
+response to stimulus	                       GO:0050896  
+myelin sheath	                           GO:0043209  
+negative chemotaxis	                       GO:0050919  
+early endosome	                           GO:0005769  
+
+This concludes the evaluation of your pathways based solely on the provided data and established biological annotations.
+
+Full pathway list with genes:
+Axon Guidance and Neurite Outgrowth: Ntn1, Robo2, Slit2, Srgap1, Nrp1, Nrp2, Sema4f, Sema3g, Dpysl5, Dpysl3, Plxnb1, Efna5, Cxcl12
+Synapse Formation and Plasticity: Cntn6, Synpr, Sipa1l1, Lrrtm3, Septin4, Septin5, Sncg, Ppfia4, Slitrk6
+Myelination and Glial Function: Mag, Mpz, Prx, Pmp22, Mal, Gldn, Cldn19, Gpnmb
+Neural Differentiation and Neurogenesis: Id2, Msi1, Nes, Dyrk1a, Atf3, Atf5, Klf9, Mef2c, Ebf1, Numb, Runx3, Aldh1a1, Peg3, Igfbp3, Alpl, Lifr, Poglut1, Aff3, Olfm2, Vash1, Ghr, Lef1, Mybl1, Pals1, Hmx3, Wnt5a, Olfml1
+Extracellular Matrix Remodeling and Cell Adhesion in Neural Development: Hapln1, Col9a3, Col20a1, Col15a1, Ltbp1, Adamts17, Adamtsl3, Adamtsl1, Chst2, Hs6st1, Hs6st2, Cdh13, Sbspon, Emilin1, Matn3, Bgn, Qsox1, Marveld1, Pxdn, Efemp2, Cd9, Tspan4, Mfap5, Itga7, C1qtnf1, Timp1, Has2, Fut10, Col11a1, Col8a2
+Neuronal Signaling and Neurotransmitter Processing: Prss12, Pcsk5, Cpe, P2ry2, Grb14, Gnai1, Ryr3, Itpripl1, Ecel1, Serpinf1, Serpini1, Ptgfr, Tf, Scn7a, Piezo2, Gprc5b, Gprc5a, Frrs1, Tnik, Prkd3, Prkar2b, Sgpl1, Phldb2, Gja1, Tpcn1, Ppm1f, Fth1, Vrk1, Fam20c, Inpp5a, Tnfrsf1a, Bace2, Igf2bp2, Stk39, Gtf2e1, Eif2ak2, Apod
+Cytoskeletal Dynamics and Intracellular Transport: Tuba4a, Tubb4a, Kif1a, Myo1d, Pfn2, Rab10, Septin4, Septin5, Drp2, Fhod3, Acap2, Chmp2b, Vps8, Snx4, Stard13, Rhoj, Asap1, Vps26c, Snx6

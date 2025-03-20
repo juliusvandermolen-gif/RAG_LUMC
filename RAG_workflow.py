@@ -161,7 +161,7 @@ def compute_file_hash(file_path, block_size=65536):
 
 
 @timer
-def initialize_gene_list(excel_file_path=r".\Data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
+def initialize_gene_list(excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
                          de_filter_option="combined"):
     """
     Creates a list of genes, taken from the file, based on filters
@@ -239,7 +239,7 @@ def process_excel_data(excel_file_path, de_filter_option):
 
 @timer
 def extract_gene_descriptions(gene_list_string,
-                              gene_data_file=r'.\Data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'):
+                              gene_data_file=r'.\data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'):
     """
     Extracts gene descriptions for the genes provided in a comma-separated string by looking up a gene data file.
 
@@ -1010,11 +1010,9 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, save, model="o3-mini"):
-
+def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model="o3-mini"):
     answers = []
-
-    for i in range(1, 2):  # Adjust the range as needed for multiple runs
+    for i in range(1, range_query):
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
             if model.startswith("gpt-4"):
@@ -1052,7 +1050,6 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, model
         answers.append(answer)
 
     return answers[-1] if answers else None
-
 
 
 def query_gemini(system_instruction, prompt):
@@ -1178,7 +1175,7 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
 
     if api_type.lower() == 'openai':
         save = True
-        answer = query_open_ai(messages, system_instruction_for_response, prompt, save)
+        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=5)
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)
     elif api_type.lower() == 'gemini':
@@ -1305,7 +1302,7 @@ def save_scores_to_file(scores, file_name):
 @timer
 def main():
     gene_list_string, regulation, num_genes = initialize_gene_list(
-        excel_file_path=r".\Data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
+        excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
         de_filter_option="combined",
     )
 
@@ -1313,7 +1310,7 @@ def main():
 
     gene_list = extract_gene_descriptions(
         gene_list_string=gene_list_string,
-        gene_data_file=r'.\Data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'
+        gene_data_file=r'.\data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'
     )
 
     gene_descriptions_string = ', '.join([f"{gene}: {desc}" for gene, desc in gene_list.items()])
