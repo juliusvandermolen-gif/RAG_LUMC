@@ -1,20 +1,26 @@
-| Pathway                                                         | Validation (Hit or No Hit) | Novel or Not | Matched Ground Truth Pathway      | Annotation Term    |
-|-----------------------------------------------------------------|----------------------------|--------------|-----------------------------------|--------------------|
-| Axon Guidance and Neurite Outgrowth                             | Hit                        | Common       | Axon guidance                     | KEGG:04360         |
-| Synapse Formation and Plasticity                                | No Hit                     | Novel        |                                   |                    |
-| Myelination and Glial Function                                  | Hit                        | Common       | myelin sheath                     | GO:0043209         |
-| Neural Differentiation and Neurogenesis                         | No Hit                     | Novel        |                                   |                    |
-| Extracellular Matrix Remodeling and Cell Adhesion in Neural Development | Hit                        | Common       | Extracellular matrix organization | REAC:R-RNO-1474244 |
-| Neuronal Signaling and Neurotransmitter Processing              | No Hit                     | Novel        |                                   |                    |
-| Cytoskeletal Dynamics and Intracellular Transport               | No Hit                     | Novel        |                                   |                    |
+Below is the evaluation of your provided pathways compared against the ground truth. In the table, a “Hit” means that either the entire process or a major component of the process is well represented in the ground truth list. A “No Hit” indicates that the pathway—although biologically important—was not explicitly captured as a distinct process in the g:Profiler ground truth set. For composite processes (those with more than one function), matching components are separated by “;” in the table.
 
-Summary:
+| Pathway                                                        | Validation (Hit or No Hit) | Novel or Not       | Matched Ground Truth Pathway                          | Annotation Term          |
+|----------------------------------------------------------------|----------------------------|--------------------|-------------------------------------------------------|--------------------------|
+| Axon Guidance and Neurite Outgrowth                            | Hit                        | Common             | Axon guidance                                         | KEGG:04360               |
+| Synapse Formation and Plasticity                               | No Hit                     | Potentially Novel  |                                                       |                          |
+| Myelination and Glial Function                                 | Hit                        | Common             | myelin sheath                                         | GO:0043209               |
+| Neural Differentiation and Neurogenesis                        | No Hit                     | Potentially Novel  |                                                       |                          |
+| Extracellular Matrix Remodeling and Cell Adhesion in Neural Development | Hit            | Common             | extracellular matrix organization; cell adhesion      | REAC:R-RNO-1474244; GO:0007155 |
+| Neuronal Signaling and Neurotransmitter Processing             | No Hit                     | Potentially Novel  |                                                       |                          |
+| Cytoskeletal Dynamics and Intracellular Transport              | No Hit                     | Potentially Novel  |                                                       |                          |
 
-Among the seven user-provided pathways, three were validated as hits based on functional similarity to the ground truth. “Axon Guidance and Neurite Outgrowth” aligns with the well‐established “Axon guidance” pathway (KEGG:04360), a cornerstone in the formation of neural circuits. “Myelination and Glial Function” maps to the “myelin sheath” term (GO:0043209), underscoring the critical role of myelination in rapid nerve conduction and neural support. Similarly, “Extracellular Matrix Remodeling and Cell Adhesion in Neural Development” is represented by “Extracellular matrix organization” (REAC:R-RNO-1474244), reflecting its importance in tissue structuring and cellular interactions during neural development.
+–––––––––––––––––––––––
+Interpretative Summary:
 
-The remaining four pathways—“Synapse Formation and Plasticity”, “Neural Differentiation and Neurogenesis”, “Neuronal Signaling and Neurotransmitter Processing”, and “Cytoskeletal Dynamics and Intracellular Transport”—were not found in the provided ground truth. This may be due to several reasons: these user-defined groupings are either more specific or nuanced than the broadly categorized ground truth entries, they might represent composite functions that are typically integrated under broader developmental or cellular process categories, or they could denote emerging areas that are underrepresented in current pathway databases like those used by g:Profiler.
+Three of your pathways were validated as hits. “Axon Guidance and Neurite Outgrowth” aligns with the well‐established “Axon guidance” pathway (KEGG:04360), a process essential for directing growing neuronal axons and establishing neural circuitry. “Myelination and Glial Function” matches the “myelin sheath” term (GO:0043209) that represents the vital role of glial cells in insulating axons to ensure rapid signal conduction. In the composite pathway “Extracellular Matrix Remodeling and Cell Adhesion in Neural Development,” both key components are found in the ground truth—“extracellular matrix organization” (REAC:R-RNO-1474244) and “cell adhesion” (GO:0007155)—underscoring the importance of these processes in shaping the neural environment.
 
-Overall, the validated (hit) pathways are well-known and supported by current biological pathway databases, while the non-validated groups—albeit biologically important—could warrant further exploration or more specialized annotation efforts to fully capture their roles in neural development.
+The other four pathways (Synapse Formation and Plasticity; Neural Differentiation and Neurogenesis; Neuronal Signaling and Neurotransmitter Processing; Cytoskeletal Dynamics and Intracellular Transport) were not found as distinct entries in the ground truth. This outcome may be due to one or more of the following factors:
+• They could be annotated under broader or overlapping developmental or cellular processes within the database.
+• They may represent more specialized or composite aspects that are not parsed as single terms in the current gene set enrichment framework.
+• It is also possible that differences in annotation granularity between your analysis and the ground truth data lead to these “No Hit” scenarios.
+
+Overall, the validated hits lend strong support to key facets of neural development and function, while the non-matches may point to additional, more specialized pathways that could warrant further investigation.
 
 
 Full pathway list with genes:

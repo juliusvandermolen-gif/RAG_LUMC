@@ -11,7 +11,9 @@ import subprocess
 import markdown
 from xhtml2pdf import pisa
 import pdfkit
+
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 def open_file(gpt_answer_file, ground_truth_file, messages_file):
     with open(gpt_answer_file, 'r') as f:
@@ -21,6 +23,7 @@ def open_file(gpt_answer_file, ground_truth_file, messages_file):
     with open(messages_file, 'r') as f:
         instruction = f.read().strip()
     return gpt_answer, ground_truth, instruction
+
 
 def extract_pathways(answer_text):
     """
@@ -44,17 +47,14 @@ def extract_pathways(answer_text):
         line = line.strip()
         if not line:
             continue
-        # Skip header lines.
         if line.lower().startswith("answer"):
             continue
-        # Check if this line is a "Genes involved:" line.
         if line.lower().startswith("genes involved"):
             if current_pathway is not None:
                 gene_part = line[len("Genes involved:"):].strip()
                 genes = [g.strip() for g in gene_part.split(",") if g.strip()]
                 pathway_dict[current_pathway] = genes
             continue
-        # If the line ends with a colon, consider it as a pathway name.
         if line.endswith(":"):
             pathway_name = line[:-1].strip()
             current_pathway = pathway_name
@@ -64,21 +64,20 @@ def extract_pathways(answer_text):
                 pathway_dict[pathway_name] = []
     return gpt_pathways, pathway_dict
 
+#TODO ADD the percentage overlap maybe?
 def validate(gpt_answer, ground_truth, instruction):
     """
     Validates the GPT answer by comparing only the pathway names (gpt_pathways)
     against the ground truth. Then, at the end of the response, appends the full list
     of pathways with their genes (from the GPT output). (The complete ground truth is not appended.)
     """
-    # Extract both the pathway names and the full pathway-to-genes mapping.
     gpt_pathways, pathway_dict = extract_pathways(gpt_answer)
 
-    # Build the prompt using only the pathway names.
     prompt = (
         "Based on the identified pathways, confirm whether they match the ground truth pathways. "
         "Additionally, indicate if there are any novel pathways not present in the ground truth. "
         "User provided pathways:\n"
-        f"{', '.join(gpt_pathways)}\n\n"
+        f"{', '.join(pathway_dict)}\n\n"
         "Ground truth pathways:\n"
         f"{ground_truth}"
     )
@@ -89,7 +88,6 @@ def validate(gpt_answer, ground_truth, instruction):
     save = False
     answer = query_open_ai(messages, instruction, prompt, save, range_query=2)
 
-    # Format the full pathway details (pathway with genes) for appending.
     detailed_lines = ["\n\nFull pathway list with genes:"]
     for pathway, genes in pathway_dict.items():
         genes_str = ", ".join(genes) if genes else "No genes listed"
@@ -98,7 +96,6 @@ def validate(gpt_answer, ground_truth, instruction):
 
     final_answer = answer + "\n" + detailed_info
     return final_answer
-
 
 
 def main():
@@ -134,6 +131,6 @@ def main():
 
     print(f"Markdown file generated: {md_filename}")
 
+
 if __name__ == "__main__":
     main()
-
