@@ -1,56 +1,56 @@
-Pathway	annotation term
-cell periphery	GO:0071944
-multicellular organismal process	GO:0032501
-extracellular region	GO:0005576
-regulation of cell motility	GO:2000145
-system development	GO:0048731
-regulation of locomotion	GO:0040012
-locomotion	GO:0040011
-anatomical structure development	GO:0048856
-cell migration	GO:0016477
-vesicle	GO:0031982
-developmental process	GO:0032502
-cell motility	GO:0048870
-protein binding	GO:0005515
-endomembrane system	GO:0012505
-response to external stimulus	GO:0009605
-extracellular matrix	GO:0031012
-positive regulation of biological process	GO:0048518
-Extracellular matrix organization	REAC:R-RNO-1474244
-Axon guidance	KEGG:04360
-cytoplasm	GO:0005737
-blood vessel morphogenesis	GO:0048514
-membrane	GO:0016020
-enzyme-linked receptor protein signaling pathway	GO:0007167
-integrin binding	GO:0005178
-tube morphogenesis	GO:0035239
-cell adhesion	GO:0007155
-response to endogenous stimulus	GO:0009719
-extracellular matrix assembly	GO:0085029
-regulation of biological quality	GO:0065008
-extracellular matrix organization	GO:0030198
-external encapsulating structure organization	GO:0045229
-extracellular structure organization	GO:0043062
-cell surface receptor signaling pathway	GO:0007166
-regulation of cellular component organization	GO:0051128
-regulation of response to stimulus	GO:0048583
-localization	GO:0051179
-somatodendritic compartment	GO:0036477
-regulation of endothelial cell migration	GO:0010594
-olfactory bulb interneuron development	GO:0021891
-negative regulation of cell projection organization	GO:0031345
-tissue morphogenesis	GO:0048729
-cell-matrix adhesion	GO:0007160
-response to chemical	GO:0042221
-cellular response to growth factor stimulus	GO:0071363
-embryo development	GO:0009790
-apical part of cell	GO:0045177
-axon extension involved in axon guidance	GO:0048846
-neuron projection extension involved in neuron projection guidance	GO:1902284
-bounding membrane of organelle	GO:0098588
-regulation of signaling	GO:0023051
-regulation of cell communication	GO:0010646
-response to stimulus	GO:0050896
-myelin sheath	GO:0043209
-negative chemotaxis	GO:0050919
-early endosome	GO:0005769
+Pathway	annotation term	genes
+cell periphery	GO:0071944	Cntn6, Prss12, Tex101, Sema4f, Hapln1, Parm1, Emp2, Htra1, Grb14, Steap2, Ltbp1, Gypc, Ntn1, Mag, Ptgfr, Mfap5, Mpz, Pxdn, Serinc5, Nrp1, Matn3, Slc9a9, Cdh13, Scn7a, Pkp1, Efemp2, Gldn, Alpl, Tspan4, Nrp2, Gprc5a, Tnik, Gnai1, Prkd3, Prkar2b, Cldn19, Lrp2, Col15a1, Sipa1l1, Emilin1, Lrrtm3, Cd151, Slco3a1, Phldb2, Gja1, Tspan5, Met, Pmp22, Rhoj, Itga8, Cldnd1, Klf9, Numb, Itga7, Mal, C1qtnf1, Timp1, Wnt5a, Plxnb1, Ano5, Has2, Slitrk6, Inpp5a, Parp14, Ghr, Chmp2b, Gpnmb, Col11a1, Efna5, Pals1, Bgn, Snx4, Rab10, Septin5, Stk39, Steap1
+multicellular organismal process	GO:0032501	Aldh1a1, Pcsk5, Cpe, Col9a3, Emp2, Acta2, Igfbp3, Tril, Ccn3, Ntn1, Mag, Pltp, Drp2, Mpz, P2ry2, Pxdn, Serinc5, Tent5c, Nrp1, Apod, Matn3, Sncg, Cdh13, Epas1, Ddx1, Rrm2, Ecel1, Serpinf1, Gldn, Alpl, Nrp2, Slit2, Tnik, Dpysl5, Prkar2b, Cd9, Cldn19, Lrp2, Sipa1l1, Emilin1, Lrrtm3, Cd151, Pfn2, Fhod3, Nfatc1, Sgpl1, Fbxo11, Hs6st1, Pam, Phldb2, Poglut1, Gja1, Sema3g, Met, Aff3, Ccn4, Rhoj, Asap1, Itga8, Mef2c, Msh2, Atf5, Vash1, Ppm1f, Numb, Itga7, Mal, C1qtnf1, Timp1, Rcn3, Cxcl12, Fam20c, Wnt5a, Plxnb1, Arsb, Has2, Fut10, Slitrk6, Lef1, Tnfrsf1a, Ghr, Chmp2b, Gpnmb, Col11a1, Pals1, Col8a2, Hmx3, Hsp90aa1, Bgn, Snx4, Gcnt1, Stard13, Stk39, Igf2bp2
+extracellular region	GO:0005576	Prss12, Pcsk5, Tex101, Qsox1, Htra1, Igfbp3, A2m, Ccn3, Tf, Defb29, Serpini1, Ntn1, Ptgfr, Pltp, Cxcl14, Pxdn, Cdh13, Gprc5b, Pappa, Serpinf1, Gldn, Alpl, Slit2, Cd9, Emilin1, Pam, Ccn4, Vash1, Psap, C1qtnf1, Arsg, Timp1, Cxcl12, Fam20c, Wnt5a, Has2, Tnfrsf1a, Ghr
+regulation of cell motility	GO:2000145	Pcsk5, Tex101, Emp2, Chst2, Igfbp3, Ccn3, Ntn1, Nrp1, Cdh13, Slit2, Cldn19, Emilin1, Cd151, Pfn2, Phldb2, Met, Rhoj, Mef2c, Vash1, Ppm1f, Numb, Timp1, Cxcl12, Wnt5a, Arsb, Has2, Lef1, Gcnt1, Stard13, Tbccd1
+system development	GO:0048731	Aldh1a1, Pcsk5, Cpe, Col9a3, Emp2, Acta2, Ccn3, Ntn1, Mag, Drp2, Mpz, Pxdn, Serinc5, Nrp1, Apod, Matn3, Cdh13, Epas1, Serpinf1, Gldn, Alpl, Nrp2, Slit2, Tnik, Dpysl5, Cd9, Lrp2, Sipa1l1, Emilin1, Lrrtm3, Fhod3, Nfatc1, Sgpl1, Hs6st1, Pam, Poglut1, Gja1, Sema3g, Ccn4, Rhoj, Asap1, Itga8, Mef2c, Msh2, Atf5, Vash1, Numb, Mal, Rcn3, Cxcl12, Fam20c, Wnt5a, Plxnb1, Has2, Fut10, Slitrk6, Lef1, Col11a1, Pals1, Col8a2, Hmx3, Bgn, Gcnt1, Stard13
+regulation of locomotion	GO:0040012	Pcsk5, Tex101, Emp2, Chst2, Igfbp3, Ccn3, Ntn1, Nrp1, Cdh13, Slit2, Cldn19, Emilin1, Cd151, Pfn2, Phldb2, Met, Rhoj, Mef2c, Vash1, Ppm1f, Numb, Timp1, Cxcl12, Wnt5a, Arsb, Has2, Lef1, Gcnt1, Stard13, Tbccd1
+locomotion	GO:0040011	Pcsk5, Tex101, Emp2, Chst2, Igfbp3, Ccn3, Ntn1, Cxcl14, Nrp1, Cdh13, Nrp2, Slit2, Cldn19, Emilin1, Cd151, Pfn2, Phldb2, Met, Rhoj, Mef2c, Vash1, Ppm1f, Numb, Timp1, Cxcl12, Wnt5a, Arsb, Has2, Lef1, Gcnt1, Stard13, Tbccd1
+anatomical structure development	GO:0048856	Aldh1a1, Pcsk5, Cpe, Col9a3, Emp2, Acta2, Htra1, Igfbp3, Ccn3, Ntn1, Mag, Drp2, Tagln, Mpz, Pxdn, Serinc5, Tent5c, Nrp1, Apod, Matn3, Cdh13, Epas1, Rrm2, Serpinf1, Atf3, Gldn, Alpl, Nrp2, Slit2, Tnik, Dpysl5, Cd9, Lrp2, Sipa1l1, Emilin1, Lrrtm3, Cd151, Fhod3, Nfatc1, Sgpl1, Hs6st1, Agpat5, Pam, Phldb2, Poglut1, Gja1, Sema3g, Met, Aff3, Ccn4, Rhoj, Asap1, Itga8, Mef2c, Msh2, Atf5, Vash1, Numb, Itga7, Mal, Timp1, Rcn3, Cxcl12, Fam20c, Wnt5a, Plxnb1, Has2, Fut10, Slitrk6, Lef1, Tnfrsf1a, Col11a1, Efna5, Pals1, Col8a2, Hmx3, Bgn, Gcnt1, Slc39a13, Stard13, Tbccd1
+cell migration	GO:0016477	Pcsk5, Emp2, Chst2, Igfbp3, Ccn3, Ntn1, Cxcl14, Nrp1, Cdh13, Nrp2, Slit2, Cd9, Cldn19, Emilin1, Cd151, Pfn2, Sgpl1, Phldb2, Gja1, Met, Rhoj, Mef2c, Vash1, Ppm1f, Numb, Timp1, Cxcl12, Wnt5a, Arsb, Has2, Fut10, Lef1, Gcnt1, Stard13, Tbccd1
+vesicle	GO:0031982	Prss12, Tex101, Qsox1, Cpe, Parm1, Emp2, Synpr, Steap2, Serpini1, Vopp1, Man1a1, Nrp1, Slc9a9, Gprc5b, Tspan4, Gprc5a, Snx6, Cd9, Lrp2, Pam, Tpcn1, Psap, Numb, Ano5, Has2, Zfyve28, Chmp2b, Gpnmb, Vps8, Bgn, Snx4, Slc39a13, Rab10, Septin5, Steap1
+developmental process	GO:0032502	Aldh1a1, Pcsk5, Cpe, Col9a3, Emp2, Acta2, Htra1, Igfbp3, A2m, Ccn3, Ntn1, Mag, Drp2, Tagln, Mpz, Pxdn, Serinc5, Tent5c, Nrp1, Apod, Matn3, Cdh13, Epas1, Rrm2, Serpinf1, Atf3, Gldn, Alpl, Nrp2, Slit2, Tnik, Dpysl5, Cd9, Lrp2, Sipa1l1, Emilin1, Lrrtm3, Cd151, Fhod3, Nfatc1, Sgpl1, Hs6st1, Agpat5, Pam, Phldb2, Poglut1, Gja1, Sema3g, Met, Aff3, Ccn4, Rhoj, Asap1, Itga8, Mef2c, Msh2, Atf5, Vash1, Numb, Itga7, Mal, Timp1, Rcn3, Cxcl12, Fam20c, Wnt5a, Plxnb1, Has2, Fut10, Slitrk6, Lef1, Tnfrsf1a, Ghr, Col11a1, Efna5, Pals1, Col8a2, Hmx3, Bgn, Gcnt1, Slc39a13, Stard13, Tbccd1
+cell motility	GO:0048870	Pcsk5, Tex101, Emp2, Chst2, Igfbp3, Ccn3, Ntn1, Pltp, Cxcl14, Nrp1, Cdh13, Nrp2, Slit2, Cd9, Cldn19, Emilin1, Cd151, Pfn2, Sgpl1, Phldb2, Gja1, Met, Rhoj, Mef2c, Vash1, Ppm1f, Numb, Timp1, Cxcl12, Wnt5a, Arsb, Has2, Fut10, Lef1, Gcnt1, Stard13, Tbccd1
+protein binding	GO:0005515	Cntn6, Cobll1, Sema4f, Cpe, Tuba4a, Emp2, Acta2, Htra1, Igfbp3, Tril, A2m, Myo1d, Ccn3, Grb14, Id2, Ltbp1, Prx, Ntn1, Mag, Srgap1, Pltp, Drp2, Tagln, Cep295nl, Cxcl14, Pxdn, Nrp1, Cdh13, Scn7a, Pkp1, Epas1, Efemp2, Ddx1, Eif2ak2, Rrm2, Atf3, Ppp1r36, Trim35, Gldn, Robo2, Tspan4, Kif1a, Lifr, Slit2, Gnai1, Col20a1, Snx6, Prkar2b, Cd9, Lrp2, Sipa1l1, Emilin1, Dyrk1a, Lrrtm3, Nek9, Cd151, Pfn2, Ifnar1, Cggbp1, Runx3, Fbxo11, Msi1, Slco3a1, Pam, Pnpt1, Acap2, Gja1, Tspan5, Tpcn1, Sema3g, Met, Nampt, Ccn4, Taf9b, Dpysl3, Asap1, Mef2c, Msh2, Atf5, Vash1, Smc6, Psap, Numb, Klhl29, C1qtnf1, Timp1, Ppfia4, Cxcl12, Nlrp1a, Vrk1, Fam20c, Wnt5a, Plxnb1, Ano5, Has2, Slitrk6, Lef1, Inpp5a, Tnfrsf1a, Parp14, Ghr, Chmp2b, Gpnmb, Efna5, Pals1, Col8a2, Vps8, Hsp90aa1, Bgn, Snx4, Klhdc2, Slc39a13, Rab10, Septin5, Stard13, Map1lc3a
+endomembrane system	GO:0012505	Pcsk5, Tex101, Qsox1, Sema4f, Cpe, Parm1, Emp2, Chst2, Synpr, Steap2, Serpini1, Nrbp1, Man1a1, Hs6st2, Pxdn, Serinc5, Nrp1, Slc9a9, Rnf144a, Snx6, Lrp2, Sgpl1, Hs6st1, Pam, Poglut1, Gja1, Tpcn1, Asap1, Itga8, Hadhb, Vash1, Psap, Numb, Mal, Arsg, Rcn3, Vrk1, Fam20c, Has2, Fut10, Tnfrsf1a, Zfyve28, Chmp2b, Vps8, Dhrs1, Bgn, Snx4, Ckap4, Slc35a2, Gcnt1, Slc39a13, Rab10, Septin5, Steap1
+response to external stimulus	GO:0009605	Zpld1, Acta2, Tril, A2m, Ccn3, Defb29, Ntn1, Ptgfr, Cxcl14, Serinc5, Nrp1, Slc9a9, Cdh13, Scn7a, Ddx1, Eif2ak2, Trim35, Nrp2, Slit2, Cd9, Cldn19, Emilin1, Phldb2, Gja1, Met, Ccn4, Hadhb, Ppm1f, C1qtnf1, Cxcl12, Nlrp1a, Wnt5a, Slitrk6, Lef1, Tnfrsf1a, Parp14, Col11a1, Hsp90aa1, Snx4, Stk39
+extracellular matrix	GO:0031012	Hapln1, Ltbp1, Ntn1, Mfap5, Pxdn, Matn3, Efemp2, Alpl, Col15a1, Emilin1, Cd151, Timp1, Wnt5a, Col11a1, Bgn
+positive regulation of biological process	GO:0048518	Cntn6, Aldh1a1, Pcsk5, Emp2, Chst2, Igfbp3, Tril, A2m, Ccn3, Cdca7l, Ntn1, Mag, Ptgfr, Pltp, P2ry2, Tent5c, Nrp1, Cdh13, Pkp1, Epas1, Efemp2, Ddx1, Eif2ak2, Serpinf1, Atf3, Trim35, Alpl, Lifr, Slit2, Tnik, Gnai1, Cldn19, Lrp2, Emilin1, Dyrk1a, Lrrtm3, Cd151, Pfn2, Nfatc1, Runx3, Slco3a1, Phldb2, Pnpt1, Poglut1, Gja1, Tspan5, Tpcn1, Met, Nampt, Ccn4, Rhoj, Asap1, Itga8, Mef2c, Msh2, Atf5, Smc6, Ppm1f, Numb, Mal, C1qtnf1, Timp1, Cxcl12, Vrk1, Fam20c, Wnt5a, Plxnb1, Has2, Slitrk6, Lef1, Tnfrsf1a, Parp14, Ghr, Gpnmb, Mybl1, Hsp90aa1, Snx4, Gcnt1, Igf2bp2
+Extracellular matrix organization	REAC:R-RNO-1474244	Hapln1, Col9a3, A2m, Cep295nl, Mfap5, Pxdn, Matn3, Efemp2, Col20a1, Col15a1, Emilin1, Timp1, Col11a1, Col8a2, Bgn
+Axon guidance	KEGG:04360	Sema4f, Ntn1, Srgap1, Nrp1, Robo2, Slit2, Gnai1, Dpysl5, Sema3g, Met, Cxcl12, Wnt5a, Plxnb1, Efna5
+cytoplasm	GO:0005737	Prss12, Pcsk5, Tex101, Qsox1, Sema4f, Cpe, Parm1, Emp2, Chst2, Acta2, Synpr, Ccn3, Grb14, Steap2, Id2, Prx, Cdca7l, Gypc, Serpini1, Ntn1, Ptgfr, Vopp1, Man1a1, Hs6st2, Pxdn, Serinc5, Tent5c, Nrp1, Sncg, Slc9a9, Cdh13, Epas1, Gprc5b, Ddx1, Eif2ak2, Rrm2, Alpl, Rnf144a, Slit2, Tnik, Gnai1, Snx6, Prkd3, Dpysl5, Prkar2b, Cldn19, Lrp2, Ppp1r14c, Dyrk1a, Sgpl1, Runx3, Fbxo11, Msi1, Hs6st1, Pam, Phldb2, Pnpt1, Poglut1, Gja1, Tpcn1, Nampt, Aff3, Ccn4, Dpysl3, Asap1, Itga8, Mef2c, Hadhb, Atf5, Vash1, Ppm1f, Klf9, Psap, Numb, Mal, Arsg, Rcn3, Vrk1, Fam20c, Has2, Fut10, Lef1, Tnfrsf1a, Parp14, Ghr, Zfyve28, Chmp2b, Gpnmb, Pals1, Vps8, Dhrs1, Hsp90aa1, Bgn, Snx4, Ckap4, Slc35a2, Gcnt1, Slc39a13, Rab10, Septin5, Map1lc3a, Igf2bp2, Steap1, Gtf2e1
+blood vessel morphogenesis	GO:0048514	Emp2, Ccn3, Pxdn, Nrp1, Cdh13, Epas1, Serpinf1, Nrp2, Slit2, Lrp2, Emilin1, Sgpl1, Hs6st1, Gja1, Rhoj, Vash1, Wnt5a, Has2, Lef1, Stard13
+membrane	GO:0016020	Cntn6, Prss12, Pcsk5, Tex101, Qsox1, Sema4f, Cpe, Parm1, Emp2, Chst2, Htra1, Tril, Synpr, Grb14, Steap2, Gypc, Mag, Ptgfr, Vopp1, Man1a1, Slc22a17, Mpz, P2ry2, Hs6st2, Abca8a, Serinc5, Nrp1, Piezo2, Slc9a9, Cdh13, Scn7a, Pkp1, Gprc5b, Aig1, Gldn, Alpl, Tspan4, Nrp2, Gprc5a, Lifr, Tnik, Gnai1, Snx6, Prkd3, Prkar2b, Cd9, Cldn19, Lrp2, Sipa1l1, Emilin1, Lrrtm3, Cd151, Slco3a1, Hs6st1, Pam, Phldb2, Gja1, Tspan5, Tpcn1, Met, Pmp22, Rhoj, Asap1, Itga8, Cldnd1, Cers6, Hadhb, Klf9, Numb, Itga7, Mal, C1qtnf1, Fam20c, Plxnb1, Ano5, Has2, Fut10, Slitrk6, Inpp5a, Tnfrsf1a, Parp14, Ghr, Zfyve28, Chmp2b, Bace2, Gpnmb, Efna5, Pals1, Bgn, Snx4, Slc35a2, Gcnt1, Slc39a13, Rab10, Septin5, Map1lc3a, Stk39, Steap1
+enzyme-linked receptor protein signaling pathway	GO:0007167	Htra1, Igfbp3, Ccn3, Grb14, Ltbp1, Nrp1, Cdh13, Nrp2, Lifr, Snx6, Lrp2, Sipa1l1, Emilin1, Sgpl1, Met, Itga8, Fam20c, Wnt5a, Lef1, Ghr, Zfyve28, Efna5, Pals1
+integrin binding	GO:0005178	Emp2, Ccn3, Tspan4, Cd9, Emilin1, Cd151, Cxcl12, Gpnmb
+tube morphogenesis	GO:0035239	Emp2, Ccn3, Ntn1, Pxdn, Nrp1, Cdh13, Epas1, Serpinf1, Nrp2, Slit2, Lrp2, Emilin1, Sgpl1, Hs6st1, Gja1, Met, Rhoj, Vash1, Wnt5a, Has2, Lef1, Stard13
+cell adhesion	GO:0007155	Pcsk5, Hapln1, Emp2, Chst2, Ccn3, Ntn1, Mpz, Pxdn, Cdh13, Pkp1, Efemp2, Cd9, Emilin1, Phldb2, Itga8, Ppm1f, Itga7, C1qtnf1, Cxcl12, Wnt5a, Plxnb1, Has2, Lef1, Gpnmb, Efna5, Gcnt1
+response to endogenous stimulus	GO:0009719	Pcsk5, Htra1, Grb14, Ltbp1, Ptgfr, Nrp1, Cdh13, Nrp2, Slit2, Snx6, Lrp2, Emilin1, Runx3, Pam, Itga8, Mef2c, Klf9, Fam20c, Wnt5a, Has2, Lef1, Ghr, Pals1, Rab10, Stk39
+extracellular matrix assembly	GO:0085029	Qsox1, Pxdn, Efemp2, Emilin1, Phldb2, Has2
+regulation of biological quality	GO:0065008	Aldh1a1, Pcsk5, Cpe, Emp2, Acta2, Ccn3, Ntn1, P2ry2, Tent5c, Nrp1, Slc9a9, Epas1, Nrp2, Slit2, Snx6, Cd9, Cldn19, Emilin1, Lrrtm3, Pfn2, Fhod3, Sgpl1, Pam, Pnpt1, Gja1, Sema3g, Rhoj, Asap1, Numb, C1qtnf1, Wnt5a, Plxnb1, Slitrk6, Ghr, Hsp90aa1, Snx4, Tbccd1, Stk39, Igf2bp2
+extracellular matrix organization	GO:0030198	Adamts17, Qsox1, Adamtsl3, Pxdn, Matn3, Efemp2, Adamtsl1, Emilin1, Phldb2, Itga8, Has2, Col11a1
+external encapsulating structure organization	GO:0045229	Adamts17, Qsox1, Adamtsl3, Pxdn, Matn3, Efemp2, Adamtsl1, Emilin1, Phldb2, Itga8, Has2, Col11a1
+extracellular structure organization	GO:0043062	Adamts17, Qsox1, Adamtsl3, Pxdn, Matn3, Efemp2, Adamtsl1, Emilin1, Phldb2, Itga8, Has2, Col11a1
+cell surface receptor signaling pathway	GO:0007166	Cntn6, Pcsk5, Cpe, Emp2, Htra1, Igfbp3, Tril, Ccn3, Grb14, Ltbp1, Nrp1, Cdh13, Atf3, Nrp2, Lifr, Slit2, Snx6, Lrp2, Sipa1l1, Emilin1, Sgpl1, Poglut1, Tspan5, Met, Ccn4, Itga8, Mal, Timp1, Cxcl12, Fam20c, Wnt5a, Plxnb1, Lef1, Tnfrsf1a, Parp14, Ghr, Zfyve28, Efna5, Pals1
+regulation of cellular component organization	GO:0051128	Pcsk5, Igfbp3, Ccn3, Ntn1, Mag, Nrp1, Cdh13, Nrp2, Slit2, Tnik, Gnai1, Dpysl5, Cldn19, Sipa1l1, Emilin1, Dyrk1a, Lrrtm3, Cd151, Pfn2, Fhod3, Pam, Phldb2, Gja1, Sema3g, Met, Asap1, Atf5, Ppm1f, Numb, Wnt5a, Plxnb1, Slitrk6, Chmp2b, Efna5, Hsp90aa1, Snx4
+regulation of response to stimulus	GO:0048583	Cntn6, Pcsk5, Emp2, Htra1, Igfbp3, Tril, A2m, Ccn3, Grb14, Ltbp1, Nrp1, Cdh13, Ddx1, Eif2ak2, Atf3, Slit2, Tnik, Snx6, Cd9, Cldn19, Lrp2, Sipa1l1, Emilin1, Dyrk1a, Phldb2, Poglut1, Tspan5, Met, Ccn4, Itga8, Msh2, Ppm1f, Mal, C1qtnf1, Timp1, Rcn3, Cxcl12, Fam20c, Wnt5a, Plxnb1, Lef1, Inpp5a, Tnfrsf1a, Parp14, Zfyve28, Gpnmb, Pals1, Hsp90aa1, Snx4, Stk39
+localization	GO:0051179	Prss12, Pcsk5, Cpe, Emp2, Clca4l, Myo1d, Ccn3, Steap2, Tf, Ltbp1, Ntn1, Nrbp1, Pltp, Man1a1, Slc22a17, P2ry2, Abca8a, Nrp1, Apod, Sncg, Slc9a9, Cdh13, Scn7a, Ddx1, Tnik, Gnai1, Snx6, Cldn19, Lrp2, Cd151, Pfn2, Vps26c, Slco3a1, Pam, Phldb2, Pnpt1, Gja1, Tspan5, Tpcn1, Asap1, Itga8, Msh2, Ppm1f, Psap, Fth1, Numb, Mal, C1qtnf1, Rcn3, Vrk1, Wnt5a, Ano5, Lef1, Tnfrsf1a, Chmp2b, Pals1, Vps8, Hsp90aa1, Snx4, Slc35a2, Slc39a13, Rab10, Septin5, Tbccd1, Stk39
+somatodendritic compartment	GO:0036477	Prss12, Pcsk5, Myo1d, Serpini1, Sncg, Dpysl5, Prkar2b, Lrp2, Dyrk1a, Pam, Asap1, Inpp5a, Hsp90aa1
+regulation of endothelial cell migration	GO:0010594	Emp2, Nrp1, Slit2, Met, Rhoj, Mef2c, Vash1, Wnt5a, Stard13
+olfactory bulb interneuron development	GO:0021891	Slit2, Atf5, Wnt5a
+negative regulation of cell projection organization	GO:0031345	Ntn1, Mag, Nrp1, Slit2, Dpysl5, Pfn2, Sema3g, Wnt5a
+tissue morphogenesis	GO:0048729	Aldh1a1, Ntn1, Nrp1, Nrp2, Slit2, Lrp2, Cd151, Phldb2, Gja1, Met, Itga8, Wnt5a, Lef1, Col11a1, Pals1, Gcnt1, Stard13
+cell-matrix adhesion	GO:0007160	Pcsk5, Emp2, Cdh13, Efemp2, Emilin1, Phldb2, Itga8, Ppm1f, Efna5
+response to chemical	GO:0042221	Gldc, Aldh1a1, Pcsk5, Ccn3, Grb14, Ntn1, Ptgfr, Cxcl14, Nrp1, Apod, Cdh13, Scn7a, Epas1, Ddx1, Eif2ak2, Alpl, Nrp2, Lifr, Slit2, Snx6, Lrp2, Pam, Pnpt1, Gja1, Met, Aff3, Dpysl3, Mef2c, Hadhb, Ppm1f, Klf9, Rcn3, Cxcl12, Wnt5a, Has2, Lef1, Tnfrsf1a, Parp14, Ghr, Rab10, Stk39
+cellular response to growth factor stimulus	GO:0071363	Pcsk5, Htra1, Ltbp1, Nrp1, Nrp2, Slit2, Snx6, Lrp2, Emilin1, Itga8, Mef2c, Fam20c, Wnt5a, Has2, Lef1, Pals1
+embryo development	GO:0009790	Aldh1a1, Pcsk5, Emp2, Ntn1, Tent5c, Nrp1, Epas1, Rrm2, Nrp2, Lrp2, Hs6st1, Phldb2, Poglut1, Gja1, Aff3, Itga8, Msh2, Vash1, Itga7, Wnt5a, Slitrk6, Lef1, Col11a1, Hmx3
+apical part of cell	GO:0045177	Emp2, Tnik, Lrp2, Gja1, Itga8, Cldnd1, Vash1, Numb, Mal, Pals1, Stk39
+axon extension involved in axon guidance	GO:0048846	Nrp1, Nrp2, Slit2, Wnt5a
+neuron projection extension involved in neuron projection guidance	GO:1902284	Nrp1, Nrp2, Slit2, Wnt5a
+bounding membrane of organelle	GO:0098588	Tex101, Qsox1, Cpe, Chst2, Slc9a9, Snx6, Pam, Tpcn1, Asap1, Hadhb, Fam20c, Fut10, Tnfrsf1a, Zfyve28, Chmp2b, Snx4, Slc35a2, Slc39a13, Rab10, Map1lc3a
+regulation of signaling	GO:0023051	Cntn6, Pcsk5, Emp2, Htra1, Igfbp3, Ccn3, Grb14, Ltbp1, Nrp1, Sncg, Cdh13, Ddx1, Eif2ak2, Atf3, Slit2, Tnik, Snx6, Prkar2b, Lrp2, Sipa1l1, Emilin1, Dyrk1a, Pfn2, Poglut1, Tspan5, Met, Ccn4, Itga8, Mal, C1qtnf1, Timp1, Rcn3, Cxcl12, Fam20c, Wnt5a, Plxnb1, Lef1, Inpp5a, Tnfrsf1a, Parp14, Zfyve28, Gpnmb, Pals1, Snx4
+regulation of cell communication	GO:0010646	Cntn6, Pcsk5, Emp2, Htra1, Igfbp3, Ccn3, Grb14, Ltbp1, Nrp1, Sncg, Cdh13, Ddx1, Eif2ak2, Atf3, Slit2, Tnik, Snx6, Prkar2b, Lrp2, Sipa1l1, Emilin1, Dyrk1a, Pfn2, Poglut1, Tspan5, Met, Ccn4, Itga8, Mal, C1qtnf1, Timp1, Rcn3, Cxcl12, Fam20c, Wnt5a, Plxnb1, Lef1, Inpp5a, Tnfrsf1a, Parp14, Zfyve28, Gpnmb, Pals1, Snx4
+response to stimulus	GO:0050896	Zpld1, Cntn6, Gldc, Aldh1a1, Pcsk5, Cpe, Emp2, Acta2, Htra1, Igfbp3, Tril, A2m, Ccn3, Grb14, Ltbp1, Defb29, Ntn1, Mag, Srgap1, Ptgfr, P2ry2, Cxcl14, Pxdn, Serinc5, Nrp1, Apod, Slc9a9, Cdh13, Scn7a, Epas1, Gprc5b, Ddx1, Eif2ak2, Atf3, Trim35, Alpl, Nrp2, Gprc5a, Lifr, Slit2, Tnik, Gnai1, Snx6, Cd9, Cldn19, Lrp2, Sipa1l1, Emilin1, Dyrk1a, Cd151, Nfatc1, Sgpl1, Runx3, Pam, Phldb2, Pnpt1, Poglut1, Gja1, Tspan5, Met, Aff3, Ccn4, Dpysl3, Rhoj, Itga8, Mef2c, Msh2, Hadhb, Vash1, Smc6, Ppm1f, Klf9, Mal, C1qtnf1, Timp1, Rcn3, Cxcl12, Nlrp1a, Vrk1, Fam20c, Wnt5a, Plxnb1, Ano5, Has2, Slitrk6, Lef1, Inpp5a, Tnfrsf1a, Parp14, Ghr, Zfyve28, Chmp2b, Gpnmb, Col11a1, Efna5, Pals1, Hsp90aa1, Snx4, Rab10, Stard13, Map1lc3a, Stk39
+myelin sheath	GO:0043209	Myo1d, Mag, Serinc5, Pals1
+negative chemotaxis	GO:0050919	Ntn1, Nrp2, Slit2, Wnt5a
+early endosome	GO:0005769	Parm1, Nrp1, Slc9a9, Snx6, Tpcn1, Numb, Zfyve28, Vps8, Snx4
