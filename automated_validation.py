@@ -98,7 +98,7 @@ def validate(gpt_answer, ground_truth, instruction):
 
 
 def main():
-    answer_dir = r"./supporting scripts/validation/test_answers"
+    answer_dir = r"./output/test_files"
     ground_truth_file = "./output/text_files/ground_truth_pathways.txt"
     system_instruction_file = "./configs_system_instruction/system_instruction_comparison_pathways.txt"
 

@@ -4,147 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/run_all_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gprofiler.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gprofiler.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/output/scores.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-with-scope-9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-with-rag-without-scope-9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-with-scope-9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/store/o3-mini-without-rag-without-scope-9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-with-scope-9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-with-rag-without-scope-9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-with-scope-9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/store/validation_o3-mini-without-rag-without-scope-9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-with-rag-with-scope-10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-with-rag-with-scope-10.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-with-rag-with-scope-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/ground_truth_pathways.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/messages.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-10_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-1_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-2_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-3_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-4_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-5_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-7_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-8_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-with-scope-9_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-10_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-1_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-2_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-3_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-4_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-5_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-7_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-8_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-with-rag-without-scope-9_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-with-scope-10_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-with-scope-2_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-with-scope-3_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-with-scope-4_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-with-scope-5_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-with-scope-6_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-with-scope-7_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-with-scope-8_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-10_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-2_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-3_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-4_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-5_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-6_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-7_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-8_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/validated_automated_comparison/validation_o3-mini-without-rag-without-scope-9_validated_individual.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +58,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Python.run_all_files">
+  <component name="RunManager" selected="Python.test_automated_comparison">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
