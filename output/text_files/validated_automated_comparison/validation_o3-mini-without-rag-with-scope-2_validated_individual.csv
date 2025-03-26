@@ -1,8 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Axon Guidance and Neuronal Pathfinding,Hit,Not novel,Axonal Guidance Signaling; Axon guidance,Axonal Guidance Signaling,78.6,39.3,58.9
-Synaptic Development and Neuronal Communication,No hit,Novel,,Sertoli Cell-Sertoli Cell Junction Signaling,25.0,20.0,22.5
-Myelination and Glial Function,Hit,Not novel,Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,71.4,100.0,85.7
-Neural Progenitor Maintenance and Neurogenesis,No hit,Novel,,Osteoarthritis Pathway,10.0,8.3,9.2
-Wnt and Growth Factor Signaling in Neural Development,No hit,Novel,,Axonal Guidance Signaling,40.0,7.1,23.6
-Extracellular Matrix Remodeling and Neural Migration,Hit,Not novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,37.5,50.0,43.8
-Neurotransmitter Processing and Neuropeptide Signaling,No hit,Novel,,Axonal Guidance Signaling,0.0,0.0,0.0

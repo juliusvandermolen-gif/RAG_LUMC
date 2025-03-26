@@ -1,7 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Extracellular Matrix Organization and Remodeling,Hit,Not Novel,Extracellular matrix organization,Regulation of Insulin-like Growth Factor (IGF) transport and uptake by IGFBPs,17.9,70.0,44.0
-Neural Development,No hit,Novel,,,,,
-Axon Guidance,Hit,Not Novel,Axon guidance,,,,
-Myelination,Hit,Not Novel,Myelination Signaling Pathway,,,,
-Metabolic and Mitochondrial Processes,No hit,Novel,,Sphingolipid metabolism,16.0,57.1,36.5
-Immune and Inflammatory Response,No hit,Novel,,Pathogen Induced Cytokine Storm Signaling Pathway,23.5,36.4,29.9

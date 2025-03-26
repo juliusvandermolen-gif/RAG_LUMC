@@ -1,7 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Neuronal Development and Axon Guidance,Hit,Not novel,Axonal Guidance Signaling,Axonal Guidance Signaling,50.0,35.7,42.9
-Extracellular Matrix Organization and Cell Adhesion,Hit,Not novel,Extracellular matrix organization; cell adhesion,Hepatic Fibrosis / Hepatic Stellate Cell Activation,30.0,50.0,40.0
-Developmental and Growth Factor Signaling,no hit,Novel,,Axonal Guidance Signaling,26.7,14.3,20.5
-Protein Processing and Post-translational Modification,Hit,Not novel,Post-translational protein phosphorylation,Neutrophil degranulation,20.0,18.2,19.1
-Cytoskeletal Dynamics and Intracellular Transport,no hit,Novel,,Nuclear Cytoskeleton Signaling Pathway,40.0,57.1,48.5
-Immune Response and Inflammation,no hit,Novel,,Pathogen Induced Cytokine Storm Signaling Pathway,42.9,27.3,35.1

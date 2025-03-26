@@ -1,150 +1,150 @@
 |Reference 1 (BM25) with RRF Score: 6595.3041
 ENSRNOG00000051782,AABR07004061.1,POTE ankyrin domain family member 2 
 
-|Reference 2 (BM25) with RRF Score: 6589.6366
+|Reference 2 (BM25) with RRF Score: 6589.4130
 ENSRNOG00000010659,Gabpb1,GA binding protein transcription factor subunit beta 1 
 
-|Reference 3 (BM25) with RRF Score: 6582.5719
+|Reference 3 (BM25) with RRF Score: 6582.3483
 ENSRNOG00000059714,Hsp90aa1,heat shock protein 90 alpha family class A member 1 
 
-|Reference 4 (BM25) with RRF Score: 6575.7967
+|Reference 4 (BM25) with RRF Score: 6575.5731
 ENSRNOG00000014891,Ptar1,protein prenyltransferase alpha subunit repeat containing 1 
 
-|Reference 5 (BM25) with RRF Score: 6567.8133
+|Reference 5 (BM25) with RRF Score: 6567.5898
 ENSRNOG00000001050,Eif2ak1,eukaryotic translation initiation factor 2 alpha kinase 1 
 
-|Reference 6 (BM25) with RRF Score: 6563.1529
+|Reference 6 (BM25) with RRF Score: 6562.9293
 ENSRNOG00000026963,Hsp90b1,heat shock protein 90 beta family member 1 
 
-|Reference 7 (BM25) with RRF Score: 6555.2246
+|Reference 7 (BM25) with RRF Score: 6555.0010
 ENSRNOG00000001893,Ppp2cal1,protein phosphatase 2 catalytic subunit alpha like 1 
 
-|Reference 8 (BM25) with RRF Score: 6552.8135
+|Reference 8 (BM25) with RRF Score: 6552.5899
 ENSRNOG00000019834,Hsp90ab1,heat shock protein 90 alpha family class B member 1 
 
-|Reference 9 (BM25) with RRF Score: 6547.7364
+|Reference 9 (BM25) with RRF Score: 6547.5129
 ENSRNOG00000067665,Hsp90ab1-ps13,"heat shock protein 90 alpha family class B member 1, pseudogene 13" 
 
-|Reference 10 (BM25) with RRF Score: 6544.9466
+|Reference 10 (BM25) with RRF Score: 6544.7230
 ENSRNOG00000047966,Hspa1l,heat shock protein family A (Hsp70) member 1 like 
 
-|Reference 11 (BM25) with RRF Score: 6538.8313
+|Reference 11 (BM25) with RRF Score: 6538.6078
 ENSRNOG00000026243,Ap2a1,adaptor related protein complex 2 subunit alpha 1 
 
-|Reference 12 (BM25) with RRF Score: 6536.6745
+|Reference 12 (BM25) with RRF Score: 6536.4509
 ENSRNOG00000058543,Pdia6l1,"protein disulfide isomerase family A, member 6 like 1" 
 
-|Reference 13 (BM25) with RRF Score: 6535.5260
+|Reference 13 (BM25) with RRF Score: 6535.3025
 ENSRNOG00000071200,Spopfm2l1,speckle-type BTB/POZ protein family member 2 like 1 
 
-|Reference 14 (BM25) with RRF Score: 6534.2085
+|Reference 14 (BM25) with RRF Score: 6533.9849
 ENSRNOG00000014928,Apba1,amyloid beta precursor protein binding family A member 1 
 
-|Reference 15 (BM25) with RRF Score: 6533.9998
+|Reference 15 (BM25) with RRF Score: 6533.7762
 ENSRNOG00000014252,Irf2bp1,interferon regulatory factor 2 binding protein 1 
 
-|Reference 16 (BM25) with RRF Score: 6533.3078
+|Reference 16 (BM25) with RRF Score: 6533.0842
 ENSRNOG00000069720,Ppp1r2-ps1,"protein phosphatase 1, regulatory (inhibitor) subunit 2, pseudogene 1" 
 
-|Reference 17 (BM25) with RRF Score: 6533.0759
+|Reference 17 (BM25) with RRF Score: 6532.8523
 ENSRNOG00000008788,Pals1,"protein associated with LIN7 1, MAGUK p55 family member" 
 
-|Reference 18 (BM25) with RRF Score: 6530.6633
+|Reference 18 (BM25) with RRF Score: 6530.4397
 ENSRNOG00000001733,Ppp1r2,"protein phosphatase 1, regulatory (inhibitor) subunit 2" 
 
-|Reference 19 (BM25) with RRF Score: 6529.7498
+|Reference 19 (BM25) with RRF Score: 6529.5262
 ENSRNOG00000061543,Ap2b1,adaptor related protein complex 2 subunit beta 1 
 
-|Reference 20 (BM25) with RRF Score: 6529.5662
+|Reference 20 (BM25) with RRF Score: 6529.3426
 ENSRNOG00000029979,Slc5a1l1,solute carrier family 5 member 1 like 1 
 
-|Reference 21 (BM25) with RRF Score: 6529.5662
+|Reference 21 (BM25) with RRF Score: 6529.3426
 ENSRNOG00000025443,Map1lc3a,microtubule-associated protein 1 light chain 3 alpha 
 
-|Reference 22 (BM25) with RRF Score: 6527.3498
+|Reference 22 (BM25) with RRF Score: 6527.1263
 ENSRNOG00000060963,Rbmy1j,"RNA binding motif protein, Y-linked, family 1, member J" 
 
-|Reference 23 (BM25) with RRF Score: 6524.7782
+|Reference 23 (BM25) with RRF Score: 6525.4232
 ENSRNOG00000029996,Eef1a1l2,eukaryotic translation elongation factor 1 alpha 1 like 2 
 
-|Reference 24 (BM25) with RRF Score: 6524.3236
-ENSRNOG00000012799,Prkaa1,protein kinase AMP-activated catalytic subunit alpha 1 
-
-|Reference 25 (BM25) with RRF Score: 6524.2747
+|Reference 24 (BM25) with RRF Score: 6524.9197
 ENSRNOG00000068391,Hsp90aa1-ps17,"heat shock protein 90 alpha family class A member 1, pseudogene 17" 
 
-|Reference 26 (BM25) with RRF Score: 6524.1108
+|Reference 25 (BM25) with RRF Score: 6524.7558
 ENSRNOG00000069800,Spopfm2l2,speckle-type BTB/POZ protein family member 2 like 1 
 
-|Reference 27 (BM25) with RRF Score: 6523.2553
+|Reference 26 (BM25) with RRF Score: 6524.1000
+ENSRNOG00000012799,Prkaa1,protein kinase AMP-activated catalytic subunit alpha 1 
+
+|Reference 27 (BM25) with RRF Score: 6523.0318
 ENSRNOG00000065120,Hspd1l1,heat shock protein family D (Hsp60) member 1 like 1 
 
-|Reference 28 (BM25) with RRF Score: 6518.1434
-ENSRNOG00000005479,Slc1a2,solute carrier family 1 member 2 
-
-|Reference 29 (BM25) with RRF Score: 6517.8615
+|Reference 28 (BM25) with RRF Score: 6518.5065
 ENSRNOG00000023546,Hspb1,heat shock protein family B (small) member 1 
 
-|Reference 30 (BM25) with RRF Score: 6516.8449
+|Reference 29 (BM25) with RRF Score: 6517.9198
+ENSRNOG00000005479,Slc1a2,solute carrier family 1 member 2 
+
+|Reference 30 (BM25) with RRF Score: 6516.6213
 ENSRNOG00000062084,Hsp90aa1-ps16,"heat shock protein 90 alpha family class A member 1, pseudogene 16" 
 
-|Reference 31 (BM25) with RRF Score: 6515.3219
+|Reference 31 (BM25) with RRF Score: 6515.0984
 ENSRNOG00000066325,Cntnap5bl1,contactin associated protein family member 5B like 1 
 
-|Reference 32 (BM25) with RRF Score: 6515.2899
+|Reference 32 (BM25) with RRF Score: 6515.0664
 ENSRNOG00000030494,AABR07072761.1,nuclear receptor binding factor 2 like 1 
 
-|Reference 33 (BM25) with RRF Score: 6514.6288
+|Reference 33 (BM25) with RRF Score: 6514.4052
 ENSRNOG00000017678,Ap2b1-ps1,"adaptor related protein complex 2 subunit beta 1, pseudogene 1" 
 
-|Reference 34 (BM25) with RRF Score: 6514.5091
+|Reference 34 (BM25) with RRF Score: 6514.2856
 ENSRNOG00000015632,Taf1c,"TATA-box binding protein associated factor, RNA polymerase 1 subunit C" 
 
-|Reference 35 (BM25) with RRF Score: 6514.3945
+|Reference 35 (BM25) with RRF Score: 6514.1709
 ENSRNOG00000004901,Slc4a1ap,solute carrier family 4 member 1 adaptor protein 
 
-|Reference 36 (BM25) with RRF Score: 6514.3885
+|Reference 36 (BM25) with RRF Score: 6514.1649
 ENSRNOG00000006122,Igf2bp1,insulin-like growth factor 2 mRNA binding protein 1 
 
-|Reference 37 (BM25) with RRF Score: 6513.9000
+|Reference 37 (BM25) with RRF Score: 6513.6765
 ENSRNOG00000015975,Ppp1r2l1,"protein phosphatase 1, regulatory (inhibitor) subunit 2 like 1" 
 
-|Reference 38 (BM25) with RRF Score: 6512.3165
+|Reference 38 (BM25) with RRF Score: 6512.9062
 ENSRNOG00000033090,Ltbp1,latent transforming growth factor beta binding protein 1 
 
-|Reference 39 (BM25) with RRF Score: 6511.9293
+|Reference 39 (BM25) with RRF Score: 6512.5457
 ENSRNOG00000007284,Slc2a1,solute carrier family 2 member 1 
 
-|Reference 40 (BM25) with RRF Score: 6508.2311
+|Reference 40 (BM25) with RRF Score: 6508.0076
 ENSRNOG00000059402,Itgb1bp1,integrin subunit beta 1 binding protein 1 
 
-|Reference 41 (BM25) with RRF Score: 6508.2311
+|Reference 41 (BM25) with RRF Score: 6508.0076
 ENSRNOG00000017803,Apbb1ip,amyloid beta precursor protein binding family B member 1 interacting protein 
 
-|Reference 42 (BM25) with RRF Score: 6507.9058
+|Reference 42 (BM25) with RRF Score: 6507.6822
 ENSRNOG00000018020,Apbb1,amyloid beta precursor protein binding family B member 1 
 
-|Reference 43 (BM25) with RRF Score: 6507.7303
+|Reference 43 (BM25) with RRF Score: 6507.5067
 ENSRNOG00000024562,Tgfbrap1,"transforming growth factor, beta receptor associated protein 1" 
 
-|Reference 44 (BM25) with RRF Score: 6507.4988
+|Reference 44 (BM25) with RRF Score: 6507.2753
 ENSRNOG00000051034,Cks2l1,CDC28 protein kinase regulatory subunit 2 like 1 
 
-|Reference 45 (BM25) with RRF Score: 6507.4335
+|Reference 45 (BM25) with RRF Score: 6507.2099
 ENSRNOG00000003596,Itgb1bp2,integrin subunit beta 1 binding protein 2 
 
-|Reference 46 (BM25) with RRF Score: 6507.2008
+|Reference 46 (BM25) with RRF Score: 6506.9772
 ENSRNOG00000011234,Taf5l-ps1,"TATA-box binding protein associated factor 5 like, pseudogene 1" 
 
-|Reference 47 (BM25) with RRF Score: 6505.2512
+|Reference 47 (BM25) with RRF Score: 6505.0276
 ENSRNOG00000018027,Taf5l1,TATA-box binding protein associated factor 5 like 1 
 
-|Reference 48 (BM25) with RRF Score: 6504.0297
+|Reference 48 (BM25) with RRF Score: 6503.8061
 ENSRNOG00000051671,Herc1,HECT and RLD domain containing E3 ubiquitin protein ligase family member 1 
 
-|Reference 49 (BM25) with RRF Score: 6502.2072
+|Reference 49 (BM25) with RRF Score: 6501.9836
 ENSRNOG00000056007,AABR07049228.1,heat shock protein family D (Hsp60) member 1 like 2 
 
-|Reference 50 (BM25) with RRF Score: 6501.5334
+|Reference 50 (BM25) with RRF Score: 6501.3099
 ENSRNOG00000038106,Map1lc3b2,microtubule-associated protein 1 light chain 3 beta 2 
 

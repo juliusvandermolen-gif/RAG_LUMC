@@ -1,4 +1,3 @@
-Answer:
 Axon Guidance and Synaptogenesis:  
 Genes involved: Cntn6, Sema4f, Ntn1, Robo2, Slit2, Efna5, Sema3g, Plxnb1, Nrp1, Nrp2, Srgap1, Dpysl5, Lrrtm3, Cd9, Dpysl3, Olfm2, Itga8, Itga7
 
@@ -16,4 +15,3 @@ Genes involved: Hapln1, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Chst2, Col9a3, Col2
 
 Cytoskeletal Dynamics and Axonal Transport:  
 Genes involved: Tuba4a, Tubb4a, Kif1a, Acta2, Tagln, Cep295nl, Septin4, Septin5, Rab10, Pfn2, Myo1d, Fhod3, Acap2, Rhoj, Stard13, Ckap4, Map1lc3a
-

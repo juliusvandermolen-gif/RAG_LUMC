@@ -1,8 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Extracellular Matrix Organization and Cell Adhesion,Hit,Common,Extracellular matrix organization; cell adhesion,Extracellular matrix organization,23.3,100.0,61.6
-Neuronal Development and Axon Guidance,Hit,Common,Axonal Guidance Signaling,Axonal Guidance Signaling,46.2,42.9,44.5
-Proteolysis and Protein Processing,no hit,Potentially Novel,,Neutrophil degranulation,15.0,27.3,21.1
-Metabolic Processes and Energy Homeostasis,no hit,Common,,Sphingolipid metabolism,15.4,57.1,36.2
-Immune Response and Inflammatory Signaling,no hit,Common,,Pathogen Induced Cytokine Storm Signaling Pathway,36.4,36.4,36.4
-Cytoskeletal Organization and Cell Motility,Hit,Common,regulation of cell motility,Integrin Signaling,20.0,44.4,32.2
-Growth Factor and Signal Transduction,Hit,Common,Growth Hormone Signaling; HGF Signaling,Molecular Mechanisms of Cancer,18.9,46.7,32.8

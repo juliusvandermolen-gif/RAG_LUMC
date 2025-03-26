@@ -1,8 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Extracellular Matrix Organization and Remodeling,Hit,Not Novel,Extracellular matrix organization,Pulmonary Fibrosis Idiopathic Signaling Pathway,20.0,60.0,40.0
-Neural Development and Axon Guidance,Hit,Not Novel,Axonal Guidance Signaling,Axonal Guidance Signaling,34.3,42.9,38.6
-Signal Transduction and Growth Factor Signaling,no hit,Novel,,Molecular Mechanisms of Cancer,23.7,60.0,41.9
-Metabolic and Redox Processes,no hit,Novel,,Neutrophil degranulation,15.8,54.5,35.1
-Immune and Inflammatory Responses,no hit,Novel,,Pathogen Induced Cytokine Storm Signaling Pathway,25.0,27.3,26.1
-Cytoskeletal Dynamics and Cell Adhesion,Hit,Not Novel,Regulation of Actin-based Motility by Rho; cell adhesion,Integrin Signaling,21.6,88.9,55.2
-Transcriptional Regulation and Cell Cycle Control,no hit,Novel,,Mitotic Metaphase and Anaphase,8.6,50.0,29.3

@@ -1,9 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Neuronal Development and Axon Guidance Pathway,[TAB] Hit,[TAB] Common/Household,[TAB] Axon guidance,Axonal Guidance Signaling,40.0,42.9,41.5
-Extracellular Matrix Organization and Remodeling Pathway [TAB] Hit,[TAB] Common/Household,[TAB] Extracellular matrix organization,,,,,
-Metabolic Processes and Energy Homeostasis Pathway,[TAB] no hit,[TAB] Common/Household,[TAB],Sphingolipid metabolism,17.9,71.4,44.7
-Cellular Signaling and Transcription Regulation Pathway [TAB] no hit,[TAB] Common/Household,[TAB],,,,,
-Cytoskeletal Dynamics and Intracellular Transport Pathway [TAB] no hit,[TAB] Common/Household,[TAB],,,,,
-Membrane Transport and Ion Channel Regulation Pathway,[TAB] no hit,[TAB] Common/Household,[TAB],NAD Signaling Pathway,16.7,60.0,38.4
-Immune Response and Inflammatory Signaling Pathway,[TAB] no hit,[TAB] Common/Household,[TAB],Pathogen Induced Cytokine Storm Signaling Pathway,33.3,36.4,34.8
-Cell Cycle and DNA Repair Pathway,[TAB] no hit,[TAB] Common/Household,[TAB],Mitotic Metaphase and Anaphase,20.0,50.0,35.0

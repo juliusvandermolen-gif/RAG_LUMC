@@ -9,8 +9,7 @@ from RAG_workflow import query_open_ai
 import re
 import subprocess
 import markdown
-from xhtml2pdf import pisa
-import pdfkit
+
 
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 

@@ -1,9 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-"Neurodevelopment, Axon Guidance, and Myelination",Hit,Not Novel,Axonal Guidance Signaling; Myelination Signaling Pathway,Axonal Guidance Signaling,45.8,39.3,42.5
-Extracellular Matrix Organization and Remodeling,Hit,Not Novel,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,20.7,50.0,35.4
-Proteolysis and Protein Processing,no hit,Novel,,Neuroprotective Role of THOP1 in Alzheimer's Disease,18.8,75.0,46.9
-Metabolic and Redox Regulation,no hit,Novel,,Neutrophil degranulation,20.0,27.3,23.6
-Signal Transduction and Transcriptional Regulation no hit,Novel,,,,,,
-Cytoskeletal Dynamics and Intracellular Transport,Hit,Not Novel,Regulation of Actin-based Motility by Rho; Kinesins,Axonal Guidance Signaling,15.8,10.7,13.2
-Cell Adhesion and Junction Organization,Hit,Not Novel,Cell junction organization,Integrin Signaling,33.3,44.4,38.8
-Immune Response and Inflammatory Processes,no hit,Novel,,Pathogen Induced Cytokine Storm Signaling Pathway,25.0,18.2,21.6

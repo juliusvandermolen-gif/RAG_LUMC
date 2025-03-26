@@ -1,9 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Axon Guidance and Neurite Outgrowth,Hit,Not novel,Axonal Guidance Signaling,Axonal Guidance Signaling,92.3,42.9,67.6
-Synapse Formation and Plasticity,Hit,Not novel,Activation of NMDA receptors and postsynaptic events,Signaling by Rho Family GTPases,22.2,22.2,22.2
-Myelination and Glial Function,Hit,Not novel,Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,50.0,80.0,65.0
-Neural Differentiation and Neurogenesis,no hit,Not novel,,Osteoarthritis Pathway,11.1,25.0,18.1
-Extracellular Matrix Remodeling and Cell Adhesion in Neural Development,,,,Hepatic Fibrosis / Hepatic Stellate Cell Activation,20.0,50.0,35.0
-Hit,Not novel,cell adhesion; Extracellular matrix organization,,,,,
-Neuronal Signaling and Neurotransmitter Processing,no hit,Not novel,,Molecular Mechanisms of Cancer,18.9,46.7,32.8
-Cytoskeletal Dynamics and Intracellular Transport,Hit,Not novel,Regulation of Actin-based Motility by Rho; Kinesins,Axonal Guidance Signaling,15.8,10.7,13.2

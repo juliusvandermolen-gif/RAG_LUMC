@@ -1,6 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Neural Development and Axon Guidance,Hit,Common,Axon guidance,Axonal Guidance Signaling,34.1,50.0,42.0
-Extracellular Matrix Organization and Remodeling,Hit,Common,Extracellular matrix organization,Hepatic Fibrosis / Hepatic Stellate Cell Activation,21.4,50.0,35.7
-Signal Transduction and Growth Factor Regulation,no hit,Novel,,Molecular Mechanisms of Cancer,12.7,60.0,36.4
-Cytoskeletal Organization and Cellular Movement,Hit,Common,regulation of cell motility,Sertoli Cell-Sertoli Cell Junction Signaling,19.2,50.0,34.6
-Cellular Metabolism and Energy Production,no hit,Novel,,Osteoarthritis Pathway,9.1,16.7,12.9

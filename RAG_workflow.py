@@ -1043,6 +1043,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
             print(f"An error occurred on iteration {i} using model {model}: {e}")
             continue
         if save:
+            os.makedirs("./output/test_files", exist_ok=True)
             output_filename = f"./output/test_files/{model}-{config_name}-{i}.txt"
             with open(output_filename, "w", encoding="utf-8") as file:
                 file.write(f"{answer}")
@@ -1169,13 +1170,14 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
         {"role": "user", "content": prompt}
     ]
     save_message = f"(role: system, content: {system_instruction_for_response}\nrole: user, content: {prompt})"
+    os.makedirs("./output/text_files", exist_ok=True)
     with open("./output/text_files/messages.txt", "w", encoding="utf-8") as file:
         file.write(save_message)
     print(f"Using API type: {api_type}")
 
     if api_type.lower() == 'openai':
         save = True
-        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=5)
+        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=2)
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)
     elif api_type.lower() == 'gemini':

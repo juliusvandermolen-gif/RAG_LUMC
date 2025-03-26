@@ -1,9 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Axon Guidance and Neural Patterning,Hit,Not Novel,Axonal Guidance Signaling,Axonal Guidance Signaling,84.6,39.3,61.9
-Synaptic Function and Neurotransmission,Hit,Not Novel,Activation of NMDA receptors and postsynaptic events,L1CAM interactions,10.0,14.3,12.2
-Neural Stem Cell Maintenance and Neurogenesis,no hit,Novel,—,Cachexia Signaling Pathway,22.2,22.2,22.2
-Myelination and Neuron–Glia Interactions,Hit,Not Novel,EGR2 and SOX10-mediated initiation of Schwann cell myelination; Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,62.5,100.0,81.2
-Extracellular Matrix Organization and Cell Adhesion,Hit,Not Novel,Extracellular matrix organization; cell adhesion,Hepatic Fibrosis / Hepatic Stellate Cell Activation,29.4,41.7,35.5
-Wnt/Retinoic Acid Signaling,no hit,Novel,—,Pulmonary Fibrosis Idiopathic Signaling Pathway,75.0,30.0,52.5
-Cytoskeletal Organization and Intracellular Transport,Hit,Not Novel,Regulation of Actin-based Motility by Rho; Kinesins,Axonal Guidance Signaling,30.0,10.7,20.4
-Neuroimmune and Inflammatory Signaling,no hit,Novel,—,Hepatic Fibrosis / Hepatic Stellate Cell Activation,33.3,25.0,29.1

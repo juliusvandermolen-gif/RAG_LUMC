@@ -1,7 +1,0 @@
-Pathway,Validation (Hit or no hit),Novel or not,Matched Ground Truth Pathway,Hit based on percentage,Coverage_of_Answers_in_Pathway,Coverage_of_Pathway_in_Answers,Average_Coverage
-Axon Guidance and Neuronal Migration,Hit,Not Novel,Axonal Guidance Signaling,Axonal Guidance Signaling,78.6,39.3,58.9
-Myelination and Glial Support,Hit,Not Novel,Myelination Signaling Pathway,EGR2 and SOX10-mediated initiation of Schwann cell myelination,71.4,100.0,85.7
-Neural Progenitor Maintenance and Neurogenesis,no hit,Potentially Novel,,Signaling by ROBO receptors,12.5,10.0,11.2
-Synaptic Function and Plasticity,Hit,Not Novel,Activation of NMDA receptors and postsynaptic events,Gap Junction Signaling,12.5,9.1,10.8
-Extracellular Matrix Remodeling and Cell Adhesion,Hit,Not Novel,Extracellular matrix organization; cell adhesion,Hepatic Fibrosis / Hepatic Stellate Cell Activation,27.8,41.7,34.8
-Neurotrophic and Growth Factor Signaling,Hit,Not Novel,NGF processing; Neuregulin Signaling,Axonal Guidance Signaling,25.0,7.1,16.1
