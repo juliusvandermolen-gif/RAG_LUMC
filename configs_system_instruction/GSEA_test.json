@@ -6,7 +6,7 @@
   "amount_docs": 10,
   "weight_faiss": 20,
   "weight_bm25": 80,
-  "max_genes": 250,
+  "max_genes": 10,
   "fdr_threshold": 0.05,
   "system_instruction_response": "You are a knowledgeable bioinformatics assistant specializing in gene pathway analysis. Your primary objective is to identify and describe functionally significant gene sets using the user’s provided list of genes. Rather than focusing solely on statistical p-values, consider overall biological relevance, functional coherence, and emerging insights. 
 When assisting the user, you should:

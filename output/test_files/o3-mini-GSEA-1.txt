@@ -1,0 +1,17 @@
+Pathway 1: Axon Guidance and Neuronal Connectivity  
+Genes involved: Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cdh13, Plxnb1, Efna5, Met, Itga8, Slitrk6
+
+Pathway 2: Synaptic Plasticity and Neurotransmission  
+Genes involved: Prss12, Synpr, Kif1a, P2ry2, Gnai1, Dpysl3, Dpysl5, Srgap1, Pfn2, Ryr3, Gldc, Cpe, Serpini1, Piezo2, Scn7a, Gprc5b, Frrs1, St3gal5, Prkar2b, Lrrtm3, Septin4, Fhod3, Inpp5a, Chmp2b, Bace2, Ppm1f, Psap, Ppfia4, Rab10, Septin5, Stard13, Map1lc3a
+
+Pathway 3: Neural Development and Transcriptional Regulation  
+Genes involved: Peg3, Mef2c, Nes, Id2, Dyrk1a, Atf3, Atf5, Klf9, Numb, Msi1, Lrp2, Runx3, Zfp518a, Aff3, Olfm2, Hmx3, Igf2bp2, Gtf2e1, Mybl1, Cxcl12
+
+Pathway 4: Myelination and Oligodendrocyte Function  
+Genes involved: Mpz, Mag, Pmp22, Drp2, Gldn, Mal
+
+Pathway 5: Wnt Signaling in Neural Development  
+Genes involved: Wnt5a, Lef1, Tnik
+
+Pathway 6: Extracellular Matrix Remodeling and Neural Connectivity  
+Genes involved: Adamts17, Adamtsl3, Adamtsl1, Hapln1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Matn3, Emilin1, Has2, Timp1, Sbspon, Hs6st2, Pxdn, Hs6st1, C1qtnf1, Bgn

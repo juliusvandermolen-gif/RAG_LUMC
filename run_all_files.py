@@ -2,19 +2,36 @@ import sys
 import asyncio
 import platform
 import subprocess
+import os
+
+def resolve_config_name(default="GSEA"):
+    """
+    Check sys.argv for an unknown flag (like --GSEA_test).
+    If found, return the flag name (without '--'). Otherwise, return the default.
+    """
+    # Skip the first element (script name)
+    for arg in sys.argv[1:]:
+        # If the argument starts with '--' and it's not '--config'
+        if arg.startswith("--") and arg != "--config":
+            # Remove the '--' and return the rest as the config name
+            return arg[2:]
+    return default
+
+# Determine the configuration name based on command-line arguments.
+CONFIG_NAME = resolve_config_name("GSEA")
+CONFIG_PATH = f"./configs_system_instruction/{CONFIG_NAME}.json"
 
 print(platform.system())
 if platform.system() == "Windows":
-    print("Setting settings:")
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    from asyncio import WindowsSelectorEventLoopPolicy
+    asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 
-print("Starting RAG_workflow.py and gprofiler.ipynb in parallel...")
+print(f"Using config: {CONFIG_NAME}")
+print("Running RAG_workflow.py...")
+subprocess.run(f"python RAG_workflow.py --config {CONFIG_PATH}", shell=True, check=True)
 
-p1 = subprocess.Popen("python RAG_workflow.py", shell=True)
-p2 = subprocess.Popen("jupyter nbconvert --execute --to notebook --inplace gprofiler.ipynb", shell=True)
+print("Running gprofiler.py...")
+subprocess.run(f"python gprofiler.py --config {CONFIG_PATH}", shell=True, check=True)
 
-p1.wait()
-p2.wait()
-
-print("Both RAG_workflow.py and gprofiler.ipynb have finished. Now running automated_validation.py...")
+print("Running automated_validation.py...")
 subprocess.run("python automated_validation.py", shell=True, check=True)

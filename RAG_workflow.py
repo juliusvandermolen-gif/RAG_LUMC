@@ -2,12 +2,14 @@
 import pandas as pd
 import gzip
 import csv
+import sys
 import os
 import time
 import json
 import hashlib
 import re
 import sqlite3
+import argparse
 import warnings
 import atexit
 import functools
@@ -49,44 +51,18 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.
 
 
 def load_config(filename):
-    """
-    Loads the config file
-    Args:
-        filename: The file name for the config file.
-    Returns:
-
-    """
     with open(filename, 'r', encoding='utf-8') as config_file:
         raw_content = config_file.read()
 
     def escape_newlines_in_string_literal(match):
-        """
-        Takes all the lines for the config, checks for a manual new line and changes it accordingly to JSON format.
-
-        Args:
-            match: The lines that match the escape newline character.
-
-        Returns: A escaped string literal.
-
-        """
         s = match.group(0)
-        inner = s[1:-1]
-        inner = inner.replace('\n', '\\n')
+        inner = s[1:-1].replace('\n', '\\n')
         return '"' + inner + '"'
 
     pattern = r'"(?:\\.|[^"\\])*"'
     processed_content = re.sub(pattern, escape_newlines_in_string_literal, raw_content, flags=re.DOTALL)
     return json.loads(processed_content)
 
-
-# Call the config
-config_name = "with-rag-with-scope"
-config = load_config(f'./configs_system_instruction/{config_name}.json')
-for key, value in config.items():
-    globals()[key] = value
-
-if config_name == "config_role_based.json":
-    system_instruction_response = persona + instruction + context + user_input + output_indicator
 
 # Downloads and sets stopwords for BM25
 nltk.download('punkt')
@@ -161,7 +137,7 @@ def compute_file_hash(file_path, block_size=65536):
 
 
 @timer
-def initialize_gene_list(excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
+def initialize_gene_list(max_genes, fdr_threshold, excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
                          de_filter_option="combined"):
     """
     Creates a list of genes, taken from the file, based on filters
@@ -177,7 +153,7 @@ def initialize_gene_list(excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_V
         - num_genes: The number of genes processed.
 
     """
-    results = process_excel_data(excel_file_path, de_filter_option)
+    results = process_excel_data(excel_file_path, de_filter_option, max_genes,fdr_threshold)
     if results:
         gene_list_string, regulation, num_genes = results[0]
     else:
@@ -188,11 +164,13 @@ def initialize_gene_list(excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_V
 
 
 @timer
-def process_excel_data(excel_file_path, de_filter_option):
+def process_excel_data(excel_file_path, de_filter_option, max_genes, fdr_threshold):
     """
     Processes an Excel file to filter and extract gene data based on differential expression and FDR threshold.
 
     Args:
+        fdr_threshold:
+        max_genes:
         excel_file_path: The file path to the Excel file containing gene data.
         de_filter_option: The differential expression filter option ('combined' or 'separate').
 
@@ -204,9 +182,8 @@ def process_excel_data(excel_file_path, de_filter_option):
     """
     data = pd.read_excel(excel_file_path)
     results = []
-    fdr_threshold = 0.00008802967327
-
-    max_genes = 250
+    #max_genes = 250 #remove
+    print(max_genes, fdr_threshold)
     data = data.iloc[:max_genes]
 
     if de_filter_option == "combined":
@@ -671,8 +648,8 @@ def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
 
 
 @timer
-def embed_documents(conn, index, tokenizer, model, data_dir='./data/GSEA/external_gene_data',
-                    batch_size=batch_size, log_path='./logs/file_log.json',
+def embed_documents(conn, index, tokenizer, model, data_dir,
+                    batch_size, log_path='./logs/file_log.json',
                     pdf_dir='./data/PDF'):
     file_log = load_file_log(log_path=log_path)
 
@@ -835,7 +812,6 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
 # Document Ranking and Combination
 @timer
 def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
-    print("Creating top faiss", top_k)
     doc_distances = {}
 
     for eq in expanded_queries:
@@ -1301,9 +1277,29 @@ def save_scores_to_file(scores, file_name):
     print(f"Scores saved to {file_name}")
 
 
+
+
+
+
 @timer
 def main():
-    gene_list_string, regulation, num_genes = initialize_gene_list(
+    parser = argparse.ArgumentParser(description="Run the RAG workflow.")
+    parser.add_argument(
+        "--config",
+        type=str,
+        default="./configs_system_instruction/GSEA.json",
+        help="Path to the configuration JSON file"
+    )
+    args = parser.parse_args()
+
+    config = load_config(args.config)
+    config_name = os.path.splitext(os.path.basename(args.config))[0]
+    globals()['config_name'] = config_name
+    globals().update(config)
+
+    print(f"Using config: {config_name}")
+
+    gene_list_string, regulation, num_genes = initialize_gene_list(max_genes=max_genes, fdr_threshold=fdr_threshold,
         excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
         de_filter_option="combined",
     )
