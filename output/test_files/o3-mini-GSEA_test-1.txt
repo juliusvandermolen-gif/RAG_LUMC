@@ -1,8 +1,0 @@
-Synaptic Plasticity and Neural Signaling Pathway:
-Genes involved: Cntn6, Prss12, Pcsk5
-
-Extracellular Matrix Remodeling in Neural Development Pathway:
-Genes involved: Adamts17, Qsox1, Zpld1, Cobll1, Tex101
-
-Neural Metabolic and Signaling Regulation Pathway:
-Genes involved: Aldh1a1, Gldc

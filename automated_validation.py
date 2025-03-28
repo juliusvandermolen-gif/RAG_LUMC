@@ -1,42 +1,35 @@
-from openai import OpenAI
-import pandas as pd
-import gzip
-import csv
 import os
+import glob
+import re
 import time
 import json
-from RAG_workflow import query_open_ai
-import re
-import subprocess
 import markdown
 
+from RAG_workflow import query_open_ai
 
-client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-
-def open_file(gpt_answer_file, ground_truth_file, messages_file):
-    with open(gpt_answer_file, 'r') as f:
-        gpt_answer = f.read().strip()
-    with open(ground_truth_file, 'r') as f:
-        ground_truth = f.read().strip()
-    with open(messages_file, 'r') as f:
-        instruction = f.read().strip()
-    return gpt_answer, ground_truth, instruction
+def read_latest_llm_output(answer_dir="./output/test_files"):
+    """
+    Reads the most recent .txt file from the answer directory.
+    """
+    answer_files = glob.glob(os.path.join(answer_dir, '*.txt'))
+    if not answer_files:
+        raise FileNotFoundError("No answer files found in the directory.")
+    latest_file = max(answer_files, key=os.path.getmtime)
+    with open(latest_file, 'r', encoding="utf8") as f:
+        content = f.read().strip()
+    return content, latest_file
 
 
 def extract_pathways(answer_text):
     """
-    Extracts pathway names and their associated gene lists from the given answer text.
-
-    This function assumes that each pathway is represented by a line ending with a colon,
-    and that immediately following that line (or later in the block) is a line starting with
-    "Genes involved:" listing the genes (comma-separated). It skips header lines such as those
-    starting with "Answer".
+    Extracts pathway names and their associated gene lists from the answer text.
+    Expects each pathway line to end with a colon and a following line starting
+    with 'Genes involved:' to list the genes.
 
     Returns:
-        A tuple:
-          - gpt_pathways: a list of pathway names (as they appear).
-          - pathway_dict: a dictionary mapping each pathway name to a list of genes.
+        - gpt_pathways: list of pathway names in the order they appear.
+        - pathway_dict: dictionary mapping each pathway name to a list of genes.
     """
     gpt_pathways = []
     pathway_dict = {}
@@ -57,26 +50,25 @@ def extract_pathways(answer_text):
         if line.endswith(":"):
             pathway_name = line[:-1].strip()
             current_pathway = pathway_name
-            # Avoid duplicates.
             if pathway_name not in gpt_pathways:
                 gpt_pathways.append(pathway_name)
                 pathway_dict[pathway_name] = []
     return gpt_pathways, pathway_dict
 
-#TODO ADD the percentage overlap maybe?
-def validate(gpt_answer, ground_truth, instruction):
-    """
-    Validates the GPT answer by comparing only the pathway names (gpt_pathways)
-    against the ground truth. Then, at the end of the response, appends the full list
-    of pathways with their genes (from the GPT output). (The complete ground truth is not appended.)
-    """
-    gpt_pathways, pathway_dict = extract_pathways(gpt_answer)
 
+def validate_pathways(gpt_answer, ground_truth, instruction):
+    """
+    Validates the GPT answer by comparing the extracted pathway names against
+    the ground truth. It builds a prompt that includes both pathway sets and queries
+    the model via query_open_ai. The full list of pathways with genes is appended to
+    the response.
+    """
+    _, pathway_dict = extract_pathways(gpt_answer)
     prompt = (
         "Based on the identified pathways, confirm whether they match the ground truth pathways. "
         "Additionally, indicate if there are any novel pathways not present in the ground truth. "
         "User provided pathways:\n"
-        f"{', '.join(pathway_dict)}\n\n"
+        f"{', '.join(pathway_dict.keys())}\n\n"
         "Ground truth pathways:\n"
         f"{ground_truth}"
     )
@@ -85,50 +77,106 @@ def validate(gpt_answer, ground_truth, instruction):
         {"role": "user", "content": prompt}
     ]
     save = False
+    # Use a range_query of 2 so one attempt is made.
     answer = query_open_ai(messages, instruction, prompt, save, range_query=2)
-
-    detailed_lines = ["\n\nFull pathway list with genes:"]
-    for pathway, genes in pathway_dict.items():
-        genes_str = ", ".join(genes) if genes else "No genes listed"
-        detailed_lines.append(f"{pathway}: {genes_str}")
-    detailed_info = "\n".join(detailed_lines)
-
-    final_answer = answer + "\n" + detailed_info
+    final_answer = answer
     return final_answer
 
 
+def academic_validation(pathways, pathway_dict, academic_instruction):
+    """
+    For each pathway, queries academic literature via query_open_ai (using ChatGPT's web search)
+    to validate whether the involvement of the listed genes is supported by evidence from
+    academic databases (e.g., PubMed, Google Scholar, GeneCards). The prompt requests
+    summaries per gene with citations (DOIs or URLs).
+
+    Returns:
+        A list of tuples (pathway, genes, academic_summary)
+    """
+    academic_results = []
+    for pathway in pathways:
+        genes = pathway_dict[pathway]
+        prompt = (
+            f"For the biological pathway '{pathway}', validate the involvement of the genes: {', '.join(genes)}. "
+            "Check academic databases such as PubMed, Google Scholar, and GeneCards. "
+            "Summarize evidence per gene with citations (DOIs or URLs). Explicitly state if no evidence is found for a gene."
+        )
+        messages = [
+            {"role": "system", "content": academic_instruction},
+            {"role": "user", "content": prompt}
+        ]
+        # Use the 4o-mini-search-preview model with web search options (e.g., medium context)
+        response = query_open_ai(
+            messages,
+            academic_instruction,
+            prompt,
+            save=False,
+            range_query=2,
+            model="gpt-4o-mini-search-preview",
+            web_search_options={"search_context_size": "medium"}
+        )
+        if response is None:
+            response = "No academic validation response returned."
+        academic_results.append((pathway, genes, response.strip()))
+    return academic_results
+
+
 def main():
-    answer_dir = r"./output/test_files"
+    # Paths for necessary files and directories
+    answer_dir = "./output/test_files"
     ground_truth_file = "./output/text_files/ground_truth_pathways.txt"
     system_instruction_file = "./configs_system_instruction/system_instruction_comparison_pathways.txt"
-
-    with open(ground_truth_file, 'r', encoding="utf8") as f:
-        ground_truth = f.read().strip()
-    with open(system_instruction_file, 'r', encoding="utf8") as f:
-        instruction = f.read().strip()
-
+    # New academic instruction file (if available)
+    academic_instruction_file = "./configs_system_instruction/system_instruction_academic_validation.txt"
     output_directory = "./output/text_files/automated_comparison"
     os.makedirs(output_directory, exist_ok=True)
 
-    answer_files = [
-        os.path.join(answer_dir, f) for f in os.listdir(answer_dir) if f.endswith('.txt')
-    ]
-    if not answer_files:
-        print("No answer files found.")
+    # Load ground truth and system instruction texts
+    with open(ground_truth_file, 'r', encoding="utf8") as f:
+        ground_truth = f.read().strip()
+    with open(system_instruction_file, 'r', encoding="utf8") as f:
+        comparison_instruction = f.read().strip()
+
+    # Load academic instruction if file exists, else use a default instruction.
+    if os.path.exists(academic_instruction_file):
+        with open(academic_instruction_file, 'r', encoding="utf8") as f:
+            academic_instruction = f.read().strip()
+    else:
+        academic_instruction = (
+            "You are an academic literature expert. Evaluate gene involvement in biological pathways "
+            "by consulting academic databases and literature. Provide evidence with citations (DOIs or URLs) "
+            "for each gene. Be precise and clear in your explanation."
+        )
+
+    # Step 1: Read the latest LLM output
+    try:
+        llm_output, latest_file = read_latest_llm_output(answer_dir)
+    except FileNotFoundError as e:
+        print(e)
         return
 
-    last_file = max(answer_files, key=os.path.getmtime)
-    with open(last_file, 'r', encoding="utf8") as f:
-        gpt_answer = f.read().strip()
+    # Step 2: g:Profiler Comparison Validation
+    comparison_summary = validate_pathways(llm_output, ground_truth, comparison_instruction)
 
-    validation_answer = validate(gpt_answer, ground_truth, instruction)
+    # Step 3: Extract pathways and perform Academic Validation
+    pathways, pathway_dict = extract_pathways(llm_output)
+    academic_results = academic_validation(pathways, pathway_dict, academic_instruction)
 
-    base_name = os.path.basename(last_file)
-    md_filename = os.path.join(output_directory, f"validation_{base_name}".replace(".txt", ".md"))
-    with open(md_filename, 'w', encoding="utf8") as f:
-        f.write(validation_answer)
+    # Step 4: Combine into a Markdown report
+    base_name = os.path.splitext(os.path.basename(latest_file))[0]
+    md_filename = os.path.join(output_directory, f"validation_{base_name}.md")
 
-    print(f"Markdown file generated: {md_filename}")
+    with open(md_filename, 'w', encoding="utf8") as md:
+        md.write(f"# Pathway Validation Report for {base_name}\n\n")
+        md.write("## g:Profiler Comparison Summary\n")
+        md.write(f"{comparison_summary}\n\n")
+        md.write("## Academic Validation of Pathways\n")
+        for pathway, genes, summary in academic_results:
+            md.write(f"### {pathway}\n")
+            md.write(f"**Genes involved:** {', '.join(genes)}\n\n")
+            md.write(f"{summary}\n\n")
+
+    print(f"Markdown validation report created: {md_filename}")
 
 
 if __name__ == "__main__":

@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gprofiler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/open_ai_demo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gprofiler.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/gprofiler.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/reference_chunks.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/reference_chunks.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/output/scores.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-with-rag-with-scope-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA-1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA_test-1.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-with-rag-with-scope-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-without-rag-without-scope-8.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA_test-1.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/documents.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/ground_truth_pathways.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/ground_truth_pathways.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/messages.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_all_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_all_files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.run_all_files">
+  <component name="RunManager" selected="Python.test_automated_comparison">
     <configuration name="Demo" type="PythonConfigurationType" factoryName="Python">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />

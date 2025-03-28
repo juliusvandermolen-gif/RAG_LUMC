@@ -1,10 +1,22 @@
 Answer:
-Synaptic Plasticity and Neural Signaling Pathway:
-Genes involved: Cntn6, Prss12, Pcsk5
+Synaptic Signaling and Plasticity Pathway:
+Genes involved: Cntn6, Prss12, Sema4f, Synpr, Ntn1, Srgap1, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Sema3g, Slitrk6, Drp2, Serpini1, Sncg, Sipa1l1, Lrrtm3, Efna5, Pam, Bace2, Gprc5b, Gprc5a, Dpysl5, Dpysl3
 
-Extracellular Matrix Remodeling in Neural Development Pathway:
-Genes involved: Adamts17, Qsox1, Zpld1, Cobll1, Tex101
+Neuronal Development and Differentiation Pathway:
+Genes involved: Nes, Msi1, Id2, Mef2c, Dyrk1a, Peg3, Igfbp3, Prx, Cdca7l, Mpz, Lrp2, Lifr, Met, Pmp22, Aff3, Taf9b, Magea4, Gldn, Alpl, Runx3, Lef1, Olfm2, Numb, Klf9, Vash1, Vrk1, Trim35, Pappa
 
-Neural Metabolic and Signaling Regulation Pathway:
-Genes involved: Aldh1a1, Gldc
+Extracellular Matrix and Cell Adhesion in Neural Tissue Pathway:
+Genes involved: Zpld1, Adamts17, Adamtsl1, Adamtsl3, Hapln1, Cobll1, Qsox1, Marveld1, Sbspon, Col9a3, Col15a1, Col20a1, Col11a1, Cdh13, Pkp1, Htra1, Chst2, Mfap5, Hs6st2, Pxdn, Matn3, Emilin1, Col8a2, Bgn, Emp2, C1qtnf1, Has2, Itga8, Itga7, Cldnd1
+
+Neural Signal Transduction and Ion Channel Function Pathway:
+Genes involved: Tuba4a, Tubb4a, Clca4l, Acta2, Myo1d, Grb14, P2ry2, Scn7a, Vopp1, Slc22a17, Tagln, Gnai1, Snx6, Prkd3, Itpripl1, Ppp1r14c, Ryr3, Septin4, Septin5, Rab10, Stard13, Chmp2b, Ano5, Inpp5a, Tpcn1, Gja1, Acap2, Tbccd1
+
+Neuroinflammatory and Stress Response Pathway:
+Genes involved: Atf3, Atf5, Ifnar1, Nlrp1a, Tril, Icoslg, Cxcl12, Defb29, Aif1l, Eif2ak2, Tnfrsf1a, Selplg, Ighm, CXCL14, Nfatc1
+
+Neural Metabolic and Mitochondrial Function Pathway:
+Genes involved: Aldh1a1, Gldc, Sqor, Pltp, Steap2, Tf, Manba, Serinc5, Apod, Gypc, Rrm2, Fth1, Pnpt1, Nampt, Ppard, Pgm1, Cers6, Hadhb, Psap, Rcn3, Dhrs1, Agpat5, Frrs1, Steap1
+
+Transcriptional and Post-transcriptional Regulation in Neural Cells Pathway:
+Genes involved: Sumo3, Ddx1, Aig1, Trim35, Ebf1, Zfp518a, Tent5c, Magec2l1, Gtf2e1
 

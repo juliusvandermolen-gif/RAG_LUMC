@@ -986,17 +986,25 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model="o3-mini"):
+def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model="o3-mini", **kwargs):
     answers = []
     for i in range(1, range_query):
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
-            if model.startswith("gpt-4"):
+            if model == "gpt-4o-mini-search-preview":
+                # For this model, temperature is not accepted.
+                response = client_open_ai.chat.completions.create(
+                    model=model,
+                    messages=messages,
+                    **kwargs
+                )
+            elif model.startswith("gpt-4"):
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
                     max_tokens=16384,
-                    temperature=0
+                    temperature=0,
+                    **kwargs
                 )
             elif model.startswith("o"):
                 adjusted_prompt = system_instruction_for_response + prompt
@@ -1006,13 +1014,15 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
                     messages=messages,
                     max_completion_tokens=32768,  # For mini: 65536, for preview: 32768
                     reasoning_effort="high",
+                    **kwargs
                 )
             else:
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
                     max_tokens=16384,
-                    temperature=0
+                    temperature=0,
+                    **kwargs
                 )
             answer = response.choices[0].message.content
         except Exception as e:
@@ -1027,6 +1037,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
         answers.append(answer)
 
     return answers[-1] if answers else None
+
 
 
 def query_gemini(system_instruction, prompt):
