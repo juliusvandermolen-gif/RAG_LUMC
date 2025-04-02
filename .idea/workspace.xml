@@ -6,19 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/system_instruction_comparison_pathways.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/system_instruction_comparison_pathways.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GSEA/external_gene_data/gene_descriptions.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GSEA/external_gene_data/rat_genes_consolidated.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GSEA/external_gene_data/wikipathways_synonyms_Rattus_norvegicus.gmt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GSEA/external_gene_data/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/reference_chunks.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/reference_chunks.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/file_log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/output/scores.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA-1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA_test-1.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/answer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA_test-1.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/documents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/ground_truth_pathways.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/ground_truth_pathways.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/messages.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_all_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_all_files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -46,7 +52,6 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Python.Demo.executor&quot;: &quot;Run&quot;,
     &quot;Python.RAG.executor&quot;: &quot;Run&quot;,
     &quot;Python.RAG_LUMC.executor&quot;: &quot;Run&quot;,
     &quot;Python.RAG_workflow.executor&quot;: &quot;Run&quot;,
@@ -54,10 +59,7 @@
     &quot;Python.automated_validation.executor&quot;: &quot;Run&quot;,
     &quot;Python.hugginface_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.insta.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_all_files.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_automated_comparison.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_python_workflow.executor&quot;: &quot;Run&quot;,
     &quot;Python.visualize_length.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -65,7 +67,7 @@
     &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
     &quot;git-widget-placeholder&quot;: &quot;automated__validation&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/test_rag/RAG_LUMC/open_ai_demo.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mathi/Downloads&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -74,30 +76,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.test_automated_comparison">
-    <configuration name="Demo" type="PythonConfigurationType" factoryName="Python">
-      <module name="RAG" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="rag" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/open_ai_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.automated_validation">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
@@ -129,7 +108,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="rag" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -165,75 +143,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_all_files" type="PythonConfigurationType" factoryName="Python">
-      <module name="RAG" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="rag" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_all_files.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_automated_comparison" type="PythonConfigurationType" factoryName="Python">
-      <module name="RAG" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="rag" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/automated_validation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_python_workflow" type="PythonConfigurationType" factoryName="Python">
-      <module name="RAG" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="rag" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAG_workflow.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="visualize_length" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
@@ -257,20 +166,16 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Demo" />
       <item itemvalue="Python.RAG_workflow" />
       <item itemvalue="Python.automated_validation" />
       <item itemvalue="Python.insta" />
-      <item itemvalue="Python.run_all_files" />
-      <item itemvalue="Python.test_automated_comparison" />
-      <item itemvalue="Python.test_python_workflow" />
       <item itemvalue="Python.visualize_length" />
     </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-f2b3473ffc3f-fab4200a9dfa-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-243.25659.44" />
+        <option value="bundled-python-sdk-559ba0cadc45-1e0160e1c7f0-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-241.15989.62" />
       </set>
     </attachedChunks>
   </component>

@@ -51,6 +51,10 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.
 
 
 def load_config(filename):
+    """
+    Load and process a JSON configuration file, escaping newline characters in string literals,
+    and return the resulting configuration dictionary.
+    """
     with open(filename, 'r', encoding='utf-8') as config_file:
         raw_content = config_file.read()
 
@@ -140,20 +144,21 @@ def compute_file_hash(file_path, block_size=65536):
 def initialize_gene_list(max_genes, fdr_threshold, excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
                          de_filter_option="combined"):
     """
-    Creates a list of genes, taken from the file, based on filters
+    Creates a list of genes from the specified Excel file based on filtering criteria.
+
     Args:
-        excel_file_path: The path to the excel file.
-        de_filter_option: The filter that says either "combined" or "separate", based on whether the up and down
-         regulated should be combined or separated.
+        excel_file_path: The path to the Excel file.
+        de_filter_option: Specifies whether to combine or separate up- and down-regulated genes.
+        max_genes: The maximum number of genes to process.
+        fdr_threshold: The threshold for the false discovery rate (FDR).
 
     Returns:
         A tuple containing:
-        - gene_list: The list of genes, separated by comma.
-        - regulation: A string indicating the regulation of the genes ('upregulated', 'downregulated').
-        - num_genes: The number of genes processed.
-
+            - gene_list: A comma-separated string of gene names.
+            - regulation: A string indicating the regulation type ('upregulated', 'downregulated', or 'combined').
+            - num_genes: The number of genes processed.
     """
-    results = process_excel_data(excel_file_path, de_filter_option, max_genes,fdr_threshold)
+    results = process_excel_data(excel_file_path, de_filter_option, max_genes, fdr_threshold)
     if results:
         gene_list_string, regulation, num_genes = results[0]
     else:
@@ -182,8 +187,6 @@ def process_excel_data(excel_file_path, de_filter_option, max_genes, fdr_thresho
     """
     data = pd.read_excel(excel_file_path)
     results = []
-    #max_genes = 250 #remove
-    print(max_genes, fdr_threshold)
     data = data.iloc[:max_genes]
 
     if de_filter_option == "combined":
@@ -236,8 +239,6 @@ def extract_gene_descriptions(gene_list_string,
     gene_names_set = set(gene_names)
 
     print(f"Total genes to process: {len(gene_names_set)}")
-    print(f"Genes: {gene_names_set}")
-
     gene_description_dict = {}
 
     if not os.path.exists(gene_data_file):
@@ -269,6 +270,15 @@ def extract_gene_descriptions(gene_list_string,
 
 @timer
 def load_gene_id_cache(file_path):
+    """
+    Loads the gene ID cache from a JSON file.
+
+    Args:
+        file_path: The path to the JSON file containing the gene ID cache.
+
+    Returns:
+        A dictionary with the gene ID cache, or an empty dictionary if the file does not exist or cannot be decoded.
+    """
     if os.path.exists(file_path):
         with open(file_path, 'r', encoding='utf-8') as gene_id_file:
             try:
@@ -282,6 +292,13 @@ def load_gene_id_cache(file_path):
 
 @timer
 def save_gene_id_cache(cache, file_path):
+    """
+    Saves the gene ID cache to a JSON file.
+
+    Args:
+        cache: The gene ID cache dictionary to save.
+        file_path: The path to the file where the cache should be saved.
+    """
     print(f"\n\n\nSaving cache to {file_path}\n\n")
     with open(file_path, 'w', encoding='utf-8') as gene_id_file:
         json.dump(cache, gene_id_file, indent=4)
@@ -289,6 +306,18 @@ def save_gene_id_cache(cache, file_path):
 
 @timer
 def search_genes(unknown_genes, gene_cache, cache_file):
+    """
+    Searches for gene symbols for a set of unknown genes using the MyGene.info API.
+    Updates the gene cache with resolved symbols and saves the updated cache.
+
+    Args:
+        unknown_genes: A collection of gene IDs that need symbol resolution.
+        gene_cache: A dictionary containing already resolved gene IDs.
+        cache_file: The path to the cache file.
+
+    Returns:
+        A dictionary mapping the original gene IDs to their resolved gene symbols.
+    """
     url = "https://mygene.info/v3/gene/"
     resolved_genes = {}
 
@@ -318,6 +347,20 @@ def search_genes(unknown_genes, gene_cache, cache_file):
 
 @timer
 def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
+    """
+    Converts gene IDs in a file to gene symbols using a cached mapping and by searching unknown genes via an API.
+    If the file is compressed, it is decompressed before processing.
+
+    Args:
+        file: The filename to process.
+        data_dir: The directory containing the file.
+        ncbi_json_dir: The directory where the gene ID cache is stored.
+
+    Returns:
+        A tuple containing:
+            - A list of processed lines with gene symbols.
+            - A list of gene IDs that remain unknown.
+    """
     cache_file = os.path.join(ncbi_json_dir, 'ncbi_id_to_symbol.json')
     gene_cache = load_gene_id_cache(cache_file)
     output_lines = []
@@ -388,6 +431,17 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
 # Database Functions
 @timer
 def initialize_database(db_path='./database/reference_chunks.db'):
+    """
+    Initializes the SQLite database and creates the 'chunks' table if it does not exist.
+
+    Args:
+        db_path: The path to the SQLite database file.
+
+    Returns:
+        A connection object to the SQLite database.
+    """
+    if not os.path.exists('./database'):
+        os.makedirs('./database')
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     cursor.execute('''
@@ -404,6 +458,18 @@ def initialize_database(db_path='./database/reference_chunks.db'):
 
 @timer
 def insert_chunk(conn, file_name, chunk_index, text):
+    """
+    Inserts a text chunk into the database.
+
+    Args:
+        conn: The SQLite database connection.
+        file_name: The name of the file from which the chunk was extracted.
+        chunk_index: The index of the chunk within the file.
+        text: The text content of the chunk.
+
+    Returns:
+        The row ID of the inserted chunk.
+    """
     cursor = conn.cursor()
     cursor.execute('''
         INSERT INTO chunks (file_name, chunk_index, text)
@@ -415,6 +481,15 @@ def insert_chunk(conn, file_name, chunk_index, text):
 
 @timer
 def fetch_chunks(conn):
+    """
+    Retrieves all chunks from the database.
+
+    Args:
+        conn: The SQLite database connection.
+
+    Returns:
+        A list of tuples containing the chunk ID and text.
+    """
     cursor = conn.cursor()
     cursor.execute('SELECT id, text FROM chunks')
     return cursor.fetchall()
@@ -422,6 +497,17 @@ def fetch_chunks(conn):
 
 @timer
 def fetch_chunks_by_ids(conn, ids):
+    """
+    Retrieves chunks from the database that match the specified IDs.
+
+    Args:
+        conn: The SQLite database connection.
+        ids: A list of chunk IDs to fetch.
+
+    Returns:
+        A list of text contents corresponding to the provided chunk IDs.
+    """
+
     cursor = conn.cursor()
     placeholder = ','.join(['?'] * len(ids))
     query = f"SELECT text FROM chunks WHERE id IN ({placeholder})"
@@ -433,11 +519,28 @@ def fetch_chunks_by_ids(conn, ids):
 # FAISS Functions
 @timer
 def save_faiss_index(index, index_path='./database/faiss_index.bin'):
+    """
+    Saves the FAISS index to a file.
+
+    Args:
+        index: The FAISS index to save.
+        index_path: The file path where the FAISS index will be saved.
+    """
     faiss.write_index(index, index_path)
 
 
 @timer
 def load_faiss_index(embedding_dim, index_path='./database/faiss_index.bin'):
+    """
+    Loads a FAISS index from a file. If the file does not exist, creates a new IndexIDMap based on an IndexFlatIP.
+
+    Args:
+        embedding_dim: The dimension of the embeddings.
+        index_path: The file path from which to load the FAISS index.
+
+    Returns:
+        A FAISS index with ID mapping.
+    """
     if os.path.exists(index_path):
         index = faiss.read_index(index_path)
         if not isinstance(index, faiss.IndexIDMap):
@@ -452,7 +555,17 @@ def load_faiss_index(embedding_dim, index_path='./database/faiss_index.bin'):
 
 @timer
 def initialize_faiss_index(embedding_dim, index_path):
-    """Load or recreate a FAISS index."""
+    """
+    Load or recreate a FAISS index using the specified embedding dimension and index path.
+    If the existing index is invalid, it is deleted and a new one is created.
+
+    Args:
+        embedding_dim: The dimension of the embeddings.
+        index_path: The file path for the FAISS index.
+
+    Returns:
+        A valid FAISS index.
+    """
     try:
         return load_faiss_index(embedding_dim, index_path=index_path)
     except ValueError:
@@ -467,6 +580,15 @@ def initialize_faiss_index(embedding_dim, index_path):
 # Chunking Functions
 @timer
 def chunk_documents(documents):
+    """
+    Splits documents into chunks by breaking them into non-empty lines.
+
+    Args:
+        documents: A list of document strings.
+
+    Returns:
+        A list of text chunks derived from the input documents.
+    """
     if not documents:
         print("No documents to chunk. Returning an empty list.")
         return []
@@ -487,6 +609,18 @@ def chunk_documents(documents):
 
 @timer
 def chunk_pdfs(single_document, gene_list=None, target_length=1000):
+    """
+    Splits the text content of a PDF document into chunks based on sentence tokenization and target length.
+    Optionally filters chunks based on the presence of any gene from a provided gene list.
+
+    Args:
+        single_document: A tuple containing the file name, content, and file hash.
+        gene_list: An optional list of gene names to filter chunks.
+        target_length: The target minimum length of each chunk in characters.
+
+    Returns:
+        A list of text chunks extracted from the document.
+    """
     file_name, content, file_hash = single_document[0]
     sentences = sent_tokenize(content)
     if not sentences:
@@ -518,6 +652,15 @@ def chunk_pdfs(single_document, gene_list=None, target_length=1000):
 # Embedding & Loading Functions
 @timer
 def load_file_log(log_path='./logs/file_log.json'):
+    """
+    Loads a file log from a JSON file, creating the log directory and file if necessary.
+
+    Args:
+        log_path: The path to the JSON file that stores the file log.
+
+    Returns:
+        A dictionary representing the file log.
+    """
     log_dir = os.path.dirname(log_path)
     if not os.path.exists(log_dir):
         try:
@@ -551,6 +694,13 @@ def load_file_log(log_path='./logs/file_log.json'):
 
 @timer
 def save_file_log(file_log, log_path='./logs/file_log.json'):
+    """
+    Saves the file log to a JSON file, ensuring the log directory exists.
+
+    Args:
+        file_log: The file log dictionary to save.
+        log_path: The path to the JSON file where the log will be saved.
+    """
     log_dir = os.path.dirname(log_path)
     if not os.path.exists(log_dir):
         try:
@@ -570,6 +720,15 @@ def save_file_log(file_log, log_path='./logs/file_log.json'):
 
 @timer
 def load_model_and_tokenizer(force_download=False):
+    """
+    Loads and returns a tokenizer and model from pretrained sources using the Transformers library.
+
+    Args:
+        force_download: If True, forces re-downloading of the model and tokenizer.
+
+    Returns:
+        A tuple containing the tokenizer and model.
+    """
     tokenizer = AutoTokenizer.from_pretrained(model_name,
                                               force_download=force_download)
 
@@ -580,6 +739,16 @@ def load_model_and_tokenizer(force_download=False):
 
 @timer
 def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
+    """
+    Loads documents from files in the specified directory that are either gzipped or in .gmt format.
+    Computes a file hash for each document and returns a list of documents with their metadata.
+
+    Args:
+        data_dir: The directory containing the gene data files.
+
+    Returns:
+        A list of tuples, each containing the file name, document content, and file hash.
+    """
     files = [
         gz_files for gz_files in os.listdir(data_dir)
         if
@@ -614,6 +783,16 @@ def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
 
 @timer
 def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
+    """
+    Loads PDF documents from the specified directory, skipping those already recorded in the file log.
+
+    Args:
+        pdf_dir: The directory containing PDF files.
+        file_log: An optional dictionary of previously processed files.
+
+    Returns:
+        A list of tuples, each containing the PDF file name, extracted content, and file hash.
+    """
     pdf_documents = []
     if not os.path.exists(pdf_dir):
         print(f"No PDF directory found at '{pdf_dir}'. Skipping PDF import.")
@@ -651,6 +830,20 @@ def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
 def embed_documents(conn, index, tokenizer, model, data_dir,
                     batch_size, log_path='./logs/file_log.json',
                     pdf_dir='./data/PDF'):
+    """
+    Embeds text from documents (both gzipped and PDF files) using a transformer model,
+    updates the FAISS index with the embeddings, and records file metadata in a log.
+
+    Args:
+        conn: The SQLite database connection.
+        index: The FAISS index to update.
+        tokenizer: The tokenizer for preparing text inputs.
+        model: The transformer model for generating embeddings.
+        data_dir: Directory containing gzipped documents.
+        batch_size: The batch size for embedding computation.
+        log_path: The path to the file log.
+        pdf_dir: Directory containing PDF files.
+    """
     file_log = load_file_log(log_path=log_path)
 
     files_documents = load_gz_files(data_dir=data_dir)
@@ -733,11 +926,29 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
 # BM25 and Query Functions
 @timer
 def tokenize(text):
+    """
+    Tokenizes the input text into lowercase words, excluding common stopwords.
+
+    Args:
+        text: The text string to tokenize.
+
+    Returns:
+        A list of tokens.
+    """
     return [word for word in re.findall(r'\b[\w-]+\b', text.lower()) if word not in stop_words]
 
 
 @timer
 def build_bm25_index(conn):
+    """
+    Builds a BM25 index for the text chunks stored in the database.
+
+    Args:
+        conn: The SQLite database connection.
+
+    Returns:
+        A tuple containing the BM25 index object, a list of chunk IDs, and a list of chunk texts.
+    """
     cursor = conn.cursor()
     cursor.execute('SELECT id, text FROM chunks')
     data = cursor.fetchall()
@@ -753,6 +964,21 @@ def build_bm25_index(conn):
 
 @timer
 def query_bm25_index(query_text, bm25_index, chunk_ids, top_k=1000):
+    """
+    Queries the BM25 index using the provided query text and returns the top scoring documents along with details.
+
+    Args:
+        query_text: The text query.
+        bm25_index: The BM25 index object.
+        chunk_ids: List of chunk IDs corresponding to the BM25 index.
+        top_k: The number of top results to return.
+
+    Returns:
+        A tuple containing:
+            - A list of top chunk IDs.
+            - A list of their corresponding scores.
+            - A dictionary with detailed token contributions for each chunk.
+    """
     query_tokens = tokenize(query_text)
     scores = bm25_index.get_scores(query_tokens)
     top_n = np.argsort(scores)[::-1][:top_k]
@@ -786,6 +1012,20 @@ def query_bm25_index(query_text, bm25_index, chunk_ids, top_k=1000):
 
 @timer
 def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download=False):
+    """
+    Computes the embedding for a query and searches the FAISS index to retrieve the closest document chunks.
+
+    Args:
+        query_text: The query string.
+        index: The FAISS index.
+        tokenizer: The tokenizer for preparing the query.
+        model: The transformer model for generating the query embedding.
+        top_k: The number of top results to retrieve.
+        force_download: If True, forces re-downloading of model/tokenizer if needed.
+
+    Returns:
+        A tuple containing the list of top document IDs and their corresponding distances.
+    """
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     loaded_model = AutoModel.from_pretrained(model_name, force_download=force_download)
     loaded_tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
@@ -812,6 +1052,19 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
 # Document Ranking and Combination
 @timer
 def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
+    """
+    Retrieves top documents from the FAISS index for each expanded query and computes average distances.
+
+    Args:
+        expanded_queries: A list of expanded query strings.
+        index: The FAISS index.
+        tokenizer: The tokenizer for processing the queries.
+        model: The transformer model for generating embeddings.
+        top_k: The number of top documents to retrieve per query.
+
+    Returns:
+        A list of tuples containing document IDs and their average distances.
+    """
     doc_distances = {}
 
     for eq in expanded_queries:
@@ -834,6 +1087,18 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
 
 @timer
 def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
+    """
+    Retrieves top documents from the BM25 index for each expanded query and aggregates their scores.
+
+    Args:
+        expanded_queries: A list of expanded query strings.
+        bm25_index: The BM25 index object.
+        chunk_ids: List of chunk IDs corresponding to the BM25 index.
+        top_k: The number of top documents to retrieve per query.
+
+    Returns:
+        A list of tuples where each tuple contains a document ID and its aggregated BM25 score and details.
+    """
     bm25_doc_scores = {}
 
     for eq in expanded_queries:
@@ -854,7 +1119,9 @@ def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
 
             if details['score'] > bm25_doc_scores[doc_id]['best_tokens_score']:
                 bm25_doc_scores[doc_id]['best_tokens_score'] = details['score']
-                bm25_doc_scores[doc_id]['tokens'] = details['tokens']
+                bm25_doc_scores[doc_id]['tokens'] = (
+                    ', '.join(details['tokens']) if isinstance(details['tokens'], list) else details['tokens']
+                )
 
     for doc_id, info in bm25_doc_scores.items():
         avg_score = sum(info['scores']) / len(info['scores'])
@@ -872,6 +1139,15 @@ def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
 def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
     """
     Combine BM25 and FAISS scores using specified weights.
+
+    Args:
+        top_bm25_docs: List of top documents from BM25.
+        top_faiss_docs: List of top documents from FAISS.
+        weight_faiss: Weight for FAISS scores.
+        weight_bm25: Weight for BM25 scores.
+
+    Returns:
+        A dictionary mapping document IDs to their combined weighted scores.
     """
     total_weight = weight_faiss + weight_bm25
     weight_faiss /= total_weight
@@ -898,9 +1174,23 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
 
 
 @timer
-@timer
 def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs):
-    """Rank documents and fetch top chunks from the database."""
+    """
+    Ranks documents based on combined RRF scores, retrieves the corresponding text chunks from the database,
+    and returns them in ranked order.
+
+    Args:
+        rrf_scores: A dictionary of combined scores for documents.
+        conn: The SQLite database connection.
+        top_faiss_docs: List of top documents from FAISS.
+        top_bm25_docs: List of top documents from BM25.
+        amount_docs: The number of documents to retrieve.
+
+    Returns:
+        A tuple containing:
+            - A list of ordered document chunks.
+            - A dictionary with combined document details and their rankings.
+    """
     sorted_rrf_scores = sorted(rrf_scores.items(),
                                key=lambda item: item[1]['score'],
                                reverse=True)[:amount_docs]
@@ -934,6 +1224,16 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs,
 # Query Expansion and Response Generation
 @timer
 def query_expansion(query_text, number):
+    """
+    Expands a given query into a specified number of alternative queries by generating synonyms and related phrases.
+
+    Args:
+        query_text: The original user query.
+        number: The number of expanded queries to generate.
+
+    Returns:
+        A list of expanded query strings.
+    """
     system_instruction = f"""You are an expert in query expansion for biomedical literature searches. Given a user's 
 query, generate exactly {number} alternative queries that capture related concepts, synonyms, and relevant expansions. 
 Each alternative query should be concise and directly related to the original query.
@@ -987,6 +1287,22 @@ Also, consider the context of the user query and ensure that the expanded querie
 
 
 def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model="o3-mini", **kwargs):
+    """
+    Queries the OpenAI API using provided messages and parameters, attempting multiple times if necessary.
+    Optionally saves responses to a file.
+
+    Args:
+        messages: A list of message dictionaries for the conversation.
+        system_instruction_for_response: System-level instruction for the API.
+        prompt: The user prompt to send.
+        save: A boolean indicating whether to save the response.
+        range_query: The number of query attempts.
+        model: The OpenAI model to use.
+        **kwargs: Additional parameters to pass to the API call.
+
+    Returns:
+        The final answer received from the API, or None if all attempts fail.
+    """
     answers = []
     for i in range(1, range_query):
         try:
@@ -1039,8 +1355,18 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
     return answers[-1] if answers else None
 
 
-
 def query_gemini(system_instruction, prompt):
+    """
+    Queries the Gemini API using the provided system instruction and prompt.
+    Saves each response to a file and returns the last answer generated.
+
+    Args:
+        system_instruction: The system-level instruction for Gemini.
+        prompt: The user prompt.
+
+    Returns:
+        The final answer received from the Gemini API, or None if unsuccessful.
+    """
     model = genai.GenerativeModel("gemini-1.5-pro")
     output_filename = "./output/test_files/all_answers_gemini.txt"
     answers = []
@@ -1067,6 +1393,16 @@ def query_gemini(system_instruction, prompt):
 
 
 def query_claude(messages):
+    """
+    Queries Anthropic's Claude model using the provided conversation messages.
+    Saves the response to a file and returns the final answer.
+
+    Args:
+        messages: A list of message dictionaries for the conversation.
+
+    Returns:
+        The final answer received from Claude, or None if unsuccessful.
+    """
     claude_model = "claude-3-5-sonnet-20241022"
     output_filename = "./output/test_files/all_answers_claude.txt"
     answers = []
@@ -1114,6 +1450,37 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
                           weight_faiss, weight_bm25,
                           system_instruction_for_response,
                           api_type='openai'):
+    """
+    Generates a response from a language model by performing the following steps:
+    - Expanding the input query.
+    - Retrieving relevant documents using FAISS and BM25.
+    - Combining scores using weighted reciprocal rank fusion (RRF).
+    - Constructing a prompt with the retrieved documents.
+    - Querying the specified LLM API (OpenAI, Claude, or Gemini).
+
+    Args:
+        query_text: The original user query.
+        gene_descriptions_string: A string of gene descriptions.
+        gene_list_string: A comma-separated string of gene names.
+        conn: The SQLite database connection.
+        index: The FAISS index.
+        tokenizer: The tokenizer for the transformer model.
+        model: The transformer model used for embeddings.
+        bm25_index: The BM25 index object.
+        bm25_chunk_ids: List of chunk IDs corresponding to the BM25 index.
+        weight_faiss: Weight for FAISS scores.
+        weight_bm25: Weight for BM25 scores.
+        system_instruction_for_response: The system instruction to guide the LLM response.
+        api_type: The API type to use ('openai', 'claude', or 'gemini').
+
+    Returns:
+        A tuple containing:
+            - The generated answer.
+            - A list of document references.
+            - The combined RRF scores.
+            - BM25 scores.
+            - FAISS scores.
+    """
     # Expand the retrieval query
     expanded_queries = query_expansion(query_text, number=number_of_expansions)
     print(f"Expanded query: {expanded_queries}")
@@ -1185,6 +1552,24 @@ def generate_response_and_save(query,
                                bm25_index, bm25_chunk_ids,
                                weight_faiss, weight_bm25,
                                system_instruction_for_response):
+    """
+    Generates a response from an LLM using the provided query and gene information,
+    saves the answer and associated scores to files, and closes the database connection.
+
+    Args:
+        query: The original user query.
+        gene_descriptions_string: A string of gene descriptions.
+        gene_list_string: A comma-separated string of gene names.
+        conn: The SQLite database connection.
+        index: The FAISS index.
+        tokenizer: The tokenizer for the transformer model.
+        model: The transformer model used for embeddings.
+        bm25_index: The BM25 index object.
+        bm25_chunk_ids: List of chunk IDs corresponding to the BM25 index.
+        weight_faiss: Weight for FAISS scores.
+        weight_bm25: Weight for BM25 scores.
+        system_instruction_for_response: The system instruction for generating the LLM response.
+    """
     answer, document_references, rrf_scores, bm25_scores, faiss_scores = generate_llm_response(
         query, gene_descriptions_string, gene_list_string,
         conn, index, tokenizer, model,
@@ -1205,6 +1590,14 @@ def generate_response_and_save(query,
 # File Saving and Processing Helpers
 @timer
 def save_answer_to_file(answer, document_references, file_name="./output/text_files/answer.txt"):
+    """
+    Saves the generated answer and associated document references to text files.
+
+    Args:
+        answer: The generated answer string.
+        document_references: A list of document reference strings.
+        file_name: The file path where the answer will be saved.
+    """
     with open(file_name, "w", encoding='utf-8') as answer_file:
         answer_file.write(f"Answer:\n{answer}\n\n")
     print(f"Answer saved to {file_name}")
@@ -1215,6 +1608,13 @@ def save_answer_to_file(answer, document_references, file_name="./output/text_fi
 
 @timer
 def process_files_in_directory(data_dir, ncbi_json_dir):
+    """
+    Processes all .gmt.gz files in the given directory by converting gene IDs to symbols and logging unknown genes.
+
+    Args:
+        data_dir: The directory containing the files to process.
+        ncbi_json_dir: The directory to store JSON cache files for gene IDs.
+    """
     """Process all .gmt.gz files in the given directory."""
     for file in os.listdir(data_dir):
         full_file_path = os.path.join(data_dir, file)
@@ -1230,7 +1630,20 @@ def process_files_in_directory(data_dir, ncbi_json_dir):
 @timer
 def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
                              batch_size, log_path, index_path):
-    """Embed documents, save to FAISS index, and close connection."""
+    """
+    Embeds documents from the specified directory, updates the FAISS index with the embeddings,
+    and then saves the updated index and closes the database connection.
+
+    Args:
+        index: The FAISS index.
+        conn: The SQLite database connection.
+        tokenizer: The tokenizer for processing text.
+        model: The transformer model for embedding computation.
+        data_dir: The directory containing the documents.
+        batch_size: The batch size for processing documents.
+        log_path: The file path for the file log.
+        index_path: The file path to save the FAISS index.
+    """
     embed_documents(conn, index, tokenizer, model, data_dir=data_dir,
                     batch_size=batch_size, log_path=log_path)
     save_faiss_index(index, index_path=index_path)
@@ -1240,7 +1653,13 @@ def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
 @timer
 def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./output/scores.xlsx"):
     """
-    Export combined RRF, BM25, and FAISS scores to an Excel file.
+    Exports combined RRF, BM25, and FAISS scores to an Excel file.
+
+    Args:
+        rrf_scores: A dictionary of RRF scores.
+        bm25_scores: A dictionary of BM25 scores.
+        faiss_scores: A dictionary of FAISS scores.
+        file_name: The file path where the Excel file will be saved.
     """
     all_doc_ids = set(rrf_scores.keys()).union(bm25_scores.keys()).union(faiss_scores.keys())
 
@@ -1269,7 +1688,11 @@ def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./o
 @timer
 def save_scores_to_file(scores, file_name):
     """
-    Save scores to a text file, including tokens that contributed to the score.
+    Saves scores to a text file, including details about tokens that contributed to each score.
+
+    Args:
+        scores: A dictionary containing scores and token details for each document/chunk.
+        file_name: The file path where the scores will be saved.
     """
     with open(file_name, "w", encoding='utf-8') as scores_file:
         for doc_id, details in scores.items():
@@ -1286,10 +1709,6 @@ def save_scores_to_file(scores, file_name):
             else:
                 f.write(f"Chunk ID: {doc_id}, Score: {details}\n\n")
     print(f"Scores saved to {file_name}")
-
-
-
-
 
 
 @timer
@@ -1311,9 +1730,10 @@ def main():
     print(f"Using config: {config_name}")
 
     gene_list_string, regulation, num_genes = initialize_gene_list(max_genes=max_genes, fdr_threshold=fdr_threshold,
-        excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
-        de_filter_option="combined",
-    )
+                                                                   excel_file_path=r".\data\GSEA\genes_of_interest"
+                                                                                   r"\PMP22_VS_WT.xlsx",
+                                                                   de_filter_option="combined",
+                                                                   )
 
     print(f"Regulation: {regulation}")
 

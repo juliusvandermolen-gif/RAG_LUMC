@@ -99,7 +99,8 @@ def academic_validation(pathways, pathway_dict, academic_instruction):
         prompt = (
             f"For the biological pathway '{pathway}', validate the involvement of the genes: {', '.join(genes)}. "
             "Check academic databases such as PubMed, Google Scholar, and GeneCards. "
-            "Summarize evidence per gene with citations (DOIs or URLs). Explicitly state if no evidence is found for a gene."
+            "Summarize evidence per gene with citations (DOIs or URLs). Explicitly state if no evidence is found for "
+            "a gene."
         )
         messages = [
             {"role": "system", "content": academic_instruction},

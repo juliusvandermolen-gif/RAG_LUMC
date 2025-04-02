@@ -4,6 +4,7 @@ import platform
 import subprocess
 import os
 
+
 def resolve_config_name(default="GSEA"):
     """
     Check sys.argv for an unknown flag (like --GSEA_test).
@@ -17,6 +18,7 @@ def resolve_config_name(default="GSEA"):
             return arg[2:]
     return default
 
+
 # Determine the configuration name based on command-line arguments.
 CONFIG_NAME = resolve_config_name("GSEA")
 CONFIG_PATH = f"./configs_system_instruction/{CONFIG_NAME}.json"
@@ -24,6 +26,7 @@ CONFIG_PATH = f"./configs_system_instruction/{CONFIG_NAME}.json"
 print(platform.system())
 if platform.system() == "Windows":
     from asyncio import WindowsSelectorEventLoopPolicy
+
     asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 
 print(f"Using config: {CONFIG_NAME}")
