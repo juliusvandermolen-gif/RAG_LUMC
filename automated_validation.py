@@ -138,8 +138,7 @@ def main():
             academic_instruction = f.read().strip()
     else:
         print("Academic instruction file not found. Exiting program")
-        quit()
-
+        sys.exit(1)
     try:
         llm_output, latest_file = read_latest_llm_output(answer_dir)
     except FileNotFoundError as e:
