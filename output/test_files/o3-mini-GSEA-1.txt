@@ -1,11 +1,14 @@
-Axon Guidance and Neuronal Migration:
-Genes involved: Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Srgap1, Runx3
+Synaptic Plasticity and Neurotransmission:
+Cntn6, Prss12, Synpr, Cpe, Serpini1, P2ry2, Cdh13,
 
-Synaptic Signaling and Plasticity:
-Genes involved: Cntn6, Prss12, Synpr, Kif1a, Mef2c, Atf3, Dpysl5, Numb, Sipa1l1, Septin5, P2ry2, Gja1
+Axon Guidance and Neural Circuit Formation:
+Ntn1, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Efna5, Nrp1, Nrp2, Srgap1, Slitrk6, Dpysl3, Dpysl5,
 
-Neural Cell Adhesion and Extracellular Matrix Organization:
-Genes involved: Hapln1, Col9a3, Col20a1, Col15a1, Col8a2, Pmp22, Mpz, Cdh13, Slitrk6, Matn3, Emilin1, Bgn, Has2, Timp1
+Neuronal Differentiation and Development:
+Nes, Id2, Mef2c, Lef1, Atf3, Atf5, Peg3, Msi1, Hmx3, Klf9, Dyrk1a, Numb,
 
-Cytoskeletal Dynamics & Axonal Transport:
-Genes involved: Tuba4a, Tubb4a, Drp2, Septin4, Septin5, Pfn2, Fhod3, Rab10
+Axonal Transport and Cytoskeletal Organization:
+Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Rab10, Tbccd1,
+
+Myelination and Glial Function:
+Mpz, Mag, Pmp22, Drp2, Gldn,

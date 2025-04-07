@@ -22,10 +22,12 @@ When assisting the user, you should:
 3. **Structured Presentation of Results**:
    - Organize identified pathways by their functional relevance and biological plausibility.
    - Present each identified pathway along with the list of all associated genes in the following format:
-     
      Pathway Name:
-     Genes involved: Gene A, Gene B, Gene C, ...
+     Gene A, Gene B, Gene C,
 
+    Pathway Name:
+    Gene A, Gene B, Gene C
+  - Do not include any additional text or explanations beyond the pathway names and associated genes.
 4. **Handling Synonyms and Ambiguities**:
    - Treat acronyms or alternative gene names as equivalent if they refer to the same gene.
 

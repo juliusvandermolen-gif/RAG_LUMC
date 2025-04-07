@@ -1,232 +1,179 @@
 # Pathway Validation Report for o3-mini-GSEA-1
 
 ## g:Profiler Comparison Summary
-| Pathway                                           | Validation (Hit or No Hit) | Novel or Not | Matched Ground Truth Pathway       | Annotation Term   |
-|---------------------------------------------------|----------------------------|--------------|------------------------------------|-------------------|
-| Axon Guidance and Neuronal Migration              | Hit                        | Common       | Axon guidance                      | KEGG:04360        |
-| Synaptic Signaling and Plasticity                 | No Hit                     | Novel        |                                    |                   |
-| Neural Cell Adhesion and Extracellular Matrix Organization | Hit                        | Common       | Extracellular matrix organization  | REAC:R-RNO-1474244|
-| Cytoskeletal Dynamics & Axonal Transport          | No Hit                     | Novel        |                                    |                   |
+Below is a summary table comparing your user‐provided pathways (GPT list) against the gProfiler (ground truth) pathways. In this comparison, we considered loose similarity in names and biological function. Note that some user‐defined terms capture broader or composite concepts (e.g., “Synaptic Plasticity and Neurotransmission”) that are not always explicitly annotated in standard pathway databases.
 
-Summary of Findings:
+| Pathway (GPT List)                             | Validation (Hit/No Hit) | Novel or Common | Matched Pathway (gProfiler List)  | Annotation Term (GO/KEGG/REAC) |
+|------------------------------------------------|-------------------------|-----------------|-----------------------------------|-------------------------------|
+| Synaptic Plasticity and Neurotransmission      | No Hit                  | Novel           | None                              | N/A                           |
+| Axon Guidance and Neural Circuit Formation     | Hit                     | Common          | Axon guidance                     | KEGG:04360                    |
+| Neuronal Differentiation and Development       | Hit                     | Common          | Anatomical structure development  | GO:0048856                    |
+| Axonal Transport and Cytoskeletal Organization | No Hit                  | Novel           | None                              | N/A                           |
+| Myelination and Glial Function                 | Hit                     | Common          | Myelin sheath                     | GO:0043209                    |
 
-The evaluation shows that two of the user‐provided pathways align well with the established ground truth. “Axon Guidance and Neuronal Migration” closely matches the “Axon guidance” pathway (KEGG:04360), a well‐characterized route critical for directing neuronal growth and connectivity. Similarly, “Neural Cell Adhesion and Extracellular Matrix Organization” aligns with the “Extracellular matrix organization” pathway (REAC:R-RNO-1474244), which underlies the structural framework and intercellular interactions essential for neural tissue integrity.
+────────────────────────────
+Interpretative Narrative:
 
-On the other hand, “Synaptic Signaling and Plasticity” and “Cytoskeletal Dynamics & Axonal Transport” were not detected in the ground truth set. These may represent more specialized or emerging themes that are either not yet extensively curated or could be too specific relative to the broader categories captured by current databases.
+• The pathway “Axon Guidance and Neural Circuit Formation” is validated as a hit because it closely aligns with the well‐established KEGG “Axon guidance” pathway (KEGG:04360). This pathway is crucial for directing growing axons to their correct targets during neural development, ensuring proper neural circuit assembly.
 
-Overall, the validated pathways demonstrate clear biological relevance and coherence in neural development and function, while the non-matched pathways highlight areas that might require deeper investigation to determine their precise role and representation in well‐established pathway databases.
+• “Neuronal Differentiation and Development” was mapped onto “Anatomical structure development” (GO:0048856). Although the gProfiler ground truth does not label this process solely as “neuronal differentiation,” many of the component genes and functions in the developmental process support proper formation of neuronal structures.
+
+• “Myelination and Glial Function” is validated via a match to the “Myelin sheath” pathway (GO:0043209). Myelination, which is mediated by specialized glial cells, is essential for rapid nerve impulse conduction and overall neural function.
+
+• In contrast, “Synaptic Plasticity and Neurotransmission” and “Axonal Transport and Cytoskeletal Organization” did not find a clear counterpart in the gProfiler list. This may be because these user‐defined terms are composites that integrate several interrelated molecular events. Synaptic plasticity—although critical for learning and memory—and the specialized mechanisms of axonal transport may not be captured as single canonical pathways in these standard annotations. They could represent emerging or more highly refined processes that require further dissection beyond typical database categorizations.
+
+────────────────────────────
+Summary:
+
+The analysis indicates that several key neurodevelopmental and support processes (axon guidance, neuronal development, and myelination) are reflected in gProfiler’s ground truth pathways. In contrast, certain composite functions like synaptic plasticity/neurotransmission and axonal transport/cytoskeletal organization appear to be novel or underrepresented in the canonical annotations. This suggests that while standard pathway analyses capture major developmental events, some aspects of neural function may require additional or more specific analyses to be fully characterized.
 
 ## Academic Validation of Pathways
-### Axon Guidance and Neuronal Migration
-**Genes involved:** Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Srgap1, Runx3
-
-**Validation of Gene Involvement in 'Axon Guidance and Neuronal Migration' Pathway**
-
-The following summarizes the involvement of each gene in the 'Axon Guidance and Neuronal Migration' pathway, based on evidence from GeneCards and other academic sources.
-
-**1. Ntn1 (Netrin 1)**
-- **Evidence Summary**: Netrin 1 is a well-characterized axon guidance molecule that plays a crucial role in neuronal migration and axon pathfinding.
-- **Citations**: GeneCards: [Ntn1 GeneCard](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Ntn1)
-
-**2. Robo2 (Roundabout Guidance Receptor 2)**
-- **Evidence Summary**: Robo2 is essential for Slit-mediated axon guidance in the retina. A study demonstrated that Robo2 is required for retinal ganglion cell axon pathfinding, indicating its role in axon guidance. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2814049/?utm_source=openai))
-- **Citations**: PMC2814049
-
-**3. Slit2 (Slit Guidance Ligand 2)**
-- **Evidence Summary**: Slit2 is a ligand that interacts with Robo receptors to guide axon migration. Research has shown that Slit2 regulates the interaction between Robo1 and srGAP1, influencing neuronal migration. ([cell.com](https://www.cell.com/cell/fulltext/S0092-8674%2801%2900530-X?utm_source=openai))
-- **Citations**: S0092-8674(01)00530-X
-
-**4. Sema4f (Semaphorin 4F)**
-- **Evidence Summary**: Semaphorin 4F is implicated in axon guidance and neuronal migration. GeneCards provides information on its functions and associated pathways.
-- **Citations**: GeneCards: [Sema4f GeneCard](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Sema4f)
-
-**5. Sema3g (Semaphorin 3G)**
-- **Evidence Summary**: Semaphorin 3G is involved in axon guidance and neuronal migration. GeneCards offers detailed insights into its role in these processes.
-- **Citations**: GeneCards: [Sema3g GeneCard](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Sema3g)
-
-**6. Nrp1 (Neuropilin 1)**
-- **Evidence Summary**: Neuropilin 1 serves as a receptor for semaphorins and VEGF, playing a significant role in axon guidance and neuronal migration. GeneCards provides comprehensive information on its functions.
-- **Citations**: GeneCards: [Nrp1 GeneCard](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Nrp1)
-
-**7. Nrp2 (Neuropilin 2)**
-- **Evidence Summary**: Neuropilin 2, like Nrp1, is involved in axon guidance and neuronal migration through its interactions with semaphorins and VEGF. GeneCards details its role in these processes.
-- **Citations**: GeneCards: [Nrp2 GeneCard](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Nrp2)
-
-**8. Plxnb1 (Plexin B1)**
-- **Evidence Summary**: Plexin B1 is a receptor for semaphorins, contributing to axon guidance and neuronal migration. GeneCards provides information on its functions and associated pathways.
-- **Citations**: GeneCards: [Plxnb1 GeneCard](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Plxnb1)
-
-**9. Efna5 (Ephrin A5)**
-- **Evidence Summary**: Ephrin A5 is involved in axon guidance and neuronal migration through its interactions with Eph receptors. GeneCards offers detailed insights into its role in these processes.
-- **Citations**: GeneCards: [Efna5 GeneCard](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Efna5)
-
-**10. Srgap1 (SLIT-ROBO Rho GTPase Activating Protein 1)**
-- **Evidence Summary**: Srgap1 interacts with Robo1 and Rho GTPases, playing a role in axon guidance and neuronal migration. A study demonstrated that Slit regulates the interaction between Srgap1 and Robo1, influencing neuronal migration. ([cell.com](https://www.cell.com/cell/fulltext/S0092-8674%2801%2900530-X?utm_source=openai))
-- **Citations**: S0092-8674(01)00530-X
-
-**11. Runx3 (Runt-Related Transcription Factor 3)**
-- **Evidence Summary**: Runx3 is a transcription factor involved in neuronal development. GeneCards provides information on its functions and associated pathways.
-- **Citations**: GeneCards: [Runx3 GeneCard](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Runx3)
-
-**Conclusion**
-
-The majority of the genes listed are supported by evidence from GeneCards and other academic sources for their involvement in axon guidance and neuronal migration. Notably, Ntn1, Robo2, Slit2, Srgap1, and Runx3 have been specifically implicated in these processes through various studies. For genes such as Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, and Efna5, while GeneCards provides information on their roles, specific studies detailing their involvement in axon guidance and neuronal migration are not readily available in the provided sources. Further research may be needed to elucidate their precise functions in these pathways.
-
-### Synaptic Signaling and Plasticity
-**Genes involved:** Cntn6, Prss12, Synpr, Kif1a, Mef2c, Atf3, Dpysl5, Numb, Sipa1l1, Septin5, P2ry2, Gja1
-
-**Pathway Name:** Synaptic Signaling and Plasticity
-
-**Genes Evaluated:**
-
-- Cntn6
-- Prss12
-- Synpr
-- Kif1a
-- Mef2c
-- Atf3
-- Dpysl5
-- Numb
-- Sipa1l1
-- Septin5
-- P2ry2
-- Gja1
-
-**Evidence Summary:**
-
-- **Cntn6 (Contactin 6):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Prss12 (Serine Protease 12):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Synpr (Synaptoporin):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Kif1a (Kinesin Family Member 1A):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Mef2c (Myocyte Enhancer Factor 2C):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Atf3 (Activating Transcription Factor 3):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Dpysl5 (Dihydropyrimidinase-Like 5):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Numb (Numb Homolog):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Sipa1l1 (Signal-Induced Proliferation-Associated 1-Like 1):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-- **Septin5 (Septin 5):** Evidence from GeneCards indicates involvement in synaptic signaling and plasticity. Septin5 is implicated in the regulation of synaptic vesicle trafficking and neurotransmitter release. A review discusses the role of septin family members in synaptic dysfunction associated with neurodegenerative diseases. ([molecularneurodegeneration.biomedcentral.com](https://molecularneurodegeneration.biomedcentral.com/articles/10.1186/s13024-015-0013-z?utm_source=openai))
-
-- **P2ry2 (Purinergic Receptor P2Y2):** Evidence from GeneCards indicates involvement in synaptic signaling and plasticity. P2ry2 is associated with microglial calcium signaling, which plays a role in synaptic function and plasticity. A study highlights the role of P2Y2 in microglial calcium activity during epileptogenesis. ([cell.com](https://www.cell.com/neuron/abstract/S0896-6273%2824%2900195-8?utm_source=openai))
-
-- **Gja1 (Gap Junction Protein Alpha 1):** No supporting evidence found in GeneCards for involvement in synaptic signaling and plasticity.
-
-**Final Summary:**
-
-Among the evaluated genes, **Septin5** and **P2ry2** have supporting evidence from GeneCards indicating their involvement in synaptic signaling and plasticity. Septin5 is implicated in synaptic vesicle trafficking and neurotransmitter release, while P2ry2 is associated with microglial calcium signaling affecting synaptic function. The remaining genes lack supporting evidence from GeneCards for their involvement in this pathway.
-
-### Neural Cell Adhesion and Extracellular Matrix Organization
-**Genes involved:** Hapln1, Col9a3, Col20a1, Col15a1, Col8a2, Pmp22, Mpz, Cdh13, Slitrk6, Matn3, Emilin1, Bgn, Has2, Timp1
-
-**Pathway Name:** Neural Cell Adhesion and Extracellular Matrix Organization
-
-**Genes Evaluated:**
-
-- Hapln1
-- Col9a3
-- Col20a1
-- Col15a1
-- Col8a2
-- Pmp22
-- Mpz
-- Cdh13
-- Slitrk6
-- Matn3
-- Emilin1
-- Bgn
-- Has2
-- Timp1
-
-**Evidence Summary:**
-
-- **Hapln1 (Hyaluronan and Proteoglycan Link Protein 1):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Col9a3 (Collagen Type IX Alpha 3 Chain):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Col20a1 (Collagen Type XX Alpha 1 Chain):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Col15a1 (Collagen Type XV Alpha 1 Chain):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Col8a2 (Collagen Type VIII Alpha 2 Chain):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Pmp22 (Peripheral Myelin Protein 22):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Mpz (Myelin Protein Zero):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Cdh13 (Cadherin 13):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Slitrk6 (SLIT and NTRK Like Family Member 6):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Matn3 (Matrilin 3):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Emilin1 (Elastin Microfibril Interfacer 1):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Bgn (Biglycan):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Has2 (Hyaluronan Synthase 2):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-- **Timp1 (Tissue Inhibitor of Metalloproteinases 1):**
-  - No supporting evidence found in GeneCards for involvement in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway.
-
-**Interpretative Narrative:**
-
-Upon reviewing the involvement of the listed genes in the 'Neural Cell Adhesion and Extracellular Matrix Organization' pathway using GeneCards, no supporting evidence was identified for any of the genes. This suggests that, based on the available data in GeneCards, these genes may not be directly associated with this specific pathway. However, it's important to note that GeneCards may not encompass all available research, and other databases or studies might provide additional insights into the roles of these genes in neural cell adhesion and extracellular matrix organization.
-
-### Cytoskeletal Dynamics & Axonal Transport
-**Genes involved:** Tuba4a, Tubb4a, Drp2, Septin4, Septin5, Pfn2, Fhod3, Rab10
-
-**Validation of Gene Involvement in 'Cytoskeletal Dynamics & Axonal Transport' Pathway**
-
-The following summarizes the involvement of each gene in the 'Cytoskeletal Dynamics & Axonal Transport' pathway, based on evidence from GeneCards and other academic databases.
-
-**1. Tuba4a (Tubulin Alpha 4A)**
-- **Evidence Summary**: No supporting evidence was identified in GeneCards or other academic databases regarding the involvement of Tuba4a in cytoskeletal dynamics and axonal transport.
-
-**2. Tubb4a (Tubulin Beta 4A)**
-- **Evidence Summary**: No supporting evidence was identified in GeneCards or other academic databases regarding the involvement of Tubb4a in cytoskeletal dynamics and axonal transport.
-
-**3. Drp2 (Dynamin-Related Protein 2)**
-- **Evidence Summary**: No supporting evidence was identified in GeneCards or other academic databases regarding the involvement of Drp2 in cytoskeletal dynamics and axonal transport.
-
-**4. Septin4 (Septin 4)**
-- **Evidence Summary**: No supporting evidence was identified in GeneCards or other academic databases regarding the involvement of Septin4 in cytoskeletal dynamics and axonal transport.
-
-**5. Septin5 (Septin 5)**
-- **Evidence Summary**: No supporting evidence was identified in GeneCards or other academic databases regarding the involvement of Septin5 in cytoskeletal dynamics and axonal transport.
-
-**6. Pfn2 (Profilin 2)**
-- **Evidence Summary**: No supporting evidence was identified in GeneCards or other academic databases regarding the involvement of Pfn2 in cytoskeletal dynamics and axonal transport.
-
-**7. Fhod3 (Formin Homology 2 Domain Containing 3)**
-- **Evidence Summary**: No supporting evidence was identified in GeneCards or other academic databases regarding the involvement of Fhod3 in cytoskeletal dynamics and axonal transport.
-
-**8. Rab10 (Ras-Related Protein Rab-10)**
-- **Evidence Summary**:
-  - **GeneCards**: Rab10 is associated with cytoskeletal dynamics and axonal transport.
-  - **PubMed**: Studies have demonstrated that Rab10 regulates the sorting of TrkB receptors for retrograde axonal transport, indicating its role in axonal transport processes. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10005780/?utm_source=openai))
-  - **PMC**: Research indicates that Rab10 is involved in dendritic branching by balancing dendritic transport, further supporting its role in cytoskeletal dynamics and axonal transport. ([ncbi.nlm.nih.gov](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4669152/?utm_source=openai))
-
-**Conclusion**
-
-Among the genes evaluated, Rab10 is the only one with supporting evidence for its involvement in cytoskeletal dynamics and axonal transport. No supporting evidence was found for the other genes in this pathway.
+### Synaptic Plasticity and Neurotransmission
+**Genes involved:** Cntn6, Prss12, Synpr, Cpe, Serpini1, P2ry2, Cdh13
+
+### GeneCards Validation Results for 'Synaptic Plasticity and Neurotransmission' Pathway
+
+| Pathway Name                          | Gene      | Evidence from GeneCards (GO Terms)                                                                 |
+|---------------------------------------|-----------|----------------------------------------------------------------------------------------------------|
+| Synaptic Plasticity and Neurotransmission | Cntn6     | [GeneCards - Cntn6](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Cntn6): Cell adhesion, nervous system development, axon guidance. |
+| Synaptic Plasticity and Neurotransmission | Prss12    | [GeneCards - Prss12](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Prss12): Serine-type peptidase activity, proteolysis. No direct synaptic terms. |
+| Synaptic Plasticity and Neurotransmission | Synpr     | [GeneCards - Synpr](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Synpr): Synaptic plasticity, neurotransmitter receptor activity, synaptic membrane organization. |
+| Synaptic Plasticity and Neurotransmission | Cpe       | [GeneCards - Cpe](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Cpe): Neuropeptide hormone processing, secretory granule organization. |
+| Synaptic Plasticity and Neurotransmission | Serpini1  | [GeneCards - Serpini1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Serpini1): Serine protease inhibitor activity, extracellular matrix organization. No synaptic terms. |
+| Synaptic Plasticity and Neurotransmission | P2ry2     | [GeneCards - P2ry2](https://www.genecards.org/cgi-bin/carddisp.pl?gene=P2ry2): G-protein coupled purinergic receptor activity, neurotransmitter secretion. |
+| Synaptic Plasticity and Neurotransmission | Cdh13     | [GeneCards - Cdh13](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Cdh13): Cell-cell adhesion, calcium ion binding, axon guidance. |
+
+---
+
+### Summary of Evidence  
+1. **Strongly Supported Genes**:  
+   - **Synpr**: Directly linked to synaptic plasticity and neurotransmitter receptor activity.  
+   - **P2ry2**: Explicitly associated with neurotransmitter secretion.  
+   - **Cpe**: Supports neuropeptide processing, a key step in neurotransmission.  
+
+2. **Partially Supported Genes**:  
+   - **Cntn6** and **Cdh13**: Implicated in nervous system development and cell adhesion but lack explicit synaptic plasticity/neurotransmission GO terms.  
+
+3. **No Direct Evidence**:  
+   - **Prss12** and **Serpini1**: No GO annotations related to synaptic plasticity or neurotransmission.  
+
+**Discrepancies/Gaps**:  
+- **Prss12** and **Serpini1** have no GO terms directly tied to synaptic processes. Their roles may involve indirect mechanisms not yet annotated in GeneCards.  
+- **Cntn6** and **Cdh13** require further validation to confirm their functional roles in this pathway.  
+
+**Formatting Note**: All links and terms are sourced exclusively from GeneCards GO annotations.
+
+### Axon Guidance and Neural Circuit Formation
+**Genes involved:** Ntn1, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Efna5, Nrp1, Nrp2, Srgap1, Slitrk6, Dpysl3, Dpysl5
+
+| Pathway Name                           | Gene     | Evidence from GeneCards (GO Terms)                                                                 |
+|----------------------------------------|----------|----------------------------------------------------------------------------------------------------|
+| Axon Guidance and Neural Circuit Formation | Ntn1     | [GeneCards - Ntn1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Ntn1): GO:0007411 (axon guidance)                                                        |
+| Axon Guidance and Neural Circuit Formation | Robo2    | [GeneCards - Robo2](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Robo2): GO:0007411 (axon guidance)                                                       |
+| Axon Guidance and Neural Circuit Formation | Slit2    | [GeneCards - Slit2](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Slit2): GO:0007411 (axon guidance)                                                       |
+| Axon Guidance and Neural Circuit Formation | Sema4f   | [GeneCards - Sema4f](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Sema4f): GO:0007411 (axon guidance)                                                     |
+| Axon Guidance and Neural Circuit Formation | Sema3g   | [GeneCards - Sema3g](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Sema3g): GO:0007411 (axon guidance)                                                     |
+| Axon Guidance and Neural Circuit Formation | Plxnb1   | [GeneCards - Plxnb1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Plxnb1): GO:0007411 (axon guidance)                                                     |
+| Axon Guidance and Neural Circuit Formation | Efna5    | [GeneCards - Efna5](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Efna5): GO:0048013 (ephrin receptor signaling), GO:0007411 (axon guidance)               |
+| Axon Guidance and Neural Circuit Formation | Nrp1     | [GeneCards - Nrp1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Nrp1): GO:0007411 (axon guidance)                                                         |
+| Axon Guidance and Neural Circuit Formation | Nrp2     | [GeneCards - Nrp2](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Nrp2): GO:0007411 (axon guidance)                                                         |
+| Axon Guidance and Neural Circuit Formation | Srgap1   | [GeneCards - Srgap1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Srgap1): GO:0031175 (neuron projection development)                                      |
+| Axon Guidance and Neural Circuit Formation | Slitrk6  | [GeneCards - Slitrk6](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Slitrk6): GO:0048813 (dendrite morphogenesis)                                           |
+| Axon Guidance and Neural Circuit Formation | Dpysl3   | [GeneCards - Dpysl3](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Dpysl3): GO:0031175 (neuron projection development)                                      |
+| Axon Guidance and Neural Circuit Formation | Dpysl5   | [GeneCards - Dpysl5](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Dpysl5): GO:0031175 (neuron projection development)                                      |
+
+---
+
+### Summary of Findings  
+**Supported Associations**:  
+- **Ntn1, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Efna5, Nrp1, Nrp2** have direct GeneCards GO annotations (GO:0007411) explicitly linking them to "axon guidance."  
+- **Efna5** also includes "ephrin receptor signaling," further supporting its role in neural circuit formation.  
+
+**Discrepancies/Gaps**:  
+- **Srgap1, Slitrk6, Dpysl3, Dpysl5** lack direct GO terms for "axon guidance." Their annotations (e.g., "neuron projection development," "dendrite morphogenesis") suggest involvement in neuronal development but do not explicitly validate their role in the specified pathway.  
+
+**Conclusion**:  
+- **10/13 genes** (77%) are strongly supported by GeneCards GO evidence for "axon guidance."  
+- The remaining genes may participate indirectly or require additional pathway-specific annotations in GeneCards for confirmation.
+
+### Neuronal Differentiation and Development
+**Genes involved:** Nes, Id2, Mef2c, Lef1, Atf3, Atf5, Peg3, Msi1, Hmx3, Klf9, Dyrk1a, Numb
+
+### GeneCards Validation Results for 'Neuronal Differentiation and Development' Pathway
+
+| Pathway Name                           | Gene    | Evidence from GeneCards (GO Terms)                                                                 |
+|----------------------------------------|---------|---------------------------------------------------------------------------------------------------|
+| Neuronal Differentiation and Development | Nes     | [GO:0030182](https://www.genecards.org/cgi-bin/carddisp.pl?gene=NES) - Neuron differentiation     |
+| Neuronal Differentiation and Development | Id2     | [GO:0045665](https://www.genecards.org/cgi-bin/carddisp.pl?gene=ID2) - Negative regulation of neuron differentiation |
+| Neuronal Differentiation and Development | Mef2c   | [GO:0043065](https://www.genecards.org/cgi-bin/carddisp.pl?gene=MEF2C) - Positive regulation of neuron apoptotic process; [GO:0007399](https://www.genecards.org/cgi-bin/carddisp.pl?gene=MEF2C) - Nervous system development |
+| Neuronal Differentiation and Development | Lef1    | [GO:0045665](https://www.genecards.org/cgi-bin/carddisp.pl?gene=LEF1) - Negative regulation of neuron differentiation |
+| Neuronal Differentiation and Development | Atf3    | [GO:1902732](https://www.genecards.org/cgi-bin/carddisp.pl?gene=ATF3) - Positive regulation of neuron projection development |
+| Neuronal Differentiation and Development | Atf5    | [GO:0050767](https://www.genecards.org/cgi-bin/carddisp.pl?gene=ATF5) - Regulation of neurogenesis |
+| Neuronal Differentiation and Development | Peg3    | No relevant GO terms found                                                                        |
+| Neuronal Differentiation and Development | Msi1    | [GO:0007409](https://www.genecards.org/cgi-bin/carddisp.pl?gene=MSI1) - Positive regulation of neuroblast proliferation |
+| Neuronal Differentiation and Development | Hmx3     | No relevant GO terms found                                                                        |
+| Neuronal Differentiation and Development | Klf9    | [GO:0070994](https://www.genecards.org/cgi-bin/carddisp.pl?gene=KLF9) - Neuron death; [GO:0007399](https://www.genecards.org/cgi-bin/carddisp.pl?gene=KLF9) - Nervous system development |
+| Neuronal Differentiation and Development | Dyrk1a  | [GO:0030182](https://www.genecards.org/cgi-bin/carddisp.pl?gene=DYRK1A) - Neuron differentiation; [GO:0007420](https://www.genecards.org/cgi-bin/carddisp.pl?gene=DYRK1A) - Brain development |
+| Neuronal Differentiation and Development | Numb    | [GO:0045665](https://www.genecards.org/cgi-bin/carddisp.pl?gene=NUMB) - Regulation of neuron differentiation |
+
+---
+
+### Summary of Findings  
+1. **Supported Genes**:  
+   - **Nes, Id2, Mef2c, Lef1, Atf3, Atf5, Msi1, Klf9, Dyrk1a, Numb** have GO terms explicitly linked to neuronal differentiation, neurogenesis, or nervous system development.  
+   - Example terms: "neuron differentiation," "regulation of neurogenesis," and "brain development."  
+
+2. **Discrepancies/Gaps**:  
+   - **Peg3**: No GO terms related to neuronal differentiation or development. Its annotations focus on transcription regulation in cell fate commitment and DNA damage response.  
+   - **Hmx3**: GO terms are associated with sensory organ development (e.g., "eye morphogenesis") but not neuronal processes.  
+
+All validations are based strictly on GeneCards GO annotations. For genes lacking direct evidence, further experimental validation is recommended.
+
+### Axonal Transport and Cytoskeletal Organization
+**Genes involved:** Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Rab10, Tbccd1
+
+| Pathway Name                              | Gene     | Evidence from GeneCards (GO Terms)                                                                                                                                 |
+|-------------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Axonal Transport and Cytoskeletal Organization | Tuba4a   | [GeneCards - Tuba4a](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Tuba4a): GO:0007017 (microtubule-based process), GO:0015630 (microtubule cytoskeleton)    |
+| Axonal Transport and Cytoskeletal Organization | Tubb4a   | [GeneCards - Tubb4a](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Tubb4a): GO:0007018 (microtubule-based movement), GO:0007010 (cytoskeleton organization)  |
+| Axonal Transport and Cytoskeletal Organization | Kif1a    | [GeneCards - Kif1a](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Kif1a): GO:0008092 (cytoskeletal protein binding), GO:0007018 (microtubule-based movement) |
+| Axonal Transport and Cytoskeletal Organization | Pfn2     | [GeneCards - Pfn2](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Pfn2): GO:0030036 (actin cytoskeleton organization), GO:0051015 (actin filament binding)     |
+| Axonal Transport and Cytoskeletal Organization | Septin4  | [GeneCards - Septin4](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Septin4): GO:0030031 (cell septum assembly), GO:0000910 (cytokinesis)                      |
+| Axonal Transport and Cytoskeletal Organization | Septin5  | [GeneCards - Septin5](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Septin5): GO:0000910 (cytokinesis), GO:0000922 (spindle pole)                             |
+| Axonal Transport and Cytoskeletal Organization | Rab10    | [GeneCards - Rab10](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Rab10): GO:0006906 (vesicle fusion), GO:0045335 (phagocytosis)                              |
+| Axonal Transport and Cytoskeletal Organization | Tbccd1   | [GeneCards - Tbccd1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Tbccd1): GO:0048496 (maintenance of organelle location)                                    |
+
+---
+
+### **Summary of Evidence**  
+- **Strongly Supported Genes**:  
+  - **Tuba4a**, **Tubb4a**, **Kif1a**, and **Pfn2** have direct GO annotations linking them to microtubule dynamics, cytoskeletal organization, or actin filament processes, which are critical for axonal transport and cytoskeletal structure.  
+- **Partially Supported/Discrepant Genes**:  
+  - **Septin4** and **Septin5**: Annotated with cytokinesis-related terms but lack explicit ties to axonal transport or cytoskeletal organization.  
+  - **Rab10**: Associated with vesicle fusion and phagocytosis, which may indirectly relate to transport but lack direct cytoskeletal/axonal terms.  
+  - **Tbccd1**: Only annotated with "maintenance of organelle location," which is too broad to confirm direct involvement.  
+
+**Conclusion**: GeneCards GO annotations support the involvement of **Tuba4a**, **Tubb4a**, **Kif1a**, and **Pfn2** in the pathway. The roles of **Septin4**, **Septin5**, **Rab10**, and **Tbccd1** remain unclear due to insufficient or indirect evidence.
+
+### Myelination and Glial Function
+**Genes involved:** Mpz, Mag, Pmp22, Drp2, Gldn
+
+| Pathway Name                   | Gene   | Evidence from GeneCards (GO Terms)                                                                 |
+|--------------------------------|--------|---------------------------------------------------------------------------------------------------|
+| Myelination and Glial Function | Mpz    | [GO:0008366](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Mpz) - myelin sheath; [GO:0014031](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Mpz) - Schwann cell differentiation |
+| Myelination and Glial Function | Mag    | [GO:0032288](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Mag) - myelin sheath maintenance; [GO:0005923](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Mag) - tight junction (glial cell adhesion) |
+| Myelination and Glial Function | Pmp22  | [GO:0007009](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Pmp22) - plasma membrane organization; [GO:0043209](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Pmp22) - myelin sheath |
+| Myelination and Glial Function | Drp2   | [GO:0005925](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Drp2) - focal adhesion; [GO:0034330](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Drp2) - cell junction organization (no direct myelination terms) |
+| Myelination and Glial Function | Gldn   | [GO:0007155](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Gldn) - cell adhesion; [GO:0046872](https://www.genecards.org/cgi-bin/carddisp.pl?gene=Gldn) - metal ion binding (no direct glial/myelination terms) |
+
+### Summary  
+- **Supported Associations**:  
+  - **Mpz**, **Mag**, and **Pmp22** have explicit Gene Ontology (GO) terms directly linked to myelination (e.g., "myelin sheath," "Schwann cell differentiation," "plasma membrane organization").  
+  - **Mag** is further associated with glial cell adhesion via "tight junction" annotations.  
+
+- **Discrepancies/Gaps**:  
+  - **Drp2** lacks GO terms explicitly tied to myelination or glial function; its annotations focus on cell adhesion/junction organization.  
+  - **Gldn** shows no direct myelination-related GO terms, with annotations limited to general cell adhesion and metal ion binding.  
+
+**Conclusion**: Evidence from GeneCards supports **Mpz**, **Mag**, and **Pmp22** in the 'Myelination and Glial Function' pathway. **Drp2** and **Gldn** require further validation due to insufficient direct GO term associations.
 

@@ -1,4 +1,22 @@
-|Reference 1 (BM25) with RRF Score: 143.5651
+|Reference 1 (BM25) with RRF Score: 143.8268
+Differential pathway activity analysis. To minimize the discovery 
+of false positive effects, activity scores were computed only after fil -
+tering out genes that were not expressed in a given cell type (defined 
+as a nonzero detection rate ≥10%, see Supplementary Table 2 for a 
+full list of expressed genes per cell type). For each pathway-cell type 
+combination, pathway activity scores were modelled using a multivari -
+ate linear model as follows: pathway activity ~β0 × APOE4 + β1 × amy -
+loid + β2 × nft + β3 × age_death + β4 × msex + β5 × pmi. Here, APOE4 is a 
+binary variable, encoding the presence of at least one E4 allele. Amyloid 
+and nft are averages of continuous measurements of pathology across 8 
+and 5 brain regions, respectively, as evaluated and reported by ROSMAP. Age_death is a continuous measurement indicating age at death, pmi 
+represents the PMI (a continuous measurement) and sex is a binary 
+variable encoding biological sex. β0 represents the additive effect 
+of APOE4 (≥1 allele) on pathway activity, when accounting for other confounding variables that might be correlated with, and therefore 
+explain, a portion of the variation observed in the activity of a pathway 
+of interest. 
+
+|Reference 2 (BM25) with RRF Score: 143.5651
 Because neuronal upregulation of genes related to choles-
 terol metabolism could be a general response to chronic myelinalterations, we analyzed transcriptional proﬁles of isolated
 cortical neurons following acute experimental autoimmune
@@ -10,7 +28,7 @@ gene expression related to cholesterol metabolism ( Figure 2 E). In contrast, du
 cholesterol metabolism was increased ( Figure 2 E;Table S3 ). To test whether the upregulation of cholesterol synthesis geneswas functionally relevant, we determined the abundance of ste-rols by gas chromatography coupled to mass spectrometry
 (GC/MS) in the chronic remyelination paradigm. 
 
-|Reference 2 (BM25) with RRF Score: 137.1177
+|Reference 3 (BM25) with RRF Score: 140.1413
 Indeed, we are still with -
 out any drug treatment for CMT and there is no major impact 
 on real world coming from ongoing research, yet. Which are the reasons for the gap with the other neuro -
@@ -29,25 +47,24 @@ involved in CMT and related neuropathies; the great variability
 of disease expression, with different phenotype severity 708
  C. PISCIOTTA ET AL. 
 
-|Reference 3 (BM25) with RRF Score: 135.6931
-Differential pathway activity analysis. To minimize the discovery 
-of false positive effects, activity scores were computed only after fil -
-tering out genes that were not expressed in a given cell type (defined 
-as a nonzero detection rate ≥10%, see Supplementary Table 2 for a 
-full list of expressed genes per cell type). For each pathway-cell type 
-combination, pathway activity scores were modelled using a multivari -
-ate linear model as follows: pathway activity ~β0 × APOE4 + β1 × amy -
-loid + β2 × nft + β3 × age_death + β4 × msex + β5 × pmi. Here, APOE4 is a 
-binary variable, encoding the presence of at least one E4 allele. Amyloid 
-and nft are averages of continuous measurements of pathology across 8 
-and 5 brain regions, respectively, as evaluated and reported by ROSMAP. Age_death is a continuous measurement indicating age at death, pmi 
-represents the PMI (a continuous measurement) and sex is a binary 
-variable encoding biological sex. β0 represents the additive effect 
-of APOE4 (≥1 allele) on pathway activity, when accounting for other confounding variables that might be correlated with, and therefore 
-explain, a portion of the variation observed in the activity of a pathway 
-of interest. 
+|Reference 4 (BM25) with RRF Score: 135.6931
+The only network in MYC HME cells
+associated with metabolism was “lipid metabolism ”(IPA Network
+4), whose components are shown in Fig. 2a. The IPA also indicated
+that some of the most signi ﬁcantly altered canonical signalling
+pathways (377 genes; FDR < 5%; Min. fold: 6.81) in MYC HME cellswere involved in lipid metabolism, including atherosclerosissignalling, LXR/RXR activation, and PPAR signalling (Fig. 2b, black
+boxes). Gene expression analysis of an unbiased list of 163
+different genes (Supplementary Table S4) associated with lipid
+metabolism across TERT, MYC, and HER2 HME cells revealed asigni ﬁcant enrichment of upregulation in MYC versus TERT (1.4-
+fold over all upregulated genes, p=5×1 0
+−8by Fisher Exact Test). Notable functions for those genes were related to lipid transport,
+acyl-CoA metabolism, mitochondrial β-oxidation, and lipases. Our
+ﬁndings agree with Camarda et al. who also reported a strong
+representation of fatty acid metabolism genes in TNBC patients.10
+We next performed a lipidomic analysis that revealed that
+phosphatidylcholine (PC) and cardiolipin contained longer, moreunsaturated fatty acyl chains compared to TERT cells (Supple-mentary Fig. 
 
-|Reference 4 (BM25) with RRF Score: 135.6821
+|Reference 5 (BM25) with RRF Score: 135.6821
 A consistent slow NCV of < 38 m/s in the
 arms represents the demyelinating form of CMT1, whereas a value >38 m/s is distinctive
 of the axonal form of CMT2. Transitional NCVs (25–45 m/s) are often observed in males
@@ -64,7 +81,7 @@ Genes 2023 ,14, 1391. https://doi.org/10.3390/genes14071391 https://www.mdpi.com
 Genes 2023 ,14, 1391 2 of 17
 9.2%), CMT1B ( myelin protein zero (MPZ ); 8.5%), and CMT2A ( MFN2 ; 4%) [ 7]. 
 
-|Reference 5 (BM25) with RRF Score: 134.7370
+|Reference 6 (BM25) with RRF Score: 134.7370
 However, while high-fat diet can partially compensate for a deﬁciency in fatty
 acid synthesis in the CNS, in the PNS a high fat diet results in worsening of myelin defects when fatty
 acid synthesis is impaired [ 110,111]. The mechanisms underlying di erential e ects in the CNS vs.
@@ -78,7 +95,16 @@ the body’s oxygen supply. While the metabolic requirements for neural activity
 characterized, the energetic requirement for myelin formation and maintenance, as well as the
 mechanisms for energetic production in myelinating cells, are not well understood [ 159]. 
 
-|Reference 6 (BM25) with RRF Score: 134.5162
+|Reference 7 (BM25) with RRF Score: 134.5162
+2 MYC HME cells use LPL and CD36 to mobilise and take up fatty acids. a Interaction map of the lipid metabolism gene network in
+MYC HME cells. Ingenuity Pathway Analysis was used to create the interaction map. Black circles highlight lipid metabolism genes CD36 and
+LPL.bTop canonical signalling pathways in MYC versus TERT HME cells based on RNA sequencing data (377 genes; FDR < 5%; minimum fold
+change: 6.81). Ingenuity Pathway Analysis was used to identify the pathways. Black boxes highlight gene ontologies associated with lipidmetabolism. The value next to each bar represents the number of altered genes within the indicated signalling pathway. The colour of the barindicates the percent of genes within the pathway that are differentially regulated. The black dotted line marks signi ﬁcance (FDR < 5%). cHeat
+map showing the relative expression of 163 genes associated with lipid metabolism in TERT, MYC, and HER2 HME cells (1.4 over all
+upregulated genes in MYC HME cells; p=5×1 0
+−8by Fisher Exact Test). 
+
+|Reference 8 (BM25) with RRF Score: 134.2711
 S1n –p). MYC HME cells are enriched with fatty acid metabolism genes and
 have phospholipid pro ﬁles indicative of fatty acid uptake
 Having established a TNBC model system of isogenic HME cellslines and shown that MYC expression is suf ﬁcient to induce FAO in
@@ -90,35 +116,6 @@ potential mechanisms of how MYC affects FAO in HME cells
 produced by the IPA, that ranged from 30 to 45 (Supplementary
 Table S3). The score takes into account the number ofdifferentially expressed genes (FDR < 5%) and the size of thenetwork to approximate the relevance of the network to the
 original list of genes. 
-
-|Reference 7 (BM25) with RRF Score: 134.2711
-Approximately 350 GO terms corresponding 
-to biological processes, ~130 terms representing cellular components, 
-and ~70 denoting molecular functions demonstrated significant enrich-
-ment from the differentially expressed protein pool (not shown). Of 
-the top ten enriched biological processes, four are related to RNA me-
-tabolism, three to dopamine processing, and two are involved in axon 
-development. One in macromolecule catabolic processing (Figure 2c). Enriched cellular components reflect the axonal changes within the sci-
-atic nerves of neuropathic mice, with five out of the top ten GO terms 
-correlating with nerve axon- related cellular components (Figure 2d). Additionally, nine of the top ten molecular functions enriched within 
-the affected samples are associated with RNA and nucleic acid activi-
-ties (Figure 2e). Based on these analyses, we further examined enriched myelin and axonal gene products (Figures 3 and 4 ), as well as the top 
-three augmented protein networks, namely the proteasome, lysosome, 
-and spliceosome pathways (Figure 5–7). 
-
-|Reference 8 (BM25) with RRF Score: 134.2342
-To obtain better insights into the under -
-lying pathogenic mechanisms in CMT1A, we investigated the role of PMP22 duplication in cellular homeostasis in 
-CMT1A mouse models and in patient-derived induced pluripotent stem cells differentiated into Schwann cell precur -
-sors (iPSC-SCPs). We performed lipidomic profiling and bulk RNA sequencing (RNA-seq) on sciatic nerves of two developing CMT1A 
-mouse models and on CMT1A patient-derived iPSC-SCPs. For the sciatic nerves of the CMT1A mice, cholesterol 
-and lipid metabolism was downregulated in a dose-dependent manner throughout development. For the CMT1A 
-iPSC-SCPs, transcriptional analysis unveiled a strong suppression of genes related to autophagy and lipid metabol -
-ism. Gene ontology enrichment analysis identified disturbances in pathways related to plasma membrane compo -
-nents and cell receptor signalling. Lipidomic analysis confirmed the severe dysregulation in plasma membrane 
-lipids, particularly sphingolipids, in CMT1A iPSC-SCPs. Furthermore, we identified reduced lipid raft dynamics, dis -
-turbed plasma membrane fluidity and impaired cholesterol incorporation and storage, all of which could result from 
-altered lipid storage homeostasis in the patient-derived CMT1A iPSC-SCPs. 
 
 |Reference 9 (BM25) with RRF Score: 133.1401
 In the cortex, con-
@@ -137,12 +134,16 @@ gene expression was paralleled by increased CNS inﬂux of thesmall-molecular-we
 376 Da) in OLcKO and NcKO brains. 
 
 |Reference 10 (BM25) with RRF Score: 132.0279
-CRAC and CARC motifs are often observed in cholesterol-binding sites.Conserved tyrosine residues within these sites are known to be critical for cholesterol binding. Palmitoylation site C85 and
-CRAC/CARC residues Y97 and Y153 are represented by stick models. © 2024 The Author(s). This is an open access article published by Portland Press Limited on behalf of the Biochemical Society and distributed under the Creative Commons Attribution License 4.0 (CC BY-NC-
-ND).1748Biochemical Society Transactions (2024) 521747 –1756
-https://doi.org/10.1042/BST20231359Downloaded from http://portlandpress.com/biochemsoctrans/article-pdf/52/4/1747/960545/bst-2023-1359c.pdf by Universiteit Leiden user on 11 December 2024
-
-Longitudinal RNA-seq experiments [ 25] found that lipid biosynthetic processes (phospholipid, cholesterol,
-and glycosphingolipid genes) were among the most prominently down-regulated transcripts in CMT1A rats
-during postnatal development (for a complete list of genes see Supplementary Figure S1 of Fledrich et al. 
+To obtain better insights into the under -
+lying pathogenic mechanisms in CMT1A, we investigated the role of PMP22 duplication in cellular homeostasis in 
+CMT1A mouse models and in patient-derived induced pluripotent stem cells differentiated into Schwann cell precur -
+sors (iPSC-SCPs). We performed lipidomic profiling and bulk RNA sequencing (RNA-seq) on sciatic nerves of two developing CMT1A 
+mouse models and on CMT1A patient-derived iPSC-SCPs. For the sciatic nerves of the CMT1A mice, cholesterol 
+and lipid metabolism was downregulated in a dose-dependent manner throughout development. For the CMT1A 
+iPSC-SCPs, transcriptional analysis unveiled a strong suppression of genes related to autophagy and lipid metabol -
+ism. Gene ontology enrichment analysis identified disturbances in pathways related to plasma membrane compo -
+nents and cell receptor signalling. Lipidomic analysis confirmed the severe dysregulation in plasma membrane 
+lipids, particularly sphingolipids, in CMT1A iPSC-SCPs. Furthermore, we identified reduced lipid raft dynamics, dis -
+turbed plasma membrane fluidity and impaired cholesterol incorporation and storage, all of which could result from 
+altered lipid storage homeostasis in the patient-derived CMT1A iPSC-SCPs. 
 
