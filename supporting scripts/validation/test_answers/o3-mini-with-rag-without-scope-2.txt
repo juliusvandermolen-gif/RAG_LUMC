@@ -1,0 +1,49 @@
+Answer 2:
+Below is one set of functionally coherent groups emerging from the study’s gene list. Each pathway is shown with all the gene symbols (from the provided list) that most clearly support that theme.
+
+─────────────────────────────  
+Neural Development and Axon Guidance:  
+Genes involved: Cntn6, Prss12, Sema4f, Synpr, Ntn1, Mag, Drp2, Mpz, Slit2, Nrp1, Nrp2, Sema3g, Robo2, Lrrtm3, Cdh13, Slitrk6, Srgap1, Prx, Dpysl5, Dpysl3, Efna5, Plxnb1, Pmp22, Sncg, Mal, Olfm2, Wnt5a, Gldn, Frrs1, Hmx3
+
+─────────────────────────────  
+Extracellular Matrix Organization and Remodeling:  
+Genes involved: Zpld1, Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Hapln1, Ltbp1, Mfap5, Matn3, Emilin1, Marveld1, Ccn3, Ccn4, Bgn, Has2, Timp1, Hs6st1, Hs6st2, Chst2, Sbspon, Pxdn, Olfml1, Alpl, St3gal5, Fut10, Gcnt1, Rcn3, Fam20c, Efemp2, C1qtnf1, Col11a1
+
+─────────────────────────────  
+Proteolysis and Protein Processing:  
+Genes involved: Pcsk5, Qsox1, Cpe, Prss23, A2m, Htra1, Pappa, Serpinf1, Ctbs, Ecel1, Bace2, Pam, Cpm, Ptrh1, Serpini1
+
+─────────────────────────────  
+Metabolic Processes and Mitochondrial Function:  
+Genes involved: Aldh1a1, Gldc, Sqor, Tf, Pltp, Manba, Man1a1, Apod, Rrm2, Nampt, Ppard, Agpat5, Pgm1, Hadhb, Psap, Fth1, Arsg, Dhrs1, Steap1, Arsb, Steap2, Sgpl1, Cers6, Pnpt1
+
+─────────────────────────────  
+Signal Transduction and Transcriptional Regulation:  
+Genes involved: Parm1, Peg3, Emp2, Igfbp3, Tril, Grb14, Sumo3, Id2, Cdca7l, Nrbp1, Ptgfr, Vopp1, Eif2ak2, Atf3, Ppp1r36, Trim35, Gprc5b, Tent5c, Gprc5a, Tnik, Gnai1, Prkar2b, Sipa1l1, Ppp1r14c, Dyrk1a, Nfatc1, Cggbp1, Runx3, Itpripl1, Fbxo11, Zfp518a, Tspan4, Ddx1, Inpp5a, Parp14, Ghr, Zfyve28, Mybl1, Taf9b, Atf5, Ppm1f, Klf9, Numb, Ppfia4, Vrk1, Stk39, Igf2bp2, Gtf2e1, Lifr, Ebf1, Mef2c, Magea4, Magea9, Magec2l1, Mageb16, Rhoj, Asap1, P2ry2, Cpsf2, Poglut1, Met, Aff3, Lef1, Tnfrsf1a, Papola
+
+─────────────────────────────  
+Cytoskeletal Dynamics and Vesicular Transport:  
+Genes involved: Cobll1, Tuba4a, Tubb4a, Acta2, Myo1d, Tagln, Cep295nl, Septin4, Septin5, Pfn2, Kif1a, Snx6, Acap2, Gja1, Tspan5, Tpcn1, Nes, Klhdc2, Tbccd1, Chmp2b, Rab10, Stard13, Ckap4, Phldb2, Snx4, Vps26c, Vps8, Cd151, Krtap1-5, Pkp1, Cldn19, Itga8, Cldnd1, Pals1, Klhl29, Itga7, Msi1
+
+─────────────────────────────  
+Immune and Inflammatory Response:  
+Genes involved: Defb29, Ighm, Aif1l, Cxcl14, Icoslg, Selplg, Nlrp1a, Cxcl12, Gpnmb, Gypc, Ifnar1
+
+─────────────────────────────  
+Membrane Transport and Ion Channels:  
+Genes involved: Clca4l, Slc22a17, Abca8a, Slc9a9, Abcb4, Scn7a, Serinc5, Slco3a1, Ryr3, Slc35a2, Slc39a13, Piezo2, Lrp2, Slco3a1
+
+─────────────────────────────  
+Protein Homeostasis and Quality Control:  
+Genes involved: Map1lc3a, Hspa12a, Hsp90aa1, Psmd2
+
+─────────────────────────────  
+Reproductive Processes:  
+Genes involved: Tex101
+
+─────────────────────────────  
+Cell Cycle and DNA Repair:  
+Genes involved: Msh2, Cenpo, Smc6, Nek9
+
+––––––  
+Note: Several genes (for example, those involved in RNA processing such as Cpsf2 and regulators like Ddx1/Tent5c) have been placed within the broad signal‐regulatory category to emphasize shared roles in controlling cell state. These 11 pathway groupings represent one interpretation that emphasizes overall biological themes beyond p‐value rankings.

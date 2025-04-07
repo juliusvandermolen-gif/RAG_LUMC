@@ -8,7 +8,9 @@ tqdm
 python-dotenv
 nltk
 PyPDF2==3.0.1
-
+openpyxl
+notebook
+markdown
 # Machine Learning / NLP libraries
 transformers==4.48.0
 # For CPU-only systems, use faiss-cpu. If you have an NVIDIA GPU, you can install faiss-gpu instead.

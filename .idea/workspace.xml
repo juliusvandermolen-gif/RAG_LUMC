@@ -5,135 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs_system_instruction/config_template.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supporting scripts/visualize.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/gene_descriptions.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/reorder_mart.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/GSEA/to_be_converted/converted_wikipathways-20241210-gmt-Rattus_norvegicus.gmt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/to_be_converted/reordered_rat_data.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Data/GSEA/to_be_converted/reordered_rat_data.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/without_biomart_wik/check_overlap.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/without_biomart_wik/gene_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/without_biomart_wik/rat_genes_consolidated.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/without_biomart_wik/wikipathways_synonyms_Rattus_norvegicus.gmt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/GSEA/without_biomart_wik/wikipathways_synonyms_Rattus_norvegicus.gmt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculate_overlap.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/convert_txt_to_csv.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_log/file_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/file_log/file_log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gene_synonym.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference_chunks.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scores.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/1_o3-mini-high-with_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/1_o3-mini-high-with_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/1_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/1_o3-mini-high-without_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/2_o3-mini-high-with_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/2_o3-mini-high-with_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/2_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/2_o3-mini-high-without_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/3_o3-mini-high-with_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/3_o3-mini-high-with_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/3_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/3_o3-mini-high-without_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/4_o3-mini-high-with_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/4_o3-mini-high-with_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/4_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/4_o3-mini-high-without_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/5_o3-mini-high-with_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/5_o3-mini-high-with_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/5_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/New folder/5_o3-mini-high-without_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/all_answers_openai.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/o3-mini-userref.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/1_o3-mini-high-no_neuro_with_ref.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/1_o3-mini-high-noref-no_scope.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/1_o3-mini-high-noref_with_scope.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/1_o3-mini-high_with_ref_with_scope.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/2_o3-mini-high-with_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/2_o3-mini-high-with_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/2_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/2_o3-mini-high-without_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/3_o3-mini-high-with_ref-with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/3_o3-mini-high-with_ref-without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/3_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/3_o3-mini-high-without_ref_without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/4_o3-mini-high-with_ref-with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/4_o3-mini-high-with_ref-without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/4_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/5_o3-mini-high-with_ref-with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/5_o3-mini-high-with_ref-without_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/5_o3-mini-high-without_ref_with_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/all_answers_openai_correct.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/answer1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/answer2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/answer3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/answer4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/answer5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/answer_o1_preview.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/deepseek.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/gpt_4o.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/gpt_o1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro_no_ref.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro_no_ref_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro_no_ref_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro_no_ref_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o1-preview-no_neuro_no_ref_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/processed_good_results/o3-mini.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/shit results/all_answers_openai_incorrect.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_GPT_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_both_rats_encourage_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_both_rats_encourage_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_claude.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_1_1000.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_1_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_1_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_1_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_2_1000.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_2_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_2_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_2_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_3_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_3_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_3_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_4_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_4_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_4_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_short_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_short_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_short_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_short_without_ref_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_short_without_ref_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_config_short_without_ref_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_gemini.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_paper_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_paper_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_paper_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_persona_150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_persona_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_persona_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_with_rats_without_encourage_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_with_rats_without_encourage_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_without_both_rats_encourage_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_without_both_rats_encourage_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_without_rats_with_encourage_250.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_files/storage_pathways/all_answers_without_rats_with_encourage_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_files/all_genes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_files/all_genes_complete.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_files/answer.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_files/documents.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_files/store_for_later/SQL query.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_files/store_for_later/Start with structure.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_files/time.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize_length.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/system_instruction_academic_validation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/system_instruction_academic_validation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs_system_instruction/system_instruction_comparison_pathways.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/system_instruction_comparison_pathways.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/scores.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/answer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/documents.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/ground_truth_pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/messages.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +48,7 @@
     &quot;Python.RAG_LUMC.executor&quot;: &quot;Run&quot;,
     &quot;Python.RAG_workflow.executor&quot;: &quot;Run&quot;,
     &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.automated_validation.executor&quot;: &quot;Run&quot;,
     &quot;Python.hugginface_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.insta.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
@@ -172,9 +56,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Hybrid-Retrieval&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;automated__validation&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/RAG_LUMC/visualize_length.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mathi/Downloads&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -183,7 +68,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.RAG_workflow">
+  <component name="RunManager" selected="Python.automated_validation">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
@@ -198,6 +83,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RAG_workflow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="automated_validation" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="RAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/automated_validation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -252,6 +159,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.RAG_workflow" />
+      <item itemvalue="Python.automated_validation" />
       <item itemvalue="Python.insta" />
       <item itemvalue="Python.visualize_length" />
     </list>

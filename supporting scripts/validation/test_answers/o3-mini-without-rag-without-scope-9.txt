@@ -1,0 +1,21 @@
+Answer 9:
+Neary our “big‐picture” analysis, the study’s gene set can be organized into five interrelated, functionally coherent themes. Each pathway below lists the gene symbols from the provided list that literature and biological reasoning associate with that theme.
+
+─────────────────────────────  
+Neuronal Development, Axon Guidance, and Cytoskeletal Dynamics:  
+Genes involved: Cntn6, Prss12, Sema4f, Nrp1, Nrp2, Slit2, Robo2, Sema3g, Mag, Ntn1, Synpr, Lrrtm3, Dpysl5, Kif1a, Prx, Serpini1, Ecel1, Scn7a, Nes, Slitrk6, Plxnb1, Efna5, Pmp22, Olfm2, Ppfia4, Dpysl3, Tuba4a, Tubb4a, Rab10, Septin4, Septin5, Drp2, Tagln, Cep295nl, Nek9, Pfn2, Map1lc3a, Stk39, Cobll1, Marveld1, Myo1d, Pkp1, Snx6, Acap2, Rhoj, Cd9, Cldn19, Vps26c, Ckap4, Klhl29, Stard13, Tbccd1, Snx4, Vopp1  
+─────────────────────────────  
+Extracellular Matrix Organization and Tissue Remodeling:  
+Genes involved: Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Hapln1, Matn3, Mfap5, Emilin1, Timp1, Ltbp1, Htra1, Bgn, Has2, Sbspon, Ccn3, Ccn4, Qsox1, Chst2, Pxdn, Hs6st2, Hs6st1, Efemp2  
+─────────────────────────────  
+Immune Response and Inflammatory Signaling:  
+Genes involved: Ifnar1, Cxcl14, Cxcl12, Ighm, Icoslg, Nlrp1a, Trim35, Tril, Defb29, Sgpl1, Aif1l, Selplg, C1qtnf1, Gpnmb  
+─────────────────────────────  
+Metabolic Processes and Redox Homeostasis:  
+Genes involved: Aldh1a1, Gldc, Sqor, Steap2, Steap1, Tf, Fth1, Nampt, Ppard, Manba, Man1a1, Rrm2, Cers6, Pgm1, Riox2, Apod, Cpe, Pltp, Ctbs, Abca8a, Serinc5, Abcb4, Slc9a9, Slc22a17, St3gal5, Bace2, Hadhb, Arsg, Arsb, Fut10, Hspa12a, Hsp90aa1, Dhrs1, Ptrh1, Cpm, Agpat5, Psap, Slco3a1, Gcnt1, Slc35a2, Slc39a13  
+─────────────────────────────  
+Signal Transduction, Growth Factor, and Transcriptional Regulation:  
+Genes involved: Met, Wnt5a, Lef1, Lifr, Ghr, Epas1, Mef2c, Nfatc1, Runx3, Tnik, Gnai1, Atf3, Atf5, Gprc5a, Gprc5b, Pappa, Parp14, Gja1, Pcsk5, Parm1, Grb14, Ptgfr, P2ry2, Tspan4, Rnf144a, Prkar2b, Sipa1l1, Aig1, Tspan5, Itga8, Itga7, Ryr3, Asap1, Inpp5a, Tnfrsf1a, Zfyve28, Phldb2, Tpcn1, Vash1, Lrp2, Id2, Dyrk1a, Fbxo11, Cdca7l, Msi1, Msh2, Smc6, Vrk1, Ppm1f, Klf9, Numb, Eif2ak2, Ddx1, Ebf1, Sumo3, Tent5c, Magec2l1, Mageb16, Cggbp1, Psmd2, Mybl1, Taf9b, Magea4, Magea9, Cenpo, Zfp518a, Aff3, Klhdc2, Igf2bp2, Gtf2e1  
+─────────────────────────────
+
+Each of these five pathways reflects a biologically meaningful theme emergent from the gene set and is supported by the broader literature beyond mere p‐value statistics.

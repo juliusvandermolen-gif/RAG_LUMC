@@ -1,30 +1,149 @@
-|Reference 1 (BM25) with RRF Score: 6634.5036
-ENSRNOG00000019834,Hsp90ab1,heat shock protein 90 alpha family class B member 1 
+|Reference 1 (BM25) with RRF Score: 143.8268
+Differential pathway activity analysis. To minimize the discovery 
+of false positive effects, activity scores were computed only after fil -
+tering out genes that were not expressed in a given cell type (defined 
+as a nonzero detection rate ≥10%, see Supplementary Table 2 for a 
+full list of expressed genes per cell type). For each pathway-cell type 
+combination, pathway activity scores were modelled using a multivari -
+ate linear model as follows: pathway activity ~β0 × APOE4 + β1 × amy -
+loid + β2 × nft + β3 × age_death + β4 × msex + β5 × pmi. Here, APOE4 is a 
+binary variable, encoding the presence of at least one E4 allele. Amyloid 
+and nft are averages of continuous measurements of pathology across 8 
+and 5 brain regions, respectively, as evaluated and reported by ROSMAP. Age_death is a continuous measurement indicating age at death, pmi 
+represents the PMI (a continuous measurement) and sex is a binary 
+variable encoding biological sex. β0 represents the additive effect 
+of APOE4 (≥1 allele) on pathway activity, when accounting for other confounding variables that might be correlated with, and therefore 
+explain, a portion of the variation observed in the activity of a pathway 
+of interest. 
 
-|Reference 2 (BM25) with RRF Score: 6611.6563
-ENSRNOG00000056007,AABR07049228.1,heat shock protein family D (Hsp60) member 1 like 2 
+|Reference 2 (BM25) with RRF Score: 143.5651
+Because neuronal upregulation of genes related to choles-
+terol metabolism could be a general response to chronic myelinalterations, we analyzed transcriptional proﬁles of isolated
+cortical neurons following acute experimental autoimmune
+encephalomyelitis (EAE) induction and following acute-phase(6 weeks of cuprizone) and chronic-phase remyelination
+(12 weeks of cuprizone followed by 2 weeks of cuprizone with-
+drawal, 12+2 weeks) ( Figure 2 D). During acute disease (EAE or
+6 weeks of cuprizone), neurons consistently downregulated
+gene expression related to cholesterol metabolism ( Figure 2 E). In contrast, during remyelination following chronic demyelin-ation in the cuprizone model, expression of genes involved in
+cholesterol metabolism was increased ( Figure 2 E;Table S3 ). To test whether the upregulation of cholesterol synthesis geneswas functionally relevant, we determined the abundance of ste-rols by gas chromatography coupled to mass spectrometry
+(GC/MS) in the chronic remyelination paradigm. 
 
-|Reference 3 (BM25) with RRF Score: 6604.5916
-ENSRNOG00000026243,Ap2a1,adaptor related protein complex 2 subunit alpha 1 
+|Reference 3 (BM25) with RRF Score: 140.1413
+Indeed, we are still with -
+out any drug treatment for CMT and there is no major impact 
+on real world coming from ongoing research, yet. Which are the reasons for the gap with the other neuro -
+muscular disorders? There are several contributing factors. The 
+peripheral nerves are intrinsically more difficult to study as 
+compared to the muscles and even to the motor neurons: it is 
+problematic to obtain nerve tissue to be studied and charac -
+terized, Schwann cells and myelination studies are particularly 
+challenging, and it is currently extremely hard if not impossi -
+ble to obtain reliable Schwann cells from iPSCs. It is also 
+arduous to target drugs and gene therapies to the peripheral 
+nerves, particularly to correct Schwann cell defects. Other 
+reasons are constituted by: the great genetic heterogeneity 
+of this group of diseases, with about 100 genes and loci 
+involved in CMT and related neuropathies; the great variability 
+of disease expression, with different phenotype severity 708
+ C. PISCIOTTA ET AL. 
 
-|Reference 4 (BM25) with RRF Score: 6597.8164
-ENSRNOG00000068391,Hsp90aa1-ps17,"heat shock protein 90 alpha family class A member 1, pseudogene 17" 
+|Reference 4 (BM25) with RRF Score: 135.6931
+The only network in MYC HME cells
+associated with metabolism was “lipid metabolism ”(IPA Network
+4), whose components are shown in Fig. 2a. The IPA also indicated
+that some of the most signi ﬁcantly altered canonical signalling
+pathways (377 genes; FDR < 5%; Min. fold: 6.81) in MYC HME cellswere involved in lipid metabolism, including atherosclerosissignalling, LXR/RXR activation, and PPAR signalling (Fig. 2b, black
+boxes). Gene expression analysis of an unbiased list of 163
+different genes (Supplementary Table S4) associated with lipid
+metabolism across TERT, MYC, and HER2 HME cells revealed asigni ﬁcant enrichment of upregulation in MYC versus TERT (1.4-
+fold over all upregulated genes, p=5×1 0
+−8by Fisher Exact Test). Notable functions for those genes were related to lipid transport,
+acyl-CoA metabolism, mitochondrial β-oxidation, and lipases. Our
+ﬁndings agree with Camarda et al. who also reported a strong
+representation of fatty acid metabolism genes in TNBC patients.10
+We next performed a lipidomic analysis that revealed that
+phosphatidylcholine (PC) and cardiolipin contained longer, moreunsaturated fatty acyl chains compared to TERT cells (Supple-mentary Fig. 
 
-|Reference 5 (BM25) with RRF Score: 6589.8330
-ENSRNOG00000001893,Ppp2cal1,protein phosphatase 2 catalytic subunit alpha like 1 
+|Reference 5 (BM25) with RRF Score: 135.6821
+A consistent slow NCV of < 38 m/s in the
+arms represents the demyelinating form of CMT1, whereas a value >38 m/s is distinctive
+of the axonal form of CMT2. Transitional NCVs (25–45 m/s) are often observed in males
+with CMTX1 and in patients with other transitional patterns of CMT [4]. The genetic diagnosis of CMT has been conducted by implementing the targeted next-
+generation sequencing and whole-exome sequencing approaches. Over 120 gene mutations
+are related to the pathogenesis of CMT and associated neuropathies [ 5,6]. The frequency of
+the various types of CMT varies by region and the age at which they were published. In
+the study by Saporta et al., 787 out of 1024 patients were diagnosed with CMT; a genetic
+subtype was identiﬁed in 527 (67%) of these patients, while the remaining 260 patients did
+not present with any identiﬁable mutation. Among the genetically deﬁned cases, CMT1A
+(PMP22 ) emerged as the most prevalent subtype, comprising 55% of the cases, followed
+by CMTX1 ( GJB1 ; 15.2%), hereditary neuropathy with liability to pressure palsy (HNPP;
+Genes 2023 ,14, 1391. https://doi.org/10.3390/genes14071391 https://www.mdpi.com/journal/genes
+Genes 2023 ,14, 1391 2 of 17
+9.2%), CMT1B ( myelin protein zero (MPZ ); 8.5%), and CMT2A ( MFN2 ; 4%) [ 7]. 
 
-|Reference 6 (BM25) with RRF Score: 6585.1725
-ENSRNOG00000061543,Ap2b1,adaptor related protein complex 2 subunit beta 1 
+|Reference 6 (BM25) with RRF Score: 134.7370
+However, while high-fat diet can partially compensate for a deﬁciency in fatty
+acid synthesis in the CNS, in the PNS a high fat diet results in worsening of myelin defects when fatty
+acid synthesis is impaired [ 110,111]. The mechanisms underlying di erential e ects in the CNS vs.
+PNS remain to be determined. Taken together the current literature suggests that the uptake of fatty
+acid may not be the primary pathway for myelin formation. However, the importance of fatty acid
+uptake contributing to the energetic metabolism of myelinating cells and axonal trophic support is
+still unclear. Finally, there is also new evidence that lipids could be provided to myelin cells by neurons. A recent study found that fatty acids are released by hyperactive neurons and can be taken up by
+neighboring glia to protect neurons from fatty acid toxicity [158]. 11. Fatty Acid Oxidation
+The nervous system has very high metabolic demands. Notably the CNS consumes 20% of
+the body’s oxygen supply. While the metabolic requirements for neural activity have been well
+characterized, the energetic requirement for myelin formation and maintenance, as well as the
+mechanisms for energetic production in myelinating cells, are not well understood [ 159]. 
 
-|Reference 7 (BM25) with RRF Score: 6577.2443
-ENSRNOG00000062084,Hsp90aa1-ps16,"heat shock protein 90 alpha family class A member 1, pseudogene 16" 
+|Reference 7 (BM25) with RRF Score: 134.5162
+2 MYC HME cells use LPL and CD36 to mobilise and take up fatty acids. a Interaction map of the lipid metabolism gene network in
+MYC HME cells. Ingenuity Pathway Analysis was used to create the interaction map. Black circles highlight lipid metabolism genes CD36 and
+LPL.bTop canonical signalling pathways in MYC versus TERT HME cells based on RNA sequencing data (377 genes; FDR < 5%; minimum fold
+change: 6.81). Ingenuity Pathway Analysis was used to identify the pathways. Black boxes highlight gene ontologies associated with lipidmetabolism. The value next to each bar represents the number of altered genes within the indicated signalling pathway. The colour of the barindicates the percent of genes within the pathway that are differentially regulated. The black dotted line marks signi ﬁcance (FDR < 5%). cHeat
+map showing the relative expression of 163 genes associated with lipid metabolism in TERT, MYC, and HER2 HME cells (1.4 over all
+upregulated genes in MYC HME cells; p=5×1 0
+−8by Fisher Exact Test). 
 
-|Reference 8 (BM25) with RRF Score: 6574.8331
-ENSRNOG00000067665,Hsp90ab1-ps13,"heat shock protein 90 alpha family class B member 1, pseudogene 13" 
+|Reference 8 (BM25) with RRF Score: 134.2711
+S1n –p). MYC HME cells are enriched with fatty acid metabolism genes and
+have phospholipid pro ﬁles indicative of fatty acid uptake
+Having established a TNBC model system of isogenic HME cellslines and shown that MYC expression is suf ﬁcient to induce FAO in
+HME cells, we next wanted to identify novel targets that might
+contribute to the activation of FAO in MYC HME cells. Since MYC is
+a transcription factor, we performed NextGen RNA sequencing onTERT, MYC, and HER2 HME cells to gain further insight into
+potential mechanisms of how MYC affects FAO in HME cells
+(Supplementary Tables S1 and S2). Differentially expressed geneswere mapped to networks available in the Ingenuity database.Five networks were identi ﬁed and ranked by a network score
+produced by the IPA, that ranged from 30 to 45 (Supplementary
+Table S3). The score takes into account the number ofdifferentially expressed genes (FDR < 5%) and the size of thenetwork to approximate the relevance of the network to the
+original list of genes. 
 
-|Reference 9 (BM25) with RRF Score: 6569.7561
-ENSRNOG00000059714,Hsp90aa1,heat shock protein 90 alpha family class A member 1 
+|Reference 9 (BM25) with RRF Score: 133.1401
+In the cortex, con-
+ditional inactivation of cholesterol synthesis in neurons or oligo-dendrocytes resulted in moderate upregulation of cholesterol
+synthesis genes, possibly to compensate for the loss of choles-
+terol synthesis in the affected cell type ( Figure 1 E;Table S2 ). In
+contrast, in all conditional mutants, we observed a moderatebut consistent downregulation of expression related to choles-
+terol metabolism in white matter ( Figures 1 E, 1F, and S1
+H). Here, reduced expression of genes associated with cholesteroltransport was noted in all conditional mutants, particularly in
+AcKO animals ( Figure 1 F). In agreement, sterol proﬁling revealed
+only moderate alteration in conditional mutants ( Figure S2 A). Surprisingly, corpus callosum of OLcKO and NcKO mice re-
+vealed a marked downregulation of genes related to the blood-
+brain barrier (BBB). This was accompanied by upregulation ofa few inﬂammatory mediators with proﬁles being unique toeach mutant ( Figures 1 E and 1F). Interestingly, by biochemical
+quantiﬁcation of BBB permeability, the reduced tight junction
+gene expression was paralleled by increased CNS inﬂux of thesmall-molecular-weight BBB tracer sodium ﬂuorescein (NaFl;
+376 Da) in OLcKO and NcKO brains. 
 
-|Reference 10 (BM25) with RRF Score: 6566.9662
-ENSRNOG00000017803,Apbb1ip,amyloid beta precursor protein binding family B member 1 interacting protein 
+|Reference 10 (BM25) with RRF Score: 132.0279
+To obtain better insights into the under -
+lying pathogenic mechanisms in CMT1A, we investigated the role of PMP22 duplication in cellular homeostasis in 
+CMT1A mouse models and in patient-derived induced pluripotent stem cells differentiated into Schwann cell precur -
+sors (iPSC-SCPs). We performed lipidomic profiling and bulk RNA sequencing (RNA-seq) on sciatic nerves of two developing CMT1A 
+mouse models and on CMT1A patient-derived iPSC-SCPs. For the sciatic nerves of the CMT1A mice, cholesterol 
+and lipid metabolism was downregulated in a dose-dependent manner throughout development. For the CMT1A 
+iPSC-SCPs, transcriptional analysis unveiled a strong suppression of genes related to autophagy and lipid metabol -
+ism. Gene ontology enrichment analysis identified disturbances in pathways related to plasma membrane compo -
+nents and cell receptor signalling. Lipidomic analysis confirmed the severe dysregulation in plasma membrane 
+lipids, particularly sphingolipids, in CMT1A iPSC-SCPs. Furthermore, we identified reduced lipid raft dynamics, dis -
+turbed plasma membrane fluidity and impaired cholesterol incorporation and storage, all of which could result from 
+altered lipid storage homeostasis in the patient-derived CMT1A iPSC-SCPs. 
 

@@ -126,9 +126,9 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
   - `./logs/file_log.json`
   - `./logs/time.txt`
 - Responses:
-  - `./text_file/tanswer.txt`
-  - `./text_file/documents.txt`
-  - `./text_file/scores.xlsx`
+  - `./output/text_file/tanswer.txt`
+  - `./output/text_file/documents.txt`
+  - `./output/text_file/scores.xlsx`
 
 
 ## Running the Application

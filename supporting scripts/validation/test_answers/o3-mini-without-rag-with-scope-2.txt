@@ -1,0 +1,21 @@
+Answer 2:
+Axon Guidance and Neuronal Pathfinding:
+Genes involved: Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Plxnb1, Efna5, Nrp1, Nrp2, Slitrk6, Srgap1, Dpysl3, Dpysl5
+
+Synaptic Development and Neuronal Communication:
+Genes involved: Synpr, Prss12, Kif1a, Lrrtm3, Septin4, Ppfia4, Cdh13, Gja1
+
+Myelination and Glial Function:
+Genes involved: Prx, Mpz, Mag, Pmp22, Drp2, Mal, Cldn19
+
+Neural Progenitor Maintenance and Neurogenesis:
+Genes involved: Nes, Msi1, Numb, Atf5, Mef2c, Dyrk1a, Klf9, Ebf1, Id2, Runx3
+
+Wnt and Growth Factor Signaling in Neural Development:
+Genes involved: Wnt5a, Lef1, Met, Lifr, Igfbp3
+
+Extracellular Matrix Remodeling and Neural Migration:
+Genes involved: Hapln1, Ltbp1, Adamts17, Adamtsl3, Adamtsl1, Has2, Timp1, Bgn, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Mfap5, Emilin1, Matn3
+
+Neurotransmitter Processing and Neuropeptide Signaling:
+Genes involved: Gldc, Cpe, Pam, Pcsk5

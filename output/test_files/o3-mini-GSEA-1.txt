@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neurotransmission:
+Cntn6, Prss12, Synpr, Cpe, Serpini1, P2ry2, Cdh13,
+
+Axon Guidance and Neural Circuit Formation:
+Ntn1, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Efna5, Nrp1, Nrp2, Srgap1, Slitrk6, Dpysl3, Dpysl5,
+
+Neuronal Differentiation and Development:
+Nes, Id2, Mef2c, Lef1, Atf3, Atf5, Peg3, Msi1, Hmx3, Klf9, Dyrk1a, Numb,
+
+Axonal Transport and Cytoskeletal Organization:
+Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Rab10, Tbccd1,
+
+Myelination and Glial Function:
+Mpz, Mag, Pmp22, Drp2, Gldn,
