@@ -5,24 +5,18 @@ import time
 import json
 import markdown
 from RAG_workflow import query_open_ai
-
-# Load environment variables (e.g., DEEPSEEK_API_KEY)
+from pymed import PubMed
+import pymed
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# Set up the DeepSeek client using the OpenAI library interface.
-# Note: The DeepSeek reasoning model is "deepseek-reasoner".
 from openai import OpenAI as DeepSeekClient
 
 deepseek_client = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
 
 
 def query_deepseek(messages, model):
-    """
-    Helper function to query the DeepSeek API using the specified model.
-    It takes only the messages and model parameters.
-    """
     response = deepseek_client.chat.completions.create(
         model=model,
         messages=messages,
@@ -32,9 +26,6 @@ def query_deepseek(messages, model):
 
 
 def read_latest_llm_output(answer_dir="./output/test_files"):
-    """
-    Reads the most recent .txt file from the answer directory.
-    """
     answer_files = glob.glob(os.path.join(answer_dir, '*.txt'))
     if not answer_files:
         raise FileNotFoundError("No answer files found in the directory.")
@@ -45,14 +36,6 @@ def read_latest_llm_output(answer_dir="./output/test_files"):
 
 
 def extract_pathways(answer_text):
-    """
-    Extracts pathway names and their associated gene lists from the answer text.
-    Expects the text to have a pathway line ending with ':' followed by a line of comma-separated genes.
-
-    Returns:
-        - pathways: list of pathway names in the order they appear.
-        - pathway_dict: dictionary mapping each pathway name to its list of genes.
-    """
     pathways = []
     pathway_dict = {}
     lines = [line.strip() for line in answer_text.splitlines() if line.strip()]
@@ -68,11 +51,6 @@ def extract_pathways(answer_text):
 
 
 def validate_pathways(gpt_answer, ground_truth, instruction):
-    """
-    Validates the GPT answer by comparing the extracted pathway names against
-    the ground truth. It builds a prompt that includes both pathway sets and queries
-    the model via query_open_ai.
-    """
     _, pathway_dict = extract_pathways(gpt_answer)
     prompt = (
         "Based on the identified pathways, confirm whether they match the ground truth pathways. "
@@ -91,13 +69,6 @@ def validate_pathways(gpt_answer, ground_truth, instruction):
 
 
 def academic_validation(pathways, pathway_dict, academic_instruction):
-    """
-    For each pathway, queries academic literature via the DeepSeek API (using the deepseek-reasoner model)
-    to validate whether the involvement of the listed genes is supported by evidence from academic databases.
-
-    Returns:
-        A list of tuples (pathway, genes, academic_summary)
-    """
     academic_results = []
     for pathway in pathways:
         print(f"Validating pathway: {pathway}")
@@ -117,27 +88,74 @@ def academic_validation(pathways, pathway_dict, academic_instruction):
     return academic_results
 
 
+# Initialize PubMed (used in the replace_entry function)
+pubmed = PubMed(tool="MyTool", email="my@email.address")
+
+# Global counters for statistics.
+total_matches = 0
+credible_matches = 0
+
+# Updated regex pattern: accepts titles enclosed in either asterisks or double quotes,
+# and allows an optional colon after the bibliographic entry.
+pattern = re.compile(
+    r'\(\s*(\d{4})\s*,\s*([^,]+)\s*,\s*[\*"]([^,"\*]+)[\*"]\s*,\s*([^)]+)\)\s*:?\s*<br>\s*>\s*"([^"]+)"',
+    re.MULTILINE
+)
+
+
+def replace_entry(match):
+    global total_matches, credible_matches
+    total_matches += 1
+
+    # Extract the bibliographic fields.
+    year = match.group(1).strip()
+    authors = match.group(2).strip()
+    original_title = match.group(3).strip()
+    journal = match.group(4).strip()
+    orig_summary = match.group(5).strip()
+
+    print(f"Querying PubMed for title: {original_title}")
+    try:
+        results = pubmed.query(original_title, max_results=5)
+    except Exception as e:
+        print("PubMed query error:", e)
+        results = []
+    new_title = None
+    for article in results:
+        if isinstance(article, pymed.article.PubMedArticle) and article.title:
+            new_title = article.title.strip()
+            break
+    if new_title is None:
+        print("Could not find title for article.")
+        new_title = "The AI hallucinated again, and didnt manage to find an actual paper"
+    else:
+        credible_matches += 1
+        new_title = new_title + " 🎆🎆🎆"
+    time.sleep(1)
+    # Reconstruct the bibliographic entry with the updated title while preserving year, authors, and journal.
+    new_bib = f"({year}, {authors}, \"{new_title}\", {journal})"
+    return f'{new_bib}<br> > "Keep in mind, the AI hallucinated, so be aware: {orig_summary}"'
+
+
 def main():
-    # Paths for necessary files and directories
     answer_dir = "./output/test_files"
     ground_truth_file = "./output/text_files/ground_truth_pathways.txt"
     system_instruction_file = "./configs_system_instruction/system_instruction_comparison_pathways.txt"
-    academic_instruction_file = "./configs_system_instruction/system_instruction_academic_validation.txt"
+    academic_instruction_file = "./configs_system_instruction/system_instruction_academic_validation_test.txt"
     output_directory = "./output/text_files/automated_comparison"
     os.makedirs(output_directory, exist_ok=True)
 
-    # Load ground truth and system instruction texts
     with open(ground_truth_file, 'r', encoding="utf8") as f:
         ground_truth = f.read().strip()
     with open(system_instruction_file, 'r', encoding="utf8") as f:
         comparison_instruction = f.read().strip()
 
-    # Load academic instruction if file exists, else use a default instruction.
     if os.path.exists(academic_instruction_file):
         with open(academic_instruction_file, 'r', encoding="utf8") as f:
             academic_instruction = f.read().strip()
     else:
         print("Academic instruction file not found. Exiting program")
+        import sys
         sys.exit(1)
     try:
         llm_output, latest_file = read_latest_llm_output(answer_dir)
@@ -145,27 +163,31 @@ def main():
         print(e)
         return
 
-    # Step 2: g:Profiler Comparison Validation using OpenAI
     comparison_summary = validate_pathways(llm_output, ground_truth, comparison_instruction)
-
-    # Step 3: Extract pathways and perform Academic Validation using DeepSeek
     pathways, pathway_dict = extract_pathways(llm_output)
     academic_results = academic_validation(pathways, pathway_dict, academic_instruction)
 
-    # Step 4: Combine into a Markdown report
     base_name = os.path.splitext(os.path.basename(latest_file))[0]
     md_filename = os.path.join(output_directory, f"validation_{base_name}.md")
     with open(md_filename, 'w', encoding="utf8") as md:
+        # Write header with the percentage of credible sources.
         md.write(f"# Pathway Validation Report for {base_name}\n\n")
+        if total_matches > 0:
+            percent_credible = (credible_matches / total_matches) * 100
+        else:
+            percent_credible = 0.0
+        md.write(f"**Credible sources found: {percent_credible:.1f}% ({credible_matches} out of {total_matches})**\n\n")
         md.write("## g:Profiler Comparison Summary\n")
         md.write(f"{comparison_summary}\n\n")
         md.write("## Academic Validation of Pathways\n")
         for pathway, genes, summary in academic_results:
             md.write(f"### {pathway}\n")
             md.write(f"**Genes involved:** {', '.join(genes)}\n\n")
-            # Remove markdown fences
+            # Remove markdown fences.
             cleaned_summary = re.sub(r'```markdown\s*|\s*```', '', summary.strip())
-            md.write(f"{cleaned_summary}\n\n")
+            # Apply our PubMed-based replacement on the cleaned summary.
+            new_summary = pattern.sub(replace_entry, cleaned_summary)
+            md.write(f"{new_summary}\n\n")
 
     print(f"Markdown validation report created: {md_filename}")
 

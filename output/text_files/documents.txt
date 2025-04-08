@@ -1,4 +1,130 @@
-|Reference 1 (BM25) with RRF Score: 143.8268
+|Reference 1 (BM25) with RRF Score: 135.6821
+We identify a number of strategies to reduce pTau in a
+CE-dependent manner and ﬁnd that allosteric activation ofCYP46A1 is a neuron-speciﬁc CE-lowering strategy particularly
+well tolerated by human astrocytes. Collectively, our data identify
+a CYP46A1-CE-Tau axis as an early druggable pathway in AD. RESULTS
+A Drug Screen in iPSC-Derived Human FAD Neurons to
+Identify Compounds that Reduce pTau Accumulation
+pThr231Tau is an early marker of AD pathology that correlateswell with cognitive decline ( Buerger et al., 2002; Luna-Mun ˜oz
+et al., 2007 ). pThr231Tau accumulates in APP duplication
+(APP
+dp) iPSC-derived FAD neurons ( Israel et al., 2012 ). To iden-tify compounds that reduce pTau accumulation in these FAD
+neurons, we screened a collection of 1,684 approved and
+preclinical drugs for their efﬁcacy to lower neuronal pThr231Tau. For our screen, neural progenitor cells (NPCs; line APPdp1-6)
+(Israel et al., 2012 ) were differentiated to neurons ( Figures S1 A
+and S1B) for 3 weeks, replated in 384 well plates, and allowed
+to mature for 2 weeks before treatment with compound at5mM for 5 days. 
+
+|Reference 2 (BM25) with RRF Score: 134.7370
+In the cortex, con-
+ditional inactivation of cholesterol synthesis in neurons or oligo-dendrocytes resulted in moderate upregulation of cholesterol
+synthesis genes, possibly to compensate for the loss of choles-
+terol synthesis in the affected cell type ( Figure 1 E;Table S2 ). In
+contrast, in all conditional mutants, we observed a moderatebut consistent downregulation of expression related to choles-
+terol metabolism in white matter ( Figures 1 E, 1F, and S1
+H). Here, reduced expression of genes associated with cholesteroltransport was noted in all conditional mutants, particularly in
+AcKO animals ( Figure 1 F). In agreement, sterol proﬁling revealed
+only moderate alteration in conditional mutants ( Figure S2 A). Surprisingly, corpus callosum of OLcKO and NcKO mice re-
+vealed a marked downregulation of genes related to the blood-
+brain barrier (BBB). This was accompanied by upregulation ofa few inﬂammatory mediators with proﬁles being unique toeach mutant ( Figures 1 E and 1F). Interestingly, by biochemical
+quantiﬁcation of BBB permeability, the reduced tight junction
+gene expression was paralleled by increased CNS inﬂux of thesmall-molecular-weight BBB tracer sodium ﬂuorescein (NaFl;
+376 Da) in OLcKO and NcKO brains. 
+
+|Reference 3 (BM25) with RRF Score: 134.5162
+This suggests that MYC-
+driven tumors are likely intrinsically resistant to mTOR block-
+ade. Across human cancer, MYC is frequently amplified and
+MYC can mitigate antitumor effects of many cancer therapeutics(Fallah et al., 2017 ). This stresses the need to identify the
+Achilles ’heel(s) of MYC-driven cancers. Targeting MYC itself
+has remained challenging, partly because of the lack of an en-zymatic pocket and the predominant nuclear localization of theprotein, both of which make the use of small molecule inhibitorsor blocking antibodies cumbersome ( Wang et al., 2021 ). How-
+ever, recent cancer dependency map studies utilizing CRISPR/
+Cas9 and small hairpin RNA –based genetic screens may repre-
+sent valuable resources to identify novel therapeutic opportu-nities to target MYC-dependent cancer cells ( Tsherniak et al.,
+2017;Meyers et al., 2017 ). At present, targeted therapies of the PI3K –AKT –mTOR
+pathway are not first-line in breast cancer. Instead, these ther-apeutics have been used in ER+/HER2 −postmenopausal breast
+cancer patients who are refractory to endocrine therapies —
+acquired genetic alterations activating the PI3K –AKT –mTOR
+pathway frequently drive resistance to endocrine therapies(Nunnery and Mayer, 2020 ). 
+
+|Reference 4 (BM25) with RRF Score: 134.3242
+1a and 
+Supplementary Table 4). Thus, dysregulation of energy production, 
+transport and use may be central pathogenic mechanisms of APOE4. Overall, our analysis confirms established APOE4 neurobiol -
+ogy7, reveals disturbances and assigns cell type specificity to known 
+APOE4-associated alterations. A cell-type-specific molecular atlas of 
+APOE4 pathway-level effects is provided in Supplementary Tables 4–6. APOE4 affects lipid pathways in the brain
+We next performed a targeted pathway analysis focusing on specific 
+molecular pathways that are probably affected by APOE4 by integration 
+Nature | Vol 611 | 24 November 2022 | 771of previous literature (Methods). We created a curated database of 
+193 brain-expressed and APOE-related pathways comprising 8,759 
+unique genes (Extended Data Fig. 2a). Most pathways exhibited 
+cell-type-specific activity, yet a subset was active across all major cell types, suggesting the potential for both cell-type-specific and 
+broad effects of APOE alterations (Extended Data Fig. 2b). 
+
+|Reference 5 (BM25) with RRF Score: 133.1992
+In both cases, a single, continuous basal lamina covers 
+these neuron-satellite glia units, which are separated from each other by 
+connective tissue (Pannese, 2010 ). During development, SGCs are 
+derived from neural crest cells and likely furthermore originate from 
+boundary cap cells (Jessen and Mirsky, 2005 ; Marol et al., 2004 ). As 
+SGCs share several similarities with SC precursor cells, they have been 
+suggested to represent a population of developmentally arrested SCs 
+(George et al., 2018 ). Though, other studies demonstrate a molecular 
+profile more reminiscent to astrocytes (Avraham et al., 2020 ; Jager 
+et al., 2020 ; van Weperen et al., 2021 ) and emphasize overlapping 
+functions to astrocytes in the CNS (Hanani and Spray, 2020 ; Huang 
+et al., 2013 ). However, satellite glial cells were shown to also express 
+unique genes that are absent in SCs and astrocytes (Mapps et al., 2022 ). Recent RNA-sequencing studies identified a pronounced M. Bosch-Queralt et al. Neurobiology of Disease 176 (2023) 105952
+11heterogeneity of SGCs and identified different SGCs types depending on 
+their association with either sensory or sympathetic ganglia (Avraham 
+et al., 2021 ; Mapps et al., 2022 ; Tasdemir-Yilmaz et al., 2021 ; van 
+Weperen et al., 2021 ). 
+
+|Reference 6 (BM25) with RRF Score: 133.1401
+Because neuronal upregulation of genes related to choles-
+terol metabolism could be a general response to chronic myelinalterations, we analyzed transcriptional proﬁles of isolated
+cortical neurons following acute experimental autoimmune
+encephalomyelitis (EAE) induction and following acute-phase(6 weeks of cuprizone) and chronic-phase remyelination
+(12 weeks of cuprizone followed by 2 weeks of cuprizone with-
+drawal, 12+2 weeks) ( Figure 2 D). During acute disease (EAE or
+6 weeks of cuprizone), neurons consistently downregulated
+gene expression related to cholesterol metabolism ( Figure 2 E). In contrast, during remyelination following chronic demyelin-ation in the cuprizone model, expression of genes involved in
+cholesterol metabolism was increased ( Figure 2 E;Table S3 ). To test whether the upregulation of cholesterol synthesis geneswas functionally relevant, we determined the abundance of ste-rols by gas chromatography coupled to mass spectrometry
+(GC/MS) in the chronic remyelination paradigm. 
+
+|Reference 7 (BM25) with RRF Score: 132.0279
+These hFNSC-derived astrocytes were 
+exposed to hypoxia for 48 h which was validated by an increase in the 
+expression of the hypoxia-responsive protein, HIF1 α. Transcriptomic 
+changes in hypoxia-exposed astrocytes interestingly revealed upregu -
+lation of pathways involved in steroid biosynthesis. The upregulated 
+genes included key enzymes of the cholesterol biosynthetic pathway 
+including HMG-coA reductase (HMGCR), mevalonate kinase (MK) and 
+squalene epoxidase (SQLE). Cholesterol within the central nervous system is produced de novo, as 
+cholesterol from the circulation cannot cross the blood-brain barrier. Within the CNS, cholesterol is produced by astrocytes, neurons as well as 
+oligodendrocytes with astrocytes serving as a source for cholesterol for 
+other cell types during times of need [13]. Cholesterol is transported in 
+the form of ApoE-containing lipoproteins. Astrocytes express ABCA1 for 
+the efflux of cholesterol and form lipoprotein-like particles which are 
+taken up by oligodendrocytes and neurons using LDL-receptor (LDLR), scavenger receptor class B type 1 (SRB1) or LDL-R related protein 1/2 
+(LRP1/2) [14]. 
+
+|Reference 8 (BM25) with RRF Score: 131.7150
+However, while high-fat diet can partially compensate for a deﬁciency in fatty
+acid synthesis in the CNS, in the PNS a high fat diet results in worsening of myelin defects when fatty
+acid synthesis is impaired [ 110,111]. The mechanisms underlying di erential e ects in the CNS vs.
+PNS remain to be determined. Taken together the current literature suggests that the uptake of fatty
+acid may not be the primary pathway for myelin formation. However, the importance of fatty acid
+uptake contributing to the energetic metabolism of myelinating cells and axonal trophic support is
+still unclear. Finally, there is also new evidence that lipids could be provided to myelin cells by neurons. A recent study found that fatty acids are released by hyperactive neurons and can be taken up by
+neighboring glia to protect neurons from fatty acid toxicity [158]. 11. Fatty Acid Oxidation
+The nervous system has very high metabolic demands. Notably the CNS consumes 20% of
+the body’s oxygen supply. While the metabolic requirements for neural activity have been well
+characterized, the energetic requirement for myelin formation and maintenance, as well as the
+mechanisms for energetic production in myelinating cells, are not well understood [ 159]. 
+
+|Reference 9 (BM25) with RRF Score: 131.6978
 Differential pathway activity analysis. To minimize the discovery 
 of false positive effects, activity scores were computed only after fil -
 tering out genes that were not expressed in a given cell type (defined 
@@ -16,95 +142,7 @@ of APOE4 (≥1 allele) on pathway activity, when accounting for other confoundin
 explain, a portion of the variation observed in the activity of a pathway 
 of interest. 
 
-|Reference 2 (BM25) with RRF Score: 143.5651
-Because neuronal upregulation of genes related to choles-
-terol metabolism could be a general response to chronic myelinalterations, we analyzed transcriptional proﬁles of isolated
-cortical neurons following acute experimental autoimmune
-encephalomyelitis (EAE) induction and following acute-phase(6 weeks of cuprizone) and chronic-phase remyelination
-(12 weeks of cuprizone followed by 2 weeks of cuprizone with-
-drawal, 12+2 weeks) ( Figure 2 D). During acute disease (EAE or
-6 weeks of cuprizone), neurons consistently downregulated
-gene expression related to cholesterol metabolism ( Figure 2 E). In contrast, during remyelination following chronic demyelin-ation in the cuprizone model, expression of genes involved in
-cholesterol metabolism was increased ( Figure 2 E;Table S3 ). To test whether the upregulation of cholesterol synthesis geneswas functionally relevant, we determined the abundance of ste-rols by gas chromatography coupled to mass spectrometry
-(GC/MS) in the chronic remyelination paradigm. 
-
-|Reference 3 (BM25) with RRF Score: 140.1413
-Indeed, we are still with -
-out any drug treatment for CMT and there is no major impact 
-on real world coming from ongoing research, yet. Which are the reasons for the gap with the other neuro -
-muscular disorders? There are several contributing factors. The 
-peripheral nerves are intrinsically more difficult to study as 
-compared to the muscles and even to the motor neurons: it is 
-problematic to obtain nerve tissue to be studied and charac -
-terized, Schwann cells and myelination studies are particularly 
-challenging, and it is currently extremely hard if not impossi -
-ble to obtain reliable Schwann cells from iPSCs. It is also 
-arduous to target drugs and gene therapies to the peripheral 
-nerves, particularly to correct Schwann cell defects. Other 
-reasons are constituted by: the great genetic heterogeneity 
-of this group of diseases, with about 100 genes and loci 
-involved in CMT and related neuropathies; the great variability 
-of disease expression, with different phenotype severity 708
- C. PISCIOTTA ET AL. 
-
-|Reference 4 (BM25) with RRF Score: 135.6931
-The only network in MYC HME cells
-associated with metabolism was “lipid metabolism ”(IPA Network
-4), whose components are shown in Fig. 2a. The IPA also indicated
-that some of the most signi ﬁcantly altered canonical signalling
-pathways (377 genes; FDR < 5%; Min. fold: 6.81) in MYC HME cellswere involved in lipid metabolism, including atherosclerosissignalling, LXR/RXR activation, and PPAR signalling (Fig. 2b, black
-boxes). Gene expression analysis of an unbiased list of 163
-different genes (Supplementary Table S4) associated with lipid
-metabolism across TERT, MYC, and HER2 HME cells revealed asigni ﬁcant enrichment of upregulation in MYC versus TERT (1.4-
-fold over all upregulated genes, p=5×1 0
-−8by Fisher Exact Test). Notable functions for those genes were related to lipid transport,
-acyl-CoA metabolism, mitochondrial β-oxidation, and lipases. Our
-ﬁndings agree with Camarda et al. who also reported a strong
-representation of fatty acid metabolism genes in TNBC patients.10
-We next performed a lipidomic analysis that revealed that
-phosphatidylcholine (PC) and cardiolipin contained longer, moreunsaturated fatty acyl chains compared to TERT cells (Supple-mentary Fig. 
-
-|Reference 5 (BM25) with RRF Score: 135.6821
-A consistent slow NCV of < 38 m/s in the
-arms represents the demyelinating form of CMT1, whereas a value >38 m/s is distinctive
-of the axonal form of CMT2. Transitional NCVs (25–45 m/s) are often observed in males
-with CMTX1 and in patients with other transitional patterns of CMT [4]. The genetic diagnosis of CMT has been conducted by implementing the targeted next-
-generation sequencing and whole-exome sequencing approaches. Over 120 gene mutations
-are related to the pathogenesis of CMT and associated neuropathies [ 5,6]. The frequency of
-the various types of CMT varies by region and the age at which they were published. In
-the study by Saporta et al., 787 out of 1024 patients were diagnosed with CMT; a genetic
-subtype was identiﬁed in 527 (67%) of these patients, while the remaining 260 patients did
-not present with any identiﬁable mutation. Among the genetically deﬁned cases, CMT1A
-(PMP22 ) emerged as the most prevalent subtype, comprising 55% of the cases, followed
-by CMTX1 ( GJB1 ; 15.2%), hereditary neuropathy with liability to pressure palsy (HNPP;
-Genes 2023 ,14, 1391. https://doi.org/10.3390/genes14071391 https://www.mdpi.com/journal/genes
-Genes 2023 ,14, 1391 2 of 17
-9.2%), CMT1B ( myelin protein zero (MPZ ); 8.5%), and CMT2A ( MFN2 ; 4%) [ 7]. 
-
-|Reference 6 (BM25) with RRF Score: 134.7370
-However, while high-fat diet can partially compensate for a deﬁciency in fatty
-acid synthesis in the CNS, in the PNS a high fat diet results in worsening of myelin defects when fatty
-acid synthesis is impaired [ 110,111]. The mechanisms underlying di erential e ects in the CNS vs.
-PNS remain to be determined. Taken together the current literature suggests that the uptake of fatty
-acid may not be the primary pathway for myelin formation. However, the importance of fatty acid
-uptake contributing to the energetic metabolism of myelinating cells and axonal trophic support is
-still unclear. Finally, there is also new evidence that lipids could be provided to myelin cells by neurons. A recent study found that fatty acids are released by hyperactive neurons and can be taken up by
-neighboring glia to protect neurons from fatty acid toxicity [158]. 11. Fatty Acid Oxidation
-The nervous system has very high metabolic demands. Notably the CNS consumes 20% of
-the body’s oxygen supply. While the metabolic requirements for neural activity have been well
-characterized, the energetic requirement for myelin formation and maintenance, as well as the
-mechanisms for energetic production in myelinating cells, are not well understood [ 159]. 
-
-|Reference 7 (BM25) with RRF Score: 134.5162
-2 MYC HME cells use LPL and CD36 to mobilise and take up fatty acids. a Interaction map of the lipid metabolism gene network in
-MYC HME cells. Ingenuity Pathway Analysis was used to create the interaction map. Black circles highlight lipid metabolism genes CD36 and
-LPL.bTop canonical signalling pathways in MYC versus TERT HME cells based on RNA sequencing data (377 genes; FDR < 5%; minimum fold
-change: 6.81). Ingenuity Pathway Analysis was used to identify the pathways. Black boxes highlight gene ontologies associated with lipidmetabolism. The value next to each bar represents the number of altered genes within the indicated signalling pathway. The colour of the barindicates the percent of genes within the pathway that are differentially regulated. The black dotted line marks signi ﬁcance (FDR < 5%). cHeat
-map showing the relative expression of 163 genes associated with lipid metabolism in TERT, MYC, and HER2 HME cells (1.4 over all
-upregulated genes in MYC HME cells; p=5×1 0
-−8by Fisher Exact Test). 
-
-|Reference 8 (BM25) with RRF Score: 134.2711
+|Reference 10 (BM25) with RRF Score: 130.9649
 S1n –p). MYC HME cells are enriched with fatty acid metabolism genes and
 have phospholipid pro ﬁles indicative of fatty acid uptake
 Having established a TNBC model system of isogenic HME cellslines and shown that MYC expression is suf ﬁcient to induce FAO in
@@ -116,34 +154,4 @@ potential mechanisms of how MYC affects FAO in HME cells
 produced by the IPA, that ranged from 30 to 45 (Supplementary
 Table S3). The score takes into account the number ofdifferentially expressed genes (FDR < 5%) and the size of thenetwork to approximate the relevance of the network to the
 original list of genes. 
-
-|Reference 9 (BM25) with RRF Score: 133.1401
-In the cortex, con-
-ditional inactivation of cholesterol synthesis in neurons or oligo-dendrocytes resulted in moderate upregulation of cholesterol
-synthesis genes, possibly to compensate for the loss of choles-
-terol synthesis in the affected cell type ( Figure 1 E;Table S2 ). In
-contrast, in all conditional mutants, we observed a moderatebut consistent downregulation of expression related to choles-
-terol metabolism in white matter ( Figures 1 E, 1F, and S1
-H). Here, reduced expression of genes associated with cholesteroltransport was noted in all conditional mutants, particularly in
-AcKO animals ( Figure 1 F). In agreement, sterol proﬁling revealed
-only moderate alteration in conditional mutants ( Figure S2 A). Surprisingly, corpus callosum of OLcKO and NcKO mice re-
-vealed a marked downregulation of genes related to the blood-
-brain barrier (BBB). This was accompanied by upregulation ofa few inﬂammatory mediators with proﬁles being unique toeach mutant ( Figures 1 E and 1F). Interestingly, by biochemical
-quantiﬁcation of BBB permeability, the reduced tight junction
-gene expression was paralleled by increased CNS inﬂux of thesmall-molecular-weight BBB tracer sodium ﬂuorescein (NaFl;
-376 Da) in OLcKO and NcKO brains. 
-
-|Reference 10 (BM25) with RRF Score: 132.0279
-To obtain better insights into the under -
-lying pathogenic mechanisms in CMT1A, we investigated the role of PMP22 duplication in cellular homeostasis in 
-CMT1A mouse models and in patient-derived induced pluripotent stem cells differentiated into Schwann cell precur -
-sors (iPSC-SCPs). We performed lipidomic profiling and bulk RNA sequencing (RNA-seq) on sciatic nerves of two developing CMT1A 
-mouse models and on CMT1A patient-derived iPSC-SCPs. For the sciatic nerves of the CMT1A mice, cholesterol 
-and lipid metabolism was downregulated in a dose-dependent manner throughout development. For the CMT1A 
-iPSC-SCPs, transcriptional analysis unveiled a strong suppression of genes related to autophagy and lipid metabol -
-ism. Gene ontology enrichment analysis identified disturbances in pathways related to plasma membrane compo -
-nents and cell receptor signalling. Lipidomic analysis confirmed the severe dysregulation in plasma membrane 
-lipids, particularly sphingolipids, in CMT1A iPSC-SCPs. Furthermore, we identified reduced lipid raft dynamics, dis -
-turbed plasma membrane fluidity and impaired cholesterol incorporation and storage, all of which could result from 
-altered lipid storage homeostasis in the patient-derived CMT1A iPSC-SCPs. 
 

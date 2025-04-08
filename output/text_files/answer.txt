@@ -1,16 +1,25 @@
 Answer:
-Synaptic Plasticity and Neurotransmission:
-Cntn6, Prss12, Synpr, Cpe, Serpini1, P2ry2, Cdh13,
+Synaptic Plasticity and Vesicle Trafficking:
+Prss12, Synpr, Sipa1l1, Frrs1, Mef2c,
 
-Axon Guidance and Neural Circuit Formation:
-Ntn1, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Efna5, Nrp1, Nrp2, Srgap1, Slitrk6, Dpysl3, Dpysl5,
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Sema4f, Ntn1, Srgap1, Robo2, Slit2, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl5, Dpysl3,
 
-Neuronal Differentiation and Development:
-Nes, Id2, Mef2c, Lef1, Atf3, Atf5, Peg3, Msi1, Hmx3, Klf9, Dyrk1a, Numb,
+Myelination and Axoglial Signaling:
+Prx, Mpz, Mag, Pmp22, Mal, Drp2, Cldn19, Gldn,
 
-Axonal Transport and Cytoskeletal Organization:
-Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Rab10, Tbccd1,
+Neural Development and Neurogenesis:
+Nes, Msi1, Numb, Id2, Dyrk1a, Klf9, Atf3, Atf5, Ebf1, Runx3,
 
-Myelination and Glial Function:
-Mpz, Mag, Pmp22, Drp2, Gldn,
+Ion Channel and Calcium Dynamics:
+Scn7a, P2ry2, Ryr3, Tpcn1, Piezo2, Itpripl1, Gja1,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Rab10,
+
+Extracellular Matrix and Synaptic Adhesion:
+Hapln1, Col9a3, Col15a1, Matn3, Cdh13, Adamts17, Adamtsl3, Adamtsl1, Ltbp1,
+
+Growth Factor and Wnt Signaling:
+Wnt5a, Lef1, Met, Igfbp3, Ccn3, Ccn4, Taf9b,
 
