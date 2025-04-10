@@ -1,23 +1,14 @@
-Synaptic Plasticity and Vesicle Trafficking:
-Prss12, Synpr, Sipa1l1, Frrs1, Mef2c,
+Synaptic Plasticity and Neurotransmission:
+Prss12, Synpr, Serpini1, Sipa1l1, Septin5, Cpe, Efna5, Sncg,
 
-Axon Guidance and Neurite Outgrowth:
-Cntn6, Sema4f, Ntn1, Srgap1, Robo2, Slit2, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl5, Dpysl3,
+Axon Guidance and Neural Connectivity:
+Cntn6, Ntn1, Sema4f, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Srgap1,
 
-Myelination and Axoglial Signaling:
-Prx, Mpz, Mag, Pmp22, Mal, Drp2, Cldn19, Gldn,
+Myelination and Glial Cell Signaling:
+Mpz, Mag, Prx, Pmp22, Drp2, Mal, Cldn19, Gldn,
 
-Neural Development and Neurogenesis:
-Nes, Msi1, Numb, Id2, Dyrk1a, Klf9, Atf3, Atf5, Ebf1, Runx3,
+Neuronal Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Dpysl5, Dpysl3, Pfn2, Rhoj, Asap1,
 
-Ion Channel and Calcium Dynamics:
-Scn7a, P2ry2, Ryr3, Tpcn1, Piezo2, Itpripl1, Gja1,
-
-Cytoskeletal Dynamics and Axonal Transport:
-Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Rab10,
-
-Extracellular Matrix and Synaptic Adhesion:
-Hapln1, Col9a3, Col15a1, Matn3, Cdh13, Adamts17, Adamtsl3, Adamtsl1, Ltbp1,
-
-Growth Factor and Wnt Signaling:
-Wnt5a, Lef1, Met, Igfbp3, Ccn3, Ccn4, Taf9b,
+Ion Channel and Calcium Signaling:
+Scn7a, Ryr3, Piezo2, Tpcn1, P2ry2,

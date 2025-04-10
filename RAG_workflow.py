@@ -31,7 +31,7 @@ from openai import OpenAI
 import google.generativeai as genai
 from anthropic import Anthropic
 import torch
-
+from openai import OpenAI as DeepSeekClient
 # Environment Setup
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
@@ -43,7 +43,7 @@ client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_api_key)
 client_claude = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-
+client_deepseek = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
 # Suppress Warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
@@ -1307,8 +1307,8 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
     for i in range(1, range_query):
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
+
             if model == "gpt-4o-mini-search-preview":
-                # For this model, temperature is not accepted.
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
@@ -1341,18 +1341,31 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
                     **kwargs
                 )
             answer = response.choices[0].message.content
+
+
+            # response = client_deepseek.chat.completions.create(
+            #     model="deepseek-reasoner",
+            #     messages=messages,
+            #     stream=False,
+            #     **kwargs
+            # )
+            # answer = response.choices[0].message.content
+
         except Exception as e:
             print(f"An error occurred on iteration {i} using model {model}: {e}")
             continue
+
         if save:
             os.makedirs("./output/test_files", exist_ok=True)
             output_filename = f"./output/test_files/{model}-{config_name}-{i}.txt"
             with open(output_filename, "w", encoding="utf-8") as file:
-                file.write(f"{answer}")
+                file.write(answer)
             print(f"Answer {i} appended to {output_filename}")
         answers.append(answer)
 
     return answers[-1] if answers else None
+
+
 
 
 def query_gemini(system_instruction, prompt):

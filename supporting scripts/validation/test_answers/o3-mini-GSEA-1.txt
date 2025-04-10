@@ -1,0 +1,47 @@
+Pathway Name: Axon Guidance  
+Sema4f, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5, Epha4, Cdh13, Itga6, Itga7, Itga8, Vangl2, Sema3g  
+
+Pathway Name: Myelination  
+Mpz, Mbp, Plp1, Mag, Prx, Pmp22, Cldn19, Mal  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col16a1, Hapln1, Cntn6, Lama4, Fbln1, Sparc, Thbs2, Emilin1, Matn3, Col5a2, Col7a1, Col8a2, Col14a1, Col20a1  
+
+Pathway Name: Lipid Metabolism and Cholesterol Homeostasis  
+Apod, Fabp5, Gstz1, Scd, Acadl, Hadha, Cers6, Sgms1, Plpp1  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Htra1, Eif2ak2, Atf3, Atf4, Creb3, Eif2s1  
+
+Pathway Name: MAPK/ERK Signaling  
+Mapk1, Grb14, Sos1, Mapk8ip1, Pak1, Pak2, Map2k6  
+
+Pathway Name: Wnt Signaling  
+Wnt5a, Lef1, Ctnnb1  
+
+Pathway Name: Autophagy and Lysosomal Degradation  
+Ctsd, Ctsl, Atg3  
+
+Pathway Name: PPAR Signaling  
+Fabp5, Acadl, Hadha  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Bdnf, Synpr, Vamp2, Grb14, Gabpa, Adcy1, Cdk5r1  
+
+Pathway Name: Proteasome and Ubiquitination  
+Psma6, Psmc3, Psmd2, Ube2l3  
+
+Pathway Name: Integrin-Mediated Signaling  
+Itga6, Itga7, Itga8, Itga1  
+
+Pathway Name: Notch Signaling  
+Hes6  
+
+Pathway Name: JAK-STAT Signaling  
+Stat3  
+
+Pathway Name: Rho GTPase Signaling  
+Rhoj, Rhpn2, Cdc42se2  
+
+---  
+**Note**: Each pathway includes genes directly associated with its biological function based on the provided gene list and literature context. Overlap in genes across pathways reflects their multifunctional roles in neural processes.

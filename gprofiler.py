@@ -140,7 +140,8 @@ if __name__ == "__main__":
             df_final = df_api_best[["Pathway", "description", "annotation term", "source", "p-value", "genes"]]
             os.makedirs("./output/text_files", exist_ok=True)
             output_path = "./output/text_files/ground_truth_pathways.txt"
-            df_final[["Pathway", "annotation term", "genes"]].to_csv(output_path, sep="\t", index=False)
+            #df_final[["Pathway", "annotation term", "genes"]].to_csv(output_path, sep="\t", index=False)
+            df_final[["Pathway", "annotation term"]].to_csv(output_path, sep="\t", index=False)
             print(f"Output written to {output_path}")
 
         except requests.HTTPError as e:

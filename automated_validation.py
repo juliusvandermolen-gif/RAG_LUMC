@@ -98,7 +98,7 @@ credible_matches = 0
 # Updated regex pattern: accepts titles enclosed in either asterisks or double quotes,
 # and allows an optional colon after the bibliographic entry.
 pattern = re.compile(
-    r'\(\s*(\d{4})\s*,\s*([^,]+)\s*,\s*[\*"]([^,"\*]+)[\*"]\s*,\s*([^)]+)\)\s*:?\s*<br>\s*>\s*"([^"]+)"',
+    r'(\d{4}),\s+([^,]+),\s+\\?"(.*?)"\\?,\s+([^<]+)(<br>.*)',
     re.MULTILINE
 )
 
@@ -128,13 +128,16 @@ def replace_entry(match):
     if new_title is None:
         print("Could not find title for article.")
         new_title = "The AI hallucinated again, and didnt manage to find an actual paper"
+        new_bib = f"{new_title})"
+        orig_summary = "Keep in mind, the AI hallucinated, so be aware:" + orig_summary
     else:
         credible_matches += 1
-        new_title = new_title + " 🎆🎆🎆"
+        #new_title = new_title + " 🎆🎆🎆"
+        new_bib = f"({year}, {authors}, \"{new_title}\", {journal})"
     time.sleep(1)
     # Reconstruct the bibliographic entry with the updated title while preserving year, authors, and journal.
-    new_bib = f"({year}, {authors}, \"{new_title}\", {journal})"
-    return f'{new_bib}<br> > "Keep in mind, the AI hallucinated, so be aware: {orig_summary}"'
+    print(credible_matches)
+    return f'{new_bib}{orig_summary}"'
 
 
 def main():
@@ -169,27 +172,40 @@ def main():
 
     base_name = os.path.splitext(os.path.basename(latest_file))[0]
     md_filename = os.path.join(output_directory, f"validation_{base_name}.md")
+    # Preprocess the academic results to calculate credible match counts
+    # and process each summary.
+    processed_results = []
+    for pathway, genes, summary in academic_results:
+        # Process the summary and let replace_entry update credible_matches/total_matches.
+        new_summary = pattern.sub(replace_entry, summary)
+        processed_results.append((pathway, genes, new_summary))
+
+    # Now that we've processed everything and credible_matches/total_matches are finalized,
+    # we open the markdown file and write the report.
     with open(md_filename, 'w', encoding="utf8") as md:
-        # Write header with the percentage of credible sources.
-        md.write(f"# Pathway Validation Report for {base_name}\n\n")
+        # Calculate percentage of credible sources.
         if total_matches > 0:
             percent_credible = (credible_matches / total_matches) * 100
         else:
             percent_credible = 0.0
+
+        # Write header and put credible match stats right at the top.
+        md.write(f"# Pathway Validation Report for {base_name}\n\n")
         md.write(f"**Credible sources found: {percent_credible:.1f}% ({credible_matches} out of {total_matches})**\n\n")
+
+        # Write the comparison summary section.
         md.write("## g:Profiler Comparison Summary\n")
         md.write(f"{comparison_summary}\n\n")
+
+        # Write the academic validations using the preprocessed summaries.
         md.write("## Academic Validation of Pathways\n")
-        for pathway, genes, summary in academic_results:
+        for pathway, genes, new_summary in processed_results:
             md.write(f"### {pathway}\n")
             md.write(f"**Genes involved:** {', '.join(genes)}\n\n")
-            # Remove markdown fences.
-            cleaned_summary = re.sub(r'```markdown\s*|\s*```', '', summary.strip())
-            # Apply our PubMed-based replacement on the cleaned summary.
-            new_summary = pattern.sub(replace_entry, cleaned_summary)
             md.write(f"{new_summary}\n\n")
 
     print(f"Markdown validation report created: {md_filename}")
+
 
 
 if __name__ == "__main__":
