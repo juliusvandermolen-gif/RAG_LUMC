@@ -1,0 +1,17 @@
+Synaptic Plasticity and Neural Signaling:
+Cntn6, Prss12, Synpr, Cpe, Peg3, Serpini1, Slit2, Efna5, Nrp1, Nrp2, Sema3g, Sema4f, Cxcl12, Drd4, Grid2, Adcy1, Bdnf, Gja1
+
+Axon Guidance and Neural Migration:
+Ntn1, Robo2, Slit2, Sema3g, Sema4f, Efna5, Nrp1, Nrp2, Cdh13, Plxnb1, Cadm1
+
+Myelination and Glial Development:
+Pmp22, Mpz, Mag, Drp2, Gldn, Cldn19, Mal, Mbp, Plp1
+
+Neural Differentiation and Neurogenesis:
+Id2, Msi1, Nes, Numb, Mef2c, Klf9, Runx3, Lef1, Ebf1
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Kif1a, Septin4, Septin5, Pfn2, Cdk5r1, Dpysl5, Cobl
+
+Ion Channels and Mechanotransduction:
+Scn7a, Piezo2, Ryr3

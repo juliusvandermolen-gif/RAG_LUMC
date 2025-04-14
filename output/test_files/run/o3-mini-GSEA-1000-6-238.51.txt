@@ -1,0 +1,20 @@
+Axon Guidance and Neural Circuit Formation:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Efna5, Cdh13, Slitrk6, Plxnb1, Wnt5a,
+
+Synaptic Signaling and Plasticity:
+Prss12, Synpr, Adcy1, Grik5, Drd4, Bdnf, Cpe, Vgf, P2ry2,
+
+Neural Differentiation and Development:
+Nes, Mef2c, Id2, Atf3, Dyrk1a, Klf9, Ebf1, Numb, Msi1, Lef1,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Dnm1l, Septin4, Septin5, Pfn2,
+
+Myelination and Axon-Glial Interaction:
+Mpz, Pmp22, Mag, Plp1, Gldn, Mbp, Drp2,
+
+Cellular Stress and Neuroinflammatory Response:
+Hif1a, Tlr3, Ifnar1, Irf7, Nlrp1a, Hsp90aa1,
+
+Lipid Metabolism and Membrane Dynamics:
+Abca8a, Pltp, Ppard, Fabp5, Apod,

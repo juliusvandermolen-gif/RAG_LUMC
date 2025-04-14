@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neurotransmission:
+Cntn6, Prss12, Synpr, Drd4, Bdnf, Mef2c, Cpe, Adcy1, Mapk1, Sipa1l1, Ryr3, Grik5,
+
+Axon Guidance and Neurite Outgrowth:
+Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cdh13, Dpysl5, Dpysl3, Efna5, Plxnb1, Sema3g, Daam2,
+
+Myelination and Glial Cell Function:
+Mpz, Pmp22, Mag, Plp1, Mal, Gldn, Prx,
+
+Neural Development and Transcriptional Regulation:
+Atf3, Id2, Numb, Ebf1, Msi1, Klf9, Rarb, Peg3, Lif, Dyrk1a,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Kif1a, Septin4, Septin5, Arf6, Dnm1l,

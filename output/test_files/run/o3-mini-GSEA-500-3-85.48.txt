@@ -1,0 +1,11 @@
+Synaptic Plasticity and Neurotransmission Pathway:
+PRSS12, SYNPR, SERPINI1, SERPINF1, ADYC1, DRD4, RYR3, PAK2, MEF2C, CPE, ADGRL3,
+
+Axon Guidance and Neural Migration Pathway:
+NTN1, SEMA4F, SEMA3G, NRP1, NRP2, SLIT2, ROBO2, SRGAP1, EFNA5, PLXNB1, CDH13, DPYSL3, DPYSL5, CNTN6, CXCL12,
+
+Neural Intracellular Signal Transduction Pathway:
+GNAI1, MAPK1, MAP2K6, GRB14, NFATC1, CDK5R1, ARF6,
+
+Neural Development and Differentiation Pathway:
+ID2, ATF3, ATF5, NUMB, EBF1, KLF9, RUNX3, DYRK1A, MSI1, NES, MET,

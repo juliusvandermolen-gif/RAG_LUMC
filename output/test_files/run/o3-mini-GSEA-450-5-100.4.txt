@@ -1,0 +1,17 @@
+Synaptic Signaling and Plasticity:
+Prss12, Synpr, Adcy1, Drd4, Snap29, Apba1, Vgf, Mef2c, Cdk5r1, Arhgef9
+
+Axon Guidance and Neural Connectivity:
+Cntn6, Ntn1, Sema4f, Sema3g, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl5, Srgap1
+
+Myelination and Neural Insulation:
+Mpz, Pmp22, Drp2, Mag, Prx, Plp1, Mbp, Mal, Gldn
+
+Neurogenesis and Neural Differentiation:
+Nes, Msi1, Numb, Ebf1, Runx3, Id2
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Pfn2, Arf6, Rab10, Septin4, Septin5, Dnm1l
+
+Calcium and Second Messenger Signaling:
+Ryr3, Itpripl1, Tpcn1, Prkg1

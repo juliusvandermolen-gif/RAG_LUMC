@@ -1,0 +1,20 @@
+Synaptic Signaling and Plasticity:
+Cntn6, Prss12, Synpr, Snap29, Bdnf, Adcy1, Drd4, Chrna3, P2ry2,
+
+Axon Guidance and Neural Circuit Formation:
+Ntn1, Slit2, Robo2, Sema4f, Sema3g, Efna5, Plxnb1, Srgap1, Cdh13, Lrrtm3,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Kif1a, Rab10, Dnm1l, Arf6, Pak2, Rhoj,
+
+Calcium and Second Messenger Signaling:
+Ryr3, Camk1d, Itpripl1, Cdk5r1, Nfatc1,
+
+MAPK/ERK Signaling:
+Mapk1, Map2k6, Tnik, Gnai1, Mef2c,
+
+Wnt Signaling in Neural Differentiation:
+Wnt5a, Lef1,
+
+Transcriptional Regulation in Neural Differentiation:
+Id2, Klf9, Atf3, Numb, Ebf1,

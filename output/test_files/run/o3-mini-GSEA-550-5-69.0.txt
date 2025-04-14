@@ -1,0 +1,14 @@
+Axon Guidance and Synaptic Plasticity Pathway:
+Cntn6, Prss12, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cdh13, Sipa1l1, Lrrtm3,
+
+Neurotransmitter and Ion Channel Signaling Pathway:
+Drd4, P2ry2, Piezo2, Scn7a, Adcy1,
+
+Cytoskeletal Dynamics and Axonal Transport Pathway:
+Tuba4a, Kif1a, Pfn2, Septin4, Dpysl5,
+
+Transcriptional Regulation of Neural Plasticity:
+Mef2c, Atf3, Dyrk1a, Klf9, Ebf1, Peg3,
+
+Myelination and Glial-Neuron Interaction Pathway:
+Mpz, Pmp22, Mag, Drp2, Gldn,

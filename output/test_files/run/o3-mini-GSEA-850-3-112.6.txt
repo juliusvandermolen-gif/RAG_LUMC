@@ -1,0 +1,14 @@
+Synaptic Transmission and Plasticity Pathway:
+Prss12, Synpr, Snap29, Adcy1, Grik5, Bdnf, Vamp2, Grid2,
+
+Axon Guidance and Neuronal Migration Pathway:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cdh13, Efna5, Dpysl5, Cadm1, Srgap1, Slitrk6,
+
+Intracellular Signaling and Calcium Dynamics Pathway:
+Adcy1, Ryr3, Camk1d, Itpripl1, Cdk5r1, Dnm1l,
+
+Myelination and Glial Support Pathway:
+Mpz, Pmp22, Mbp, Plp1, Mag, Drp2, Mal,
+
+Transcriptional Regulation in Neuronal Differentiation Pathway:
+Mef2c, Id2, Atf3, Atf5, Ebf1, Klf9, Numb,

@@ -69,6 +69,32 @@ def validate_pathways(gpt_answer, ground_truth, instruction):
 
 
 def academic_validation(pathways, pathway_dict, academic_instruction):
+    # academic_results = []
+    # for pathway in pathways:
+    #     genes = pathway_dict[pathway]
+    #     prompt = (
+    #         f"For the biological pathway '{pathway}', validate the involvement of the genes: {', '.join(genes)}. "
+    #         "Check academic databases such as PubMed, Google Scholar, and GeneCards. "
+    #         "Summarize evidence per gene with citations (DOIs or URLs). Explicitly state if no evidence is found for a gene."
+    #     )
+    #     messages = [
+    #         {"role": "system", "content": academic_instruction},
+    #         {"role": "user", "content": prompt}
+    #     ]
+    #     # Use the 4o-mini-search-preview model with web search options (e.g., medium context)
+    #     response = query_open_ai(
+    #         messages,
+    #         academic_instruction,
+    #         prompt,
+    #         save=False,
+    #         range_query=2,
+    #         model="gpt-4o-mini-search-preview",
+    #         web_search_options={"search_context_size": "medium"}
+    #     )
+    #     if response is None:
+    #         response = "No academic validation response returned."
+    #     academic_results.append((pathway, genes, response.strip()))
+    # return academic_results
     academic_results = []
     for pathway in pathways:
         print(f"Validating pathway: {pathway}")
@@ -81,6 +107,7 @@ def academic_validation(pathways, pathway_dict, academic_instruction):
             {"role": "system", "content": academic_instruction},
             {"role": "user", "content": prompt}
         ]
+        #response = query_open_ai(messages, academic_instruction, prompt, save=False, range_query=2)
         response = query_deepseek(messages, model="deepseek-reasoner")
         if response is None:
             response = "No academic validation response returned."

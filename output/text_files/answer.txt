@@ -1,16 +1,16 @@
 Answer:
-Synaptic Plasticity and Neurotransmission:
-Prss12, Synpr, Serpini1, Sipa1l1, Septin5, Cpe, Efna5, Sncg,
+Synaptic Plasticity & Neurotransmission:
+Prss12, Cntn6, Synpr, Serpini1, Sipa1l1, Adcy1, Drd4, Grid2, Vamp2, Bdnf, Arhgef9, Grik5, Camk4, Reln
 
-Axon Guidance and Neural Connectivity:
-Cntn6, Ntn1, Sema4f, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Srgap1,
+Axon Guidance & Neuronal Connectivity:
+Ntn1, Sema4f, Slit2, Robo2, Nrp1, Nrp2, Srgap1, Dpysl5, Dpysl3, Efna5, Plxnb1, Cdh13, Slitrk6
 
-Myelination and Glial Cell Signaling:
-Mpz, Mag, Prx, Pmp22, Drp2, Mal, Cldn19, Gldn,
+Myelination & Glial Function:
+Mpz, Pmp22, Mag, Prx, Gldn, Mbp, Mal, Plp1
 
-Neuronal Cytoskeletal Dynamics and Axonal Transport:
-Tuba4a, Tubb4a, Kif1a, Dpysl5, Dpysl3, Pfn2, Rhoj, Asap1,
+Neural Development & Differentiation:
+Id2, Mef2c, Atf3, Numb, Dyrk1a, Lef1, Ebf1, Klf9, Hes6, Meis2, Tfap2b, Runx3, Atf5
 
-Ion Channel and Calcium Signaling:
-Scn7a, Ryr3, Piezo2, Tpcn1, P2ry2,
+Axonal Transport & Vesicle Trafficking:
+Kif1a, Dnm1l, Rab10, Snap29
 

@@ -1,0 +1,8 @@
+Synaptic Signaling and Plasticity:
+Bdnf, Adcy1, Synpr, Drd4, Cdk5r1, Ryr3, Snap29, Gnai1, P2ry2, Grik5, Vgf, Mef2c, Mapk1
+
+Axon Guidance and Neural Circuit Formation:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Srgap1, Nrp1, Nrp2, Plxnb1, Cdh13, Met, Rhoj, Lrrtm3
+
+Myelination and Glial Differentiation:
+Mpz, Mag, Prx, Pmp22, Drp2, Gldn, Mbp, Plp1, Mal, Cldn19

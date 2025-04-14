@@ -1,0 +1,11 @@
+Axon Guidance & Synapse Formation:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cdh13,
+
+Synaptic Plasticity & Neurotransmission:
+Prss12, Synpr, Mef2c, Atf3, Gnai1, Drd4, Adcy1, P2ry2, Ryr3, Scn7a,
+
+Myelination & Glial Development:
+Mpz, Mag, Pmp22, Drp2, Cldn19, Plp1, Hapln1, Gldn,
+
+Neural Differentiation & Transcription Regulation:
+Id2, Klf9, Runx3, Ebf1, Dyrk1a,

@@ -1,0 +1,14 @@
+Axon Guidance and Synapse Formation Pathway:
+CNTN6, SEMA4F, SEMA3G, SLIT2, ROBO2, EFNA5, NRP1, NRP2, PLXNB1, CDH13, NTN1,
+
+Synaptic Plasticity and Neurotransmission Pathway:
+PRSS12, DRD4, ADCY1, SYNPR, SNAP29, SYNJ2BP, VGF, CDK5R1, RYR3, MEF2C,
+
+Neural Development and Differentiation Pathway:
+NES, MSI1, DYRK1A, LEF1, LIFR, NUMB, KLF9,
+
+Axonal Transport and Cytoskeletal Dynamics Pathway:
+KIF1A, TUBA4A, TUBB4A, DNM1L, SEPTIN4, SEPTIN5, TAGLN, PFN2, ARF6,
+
+Myelination and Glial Support Pathway:
+MPZ, PMP22, PLP1, MAG,

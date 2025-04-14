@@ -1,0 +1,17 @@
+Axon Guidance and Neural Connectivity:
+Sema4f, Ntn1, Srgap1, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Slitrk6, Efna5,
+
+Synaptic Plasticity and Neurotransmission:
+Cntn6, Prss12, Synpr, Sipa1l1, Snap29, Bdnf, Adcy1,
+
+Myelination and Schwann Cell Development:
+Prx, Mag, Mpz, Pmp22, Mbp, Plp1, Drp2, Gldn, Mal,
+
+Neural Differentiation and Development:
+Aldh1a1, Id2, Peg3, Mef2c, Dyrk1a, Klf9, Numb,
+
+Ion Channel and Neuronal Excitability:
+Scn7a, Ryr3, Piezo2, P2ry2,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Septin4, Pfn2, Dnm1l,

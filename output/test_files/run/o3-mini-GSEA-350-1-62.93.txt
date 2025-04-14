@@ -1,0 +1,14 @@
+Axon Guidance and Neuronal Migration:
+Cntn6, Cdh13, Efna5, Ntn1, Plxnb1, Robo2, Sema3g, Sema4f, Slit2, Srgap1
+
+Synaptic Plasticity and Neurotransmission Signaling:
+Adcy1, Atf3, Kif1a, P2ry2, Prss12, Ryr3, Scn7a, Snap29, Synpr
+
+Neural Differentiation and Developmental Signaling:
+Dyrk1a, Hmx3, Id2, Lifr, Mef2c, Msi1, Numb, Nes
+
+Extracellular Matrix Remodeling and Cell Adhesion in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Bgn, Ccn3, Chst2, Col15a1, Col20a1, Col9a3, Emilin1, Hapln1, Matn3, Sbspon, Timp1
+
+Myelin and Glial Function Signaling:
+Drp2, Emp2, Gldn, Mag, Mpz, Pmp22

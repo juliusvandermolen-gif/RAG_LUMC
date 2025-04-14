@@ -1307,7 +1307,15 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
     for i in range(1, range_query):
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
-
+            # Record start time for this request attempt
+            start_time = time.perf_counter()
+            # response = client_deepseek.chat.completions.create(
+            #     model="deepseek-reasoner",
+            #     messages=messages,
+            #     stream=False,
+            #     **kwargs
+            # )
+            # answer = response.choices[0].message.content
             if model == "gpt-4o-mini-search-preview":
                 response = client_open_ai.chat.completions.create(
                     model=model,
@@ -1340,16 +1348,11 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
                     temperature=0,
                     **kwargs
                 )
+            # Record end time and compute duration
+            end_time = time.perf_counter()
+            duration_seconds = round(end_time - start_time, 2)
+
             answer = response.choices[0].message.content
-
-
-            # response = client_deepseek.chat.completions.create(
-            #     model="deepseek-reasoner",
-            #     messages=messages,
-            #     stream=False,
-            #     **kwargs
-            # )
-            # answer = response.choices[0].message.content
 
         except Exception as e:
             print(f"An error occurred on iteration {i} using model {model}: {e}")
@@ -1357,13 +1360,14 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
 
         if save:
             os.makedirs("./output/test_files", exist_ok=True)
-            output_filename = f"./output/test_files/{model}-{config_name}-{i}.txt"
+            output_filename = f"./output/test_files/{model}-{config_name}-{i}-{duration_seconds}.txt"
             with open(output_filename, "w", encoding="utf-8") as file:
                 file.write(answer)
             print(f"Answer {i} appended to {output_filename}")
         answers.append(answer)
 
     return answers[-1] if answers else None
+
 
 
 
@@ -1544,7 +1548,7 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
 
     if api_type.lower() == 'openai':
         save = True
-        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=2)
+        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=11)
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)
     elif api_type.lower() == 'gemini':
@@ -1726,7 +1730,7 @@ def save_scores_to_file(scores, file_name):
 
 @timer
 def main():
-    parser = argparse.ArgumentParser(description="Run the RAG workflow.")
+    parser = argparse.ArgumentParser(description="Run the RAG workflow tests for varying gene counts.")
     parser.add_argument(
         "--config",
         type=str,
@@ -1742,51 +1746,59 @@ def main():
 
     print(f"Using config: {config_name}")
 
-    gene_list_string, regulation, num_genes = initialize_gene_list(max_genes=max_genes, fdr_threshold=fdr_threshold,
-                                                                   excel_file_path=r".\data\GSEA\genes_of_interest"
-                                                                                   r"\PMP22_VS_WT.xlsx",
-                                                                   de_filter_option="combined",
-                                                                   )
+    # Define the range of gene counts to test: from 100 to 1000 in increments of 50.
+    gene_counts = list(range(100, 1001, 50))
 
-    print(f"Regulation: {regulation}")
+    for max_genes_value in gene_counts:
+        print(f"\n\n=== Running test for max_genes = {max_genes_value} ===")
+        # Override the maximum gene count from the configuration.
+        current_max_genes = max_genes_value
+        gene_list_string, regulation, num_genes = initialize_gene_list(
+            max_genes=current_max_genes,
+            fdr_threshold=fdr_threshold,
+            excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
+            de_filter_option="combined",
+        )
 
-    gene_list = extract_gene_descriptions(
-        gene_list_string=gene_list_string,
-        gene_data_file=r'.\data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'
-    )
+        print(f"Regulation: {regulation} with {num_genes} genes")
 
-    gene_descriptions_string = ', '.join([f"{gene}: {desc}" for gene, desc in gene_list.items()])
+        gene_list = extract_gene_descriptions(
+            gene_list_string=gene_list_string,
+            gene_data_file=r'.\data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'
+        )
+        gene_descriptions_string = ', '.join([f"{gene}: {desc}" for gene, desc in gene_list.items()])
 
-    data_dir = './data/GSEA/external_gene_data'
-    log_dir = './logs'
-    log_path = os.path.join(log_dir, 'file_log.json')
-    index_path = './database/faiss_index.bin'
-    db_path = './database/reference_chunks.db'
-    ncbi_json_dir = './data/JSON/'
+        data_dir = './data/GSEA/external_gene_data'
+        log_dir = './logs'
+        log_path = os.path.join(log_dir, 'file_log.json')
+        index_path = './database/faiss_index.bin'
+        db_path = './database/reference_chunks.db'
+        ncbi_json_dir = './data/JSON/'
 
-    process_files_in_directory(data_dir, ncbi_json_dir)
+        process_files_in_directory(data_dir, ncbi_json_dir)
 
-    conn = initialize_database(db_path=db_path)
-    tokenizer, model = load_model_and_tokenizer()
-    embedding_dim = model.config.hidden_size
+        conn = initialize_database(db_path=db_path)
+        tokenizer, model = load_model_and_tokenizer()
+        embedding_dim = model.config.hidden_size
 
-    index = initialize_faiss_index(embedding_dim, index_path)
+        index = initialize_faiss_index(embedding_dim, index_path)
+        embed_documents_and_save(index, conn, tokenizer, model, data_dir,
+                                 batch_size=batch_size, log_path=log_path,
+                                 index_path=index_path)
 
-    embed_documents_and_save(index, conn, tokenizer, model, data_dir,
-                             batch_size=batch_size, log_path=log_path,
-                             index_path=index_path)
+        index = load_faiss_index(embedding_dim, index_path=index_path)
+        conn = sqlite3.connect(db_path)
+        bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
-    index = load_faiss_index(embedding_dim, index_path=index_path)
-    conn = sqlite3.connect(db_path)
-
-    bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
-
-    generate_response_and_save(query,
-                               gene_descriptions_string, gene_list_string,
-                               conn, index, tokenizer, model,
-                               bm25_index, bm25_chunk_ids,
-                               weight_faiss, weight_bm25,
-                               system_instruction_response)
+        # Single call per gene count since query_open_ai already performs 5 attempts.
+        generate_response_and_save(
+            query,
+            gene_descriptions_string, gene_list_string,
+            conn, index, tokenizer, model,
+            bm25_index, bm25_chunk_ids,
+            weight_faiss, weight_bm25,
+            system_instruction_response
+        )
 
 
 if __name__ == "__main__":

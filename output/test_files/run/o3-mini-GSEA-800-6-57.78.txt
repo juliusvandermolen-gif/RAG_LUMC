@@ -1,0 +1,14 @@
+Axon Guidance Pathway:
+Cntn6, Ntn1, Robo2, Slit2, Sema4f, Sema3g, Efna5, Cdh13
+
+Myelination/Schwann Cell Differentiation Pathway:
+Pmp22, Mpz, Mag, Drp2, Plp1
+
+Synaptic Plasticity/Neuronal Signaling Pathway:
+Prss12, Synpr, Cpe, Drd4, Piezo2, Vgf, Atf3, P2ry2
+
+Extracellular Matrix and Cell Adhesion Pathway:
+Adamts17, Hapln1, Col9a3, Col20a1, Col15a1, Emilin1, Matn3, Fn1, Ccn3, Ccn4, Pkp1, Cldn19
+
+Lipid Metabolism Pathway:
+Abca8a, Pltp, Apod, Ppard, Sgpl1, Fabp5, Agpat5, St3gal5

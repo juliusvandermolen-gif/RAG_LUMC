@@ -1,0 +1,11 @@
+Synaptic Plasticity & Neural Signaling Pathway:
+Cntn6, Prss12, Synpr, Sema4f, Ntn1, Robo2, Nrp1, Piezo2, Atf3, P2ry2, Gprc5b, Serpini1, Sncg,
+
+Axon Guidance & Neuronal Migration Pathway:
+Ntn1, Robo2, Srgap1, Sema4f, Nrp1,
+
+Myelination & Glial Differentiation Pathway:
+Mpz, Mag, Drp2, Gldn, Prx,
+
+Cell Adhesion, Extracellular Matrix & Cytoskeletal Dynamics Pathway:
+Hapln1, Col9a3, Matn3, Cdh13, Pkp1, Adamts17, Adamtsl3, Ltbp1, Sbspon, Mfap5, Cobll1, Tuba4a, Tubb4a, Myo1d, Tagln, Acta2, Parm1, Marveld1, Cep295nl, Qsox1,

@@ -1,0 +1,14 @@
+Axon Guidance and Synaptic Formation Pathway:
+Cntn6, Sema4f, Sema3g, Robo2, Slit2, Nrp1, Nrp2, Ntn1, Srgap1, Plxnb1, Cdh13
+
+Synaptic Signaling and Plasticity Pathway:
+Prss12, Synpr, Adcy1, Mef2c, Kif1a, Drd4, Cdk5r1, Gprc5a, Gprc5b, P2ry2
+
+Neural Development and Differentiation Pathway:
+Id2, Ebf1, Nes, Lef1, Dyrk1a, Numb, Msi1, Wnt5a
+
+Myelination and Glial Cell Function Pathway:
+Mpz, Pmp22, Mag, Drp2, Gldn, Mal, Cldn19
+
+Calcium and Ion Channel Regulation Pathway:
+Ryr3, Scn7a, Piezo2, Nfatc1

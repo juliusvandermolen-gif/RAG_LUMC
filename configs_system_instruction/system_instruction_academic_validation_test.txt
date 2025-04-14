@@ -31,7 +31,7 @@ Clearly present findings using markdown-formatted tables exactly as shown below:
 
 | Pathway Name | Gene | Evidence from GeneCards (GO Terms) | Evidence from Academic Literature (Year, Authors, Verified Exact Title, Journal)<br>> \"Quotation\" |
 |--------------|------|------------------------------------|----------------------------------------------------------------------------------|
-| Cell Cycle Regulation | CDK1 | GO:0000086 (G2/M transition of mitotic cell cycle)<br>GO:0007049 (Cell cycle)<br>[View GeneCards](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CDK1) | 2022, Johnson et al., \"CDK1 involvement in mitotic transitions\", *Cell Reports*<br>> \"CDK1 activity is critical for the G2/M transition.\" |
+| Cell Cycle Regulation | CDK1 | GO:0000086 (G2/M transition of mitotic cell cycle)[View GeneCards](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CDK1) | 2022, Johnson et al., \"CDK1 involvement in mitotic transitions\", *Cell Reports*<br>> \"CDK1 activity is critical for the G2/M transition.\" |
 | DNA Repair | BRCA1 | GO:0006281 (DNA repair)<br>[View GeneCards](https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRCA1) | 2020, Lee et al., \"Role of BRCA1 in DNA damage response pathways\", *Nature Communications*<br>> \"BRCA1 is essential for effective DNA repair.\" |
 
 - Clearly separate evidence sources.

@@ -1,0 +1,14 @@
+Axon Guidance and Synaptic Plasticity:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Dpysl3, Dpysl5, Synpr, Adcy1
+
+Neural Crest and Myelination:
+Nes, Mpz, Mag, Plp1, Drp2, Gldn
+
+MAPK and Neural Signal Transduction:
+Mapk1, Map2k6, Mef2c, Tnik, Atf3, Nfatc1, Epas1
+
+Cholesterol and Lipid Metabolism in Neural Cells:
+Abca8a, Pltp, Lrp2, Ppard
+
+Ion Channel and Calcium Signaling:
+Scn7a, Ryr3, Piezo2, Drd4, Chrna3
