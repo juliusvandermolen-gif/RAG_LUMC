@@ -1,0 +1,14 @@
+Myelination Pathway:  
+Mag, Mpz, Hapln1, Col9a3, Gldn,  
+
+Lipid Metabolism Pathway:  
+Sqor, Aldh1a1, Abca8a, Pltp, Man1a1, Chst2,  
+
+Axon Guidance Pathway:  
+Ntn1, Sema4f, Robo2, Srgap1, Cntn6,  
+
+Synaptic Plasticity Pathway:  
+Synpr, Sncg, Id2, Prss12, Piezo2, Slc9a9,  
+
+Neural Signaling Pathway:  
+Tril, Tf, Nrp1, P2ry2, Gprc5b, Epas1,

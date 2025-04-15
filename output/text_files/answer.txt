@@ -1,16 +1,13 @@
 Answer:
-Synaptic Plasticity & Neurotransmission:
-Prss12, Cntn6, Synpr, Serpini1, Sipa1l1, Adcy1, Drd4, Grid2, Vamp2, Bdnf, Arhgef9, Grik5, Camk4, Reln
+Myelination Pathway:
+Pmp22, Mpz, Mag, Gldn, Hapln1, Mal, Cldn19,
 
-Axon Guidance & Neuronal Connectivity:
-Ntn1, Sema4f, Slit2, Robo2, Nrp1, Nrp2, Srgap1, Dpysl5, Dpysl3, Efna5, Plxnb1, Cdh13, Slitrk6
+Axon Guidance Pathway:
+Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cntn6,
 
-Myelination & Glial Function:
-Mpz, Pmp22, Mag, Prx, Gldn, Mbp, Mal, Plp1
+Synaptic Plasticity Pathway:
+Synpr, Cdh13, Dpysl5, Dpysl3, Mef2c, Piezo2,
 
-Neural Development & Differentiation:
-Id2, Mef2c, Atf3, Numb, Dyrk1a, Lef1, Ebf1, Klf9, Hes6, Meis2, Tfap2b, Runx3, Atf5
-
-Axonal Transport & Vesicle Trafficking:
-Kif1a, Dnm1l, Rab10, Snap29
+Lipid Metabolism Pathway:
+Abca8a, Pltp, Sgpl1, Cers6, Hadhb, Nampt, Apod,
 

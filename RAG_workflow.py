@@ -32,6 +32,7 @@ import google.generativeai as genai
 from anthropic import Anthropic
 import torch
 from openai import OpenAI as DeepSeekClient
+
 # Environment Setup
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
@@ -44,6 +45,10 @@ gemini_api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_api_key)
 client_claude = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 client_deepseek = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
+client_grok = OpenAI(
+    base_url="https://api.x.ai/v1",
+    api_key=os.getenv("XAI_API_KEY"),
+)
 # Suppress Warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
 warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
@@ -1286,7 +1291,8 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model="o3-mini", **kwargs):
+def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model="grok-3-mini-beta",
+                  **kwargs):
     """
     Queries the OpenAI API using provided messages and parameters, attempting multiple times if necessary.
     Optionally saves responses to a file.
@@ -1309,12 +1315,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
             print(f"Trying to generate a response using model {model} (attempt {i})...")
             # Record start time for this request attempt
             start_time = time.perf_counter()
-            # response = client_deepseek.chat.completions.create(
-            #     model="deepseek-reasoner",
-            #     messages=messages,
-            #     stream=False,
-            #     **kwargs
-            # )
+
             # answer = response.choices[0].message.content
             if model == "gpt-4o-mini-search-preview":
                 response = client_open_ai.chat.completions.create(
@@ -1340,6 +1341,23 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
                     reasoning_effort="high",
                     **kwargs
                 )
+
+            elif model.startswith("deep"):
+                response = client_deepseek.chat.completions.create(
+                    model=model,
+                    messages=messages,
+                    stream=False,
+                    temperature=0,
+                    **kwargs
+                )
+            elif model.startswith("grok"):
+                response = client_grok.chat.completions.create(
+                    model=model, # or "grok-3-mini-fast-beta"
+                    reasoning_effort="high",
+                    messages=messages,
+                    temperature=0,
+                )
+
             else:
                 response = client_open_ai.chat.completions.create(
                     model=model,
@@ -1367,9 +1385,6 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
         answers.append(answer)
 
     return answers[-1] if answers else None
-
-
-
 
 
 def query_gemini(system_instruction, prompt):
@@ -1746,8 +1761,7 @@ def main():
 
     print(f"Using config: {config_name}")
 
-    # Define the range of gene counts to test: from 100 to 1000 in increments of 50.
-    gene_counts = list(range(100, 1001, 50))
+    gene_counts = list(range(250, 1001, 50))
 
     for max_genes_value in gene_counts:
         print(f"\n\n=== Running test for max_genes = {max_genes_value} ===")

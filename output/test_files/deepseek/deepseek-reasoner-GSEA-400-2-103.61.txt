@@ -1,0 +1,59 @@
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Efna5, Slit2, Robo2, Plxnb1, Wnt5a, Cdh13, Col9a3, Col15a1  
+
+Pathway Name: Cholesterol and Lipid Metabolism in Myelination  
+Abca8a, Hs6st1, Hs6st2, Fabp5, Aldh1a1, Htra1, Apod, Cxcl12, Cers6, Scd, Gprc5b, Gprc5a, Mbp, Plp1  
+
+Pathway Name: PPAR Signaling and Lipid Homeostasis  
+Ppard, Rxra, Fabp5, Cpt1a (implicit via lipid metabolism genes), Cxcl14, Apod, Cers6  
+
+Pathway Name: Lysosomal/Proteasomal Degradation and Autophagy  
+Ctsd, Ctsl, Sumo3, Htra1, Psap, Hsp90aa1, Lrp2, Ifnar1, Stard13  
+
+Pathway Name: Hypoxia Response and HIF1α Signaling  
+Hif1a, Epas1, Aldh1a1, Serpine1, Vegfa (implicit via hypoxia pathways), Adm (implicit)  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Synpr, Grb14, Adcy1, Drd4, Ryr3, Ntrk1, P2ry2, Gja1, Sipa1l1, Dpysl5, Dpysl3  
+
+Pathway Name: Schwann Cell Differentiation and Myelin Maintenance  
+Mag, Prx, Mbp, Mpz, Plp1, Pmp22 (implicit via CMT context), Sox10 (implicit), Qki (implicit via lipid metabolism)  
+
+Pathway Name: Neural Crest Cell Migration and ECM Remodeling  
+Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Emilin1, Ltbp1, Adamts17, Adamtsl3, Matn3  
+
+Pathway Name: Wnt/β-Catenin Signaling  
+Wnt5a, Lef1, Tcf7l2 (implicit via Wnt targets), Ccnd3, Apcdd1 (implicit)  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Atf3, Atf5, Hsp90aa1, Hspa12a, Rcn3, Xbp1 (implicit), Chop (implicit)  
+
+Pathway Name: JNK/MAPK Signaling in Neural Development  
+Mef2c, Pak2, Steap1, Steap2, Dusp1 (implicit), Fos (implicit)  
+
+Pathway Name: Neurotrophin and Growth Factor Signaling  
+Igfbp3, Pdgfb, Lifr, Met, Ghr, Fstl1, Ccn3, Ccn4, Ccnjl  
+
+Pathway Name: Notch Signaling and Neural Progenitor Regulation  
+Hes1 (implicit via context), Dll1 (implicit), Notch1 (implicit), Jag1 (implicit)  
+
+Pathway Name: Ion Transport and Channel Activity  
+Scn7a, Tpcn1, Trpv4 (implicit), Kcnk10 (implicit), Cacna1a (implicit)  
+
+Pathway Name: RNA Metabolism and Post-Transcriptional Regulation  
+Pum2, Zc3h14, Eif2ak2, Eif2b5, Riox2, Sumo3, Ddx1, Pnpt1  
+
+Pathway Name: Inflammatory Response in Neural Injury  
+A2m, Timp1, Bgn, C1qtnf1, Cd9, Cd151, Cd55, Cd302, Ighm, Siglec10  
+
+Pathway Name: TGF-β/BMP Signaling  
+Ltbp1, Tgfb1 (implicit), Bmp4 (implicit), Smad1 (implicit), Id2  
+
+Pathway Name: Mitochondrial Fatty Acid Oxidation  
+Hadhb, Hadha, Acadm (implicit), Cpt1a (implicit), Slc25a20 (implicit)  
+
+Pathway Name: Microtubule Dynamics and Neuronal Cytoskeleton  
+Tubb4a, Tuba4a, Dync1h1 (implicit), Kif1a, Kif26b, Stmn1 (implicit)  
+
+Pathway Name: Retinoic Acid-Mediated Neurodevelopment  
+Aldh1a1, Rarb, Rxra, Crabp1 (implicit), Rbp1 (implicit)

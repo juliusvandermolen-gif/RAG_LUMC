@@ -1,0 +1,32 @@
+Myelin Sheath Formation:
+Mag, Mpz, Hapln1, Col9a3, Gldn, 
+
+Axon Guidance:
+Cntn6, Sema4f, Ntn1, Srgap1, Robo2, 
+
+Synaptic Plasticity:
+Synpr, Sncg, Piezo2, Slc9a9, 
+
+Cholesterol Biosynthesis:
+Aldh1a1, Sqor, Abca8a, Tf, 
+
+Lipid Metabolism:
+Adamts17, Pcsk5, Pltp, Abcb4, 
+
+Neural Signaling:
+Tril, Nrp1, Epas1, Atf3, 
+
+Hypoxia Response:
+Epas1, Atf3, 
+
+Autophagy and Lysosomal Pathways:
+Sumo3, Serpini1, Manba, 
+
+Axonal Transport:
+Drp2, Tuba4a, Tubb4a, 
+
+Inflammation and Immune Response:
+Cxcl14, Ighm, A2m, 
+
+Transcriptional Regulation:
+Id2, Peg3, Ccn3,

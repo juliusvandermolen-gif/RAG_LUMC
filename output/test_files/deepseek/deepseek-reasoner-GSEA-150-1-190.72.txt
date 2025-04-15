@@ -1,0 +1,47 @@
+Charcot-Marie-Tooth Disease Pathway:  
+Drp2, Mag, Mpz, Prx, Gldn  
+
+Axon Guidance and Semaphorin Signaling:  
+Sema4f, Nrp1, Nrp2, Slit2, Robo2, Srgap1, Ntn1, Col9a3, Col15a1  
+
+Cholesterol and Lipid Metabolism:  
+Abca8a, Pltp, Apod, Aldh1a1, Parm1, Sqor, Cobll1, Agpat5, Steap2, Sgpl1  
+
+Neural Crest Development and Schwann Cell Differentiation:  
+Peg3, Kif1a, Dyrk1a, Ebf1, Lifr, Emp2, Cd9  
+
+Synaptic Plasticity and Neurotransmission:  
+Grb14, Piezo2, P2ry2, Sumo3, Synpr, Sncg, Ryr3, Cpe  
+
+Extracellular Matrix Organization in Neural Tissues:  
+Hapln1, Col9a3, Col15a1, Matn3, Efemp2, Adamts17, Adamtsl1, Adamtsl3  
+
+Lysosomal/Proteasomal Degradation Pathways:  
+Manba, Ctbs, Psmd2, Serpini1, Htra1  
+
+Retinoic Acid Signaling in Neural Development:  
+Aldh1a1  
+
+JAK-STAT Signaling in Glial Differentiation:  
+Lifr  
+
+ER Stress and Unfolded Protein Response:  
+Htra1, Eif2ak2, Atf3, Serpinf1  
+
+PPAR-mediated Lipid Homeostasis:  
+Abca8a, Pltp, Apod, Aldh1a1  
+
+Neuregulin Signaling and Myelination:  
+Nrg1 (indirect via pathway context), Mag, Mpz, Drp2  
+
+Peripheral Myelin Protein Interactions:  
+Mpz, Mag, Prx, Gldn  
+
+Hedgehog Signaling (via ECM components):  
+Cdon (indirect), Col9a3, Col15a1  
+
+Rho GTPase Signaling in Axon Guidance:  
+Srgap1, Robo2, Slit2  
+
+Neural Cell Adhesion and Recognition:  
+Cntn6, Cdh13, Cd9, Clca4l, Lrrtm3

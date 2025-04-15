@@ -1,0 +1,32 @@
+Axon Guidance and Semaphorin Signaling:  
+Sema4f, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5  
+
+Myelin Formation and Maintenance:  
+Mag, Mpz, Prx, Gjb1, Lrp2, Hapln1, Pmp22, Qki, Dpysl5, Dpysl3  
+
+Cholesterol and Lipid Metabolism:  
+Fabp5, Cers6, Sgms1, Plod3, Hmgcr, Abca8a, Scd, Pltp, Apod, Pnpt1  
+
+Neural Crest and Schwann Cell Differentiation:  
+Sox10, Lrp2, Dpysl5, Dpysl3, Col9a3, Col15a1, Emilin1, Matn3, Ntn1, Wnt5a  
+
+Synaptic Plasticity and Neurotransmission:  
+Synpr, Grb14, Piezo2, Dyrk1a, Adcy1, Ryr3, Ecel1, Ntrk1, Sipa1l1, Cdk5r1  
+
+Extracellular Matrix Organization:  
+Adamts17, Adamtsl3, Col9a3, Col15a1, Emilin1, Matn3, Bgn, Efemp2, Mfap5, Comp  
+
+Autophagy and Lysosomal Degradation:  
+Htra1, Ctbs, Psap, Ctsb, Lpar1, Hsp90aa1, Hspa12a, Atg4b, Map1lc3a, Cep97  
+
+PPAR Signaling Pathway:  
+Fabp5, Rxra, Pparb, Gprc5b, Acap2, Cd36, Lpl, Plin4, Acsl1, Abca1  
+
+ERK/MAPK Signaling:  
+Grb14, Dyrk1a, Eif2ak2, Mapk1, Pak2, Nfatc1, Mef2c, Lef1, Tnik, Rarb  
+
+Hypoxia Response and Astrocyte Signaling:  
+Hif1a, Epas1, Vegfa, Serpinf1, Timp1, Cxcl12, Cxcl14, Ldha, Aldh1a1, Nampt  
+
+Axonal Transport and Cytoskeletal Dynamics:  
+Tubb4a, Tuba4a, Kif1a, Kif26b, Dnm1l, Dpysl5, Dpysl3, Septin4, Septin5, Pfn2

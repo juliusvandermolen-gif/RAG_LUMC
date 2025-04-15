@@ -1,0 +1,29 @@
+Pathway Name: Myelin Assembly and Maintenance  
+Mag, Mpz, Prx, Gldn, Pltp, Hapln1, Emp2, Abca8a, Sqor, Ltbp1, Steap2, Hs6st2  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Aldh1a1, Sqor, Pltp, Apod, Abca8a, Pcsk5, Ltbp1, Steap2, Hs6st2  
+
+Pathway Name: Axon Guidance and Neural Circuit Formation  
+Ntn1, Sema4f, Robo2, Nrp1, Cdh13, Srgap1, Piezo2, Efemp2, Col9a3, Slc9a9  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Synpr, Grb14, P2ry2, Cpe, Ccn3, Atf3, Sumo3, Tubb4a, Eif2ak2, Ptgfr, Slc22a17, Sncg  
+
+Pathway Name: Extracellular Matrix Organization  
+Adamts17, Adamtsl3, Col9a3, Hapln1, Mfap5, Matn3, Efemp2, Htra1, Serpinf1, Cdh13  
+
+Pathway Name: Glial Cell Differentiation and Schwann Cell Development  
+Mag, Mpz, Prx, Gldn, Id2, Emp2, Ntn1, Pltp, Abca8a, Sqor  
+
+Pathway Name: Inflammatory Response and Immune Regulation  
+A2m, Ighm, Atf3, Htra1, Serpini1, Tf, Cxcl14, Igfbp3  
+
+Pathway Name: Neural Crest Cell Migration and Differentiation  
+Robo2, Sema4f, Nrp1, Cdh13, Sncg, Piezo2, Efemp2  
+
+Pathway Name: Regulation of Apoptosis and Cell Survival  
+Atf3, Ccn3, Igfbp3, Serpinf1, Id2, Ltbp1  
+
+Pathway Name: Neurotransmitter Transport and Ion Channel Activity  
+Slc22a17, Slc9a9, P2ry2, Scn7a, Cxcl14, Piezo2, Abcb4, Grb14

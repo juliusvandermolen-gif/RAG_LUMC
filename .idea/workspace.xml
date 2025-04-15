@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/plotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/system_instruction_academic_validation_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/system_instruction_academic_validation_test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/scores.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/output/scores.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-without-rag-without-scope-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/test_files/o3-mini-GSEA-300-8-138.42.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/answer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/answer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-1.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/documents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/documents.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/text_files/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/messages.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supporting scripts/calculate_overlap/calculate_overlap.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/supporting scripts/calculate_overlap/calculate_overlap.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.automated_validation">
+  <component name="RunManager" selected="Python.RAG_workflow">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
@@ -92,7 +93,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="new_rag" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -115,7 +115,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="new_rag" />
+      <option name="SDK_NAME" value="rag" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -160,7 +160,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="new_rag" />
+      <option name="SDK_NAME" value="rag" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
