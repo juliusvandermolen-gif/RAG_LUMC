@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 # Ignore specific database and index files
-chunks_embeddings.db
-faiss_index.bin
+/database/
+/output/
