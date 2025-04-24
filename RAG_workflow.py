@@ -58,8 +58,19 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.
 def load_config(filename):
     """
     Load and process a JSON configuration file, escaping newline characters in string literals,
-    and return the resulting configuration dictionary.
+    enforce required fields, fill in defaults, and report any defaults used.
     """
+    default_cfg = {
+        "number_of_expansions": 5,
+        "batch_size": 64,
+        "model_name": "mghuibregtse/biolinkbert-large-simcse-rat",
+        "amount_docs": 50,
+        "weight_faiss": 50,
+        "weight_bm25": 50,
+        "max_genes": 250,
+        "fdr_threshold": 0.05,
+    }
+
     with open(filename, 'r', encoding='utf-8') as config_file:
         raw_content = config_file.read()
 
@@ -69,8 +80,35 @@ def load_config(filename):
         return '"' + inner + '"'
 
     pattern = r'"(?:\\.|[^"\\])*"'
-    processed_content = re.sub(pattern, escape_newlines_in_string_literal, raw_content, flags=re.DOTALL)
-    return json.loads(processed_content)
+    processed = re.sub(pattern, escape_newlines_in_string_literal, raw_content, flags=re.DOTALL)
+
+    try:
+        user_cfg = json.loads(processed)
+    except json.JSONDecodeError as e:
+        sys.stderr.write(f"ERROR: invalid JSON in {filename}: {e}\n")
+        sys.exit(1)
+
+    required = {
+        "system_instruction_response":
+            "is vital for this application. Please add 'system_instruction_response' to your config JSON and try again.",
+        "query":
+            "is required to know what genes or questions to analyze. Please add 'query' to your config JSON and try again."
+    }
+    for field, msg in required.items():
+        if not user_cfg.get(field):
+            sys.stderr.write(f"ERROR: '{field}' {msg}\n")
+            sys.exit(1)
+
+    missing_keys = [key for key in default_cfg if key not in user_cfg]
+    if missing_keys:
+        sys.stderr.write(
+            "WARNING: The following config parameters were not specified and will use default values:\n"
+            + ", ".join(missing_keys) + "\n"
+        )
+
+    cfg = default_cfg.copy()
+    cfg.update(user_cfg)
+    return cfg
 
 
 # Downloads and sets stopwords for BM25
@@ -525,7 +563,7 @@ def fetch_chunks_by_ids(conn, ids):
     query = f"SELECT id, text FROM chunks WHERE id IN ({placeholder})"
     cursor = conn.cursor()
     cursor.execute(query, ids)
-    rows = cursor.fetchall()                # e.g. [(659, "some text"), (2582, "other text"), ...]
+    rows = cursor.fetchall()               
     return {row[0]: row[1] for row in rows}
 
 
@@ -1122,10 +1160,7 @@ def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
     bm25_doc_scores = {}
 
     for eq in expanded_queries:
-        top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25_index, chunk_ids, top_k=len(chunk_ids))
-        if 2582 in detailed_scores:
-            print(f"Tokens: {detailed_scores[2582]['tokens']}  score: {detailed_scores[2582]['score']}")
-
+        top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25_index, chunk_ids, top_k=top_k)
         for doc_id, details in detailed_scores.items():
             if doc_id not in bm25_doc_scores:
                 bm25_doc_scores[doc_id] = {
