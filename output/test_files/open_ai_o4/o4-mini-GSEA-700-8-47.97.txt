@@ -1,0 +1,17 @@
+Axon guidance:
+Sema3g, Sema4f, Ntn1, Slit2, Robo2, Efna5, Plxnb1, Nrp1, Nrp2
+
+Synaptic signaling and plasticity:
+Bdnf, Grik5, Drd4, Camk1d, Cdk5r1, Mef2c, Ebf1, Snap29, Vamp2, Synpr
+
+Myelination:
+Mbp, Plp1, Mpz, Mag, Cldn19, Mal
+
+Calcium/MAPK signaling:
+Itpripl1, Ryr3, Camk1d, Cdk5r1, Mapk1, Map2k6, Map4k5
+
+Wnt/Planar cell polarity:
+Wnt5a, Lef1, Vangl2, Prickle3
+
+Rho GTPase signaling:
+Arhgap24, Arhgap5, Cdc42se2, Rhoj, Pak2

@@ -1,0 +1,17 @@
+Synaptic Plasticity & Neurotransmission:
+Prss12, Synpr, Serpini1, Sipa1l1, Cdh13, Efna5, Sema3g, Scn7a, Sncg, P2ry2,
+
+Axon Guidance & Neural Migration:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Slitrk6, Srgap1,
+
+Myelination & Glial Differentiation:
+Prx, Mpz, Mag, Drp2, Gldn, Pmp22, Mal, Cldn19,
+
+Cytoskeletal Dynamics & Vesicle Transport:
+Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Rab10, Pfn2, Dpysl5, Asap1, Acap2,
+
+Neural Growth Factor & ECM/Cell Adhesion Signaling:
+Hapln1, Col9a3, Adamts17, Adamtsl3, Ltbp1, Matn3, Emilin1, Timp1, Cxcl12, Itga8, Itga7, Ppfia4, Ccn3, Ccn4, Bgn, Has2,
+
+Neural Transcriptional Regulation & Differentiation:
+Id2, Ebf1, Mef2c, Atf5, Runx3, Klf9, Dyrk1a, Numb, Msi1, Taf9b,

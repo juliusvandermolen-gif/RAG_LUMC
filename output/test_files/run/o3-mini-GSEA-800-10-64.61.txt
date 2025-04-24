@@ -1,5 +1,0 @@
-Axon Guidance and Neuronal Connectivity: Cntn6, Slit2, Robo2, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Cdh13, Efna5, Plxnb1, Srgap1,  
-Synaptic Plasticity and Neurotransmission: Prss12, Synpr, Cpe, P2ry2, Piezo2, Scn7a,  
-Neurodevelopment and Neural Differentiation: Nes, Msi1, Mef2c, Dyrk1a, Id2, Atf3, Numb, Peg3, Gldc,  
-Cytoskeletal Dynamics and Axonal Transport: Kif1a, Tuba4a, Septin4, Septin5, Myo1d, Drp2, Rab10, Pfn2,  
-Myelination and Glial-Neuronal Interaction: Mpz, Pmp22, Mal, Gldn, Cldn19,

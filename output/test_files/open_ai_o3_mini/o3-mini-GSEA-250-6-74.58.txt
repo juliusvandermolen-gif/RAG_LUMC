@@ -1,0 +1,20 @@
+Synaptic Plasticity and Neural Signaling:
+Cntn6, Prss12, Synpr, Sipa1l1, Efna5, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Gnai1, P2ry2, Scn7a, Piezo2, Cdh13, Ryr3, Mef2c
+
+Axon Guidance and Neural Migration:
+Ntn1, Slit2, Robo2, Sema4f, Sema3g, Plxnb1, Srgap1, Dpysl5, Dpysl3, Rhoj, Asap1, Itga8, Itga7, Cxcl12, Efna5, Olfm2
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Pmp22, Prx, Mag, Gldn, Cldn19, Mal, Drp2
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Cep295nl, Septin4, Septin5, Pfn2, Myo1d
+
+Transcriptional Regulation in Neural Development:
+Id2, Dyrk1a, Mef2c, Atf3, Ebf1, Klf9, Numb, Msi1, Runx3, Lef1, Taf9b, Sumo3
+
+Extracellular Matrix and Cell Adhesion in Neural Tissue:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Hapln1, Chst2, Matn3, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Emilin1, Cxcl12, Htra1, Efemp2, Cd9, Pals1, Tspan4, Tspan5, Ckap4, Bgn
+
+Lipid Metabolism and Membrane Composition in Neural Cells:
+Abca8a, Pltp, Apod, Steap2, Sgpl1, Ppard, Agpat5, Serinc5

@@ -1,0 +1,23 @@
+Axon Guidance and Neural Circuit Formation:
+Ntn1, Robo2, Sema4f, Nrp1, Cntn6, Cdh13, Srgap1
+
+Synaptic Vesicle Trafficking and Neuropeptide Processing:
+Synpr, Cpe, Ecel1, Prss12, Serpini1
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Mag, Prx, Drp2
+
+Purinergic and GPCR‑Mediated Neural Signaling:
+P2ry2, Gprc5b
+
+Ion Channel and Mechanosensory Transduction:
+Scn7a, Piezo2
+
+Extracellular Matrix Remodeling and Perineuronal Net Formation:
+Hapln1, Adamts17, Adamtsl3
+
+Neuroprotective Metabolic Regulation:
+Gldc, Aldh1a1, Apod, Igfbp3
+
+Transcriptional Regulation of Neural Plasticity:
+Atf3, Id2, Epas1

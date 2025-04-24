@@ -1,0 +1,35 @@
+Semaphorin Signaling in Axon Guidance:
+Sema3g, Sema4f, Nrp1, Nrp2, Dpysl3, Dpysl5
+
+Slit‑Robo Signaling Pathway:
+Slit2, Robo2, Srgap1
+
+Myelin Sheath Formation and Maintenance:
+Mpz, Mag, Prx, Mal, Cldn19
+
+Synaptic Adhesion and Plasticity:
+Cntn6, Lrrtm3, Synpr, Sncg
+
+Neural Transcriptional Regulation:
+Mef2c, Ebf1, Atf3, Atf5, Nfatc1, Klf9, Runx3, Id2
+
+Axonal Transport and Cytoskeletal Dynamics:
+Kif1a, Dpysl3, Dpysl5, Septin4, Pfn2, Tuba4a, Tubb4a
+
+Calcium Signaling and Neuronal Excitability:
+Ryr3, Itpripl1, P2ry2
+
+Chemokine and Neuroinflammatory Signaling:
+Cxcl12, Cxcl14, Nlrp1a, Ifnar1, Tril
+
+Wnt Non‑Canonical Signaling:
+Wnt5a, Tnik
+
+Sphingolipid and Heparan Sulfate Metabolism:
+Sgpl1, St3gal5, Cers6, Hs6st1, Hs6st2
+
+Extracellular Matrix Organization:
+Hapln1, Col9a3, Col15a1, Col20a1, Emilin1, Mfap5, Adamts17, Adamtsl1, Adamtsl3
+
+JAK‑STAT Signaling:
+Lifr, Ifnar1, Icoslg

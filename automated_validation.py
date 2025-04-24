@@ -13,16 +13,8 @@ load_dotenv()
 
 from openai import OpenAI as DeepSeekClient
 
-deepseek_client = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
-
-
-def query_deepseek(messages, model):
-    response = deepseek_client.chat.completions.create(
-        model=model,
-        messages=messages,
-        stream=False
-    )
-    return response.choices[0].message.content
+deepseek_client = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"),
+                                 base_url="https://api.deepseek.com")
 
 
 def read_latest_llm_output(answer_dir="./output/test_files"):
@@ -45,7 +37,8 @@ def extract_pathways(answer_text):
             pathway = line[:-1].strip()
             pathways.append(pathway)
             genes_line = next(it, "")
-            genes = [gene.strip() for gene in genes_line.split(",") if gene.strip()]
+            genes = [gene.strip() for gene in genes_line.split(",") if
+                     gene.strip()]
             pathway_dict[pathway] = genes
     return pathways, pathway_dict
 
@@ -64,37 +57,13 @@ def validate_pathways(gpt_answer, ground_truth, instruction):
         {"role": "system", "content": instruction},
         {"role": "user", "content": prompt}
     ]
-    answer = query_open_ai(messages, instruction, prompt, save=False, range_query=2)
+    answer = query_open_ai(messages, instruction, prompt, save=False,
+                           range_query=1, model="o3-mini")
     return answer
 
 
-def academic_validation(pathways, pathway_dict, academic_instruction):
-    # academic_results = []
-    # for pathway in pathways:
-    #     genes = pathway_dict[pathway]
-    #     prompt = (
-    #         f"For the biological pathway '{pathway}', validate the involvement of the genes: {', '.join(genes)}. "
-    #         "Check academic databases such as PubMed, Google Scholar, and GeneCards. "
-    #         "Summarize evidence per gene with citations (DOIs or URLs). Explicitly state if no evidence is found for a gene."
-    #     )
-    #     messages = [
-    #         {"role": "system", "content": academic_instruction},
-    #         {"role": "user", "content": prompt}
-    #     ]
-    #     # Use the 4o-mini-search-preview model with web search options (e.g., medium context)
-    #     response = query_open_ai(
-    #         messages,
-    #         academic_instruction,
-    #         prompt,
-    #         save=False,
-    #         range_query=2,
-    #         model="gpt-4o-mini-search-preview",
-    #         web_search_options={"search_context_size": "medium"}
-    #     )
-    #     if response is None:
-    #         response = "No academic validation response returned."
-    #     academic_results.append((pathway, genes, response.strip()))
-    # return academic_results
+def academic_validation(pathways, pathway_dict, academic_instruction,
+                        validation_model):
     academic_results = []
     for pathway in pathways:
         print(f"Validating pathway: {pathway}")
@@ -107,8 +76,9 @@ def academic_validation(pathways, pathway_dict, academic_instruction):
             {"role": "system", "content": academic_instruction},
             {"role": "user", "content": prompt}
         ]
-        #response = query_open_ai(messages, academic_instruction, prompt, save=False, range_query=2)
-        response = query_deepseek(messages, model="deepseek-reasoner")
+        response = query_open_ai(messages, academic_instruction, prompt,
+                                 save=False, range_query=1,
+                                 model=validation_model)
         if response is None:
             response = "No academic validation response returned."
         academic_results.append((pathway, genes, response.strip()))
@@ -168,7 +138,7 @@ def replace_entry(match):
 
 
 def main():
-    answer_dir = "./output/test_files"
+    answer_dir = "./output/test_files/"
     ground_truth_file = "./output/text_files/ground_truth_pathways.txt"
     system_instruction_file = "./configs_system_instruction/system_instruction_comparison_pathways.txt"
     academic_instruction_file = "./configs_system_instruction/system_instruction_academic_validation_test.txt"
@@ -192,13 +162,17 @@ def main():
     except FileNotFoundError as e:
         print(e)
         return
-
-    comparison_summary = validate_pathways(llm_output, ground_truth, comparison_instruction)
+    validation_model = "o4-mini"
+    comparison_summary = validate_pathways(llm_output, ground_truth,
+                                           comparison_instruction)
     pathways, pathway_dict = extract_pathways(llm_output)
-    academic_results = academic_validation(pathways, pathway_dict, academic_instruction)
+    academic_results = academic_validation(pathways, pathway_dict,
+                                           academic_instruction,
+                                           validation_model=validation_model)
 
     base_name = os.path.splitext(os.path.basename(latest_file))[0]
-    md_filename = os.path.join(output_directory, f"validation_{base_name}.md")
+    md_filename = os.path.join(output_directory,
+                               f"validation_{base_name}_{validation_model}.md")
     # Preprocess the academic results to calculate credible match counts
     # and process each summary.
     processed_results = []
@@ -218,7 +192,8 @@ def main():
 
         # Write header and put credible match stats right at the top.
         md.write(f"# Pathway Validation Report for {base_name}\n\n")
-        md.write(f"**Credible sources found: {percent_credible:.1f}% ({credible_matches} out of {total_matches})**\n\n")
+        md.write(
+            f"**Credible sources found: {percent_credible:.1f}% ({credible_matches} out of {total_matches})**\n\n")
 
         # Write the comparison summary section.
         md.write("## g:Profiler Comparison Summary\n")
@@ -232,7 +207,6 @@ def main():
             md.write(f"{new_summary}\n\n")
 
     print(f"Markdown validation report created: {md_filename}")
-
 
 
 if __name__ == "__main__":

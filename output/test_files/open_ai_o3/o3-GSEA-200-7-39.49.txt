@@ -1,0 +1,23 @@
+Axon Guidance and Growth Cone Dynamics:  
+Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Itga8, Gnai1, Dpysl3, Dpysl5, Kif1a, Lrrtm3, Gldn, Tnik,
+
+Myelination and Schwann Cell Differentiation:  
+Mag, Mpz, Pmp22, Drp2, Gldn, Id2, Lrp2,
+
+Synaptic Vesicle Cycling and Neurotransmission:  
+Synpr, P2ry2, Scn7a, Sncg, Tuba4a, Pfn2, Ryr3, Kif1a, Tpcn1, Gja1,
+
+Extracellular Matrix and Synaptic Adhesion Remodeling:  
+Adamts17, Adamtsl3, Adamtsl1, Cntn6, Hapln1, Col9a3, Col20a1, Col15a1, Matn3, Efemp2, Emilin1, Mfap5,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:  
+Wnt5a, Tnik, Dyrk1a, Rhoj, Gnai1, Lrp2,
+
+Mechanosensory Ion Channel Signaling:  
+Piezo2, P2ry2, Ryr3, Itpripl1, Tpcn1, Scn7a, Slc9a9,
+
+Neural Stem Cell Maintenance and Differentiation:  
+Nes, Msi1, Numb, Dyrk1a, Id2, Runx3, Klf9, Atf5, Mef2c, Vrk1,
+
+Cholesterol and Sphingolipid Metabolism in Neural Membranes:  
+Abca8a, Abcb4, Cers6, Agpat5, Psap, Apod, Sgpl1, Pltp, Sqor, Nampt, Hadhb,

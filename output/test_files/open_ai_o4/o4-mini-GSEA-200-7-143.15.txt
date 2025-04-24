@@ -1,0 +1,29 @@
+Axon Guidance:
+Sema4f, Sema3g, Slit2, Robo2, Nrp1, Nrp2, Ntn1, Srgap1
+
+Extracellular Matrix–Receptor Interaction:
+Itga7, Itga8, Cd9, Cd151, Hapln1, Col9a3, Col15a1, Col20a1, Emilin1, Matn3, Mfap5, Adamts17, Adamtsl3, Adamtsl1, Htra1
+
+Cytoskeleton Dynamics:
+Acta2, Tagln, Fhod3, Pfn2, Septin4, Tuba4a, Tubb4a, Kif1a, Drp2
+
+Synaptic Function:
+Synpr, Cpe, Sncg, P2ry2, Gprc5a, Gprc5b, Gnai1
+
+Calcium Signaling:
+Ryr3, Itpripl1, Tpcn1
+
+Neuronal Activity–Dependent Transcription:
+Dyrk1a, Prkd3, Prkar2b, Atf3, Atf5, Nfatc1, Mef2c, Runx3, Ebf1, Klf9, Id2
+
+Wnt Signaling:
+Wnt5a, Lrp2
+
+Myelination:
+Pmp22, Mpz, Prx, Mag, Mal, Cldn19, Gldn
+
+Lipid Metabolism and Myelin Lipid Homeostasis:
+Abca8a, Pltp, Apod, Cers6, Sgpl1, Nampt
+
+Mitochondrial Amino Acid Metabolism:
+Sqor, Gldc, Aldh1a1, Hadhb, Agpat5, Pam

@@ -77,6 +77,12 @@ def load_config(filename):
 nltk.download('punkt')
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
+extra_stops = {
+    "list", "genes", "identify", "mechanisms", "pathways",
+    "related", "based", "following", "recent", "study"
+}
+stop_words |= extra_stops
+
 
 aggregated_times = {}
 with open("./logs/time.txt", "w") as f:
@@ -513,12 +519,14 @@ def fetch_chunks_by_ids(conn, ids):
         A list of text contents corresponding to the provided chunk IDs.
     """
 
+    if not ids:
+        return {}
+    placeholder = ','.join('?' for _ in ids)
+    query = f"SELECT id, text FROM chunks WHERE id IN ({placeholder})"
     cursor = conn.cursor()
-    placeholder = ','.join(['?'] * len(ids))
-    query = f"SELECT text FROM chunks WHERE id IN ({placeholder})"
     cursor.execute(query, ids)
-    results = cursor.fetchall()
-    return [row[0] for row in results]
+    rows = cursor.fetchall()                # e.g. [(659, "some text"), (2582, "other text"), ...]
+    return {row[0]: row[1] for row in rows}
 
 
 # FAISS Functions
@@ -860,6 +868,9 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
     all_documents = files_documents + pdf_documents
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    if device == 'cpu':
+        print("No GPU available. Using CPU for embedding.")
+        exit()
     model.to(device)
     model.eval()
 
@@ -963,7 +974,8 @@ def build_bm25_index(conn):
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
     tokenized_corpus = [tokenize(doc) for doc in chunk_texts]
-    bm25 = BM25Plus(tokenized_corpus)
+    #bm25 = BM25Plus(tokenized_corpus)
+    bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
 
 
@@ -1032,6 +1044,9 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
         A tuple containing the list of top document IDs and their corresponding distances.
     """
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    if device == 'cpu':
+        print("No GPU available. Using CPU for embedding.")
+        exit()
     loaded_model = AutoModel.from_pretrained(model_name, force_download=force_download)
     loaded_tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
     if model.config != loaded_model.config:
@@ -1107,7 +1122,9 @@ def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
     bm25_doc_scores = {}
 
     for eq in expanded_queries:
-        top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25_index, chunk_ids, top_k=top_k)
+        top_ids, top_scores, detailed_scores = query_bm25_index(eq, bm25_index, chunk_ids, top_k=len(chunk_ids))
+        if 2582 in detailed_scores:
+            print(f"Tokens: {detailed_scores[2582]['tokens']}  score: {detailed_scores[2582]['score']}")
 
         for doc_id, details in detailed_scores.items():
             if doc_id not in bm25_doc_scores:
@@ -1217,11 +1234,15 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs,
         if any(bm25_doc[0] == doc_id for bm25_doc in top_bm25_docs):
             combined_docs[doc_id]['retriever'].append('BM25')
 
-    unique_ids_list = list(unique_ids)
-    retrieved_chunks = fetch_chunks_by_ids(conn, unique_ids_list) if unique_ids_list else []
-    doc_id_to_chunk = dict(zip(unique_ids_list, retrieved_chunks))
+    # build the ID→text map in one go
+    doc_id_to_chunk = fetch_chunks_by_ids(conn, list(unique_ids))
 
-    ordered_chunks = [doc_id_to_chunk[doc_id] for doc_id, _ in sorted_rrf_scores if doc_id in doc_id_to_chunk]
+    # then simply iterate in rank order
+    ordered_chunks = [
+        doc_id_to_chunk[doc_id]
+        for doc_id, _ in sorted_rrf_scores
+        if doc_id in doc_id_to_chunk
+    ]
 
     return ordered_chunks, combined_docs
 
@@ -1291,7 +1312,7 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model="grok-3-mini-beta",
+def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model,
                   **kwargs):
     """
     Queries the OpenAI API using provided messages and parameters, attempting multiple times if necessary.
@@ -1310,7 +1331,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
         The final answer received from the API, or None if all attempts fail.
     """
     answers = []
-    for i in range(1, range_query):
+    for i in range(1, range_query+1):
         try:
             print(f"Trying to generate a response using model {model} (attempt {i})...")
             # Record start time for this request attempt
@@ -1318,12 +1339,14 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
 
             # answer = response.choices[0].message.content
             if model == "gpt-4o-mini-search-preview":
+                model_dir = "openai"
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
                     **kwargs
                 )
             elif model.startswith("gpt-4"):
+                model_dir = "openai"
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
@@ -1332,6 +1355,12 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
                     **kwargs
                 )
             elif model.startswith("o"):
+                if "o4" in model:
+                    model_dir = "open_ai_o4"
+                elif "o3" in model:
+                    model_dir = "open_ai_o3"
+                elif "o3-mini" in model:
+                    model_dir = "open_ai_o3_mini"
                 adjusted_prompt = system_instruction_for_response + prompt
                 messages = [{"role": "user", "content": adjusted_prompt}]
                 response = client_open_ai.chat.completions.create(
@@ -1342,7 +1371,8 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
                     **kwargs
                 )
 
-            elif model.startswith("deep"):
+            elif model.startswith("deepseek"):
+                model_dir = "deepseek"
                 response = client_deepseek.chat.completions.create(
                     model=model,
                     messages=messages,
@@ -1351,6 +1381,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
                     **kwargs
                 )
             elif model.startswith("grok"):
+                model_dir = "grok"
                 response = client_grok.chat.completions.create(
                     model=model, # or "grok-3-mini-fast-beta"
                     reasoning_effort="high",
@@ -1378,7 +1409,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
 
         if save:
             os.makedirs("./output/test_files", exist_ok=True)
-            output_filename = f"./output/test_files/{model}-{config_name}-{i}-{duration_seconds}.txt"
+            output_filename = f"./output/test_files/{model_dir}/{model}-{config_name}-{i}-{duration_seconds}.txt"
             with open(output_filename, "w", encoding="utf-8") as file:
                 file.write(answer)
             print(f"Answer {i} appended to {output_filename}")
@@ -1563,7 +1594,7 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
 
     if api_type.lower() == 'openai':
         save = True
-        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=11)
+        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=1, model="o4-mini")
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)
     elif api_type.lower() == 'gemini':
@@ -1761,8 +1792,8 @@ def main():
 
     print(f"Using config: {config_name}")
 
-    gene_counts = list(range(250, 1001, 50))
-
+    #gene_counts = list(range(100, 1001, 100))
+    gene_counts = [250]
     for max_genes_value in gene_counts:
         print(f"\n\n=== Running test for max_genes = {max_genes_value} ===")
         # Override the maximum gene count from the configuration.

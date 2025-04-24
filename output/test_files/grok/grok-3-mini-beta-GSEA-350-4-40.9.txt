@@ -1,0 +1,17 @@
+Axon guidance:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Ntn1, Robo2, Slit2, Plxnb1, Dpysl5, Dpysl3,
+
+Myelin sheath assembly:
+Mag, Mpz, Gja1, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1,
+
+Cholesterol metabolic process:
+Apod, Hadhb, Sqor, Hsd17b7, Dhcr7, Fdps, Mvk, 
+
+Synaptic transmission:
+Synpr, Sncg, Gnai1, Grb14, Cxcl12, Wnt5a, Adcy1, 
+
+Autophagy:
+Sumo3, Bace2, Map1lc3a, Rab10, 
+
+Lipid metabolism:
+Apod, Hadhb, Sqor, Hsd17b7, Abca8a, Abcb4, Lrp2,

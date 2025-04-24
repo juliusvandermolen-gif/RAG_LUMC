@@ -1,0 +1,11 @@
+Axon Guidance and Neural Development Pathway:
+Cntn6, Ntn1, Sema4f, Sema3g, Robo2, Slit2, Nrp1, Nrp2, Wnt5a, Plxnb1, Lef1, Olfm2
+
+Synaptic Signaling and Plasticity Pathway:
+Synpr, Drd4, Adcy1, Bdnf, Grik5, Grid2, Mef2c, Atf3, Camk1d, Camk4, Ryr3, Cdh13, Gprc5a, Gprc5b, Gnai1
+
+Axonal Transport and Cytoskeletal Dynamics Pathway:
+Tuba4a, Kif1a, Dnm1l, Septin4, Septin5, Arf6
+
+MAPK/ERK Signaling in Neural Cells:
+Mapk1, Map2k6, Tnik

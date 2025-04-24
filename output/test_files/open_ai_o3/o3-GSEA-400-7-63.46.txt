@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Navigation:
+Cntn6, Sema4f, Sema3g, Ntn1, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Itga8, Dpysl3, Dpysl5, Tnik, Srgap1,
+
+Synaptic Transmission and Plasticity:
+Synpr, Serpini1, Adcy1, Cdk5r1, Ryr3, Chrna3, Drd4, Snap29, Scn7a, Lrrtm3, Dyrk1a, Gja1, Vgf, P2ry2,
+
+Peripheral Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Plp1, Mag, Drp2, Mbp, Mal, Gldn, Itga6,
+
+Cholesterol and Lipid Metabolism for Myelin Integrity:
+Abca8a, Abcb4, Apod, Cers6, Agpat5, Scd, Fabp5, Ppard, Lpar1, Sgpl1, Sgms1, St3gal5,
+
+Calcium‑Mediated Neural Signaling:
+Ryr3, Piezo2, Itpripl1, Chrna3, P2ry2, Adcy1, Gnai1,
+
+Extracellular Matrix Interaction in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Emilin1, Efemp2, Bgn, Matn3, Nid2, Hapln1, Timp1, Ltbp1, Pxdn,

@@ -1,8 +1,0 @@
-Synaptic Plasticity and Neurotransmission: PRSS12, SYNPR, BDNF, DRD4, GRIK5, ADCY1, SNAP29, VGF  
-Axon Guidance and Cell Adhesion: CNTN6, SEMA4F, SLIT2, ROBO2, NRP1, NRP2, EFNA5, CDH13, PCDH18, SRGAP1, PLXNB1, CADM1, CTNND2, OLFM2  
-Intracellular Signal Transduction: MAPK1, MAP2K6, GNAI1, ADCY1, RYR3, ITPRIPL1, NFATC1, ATF3, DYRK1A, PAK2, TNIK  
-Cytoskeletal Dynamics and Axonal Transport: KIF1A, TUBA4A, DNM1L, DPYSL5, KIF26B, SEPTIN4, SEPTIN5, PFN2  
-Myelination and Glial Differentiation: MPZ, PMP22, MAG, PLP1, MBP, GLDN  
-Growth Factor and Neurotrophin Signaling: BDNF, LIFR, MET, GHR, PDGFB, CXCL12  
-Transcriptional Regulation and Neural Differentiation: ID2, MEF2C, ATF3, ATF5, KLF9, NUMB, EBF1, LEF1, TAF9B  
-Ion Channels and Electrical Activity: SCN7A, PIEZO2, P2RY2

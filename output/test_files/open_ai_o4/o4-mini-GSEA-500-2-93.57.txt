@@ -1,0 +1,23 @@
+Axon guidance and semaphorin‑plexin signaling:
+Sema4f, Sema3g, Ntn1, Slit2, Robo2, Plxnb1, Nrp1, Nrp2, Efna5
+
+Myelin sheath formation:
+Pmp22, Mpz, Mbp, Mag, Plp1
+
+Cytoskeleton dynamics and axonal transport:
+Kif1a, Tuba4a, Tubb4a, Dnm1l, Dync2i1, Septin4, Septin5, Prex2, Cobl, Fhod3, Arhgef9
+
+ECM–receptor interaction:
+Hapln1, Bgn, Fn1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Nid2, Emilin1, Itga6, Itga7, Itga8
+
+Neurotransmitter receptor signaling:
+Drd4, Chrna3, P2ry2
+
+Calcium signaling:
+Ryr3, Itpripl1, Piezo2
+
+cAMP signaling:
+Adcy1, Prkar2b
+
+MAPK signaling:
+Mapk1, Map2k6, Prkd3, Mef2c, Atf3, Atf5

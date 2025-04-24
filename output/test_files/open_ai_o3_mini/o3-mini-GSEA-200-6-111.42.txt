@@ -1,0 +1,29 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Srgap1, Dpysl3, Dpysl5, Sema3g, Olfm2, Nrp1, Nrp2, Wnt5a, Zpld1,
+
+Synaptic Signaling and Plasticity:
+Prss12, Synpr, Sipa1l1, Frrs1, St3gal5, Sncg, P2ry2, Lrrtm3, Ppfia4,
+
+Ion Transport and Calcium Signaling:
+Scn7a, Piezo2, Ryr3, Tpcn1, Itpripl1, Slc9a9,
+
+Myelination and Glial Signaling:
+Pmp22, Mpz, Mag, Prx, Drp2, Gldn, Mal, Serpinf1,
+
+Transcriptional Regulation in Neural Development:
+Id2, Atf3, Mef2c, Nfatc1, Dyrk1a, Klf9, Msi1, Ebf1, Runx3, Atf5, Epas1, Nes, Aff3, Taf9b, Numb,
+
+Extracellular Matrix and Cell Adhesion in Neural Development:
+Hapln1, Col9a3, Adamts17, Adamtsl3, Adamtsl1, Matn3, Emilin1, Itga8, Itga7, Col20a1, Col15a1, Hs6st2, Hs6st1, Pxdn, Pkp1, Efemp2, Cldn19, Lrp2, Cldnd1, Timp1,
+
+Lipid Metabolism and Neural Energy Homeostasis:
+Aldh1a1, Igfbp3, Pltp, Apod, Abca8a, Nampt, Pappa, Sgpl1, Agpat5, Psap, Ccn4, Cers6, Hadhb, Fth1,
+
+Signal Transduction and Kinase Regulation:
+Grb14, Prkar2b, Gnai1, Prkd3, Tnik, Gprc5b, Gprc5a, Rnf144a, Tspan4, Lifr, Poglut1, Cd9, Vps26c, Cd151, Tspan5, Gja1, Ppm1f,
+
+Stress and Immune Response in Neural Context:
+A2m, Tril, Eif2ak2, Icoslg, Selplg, Ifnar1, Nlrp1a, Cxcl14, Cdca7l, Cxcl12, C1qtnf1,
+
+Axonal Transport and Cytoskeletal Dynamics:
+Tuba4a, Tubb4a, Myo1d, Kif1a, Tagln, Pfn2, Septin4, Fhod3, Phldb2, Acap2, Rhoj, Asap1,

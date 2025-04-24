@@ -1,0 +1,26 @@
+Synaptic Plasticity and Neurotransmission Pathway:
+Cntn6, Prss12, Cpe, Peg3, Synpr, Serpini1, P2ry2, Sncg, Gprc5b, Ecel1, Serpinf1, Atf3,
+
+Axon Guidance and Neurite Outgrowth Pathway:
+Sema4f, Ntn1, Srgap1, Hs6st2, Nrp1, Robo2,
+
+Myelination and Glial Differentiation Pathway:
+Prx, Mag, Drp2, Mpz, Gldn,
+
+Extracellular Matrix and Cell Adhesion Pathway:
+Zpld1, Adamts17, Cobll1, Qsox1, Hapln1, Marveld1, Sbspon, Col9a3, Emp2, Chst2, Adamtsl3, Ltbp1, Mfap5, Pxdn, Matn3, Cdh13, Pkp1, Efemp2,
+
+Neural Metabolic, Stress, and Signal Transduction Pathway:
+Gldc, Aldh1a1, Pcsk5, Tex101, Parm1, Sqor, Htra1, Igfbp3, Tril, A2m, Ccn3, Prss23, Sumo3, Grb14, Steap2, Id2, Tf, Cdca7l, Manba, Nrbp1, Ptgfr, Vopp1, Pltp, Man1a1, Slc22a17, Ctbs, Abca8a, Serinc5, Tent5c, Apod, Riox2, Abcb4, Epas1, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ppp1r36, Trim35, Alpl,
+
+Ion Channels and Electrical Excitability Pathway:
+Clca4l, Piezo2, Slc9a9, Scn7a,
+
+Cytoskeletal Dynamics and Intracellular Trafficking Pathway:
+Tuba4a, Acta2, Myo1d, Tagln, Cep295nl, Tubb4a,
+
+Neuroimmune and Inflammatory Response Pathway:
+Defb29, Aif1l, Cxcl14, Ighm, Icoslg,
+
+Other/Unclear Neural Associations:
+Gypc, Magec2l1, Krtap1-5,

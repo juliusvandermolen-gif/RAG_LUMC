@@ -1,0 +1,14 @@
+Synaptic Plasticity & Neurotransmission:
+Cntn6, Prss12, Synpr, Bdnf, Vgf, Grid2, Drd4, Adcy1, Gprc5b, Gprc5a, Mef2c, Camk1d, Ryr3, Cdh13,
+
+Axon Guidance & Neuronal Connectivity:
+Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Efna4, Srgap1, Cdh13, Gldn, Slitrk6,
+
+Cytoskeletal Dynamics & Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Dnm1l, Dpysl5, Dpysl3, Dyrk1a, Septin4, Septin5, Tagln, Myo1d, Cfl2,
+
+Intracellular Signaling & Transcription Regulation:
+Atf3, Klf9, Cdk5r1, Gnai1, Prkar2b, Numb, Mapk1, Eif2ak2, Id2, Atf5,
+
+Lipid Metabolism & Membrane Organization in Neural Cells:
+Aldh1a1, Pltp, Hs6st2, Hs6st1, Abca8a,

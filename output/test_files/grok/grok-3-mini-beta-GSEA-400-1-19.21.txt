@@ -1,0 +1,17 @@
+Myelination Pathway:
+MAG, MPZ, PMP22, MBP, PLP1, GJA1, MOG, 
+
+Axon Guidance Pathway:
+NRP1, NRP2, SEMA4F, SEMA3G, SLIT2, ROBO2, PLXNB1, EFNA5, 
+
+Synaptic Plasticity Pathway:
+GRIA2, GRIA3, GRIA4, GRM5, GRM7, CAMK2A, CAMK2B, 
+
+Lipid Metabolism Pathway:
+ALDH1A1, HADHB, ACACA, ACACB, FASN, SCD, 
+
+Inflammatory Response Pathway:
+CXCL12, CXCL14, TNF, IL6, IL1B, 
+
+Neural Development Pathway:
+SOX10, PAX6, NEUROD1, NEUROG2, NOTCH1,

@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neural Signaling Pathway:
+Cntn6, Prss12, Synpr, Met, Gprc5a,
+
+Axon Guidance and Neural Connectivity Pathway:
+Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Efna5, Plxnb1, Cdh13,
+
+Transcriptional Regulation and Cytoskeletal Organization Pathway:
+Id2, Atf3, Mef2c, Kif1a, Tuba4a, Septin4, Pfn2, Nes, Dyrk1a, Lef1,
+
+Myelination and Neural Support Pathway:
+Mpz, Pmp22, Mag, Drp2, Cldn19, Mal,
+
+Extracellular Matrix and Cell Adhesion Pathway:
+Hapln1, Col9a3, Col20a1, Col15a1, Emilin1,

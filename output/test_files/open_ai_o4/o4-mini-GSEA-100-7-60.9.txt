@@ -1,0 +1,26 @@
+Myelin Sheath Formation and Maintenance:
+Mpz, Mag, Prx, Drp2, Gldn,
+
+Neural Axon Guidance:
+Ntn1, Robo2, Sema4f, Nrp1, Srgap1, Cntn6, Cdh13,
+
+Extracellular Matrix Organization:
+Hapln1, Col9a3, Matn3, Mfap5, Adamts17, Adamtsl3, Qsox1,
+
+Synaptic Vesicle Dynamics:
+Synpr, Sncg, Cpe, Serpini1,
+
+Neural Lipid Transport and Metabolism:
+Apod, Pltp, Abca8a, Serinc5, Abcb4,
+
+Extracellular Proteolysis:
+Prss12, Prss23, Htra1, Ctbs, Adamts17, Adamtsl3,
+
+Cytoskeletal Regulation:
+Tuba4a, Tubb4a, Acta2, Tagln, Myo1d,
+
+MAPK/ERK Signaling in Neuronal Differentiation:
+Id2, Atf3, Eif2ak2, Epas1,
+
+Neuronal Metabolic Homeostasis:
+Aldh1a1, Gldc, Sqor,

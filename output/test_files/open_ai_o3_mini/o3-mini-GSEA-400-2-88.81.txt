@@ -1,0 +1,14 @@
+Axon Guidance and Neuronal Connectivity Pathway:
+CNTN6, SEMA4F, SEMA3G, NTN1, ROBO2, SLIT2, NRP1, NRP2, EFNA5, PLXNB1, CDH13, DPYSL5, LRRTM3, ARHGEF9, COBL
+
+Synaptic Plasticity and Neurotransmission Signaling Pathway:
+PRSS12, SYNPR, SNAP29, ADCY1, DRD4, MEF2C, ATF3, GNAI1, CHRNA3, SYNJ2BP, VGF, APBA1, CKB
+
+Neural Cell Adhesion and Extracellular Matrix Remodeling Pathway:
+HAPLN1, COL9A3, COL11A1, COL15A1, MATN3, BGN, ADAMTS17, ADAMTSL3, ADAMTSL1, EMILIN1, EFEMP2, PCDH18, NECTIN1
+
+Myelination and Schwann Cell Differentiation Pathway:
+MPZ, PMP22, MAG, DRP2, PRX, MBP, PLP1, MAL, GLDN
+
+Neural Progenitor and Differentiation Signaling Pathway:
+NES, NUMB, ID2, DYRK1A, KLF9, ATF5, LMO4

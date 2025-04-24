@@ -1,0 +1,14 @@
+Synaptic Plasticity and Vesicle Trafficking:
+PRSS12, SYNPR, SNAP29, KIF1A, SEPTIN4,
+
+Axon Guidance and Neural Connectivity:
+CNTN6, NTN1, SLIT2, ROBO2, SEMA4F, SEMA3G, NRP1, NRP2, EFNA5, PLXNB1, SRGAP1, SLITRK6, DPYSL3, DPYSL5,
+
+Neural Development and Differentiation:
+MEF2C, ID2, NES, NUMB, DYRK1A, ATF3, EBF1, KLF9, PEG3,
+
+Neural Signaling and Ion Channel Activity:
+DRD4, SCN7A, PIEZO2, P2RY2, RYR3, ADCY1, GJA1,
+
+Myelination and Schwann Cell Function:
+PMP22, MPZ, DRP2, GLDN, MAL,

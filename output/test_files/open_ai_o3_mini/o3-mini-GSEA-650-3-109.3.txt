@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neurotransmission:
+CNTN6, PRSS12, SYNPR, BDNF, SNAP29, DRD4, GRID2, GRIK5, VAMP2, SIPA1L1, ARHGEF9, CDH13,
+
+Axon Guidance and Neural Connectivity:
+SEMA4F, NTN1, SRGAP1, ROBO2, SLIT2, NRP1, NRP2, DPYSL5, DPYSL3, PLXNB1, RHOJ, SEMA3G, ITGA8, ITGA6, ITGA7,
+
+Myelination and Schwann Cell Differentiation:
+PMP22, MPZ, MAG, DRP2, PRX, GLDN, MBP, PLP1, UGT8, MAL,
+
+Neural Lipid Metabolism and Cholesterol Biosynthesis:
+PLTP, ABCA8A, APOD, PPARD, GBA1, SGPL1, CERS6, SCD, FABP5, ACOT7,
+
+Axonal Transport and Cytoskeletal Dynamics:
+TUBA4A, TUBB4A, KIF1A, DNM1, MYO1D, PFN2, CFL2,

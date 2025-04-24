@@ -1,0 +1,14 @@
+Axon Guidance and Growth Cone Dynamics:
+Sema4f, Sema3g, Slit2, Robo2, Ntn1, Nrp1, Nrp2, Plxnb1, Efna5, Itga8, Srgap1, Dpysl5, Dpysl3, Gnai1, Kif1a,
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Mag, Pmp22, Mbp, Plp1, Drp2, Gldn, Mal, Itga6, Itga7, Lrp2, Cldn19,
+
+Synaptic Vesicle Transport and Neurotransmission:
+Synpr, Snap29, Kif1a, Apba1, Adcy1, Ryr3, Synj2bp, Ppfia4, Pum2, Vgf, Chrna3, Drd4, Piezo2, Lrrtm3,
+
+Cholesterol and Sphingolipid Metabolism in Neural Cells:
+Abca8a, Apod, Cers6, Scd, Agpat5, St3gal5, Sgms1, Ppard, Ldlrad3, Txnrd2, Hadha, Hadhb, Fabp5, Pltp,
+
+Extracellular Matrix Organization and Neural Cell Adhesion:
+Cntn6, Cdh13, Col15a1, Col20a1, Col9a3, Col11a1, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Emilin1, Hapln1, Ddr2, Nectin1, Tspan4, Tspan5, Gja1,

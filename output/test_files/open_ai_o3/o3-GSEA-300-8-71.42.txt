@@ -1,0 +1,20 @@
+Axon Guidance & Growth Cone Navigation:
+Cntn6, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Efna5, Slitrk6, Dpysl3, Dpysl5, Lrrtm3, Srgap1, Itga8, Rhoj, Pfn2, Kif1a, Gnai1, Cdh13,
+
+Peripheral Myelination & Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Drp2, Gldn, Mal, Lrp2, Itga7, Id2, Runx3, Mef2c,
+
+Synaptic Vesicle Cycling & Neurotransmission:
+Synpr, Sncg, Serpini1, Ryr3, Kif1a, P2ry2, Piezo2, Scn7a, Tuba4a, Tubb4a, Dyrk1a, Msi1, Pfn2, Cpe,
+
+Extracellular Matrix Organization & Axon‑Glia Interface:
+Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Matn3, Efemp2, Emilin1, Bgn, Pxdn, Ltbp1, Mfap5, Itga7, Itga8, Tagln, Acta2, Timp1, Htra1, Sbspon,
+
+Lipid & Cholesterol Homeostasis in Neural Cells:
+Abca8a, Apod, Agpat5, Pltp, Fabp5, Ppard, Sgms1, Cers6, Serinc5, Hadhb, Scd, Nampt, Abcb4, Txnrd2,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Dyrk1a, Rhoj, Prickle3, Klf9, Frmd6,
+
+Neuro‑Immune & Cytokine Signaling:
+Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Lifr, Ghr, Epas1, Serpine1, Icoslg, Igfbp3, Fcgrt, Tnfaip6, Serpinf1,

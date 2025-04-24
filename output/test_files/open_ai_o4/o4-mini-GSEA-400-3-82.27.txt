@@ -1,0 +1,44 @@
+Axon guidance:
+Sema3g, Sema4f, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Ntn1, Efna5, Srgap1, Dpysl5, Dpysl3, Prickle3, Vangl2
+
+Synaptic vesicle cycle:
+Synpr, Snap29, Synm, Rab10
+
+Neurotransmitter receptor signaling:
+Drd4, Chrna3, P2ry2
+
+Ion channel and calcium signaling:
+Ryr3, Itpripl1, Piezo2, Tpcn1, Scn7a
+
+Rho GTPase signaling and cytoskeleton remodeling:
+Arhgap24, Arhgef9, Arf6, Rhoj, Asap1
+
+Protein kinase and MAPK signaling:
+Prkd3, Pak2, Stk39, Tnik, Dyrk1a
+
+Wnt signaling:
+Wnt5a, Lef1, Ppard
+
+Growth factor signaling:
+Met, Ghr, Lifr, Epas1
+
+Cell adhesion and extracellular matrix:
+Cdh13, Cldn19, Itga6, Itga7, Itga8, Nectin1, Podxl, Bgn, Hapln1, Emilin1, Matn3, Efemp2, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Mfap5
+
+Myelination:
+Mbp, Mpz, Mag, Plp1, Gldn, Mal, Gja1, Cldn19
+
+cAMP signaling:
+Adcy1, Prkar2b
+
+Cytokine and JAK‑STAT signaling:
+Ifnar1, Icoslg, Cxcl12, Cxcl14, Cxcl16
+
+Mitochondrial dynamics and autophagy:
+Map1lc3a, Opa1, Dnm1l, Pnpt1
+
+UPR and ER stress:
+Eif2ak2, Hsp90aa1, Hspa12a
+
+Transcriptional regulators of neural plasticity:
+Mef2c, Ebf1, Nfatc1, Atf3, Atf5, Klf9, Runx3

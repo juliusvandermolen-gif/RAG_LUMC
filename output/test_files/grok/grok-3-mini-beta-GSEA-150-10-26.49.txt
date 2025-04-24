@@ -1,0 +1,44 @@
+Axon Guidance Pathway:  
+Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Dpysl5,  
+
+Synaptic Plasticity Pathway:  
+Synpr, Dpysl5, Grb14, Cpe,  
+
+Myelin Maintenance Pathway:  
+Mag, Mpz, Hapln1,  
+
+Neural Lipid Metabolism Pathway:  
+Aldh1a1, Gldc,  
+
+PI3K-AKT Signaling Pathway:  
+Grb14, Akt1,  
+
+MAPK Signaling Pathway:  
+Dpysl5, Mapk1,  
+
+Inflammatory Response in Neural Tissue:  
+Aif1l, Tril, Cxcl14,  
+
+Autophagy and ER Stress Pathway:  
+Sumo3, Serpini1, Htra1,  
+
+Cholesterol Biosynthesis Pathway:  
+Aldh1a1, Gldc, Sqor,  
+
+Axonal Transport Pathway:  
+Kif1a, Dync1h1,  
+
+Neurotrophin Signaling Pathway:  
+Ntrk1, Ngf,  
+
+Cell Adhesion and Migration Pathway:  
+Cntn6, Cdh13, Hapln1, Robo2, Slit2, Nrp1, Nrp2,  
+
+Wnt Signaling Pathway:  
+Dkk1, Lrp2,  
+
+Transcriptional Regulation in Neural Development:  
+Ebf1, Runx3, Id2, Atf3,  
+
+Cytoskeletal Dynamics Pathway:  
+Tuba4a, Tubb4a, Acta2, Tagln, Pfn2, Septin4, Fhod3,

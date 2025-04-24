@@ -1,0 +1,23 @@
+Axon Guidance and Semaphorin Signaling:
+Sema3g, Sema4f, Slit2, Robo2, Ntn1, Nrp1, Nrp2, Plxnb1, Srgap1, Dpysl3, Dpysl5,
+
+Synaptic Transmission and Plasticity:
+Drd4, Chrna3, Gja1, Snap29, Cdk5r1, P2ry2, Slc9a9, Vgf, Synpr,
+
+MAPK Signaling Pathway:
+Mapk1, Map2k6, Map4k5, Tnik, Prkd3, Dyrk1a, Nek9,
+
+Wnt Signaling Pathway:
+Wnt5a, Lef1, Tnik,
+
+Integrin and Cell Adhesion:
+Cntn6, Cdh13, Pcdh18, Itga8, Itga7, Itga6,
+
+Myelination:
+Mbp, Mag, Mpz, Prx, Drp2, Cldn19,
+
+Cholesterol and Lipid Metabolism:
+Abca8a, Abcb4, Scd, Apod, Fabp5, Hadhb, Agpat5,
+
+Calcium Signaling:
+Itpripl1, Ryr3, Piezo2

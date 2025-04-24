@@ -1,0 +1,20 @@
+Axon Guidance:
+Sema4f, Sema3g, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Ntn1, Efna5, Cdh13
+
+Myelination:
+Mbp, Mpz, Plp1, Mag, Mal, Cldn19, Cldnd1, Pmp22
+
+Synaptic Transmission and Plasticity:
+Synpr, Snap29, Synj2bp, P2ry2, Itpripl1, Piezo2, Ryr3, Gja1
+
+MAPK/ERK Signaling:
+Mapk1, Map2k6, Map4k5, Prkd3, Mef2c
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Vangl2, Prickle3
+
+Rho GTPase Signaling:
+Rhoj, Arhgap24, Arhgef9, Cdc42se2
+
+Cytoskeletal Remodeling:
+Cobl, Acta2, Tuba4a, Tubb4a, Pfn2

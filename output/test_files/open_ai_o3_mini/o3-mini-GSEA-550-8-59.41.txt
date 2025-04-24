@@ -1,0 +1,14 @@
+Axon Guidance and Neural Development:
+Cntn6, Sema4f, Ntn1, Robo2, Efna5, Slit2, Nrp1, Nrp2, Cdh13, Plxnb1
+
+Synaptic Signaling and Plasticity:
+Prss12, Synpr, Adcy1, Gnai1, Cdk5r1, Mef2c, Bdnf, Atf3, Drd4, P2ry2
+
+Myelination and Glial Function:
+Mpz, Mag, Prx, Pmp22, Mbp, Drp2, Gldn
+
+Extracellular Matrix and Neural Adhesion:
+Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Adamts17, Adamtsl3, Adamtsl1
+
+Transcriptional Regulation in Neural Differentiation:
+Id2, Lef1, Klf9, Dyrk1a, Ebf1, Taf9b, Numb

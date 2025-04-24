@@ -1,0 +1,14 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Ntn1, Slit2, Robo2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Srgap1, Dpysl3, Dpysl5,
+
+Synaptic Signaling and Plasticity:
+Snap29, Synpr, Sncg, Cdk5r1, Drd4, Mef2c, Vgf, P2ry2, Itpripl1, Tpcn1, Gnai1, Prkar2b, Ptprm, Pfn2,
+
+Myelination and Myelin Maintenance:
+Mbp, Plp1, Mpz, Mag, Mal, Pmp22, Gldn, Prx, Cldn19,
+
+Rho GTPase Signaling and Cytoskeletal Dynamics:
+Rhoj, Cdc42se2, Arhgap24, Pak2, Tnik, Arhgap5,
+
+Wnt Signaling in Neural Development:
+Wnt5a, Daam2, Lrp2, Lef1,

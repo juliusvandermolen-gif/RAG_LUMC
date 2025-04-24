@@ -1,0 +1,29 @@
+Axon Guidance:
+Sema4f, Sema3g, Slit2, Robo2, Nrp1, Nrp2, Ntn1, Srgap1, Dpysl3, Dpysl5, Cntn6
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Synpr, Cpe, Sncg, Ppfia4, Prss12
+
+Calcium Signaling:
+Ryr3, Itpripl1, P2ry2, Piezo2
+
+Rho GTPase Signaling and Cytoskeleton Dynamics:
+Rhoj, Dpysl3, Dpysl5, Pfn2, Septin4, Asap1, Tuba4a, Tubb4a
+
+Myelination and Myelin Maintenance:
+Mpz, Mag, Prx, Gldn, Cldn19, Hs6st1, Hs6st2
+
+Extracellular Matrix Organization and ECM-Receptor Interaction:
+Col9a3, Col15a1, Col20a1, Hapln1, Emilin1, Matn3, Mfap5, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Sbspon, Efemp2
+
+MAPK Signaling Pathway:
+Dyrk1a, Prkd3, Tnik, Vrk1, Ppm1f, Eif2ak2, Atf3, Atf5
+
+Cell Adhesion Molecules:
+Cdh13, Itga7, Itga8, Cd9, Cd151
+
+Transcriptional Regulation in Synaptic Plasticity:
+Mef2c, Nfatc1, Runx3, Ebf1, Id2, Numb
+
+Lipid Metabolism in Neural Tissues:
+Aldh1a1, Nampt, Agpat5, St3gal5, Cers6, Abca8a, Abcb4

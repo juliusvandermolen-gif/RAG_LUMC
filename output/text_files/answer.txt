@@ -1,13 +1,31 @@
 Answer:
-Myelination Pathway:
-Pmp22, Mpz, Mag, Gldn, Hapln1, Mal, Cldn19,
+Axon Guidance and Neural Migration:
+Sema4f, Sema3g, Ntn1, Slit2, Robo2, Plxnb1, Efna5, Cntn6, Nrp1, Nrp2, Dpysl3, Dpysl5, Srgap1
 
-Axon Guidance Pathway:
-Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cntn6,
+Synaptic Transmission and Plasticity:
+Synpr, Sncg, Cpe, P2ry2, Prkar2b, Grb14, Ppp1r14c
 
-Synaptic Plasticity Pathway:
-Synpr, Cdh13, Dpysl5, Dpysl3, Mef2c, Piezo2,
+Myelination and Schwann Cell Development:
+Mpz, Mag, Mal, Prx, Gldn, Cldn19
 
-Lipid Metabolism Pathway:
-Abca8a, Pltp, Sgpl1, Cers6, Hadhb, Nampt, Apod,
+Extracellular Matrix Organization and Cell Adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Mfap5, Emilin1, Matn3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Has2, Chst2, Hs6st1, Hs6st2, Cdh13, Cd9, Itga7, Itga8
+
+Lipid Metabolism and Membrane Biogenesis:
+Aldh1a1, Agpat5, Pltp, Apod, Sqor
+
+Rho GTPase and Cytoskeletal Dynamics:
+Rhoj, Asap1, Sipa1l1, Stard13, Tuba4a, Tubb4a, Kif1a, Septin4, Septin5
+
+GPCR and Ion Channel Signaling:
+Gnai1, Gprc5a, Gprc5b, Ptgfr, Scn7a, Piezo2
+
+Transcriptional Regulation in Neural Development:
+Id2, Atf3, Atf5, Klf9, Runx3, Nfatc1, Ebf1, Mef2c
+
+Neurotrophic and Cytokine Receptor Signaling:
+Met, Lifr, Tnfrsf1a, Ifnar1, Icoslg, Ghr
+
+Vesicle Trafficking and Endosomal Sorting:
+Rab10, Vps26c, Snx4, Snx6
 

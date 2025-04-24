@@ -1,0 +1,20 @@
+Peripheral Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mbp, Mag, Plp1, Drp2, Gldn, Cldn19, Id2, Ppard, Gja1, Lrrtm3,
+
+Axon Guidance and Neurite Outgrowth:
+Ntn1, Robo2, Slit2, Plxnb1, Efna5, Nrp1, Nrp2, Sema3g, Sema4f, Cntn6, Kif1a, Tubb4a, Dpysl3, Dpysl5, Rhoj, Arhgap24, Itga8, Tnik, Cdh13, Piezo2,
+
+Synaptic Transmission and Plasticity:
+Synpr, Sncg, Chrna3, Adcy1, Drd4, Ryr3, P2ry2, Lpar1, Prkar2b, Pfn2, Synj2bp, Apba1, Mef2c, Vgf, Srgap1, Serpini1, Gnai1, Msi1,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Vangl2, Lef1, Tnik, Dyrk1a, Kif26b, Prickle3, Rhoj,
+
+MAPK/PI3K‑Akt Neurotrophic Signaling:
+Met, Pak2, Crkl, Grb14, Dyrk1a, Atf3, Atf5, Hif1a, Eif2ak2, Prkd3, Stk39, Tlr3, Ifnar1, Mef2c, Tnik, Nuak1, Mark3,
+
+Lipid and Cholesterol Metabolism in Myelin:
+Abca8a, Abcb4, Agpat5, Fabp5, Sgms1, Cers6, Scd, Ppard, Hadha, Hadhb, Apod,
+
+Extracellular Matrix Remodeling and Neural Cell Adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Emilin1, Efemp2, Hapln1, Ltbp1, Nid2, Bgn, Pxdn, Serpinf1, Timp1,
