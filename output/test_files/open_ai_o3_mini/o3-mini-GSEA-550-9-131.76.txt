@@ -1,8 +1,0 @@
-Synaptic Plasticity and Neurotransmission Pathway:
-Cntn6, Synpr, Adcy1, Drd4, Bdnf, Mef2c, Grik5, Ryr3, Kif1a,
-
-Axon Guidance and Neural Connectivity Pathway:
-Sema4f, Sema3g, Slit2, Robo2, Nrp1, Nrp2, Gnai1, Rhoj, Plxnb1, Wnt5a, Efna5, Srgap1, Dpysl5,
-
-Glial Development and Myelination Pathway:
-Pmp22, Mpz, Mag, Mal, Gldn, Mbp,

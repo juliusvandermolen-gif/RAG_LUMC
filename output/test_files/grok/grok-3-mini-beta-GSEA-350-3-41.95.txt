@@ -1,9 +1,0 @@
-Axon Guidance Pathway: Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Dpysl5, Dpysl3,  
-
-Myelin Sheath Assembly Pathway: Mpz, Mag, Hapln1, Col9a3, Acta2, Htra1,  
-
-Lipid Metabolism Pathway: Aldh1a1, Gldc, Has2, Alpl, Sqor,  
-
-Synaptic Signaling Pathway: Synpr, Sncg, Gnai1, Piezo2, Dpysl5, Dpysl3,  
-
-Autophagy Pathway: Sumo3, Psmd2, Vps26c, Map1lc3a,

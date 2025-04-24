@@ -1,8 +1,0 @@
-Axon Guidance and Neural Connectivity:
-Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Nrp1, Nrp2, Slit2, Efna5, Plxnb1, Dpysl5,
-
-Synaptic Plasticity and Neural Signaling:
-Prss12, Synpr, Atf3, Gprc5a, Gprc5b, Met, Mef2c, Id2, Camk1d,
-
-Myelination and Glial Cell Function:
-Mpz, Mag, Mbp, Pmp22, Drp2, Plp1, Gldn, Cldn19, Mal,

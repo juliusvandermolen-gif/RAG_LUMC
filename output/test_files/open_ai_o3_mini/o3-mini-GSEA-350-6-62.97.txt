@@ -1,5 +1,0 @@
-Axon Guidance and Neurite Outgrowth: Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cdh13, Efna5, Srgap1,
-Synaptic Signaling and Plasticity: Synpr, Adcy1, P2ry2, Kif1a, Mef2c, Atf3, Cpe, Snap29, Ckb, Vgf,
-Neural Differentiation and Development: Nes, Msi1, Dyrk1a, Cdk5r1, Met, Lifr, Numb, Tuba4a,
-Cytoskeletal and Vesicle Transport: Tubb4a, Rab10, Dnm1l, Septin4, Septin5, Arf6, Pak2, Ckap4,
-Myelination and Glial Signaling: Mpz, Pmp22, Mag, Mal, Cldn19,
