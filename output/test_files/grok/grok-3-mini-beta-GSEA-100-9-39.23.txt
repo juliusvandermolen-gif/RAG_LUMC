@@ -1,0 +1,11 @@
+Myelination Pathway:
+Mag, Mpz, Gldn, Hapln1, Ntn1, Drp2,
+
+Cholesterol Biosynthesis Pathway:
+Aldh1a1, Sqor, Abca8a, Pltp,
+
+Axon Guidance Pathway:
+Sema4f, Nrp1, Robo2, Cntn6, Srgap1,
+
+Synaptic Plasticity Pathway:
+Synpr, Sncg, Piezo2, Slc9a9, Id2,

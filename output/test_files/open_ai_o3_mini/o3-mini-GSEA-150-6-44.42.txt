@@ -1,0 +1,23 @@
+Synaptic Plasticity and Neural Signaling Pathway:
+Cntn6, Prss12, Synpr, Cdh13, Sipa1l1, P2ry2, Scn7a, Sncg, Dpysl5, Pfn2,
+
+Axon Guidance and Neuronal Migration Pathway:
+Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Srgap1, Cntn6,
+
+Myelination and Schwann Cell Function Pathway:
+Mpz, Mag, Prx, Drp2, Gldn, Hapln1,
+
+Cytoskeletal Dynamics and Intracellular Transport Pathway:
+Tuba4a, Tubb4a, Kif1a, Septin4,
+
+Neural Differentiation and Transcription Regulation Pathway:
+Id2, Atf3, Ebf1, Dyrk1a, Msi1, Runx3,
+
+Extracellular Matrix and Cell Adhesion in Neural Development Pathway:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Matn3, Emilin1, Ccn3,
+
+Neural Signal Transduction and Stress Response Pathway:
+Igfbp3, Grb14, Tf, Epas1, Gprc5b, Eif2ak2,
+
+Neuro-Immune Interaction Pathway:
+A2m, Tril, Icoslg, Ifnar1,

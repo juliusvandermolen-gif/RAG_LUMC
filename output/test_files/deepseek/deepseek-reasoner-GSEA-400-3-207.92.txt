@@ -1,0 +1,47 @@
+Pathway Name:  
+Axon Guidance Signaling Pathway  
+Sema4f, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5,  
+
+Pathway Name:  
+Myelin Sheath Formation and Maintenance  
+Mag, Mpz, Plp1, Mbp, Prx,  
+
+Pathway Name:  
+Cholesterol and Steroid Biosynthesis  
+Hif1a, Aldh1a1, Abca8a, Abcb4, Scd, Fabp5,  
+
+Pathway Name:  
+Synaptic Plasticity and Neural Signaling  
+Synpr, Grb14, Dyrk1a, Cdk5r1, Ntrk1,  
+
+Pathway Name:  
+Sphingolipid Metabolism Pathway  
+Sgms1, Cers6, Pltp,  
+
+Pathway Name:  
+Extracellular Matrix Organization in Neural Development  
+Col9a3, Col15a1, Col20a1, Matn3, Emilin1,  
+
+Pathway Name:  
+Hypoxia Response in Neural Cells  
+Hif1a,  
+
+Pathway Name:  
+Wnt Signaling Pathway  
+Wnt5a, Lef1,  
+
+Pathway Name:  
+Protein Homeostasis and Degradation  
+Ctsd, Ctsl, Psap, Htra1, Hsp90aa1, Hspa12a,  
+
+Pathway Name:  
+PPAR Signaling and Lipid Metabolism  
+Fabp5, Pltp,  
+
+Pathway Name:  
+Cell Adhesion and Integrin Signaling  
+Cdh13, Cd9, Itga6, Itga7, Itga8,  
+
+Pathway Name:  
+Ion Transport and Purinergic Signaling  
+P2ry2, Scn7a,

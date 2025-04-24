@@ -1,0 +1,41 @@
+Axon guidance:
+Sema4f, Sema3g, Ntn1, Slit2, Plxnb1, Robo2, Efna5, Nrp1, Nrp2
+
+Synaptic function and plasticity:
+Snap29, Synpr, Synm, Cdk5r1, Drd4, Chrna3, Gnai1, Nfatc1, Mef2c, Vgf
+
+GPCR signaling:
+Gnai1, Gprc5a, Gprc5b, P2ry2, Drd4, Ptgfr, Cxcl14, Cxcl12, Cxcl16
+
+Ion channel and transporter activity:
+Piezo2, Scn7a, Tpcn1, Slc22a17, Slc9a9, Slc35a2, Slc39a13, Slc39a9, Slco3a1
+
+Cytoskeleton organization:
+Acta2, Tuba4a, Tubb4a, Septin4, Septin5, Cobl, Fhod3, Pak2, Mark3, Rhoj, Arhgap24, Arhgef9, Dnm1l, Kif1a, Kif26b
+
+Extracellular matrix organization:
+Hapln1, Mfap5, Matn3, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Bgn, Efemp2, Emilin1, Emp2, Nid2
+
+Myelination and glial differentiation:
+Mbp, Mpz, Plp1, Mag, Gldn, Prx, Cldn19
+
+Neurotrophin signaling:
+Ccn3, Lifr, Ghr, Pdgfb, Ebf1
+
+Wnt signaling:
+Wnt5a, Lef1
+
+MAPK/ERK signaling:
+Tnik, Prkd3
+
+JAK-STAT signaling:
+Lifr, Icoslg, Ifnar1
+
+Autophagy and proteasome:
+Map1lc3a, Psmd2, Ufd1, Ctbs, Ctsf
+
+Lipid metabolism and cholesterol biosynthesis:
+Aldh1a1, Sqor, Apod, Abca8a, Abcb4, Hs6st1, Hs6st2, St3gal5, St6gal1, Chst2, Gcnt1, Agpat5, Bdh1, Cers6, Pltp, Has2, Fut10
+
+Neural crest development:
+Msi1, Numb, Dpysl3, Dpysl5, Id2, Qsox1

@@ -1,0 +1,11 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Efna5, Plxnb1, Cdh13,
+
+Synaptic Plasticity and Neural Signaling:
+Prss12, Synpr, Kif1a, Ryr3, P2ry2, Gnai1, Atf3, Mef2c, Cpe, Grb14, Msi1, Numb,
+
+Myelination and Glial Development:
+Pmp22, Mpz, Mag, Drp2, Hapln1, Lifr, Cldn19,
+
+Axonal Transport and Cytoskeletal Dynamics:
+Tuba4a, Tubb4a, Kif1a, Dpysl3, Septin4, Septin5, Tagln, Rab10,

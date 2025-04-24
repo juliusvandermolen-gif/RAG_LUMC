@@ -1,0 +1,17 @@
+Axon Guidance and Synaptic Plasticity:
+Cntn6, Prss12, Sema4f, Ntn1, Srgap1, Robo2, Slit2, Nrp1, Nrp2, Lrrtm3, Epha4, Efna5, Arhgef9
+
+Neurotransmitter Signaling and Synaptic Transmission:
+Synpr, P2ry2, Adcy1, Drd4, Chrna3, Grid2, Bdnf, Vgf, Comt
+
+Neural Development and Differentiation:
+Id2, Peg3, Mef2c, Numb, Ebf1, Dyrk1a, Klf9, Meis2
+
+Myelination and Glial Function:
+Mpz, Pmp22, Mag, Drp2, Mbp, Plp1, Mal
+
+Cholesterol and Lipid Metabolism in Neural Cells:
+Apod, Pltp, Abca8a, Serinc5, Sgpl1
+
+Cytoskeletal and Axonal Transport Mechanisms:
+Tuba4a, Tubb4a, Kif1a, Rab10, Dnm1l, Septin4, Septin5, Arf6

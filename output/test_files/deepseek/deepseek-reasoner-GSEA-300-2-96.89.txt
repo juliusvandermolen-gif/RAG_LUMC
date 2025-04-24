@@ -1,0 +1,62 @@
+Pathway Name: Myelination and Myelin Maintenance  
+Mpz, Mag, Pmp22, Cldn19, Mal, Prx, Lrp2, Qki, Mbp, Cnp, Mog, Plp1, Mag, Pmp22, Mpz, Mag, Cldn19, Mal, Prx, Lrp2  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Plxnb1, Nrp2, Slit2, Robo2, Efna5, Cdh13, Dpysl5, Dpysl3, Sema4f, Nrp1, Plxnb1  
+
+Pathway Name: Schwann Cell Differentiation and Radial Sorting  
+Id2, Id4, Sox10, Oct6, Brn2, Krox20, Egr2, Nrg1, Erbb2, Mag, Mpz, Pmp22, Id2, Sox10  
+
+Pathway Name: Lipid and Cholesterol Metabolism  
+Htra1, Apod, Fabp5, Sqor, Abca8a, Scd, Pparb, Rxra, Hmgcr, Cyp46a1, Abca1, Ldlr, Htra1, Apod, Fabp5  
+
+Pathway Name: Synaptic Plasticity and Neural Signaling  
+Synpr, Grb14, Ntrk1, Adcy1, Camk2a, Grin1, Slc9a9, Sipa1l1, Dyrk1a, Ryr3, Synpr, Grb14  
+
+Pathway Name: Lysosomal and Proteasomal Degradation  
+Ctsb, Ctsd, Lamp2, Hsp90aa1, Hspa12a, Psap, Psmd2, Ube2d1, Hspa8, Ctsb, Ctsd  
+
+Pathway Name: Neural Crest Cell Migration and Development  
+Robo2, Slit2, Sox10, Ednrb, Twist1, Snai2, Cdh2, Ncam1, Robo2, Slit2  
+
+Pathway Name: PPAR/RXR-Mediated Lipid Homeostasis  
+Pparb, Rxra, Fabp5, Abca1, Scd, Cyp7b1, Acsl1, Acaa2, Pparb, Rxra  
+
+Pathway Name: Inflammatory Response in Neural Tissue  
+A2m, Timp1, Cxcl12, Ccl2, Il6, Tnf, C3, C1qa, C1qb, A2m, Timp1  
+
+Pathway Name: Cholesterol Biosynthesis and Transport  
+Sqor, Hmgcr, Cyp51, Dhcr7, Nsdhl, Sc5d, Fdps, Mvd, Sqle, Abca8a, Apod, Lrp2  
+
+Pathway Name: Autophagy and ER Stress Response  
+Hsp90aa1, Hspa12a, Atg5, Becn1, Lc3, Hspa5, Xbp1, Atf6, Ern1, Hsp90aa1  
+
+Pathway Name: Integrin and ECM Signaling  
+Hapln1, Col9a3, Col15a1, Col11a1, Col8a2, Col20a1, Itga7, Itga8, Itgb8, Hapln1  
+
+Pathway Name: Neurotrophin and Growth Factor Signaling  
+Ntf3, Ngfr, TrkA, Bdnf, Ngf, Lifr, Igf2, Fgf2, Vegfa, Nrp1  
+
+Pathway Name: RNA Processing and Spliceosome Regulation  
+Snrpd1, Snrpb, Srsf1, Hnrnpa1, Sf3b1, Prpf8, Snw1, Cpsf2, Pnpt1, Snrpd1  
+
+Pathway Name: Calcium Ion Homeostasis and Signaling  
+Ryr3, Atp2a2, Camk2a, Cacna1a, Itpr1, Slc8a1, Calm1, Trpc1, Ryr3  
+
+Pathway Name: Notch Signaling Pathway  
+Notch1, Dll1, Jag1, Hes1, Hey1, Rbpj, Numb, Dtx4, Psen1, Notch1  
+
+Pathway Name: Wnt/β-Catenin Signaling  
+Wnt5a, Lef1, Tcf7, Ctnnb1, Axin2, Apc, Gsk3b, Dvl1, Wnt5a, Lef1  
+
+Pathway Name: MAPK/ERK Signaling  
+Mapk1, Mapk3, Kras, Raf1, Mek1, Elk1, Fos, Jun, Mapk1, Mapk3  
+
+Pathway Name: JAK-STAT Signaling  
+Jak2, Stat3, Il6st, Socs3, Cish, Stat1, Il10rb, Jak2, Stat3  
+
+Pathway Name: HIF-1α and Hypoxia Response  
+Hif1a, Vegfa, Hk2, Pgk1, Ldha, Slc2a1, Bnip3, Hif1a, Vegfa  
+
+Pathway Name: Oligodendrocyte Differentiation and Maturation  
+Olig2, Sox10, Nkx2-2, Pdgfra, Cnp, Mog, Plp1, Mbp, Olig2, Sox10

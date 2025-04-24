@@ -1,0 +1,17 @@
+Synaptic Plasticity and Neurotransmission:
+PRSS12, SYNPR, CPE, SNAP29, ADCY1, DRD4, BDNF, GRIK5, SYNJ2BP
+
+Axon Guidance and Neural Circuit Formation:
+CNTN6, SEMA4F, NTN1, ROBO2, SLIT2, NRP1, NRP2, CDH13, SEMA3G, EFNA5, PLXNB1
+
+Ion Channel and Calcium Signaling:
+SCN7A, PIEZO2, RYR3, P2RY2, ITPRIPL1
+
+Axonal Transport and Cytoskeletal Dynamics:
+TUBA4A, TUBB4A, KIF1A, DNM1L, SEPTIN4, SEPTIN5, RAB10, ARF6, CDK5R1
+
+Transcriptional Regulation in Neural Development:
+MEF2C, ATF3, ATF5, ID2, KLF9, EBF1, EPAS1, DYRK1A, ZFP518A
+
+Myelination and Glial Support:
+MPZ, DRP2, GLDN, PLP1, MBP, MAL

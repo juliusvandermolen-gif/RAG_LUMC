@@ -1,0 +1,17 @@
+Myelination Pathway:
+MAG, MPZ, Gldn, Hapln1, Col9a3, Mfap5, Matn3,
+
+Axonal Guidance Pathway:
+Cntn6, Sema4f, Ntn1, Nrp1, Robo2, Srgap1,
+
+Synaptic Plasticity Pathway:
+Prss12, Synpr, Piezo2, Cdh13, Slc9a9,
+
+Cholesterol Biosynthesis Pathway:
+Aldh1a1, Sqor, Abca8a, Pltp,
+
+Lipid Metabolism Pathway:
+Gldc, Adamts17, Alpl, Tf, Abcb4, Man1a1, Manba, Serinc5, Apod, Efemp2, Pxdn, Hs6st2, Chst2, Ltbp1, Adamtsl3, Htra1, Igfbp3, Grb14, Steap2, Sumo3, Prss23, Cpe, Emp2, A2m, Myo1d, Ccn3, Tagln, Ctbs, P2ry2, Cxcl14, Ighm, Tent5c, Riox2, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ecel1, Serpinf1, Atf3, Icoslg, Ppp1r36, Trim35, Cep295nl, Aif1l, Tubb4a, Scn7a, Epas1, Gprc5b, Serpini1, Nrbp1, Ptgfr, Vopp1, Drp2, Slc22a17, Sbspon, Clca4l, Tril, Defb29, Cdca7l, Gypc, Peg3, Marveld1, Tuba4a, Parm1, Qsox1, Pcsk5, Cobll1, Tex101, Zpld1, Krtap1-5, Pkp1, Magec2l1, Id2,
+
+Autophagy and Lysosomal Pathway:
+Sumo3, Trim35, Serpini1, Htra1, A2m, Serpinf1, Atf3, Eif2ak2, Rrm2, Ecel1, Prss23, Cpe, Gldc, Manba, Man1a1, Ctbs, Pxdn, Apod, Efemp2, Ltbp1, Adamtsl3, Igfbp3, Grb14, Steap2, Cxcl14, Ighm, Serinc5, Tent5c, Riox2, Ddx1, Aig1, Pappa, Ppp1r36, Vopp1, Drp2, Slc22a17, Tagln, Cep295nl, Aif1l, Tubb4a, Scn7a, Epas1, Gprc5b, Nrbp1, Ptgfr, Hs6st2, Chst2, Clca4l, Tril, Defb29, Cdca7l, Gypc, Peg3, Marveld1, Tuba4a, Parm1, Qsox1, Pcsk5, Cobll1, Tex101, Zpld1, Krtap1-5, Pkp1, Magec2l1, Id2,

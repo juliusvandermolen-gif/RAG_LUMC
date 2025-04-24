@@ -1,0 +1,14 @@
+Axon Guidance Pathway:
+SEMA3G, SEMA4F, NTN1, ROBO2, SLIT2, NRP1, NRP2, CNTN6, DPYSL5, DPYSL3,
+
+Myelin Sheath Assembly:
+MAG, HAPLN1, GJA1,
+
+Synaptic Plasticity Pathway:
+SYNPR, GRB14, PRSS12,
+
+Lipid Metabolism Pathway (Neural Context):
+ALDH1A1, HADHB, CERS6,
+
+Wnt Signaling Pathway:
+WNT5A,

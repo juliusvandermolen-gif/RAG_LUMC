@@ -1,0 +1,20 @@
+Synaptic Plasticity and Neurotransmitter Signaling:
+PRSS12, SYNPR, SIPA1L1, SNAP29, DRD4, ADCY1, CHRNA3, VGF, APBA1, CDK5R1, MEF2C, P2RY2, ARHGEF9
+
+Axon Guidance and Neuronal Development:
+CNTN6, SEMA4F, NTN1, ROBO2, SLIT2, PLXNB1, EFNA5, NRP1, NRP2, DPYSL5, DPYSL3, SEMA3G, CDH13, WNT5A, LEF1
+
+Myelination and Glial Signaling:
+PMP22, MPZ, MAG, DRP2, GLDN, MBP, PLP1, PRX, MAL, CLDN19
+
+Intracellular Signal Transduction and Transcriptional Regulation:
+DYRK1A, ATF3, ATF5, ID2, NUMB, KLF9, RUNX3, EBF1, PUM2
+
+Ion Channel and Calcium Signaling:
+SCN7A, RYR3, ITPRIPL1, PIEZO2, TPCN1
+
+Cytoskeletal Dynamics and Axonal Transport:
+TUBA4A, TUBB4A, KIF1A, DNM1L, RAB10, SEPTIN4, SEPTIN5, COBL
+
+Lipid Metabolism and Membrane Dynamics:
+ABCA8A, APOD, ST3GAL5, SGPL1, CERS6, FABP5, ENPP2

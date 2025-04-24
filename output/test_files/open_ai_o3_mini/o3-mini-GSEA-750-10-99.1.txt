@@ -1,0 +1,11 @@
+Synaptic Plasticity & Neurotransmission Pathway:
+CNTN6, PRSS12, SERPINI1, SIPA1L1, SYNPR, VAMP2, DRD4, BDNF, ADCY1, MEF2C, KLF9, ATF3,
+
+Axon Guidance & Synapse Formation Pathway:
+NTN1, SLIT2, ROBO2, SEMA4F, SEMA3G, EFNA5, EFNA4, CDH13, NRP1, NRP2, PLXNB1, DPYSL5,
+
+Cytoskeletal Dynamics & Axonal Transport Pathway:
+TUBA4A, KIF1A, DNM1L, DRP2, SEPTIN4,
+
+Calcium & Second Messenger Signaling Pathway:
+RYR3, ITPRIPL1, CAMK1D, GNAI1,

@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neurotransmitter Release:
+Synpr, Sipa1l1, Snap29, Bdnf, Drd4, Adcy1, Arhgef9, Grik5, Apba1,
+
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Efna5, Plxnb1, Srgap1, Lrrtm3, Slitrk6, Nrp1, Nrp2, Cdh13, Daam2,
+
+Calcium and cAMP Signaling in Neurons:
+Ryr3, Itpripl1, Cdk5r1, Camk1d, Gnai1, Adcy1,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Kif1a, Dnm1l, Cobl, Kif26b, Pfn2, Cfl2, Septin4,
+
+MAPK/ERK and Transcriptional Regulation in Neural Signaling:
+Mapk1, Map2k6, Atf3, Mef2c, Dyrk1a, Klf9, Ebf1, Runx3,

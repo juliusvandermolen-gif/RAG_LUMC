@@ -1,0 +1,35 @@
+Extracellular matrix organization:
+Adamts17, Adamtsl3, Hapln1, Col9a3, Efemp2, Matn3, Mfap5, Sbspon, Pxdn, Qsox1, Htra1, Prss12, Prss23, A2m, Ctbs
+
+Axon guidance:
+Ntn1, Sema4f, Robo2, Cntn6, Nrp1, Srgap1, Gldn
+
+Synaptic plasticity:
+Prss12, Serpini1, Synpr, Sncg, Cpe, Gldc
+
+Myelination:
+Mpz, Mag, Prx, Drp2, Gldn
+
+Lipid transport:
+Apod, Pltp, Abca8a, Serinc5
+
+IGF signaling:
+Igfbp3, Grb14, Pappa
+
+G protein–coupled receptor signaling:
+P2ry2, Ptgfr, Gprc5b
+
+Ion transport:
+Piezo2, Scn7a, Slc9a9, Slc22a17, Clca4l
+
+Cytoskeleton organization:
+Tuba4a, Tubb4a, Acta2, Tagln, Myo1d, Cep295nl
+
+Metabolic and hypoxic stress response:
+Eif2ak2, Atf3, Epas1
+
+TGF‑beta signaling:
+Ltbp1, Ccn3
+
+Retinoic acid biosynthesis:
+Aldh1a1

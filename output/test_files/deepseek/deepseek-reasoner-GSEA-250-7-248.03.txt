@@ -1,0 +1,38 @@
+Pathway Name: Cholesterol and Lipid Metabolism  
+PMP22, Apod, Aldh1a1, Abca8a, Pltp, Lrp2, Cers6, Sgpl1, Emp2  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5, Cdh13, Rhoj  
+
+Pathway Name: Myelination and Schwann Cell Differentiation  
+PMP22, Mag, Mal, Gja1  
+
+Pathway Name: Autophagy and Lysosomal Degradation  
+Htra1, Sumo3, Hsp90aa1, Atf3, Eif2ak2, Hspa12a  
+
+Pathway Name: PPAR Signaling and Lipid Homeostasis  
+PPARD, Aldh1a1, Pltp, Abca8a  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Eif2ak2, Atf3, Hsp90aa1, Hspa12a  
+
+Pathway Name: Inflammatory Response and Immune Signaling  
+Ifnar1, Tnfrsf1a, C1qtnf1, Bgn, Timp1, Cxcl12, Cxcl14, Ighm  
+
+Pathway Name: Extracellular Matrix Organization and Cell Adhesion  
+Hapln1, Col9a3, Col15a1, Col20a1, Matn3, Efemp2, Emilin1, Cdh13  
+
+Pathway Name: Synaptic Plasticity and Neural Signaling  
+Synpr, Dyrk1a, Grb14, Piezo2  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Lef1  
+
+Pathway Name: Neuregulin Signaling Pathway  
+Nrp1, Nrp2  
+
+Pathway Name: Rho GTPase Signaling  
+Rhoj, Srgap1, Dpysl5, Dpysl3  
+
+Pathway Name: Tyrosine Kinase Signaling (MET)  
+Met

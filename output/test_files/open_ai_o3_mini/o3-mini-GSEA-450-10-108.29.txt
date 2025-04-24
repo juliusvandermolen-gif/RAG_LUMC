@@ -1,0 +1,14 @@
+Axon Guidance & Neuronal Migration:
+Ntn1, Slit2, Robo2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Cntn6, Cdh13, Dpysl5, Itga8, Efna5, Olfm2
+
+Synaptic Transmission & Plasticity:
+Prss12, Synpr, Srgap1, Sipa1l1, Mef2c, Atf3, Adcy1, Drd4, Cpe, Apba1, Arhgef9, Kif1a
+
+Calcium & cAMP Signaling:
+Ryr3, Itpripl1, Adcy1, Prkar2b, Pkia, Gnai1, Tpcn1
+
+Cytoskeletal Dynamics & Intracellular Transport:
+Tuba4a, Kif1a, Cdk5r1, Septin4, Arf6, Rab10, Cobl, Pfn2, Asap1, Shroom3
+
+Neurotrophin & Growth Factor Signaling:
+Met, Lifr, Igfbp3, Pdgfb, Ccn3

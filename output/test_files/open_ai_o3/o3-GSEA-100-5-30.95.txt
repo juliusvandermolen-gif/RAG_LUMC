@@ -1,0 +1,17 @@
+Axon Guidance and Neuronal Wiring:  
+Cntn6, Sema4f, Nrp1, Ntn1, Robo2, Srgap1, Gldn, Tuba4a, Tubb4a, Ecel1,  
+
+Myelination and Schwann Cell Differentiation:  
+Mag, Mpz, Prx, Drp2, Id2, Gldn,  
+
+Synaptic Vesicle Dynamics and Neurotransmission:  
+Synpr, Sncg, Cpe, Prss12, P2ry2, Scn7a, Piezo2, Serpini1, Ecel1,  
+
+Extracellular Matrix Organization and Neurite Extension:  
+Adamts17, Adamtsl3, Htra1, Qsox1, Ltbp1, Hapln1, Mfap5, Col9a3, Matn3,  
+
+Neural Lipid and Cholesterol Transport/Metabolism:  
+Abca8a, Apod, Pltp, Tf, Abcb4, Serinc5, Aldh1a1,  
+
+Hypoxia and Stress Signaling in Neural Development:  
+Epas1, Atf3, Eif2ak2, A2m, Cxcl14, Tril, Ptgfr,

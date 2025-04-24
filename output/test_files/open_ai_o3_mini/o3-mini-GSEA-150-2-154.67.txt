@@ -1,0 +1,14 @@
+Synaptic Plasticity & Neurotransmission:
+Prss12, Gldc, Synpr, Sipa1l1, Frrs1, Dyrk1a, Ryr3, Sncg, Gnai1, Pfn2, P2ry2, Piezo2, Gprc5a, Gprc5b, Lrrtm3, Cpe, A2m,
+
+Axon Guidance & Neuronal Connectivity:
+Zpld1, Cntn6, Adamts17, Adamtsl3, Sema4f, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Srgap1, Cdh13, Dpysl5, Hs6st1, Hs6st2, Htra1, Mfap5, Pxdn, Matn3, Pkp1, St3gal5, Col20a1, Col15a1, Emilin1, Qsox1, Hapln1, Sbspon, Col9a3, Efemp2, Adamtsl1,
+
+Myelination & Glial Development:
+Prx, Mag, Mpz, Drp2, Gldn, Cldn19,
+
+Neural Development & Differentiation & Signaling:
+Aldh1a1, Igfbp3, Ltbp1, Epas1, Lifr, Atf3, Id2, Msi1, Ebf1, Runx3, Pappa, Nfatc1, Tf, Ccn3, Nrbp1, Ptgfr, Grb14, Slc22a17, Tnik, Prkd3, Cxcl14, Apod, Eif2ak2, Pcsk5, Parm1, Peg3, Emp2, Prss23, Lrp2, Sgpl1,
+
+Cytoskeletal Dynamics & Intracellular Transport:
+Tuba4a, Tubb4a, Kif1a, Tagln, Cep295nl, Myo1d, Vopp1, Snx6, Vps26c, Tspan4, Septin4, Nek9, Cd9, Fhod3, Prkar2b, Itpripl1, Marveld1, Cobll1,

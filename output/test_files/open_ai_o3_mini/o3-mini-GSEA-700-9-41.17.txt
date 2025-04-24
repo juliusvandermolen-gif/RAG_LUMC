@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neural Signaling:
+Cntn6, Prss12, Sema4f, Cpe, Synpr, Drd4, Adcy5, Efna5, Cdh13,
+
+Axon Guidance and Neural Connectivity:
+Slit2, Robo2, Ntn1, Plxnb1, Nrp1, Nrp2, Efna5, Cdh13,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Dnm1l, Septin4, Septin5, Rab10, Arf6, Dync2i1,
+
+Neural Development and Transcriptional Regulation:
+Mef2c, Dyrk1a, Id2, Atf3, Nes, Met, Klf9, Epas1, Ebf1, Numb,
+
+Myelination and Glial Function:
+Mpz, Drp2, Cldn19, Mal,

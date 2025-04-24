@@ -1,0 +1,77 @@
+Myelin Sheath Formation and Maintenance:  
+Mag, Mpz, Prx, Hapln1, Gldn, Mal, Pmp22, Drp2,  
+
+Axon Guidance and Semaphorin Signaling:  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5, Ntn1,  
+
+Cholesterol and Sphingolipid Metabolism:  
+Abca8a, Cers6, Sgms1, Scd, Fabp5, Lrp2, Htra1, Pmp22, Hs6st1, Hs6st2,  
+
+Synaptic Plasticity and Neurotransmitter Signaling:  
+Synpr, Grb14, Adcy1, Wnt5a, Cdh13, Cxcl12, Cxcl14, Cxcl16, Kif1a, Snap29, Prss12,  
+
+Extracellular Matrix Organization:  
+Col9a3, Col15a1, Col20a1, Hapln1, Emilin1, Matn3, Comp, Hs6st1, Hs6st2, Adamts17, Adamtsl1, Adamtsl3,  
+
+PPAR Signaling Pathway:  
+Fabp5, Abca8a, Scd,  
+
+Wnt Signaling Pathway:  
+Wnt5a, Lef1, Mef2c,  
+
+Calcium Ion Signaling:  
+Ryr3, P2ry2, Adcy1, Stk39,  
+
+Retinoic Acid Signaling:  
+Aldh1a1, Rarb,  
+
+TGF-beta Signaling Pathway:  
+Ltbp1,  
+
+Hypoxia-Inducible Factor (HIF) Signaling:  
+Hif1a, Epas1,  
+
+cAMP-Mediated Signaling:  
+Adcy1, Prkar2b, Ppp1r14c,  
+
+Cell Adhesion and Integrin Signaling:  
+Itga6, Itga7, Itga8, Cd9, Cd151, Cdh13, Cntn6,  
+
+Lysosomal and Proteasomal Degradation:  
+Sumo3, Ufd1, Psmd2, Fbxo11,  
+
+Autophagy Pathway:  
+Map1lc3a, Sumo3, Fbxo11,  
+
+Oxidative Stress Response:  
+Txnrd2,  
+
+Growth Factor Receptor Signaling:  
+Igfbp3, Met,  
+
+Notch Signaling Pathway:  
+Dtx4,  
+
+Neural Crest Differentiation and Development:  
+Ebf1, Nes, Dyrk1a,  
+
+Cytoskeletal Organization and Axonal Transport:  
+Tubb4a, Tuba4a, Kif26b,  
+
+Neuroinflammatory Response:  
+Ighm, Tnfrsf1a, Tlr3,  
+
+Ion Channel and Transporter Activity:  
+Scn7a, P2ry2, Trpv4,  
+
+RNA Processing and Translation Regulation:  
+Pum2, Eif2ak2, Msi1,  
+
+Ubiquitination and Protein Modification:  
+Sumo3, Ufd1, Rnf144a,  
+
+Neuropeptide and Hormone Signaling:  
+Vgf, Apod,  
+
+DNA Repair and Cell Cycle Regulation:  
+Msh2, Cdca4,

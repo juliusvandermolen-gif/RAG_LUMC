@@ -1,0 +1,26 @@
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Mag, Prx, Drp2, Hapln1, Lrp2, Emp2, Cldn19,  
+
+Pathway Name: Axon Guidance and Neuronal Migration  
+Sema4f, Nrp1, Nrp2, Slit2, Robo2, Dpysl5, Cdh13, Sipa1l1,  
+
+Pathway Name: Cholesterol Biosynthesis and Lipid Metabolism  
+Aldh1a1, Apod, Hs6st1, Hs6st2, Sumo3, Pltp, Abca8a, Agpat5, Serpinf1, Lrp2,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Synpr, Grb14, Piezo2, Ccn3, Gprc5b, Kif1a, Tubb4a, Tuba4a,  
+
+Pathway Name: Neural Crest Cell Development  
+Ebf1, Dpysl5, Dyrk1a, Peg3,  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col20a1, Matn3, Emilin1, Efemp2, Hapln1,  
+
+Pathway Name: Autophagy and Protein Degradation  
+Htra1, Atf3, Sqor,  
+
+Pathway Name: Inflammatory Response and Immune Signaling  
+Aif1l, Ifnar1, Cxcl14, Ighm, Cd9, Selplg,  
+
+Pathway Name: TGF-β and Growth Factor Signaling  
+Ltbp1, Tf, Serpinf1, Adamtsl3,

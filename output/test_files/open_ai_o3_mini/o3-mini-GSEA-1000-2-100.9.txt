@@ -1,0 +1,23 @@
+Axon Guidance and Neural Connectivity Pathway:
+Ntn1, Sema4f, Robo2, Slit2, Efna5, Plxnb1, Dpysl5, Srgap1, Cntn6, Cdh13,
+
+Myelination and Schwann Cell Development Pathway:
+Mpz, Mbp, Plp1, Mag, Gldn,
+
+Synaptic Plasticity and Neural Signaling Pathway:
+Synpr, Bdnf, Adcy1, Drd4, Grik5, Mef2c,
+
+Cytoskeletal Dynamics and Axon Transport Pathway:
+Tuba4a, Kif1a, Dnm1l, Arf6, Pfn2, Pak2, Mapk1,
+
+Neural Progenitor and Differentiation Pathway:
+Nes, Msi1, Numb, Hes6,
+
+Neural Lipid Metabolism and Myelin Lipid Homeostasis Pathway:
+Ppard, Abca8a, Pltp, Sgpl1, Sgms1,
+
+Neural Stress Response Pathway:
+Atf3, Atf5, Hif1a, Hspa12a, Txnrd2,
+
+Wnt and TGF-beta Signaling Pathway in Neural Development:
+Lef1, Wnt5a, Tgfbi, Lifr,

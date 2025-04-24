@@ -1,0 +1,17 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Nrp1, Nrp2, Sema4f, Sema3g, Slit2, Robo2, Ntn1, Plxnb1, Efna5, Dpysl3, Dpysl5, Srgap1, Rhoj, Kif1a, Tnik, Lrrtm3, Gldn, Itga8, Itga7, Slitrk6, Hs6st1, Hs6st2,
+
+Peripheral Myelination and Schwann Cell Differentiation:
+Mpz, Pmp22, Mag, Prx, Drp2, Gldn, Mal, Id2, Cldn19, Sgms1,
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Synpr, Cpe, Pfn2, Frrs1, Pam, Prkar2b, Ppp1r36, Ryr3, Tuba4a, Tubb4a, Sipa1l1, Map1lc3a, Cobl, Dyrk1a, Mef2c, Kif1a,
+
+Lipid and Cholesterol Metabolism in Neural Cells:
+Abca8a, Abcb4, Apod, Pltp, Cers6, Sgms1, Scd, Hadhb, Fabp5, Ppard, St3gal5, St6gal1, Lrp2, Nampt, Sqor,
+
+Extracellular Matrix Organization and Node of Ranvier Assembly:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Efemp2, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Matn3, Emilin1, Mfap5, Bgn, Pxdn, Hapln1, Plod3, Timp1,
+
+Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Klf9,

@@ -1,0 +1,26 @@
+Axon Guidance and Neural Circuit Formation:
+CNTN6, SEMA4F, NRP1, NTN1, ROBO2, CDH13
+
+Synaptic Vesicle Cycle and Ion Channel‑Mediated Signal Transmission:
+SYNPR, P2RY2, SCN7A, PIEZO2, SLC9A9, SNCG
+
+Myelination and Schwann Cell Differentiation:
+MAG, MPZ, PRX, GLDN, DRP2
+
+Extracellular Matrix Organization in Neural Tissue:
+HAPLN1, MATN3, MFAP5, ADAMTS17, ADAMTSL3, HTRA1, CHST2, QSOX1
+
+Lipid and Cholesterol Transport in the Nervous System:
+PLTP, ABCA8A, APOD, A2M, SERINC5
+
+Proteolytic Processing in Synaptic Plasticity:
+PRSS12, PRSS23, CPE, ECEL1
+
+Transcriptional Regulation of Neural Differentiation and Stress Response:
+ID2, EPAS1, ATF3
+
+Neuroimmune and Chemokine Signaling:
+TRIL, CXCL14, ICOSLG
+
+Mitochondrial and Oxidative Metabolism in Neurons:
+SQOR, ALDH1A1, GLDC

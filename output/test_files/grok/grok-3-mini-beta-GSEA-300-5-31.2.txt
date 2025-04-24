@@ -1,0 +1,11 @@
+Axon Guidance Pathway:
+Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Sema3g,
+
+Synaptic Plasticity Pathway:
+Synpr, Sncg, Grb14, Gnai1, Dpysl5, Dpysl3, Pak2,
+
+Myelin Sheath Assembly Pathway:
+Mag, Mpz, Hapln1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2,
+
+Cholesterol Biosynthesis Pathway:
+Aldh1a1, Gldc, Hadhb, Hmgcr, Sqle,

@@ -1,0 +1,14 @@
+Axon Guidance and Neuronal Pathfinding:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Efna5, Cntn6, Itga8, Gldn, Dpysl3, Dpysl5, Lrrtm3, Srgap1, Gnai1, Rhoj, Tnik, Wnt5a,
+
+Peripheral Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Prx, Drp2, Mal, Gldn, Itga7, Itga8, Id2, Lrp2, Runx3,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Synpr, Cpe, Serpini1, Kif1a, Ppfia4, Tuba4a, Tubb4a, Map1lc3a, Ryr3, P2ry2, Numb,
+
+Neural Extracellular Matrix and Axoglial Adhesion:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Matn3, Efemp2, Emilin1, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Timp1, Pxdn, Mfap5, Bgn, P4htm,
+
+Glial Lipid Metabolism and Myelin Lipid Homeostasis:
+Abca8a, Abcb4, Agpat5, Cers6, Ppard, St3gal5, St6gal1, Pltp, Apod, Txnrd2, Scd, Fabp5, Psap, Sgms1,

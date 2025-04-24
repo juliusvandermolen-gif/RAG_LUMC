@@ -1,0 +1,20 @@
+Axon Guidance:
+Cntn6, Sema4f, Ntn1, Nrp1, Robo2, Srgap1,
+
+Myelination:
+Mag, Mpz, Gldn, Hapln1, Prx,
+
+Synaptic Plasticity:
+Synpr, Piezo2, Scn7a, P2ry2,
+
+Lipid Metabolism:
+Aldh1a1, Abca8a, Pltp, Sqor, Htra1, Acta2, Igfbp3, Tf, Ltbp1, Apod, Matn3, Efemp2, Pappa, Serpinf1,
+
+Neural Signaling:
+Id2, Tril, Cpe, Nrbp1, Ptgfr, Vopp1, Slc22a17, Cxcl14, Nrp1, Cdh13, Epas1, Gprc5b, Atf3, Robo2, Srgap1, Ppp1r36, Trim35, Alpl, 
+
+Cholesterol Biosynthesis:
+Aldh1a1, Sqor, Abca8a, Pltp, Man1a1, Hs6st2, Tubb4a, 
+
+Myelin Maintenance:
+Mag, Mpz, Gldn, Hapln1, Prx, Mfap5, Pxdn, Serinc5, Tent5c, Nrp1, Apod, Matn3, Sncg, Cdh13, Abcb4, Efemp2, Ddx1, Ecel1, Serpinf1, Gldn, Alpl, Robo2

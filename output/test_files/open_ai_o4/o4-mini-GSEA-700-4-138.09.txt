@@ -1,0 +1,26 @@
+Myelination and Schwann cell differentiation:
+Mpz, Plp1, Mag, Mbp, Pmp22, Gldn, Prx, Mal, Cldn19
+
+Lipid and cholesterol metabolism:
+Abca8a, Abcb4, Apod, Pltp, Ppard, Lrp2, Ldlrad3, Ugt8, Sptlc2, Sgms1, Sgpl1, Cers6
+
+Axon guidance and growth cone remodeling:
+Ntn1, Slit2, Robo2, Plxnb1, Sema3g, Sema4f, Nrp1, Nrp2, Efna5, Epha4
+
+Synaptic plasticity and neurotransmission:
+Bdnf, Vgf, Grik5, Drd4, Scn7a, Cdk5r1, Snap29, Synpr, Adcy1, Ppp1r21, Vamp2
+
+MAPK/ERK signaling:
+Mapk1, Map2k6, Map4k5, Mapk8ip1, Rps6ka5
+
+PI3K/Akt signaling:
+Grb14, Met, Ghr, Pdgfb, Lifr
+
+Wnt/Planar cell polarity signaling:
+Wnt5a, Lef1, Prickle3, Daam2, Vangl2, Sav1
+
+Rho GTPase signaling and cytoskeletal remodeling:
+Rhoj, Arhgap5, Arhgap24, Asap1, Pak2, Cfl2, Cobl
+
+Mitochondrial dynamics and energy metabolism:
+Drp2, Dnm1l, Opa1, Pnpt1

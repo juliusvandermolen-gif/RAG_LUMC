@@ -1,0 +1,14 @@
+Axon Guidance:
+Cntn6, Sema4f, Ntn1, Robo2, Nrp1, Srgap1
+
+Synaptic Vesicle Cycle:
+Synpr, Cpe
+
+Myelination and Myelin Maintenance:
+Mag, Mpz, Drp2, Prx, Gldn
+
+Extracellular Matrix Organization and Remodeling:
+Hapln1, Adamts17, Adamtsl3, Col9a3, Mfap5, Matn3, Efemp2, Ltbp1, Sbspon, Htra1, Prss12, Prss23, Pcsk5
+
+Cholesterol and Lipid Metabolism:
+Aldh1a1, Steap2, Apod, Pltp, Abca8a, Abcb4, Serinc5

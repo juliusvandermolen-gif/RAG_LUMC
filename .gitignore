@@ -161,4 +161,4 @@ cython_debug/
 
 # Ignore specific database and index files
 /database/
-/output/
+/output/model/

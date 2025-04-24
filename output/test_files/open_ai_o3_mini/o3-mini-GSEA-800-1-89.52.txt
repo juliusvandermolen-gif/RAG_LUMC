@@ -1,0 +1,20 @@
+Axon Guidance & Synaptic Plasticity:
+Sema4f, Ntn1, Robo2, Slit2, Sipa1l1, Lrrtm3, Cdh13, Cadm1, Nrp1, Nrp2
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Pmp22, Prx, Mag, Mbp, Plp1, Drp2, Mal
+
+Neural Lipid Metabolism and Cholesterol Biosynthesis:
+Abca8a, Pltp, Agpat5, Fabp5, Sgpl1, Smpd1, Cers6, Ppard
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Kif3c, Dnm1, Dnm1l, Arf6, Dync2i1
+
+Neural Transcriptional Regulation and Signal Transduction:
+Id2, Atf3, Mef2c, Numb, Dyrk1a, Ebf1, Klf9, Hes6, Msi1, Adcy1
+
+Synaptic Function and Neurotransmission:
+Synpr, Snap29, Bdnf, Drd4, Grid2, Grik5, Vgf, Cadm1
+
+Neural Extracellular Matrix and Cell Adhesion:
+Cntn6, Hapln1, Col9a3, Adamts17, Emilin1, Matn3

@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Signaling:  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Ntn1, Efna5, Dpysl3, Dpysl5, Srgap1, Wnt5a, Runx3, Itga8, Kif1a, Lrrtm3, Rhoj, Tnik,
+
+Myelination and Schwann Cell Differentiation:  
+Pmp22, Mpz, Mag, Drp2, Prx, Id2, Mal, Gldn, Cldn19, Lifr, Cers6, Tf, Fth1, Gja1,
+
+Synaptic Vesicle Cycle and Neurotransmission:  
+Synpr, Sncg, P2ry2, Ryr3, Scn7a, Kif1a, Cpe, Dyrk1a, Tnik, Mef2c, Pfn2, Septin5, Septin4, Arf6, Pak2, Acap2,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:  
+Wnt5a, Tnik, Lef1, Prickle3, Rhoj, Frmd6,
+
+Extracellular Matrix and Cell Adhesion in Synaptic Development:  
+Cntn6, Cdh13, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Mfap5, Emilin1, Matn3, Pxdn, Timp1,
+
+Lipid Metabolism and Cholesterol Homeostasis for Myelin:  
+Ppard, Abca8a, Apod, Scd, Fabp5, Cers6, Sqor, Sgms1, Txnrd2, Hadhb, Agpat5, Sgpl1,

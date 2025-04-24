@@ -1,0 +1,14 @@
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Dpysl5, Dpysl3, Srgap1, Col9a3, Col15a1, Col20a1  
+
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Mag, Pmp22, Mpz, Mal, Prx, Lrp2, Cldn19, Gja1, Mef2c, Dyrk1a, Hapln1, Ebf1  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Abca8a, Hs6st1, Hs6st2, Sumo3, Aldh1a1, Sgpl1, Psap, Id2, Sqor, Apod, Pltp  
+
+Pathway Name: Synaptic Plasticity and Neural Signaling  
+Synpr, Grb14, Piezo2, Dyrk1a, Wnt5a, Gja1  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col20a1, Hapln1, Htra1, Timp1, Emilin1, Matn3, Efemp2, Mfap5

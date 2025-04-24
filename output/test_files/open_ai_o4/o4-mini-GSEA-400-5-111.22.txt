@@ -1,0 +1,29 @@
+Axon Guidance:
+Sema3g, Sema4f, Slit2, Robo2, Ntn1, Plxnb1, Nrp1, Nrp2
+
+Myelination:
+Mbp, Mpz, Mag, Plp1, Pmp22, Prx, Mal, Drp2
+
+Synaptic Vesicle Cycle:
+Snap29, Synpr, Synm, Vgf
+
+Growth Factor Signaling:
+Met, Pdgfb, Ghr, Igfbp3, Igf2bp2
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Vangl2, Prickle3
+
+PPAR Signaling and Myelin Lipid Homeostasis:
+Ppard, Abca8a, ApoD, Fabp5, Sgms1, St3gal5
+
+ECM–Receptor Interaction:
+Itga6, Itga7, Itga8, Cntn6, Cdh13, Nectin1, Pcdh18
+
+Rho GTPase Signaling in Neurite Outgrowth:
+Arhgap24, Arhgef9, Asap1, Prex2, Rhoj, Arf6
+
+Calcium Signaling:
+Scn7a, Drd4, Piezo2, P2ry2, Itpripl1
+
+JAK–STAT Signaling:
+Lifr, Ifnar1, Icoslg, Cxcl12, Cxcl14

@@ -1,0 +1,32 @@
+**Myelin Formation and Lipid Metabolism Pathway**  
+Aldh1a1, Abca8a, Mag, Cpe, Id2, Apod, Pltp, Ltbp1, Emp2, Cldn19, Lrp2, Gldc, Pcsk5, Adamts17, Adamtsl3, Hapln1, Sbspon, Col9a3, Mpz, Drp2, Mfap5, Efemp2, Col15a1, Alpl  
+
+**Axon Guidance and Semaphorin Signaling Pathway**  
+Sema4f, Nrp1, Nrp2, Slit2, Robo2, Dpysl5, Sipa1l1, Emilin1, Col20a1, Cdh13  
+
+**Cholesterol Biosynthesis and Transport Pathway**  
+Aldh1a1, Abca8a, Apod, Htra1, Pltp, Lrp2, Alpl  
+
+**Synaptic Plasticity and Neurotransmitter Processing**  
+Synpr, Grb14, Sumo3, Cpe, Nrp1, Ebf1, Dyrk1a, Ryr3, Septin4, Lrrtm3, Srgap1, Ccn3, Steap2, Tf, Sncg  
+
+**Neural Crest Cell Migration and Differentiation**  
+Peg3, Cdh13, Dpysl5, Robo2, Sema4f, Nrp1, Nrp2, Sipa1l1  
+
+**Extracellular Matrix Organization**  
+Col9a3, Col15a1, Col20a1, Hapln1, Adamts17, Adamtsl3, Mfap5, Efemp2, Sbspon  
+
+**PPAR Signaling and Lipid Homeostasis**  
+Aldh1a1, Abca8a, Apod, Pltp, Cpe, Ltbp1, Efemp2, Col15a1  
+
+**Calcium Signaling and Ion Transport**  
+Ryr3, P2ry2, Steap2, Ccn3, Tf  
+
+**ER Stress and Unfolded Protein Response**  
+Eif2ak2, Atf3, Htra1, Sumo3  
+
+**Growth Factor and Receptor Signaling**  
+Igfbp3, Ccn3, Ltbp1, Efemp2, Tf, Nrp1, Nrp2, Grb14  
+
+---  
+*Note: Each pathway includes all associated genes from the provided list, prioritized based on functional coherence and relevance to neural genetic mechanisms as supported by the referenced literature.*

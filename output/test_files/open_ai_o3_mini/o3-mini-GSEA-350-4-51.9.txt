@@ -1,0 +1,17 @@
+Axon Guidance & Neural Development:
+Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Cntn6, Cdh13, Itga6, Itga8, Runx3,
+
+Synaptic Plasticity & Neurotransmission:
+Synpr, Adcy1, Snap29, Vgf, Ryr3, Gnai1, Pak2, Cpe,
+
+Neuronal Intracellular Signaling & Transcription Regulation:
+Mef2c, Dyrk1a, Atf3, Ebf1, Klf9, Lef1, Nfatc1, Id2, Epas1,
+
+Cytoskeletal Organization & Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Myo1d, Dnm1l, Rab10,
+
+Myelination & Glial Function:
+Mpz, Pmp22, Mal, Hapln1, Gldn, Cldn19,
+
+Lipid Metabolism & Membrane Dynamics in Neural Cells:
+Pltp, Abca8a, Abcb4, St3gal5, Sgpl1,

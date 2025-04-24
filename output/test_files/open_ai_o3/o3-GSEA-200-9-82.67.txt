@@ -1,0 +1,17 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Kif1a, Dpysl5, Dpysl3, Gldn, Srgap1, Tnik, Gnai1, Wnt5a, Itga8, Itga7, Cdh13, Lrrtm3, Ryr3, Piezo2, Rhoj, Itpripl1, Nes, Met, Ppfia4, Frrs1, P2ry2, Hs6st1, Hs6st2,
+
+Myelination and Schwann Cell Biology:
+Mag, Mpz, Pmp22, Prx, Drp2, Mal, Id2, Tf, Lrp2, Lifr, Cldn19, Cldnd1, Abca8a, Abcb4, Cers6, St3gal5, Sgpl1, Psap, Agpat5, P2ry2,
+
+Synaptic Transmission and Plasticity:
+Synpr, Cpe, Prss12, Sncg, Pfn2, Prkar2b, Ryr3, Frrs1, P2ry2, Kif1a, Lrrtm3, Dpysl3, Dpysl5, Ecel1, Serpini1, Pam, Ppp1r14c, Numb, Gja1, Prkd3, Phldb2, Tnik, Sipa1l1, Piezo2,
+
+Neural Extracellular Matrix and Cell Adhesion:
+Adamts17, Adamtsl3, Adamtsl1, Prss23, Qsox1, Hapln1, Mfap5, Ltbp1, Col9a3, Col20a1, Col15a1, Matn3, Emilin1, Efemp2, Pxdn, Pappa, Ccn3, Ccn4, Cdh13, Zpld1, Sbspon, Itga8, Itga7, Cd151, Cd9, Selplg, Pkp1, Tspan4, Tspan5, Htra1, Serpinf1, Timp1,
+
+Neural Lipid and Cholesterol Metabolism:
+Abca8a, Abcb4, Apod, Psap, Agpat5, Cers6, Hadhb, Pltp, Nampt, Sgpl1, Serinc5, St3gal5, C1qtnf1, Pmp22,
+
+Neuroimmune and Inflammatory Signaling:
+Cxcl12, Cxcl14, Ighm, Selplg, Ifnar1, Nlrp1a, Icoslg, Defb29, A2m, Tril, Eif2ak2, Trim35, Aif1l, Runx3, Timp1, Cd9, Cd151, Atf3, Epas1,

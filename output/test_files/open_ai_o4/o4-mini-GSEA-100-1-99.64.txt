@@ -1,0 +1,23 @@
+Axon Guidance:
+Sema4f, Ntn1, Robo2, Nrp1, Srgap1, Cntn6, Cdh13, Gldn
+
+Synaptic Vesicle Cycling and Neuropeptide Processing:
+Synpr, Cpe, Serpini1, Sncg, Ccn3
+
+Extracellular Matrix Organization and Proteolytic Remodeling:
+Hapln1, Col9a3, Matn3, Mfap5, Efemp2, Sbspon, Adamts17, Adamtsl3, Htra1, Prss12, Prss23, Pcsk5, Qsox1, Pxdn, Hs6st2, Chst2
+
+Myelination and Peripheral Nerve Maintenance:
+Mpz, Mag, Drp2, Prx, Gldn
+
+Ion Channel and Mechanosensory Transduction:
+Scn7a, Piezo2, P2ry2, Slc9a9, Clca4l
+
+Lipid Transport and Myelin Lipid Homeostasis:
+Abca8a, Apod, Pltp, Serinc5
+
+Transcriptional Control of Neural Differentiation:
+Id2, Epas1, Peg3, Atf3, Eif2ak2, Ddx1
+
+Neuroinflammatory and Immune Signaling in the CNS:
+Cxcl14, Ighm, Tril, Icoslg, A2m, Igfbp3

@@ -1,0 +1,32 @@
+Axon guidance:
+Slit2, Robo2, Sema4f, Sema3g, Plxnb1, Ntn1, Efna5, Nrp1, Nrp2
+
+Myelin sheath:
+Pmp22, Mbp, Mpz, Plp1, Mal
+
+Synaptic vesicle cycle:
+Snap29, Synpr, Synm
+
+Neuroactive ligand–receptor interaction:
+Drd4, Chrna3, P2ry2, Gnai1
+
+ECM-receptor interaction:
+Hapln1, Bgn, Mfap5, Matn3, Col9a3, Col20a1, Col8a2, Col11a1, Col15a1, Emilin1, Comp, Fstl1
+
+Integrin-mediated cell adhesion:
+Itga6, Itga7, Itga8
+
+Wnt signaling pathway:
+Wnt5a, Lef1
+
+Calcium signaling pathway:
+Itpripl1, Ryr3, Piezo2
+
+cAMP signaling pathway:
+Adcy1, Gnai1, Prkar2b
+
+PI3K-Akt signaling pathway:
+Igfbp3, Pdgfb, Lifr
+
+Long-term potentiation:
+Cdk5r1, Adcy1, Prkar2b

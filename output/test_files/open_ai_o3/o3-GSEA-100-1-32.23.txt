@@ -1,0 +1,14 @@
+Axon Guidance Signaling:  
+Cntn6, Sema4f, Ntn1, Nrp1, Robo2, Srgap1, Piezo2, Gldn,  
+
+Myelination and Schwann Cell Differentiation:  
+Mpz, Mag, Prx, Drp2, Id2, Tubb4a, Abca8a, Apod, Gldn,  
+
+Synaptic Transmission and Plasticity:  
+Synpr, Serpini1, Cpe, Sncg, P2ry2, Slc9a9, Scn7a, Serinc5,  
+
+Extracellular Matrix Organization in Neural Development:  
+Hapln1, Col9a3, Adamts17, Adamtsl3, Ltbp1, Mfap5, Efemp2, Matn3, Qsox1, Pxdn, Parm1, Sbspon,  
+
+Neuroimmune and Stress Response:  
+Cxcl14, Tril, Ighm, Icoslg, Atf3, Eif2ak2, Serpinf1, Vopp1, Id2,
