@@ -5,13 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/model/eval/similarity_evaluation_val-similarity_results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/model_1/eval/similarity_evaluation_val-similarity_results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fine-tuning_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/fine-tuning_model.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fine-tuning_model.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/PNG/1_epoch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/PNG/base_30_epochs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/PNG/base_6_epochs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/PNG/fine-tuned_30_epochs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/PNG/fine-tuned_6_epochs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/PNG/finetuned_1_epoch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/test.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/train.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/model/val.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_deepseek.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_deepseek.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_grok.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_grok.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o3.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o3_mini.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o3_mini.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o4.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/combined_models_line.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/combined_models_line.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_deepseek.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_deepseek.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_grok.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_grok.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o3.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o3_mini.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o3_mini.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o4.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_combined.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_combined.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_validation.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_validation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_values.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotting.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,41 +75,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.RAG.executor": "Run",
-    "Python.RAG_LUMC.executor": "Run",
-    "Python.RAG_workflow.executor": "Run",
-    "Python.Unnamed.executor": "Run",
-    "Python.automated_validation.executor": "Run",
-    "Python.hugginface_test.executor": "Run",
-    "Python.insta.executor": "Run",
-    "Python.plotting.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.visualize_length.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Python/RAG/plotting.py",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.jupyter.py.connections.configurable.JupyterServersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.RAG.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RAG_LUMC.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RAG_workflow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.automated_validation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hugginface_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.insta.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plotting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualize_length.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Python/RAG/plotting.py&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Python.RAG_workflow">
+}</component>
+  <component name="RunManager" selected="Python.plotting">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
@@ -231,6 +254,7 @@
       <workItem from="1744877500187" duration="3568000" />
       <workItem from="1745517739222" duration="339000" />
       <workItem from="1746123211640" duration="1584000" />
+      <workItem from="1746561062542" duration="331000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,12 @@ import pandas as pd
 import plotly.express as px
 from scipy.stats import pearsonr
 
+figure_width = 1000
+figure_height = 600
+figure_kwargs = {
+    'width': figure_width,
+    'height': figure_height, }
+
 
 def clean_gene_name(raw: str) -> Optional[str]:
     """
@@ -34,7 +40,8 @@ def parse_genes_from_file(filepath: Path) -> Set[str]:
             expecting_list = False
             continue
 
-        if line.startswith("Pathway Name:") or (line.startswith("**") and line.endswith("**")):
+        if line.startswith("Pathway Name:") or (
+                line.startswith("**") and line.endswith("**")):
             expecting_list = True
             continue
         if expecting_list or (',' not in line and len(line.split()) > 1):
@@ -94,7 +101,8 @@ def plot_and_save(df: pd.DataFrame, model: str, out_dir: Path) -> None:
         df, x='input_genes', y='unique_genes', points='all',
         hover_data=['time_sec'],
         labels={'input_genes': 'Input Genes', 'unique_genes': 'Unique Genes'},
-        title=f"{model}: Unique Genes per Input Count"
+        title=f"{model}: Unique Genes per Input Count",
+        **figure_kwargs
     )
     fig_box.update_traces(pointpos=0, jitter=0.3)
     fig_box.write_html(str(out_dir / f"box_{model}.html"))
@@ -110,16 +118,18 @@ def plot_and_save(df: pd.DataFrame, model: str, out_dir: Path) -> None:
     fig_line = px.line(
         summary, x='input_genes', y='unique_genes', markers=True,
         hover_data=['time_sec'],
-        labels={'input_genes': 'Input Genes', 'unique_genes': 'Mean Unique Genes'},
-        title=f"{model}: Mean Unique Genes per Input Count"
+        labels={'input_genes': 'Input Genes',
+                'unique_genes': 'Mean Unique Genes'},
+        title=f"{model}: Mean Unique Genes per Input Count",
+        **figure_kwargs
     )
 
     fig_line.write_html(str(out_dir / f"line_{model}.html"))
 
 
-
 def compute_correlations(df: pd.DataFrame) -> None:
-    r_tc, p_tc = pearsonr(df['unique_genes'] / df['input_genes'], df['time_sec'])
+    r_tc, p_tc = pearsonr(df['unique_genes'] / df['input_genes'],
+                          df['time_sec'])
     r_iu, p_iu = pearsonr(df['input_genes'], df['unique_genes'])
 
     results = pd.DataFrame([
@@ -138,13 +148,9 @@ def compute_correlations(df: pd.DataFrame) -> None:
     print(results.to_string(index=False))
 
 
-
-
-
-
 def main():
     base_dir = Path("./output/test_files")
-    out_dir  = Path("output/text_files/PNG_HTML")
+    out_dir = Path("output/text_files/PNG_HTML")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     all_summaries = []
@@ -163,7 +169,7 @@ def main():
             .groupby('input_genes', as_index=False)
             .agg(
                 mean_unique_genes=('unique_genes', 'mean'),
-                mean_time_sec      =('time_sec',      'mean'),
+                mean_time_sec=('time_sec', 'mean'),
             )
             .assign(model=model)
             .sort_values('input_genes')
@@ -180,11 +186,13 @@ def main():
             markers=True,
             hover_data=['mean_time_sec'],
             labels={
-                'input_genes'       : 'Input Genes',
-                'mean_unique_genes' : 'Mean Unique Genes',
-                'model'             : 'Model'
+                'input_genes': 'Input Genes',
+                'mean_unique_genes': 'Mean Unique Genes',
+                'model': 'Model'
             },
-            title="All Models: Mean Unique Genes per Input Count"
+            title="All Models: Mean Unique Genes per Input Count",
+            **figure_kwargs
+
         )
         # … after px.line(...)
         # … after creating your figure …
@@ -211,12 +219,9 @@ def main():
             gridwidth=1,
         )
 
-
-
         combined_path = out_dir / "combined_models_line.html"
         fig.write_html(str(combined_path))
         print(f"Combined line plot for all models saved: {combined_path}")
-
 
 
 if __name__ == '__main__':

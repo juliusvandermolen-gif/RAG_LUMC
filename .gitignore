@@ -162,3 +162,4 @@ cython_debug/
 # Ignore specific database and index files
 /database/
 /output/model/biolinkbert-large-simcse-rat
+/output/hard_fine_tune_model/best_model
