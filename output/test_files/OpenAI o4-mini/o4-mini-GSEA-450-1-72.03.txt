@@ -1,0 +1,14 @@
+Axon Guidance and Neurite Outgrowth:
+Sema4f, Sema3g, Slit2, Robo2, Ntn1, Plxnb1, Efna5, Nrp1, Nrp2, Vangl2, Prickle3, Srgap1, Dpysl3, Dpysl5, Cntn6,
+
+Synaptic Plasticity and Neurotransmitter Signaling:
+Snap29, Synpr, Cpe, Pcsk5, Apba1, Vgf, Itpripl1, Ryr3, P2ry2, Drd4, Gnai1, Gprc5a, Gprc5b, Prkar2b, Eif2ak2, Atf3, Atf5, Mef2c,
+
+Myelination and Schwann Cell Function:
+Mbp, Plp1, Mpz, Mag, Mal, Cldn19, Gldn, Cntn6,
+
+Extracellular Matrix and Neural Patterning:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Bgn, Fn1, Hapln1, Emilin1, Mfap5,
+
+Growth Factor and Intracellular Signaling Architectures:
+Grb14, Igfbp3, Pdgfb, Lifr, Ghr, Wnt5a, Lef1, Ebf1, Runx3, Klf9, Id2, Dyrk1a,

@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Sema3g, Sema4f, Efna5, Wnt5a, Vangl2, Slitrk6, Dpysl3, Dpysl5, Srgap1, Kif1a, Rhoj, Asap1, Acap2, Arhgap24, Arhgap5, Arhgef9, Prex2, Tnik, Gnai1, Itga8, Itga6, Cxcl12, Lpar1, Lrrtm3, Prickle3,
+
+Schwann Cell Myelination and Peripheral Nerve Development:
+Mpz, Plp1, Pmp22, Mbp, Mag, Prx, Drp2, Gldn, Mal, Cldn19, Sgms1, Id2, Cers6,
+
+Synaptic Transmission and cAMP/PKA-Mediated Plasticity:
+Adcy1, Prkar2b, Pkia, Ryr3, Drd4, Synpr, Vgf, P2ry2, Cpe, Frrs1, Synj2bp, Kif1a, Mef2c,
+
+Neural Lipid and Cholesterol Homeostasis:
+Abca8a, Apod, Pltp, Fabp5, Pnpla2, Scd, Cers6, Pmp22, Sgms1, Nampt, Bdh1,
+
+Extracellular Matrix and Cell Adhesion in Axon-Glia Interaction:
+Cntn6, Cdh13, Hapln1, Col9a3, Col15a1, Col11a1, Col20a1, Col8a2, Nid2, Matn3, Bgn, Fn1, Pcdh18, Emilin1, Mfap5, Timp1, Ltbp1, Adamts17, Adamtsl1, Adamtsl3, Plod3, Itga6, Itga7, Itga8, Gja1, Tjp1, Podxl,
+
+Wnt/Planar Cell Polarity Signaling in Neural Patterning:
+Wnt5a, Vangl2, Lef1, Tnik, Prickle3, Kif26b, Frmd6,

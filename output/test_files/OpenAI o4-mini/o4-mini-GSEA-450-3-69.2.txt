@@ -1,0 +1,17 @@
+Axon guidance:
+Sema4f, Sema3g, Slit2, Robo2, Plxnb1, Ntn1, Nrp1, Nrp2, Cntn6
+
+Myelination:
+Mbp, Plp1, Pmp22, Mpz, Mag, Mal
+
+Synaptic signaling and plasticity:
+Snap29, Synpr, Sncg, Cpe, Vgf, Drd4, Ryr3, Itpripl1, Chrna3
+
+Extracellular matrix organization and cell adhesion:
+Fn1, Thbs2, Hapln1, Emilin1, Efemp2, Matn3, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Itga6, Itga7, Itga8, Bgn, Adamts17, Adamtsl1, Adamtsl3
+
+Neural stem cell maintenance and differentiation:
+Nes, Msi1, Mef2c, Id2, Ebf1, Atf3, Runx3, Nfatc1
+
+Wnt signaling pathway:
+Wnt5a, Lef1

@@ -1,0 +1,32 @@
+Axon guidance:
+Ntn1, Slit2, Robo2, Sema3g, Sema4f, Plxnb1, Wnt5a, Nrp1, Nrp2,
+
+Myelination:
+Mbp, Plp1, Mag, Mpz, Pmp22, Cldn19,
+
+Synaptic vesicle cycle:
+Synpr, Snap29, Synj2bp,
+
+Regulation of actin cytoskeleton:
+Acta2, Arhgap24, Arhgap5, Cfl2, Fhod3, Cobl,
+
+ECM–receptor interaction:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Itga6, Itga7, Itga8, Fn1, Bgn, Emilin1, Hapln1,
+
+MAPK signaling pathway:
+Mapk1, Map2k6, Map4k5,
+
+Wnt signaling pathway:
+Wnt5a, Lef1,
+
+Calcium signaling pathway:
+Ryr3, Itpripl1, Camk1d,
+
+Neuroactive ligand–receptor interaction:
+Drd4, Chrna3, P2ry2,
+
+Rho GTPase signaling:
+Rhoj, Gnai1, Arhgap24, Arhgap5,
+
+Neurotrophin signaling pathway:
+Bdnf, Mef2c, Camk1d

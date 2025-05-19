@@ -1,0 +1,38 @@
+Axon guidance:
+Sema4f, Sema3g, Ntn1, Slit2, Slit3, Nrp1, Nrp2, Plxnb1, Robo2, Efna4, Efna5
+
+Synaptic vesicle cycle:
+Snap29, Vamp2, Stxbp6, Synpr, Rab3gap2
+
+Neuroactive ligand–receptor interaction:
+Drd4, P2ry2, Ptgfr, Lpar1, Cxcl12, Cxcl14, Cxcl16, Ccl7
+
+cAMP signaling:
+Adcy1, Adcy5, Prkar2b, Akap12, Ppp1r36
+
+Calcium signaling:
+Ryr3, Itpripl1, Camk1d, Camk4
+
+MAPK signaling:
+Mapk1, Map2k1, Map2k2, Map2k6, Mapk8ip1, Mef2c, Atf3, Atf4, Atf5
+
+PI3K–Akt signaling:
+Akt1, Grb14, Ghr, Lif, Lifr, Fgfr1, Stat3
+
+Wnt signaling:
+Wnt5a, Lef1, Daam2, Prickle2, Prickle3, Vangl2, Tnik, Ctnnb1
+
+Rho GTPase regulation:
+Arhgef6, Arhgef9, Arhgap24, Arhgap31, Arhgap5, Rhoj, Cdc42se2
+
+ECM–receptor interaction:
+Cntn6, Cdh13, Cadm1, Fn1, Nid2, Lamb1, Lama4, Adamts1, Adamts2, Adamts6, Adamts17, Mmp2, Mmp28, Timp1, Col9a3, Col15a1, Col8a2, Col11a1, Col16a1, Col5a2, Col7a1, Col20a1, Col14a1
+
+Myelination:
+Mag, Mbp, Mog, Plp1
+
+Sphingolipid metabolism:
+Sgms1, Smpd1, Cers6
+
+Cholesterol transport:
+Apod, Abca8a, Abcb4

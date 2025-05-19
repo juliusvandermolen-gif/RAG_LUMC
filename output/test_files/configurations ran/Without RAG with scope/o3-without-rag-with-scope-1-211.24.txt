@@ -1,0 +1,23 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Sema3g, Sema4f, Dpysl3, Dpysl5, Srgap1, Itga7, Itga8, Cdh13, Lrrtm3, Tnik, Rhoj, Gldn, Gja1, Slitrk6, Dyrk1a, Hs6st1, Hs6st2, Id2, Tuba4a, Tubb4a, Pfn2, Nes, Fhod3, Phldb2, Sipa1l1, Cobll1,
+
+Synaptic Function and Plasticity:
+Synpr, Serpini1, Prss12, Prkar2b, Frrs1, Kif1a, Ryr3, Numb, Pfn2, Sncg, Cpe, Pcsk5, Ecel1, Bace2, Cers6, Map1lc3a, Mef2c, Dyrk1a, Slc9a9, Prkd3, Chmp2b, Rab10, Septin5, Pam, Ppfia4,
+
+Myelination and Axon Ensheathment:
+Mag, Mpz, Pmp22, Mal, Drp2, Gldn, Prx, Abca8a, Kif1a,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Bgn, Emilin1, Mfap5, Pxdn, Qsox1, Timp1, Htra1, Pappa, Sbspon, Chst2, Has2, Hs6st1, Hs6st2, Fut10, Rcn3, C1qtnf1, Ccn3, Ccn4,
+
+Non-Canonical Wnt Developmental Signaling:
+Wnt5a, Tnik, Lef1, Dyrk1a, Vash1, Tspan5,
+
+Calcium and Ion Channel Signaling:
+Ryr3, Piezo2, Scn7a, P2ry2, Gnai1, Itpripl1, Tpcn1, Inpp5a, Ano5, Ppm1f, Stk39,
+
+Neurotrophic and Growth Factor Signaling:
+Lifr, Igfbp3, Ghr, Cxcl12, Igf2bp2, Serpinf1, Epas1, Nrp1, Nrp2, Psap, Met, Peg3,
+
+Neuroimmune and Inflammatory Response:
+Cxcl14, Selplg, Ifnar1, Tnfrsf1a, Nlrp1a, A2m, Defb29, Ighm, Tril, Atf3, Runx3, Icoslg, Parp14, Gpnmb,

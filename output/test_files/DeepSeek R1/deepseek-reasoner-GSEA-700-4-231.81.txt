@@ -1,0 +1,44 @@
+Pathway Name: Myelin Formation and Maintenance  
+Pmp22, Mbp, Mag, Plp1, Mpz, Gjb1, Cnp, Sox10, Erbb2, Nrg1, Hapln1, Col9a3, Col15a1, Lama4, Lrp2, Cers6, Sumo3, Timp1, Nid2, Gsn  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Pmp22, Cyp46a1, Lrp2, Cers6, Sc5d, Ugt8a, Plin2, Sumo3, Abca8a, Ccl7, Fabp5, Scd, Acadl, Apod, Hsd17b12  
+
+Pathway Name: Axon Guidance and Neural Plasticity  
+Sema4f, Nrp1, Nrp2, Epha4, Sema3g, Cdh13, Ncam1, Slit2, Efna5, Col20a1, Ptk2b, Dlg1, Rhoj, Plxnb1, Wnt5a  
+
+Pathway Name: Schwann Cell Differentiation and Signaling  
+Sox10, Erbb2, Nrg1, Notch1, Mef2c, Lgi4, Adam22, Prkar2b, Lifr, Pdgfb, Col14a1, Col11a1, Col8a2, Col7a1, Emilin1  
+
+Pathway Name: Extracellular Matrix Organization and Cell Adhesion  
+Sparc, Col9a3, Col15a1, Lama4, Nid2, Timp1, Hapln1, Efemp2, Cd151, Cd9, Cldn19, Lrrtm3, Tspan4, Tspan5, Itga8  
+
+Pathway Name: Neural Crest Development and Migration  
+Sox10, Mef2c, Rhoj, Dlg1, Robo2, Lef1, Runx3, Pax3, Twist1, Snai2, Foxd3, Ets1, Zeb1, Tcf4, Msx1  
+
+Pathway Name: Neurotrophic and Growth Factor Signaling  
+Bdnf, Ntrk2, Lif, Lifr, Pdgfb, Nrg1, Igfbp3, Ccn3, Ccn4, Gas6, Fstl1, Efna5, Wnt5a, Bdnf, Ngf  
+
+Pathway Name: Cytoskeletal Organization and Dynamics  
+Tuba4a, Tubb4a, Fyn, Gsn, Acta2, Tagln, Cald1, Pfn2, Dpysl5, Dpysl3, Septin4, Septin5, Arhgef9, Myo1d, Kif1a  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Atp6v1a, Ctsb, Ctsd, Ctsl, Lamp1, Ctsf, Ctsz, Npc2, Gba1, Hexb, Manba, Clicf1, Arsb, Acp1, Galns  
+
+Pathway Name: Inflammatory and Immune Response  
+Aif1l, C1qtnf1, Timp1, Ccl7, Cxcl14, Cxcl12, Cxcl16, Ifnar1, Ighm, Il18rap, Cd59b, Cd302, Cd55, Cd9, Cd151  
+
+Pathway Name: Synaptic Function and Ion Channels  
+Scn7a, Piezo2, Kif1a, Kif3c, Kif26b, Kif1a, Cacna1c, Cacnb2, Grin1, Gabpa, Grik5, Glra1, Glrb, Glra3, Glrb  
+
+Pathway Name: Stress Response and Protein Folding  
+Hsp90aa1, Sumo3, Htra1, Serpinf1, Serpine1, Hspa12a, Hspa5, Hspb1, Hspb8, Hspd1, Hspe1, Hspa8, Hspa4, Hspa9, Hspa1a  
+
+Pathway Name: Neurotransmitter Regulation and Signaling  
+Grb14, Grin1, Gabpa, Grik5, Glra1, Glrb, Adcy1, Adcy5, Drd4, P2ry2, Ptgfr, Lpar1, Chrm3, Chrnb2, Chrna3  
+
+Pathway Name: Epigenetic and Transcriptional Regulation  
+Ebf1, Runx3, Mef2c, Sox10, Taf9b, Cux1, Zfp518a, Zfp277, Zfyve28, Zc3h14, Kdm3a, Trim35, Trim21, Trim59, Trim13  
+
+Pathway Name: Hypoxia and Metabolic Adaptation  
+Hif1a, Epas1, Nampt, Pgk1, Echs1, Acadl, Hadhb, Idh1, Idh2, Mdh1, Mdh2, Suclg2, Pdhb, Pdhx, Pdha1

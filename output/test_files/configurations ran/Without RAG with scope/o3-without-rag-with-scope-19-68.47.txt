@@ -1,0 +1,29 @@
+Axon Guidance:
+Cntn6, Ntn1, Sema4f, Sema3g, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl3, Dpysl5, Srgap1, Tnik, Itga8,
+
+Semaphorin-Plexin Signaling:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Srgap1, Tnik,
+
+Netrin Signaling:
+Ntn1, Dpysl3, Dpysl5, Srgap1, Tnik, Itga8,
+
+Myelination:
+Mag, Mpz, Pmp22, Drp2, Gldn, Mal,
+
+Synaptic Vesicle Dynamics:
+Synpr, Kif1a, Frrs1, Pfn2, Dpysl3, Dpysl5, Srgap1, Rhoj,
+
+Calcium Signaling:
+Ryr3, Itpripl1, P2ry2, Gnai1,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Dyrk1a, Mef2c, Tnik, Klf9,
+
+Extracellular Matrix Organization:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Pxdn, Efemp2, Emilin1, Matn3, Bgn,
+
+Neurotrophic Growth Factor Signaling:
+Lifr, Ghr, Igfbp3, Igf2bp2, Cxcl12, Nrp1, Nrp2, Efna5,
+
+GPCR/Chemokine Signaling:
+P2ry2, Cxcl12, Gnai1, Selplg, Ptgfr, Gprc5b, Gprc5a,

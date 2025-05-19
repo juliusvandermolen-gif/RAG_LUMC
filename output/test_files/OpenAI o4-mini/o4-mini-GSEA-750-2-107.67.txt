@@ -1,0 +1,23 @@
+Axon Guidance:
+Sema3g, Sema4f, Slit2, Robo2, Ntn1, Plxnb1, Efna5, Efna4, Epha4, Wnt5a
+
+Synaptic Transmission and Plasticity:
+Bdnf, Synpr, Snap29, Vamp2, Camk1d, Drd4, P2ry2, Gnai1
+
+Myelination and Myelin Maintenance:
+Mbp, Plp1, Pmp22, Mag, Mpz, Abca8a, Abca3, Apod
+
+Cytoskeletal Dynamics and Axonal Transport:
+Kif1a, Dnm1l, Tuba4a, Tubb4a, Septin4, Septin5, Pfn2, Fhod3
+
+MAPK Signaling Pathway:
+Mapk1, Map2k6, Map4k5, Rps6ka5
+
+Neural Stem Cell Maintenance and Differentiation:
+Nes, Msi1, Numb, Etv5, Ebf1, Hes6
+
+Wnt Signaling Pathway:
+Wnt5a, Lef1
+
+Cell Adhesion and Extracellular Matrix Remodeling:
+Itga1, Itga6, Itga7, Itga8, Cadm1, Cdh13, Ctnnd2, Col9a3, Col15a1, Col20a1, Col8a2, Col11a1, Col14a1, Col5a2, Col7a1, Fn1, Sparc, Thbs2, Timp1

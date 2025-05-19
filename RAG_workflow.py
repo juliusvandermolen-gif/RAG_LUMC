@@ -26,7 +26,6 @@ import faiss
 from rank_bm25 import BM25Okapi, BM25Plus
 
 # Importing LLM libraries
-from langchain.docstore.document import Document
 from openai import OpenAI
 import google.generativeai as genai
 from anthropic import Anthropic
@@ -123,6 +122,8 @@ stop_words |= extra_stops
 
 
 aggregated_times = {}
+
+os.makedirs("./logs", exist_ok=True)
 with open("./logs/time.txt", "w") as f:
     f.write("")
 
@@ -1347,7 +1348,7 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model,
+def query_open_ai(messages, system_instruction_for_response, prompt, save, model, range_query,
                   **kwargs):
     """
     Queries the OpenAI API using provided messages and parameters, attempting multiple times if necessary.
@@ -1368,7 +1369,7 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, range
     answers = []
     for i in range(1, range_query+1):
         try:
-            print(f"Trying to generate a response using model {model} (attempt {i})...")
+            #print(f"Trying to generate a response using model {model} (attempt {i})...")
             # Record start time for this request attempt
             start_time = time.perf_counter()
 
@@ -1629,7 +1630,7 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
 
     if api_type.lower() == 'openai':
         save = True
-        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=1, model="o4-mini")
+        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, model=model, range_query=5, )
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)
     elif api_type.lower() == 'gemini':
@@ -1828,7 +1829,7 @@ def main():
     print(f"Using config: {config_name}")
 
     #gene_counts = list(range(100, 1001, 100))
-    gene_counts = [250]
+    gene_counts = list(range(500, 1001, 50))
     for max_genes_value in gene_counts:
         print(f"\n\n=== Running test for max_genes = {max_genes_value} ===")
         # Override the maximum gene count from the configuration.

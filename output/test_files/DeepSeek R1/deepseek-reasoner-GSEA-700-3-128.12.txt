@@ -1,0 +1,56 @@
+Pathway Name: Myelination and Lipid Metabolism  
+Mbp, Plp1, Pmp22, Mag, Prx, Mpz, Abca8a, Abcb4, Apod, Htra1, Hapln1, Gprc5b, Cldn19, Lrp2, Col15a1, Emilin1, Col9a3, Col20a1, Col7a1, Col14a1, Col8a2, Col11a1  
+
+Pathway Name: Neuregulin-ErbB Signaling and Axon Guidance  
+Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Efna5, Epha4, Robo2, Slit2, Dpysl5, Dpysl3, Cdh13, Lpar1, Cxcl12, Wnt5a  
+
+Pathway Name: Cholesterol Biosynthesis and Transport  
+Abca8a, Abcb4, Apod, Htra1, Hsp90aa1, Hspa12a, Lrp2, Vldlr, Scd, Fabp5, Pmp22, Abca8a  
+
+Pathway Name: PI3K-AKT-MTOR and MAPK/ERK Signaling  
+Grb14, Mapk1, Map2k6, Akt3, Pik3c2g, Pdpk1, Rps6ka5, Rictor, Mtor, Rptor, Rps6kb1, Eif4ebp1  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Ctsd, Ctsl, Ctsf, Lamp1, Ctsb, Ctsa, Atg5, Atg7, Becn1, Sqstm1, Ulk1, Tfeb  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Hsp90aa1, Hspa12a, Atf3, Xbp1, Ern1, Eif2ak2, Ddit3, Hspa5, Atf6, Pdia4, Sec24d, Eif2s1  
+
+Pathway Name: Neural Crest Development and Schwann Cell Differentiation  
+Ebf1, Sox10, Ncam1, Ncam2, Cadm1, Cdh2, Itga6, Itga7, Itga8, Itgb1, Itgb4, Lama4  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col20a1, Col7a1, Col14a1, Col8a2, Col11a1, Hapln1, Fn1, Sparc, Lama4, Matn3, Tnc, Tnr  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Bdnf, Synpr, Vamp2, Syt1, Syt4, Syt7, Grin1, Grin2a, Grin2b, Gabbr1, Gabbr2, Glra1  
+
+Pathway Name: Inflammatory Response and Microglial Activation  
+Aif1l, C1qtnf1, C1qtnf2, Ccl7, Cxcl14, Tnfrsf1a, Il18rap, Ifnar1, Tlr3, Cd59b, C3, C4  
+
+Pathway Name: Notch Signaling and Cell Fate Determination  
+Notch1, Notch2, Jag1, Dll1, Hes1, Hes5, Hey1, Hey2, Rbpj, Mfng, Lfng, Dtx4  
+
+Pathway Name: Wnt/β-Catenin Signaling  
+Wnt5a, Lef1, Tcf7, Tcf7l2, Ctnnb1, Gsk3b, Axin1, Axin2, Apc, Ccnd1, Myc, Tspan4  
+
+Pathway Name: TGF-β and BMP Signaling  
+Tgfb1, Tgfb2, Tgfb3, Bmp4, Bmp7, Smad1, Smad2, Smad3, Smad4, Smad5, Smad6, Smad7  
+
+Pathway Name: cAMP-PKA Signaling  
+Adcy1, Adcy5, Prkar2b, Pkia, Pde4d, Pde7b, Creb1, Creb3, Atf3, Epac1, Rap1a, Rap1b  
+
+Pathway Name: Oxidative Stress and Antioxidant Response  
+Sod1, Sod2, Cat, Gpx1, Gpx4, Txnrd2, Nqo1, Hmox1, Hmox2, Nfe2l2, Keap1, Prdx1  
+
+Pathway Name: Ion Channel and Transporter Activity  
+Scn7a, Kcnq2, Kcnq3, Kcnma1, Cacna1a, Cacna1b, Trpv1, Trpv4, Trpa1, Slc9a9, Slc39a13, Slc4a1ap  
+
+Pathway Name: Apoptosis and Cell Survival  
+Bcl2, Bax, Bak1, Casp3, Casp6, Casp9, Apaf1, Cycs, Diablo, Birc5, Mcl1, Bcl2l1  
+
+Pathway Name: Ubiquitin-Proteasome System  
+Ube2l3, Usp6nl, Usp15, Usp25, Usp30, Usp47, Psmd2, Psmc3, Uba1, Uba52, Ubb, Ubc  
+
+Pathway Name: Neurotrophin Signaling  
+Ntrk1, Ntrk2, Ntrk3, Ngf, Bdnf, Ntf3, Ntf4, Ngfr, Sort1, Cntn6, Cntn1, Cntn2

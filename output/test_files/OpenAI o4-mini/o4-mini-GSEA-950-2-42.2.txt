@@ -1,0 +1,32 @@
+Axon Guidance Pathway:
+Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2, Robo2, Slit2, Ntn1, Epha4,
+
+Synaptic Vesicle Cycle:
+Synpr, Snap29, Stxbp6, Vamp2,
+
+Calcium Signaling:
+Itpripl1, Ryr3, P2ry2, Piezo2, Camk1d, Camk4,
+
+ERK/MAPK Signaling:
+Mapk1, Map2k6, Map4k5, Mef2c,
+
+PI3K–AKT Signaling:
+Akt1, Grb14,
+
+GPCR Signaling:
+Drd4, P2ry2, Gnai1, Gng2,
+
+Wnt/β-catenin Signaling:
+Wnt5a, Lef1, Ctnnb1,
+
+Cell Adhesion Molecules:
+Cntn6, Cdh13, Icam1, Itga1, Itga6, Itga7, Itga8,
+
+Rho GTPase Signaling:
+Arhgef9, Arhgap24, Arhgap5, Arhgap31, Rhoj, Cdc42se2,
+
+Myelin Sheath Formation:
+Mbp, Mpz, Mag, Plp1,
+
+Microtubule Dynamics and Motor Transport:
+Tuba4a, Tubb4a, Tubb2a, Dnm1l, Kif1a, Kif3c, Kif26b,

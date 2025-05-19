@@ -1,0 +1,23 @@
+Axon Guidance and Neuronal Projection:
+Cntn6, Sema4f, Nrp1, Nrp2, Plxnb1, Robo2, Slit2, Ntn1, Dpysl3, Dpysl5, Gldn, Kif1a, Lrrtm3, Mag, Mpz, Pmp22, Gja1, Tnik, Itga7, Itga8,
+
+Extracellular Matrix Organization:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Bgn, Hapln1, Mfap5, Emilin1, Efemp2, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Pxdn, Has2,
+
+Focal Adhesion and Integrin Signaling:
+Itga7, Itga8, Cd9, Cd151, Cdh13, Tspan4, Tspan5, Selplg, Ppp1r14c, Gja1, Pals1, Rhoj, Asap1, Stard13,
+
+Angiogenesis and Vascular Remodeling:
+Vash1, Epas1, Nrp1, Nrp2, Ptgfr, Has2, Wnt5a, Lef1, Ppard, Nampt, Efna5, Gpnmb, Timp1,
+
+Immune and Inflammatory Response:
+Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Nlrp1a, Icoslg, Igfbp3, A2m, Igf2bp2, Ighm, Selplg, Timp1,
+
+Oxidative Stress and Metabolic Detoxification:
+Sqor, Prx, Hadhb, Fth1, Hsp90aa1, Hspa12a, Rrm2, Pam, Psap, Eif2ak2, Nampt,
+
+Wnt/TGF-β Signaling:
+Wnt5a, Lef1, Ltbp1, Ppp1r14c, Serpinf1, Runx3, Epas1, Dyrk1a,
+
+Protein Folding and Ubiquitin-Dependent Proteostasis:
+Sumo3, Psmd2, Trim35, Ddx1, Hsp90aa1, Hspa12a, Stk39, Pnpt1, Gtf2e1, Taf9b, Rrm2,

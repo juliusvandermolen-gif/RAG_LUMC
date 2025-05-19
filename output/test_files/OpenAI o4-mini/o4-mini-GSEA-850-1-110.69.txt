@@ -1,0 +1,35 @@
+Axon guidance:
+Ntn1, Slit2, Robo2, Plxnb1, Epha4, Efna5
+
+Synaptic vesicle cycle:
+Vamp2, Snap29, Rab10
+
+Long-term potentiation:
+Camk1d, Camk4, Mapk1, Map2k6, Creb3, Itpripl1, Ryr3, Nfatc1, Ppp1r14c
+
+MAPK signaling pathway:
+Mapk1, Map2k6, Mef2c, Rasgrp3, Rassf1, Pak2
+
+cAMP signaling pathway:
+Adcy1, Adcy5, Prkar2b, Gnai1
+
+Calcium signaling pathway:
+Itpripl1, Ryr3, Piezo2, Camk1d, Camk4
+
+Wnt signaling pathway:
+Wnt5a, Lef1
+
+Myelination:
+Mbp, Mag, Mpz, Pmp22, Plp1, Mal
+
+GPCR signaling pathway:
+Drd4, P2ry2, Gnai1, Gng2, Gnaq, Lpar1
+
+Rho GTPase signaling pathway:
+Rhoj, Arhgap24, Arhgap5, Prex2, Cdc42se2
+
+Integrin signaling:
+Itga1, Itga6, Itga7, Itga8
+
+ECM-receptor interaction:
+Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Fn1

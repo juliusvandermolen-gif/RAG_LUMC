@@ -1,0 +1,20 @@
+Axon Guidance and Neural Pathfinding:
+Robo2, Slit2, Nrp1, Nrp2, Ntn1, Sema4f, Sema3g, Efna5, Plxnb1, Cntn6, Srgap1, Itga8,
+
+Myelination and Node of Ranvier Organization:
+Pmp22, Mpz, Mag, Mal, Prx, Drp2, Gldn, Cldn19,
+
+Synaptic Transmission and Plasticity:
+Synpr, Serpini1, Ryr3, Scn7a, Kif1a, Piezo2, Lrrtm3, P2ry2, Sncg, Dpysl3, Dpysl5, Frrs1,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Dyrk1a,
+
+Extracellular Matrix Remodeling and Perineuronal Net Formation:
+Hapln1, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Efemp2, Bgn, Col8a2, Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Pxdn,
+
+Cholesterol and Sphingolipid Metabolism in Myelinating Glia:
+Abca8a, Pltp, Apod, Sgpl1, Cers6, St3gal5,
+
+Calcium and cAMP Signaling Modulating Neural Activity:
+Ryr3, Itpripl1, Gnai1, Prkar2b, P2ry2,

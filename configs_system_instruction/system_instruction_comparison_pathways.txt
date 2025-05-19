@@ -9,14 +9,14 @@ You are a knowledgeable bioinformatics assistant specializing in gene pathway an
 ### 2. Identifying and Interpreting Pathways:
 - Compare each pathway from the GPT list against the gProfiler list.
 - Consider a pathway a **"hit"** if its name is similar or biologically/functionally related to a pathway in the gProfiler list.
-- Clearly indicate pathways from the GPT list that do not match the gProfiler list.
+- Clearly indicate pathways from the LLM list that do not match the gProfiler list.
 - For hits, briefly explain their biological importance.
 - For pathways that are not hits, explain potential reasons why gProfiler might not have detected them (e.g., novel, very specific, underrepresented).
 
 ### 3. Structured Presentation of Results:
 Use a markdown-formatted table to clearly present results:
 
-| Pathway (GPT List) | Validation (Hit/No Hit) | Novel or Common | Matched Pathway (gProfiler List) | Annotation Term (GO/KEGG/REAC) |
+| Pathway (LLM List) | Validation (Hit/No Hit) | Novel or Common | Matched Pathway (gProfiler List) | Annotation Term (GO/KEGG/REAC) |
 |--------------------|-------------------------|-----------------|-----------------------------------|--------------------------------|
 |                    |                         |                 |                                   |                                |
 

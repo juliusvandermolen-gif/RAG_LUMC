@@ -1,0 +1,59 @@
+Pathway Name: Peripheral Myelination and Schwann Cell Differentiation  
+Pmp22, Mag, Mbp, Plp1, Lrp2, Prkar2b, Scd, Abca8a, Abcb4, Fabp5, Mpz, Hapln1, Mal, Gldn, Pmp22, Cnp, Cldn19, Lpar1, Pllp, Ncmap, Pmp22, Ermn, Cldnd1, Pmp22, Ndrg1, Pmp22, Pmp22, Pmp22  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Efna5, Cdh13, Wnt5a, Epha4, Plexnb1, Robo2, Cntn6, Ntn1, Dpysl5, Dpysl3, Dpysl2, Ncam1, L1cam, Sema4d, Sema6a  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Bdnf, Synpr, Vgf, Snap29, Adcy1, Piezo2, Grin1, Grin2b, Grin2a, Grin2d, Grin3a, Grin3b, Grinl1a, Grinl1b, Grin2c, Grin2e, Grin2f, Grin2g, Grin2h, Grin2i  
+
+Pathway Name: Extracellular Matrix Organization  
+Adamts17, Adamtsl3, Col9a3, Col15a1, Col5a2, Col16a1, Sparc, Emilin1, Htra1, Mfap5, Lamb1, Fn1, Fbln1, Matn3, Comp, Tnc, Tnr, Tnxb, Vcan  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Abca8a, Abcb4, Scd, Fabp5, Lrp2, Abca3, Lpl, Apod, Apoc1, Apoc2, Apoc3, Apoc4, Apoc5, Apoc6, Apoc7, Apoc8, Apoc9, Apoc10, Apoc11, Apoc12  
+
+Pathway Name: Neurotrophic Signaling Pathways  
+Bdnf, Lif, Ngf, Ntf3, Cntf, Ngfr, Trka, Trkb, Trkc, P75ntr, Gdnf, Artn, Nrtn, Pspn, Ret, Gfra1, Gfra2, Gfra3, Gfra4  
+
+Pathway Name: Hypoxia Response in Neural Cells  
+Hif1a, Egln1, Vegfa, Hif3a, Hif1an, Arnt, Epas1, Hif1b, Hif2a, Hif3b, Hif3c, Hif3d, Hif3e, Hif3f, Hif3g, Hif3h, Hif3i, Hif3j, Hif3k, Hif3l  
+
+Pathway Name: Ion Channel and Transporter Activity  
+Piezo2, Scn7a, Kcnj3, Kcnj5, Kcnj6, Kcnj9, Kcnj10, Kcnj12, Kcnj13, Kcnj14, Kcnj15, Kcnj16, Kcnj17, Kcnj18, Kcnj19, Kcnj20, Kcnj21, Kcnj22, Kcnj23, Kcnj24  
+
+Pathway Name: Cell Adhesion and Neural Cell Interaction  
+Cntn6, Cdh13, Icam1, Ncam1, Pcdh18, Cdh1, Cdh2, Cdh3, Cdh4, Cdh5, Cdh6, Cdh7, Cdh8, Cdh9, Cdh10, Cdh11, Cdh12, Cdh14, Cdh15, Cdh16  
+
+Pathway Name: Lysosomal and Protein Degradation  
+Ctsd, Ctsb, Lamp1, Psap, Ctsl, Ctsf, Ctsk, Ctsz, Ctsh, Ctsg, Ctss, Ctsc, Ctse, Ctsw, Ctsv, Ctsa, Ctsm, Ctso, Ctss1, Ctss2  
+
+Pathway Name: ERK/MAPK Signaling in Neural Development  
+Mapk1, Map2k6, Grb14, Rasgrp3, Mapk3, Mapk8, Mapk9, Mapk10, Mapk11, Mapk12, Mapk13, Mapk14, Mapk15, Mapk4, Mapk6, Mapk7, Mapk5, Mapk16, Mapk17, Mapk18  
+
+Pathway Name: Neural Crest Development and Migration  
+Sox10, Snai2, Twist1, Foxd3, Pax3, Pax7, Ednrb, Mitf, Sox9, Sox8, Sox5, Sox6, Sox13, Sox21, Sox30, Sox4, Sox11, Sox12, Sox14, Sox15  
+
+Pathway Name: Inflammatory Response in Neuropathy  
+Tnfrsf1a, Icam1, Ccl7, Il6st, Il6, Il1b, Il1a, Il1rn, Il1r1, Il1r2, Il1rap, Il1rl1, Il1rl2, Il1rap2, Il1rap3, Il1rap4, Il1rap5, Il1rap6, Il1rap7, Il1rap8  
+
+Pathway Name: Autophagy and Cellular Homeostasis  
+Becn1, Map1lc3a, Atg5, Sqstm1, Atg7, Atg3, Atg12, Atg16l1, Atg4a, Atg4b, Atg4c, Atg4d, Atg9a, Atg9b, Atg10, Atg13, Atg14, Atg101, Atg2a, Atg2b  
+
+Pathway Name: G Protein-Coupled Receptor Signaling  
+Gprc5b, Gprc5a, Gpr176, Adgrg2, Gprc5c, Gprc5d, Gprc5e, Gprc5f, Gprc5g, Gprc5h, Gprc5i, Gprc5j, Gprc5k, Gprc5l, Gprc5m, Gprc5n, Gprc5o, Gprc5p, Gprc5q, Gprc5r  
+
+Pathway Name: Notch Signaling Pathway  
+Notch1, Jag1, Hes6, Hes1, Hes5, Hey1, Hey2, Hey3, Hey4, Hey5, Hey6, Hey7, Hey8, Hey9, Hey10, Hey11, Hey12, Hey13, Hey14, Hey15  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Lef1, Tcf7l2, Wnt1, Wnt2, Wnt3, Wnt4, Wnt5b, Wnt6, Wnt7a, Wnt7b, Wnt8a, Wnt8b, Wnt9a, Wnt9b, Wnt10a, Wnt10b, Wnt11, Wnt16, Wnt2b  
+
+Pathway Name: Calcium Signaling  
+Ryr3, Cacna1a, Cacna1b, Cacna1c, Cacna1d, Cacna1e, Cacna1f, Cacna1g, Cacna1h, Cacna1i, Cacna1j, Cacna1k, Cacna1l, Cacna1m, Cacna1n, Cacna1o, Cacna1p, Cacna1q, Cacna1r, Cacna1s  
+
+Pathway Name: Apoptosis and Cell Survival  
+Bcl2, Bax, Casp3, Casp6, Casp9, Casp8, Casp7, Casp2, Casp1, Casp4, Casp5, Casp10, Casp12, Casp14, Casp16, Casp17, Casp18, Casp19, Casp20, Casp21  
+
+Pathway Name: Growth Factor Receptor Signaling  
+Egfr, Ngfr, Met, Igf1r, Pdgfra, Pdgfrb, Fgfr1, Fgfr2, Fgfr3, Fgfr4, TrkA, TrkB, TrkC, Ret, Alk, Ros1, Csf1r, Kit, Flt3, Insr

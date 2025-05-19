@@ -1,0 +1,23 @@
+Axon guidance:
+Ntn1, Robo2, Slit2, Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2
+
+Synaptic vesicle cycle:
+Vamp2, Snap29, Synpr, Kif1a
+
+MAPK signaling pathway:
+Rasgrp3, Grb14, Mapk1, Map2k6, Map4k5, Mapk8ip1
+
+Wnt signaling pathway:
+Wnt5a, Lef1
+
+Myelin sheath formation:
+Mpz, Pmp22, Mbp, Plp1
+
+Calcium signaling pathway:
+P2ry2, Itpripl1, Ryr3, Camk1d
+
+Neuroactive ligand–receptor interaction:
+Drd4, P2ry2, Gprc5a, Gprc5b, Gnai1, Gng2
+
+cAMP signaling pathway:
+Adcy1, Adcy5, Camk1d, Prkar2b

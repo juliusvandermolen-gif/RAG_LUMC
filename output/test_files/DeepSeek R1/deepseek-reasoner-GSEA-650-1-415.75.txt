@@ -1,0 +1,265 @@
+Here is the organized list of pathways and associated genes based on biological relevance and neural genetic mechanisms:
+
+**Myelin Sheath Assembly and Maintenance**  
+PMP22, MBP, MPZ, MAG, PLP1, GJA1, CLDN19, MAL, SEPTIN4, PRX, PERI, LRP2  
+
+**Axon Guidance and Semaphorin Signaling**  
+SEMA4F, SEMA3G, NRP1, NRP2, PLXNB1, SLIT2, ROBO2, EFNA5, NTN1, CDH13, COL4A1, UNC5C  
+
+**Synaptic Plasticity and Neurotransmission**  
+BDNF, VAMP2, SNAP29, SYNPR, GRID2, GRIK5, GRIN2B, SLC9A9, SLC22A17, SLC39A13  
+
+**Cholesterol and Lipid Metabolism**  
+PMP22, APOD, ABCA8A, ABCB4, SQOR, SCARB1, LRP2, PLTP, FABP5, HADHB  
+
+**Lysosomal and Autophagic Pathways**  
+CTSD, PSAP, MAP1LC3A, LAMP2, CTSL, CTSD, CTSF, ATG5, BECN1, NPC2  
+
+**Actin Cytoskeleton Regulation**  
+ACTA2, TUBB4A, TUBA4A, DYNCI1, PFN2, CDC42SE2, FHOD3, MYO1D, TAGLN, CALD1  
+
+**Inflammatory and Immune Response**  
+A2M, TIMP1, IL18RAP, CXCL12, CXCL14, CCL7, TLR3, IFI30, CD59B, SIGLEC10  
+
+**ER Stress and Protein Homeostasis**  
+HSPA12A, HSP90AA1, EIF2AK2, ERP29, DNAAF2, SELENOI, EIF2S1, ERN1, XBP1  
+
+**Calcium Signaling and Ion Transport**  
+RYR3, ITPRIPL1, SLC25A15, ATP2B1, TPCN1, P2RY2, CACNA1C, TRPC1, SLC8A1  
+
+**Wnt Signaling Pathway**  
+WNT5A, LEF1, VANGL2, DVL1, FZD3, CTNNB1, TCF7L2, APC, AXIN1  
+
+**MAPK/ERK Signaling**  
+MAPK1, MAP2K6, GRB14, DUSP6, RAF1, BRAF, ELK1, FOS, JUN  
+
+**Neurotrophic Factors and Growth Signaling**  
+BDNF, IGFBP3, NTN1, GDNF, NTRK2, FGF2, EGF, PDGFB, VEGFA  
+
+**Extracellular Matrix Organization**  
+COL9A3, COL15A1, COL20A1, LAMA4, FN1, EMILIN1, SPARC, MATN3, BGN, HAS2  
+
+**Notch Signaling in Glial Development**  
+ADAMTS17, NOTCH1, JAG1, HES6, DTX4, NUMB, PSEN1, LFNG, MAML1  
+
+**Apoptosis and Cell Survival**  
+CASP3, CASP6, CASP12, BCL2, BAX, BAD, BID, APAF1, XIAP, SURVIVIN  
+
+**Neural Crest and Schwann Cell Differentiation**  
+SOX10, ERBB2, NRG1, KROX20, OCT6, TFAP2A, PAX3, MITF, EDN3  
+
+**Ion Channel and Transporter Activity**  
+SCN7A, KCNJ10, KCNQ2, CACNA1A, TRPV1, SLC4A1AP, SLC39A9, SLC3A2, SLC25A15  
+
+**Neurotransmitter Synthesis and Release**  
+TH, DBH, CHAT, SLC6A3, SLC18A2, SYN1, SNAP25, SYNGR1, RAB3A  
+
+**Neuronal Migration and Adhesion**  
+RELN, DCX, LIS1, FLNA, ITGA6, ITGA8, ITGB1, CDH2, NCAM1, VCAM1  
+
+**Circadian Rhythm and Neural Oscillation**  
+CLOCK, BMAL1, PER1, CRY1, NPAS2, RORA, NR1D1, TIMELESS, DEC1  
+
+**Mitochondrial Function and Energy Metabolism**  
+COX5A, ATP5F1, SDHA, NDUFS1, UQCRC1, MT-ND4, CPT1A, ACADL, PDHA1  
+
+**RNA Metabolism and Splicing**  
+SNRPB, HNRNPA1, SRSF1, ELAVL1, FUS, TARDBP, PTBP1, SF3B1, DDX1  
+
+**Epigenetic Regulation in Neural Cells**  
+DNMT1, HDAC1, KDM3A, EZH2, SUV39H1, MECP2, CREBBP, EP300, BRD4  
+
+**Vesicular Trafficking and Endocytosis**  
+RAB10, RAB5A, CLTC, AP2M1, DNM1, SYNJ2BP, VPS26C, STX11, STXBP1  
+
+**Neuroprotection and Oxidative Stress Response**  
+SOD1, CAT, GPX1, NFE2L2, HMOX1, PRDX1, TXNRD2, GSR, PARK7  
+
+**G-Protein Coupled Receptor Signaling**  
+GNAI1, GNG2, GPRC5A, GPRC5B, ADGRG2, ADGRL3, LPAR1, PTAFR, CXCR4  
+
+**Cell Cycle and Neural Progenitor Regulation**  
+CCND1, CDK5R1, CDKN1A, E2F1, RB1, TP53, MYBL1, CDC42, CDCA4  
+
+**Neurodegeneration-Associated Pathways**  
+APP, MAPT, SNCA, PARK2, PSEN1, TDP1, FUS, OPTN, SQSTM1  
+
+**Glutamate and GABAergic Signaling**  
+GRIA1, GRIK5, GRM5, SLC1A2, SLC1A3, GAD1, GABRA1, GABBR1, SLC6A1  
+
+**Axon Regeneration and Repair**  
+GAP43, NEFL, NEFM, RTN4, MAG, L1CAM, NRCAM, PTEN, MTOR  
+
+**Neurovascular Unit and Blood-Brain Barrier**  
+CLDN5, OCLN, SLC2A1, ABCB1, AGTR1, NOS3, VCAN, ANGPT1, TIE1  
+
+**Neuropeptide Signaling**  
+VGF, NPY, POMC, PENK, PDYN, CGRP, SST, GAL, OXT  
+
+**Adhesion GPCR Signaling**  
+ADGRG2, ADGRL3, GPR56, GPR98, GPR126, CD97, CELSR1, BAI1, BAI3  
+
+**Metal Ion Homeostasis in Neural Tissues**  
+SLC39A13, SLC30A1, MT1A, MT2A, CP, HFE, ATP7A, ATP7B, FTL  
+
+**Purine and Pyrimidine Metabolism**  
+ADSL, UMPS, NT5E, ENTPD1, ADA, XDH, DHODH, TK1, DCK  
+
+**Neuroendocrine Signaling**  
+CRH, POMC, AVPR1A, OXTR, TRHR, GNRHR, SST, VIPR1, ADCYAP1  
+
+**Neural Stem Cell Maintenance**  
+NES, SOX2, NOTCH1, HES1, ASCL1, OLIG2, PAX6, ID1, ID2  
+
+**Neuroimmune Interactions**  
+AIF1L, CD74, HLA-DRA, C3, C1QA, C1QB, C4A, TNFRSF1A, IL6ST  
+
+**Epileptogenesis and Hyperexcitability**  
+SCN1A, KCNT1, GABRG2, CACNA1A, DEPDC5, LGI1, STXBP1, PCDH19, CHRNA3  
+
+**Neuropathic Pain Mechanisms**  
+TRPV1, TRPA1, P2RX3, P2RX7, SCN9A, BDKRB1, NGF, GDNF, TAC1  
+
+**Neurodevelopmental Disorders Pathways**  
+MECP2, FMR1, SHANK3, TSC1, TSC2, UBE3A, PTEN, SYNGAP1, CHD8  
+
+**Circadian Entrainment in Neurons**  
+PER2, CRY2, RORB, ARNTL2, NPAS2, VIP, AVPR1B, GRIA1, GRIN2A  
+
+**Neurotransmitter Reuptake and Recycling**  
+SLC6A2, SLC6A3, SLC6A4, SLC6A5, SLC18A2, SLC17A6, SLC17A7, SLC1A1, SLC1A3  
+
+**Neurotrophin Signaling Pathway**  
+NTRK2, NTRK1, NGFR, SH2B1, FRS2, IRS1, PI3K, AKT1, MTOR  
+
+**Glutamine-Glutamate Cycle**  
+GLUL, GLUD1, SLC1A2, SLC1A3, SLC38A1, SLC38A3, GLS, GLS2, GPT  
+
+**Dopaminergic Signaling**  
+TH, DDC, SLC6A3, DRD1, DRD2, COMT, MAOA, MAOB, PPP1R1B  
+
+**Serotonergic Signaling**  
+TPH2, SLC6A4, HTR1A, HTR2A, MAOA, SLC18A2, GNAI1, ADCY1, PRKACA  
+
+**Cholinergic Signaling**  
+CHAT, SLC5A7, CHRNA3, CHRNB4, ACHE, BCHE, SLC18A3, PRIMA1, SLC6A8  
+
+**Adrenergic Signaling**  
+TH, DBH, SLC6A2, ADRA1A, ADRB2, COMT, MAOA, PRKACA, CREB1  
+
+**Histaminergic Signaling**  
+HDC, HRH1, HRH2, HRH3, HDC, MAOB, ADCY1, PRKACA, CREB1  
+
+**Cannabinoid Signaling**  
+CNR1, CNR2, FAAH, MGLL, DAGLA, DAGLB, NAPE-PLD, ABHD6, ABHD12  
+
+**Oligodendrocyte Differentiation**  
+OLIG2, SOX10, NKX2-2, PDGFRA, MBP, PLP1, MAG, CNP, MOBP  
+
+**Microglia Activation and Neuroinflammation**  
+AIF1L, TREM2, CX3CR1, P2RY12, CD68, ITGAM, IL1B, TNF, IL6  
+
+**Astrocyte-Neuron Metabolic Coupling**  
+SLC1A2, SLC1A3, GLUL, GJA1, GFAP, ALDH1A1, LDHA, SLC2A1, LDHB  
+
+**Neuronal Apoptosis and Survival**  
+BCL2, BAX, CASP3, CASP9, APAF1, BAD, BID, XIAP, SURVIVIN, MCL1  
+
+**Axonal Transport and Dynamics**  
+KIF1A, KIF5A, DYNC1H1, DCTN1, TUBA4A, TUBB4A, MAPT, NEFL, NEFM  
+
+**Synaptic Vesicle Cycling**  
+SYN1, SYP, VAMP2, SNAP25, STX1A, STXBP1, RAB3A, SYT1, CSPG4  
+
+**Neurotransmitter Receptor Trafficking**  
+GRIA1, GRIN2B, GABRA1, GABBR1, HTR2A, ADRA1A, CHRNA3, DRD2, HRH1  
+
+**Neuronal Excitability and Ion Channels**  
+SCN1A, KCNQ2, CACNA1A, TRPV1, HCN1, KCNJ10, KCNMA1, KCNA1, SCN9A  
+
+**Neurovascular Coupling**  
+NOS1, NOS3, KCNJ8, KCNJ11, ATP1A2, SLC2A1, AGTR1, EDN1, VEGFA  
+
+**Neural Circuit Formation**  
+NLGN1, NRXN1, CNTNAP2, SHANK3, DLG4, HOMER1, SYNGAP1, GRIN2B, GRIK5  
+
+**Neurogenesis and Differentiation**  
+NEUROD1, ASCL1, PAX6, SOX2, NOTCH1, HES1, OLIG2, TBR1, FOXG1  
+
+**Axon Initial Segment Function**  
+ANK3, SCN1A, SCN8A, KCNQ2, KCNQ3, GABRG2, NFASC, CTTNBP2, TRIM46  
+
+**Dendritic Spine Morphogenesis**  
+ARC, BDNF, GRIN1, GRIA1, DLG4, SHANK3, SYNGAP1, RAC1, CDC42  
+
+**Neuronal Migration and Lamination**  
+RELN, DCX, LIS1, FLNA, ARX, PAFAH1B1, TUBA1A, TUBB2B, DYNC1H1  
+
+**Neurotransmitter Synthesis Enzymes**  
+TH, GAD1, GAD2, CHAT, AADC, PNMT, TPH1, TPH2, DBH  
+
+**Neuroendocrine Hormone Secretion**  
+CRH, AVP, OXT, POMC, NPY, SST, VIP, GAL, CCK  
+
+**Neural Tube Patterning**  
+SHH, BMP4, WNT1, FGF8, PAX3, PAX6, OLIG2, NKX2-2, GBX2  
+
+**Radial Glia Function**  
+VIM, NES, SOX2, PAX6, HES1, NOTCH1, BLBP, GFAP, SLC1A3  
+
+**Neurotrophic Factor Release**  
+BDNF, NGF, GDNF, CNTF, IGF1, FGF2, VEGF, PDGFB, EGF  
+
+**Glutamatergic Synapse Organization**  
+GRIA1, GRIN1, DLG4, SHANK3, HOMER1, SYNGAP1, PSD95, NLGN1, NRXN1  
+
+**GABAergic Synapse Organization**  
+GABRA1, GABBR1, GAD1, GAD2, SLC6A1, SLC12A5, KCC2, NKCC1, PLCL1  
+
+**Dopamine Receptor Signaling**  
+DRD1, DRD2, DRD3, DRD4, DRD5, GNAL, ADCY5, PRKACA, CREB1  
+
+**Serotonin Receptor Signaling**  
+HTR1A, HTR2A, HTR2C, HTR3A, HTR4, HTR5A, HTR6, HTR7, GNAQ  
+
+**Adrenergic Receptor Signaling**  
+ADRA1A, ADRA1B, ADRA2A, ADRB1, ADRB2, ADRB3, GNAS, ADCY1, PRKACA  
+
+**Cholinergic Receptor Signaling**  
+CHRNA3, CHRNB4, CHRM1, CHRM3, CHRM5, CHRNA7, GNAQ, PLCB1, PRKCB  
+
+**Ionotropic Glutamate Receptor Activity**  
+GRIA1, GRIN1, GRIK1, GRID2, GRM1, GRM5, GRM7, GRM8, SHANK3  
+
+**Metabotropic Glutamate Receptor Activity**  
+GRM1, GRM5, GRM7, GRM8, GNAQ, PLCB1, PRKCB, MAPK1, CREB1  
+
+**Voltage-Gated Ion Channel Activity**  
+SCN1A, KCNQ2, CACNA1A, KCNMA1, KCNA1, HCN1, KCNJ10, TRPV1, TRPA1  
+
+**Ligand-Gated Ion Channel Activity**  
+GRIA1, GRIN1, GABRA1, GABRG2, CHRNA3, CHRNB4, HTR3A, P2RX3, P2RX7  
+
+**Neuropeptide Receptor Activity**  
+NPY1R, NPY2R, OPRM1, OPRK1, OPRD1, SSTRA, GALR1, GALR2, CCKAR  
+
+**Growth Factor Receptor Signaling**  
+NTRK2, EGFR, PDGFRA, IGF1R, FGFR1, VEGFR2, MET, RET, EPHA4  
+
+**Cytokine Receptor Signaling**  
+IL6ST, IL1R1, TNFRSF1A, IFNAR1, CXCR4, CCR5, TGFBR1, BMPR2, ACVR1  
+
+**Chemokine Receptor Signaling**  
+CXCR4, CCR5, CX3CR1, CCR2, CCR3, CCR7, CXCR3, ACKR3, CXCR5  
+
+**Toll-Like Receptor Signaling**  
+TLR3, TLR4, TLR7, TLR9, MYD88, TRIF, NFKB1, IRF3, IRF7  
+
+**JAK-STAT Signaling**  
+JAK1, STAT1, STAT3, SOCS1, SOCS3, IL6ST, IFNAR1, LIFR, GHRL  
+
+**Hippo Signaling Pathway**  
+YAP1, TAZ, LATS1, MST1, TEAD1, TEAD2, TEAD3, TEAD4, AMOT  
+
+**Notch Signaling Pathway**  
+NOTCH1, JAG1, DLL1, HES1, HES5,

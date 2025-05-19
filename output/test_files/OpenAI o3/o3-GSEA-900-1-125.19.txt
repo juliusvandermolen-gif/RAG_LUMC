@@ -1,0 +1,14 @@
+Axon Guidance and Neuronal Wiring:
+Ntn1, Slit2, Robo2, Sema3g, Sema4f, Nrp1, Nrp2, Plxna4, Plxnb1, Efna5, Efna4, Epha4, Cntn6, Lrrtm3, Dpysl3, Dpysl5, Srgap1, Rhoj, Itga8, Itga6, Itga7, Hs6st1, Hs6st2, Gnai1, Gpc1,
+
+Peripheral Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Plp1, Mbp, Mag, Prx, Drp2, Mal, Ugt8, Gldn,
+
+Synaptic Transmission and Plasticity:
+Synpr, Vamp2, Snap29, Bdnf, Grid2, Grik5, Ryr3, Adcy1, Drd4, P2ry2, Chrna3, Iglon5, Kif1a, Kif3c, Dlg1, Synj2bp,
+
+Neural Lipid Metabolism and Sphingolipid Homeostasis:
+Abca8a, Abca3, Abcb4, Agpat5, Acot7, Smpd1, Smpd4, Cers6, Sgms1, St3gal5, Scd, Slc35a2, Ugt8, Vldlr, Lpcat4, Apod, Ldah,
+
+MAPK/PI3K-Akt Signaling in Neuronal Development:
+Akt1, Mapk1, Map2k6, Map4k5, Sos1, Pak1, Pak2, Rps6ka5, Tnik, Rassf1, Rassf2, Rassf7, Stk39, Sav1, Camk4, Camk1d, Ppp2r5e, Ppp2r5c, Ppp2r3c, Eif2ak2,

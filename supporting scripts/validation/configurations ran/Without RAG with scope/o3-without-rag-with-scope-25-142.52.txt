@@ -1,0 +1,23 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Ntn1, Robo2, Slit2, Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Efna5, Itga8, Dpysl3, Dpysl5, Lrrtm3, Kif1a, Gldn, Cdh13, Srgap1, Slitrk6, Itpripl1, Tnik,
+
+Myelination and Axonal Ensheathment:
+Mag, Mpz, Pmp22, Drp2, Prx, Mal, Tubb4a, Cers6, Klf9, St3gal5, Gldn,
+
+Synaptic Transmission and Plasticity:
+Synpr, Prss12, Serpini1, Sncg, Prkar2b, Ryr3, Frrs1, Dyrk1a, Mef2c, Kif1a, Lrrtm3, Tnik, Cpe, Pfn2, Pam, Numb, Gja1, Wnt5a,
+
+Extracellular Matrix Remodeling in Neural Development:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Efemp2, Emilin1, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Hapln1, Bgn, Mfap5, Matn3, Timp1, Pxdn, Gpnmb, Peg3, Has2,
+
+Non-Canonical Wnt/PCP Signaling:
+Wnt5a, Lef1, Dyrk1a, Tnik, Lrp2,
+
+Cytoskeletal Dynamics and Neurite Outgrowth:
+Acta2, Pfn2, Tuba4a, Tubb4a, Rhoj, Fhod3, Asap1, Septin4, Septin5, Acap2, Rab10, Map1lc3a, Kif1a, Itga7, Tagln,
+
+Calcium Signaling and Mechanotransduction:
+Ryr3, Inpp5a, Tpcn1, Piezo2, Itpripl1, P2ry2, Scn7a,
+
+Neuroimmune Modulation in CNS:
+Cxcl12, Cxcl14, Nlrp1a, Ifnar1, Tnfrsf1a, Serpinf1, Atf3, Atf5, Icoslg, Ighm,

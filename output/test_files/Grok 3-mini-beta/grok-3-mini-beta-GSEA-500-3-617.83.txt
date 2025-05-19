@@ -1,0 +1,17 @@
+Axon Guidance Pathway:  
+Sema4f, Ntn1, Robo2, Nrp1, Nrp2, Slit2, Plxnb1, Cntn6,  
+
+Myelination Pathway:  
+Mag, Mpz, Mbp, Plp1, Hapln1, Gldn,  
+
+Synaptic Plasticity Pathway:  
+Synpr, Sncg, Cdh13, Dpysl5, Mapk1,  
+
+MAPK Signaling Pathway:  
+Mapk1, Map2k6, Prkar2b, Grb14,  
+
+Wnt Signaling Pathway:  
+Wnt5a, Lef1, Tnik, Rhou,  
+
+Lipid Metabolism in Neural Cells Pathway:  
+Aldh1a1, Gldc, Htra1, Hadhb, Echs1, Bdh1,

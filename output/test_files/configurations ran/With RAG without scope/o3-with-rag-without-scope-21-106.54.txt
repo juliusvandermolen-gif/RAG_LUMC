@@ -1,0 +1,17 @@
+Extracellular Matrix Organization and Remodeling:  
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Ltbp1, Prx, Timp1, Efemp2, Emilin1, Mfap5, Bgn, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Has2, Hapln1, Matn3, Chst2, Pxdn, Arsb, Arsg, Itga7, Itga8, Qsox1, Pappa,
+
+Axon Guidance and Synaptogenesis:  
+Slit2, Robo2, Sema3g, Sema4f, Plxnb1, Efna5, Ntn1, Cntn6, Lrrtm3, Srgap1, Tnik, Dpysl3, Dpysl5, Kif1a, Nrp1, Nrp2, Gnai1, Rhoj, Asap1,
+
+Myelination and Peripheral Nerve Structure:  
+Pmp22, Mpz, Mag, Drp2, Gldn, P2ry2, Cldn19, Mal, Itga7,
+
+Lipid Metabolism and Transport:  
+Abca8a, Abcb4, Pltp, Apod, Cers6, Sgpl1, Agpat5, Hadhb, Nampt, Pgm1, Steap1, Steap2, Ppard,
+
+Immune and Inflammatory Signaling:  
+Ifnar1, Nlrp1a, Cxcl12, Cxcl14, Tnfrsf1a, Id2, Nfatc1, A2m, Ptgfr, Igfbp3, Ighm, Selplg, Icoslg, Runx3, Serpinf1, Serinc5,
+
+Proteostasis and Stress Response:  
+Hsp90aa1, Hspa12a, Psmd2, Map1lc3a, Sumo3, Eif2ak2, Rrm2, Atf3, Atf5, Trim35, Smc6, Msh2, Stk39, Rnf144a, Fbxo11, Ddx1,

@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Efna5, Plxnb1, Dpysl3, Dpysl5, Lrrtm3, Pcdh18, Srgap1, Gja1, Itga8, Itga6, Itga1,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Mbp, Plp1, Mal, Drp2, Prx, Gldn,
+
+Synaptic Transmission and Neurotransmitter Signaling:
+Synpr, Bdnf, Grik5, Chrna3, Drd4, Adcy1, Ryr3, P2ry2, Scn7a, Piezo2, Vgf, Lpar1,
+
+MAPK and Stress-Responsive Kinase Signaling:
+Mapk1, Map2k6, Map4k5, Dyrk1a, Nuak1, Tnik, Pak2, Prkd3, Mark3, Mef2c, Camk1d, Atf3, Atf5,
+
+Extracellular Matrix Remodeling and Synaptic Adhesion:
+Col9a3, Col11a1, Col15a1, Col20a1, Adamts17, Adamtsl3, Adamtsl1, Adam15, Htra1, Hs6st1, Hs6st2, Plod3,
+
+Myelin Lipid and Cholesterol Metabolism:
+Sgms1, Cers6, Smpd1, Abca8a, Pltp, Apod, St3gal5, St6gal1, Ldlrad3, Abcb4, Slc35a2, Slc39a13, Fabp5,

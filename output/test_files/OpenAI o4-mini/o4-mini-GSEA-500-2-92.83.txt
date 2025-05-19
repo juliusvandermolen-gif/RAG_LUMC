@@ -1,0 +1,38 @@
+Axon guidance:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Ntn1, Efna5
+
+Neural cell adhesion and ECM interactions:
+Cntn6, Cdh13, Itga6, Itga7, Itga8, Mcam, Nectin1, Pcdh18
+
+Myelin sheath formation and maintenance:
+Mbp, Plp1, Pmp22, Mpz, Mag, Mal, Cldn19
+
+Lipid metabolism and transport in myelinating cells:
+Apod, Abca8a, Abcb4, Cers6, Fabp5
+
+Synaptic vesicle cycle and SNARE-mediated neurotransmitter release:
+Snap29, Synpr
+
+Calcium signaling in synaptic function:
+Ryr3, Itpripl1
+
+cAMP-PKA-CREB signaling in synaptic plasticity:
+Adcy1, Prkar2b, Atf3, Atf5
+
+Dopaminergic synapse signaling:
+Drd4, Gnai1
+
+MAPK signaling in neural development and plasticity:
+Mapk1, Map4k5, Map2k6
+
+Wnt signaling in neural development:
+Wnt5a, Lef1
+
+Glycosaminoglycan and proteoglycan biosynthesis in neural ECM:
+St6gal1, St3gal5, Hs6st1, Hs6st2
+
+Ubiquitin-proteasome system in neuronal homeostasis:
+Ube2l3, Psmd2, Ufd1, Fbxo11
+
+ADAMTS-mediated ECM remodeling in neural development:
+Adamts17, Adamtsl1, Adamtsl3, Adam15

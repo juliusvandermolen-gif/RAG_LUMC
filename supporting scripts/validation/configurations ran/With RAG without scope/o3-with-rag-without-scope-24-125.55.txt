@@ -1,0 +1,17 @@
+Extracellular Matrix Organization and Cell Adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Mfap5, Emilin1, Ltbp1, Efemp2, Bgn, Has2, Sbspon, Qsox1, Pxdn, Acta2, Tagln, Itga7, Itga8, Cdh13, Cldn19, Cldnd1, Pkp1, Cd151, Selplg,
+
+Axon Guidance and Neural Connectivity:
+Cntn6, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Lrrtm3, Dpysl3, Dpysl5, Srgap1, Gnai1, Kif1a, Rhoj, Pfn2, Nes, Tnik, Piezo2, Gldn,
+
+Myelination and Schwann Cell Function:
+Mpz, Pmp22, Mag, Mal, Gldn, Drp2, Prx, Itga7, Gja1, Cers6,
+
+Lipid and Cholesterol Homeostasis:
+Apod, Pltp, Abca8a, Abcb4, Cers6, Sgpl1, Agpat5, Nampt, Ppard, Bace2, Gpnmb, Pgm1, Steap1,
+
+Immune and Inflammatory Signaling:
+A2m, Igfbp3, Cxcl14, Cxcl12, Ifnar1, Tnfrsf1a, Nlrp1a, Selplg, Timp1, Defb29, Ighm, P2ry2, Runx3,
+
+DNA Repair and Cell Cycle Control:
+Rrm2, Msh2, Smc6, Cenpo, Vrk1, Dyrk1a, Nek9, Ppm1f, Stk39, Tbccd1,

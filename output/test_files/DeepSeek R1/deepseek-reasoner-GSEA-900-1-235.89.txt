@@ -1,0 +1,53 @@
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Mbp, Mpz, Mag, Plp1, Prx, Mal, Pmp22,  
+
+Pathway Name: Axon Guidance and Neuronal Projection  
+Slit2, Robo2, Sema4f, Nrp1, Nrp2, Efna5, Epha4, Plxna4, Plxnb1, Sema3g,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Abca8a, Abcb4, Abcb6, Fabp5, Scd, Sqor, Apod, Htra1,  
+
+Pathway Name: PI3K-AKT-mTOR Signaling  
+Akt1, Grb14, Ppp2r5e, Rps6ka5,  
+
+Pathway Name: Synaptic Plasticity and Transmission  
+Synpr, Bdnf, Adcy1, Camk4,  
+
+Pathway Name: Lysosomal and Protein Degradation  
+Ctsd, Ctsl, Htra1, Ube2l3, Psma6,  
+
+Pathway Name: ERK/MAPK Signaling  
+Mapk1, Map2k6, Grb14,  
+
+Pathway Name: Wnt Signaling  
+Wnt5a, Lef1, Ctnnb1,  
+
+Pathway Name: Complement System and Inflammation  
+C1qtnf1, C1qtnf2, Aif1l,  
+
+Pathway Name: Notch Signaling  
+Hes6, Dtx4,  
+
+Pathway Name: Cell Adhesion and Extracellular Matrix Interaction  
+Cdh13, Icam1, Cldn19, Cldnd1, Col9a3, Col15a1, Fn1, Lama4,  
+
+Pathway Name: GPCR Signaling  
+Gprc5a, Gprc5b, Gpr176, Lpar1,  
+
+Pathway Name: TGF-beta Signaling  
+Ltbp1, Tgfbi, Serpinf1,  
+
+Pathway Name: Ephrin-Eph Receptor Signaling  
+Efna4, Efna5, Epha4,  
+
+Pathway Name: Autophagy and Stress Response  
+Map1lc3a, Hsp90aa1, Hspa12a,  
+
+Pathway Name: Oxidative Stress Response  
+Txndr2, Gstz1, Gstt2,  
+
+Pathway Name: cAMP Signaling  
+Adcy1, Adcy5,  
+
+Pathway Name: Cell Cycle Regulation  
+Ccnd1, Ccnd3, Cdc42se2,

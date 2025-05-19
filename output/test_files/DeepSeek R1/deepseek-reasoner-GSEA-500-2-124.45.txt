@@ -1,0 +1,38 @@
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Efna5, Ntn1, Plxnb1, Cdh13, Dpysl5, Dpysl3, Cntn6,  
+
+Pathway Name: Myelination and Lipid Metabolism  
+PMP22, Mbp, Plp1, Mag, Abca8a, Abcb4, Apod, Htra1, Ltbp1, Emp2, Mal, Mpz, Gja1, Scd, Gldc, Fabp5,  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Ctsd, Ctsl, Manba, Sumo3, Ccl7, Cxcl12, Hs6st1, Hs6st2,  
+
+Pathway Name: ERK/MAPK Signaling  
+Mapk1, Mef2c, Grb14, Eif2ak2, Pak2, Steap1,  
+
+Pathway Name: Cholesterol Biosynthesis and Transport  
+Abca8a, Abcb4, Apod, Htra1, Ltbp1, Scd, Gldc, Sqor,  
+
+Pathway Name: TGF-β Signaling  
+Ltbp1, Htra1, Serpine1, Inpp5a,  
+
+Pathway Name: Neural Crest and Schwann Cell Differentiation  
+Mef2c, Ebf1, Dpysl5, Phldb2,  
+
+Pathway Name: Synaptic Plasticity  
+Synpr, Vgf, Adcy1, Drd4, Gabpa, Prkar2b,  
+
+Pathway Name: Inflammatory Response in Neural Tissue  
+A2m, C1qtnf1, Cxcl12, Ccl7, Tnfrsf1a, Ifnar1, C1s,  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col20a1, Emilin1, Fn1, Matn3, Has2, Efemp2, Bgn,  
+
+Pathway Name: Wnt Signaling  
+Wnt5a, Lef1, Ccdc85b,  
+
+Pathway Name: Neural Cell Adhesion  
+Cdh13, Cldn19, Cntn6, Hapln1, Lrrtm3, Lrp2,  
+
+Pathway Name: Neurotrophic Signaling  
+Met, Lifr,

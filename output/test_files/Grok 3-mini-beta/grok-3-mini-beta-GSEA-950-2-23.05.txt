@@ -1,0 +1,14 @@
+Myelination Pathway:
+Mag, Mpz, Pmp22, Mbp, Plp1, Gldn, Hapln1, Cntn6, Gja1, Sdc1, Sdc3, Lama4, Lamb1, Col4a1, Col4a2, Col6a1, Col6a2, Col6a3, Col15a1, Col20a1, Bgn, Mfap5, Ltbp1, Fbln1, Nid2, Sparc, Vldlr, Ugt8, Mog, Galnt10, Galnt17, B3galt5, St6gal1, Chst2, Chst14, Hs6st1, Hs6st2, Hs6st3, Pomgnt1, Poglut1, Poglut2, Man1a1, Man1c1, Fuca2, Gcnt1, Gcnt4, B4galt5, B4galnt3, St3gal5, Cd9, Cd151, Tspan4, Tspan5, Emp2, Emp1, Mal, Cldn19, Cldnd1, Marveld1, Tagln, Acta2, Htra1, Igfbp3, Igfbp4, Tgfbi, Tgfa, Met, Eml4, Eml1, Robo2, Nrp1, Nrp2, Sema3g, Plxna4, Epha4, Efna5, Efna4, Nectin1, Nectin3, Cdh13, Vangl2, Dlg1, Pard6g, Ctnnb1, Wnt5a, Lef1, Reln, Dhh, Pdgfb, Bmp7, Chrd, Acvr1b, Gdnf, Nrg1, ErbB2, ErbB3, ErbB4, 
+
+Axon Guidance Pathway:
+Cntn6, Sema4f, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema3g, Plxnb1, Epha4, Efna5, Efna4, Plxna4, Rhoj, Asap1, Itga8, Itga7, Itga6, Itga1, Cd9, Cd151, Tspan4, Tspan5, Grb14, Pak2, Pak1, Arhgap24, Arhgap5, Arhgef9, Arhgef6, Trio, Rac1, Cdc42, Rhoa, Rock2, Limk1, Cofilin, 
+
+Synaptic Plasticity Pathway:
+Bdnf, Camk4, Grb14, Synpr, Sncg, Grid2, Grik5, Gabpa, Gng2, Gnaq, Gnai1, Prkar2b, Ppp1r14c, Ppp1cb, Ppp1r36, Calcineurin, Camk1d, Synj2bp, Snap29, Vamp2, Stxbp6, Dlg1, Shank, Homer, Psd95, 
+
+PI3K-AKT-mTOR Signaling Pathway:
+Akt1, Grb14, Pten, Pdk1, Mtor, S6k, 4e-bp1, Pik3ca, Pik3r1, Pdk1, Tsc1, Tsc2, Rictor, Raptor, Ppp2r5e, Ppp2r5c, Ppp2r3c, Ppm1a, Ppm1b, Ppm1f, Ppm1g, Pten, Pdk1, Ikbkb, Nfkb2, Stat3, Foxo1, Foxo3, 
+
+Lipid Metabolism in Neural Cells Pathway:
+Aldh1a1, Aldh2, Gldc, Adamts17, Adamts1, Adamts2, Adamts6, Adamtsl1, Adamtsl3, Adamtsl5, Abca8a, Abca3, Abcb4, Abcg3l1, Acot7, Acsf2, Acap2, Agpat5, Agmo, Ano5, Bdh1, Cers6, Chpt1, Dgat2, Dhrs1, Dhrs7, Echs1, Eno1, Fabp5, Gbe1, Gcnt1, Gcnt4, Gpd1, Gpd2, Hadha, Hadhb, Hsd17b4, Lpcat4, Lpin1, Mboat2, Mfsd6, Pcyt2, Pcyt1a, Pcyt1b, Pgs1, Pla2g6, Plcd1, Plce1, Pld3, Pnpla2, Pnpla8, Scd, Slc27a1, Slc27a2, Slc27a4, Slc27a5, Ugt8, Acsl1, Acsl3, Acsl4, Acsl6, Agps, Far1, Gpam, Dgat1, Dgat2, Mogat1, Mogat2, Soat1, Soat2, Stard4, Stard13, Abhd5.

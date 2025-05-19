@@ -1,0 +1,23 @@
+Extracellular Matrix Organization and Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Htra1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Efemp2, Bgn, Emilin1, Pxdn, Hapln1, Matn3, Mfap5, Has2, Timp1, Sbspon, Ccn3, Ccn4,
+
+Axon Guidance and Neurite Outgrowth:
+Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Slit2, Robo2, Ntn1, Efna5, Srgap1, Dpysl3, Dpysl5, Tnik, Itga8, Cntn6, Gldn, Kif1a, Nes, Piezo2, Synpr, Lrrtm3,
+
+Peripheral Myelination and Schwann Cell Function:
+Mpz, Mag, Pmp22, Prx, Mal, Drp2, Gldn, Itga7, Itga8, Nfatc1, Gja1, Scn7a, P2ry2, Ryr3,
+
+Lipid and Cholesterol Metabolism and Transport:
+Apod, Pltp, Abca8a, Abcb4, Nampt, Sgpl1, Cers6, Agpat5, Ppard, Hadhb, Steap1, Steap2, Lrp2, Gpnmb,
+
+Immune and Inflammatory Response:
+Cxcl12, Cxcl14, Defb29, Ighm, Ifnar1, Nlrp1a, Selplg, Trim35, Tnfrsf1a, Icoslg, C1qtnf1,
+
+Cytoskeleton and Contractile Fiber Organization:
+Acta2, Tagln, Myo1d, Pfn2, Fhod3, Rhoj, Asap1, Septin4, Septin5, Tuba4a, Tubb4a, Nes, Pkp1,
+
+Endoplasmic Reticulum Stress and Unfolded Protein Response:
+Atf3, Atf5, Eif2ak2, Hsp90aa1, Hspa12a, Map1lc3a, Rcn3, Stk39, Trim35,
+
+Wnt/β-Catenin Signaling and Development:
+Wnt5a, Lef1, Tnik, Ccn3, Ccn4, Mef2c,

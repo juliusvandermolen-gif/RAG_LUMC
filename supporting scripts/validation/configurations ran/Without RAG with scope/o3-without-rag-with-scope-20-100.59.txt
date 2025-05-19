@@ -1,0 +1,20 @@
+Axon Guidance and Neuronal Projection Development:
+Cntn6, Ntn1, Robo2, Slit2, Srgap1, Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Efna5, Slitrk6, Lrrtm3, Dpysl3, Dpysl5, Kif1a, Tnik, Dyrk1a, Gldn, Itga7, Itga8,
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Synpr, Cpe, Pam, Pcsk5, Prss12, Kif1a, Ryr3, Itpripl1, P2ry2, Scn7a, Serpini1, Slc9a9, Dpysl3, Dpysl5,
+
+Myelination and Axonal Ensheathment:
+Mag, Mpz, Pmp22, Mal, Prx, Drp2, Gldn, Itga7,
+
+Neural Extracellular Matrix Organization:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Bgn, Efemp2, Emilin1, Mfap5, Matn3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Ccn3, Ccn4, Pxdn, Has2,
+
+Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Gnai1,
+
+Calcium Signaling and Mechanotransduction in Neurons:
+Ryr3, Itpripl1, Piezo2, Scn7a, P2ry2,
+
+Neuroimmune and Chemokine Signaling in the CNS:
+Cxcl12, Cxcl14, Icoslg, Ifnar1, Nlrp1a, Tnfrsf1a, Selplg,

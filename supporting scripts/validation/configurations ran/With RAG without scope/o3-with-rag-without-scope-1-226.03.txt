@@ -1,0 +1,35 @@
+Myelination and Axon-Glia Interaction:  
+Mpz, Pmp22, Mag, Prx, Drp2, Mal, Gldn, Cntn6, Sema3g, Sema4f, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Srgap1, Lrrtm3, Dpysl3, Dpysl5, Efna5, Rhoj, Itga8, Gnai1, Tnik, Piezo2, Itpripl1, Ryr3,
+
+Extracellular Matrix and Structural Remodeling:  
+Zpld1, Adamts17, Adamtsl1, Adamtsl3, Bgn, Col8a2, Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Efemp2, Hapln1, Emilin1, Pxdn, Qsox1, Mfap5, Serpinf1, Pappa, Htra1, Timp1, Ltbp1, Has2, Hs6st1, Hs6st2, Chst2, Fut10, Wnt5a, Cdh13, Pkp1, Pals1, Cldn19, Cldnd1, Tagln, Acta2, Clca4l, Parm1, Sbspon, Tex101, Krtap1-5,
+
+Protease and Protease Inhibitor Network:  
+Prss12, Prss23, Pcsk5, Cpe, Cpm, Ctbs, A2m, Serpini1, Serpinf1, Htra1, Pappa, Adamts17, Adamtsl1, Adamtsl3, Timp1,
+
+Lipid Metabolism and Sphingolipid Homeostasis:  
+Abca8a, Abcb4, Apod, Pltp, Serinc5, Sgpl1, Cers6, Agpat5, Psap, Nampt, C1qtnf1, Hadhb, Sqor, Ptgfr, Ppard,
+
+Immune and Inflammatory Signaling:  
+Cxcl12, Cxcl14, Defb29, Ighm, Icoslg, Nlrp1a, Ifnar1, Tnfrsf1a, Selplg, Tril, Aif1l, Igfbp3, Nfatc1,
+
+Signal Transduction and Transcriptional Regulation:  
+Peg3, Id2, Atf3, Atf5, Klf9, Epas1, Lef1, Runx3, Mef2c, Ppard, Parp14, Mybl1, Ebf1, Smc6, Dyrk1a, Tnik, Eif2ak2, Rrm2, Taf9b,
+
+Ubiquitination, Proteasome Function and Autophagy:  
+Sumo3, Trim35, Rnf144a, Fbxo11, Psmd2, Map1lc3a, Vps26c, Vps8, Chmp2b, Stk39,
+
+Cytoskeletal Dynamics and Vesicular Trafficking:  
+Tuba4a, Tubb4a, Myo1d, Pfn2, Septin4, Septin5, Fhod3, Kif1a, Nek9, Acap2, Stard13, Rab10, Snx4, Snx6, Tpcn1, Nes, Gja1, Tspan4, Tspan5, Slc22a17, Slc9a9,
+
+Mitochondrial and Core Metabolism:  
+Gldc, Sqor, Hadhb, Pgm1, Pnpt1, Dhrs1, Vash1, Hsp90aa1, Hspa12a,
+
+Membrane Receptors and Ion Channels:  
+Scn7a, Piezo2, P2ry2, Gja1, Cd9, Cd151, Gprc5a, Gprc5b, Met, Lifr, Ghr, Tf,
+
+Glycosylation and Post-Translational Modification:  
+St3gal5, Hs6st1, Hs6st2, Chst2, Fut10, Poglut1, Has2, Zfp518a, Phldb2, Ppp1r14c, Ppp1r36, Tent5c, Papola, Cpsf2, Igf2bp2, Gtf2e1,
+
+General Cellular Homeostasis and Additional Factors:  
+Aldh1a1, Cobll1, Marveld1, Emp2, Gypc, Manba, Man1a1, Cep295nl, Vopp1, Rcn3, Vps8, Steap1, Steap2, Hs6st2, Hs6st1, Slco3a1, Slc35a2, Slc39a13, Rab10, Map1lc3a, Steap1, Cpsf2, Tbccd1, Psmd2, Igf2bp2, Cpm, Efemp2, Lrrtm3, Magec2l1, Mageb16, Magea4, Magea9, ENSRNOG00000062503, ENSRNOG00000063649, Cenpo, Vrk1, Fam20c, Arsg, Arsb, Ano5, Bace2, Gpnmb, Olfml1, Olfm2, Sipa1l1, Aff3, Ccn3, Ccn4, Adamtsl3, Lrp2, Sncg, Riox2, Frrs1, Htra1, Pam, Pam duplicates, Fth1, Ppm1f, Numb, Klhl29, Cxcl12, Selplg, Tnfrsf1a, Runx3, Wnt5a, Plxnb1, Efna5, Slitrk6, Slc22a17, Slc9a9, Chmp2b, Vps26c, Vps8, Chmp2b duplicates, Stard13, Map1lc3a duplicates, Steap1 duplicates, Gtf2e1 duplicates, Cpm duplicates, Cers6 duplicates, Agpat5 duplicates, Psap duplicates.

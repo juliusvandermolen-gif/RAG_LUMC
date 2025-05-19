@@ -1,0 +1,17 @@
+Myelination and Schwann Cell Biology:
+Pmp22, Mpz, Mag, Drp2, Mal, Gldn,
+
+Axon Guidance and Neuronal Pathfinding:
+Cntn6, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl3, Dpysl5, Itga8, Lrrtm3,
+
+Extracellular Matrix Organization and Collagen Modulation:
+Adamts17, Adamtsl3, Adamtsl1, Mfap5, Ltbp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Bgn, Efemp2, Emilin1, Pxdn, Timp1,
+
+Lipid Transport and Sphingolipid/Cholesterol Homeostasis:
+Abca8a, Abcb4, Pltp, Apod, Cers6, Sgpl1, Agpat5, Nampt, Hadhb, Ppard, Lrp2,
+
+Innate Immune and Inflammatory Response:
+Ifnar1, Nlrp1a, Tnfrsf1a, Cxcl12, Cxcl14, Ighm, Selplg, Nfatc1, Runx3, Parp14, Trim35, Atf3,
+
+Cytoskeletal Dynamics and Actin Regulation:
+Acta2, Tagln, Myo1d, Rhoj, Pfn2, Asap1, Tnik, Fhod3, Septin4, Septin5, Tuba4a, Tubb4a,

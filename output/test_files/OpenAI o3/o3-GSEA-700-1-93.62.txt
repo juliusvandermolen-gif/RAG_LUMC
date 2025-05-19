@@ -1,0 +1,23 @@
+Axon Guidance and Neurite Outgrowth:
+Ntn1, Slit2, Robo2, Efna5, Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Cntn6, Dpysl3, Dpysl5, Tnik, Lrrtm3, Gnai1, Itga8, Itga7, Itga6, Cdh13, Gldn,
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Vamp2, Snap29, Synpr, Synm, Synj2bp, Apba1, Dnm1, Dnm1l, Adcy1, Adcy5, Chrna3, Grid2, Grik5, Ryr3,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mag, Mpz, Plp1, Mbp, Gldn, Mal, Cldn19, Cldnd1, Lrp2,
+
+MAPK/ERK Signaling in Neural Plasticity:
+Mapk1, Map2k6, Mapk8ip1, Dyrk1a, Pak2, Atf3, Atf5, Bdnf, Ppp2r5e, Rps6ka5, Mef2c,
+
+Calcium-Mediated Neuronal Signaling:
+Ryr3, Itpripl1, Camk1d, Atp2b1, Ncs1, Adcy1, Adcy5, Piezo2, Cald1, Chrna3, Grid2,
+
+Integrin and ECM Interaction in Neural Development:
+Itga8, Itga7, Itga6, Itga1, Fn1, Col11a1, Col15a1, Col14a1, Col7a1, Col8a2, Col20a1, Postn, Adamts17, Adamts6, Efemp2, Nid2, Emilin1,
+
+Lipid Metabolism and Myelin Membrane Assembly:
+Abca8a, Abcb4, Apod, Cers6, Nampt, Pnpla2, Txnrd2, Sqor, Lrp2, Hspa12a,
+
+Rho GTPase and Cytoskeletal Dynamics in Axon Extension:
+Rhoj, Arhgap24, Arhgap5, Acap2, Wasf3, Pak2, Septin4, Septin5, Pfn2, Tuba4a, Tubb4a, Numb, Fnbp1,

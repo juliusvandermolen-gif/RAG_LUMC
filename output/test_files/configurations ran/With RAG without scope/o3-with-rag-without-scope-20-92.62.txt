@@ -1,0 +1,17 @@
+Extracellular Matrix Organization:
+Adamts17, Adamtsl3, Adamtsl1, Qsox1, Hapln1, Htra1, Prx, Ltbp1, Timp1, Serpinf1, Mfap5, Emilin1, Efemp2, Bgn, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Pxdn, Chst2, Has2, Sbspon,
+
+Axon Guidance and Synaptic Connectivity:
+Slit2, Robo2, Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Ntn1, Cntn6, Lrrtm3, Efna5, Dpysl3, Dpysl5, Gldn, Srgap1, Gnai1, Tnik, Itga8, Itga7,
+
+Peripheral Nervous System Myelination:
+Pmp22, Mpz, Mag, Mal, Drp2, Gldn,
+
+Lipid and Cholesterol Metabolism:
+Abca8a, Abcb4, Pltp, Apod, Cers6, Sgpl1, Agpat5, St3gal5, Serinc5, Nampt, Ppard, Hadhb, Sqor, C1qtnf1,
+
+Immune and Inflammatory Signaling:
+Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Nlrp1a, Ighm, Selplg, Trim35, Atf3, Id2,
+
+Integrin and Cell Adhesion Signaling:
+Itga8, Itga7, Cd9, Cd151, Tagln, Acta2, Pfn2, Gja1, Cldn19, Cldnd1, Emp2, Tspan4, Tspan5, Pkp1,

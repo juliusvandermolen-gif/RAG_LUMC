@@ -1,0 +1,23 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Sema3g, Sema4f, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl3, Dpysl5, Kif1a, Srgap1, Lrrtm3,
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Mag, Pmp22, Mal, Gldn, Dyrk1a, Ryr3,
+
+Extracellular Matrix Organization and Remodeling:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Efemp2, Emilin1, Hapln1, Matn3, Mfap5, Adamts17, Adamtsl1, Adamtsl3, Htra1, Pxdn, Ltbp1, Timp1, Has2,
+
+Integrin Adhesion and Focal Adhesion Signaling:
+Itga8, Itga7, Cd151, Cd9, Tspan4, Tspan5, Selplg, Gja1, Pkp1, Pals1, Rhoj,
+
+Wnt Signaling Pathway:
+Wnt5a, Lef1, Ppard, Tnik, Dyrk1a, Prkd3, Gnai1, Ccn4,
+
+Hypoxia and Angiogenesis Signaling:
+Epas1, Vash1, Nampt, Cxcl12, Igf2bp2, Hsp90aa1, Serpinf1, Ppard, Runx3,
+
+Inflammatory and Cytokine Response:
+Ifnar1, Tnfrsf1a, Nlrp1a, A2m, Cxcl14, Cxcl12, Ighm, Igfbp3, Selplg, Serpinf1, Trim35,
+
+Lipid Transport and Metabolism:
+Abca8a, Abcb4, Apod, Pltp, Steap1, Steap2, Nampt, Pnpt1, Psap, Slc35a2, Slc39a13,
