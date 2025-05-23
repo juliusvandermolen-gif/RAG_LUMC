@@ -1348,39 +1348,115 @@ Also, consider the context of the user query and ensure that the expanded querie
         return [query_text]
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, save, model, range_query,
-                  **kwargs):
-    """
-    Queries the OpenAI API using provided messages and parameters, attempting multiple times if necessary.
-    Optionally saves responses to a file.
+def build_search_parameters(
+    mode: str = "on",
+    from_date: str = None,
+    to_date: str = None,
+    max_results: int = 20,
+    academic: bool = False,
+    academic_rss_links: list[str] = None,
+) -> dict:
+    sources = [
+        {"type": "web"},
+        {"type": "x"},
+        {"type": "news"},
+    ]
+    if academic:
+        default_arxiv = "https://export.arxiv.org/rss/cs"
+        rss_links = academic_rss_links or [default_arxiv]
+        for link in rss_links:
+            sources.append({"type": "rss", "links": [link]})
 
-    Args:
-        messages: A list of message dictionaries for the conversation.
-        system_instruction_for_response: System-level instruction for the API.
-        prompt: The user prompt to send.
-        save: A boolean indicating whether to save the response.
-        range_query: The number of query attempts.
-        model: The OpenAI model to use.
-        **kwargs: Additional parameters to pass to the API call.
+    params: dict = {
+        "mode": mode,
+        "return_citations": True,
+        "max_search_results": max_results,
+        "sources": sources,
+    }
+    if from_date:
+        params["from_date"] = from_date
+    if to_date:
+        params["to_date"] = to_date
 
-    Returns:
-        The final answer received from the API, or None if all attempts fail.
+    return params
+
+
+def query_open_ai(
+    messages: list[dict],
+    system_instruction_for_response: str,
+    prompt: str,
+    save: bool,
+    model: str,
+    range_query: int,
+    **kwargs
+) -> str:
     """
-    answers = []
-    for i in range(1, range_query+1):
+    Queries various LLM APIs using provided messages and parameters, attempting multiple times if necessary.
+    Supports Grok live search integration via kwargs without altering other branches.
+
+    Grok-specific kwargs:
+      - academic: bool
+      - academic_rss_links: list[str]
+      - from_date: str
+      - to_date: str
+      - max_results: int
+      - mode: str
+      - temperature: float
+
+    Other kwargs are passed directly to the respective client libraries.
+
+    Returns the final answer received, or None if all attempts fail.
+    """
+    answers: list[str] = []
+    for i in range(1, range_query + 1):
         try:
-            #print(f"Trying to generate a response using model {model} (attempt {i})...")
-            # Record start time for this request attempt
             start_time = time.perf_counter()
 
-            # answer = response.choices[0].message.content
-            if model == "gpt-4o-mini-search-preview":
+            if model.startswith("grok"):
+                model_dir = "grok"
+                api_key = os.getenv("XAI_API_KEY")
+                endpoint = "https://api.x.ai/v1/chat/completions"
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {api_key}",
+                }
+                academic = kwargs.pop('academic', False)
+                academic_rss_links = kwargs.pop('academic_rss_links', None)
+                from_date = kwargs.pop('from_date', None)
+                to_date = kwargs.pop('to_date', None)
+                max_results = kwargs.pop('max_results', 20)
+                mode = kwargs.pop('mode', 'on')
+                temperature = kwargs.pop('temperature', 0)
+
+                payload = {
+                    "model": model,
+                    "messages": messages,
+                    "search_parameters": build_search_parameters(
+                        mode=mode,
+                        from_date=from_date,
+                        to_date=to_date,
+                        max_results=max_results,
+                        academic=academic,
+                        academic_rss_links=academic_rss_links,
+                    ),
+                    "temperature": temperature,
+                }
+                resp = requests.post(endpoint, json=payload, headers=headers)
+                resp.raise_for_status()
+                data = resp.json()
+                answer = data["choices"][0]["message"]["content"]
+                citations: list[str] = data.get("citations", []) or data["choices"][0].get("citations", [])
+
+            # Non-Grok branches remain unchanged
+            elif model == "gpt-4o-mini-search-preview":
                 model_dir = "openai"
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
                     **kwargs
                 )
+                answer = response.choices[0].message.content
+
             elif model.startswith("gpt-4"):
                 model_dir = "openai"
                 response = client_open_ai.chat.completions.create(
@@ -1390,22 +1466,25 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, model
                     temperature=0,
                     **kwargs
                 )
+                answer = response.choices[0].message.content
+
             elif model.startswith("o"):
                 if "o4" in model:
                     model_dir = "open_ai_o4"
-                elif "o3" in model:
-                    model_dir = "open_ai_o3"
                 elif "o3-mini" in model:
                     model_dir = "open_ai_o3_mini"
+                else:
+                    model_dir = "open_ai_o3"
                 adjusted_prompt = system_instruction_for_response + prompt
                 messages = [{"role": "user", "content": adjusted_prompt}]
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
-                    max_completion_tokens=32768,  # For mini: 65536, for preview: 32768
+                    max_completion_tokens=32768,
                     reasoning_effort="high",
                     **kwargs
                 )
+                answer = response.choices[0].message.content
 
             elif model.startswith("deepseek"):
                 model_dir = "deepseek"
@@ -1416,16 +1495,10 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, model
                     temperature=0,
                     **kwargs
                 )
-            elif model.startswith("grok"):
-                model_dir = "grok"
-                response = client_grok.chat.completions.create(
-                    model=model, # or "grok-3-mini-fast-beta"
-                    reasoning_effort="high",
-                    messages=messages,
-                    temperature=0,
-                )
+                answer = response.choices[0].message.content
 
             else:
+                model_dir = "openai"
                 response = client_open_ai.chat.completions.create(
                     model=model,
                     messages=messages,
@@ -1433,25 +1506,36 @@ def query_open_ai(messages, system_instruction_for_response, prompt, save, model
                     temperature=0,
                     **kwargs
                 )
-            # Record end time and compute duration
-            end_time = time.perf_counter()
-            duration_seconds = round(end_time - start_time, 2)
+                answer = response.choices[0].message.content
 
-            answer = response.choices[0].message.content
+            duration_seconds = round(time.perf_counter() - start_time, 2)
 
         except Exception as e:
             print(f"An error occurred on iteration {i} using model {model}: {e}")
             continue
 
+        # Save if requested
         if save:
-            os.makedirs("./output/test_files", exist_ok=True)
-            output_filename = f"./output/test_files/{model_dir}/{model}-{config_name}-{i}-{duration_seconds}.txt"
+            base_dir = os.path.join("./output/test_files", model_dir)
+            os.makedirs(base_dir, exist_ok=True)
+            output_filename = os.path.join(
+                base_dir,
+                f"{model}-{config_name}-{i}-{duration_seconds}.txt"
+            )
             with open(output_filename, "w", encoding="utf-8") as file:
                 file.write(answer)
+            if citations:
+                cit_file = os.path.join("./output/text_files/citations", f"{model}-{config_name}-{i}-{duration_seconds}-citations.txt")
+                print(f"Writing citations to {cit_file}")
+                with open(cit_file, "w", encoding="utf-8") as f:
+                    f.write("\n".join(citations))
             print(f"Answer {i} appended to {output_filename}")
+
         answers.append(answer)
 
     return answers[-1] if answers else None
+
+
 
 
 def query_gemini(system_instruction, prompt):

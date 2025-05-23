@@ -2,7 +2,7 @@
 import re
 from pathlib import Path
 from typing import Optional, Set, Tuple
-
+import os
 import pandas as pd
 import plotly.express as px
 from scipy.stats import pearsonr
@@ -266,6 +266,10 @@ def main():
     # combined filtered line plot
     if all_filt:
         combined2 = pd.concat(all_filt, ignore_index=True)
+        csv_dir = "./output/text_files/csv"
+        if not os.path.exists(csv_dir):
+            os.makedirs(csv_dir)
+        combined2.to_csv(os.path.join(csv_dir, "combined_models_line_filtered.csv"), index=False)
         fig = px.line(
             combined2,
             x='input_genes', y='mean_matched',

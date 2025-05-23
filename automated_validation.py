@@ -16,6 +16,18 @@ from openai import OpenAI as DeepSeekClient
 deepseek_client = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"),
                                  base_url="https://api.deepseek.com")
 
+log_dir = './logs'
+log_file = os.path.join(log_dir, 'validation_logs.json')
+os.makedirs(log_dir, exist_ok=True)
+try:
+    with open(log_file, 'r', encoding='utf8') as f:
+        validation_logs = json.load(f)
+    if isinstance(validation_logs, list):
+        validation_logs = dict(validation_logs)
+
+except FileNotFoundError:
+    validation_logs = {}
+
 
 def read_latest_llm_output(answer_dir="./output/test_files"):
     answer_files = glob.glob(os.path.join(answer_dir, '*.txt'))
@@ -37,8 +49,7 @@ def extract_pathways(answer_text):
             pathway = line[:-1].strip()
             pathways.append(pathway)
             genes_line = next(it, "")
-            genes = [gene.strip() for gene in genes_line.split(",") if
-                     gene.strip()]
+            genes = [gene.strip() for gene in genes_line.split(",") if gene.strip()]
             pathway_dict[pathway] = genes
     return pathways, pathway_dict
 
@@ -76,23 +87,17 @@ def academic_validation(pathways, pathway_dict, academic_instruction,
             {"role": "user", "content": prompt}
         ]
         response = query_open_ai(messages, academic_instruction, prompt,
-                                 save=False, model=validation_model, range_query=1,
-                                 )
+                                 save=False, model=validation_model, range_query=1)
         if response is None:
             response = "No academic validation response returned."
         academic_results.append((pathway, genes, response.strip()))
     return academic_results
 
-
-# Initialize PubMed (used in the replace_entry function)
 pubmed = PubMed(tool="MyTool", email="my@email.address")
 
-# Global counters for statistics.
 total_matches = 0
 credible_matches = 0
 
-# Updated regex pattern: accepts titles enclosed in either asterisks or double quotes,
-# and allows an optional colon after the bibliographic entry.
 pattern = re.compile(
     r'(\d{4}),\s+([^,]+),\s+\\?"(.*?)"\\?,\s+([^<]+)(<br>.*)',
     re.MULTILINE
@@ -100,38 +105,49 @@ pattern = re.compile(
 
 
 def replace_entry(match):
-    global total_matches, credible_matches
+    global total_matches, credible_matches, validation_logs
     total_matches += 1
 
-    # Extract the bibliographic fields.
     year = match.group(1).strip()
     authors = match.group(2).strip()
     original_title = match.group(3).strip()
     journal = match.group(4).strip()
     orig_summary = match.group(5).strip()
-    citation = f"({year}, {authors}, \"{original_title}\", {journal})"
-    print(f"Querying PubMed for title: {original_title}")
-    try:
-        results = pubmed.query(original_title, max_results=5)
-    except Exception as e:
-        print("PubMed query error:", e)
-        results = []
-    new_title = None
+    citation_str = f"({year}, {authors}, \"{original_title}\", {journal})"
 
-    for article in results:
-        if isinstance(article, pymed.article.PubMedArticle) and article.title:
-            new_title = article.title.strip()
-            break
-    if new_title is None:
-        print("Could not find title for article.")
-        citation = ("The AI hallucinated and didnt manage to find a credible source. Here is the original title: " +
-                    citation)
+    key = original_title
+
+    if key in validation_logs:
+        entry = validation_logs[key]
+        entry['count'] += 1
+        is_real = entry['is_real']
+        citation_str = entry.get('citation', citation_str)
+        print(f"Using cached status for: {original_title} -> is_real={is_real}")
     else:
+        print(f"Querying PubMed for title: {original_title}")
+        try:
+            results = pubmed.query(original_title, max_results=5)
+        except Exception as e:
+            print("PubMed query error:", e)
+            results = []
+
+        is_real = any(isinstance(article, pymed.article.PubMedArticle) and article.title for article in results)
+        if not is_real:
+            print("The citation doesn't match any pubmed articles.")
+        validation_logs[key] = {'citation': citation_str, 'count': 1, 'is_real': is_real}
+
+    sorted_entries = sorted(validation_logs.items(), key=lambda item: item[1]['count'], reverse=True)
+    with open(log_file, 'w', encoding='utf8') as logf:
+        json.dump(sorted_entries, logf, indent=2)
+
+    if is_real:
+        styled = f'<span style="color:green;">{citation_str}</span>'
         credible_matches += 1
+    else:
+        styled = f'<span style="color:red;">{citation_str}</span>'
+
     time.sleep(1)
-    # Reconstruct the bibliographic entry with the updated title while preserving year, authors, and journal.
-    print(credible_matches)
-    return f'{citation}{orig_summary}"'
+    return f'{styled}{orig_summary}'
 
 
 def main():
@@ -154,87 +170,72 @@ def main():
         print("Academic instruction file not found. Exiting program")
         import sys
         sys.exit(1)
+
     try:
         llm_output, latest_file = read_latest_llm_output(answer_dir)
     except FileNotFoundError as e:
         print(e)
         return
-    model = "o3"
+
+    model = "grok-3-latest"
     validation_model = model
+    for i in range(20):
+        print("Validating pathways... using g:Profiler")
+        comparison_summary = validate_pathways(llm_output, ground_truth,
+                                               comparison_instruction, validation_model=validation_model)
+        pathways, pathway_dict = extract_pathways(llm_output)
 
-
-    # 1) do your comparisons and extractions
-    print("Validating pathways... using g:Profiler")
-    comparison_summary = validate_pathways(llm_output, ground_truth,
-                                           comparison_instruction, validation_model=validation_model)
-    pathways, pathway_dict = extract_pathways(llm_output)
-    print("Validating pathways... using literature support")
-    academic_results = academic_validation(
-        pathways, pathway_dict,
-        academic_instruction,
-        validation_model=validation_model
-    )
-
-    # 2) build a base_name and then append the run index
-    base_name = os.path.splitext(os.path.basename(latest_file))[0]
-    md_filename = os.path.join(
-        output_directory,
-        f"validation_{base_name}_{validation_model}.md"
-    )
-
-    # 3) preprocess summaries
-    processed_results = []
-    for pathway, genes, summary in academic_results:
-        new_summary = pattern.sub(replace_entry, summary)
-        processed_results.append((pathway, genes, new_summary))
-
-    # 4) write out the report
-    with open(md_filename, 'w', encoding="utf8") as md:
-        # Header
-        md.write(f"# Pathway Validation Report for {base_name}\n\n")
-
-        # Table of Contents
-        toc = [
-            ("Credible sources found", "#credible-sources-found"),
-            ("Original genes / pathways", "#original-genes--pathways"),
-            ("Automated validation of pathways", "#automated-validation-of-pathways"),
-            ("g:Profiler comparison summary", "#gprofiler-comparison-summary")
-        ]
-        for title, anchor in toc:
-            md.write(f"- [{title}]({anchor})\n")
-        md.write("\n")
-
-        # 1) Credible Sources
-        if total_matches > 0:
-            percent_credible = (credible_matches / total_matches) * 100
-        else:
-            percent_credible = 0.0
-        md.write("## Credible sources found\n")
-        md.write(
-            f"**{percent_credible:.1f}% credible matches "
-            f"({credible_matches} out of {total_matches})**\n\n"
+        print("Validating pathways... using literature support")
+        academic_results = academic_validation(
+            pathways, pathway_dict,
+            academic_instruction,
+            validation_model=validation_model
         )
 
-        # 2) Original genes / pathways
-        md.write("## Original genes / pathways\n")
-        for pathway, genes in pathway_dict.items():
-            md.write(f"- **{pathway}**: {', '.join(genes)}\n")
-        md.write("\n")
+        base_name = os.path.splitext(os.path.basename(latest_file))[0]
+        md_filename = os.path.join(
+            output_directory,
+            f"validation_{base_name}_{validation_model}_{i}.md"
+        )
 
-        # 3) Automated validation of pathways
-        md.write("## Automated validation of pathways\n")
-        for pathway, genes, new_summary in processed_results:
-            md.write(f"### {pathway}\n")
-            md.write(f"**Genes involved:** {', '.join(genes)}\n\n")
-            md.write(f"{new_summary}\n\n")
+        processed_results = []
+        for pathway, genes, summary in academic_results:
+            new_summary = pattern.sub(replace_entry, summary)
+            processed_results.append((pathway, genes, new_summary))
 
-        # 4) g:Profiler comparison summary
-        md.write("## g:Profiler comparison summary\n")
-        md.write(f"{comparison_summary}\n\n")
+        with open(md_filename, 'w', encoding="utf8") as md:
+            md.write(f"# Pathway Validation Report for {base_name}\n\n")
+            toc = [
+                ("Credible sources found", "#credible-sources-found"),
+                ("Original genes / pathways", "#original-genes--pathways"),
+                ("Automated validation of pathways", "#automated-validation-of-pathways"),
+                ("g:Profiler comparison summary", "#gprofiler-comparison-summary")
+            ]
+            for title, anchor in toc:
+                md.write(f"- [{title}]({anchor})\n")
+            md.write("\n")
 
-    print(f"Markdown validation report created: {md_filename}")
+            percent_credible = (credible_matches / total_matches * 100) if total_matches else 0.0
+            md.write("## Credible sources found\n")
+            md.write(
+                f"**{percent_credible:.1f}% credible matches ({credible_matches} out of {total_matches})**\n\n"
+            )
 
+            md.write("## Original genes / pathways\n")
+            for pathway, genes in pathway_dict.items():
+                md.write(f"- **{pathway}**: {', '.join(genes)}\n")
+            md.write("\n")
 
+            md.write("## Automated validation of pathways\n")
+            for pathway, genes, new_summary in processed_results:
+                md.write(f"### {pathway}\n")
+                md.write(f"**Genes involved:** {', '.join(genes)}\n\n")
+                md.write(f"{new_summary}\n\n")
+
+            md.write("## g:Profiler comparison summary\n")
+            md.write(f"{comparison_summary}\n\n")
+
+        print(f"Markdown validation report created: {md_filename}")
 
 
 if __name__ == "__main__":
