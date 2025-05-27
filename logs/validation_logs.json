@@ -1,5 +1,13 @@
 [
   [
+    "Rab10 regulates the sorting of internalised TrkB for retrograde axonal transport",
+    {
+      "citation": "(2023, Wang et al., \"Rab10 regulates the sorting of internalised TrkB for retrograde axonal transport\", *eLife*)",
+      "count": 9,
+      "is_real": true
+    }
+  ],
+  [
     "Runx3 controls the axonal projection of proprioceptive dorsal root ganglion neurons",
     {
       "citation": "(2008, Inoue et al., \"Runx3 controls the axonal projection of proprioceptive dorsal root ganglion neurons\", *Nature Neuroscience*)",
@@ -8,11 +16,19 @@
     }
   ],
   [
-    "Rab10 regulates the sorting of internalised TrkB for retrograde axonal transport",
+    "CRMP5 (collapsin response mediator protein 5) regulates dendritic development and synaptic plasticity in the cerebellar Purkinje cells",
     {
-      "citation": "(2023, Wang et al., \"Rab10 regulates the sorting of internalised TrkB for retrograde axonal transport\", *eLife*)",
-      "count": 8,
+      "citation": "(2009, Yamashita et al., \"CRMP5 (collapsin response mediator protein 5) regulates dendritic development and synaptic plasticity in the cerebellar Purkinje cells\", *Journal of Neuroscience*)",
+      "count": 7,
       "is_real": true
+    }
+  ],
+  [
+    "Mutations in GLDN, encoding gliomedin, a critical component of the nodes of Ranvier, are responsible for lethal congenital contracture syndrome",
+    {
+      "citation": "(2014, Maluenda et al., \"Mutations in GLDN, encoding gliomedin, a critical component of the nodes of Ranvier, are responsible for lethal congenital contracture syndrome\", *American Journal of Human Genetics*)",
+      "count": 7,
+      "is_real": false
     }
   ],
   [
@@ -21,22 +37,6 @@
       "citation": "(2002, Oak et al., \"Dopamine D4 receptor signaling and synaptic plasticity\", *Molecular Neurobiology*)",
       "count": 6,
       "is_real": true
-    }
-  ],
-  [
-    "CRMP5 (collapsin response mediator protein 5) regulates dendritic development and synaptic plasticity in the cerebellar Purkinje cells",
-    {
-      "citation": "(2009, Yamashita et al., \"CRMP5 (collapsin response mediator protein 5) regulates dendritic development and synaptic plasticity in the cerebellar Purkinje cells\", *Journal of Neuroscience*)",
-      "count": 6,
-      "is_real": true
-    }
-  ],
-  [
-    "Mutations in GLDN, encoding gliomedin, a critical component of the nodes of Ranvier, are responsible for lethal congenital contracture syndrome",
-    {
-      "citation": "(2014, Maluenda et al., \"Mutations in GLDN, encoding gliomedin, a critical component of the nodes of Ranvier, are responsible for lethal congenital contracture syndrome\", *American Journal of Human Genetics*)",
-      "count": 6,
-      "is_real": false
     }
   ],
   [
@@ -75,7 +75,23 @@
     "SNARE function analyzed in synaptobrevin/VAMP knockout mice",
     {
       "citation": "(1999, Schoch et al., \"SNARE function analyzed in synaptobrevin/VAMP knockout mice\", *Science*)",
-      "count": 5,
+      "count": 6,
+      "is_real": true
+    }
+  ],
+  [
+    "Insight into the regulation of axonal transport from the study of KIF1A-associated neurological disorder",
+    {
+      "citation": "(2023, Stucchi et al., \"Insight into the regulation of axonal transport from the study of KIF1A-associated neurological disorder\", *Journal of Cell Science*)",
+      "count": 6,
+      "is_real": false
+    }
+  ],
+  [
+    "Adenylate cyclase 1 as a key actor in the refinement of retinal projection maps",
+    {
+      "citation": "(2001, Wang et al., \"Adenylate cyclase 1 as a key actor in the refinement of retinal projection maps\", *Journal of Neuroscience*)",
+      "count": 6,
       "is_real": true
     }
   ],
@@ -91,14 +107,6 @@
     "Id2 is critical for cellular proliferation and is the oncogenic effector of N-myc in human neuroblastoma",
     {
       "citation": "(2011, Havrda et al., \"Id2 is critical for cellular proliferation and is the oncogenic effector of N-myc in human neuroblastoma\", *Cancer Research*)",
-      "count": 5,
-      "is_real": false
-    }
-  ],
-  [
-    "Insight into the regulation of axonal transport from the study of KIF1A-associated neurological disorder",
-    {
-      "citation": "(2023, Stucchi et al., \"Insight into the regulation of axonal transport from the study of KIF1A-associated neurological disorder\", *Journal of Cell Science*)",
       "count": 5,
       "is_real": false
     }
@@ -160,9 +168,25 @@
     }
   ],
   [
-    "Adenylate cyclase 1 as a key actor in the refinement of retinal projection maps",
+    "Genes influenced by MEF2C contribute to neurodevelopmental disease via gene expression changes that affect multiple types of cortical excitatory neurons",
     {
-      "citation": "(2001, Wang et al., \"Adenylate cyclase 1 as a key actor in the refinement of retinal projection maps\", *Journal of Neuroscience*)",
+      "citation": "(2019, Harrington et al., \"Genes influenced by MEF2C contribute to neurodevelopmental disease via gene expression changes that affect multiple types of cortical excitatory neurons\", *bioRxiv*)",
+      "count": 5,
+      "is_real": true
+    }
+  ],
+  [
+    "Periaxin mutations cause recessive Dejerine-Sottas neuropathy",
+    {
+      "citation": "(2006, Gillespie et al., \"Periaxin mutations cause recessive Dejerine-Sottas neuropathy\", *American Journal of Human Genetics*)",
+      "count": 5,
+      "is_real": true
+    }
+  ],
+  [
+    "Meis2 is essential for cranial and cardiac neural crest development",
+    {
+      "citation": "(2020, Larsen et al., \"Meis2 is essential for cranial and cardiac neural crest development\", *Developmental Biology*)",
       "count": 5,
       "is_real": true
     }
@@ -184,14 +208,6 @@
     }
   ],
   [
-    "Genes influenced by MEF2C contribute to neurodevelopmental disease via gene expression changes that affect multiple types of cortical excitatory neurons",
-    {
-      "citation": "(2019, Harrington et al., \"Genes influenced by MEF2C contribute to neurodevelopmental disease via gene expression changes that affect multiple types of cortical excitatory neurons\", *bioRxiv*)",
-      "count": 4,
-      "is_real": true
-    }
-  ],
-  [
     "Mesenchymal Meis2 controls whisker development independently from trigeminal sensory innervation",
     {
       "citation": "(2024, Larsen et al., \"Mesenchymal Meis2 controls whisker development independently from trigeminal sensory innervation\", *bioRxiv*)",
@@ -205,14 +221,6 @@
       "citation": "(2012, Harvey et al., \"ARHGEF9 disruption in a female patient is associated with X linked mental retardation and sensory hyperarousal\", *Journal of Medical Genetics*)",
       "count": 4,
       "is_real": false
-    }
-  ],
-  [
-    "Periaxin mutations cause recessive Dejerine-Sottas neuropathy",
-    {
-      "citation": "(2006, Gillespie et al., \"Periaxin mutations cause recessive Dejerine-Sottas neuropathy\", *American Journal of Human Genetics*)",
-      "count": 4,
-      "is_real": true
     }
   ],
   [
@@ -248,18 +256,58 @@
     }
   ],
   [
-    "Meis2 is essential for cranial and cardiac neural crest development",
+    "Reelin, a marker of stress resilience in depression and psychosis",
     {
-      "citation": "(2020, Larsen et al., \"Meis2 is essential for cranial and cardiac neural crest development\", *Developmental Biology*)",
+      "citation": "(2010, Ventruti et al., \"Reelin, a marker of stress resilience in depression and psychosis\", *Behavioural Brain Research*)",
       "count": 4,
       "is_real": true
     }
   ],
   [
-    "Reelin, a marker of stress resilience in depression and psychosis",
+    "Ephrin-A5 (AL-1/RAGS) is essential for proper retinal axon guidance and topographic mapping in the mammalian visual system",
     {
-      "citation": "(2010, Ventruti et al., \"Reelin, a marker of stress resilience in depression and psychosis\", *Behavioural Brain Research*)",
-      "count": 3,
+      "citation": "(2001, Fris\u00e9n et al., \"Ephrin-A5 (AL-1/RAGS) is essential for proper retinal axon guidance and topographic mapping in the mammalian visual system\", *Neuron*)",
+      "count": 4,
+      "is_real": true
+    }
+  ],
+  [
+    "Cadherin-13, a risk gene for ADHD and comorbid disorders, impacts GABAergic function in the ventrolateral prefrontal cortex",
+    {
+      "citation": "(2012, Rivero et al., \"Cadherin-13, a risk gene for ADHD and comorbid disorders, impacts GABAergic function in the ventrolateral prefrontal cortex\", *Translational Psychiatry*)",
+      "count": 4,
+      "is_real": false
+    }
+  ],
+  [
+    "The raft-associated protein MAL is required for maintenance of apical transport in neuroepithelial cells",
+    {
+      "citation": "(2002, Schaeren-Wiemers et al., \"The raft-associated protein MAL is required for maintenance of apical transport in neuroepithelial cells\", *Journal of Cell Biology*)",
+      "count": 4,
+      "is_real": false
+    }
+  ],
+  [
+    "ATF3 expression improves motor function in the ALS mouse model by promoting motor neuron survival and retaining muscle innervation",
+    {
+      "citation": "(2013, Seijffers et al., \"ATF3 expression improves motor function in the ALS mouse model by promoting motor neuron survival and retaining muscle innervation\", *PNAS*)",
+      "count": 4,
+      "is_real": true
+    }
+  ],
+  [
+    "CaMKIV/Gr is a key mediator in the development of long-term memory",
+    {
+      "citation": "(2002, Kang et al., \"CaMKIV/Gr is a key mediator in the development of long-term memory\", *Cell*)",
+      "count": 4,
+      "is_real": false
+    }
+  ],
+  [
+    "ATF5 regulates the proliferation and differentiation of oligodendrocytes",
+    {
+      "citation": "(2013, Sheng et al., \"ATF5 regulates the proliferation and differentiation of oligodendrocytes\", *Developmental Neuroscience*)",
+      "count": 4,
       "is_real": true
     }
   ],
@@ -272,59 +320,11 @@
     }
   ],
   [
-    "Ephrin-A5 (AL-1/RAGS) is essential for proper retinal axon guidance and topographic mapping in the mammalian visual system",
-    {
-      "citation": "(2001, Fris\u00e9n et al., \"Ephrin-A5 (AL-1/RAGS) is essential for proper retinal axon guidance and topographic mapping in the mammalian visual system\", *Neuron*)",
-      "count": 3,
-      "is_real": true
-    }
-  ],
-  [
-    "Cadherin-13, a risk gene for ADHD and comorbid disorders, impacts GABAergic function in the ventrolateral prefrontal cortex",
-    {
-      "citation": "(2012, Rivero et al., \"Cadherin-13, a risk gene for ADHD and comorbid disorders, impacts GABAergic function in the ventrolateral prefrontal cortex\", *Translational Psychiatry*)",
-      "count": 3,
-      "is_real": false
-    }
-  ],
-  [
-    "The raft-associated protein MAL is required for maintenance of apical transport in neuroepithelial cells",
-    {
-      "citation": "(2002, Schaeren-Wiemers et al., \"The raft-associated protein MAL is required for maintenance of apical transport in neuroepithelial cells\", *Journal of Cell Biology*)",
-      "count": 3,
-      "is_real": false
-    }
-  ],
-  [
-    "ATF3 expression improves motor function in the ALS mouse model by promoting motor neuron survival and retaining muscle innervation",
-    {
-      "citation": "(2013, Seijffers et al., \"ATF3 expression improves motor function in the ALS mouse model by promoting motor neuron survival and retaining muscle innervation\", *PNAS*)",
-      "count": 3,
-      "is_real": true
-    }
-  ],
-  [
     "Contactin-6, a brain-specific member of the immunoglobulin superfamily, mediates axo-axonal interactions",
     {
       "citation": "(2013, Zuko et al., \"Contactin-6, a brain-specific member of the immunoglobulin superfamily, mediates axo-axonal interactions\", *Brain Research*)",
       "count": 3,
       "is_real": false
-    }
-  ],
-  [
-    "CaMKIV/Gr is a key mediator in the development of long-term memory",
-    {
-      "citation": "(2002, Kang et al., \"CaMKIV/Gr is a key mediator in the development of long-term memory\", *Cell*)",
-      "count": 3,
-      "is_real": false
-    }
-  ],
-  [
-    "ATF5 regulates the proliferation and differentiation of oligodendrocytes",
-    {
-      "citation": "(2013, Sheng et al., \"ATF5 regulates the proliferation and differentiation of oligodendrocytes\", *Developmental Neuroscience*)",
-      "count": 3,
-      "is_real": true
     }
   ],
   [
@@ -360,6 +360,38 @@
     }
   ],
   [
+    "Kainate receptors are involved in synaptic plasticity",
+    {
+      "citation": "(2007, Contractor et al., \"Kainate receptors are involved in synaptic plasticity\", *Nature Neuroscience*)",
+      "count": 3,
+      "is_real": true
+    }
+  ],
+  [
+    "Slitrk6 deficiency impairs the development of striatal circuits and motor function",
+    {
+      "citation": "(2013, Takahashi et al., \"Slitrk6 deficiency impairs the development of striatal circuits and motor function\", *Journal of Neuroscience*)",
+      "count": 3,
+      "is_real": false
+    }
+  ],
+  [
+    "SNAP-29-mediated modulation of synaptic transmission in cultured hippocampal neurons",
+    {
+      "citation": "(2015, Pan et al., \"SNAP-29-mediated modulation of synaptic transmission in cultured hippocampal neurons\", *Journal of Biological Chemistry*)",
+      "count": 3,
+      "is_real": true
+    }
+  ],
+  [
+    "Semaphorin 4F as a critical regulator of neuroepithelial interactions and a biomarker of aggressive prostate cancer",
+    {
+      "citation": "(2005, Sahly et al., \"Semaphorin 4F as a critical regulator of neuroepithelial interactions and a biomarker of aggressive prostate cancer\", *Clinical Cancer Research*)",
+      "count": 3,
+      "is_real": false
+    }
+  ],
+  [
     "Contactin-6, a brain-specific membrane protein with HNK-1 carbohydrate, mediates cell-cell interactions",
     {
       "citation": "(2013, Zuko et al., \"Contactin-6, a brain-specific membrane protein with HNK-1 carbohydrate, mediates cell-cell interactions\", *Glycobiology*)",
@@ -384,14 +416,6 @@
     }
   ],
   [
-    "Kainate receptors are involved in synaptic plasticity",
-    {
-      "citation": "(2007, Contractor et al., \"Kainate receptors are involved in synaptic plasticity\", *Nature Neuroscience*)",
-      "count": 2,
-      "is_real": true
-    }
-  ],
-  [
     "Neuropilin-1 conveys semaphorin and VEGF signaling during neural and cardiovascular development",
     {
       "citation": "(2004, Gu et al., \"Neuropilin-1 conveys semaphorin and VEGF signaling during neural and cardiovascular development\", *Developmental Cell*)",
@@ -408,25 +432,9 @@
     }
   ],
   [
-    "Slitrk6 deficiency impairs the development of striatal circuits and motor function",
-    {
-      "citation": "(2013, Takahashi et al., \"Slitrk6 deficiency impairs the development of striatal circuits and motor function\", *Journal of Neuroscience*)",
-      "count": 2,
-      "is_real": false
-    }
-  ],
-  [
     "Myelin membrane wrapping of CNS axons by PI(3,4,5)P3-dependent polarized growth at the inner tongue",
     {
       "citation": "(2018, Snaidero et al., \"Myelin membrane wrapping of CNS axons by PI(3,4,5)P3-dependent polarized growth at the inner tongue\", *Cell*)",
-      "count": 2,
-      "is_real": true
-    }
-  ],
-  [
-    "SNAP-29-mediated modulation of synaptic transmission in cultured hippocampal neurons",
-    {
-      "citation": "(2015, Pan et al., \"SNAP-29-mediated modulation of synaptic transmission in cultured hippocampal neurons\", *Journal of Biological Chemistry*)",
       "count": 2,
       "is_real": true
     }
@@ -477,14 +485,6 @@
       "citation": "(2013, Lai Wing Sun et al., \"Netrin-1 and DCC mediate axon guidance locally at the optic disc: loss of function leads to optic nerve hypoplasia\", *Neuron*)",
       "count": 2,
       "is_real": true
-    }
-  ],
-  [
-    "Semaphorin 4F as a critical regulator of neuroepithelial interactions and a biomarker of aggressive prostate cancer",
-    {
-      "citation": "(2005, Sahly et al., \"Semaphorin 4F as a critical regulator of neuroepithelial interactions and a biomarker of aggressive prostate cancer\", *Clinical Cancer Research*)",
-      "count": 2,
-      "is_real": false
     }
   ],
   [
@@ -624,6 +624,46 @@
     }
   ],
   [
+    "The PMP22 Gene and Its Related Diseases",
+    {
+      "citation": "(2012, Li et al., \"The PMP22 Gene and Its Related Diseases\", *Molecular Neurobiology*)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Neuropilin-2 regulates the development of selective cranial and trunk nerves",
+    {
+      "citation": "(2000, Chen et al., \"Neuropilin-2 regulates the development of selective cranial and trunk nerves\", *Neuron*)",
+      "count": 2,
+      "is_real": false
+    }
+  ],
+  [
+    "Mitochondrial fission and fusion",
+    {
+      "citation": "(2017, Lee et al., \"Mitochondrial fission and fusion\", *Methods in Molecular Biology*)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Hes6 inhibits astrocyte differentiation and promotes neurogenesis through different mechanisms",
+    {
+      "citation": "(2006, Jhas et al., \"Hes6 inhibits astrocyte differentiation and promotes neurogenesis through different mechanisms\", *Journal of Neuroscience*)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Ebf gene function is required for coupling neuronal differentiation and cell cycle exit",
+    {
+      "citation": "(2007, Garcia-Dominguez et al., \"Ebf gene function is required for coupling neuronal differentiation and cell cycle exit\", *Development*)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
     "GRID2 mutations cause cerebellar ataxia and impair synaptic plasticity",
     {
       "citation": "(2005, Kato et al., \"GRID2 mutations cause cerebellar ataxia and impair synaptic plasticity\", *Nature Genetics*)",
@@ -683,14 +723,6 @@
     "Myelin organization in the nodal, paranodal, and juxtaparanodal regions revealed by scanning X-ray diffraction",
     {
       "citation": "(2013, Patzig et al., \"Myelin organization in the nodal, paranodal, and juxtaparanodal regions revealed by scanning X-ray diffraction\", *PLoS One*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "The PMP22 Gene and Its Related Diseases",
-    {
-      "citation": "(2012, Li et al., \"The PMP22 Gene and Its Related Diseases\", *Molecular Neurobiology*)",
       "count": 1,
       "is_real": true
     }
@@ -824,14 +856,6 @@
     }
   ],
   [
-    "Neuropilin-2 regulates the development of selective cranial and trunk nerves",
-    {
-      "citation": "(2000, Chen et al., \"Neuropilin-2 regulates the development of selective cranial and trunk nerves\", *Neuron*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
     "The ERBB4/4ICD/CDH13 complex regulates axon guidance in the developing brain",
     {
       "citation": "(2011, Paradis et al., \"The ERBB4/4ICD/CDH13 complex regulates axon guidance in the developing brain\", *Molecular Psychiatry*)",
@@ -904,14 +928,6 @@
     }
   ],
   [
-    "Mitochondrial fission and fusion",
-    {
-      "citation": "(2017, Lee et al., \"Mitochondrial fission and fusion\", *Methods in Molecular Biology*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
     "Neuroserpin regulates synaptic density in cultured hippocampal neurons",
     {
       "citation": "(2006, Navarro-Yubero et al., \"Neuroserpin regulates synaptic density in cultured hippocampal neurons\", *Neuroscience Letters*)",
@@ -965,14 +981,6 @@
       "citation": "(2016, Dugas et al., \"The KLF9 transcription factor regulates axonal growth and synapse formation in cortical neurons\", *Journal of Neuroscience*)",
       "count": 1,
       "is_real": false
-    }
-  ],
-  [
-    "Hes6 inhibits astrocyte differentiation and promotes neurogenesis through different mechanisms",
-    {
-      "citation": "(2006, Jhas et al., \"Hes6 inhibits astrocyte differentiation and promotes neurogenesis through different mechanisms\", *Journal of Neuroscience*)",
-      "count": 1,
-      "is_real": true
     }
   ],
   [
@@ -1440,14 +1448,6 @@
     }
   ],
   [
-    "Ebf gene function is required for coupling neuronal differentiation and cell cycle exit",
-    {
-      "citation": "(2007, Garcia-Dominguez et al., \"Ebf gene function is required for coupling neuronal differentiation and cell cycle exit\", *Development*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
     "KLF9 is a novel transcriptional regulator of Purkinje cell development in the cerebellum",
     {
       "citation": "(2012, Moore et al., \"KLF9 is a novel transcriptional regulator of Purkinje cell development in the cerebellum\", *Journal of Neuroscience*)",
@@ -1621,6 +1621,198 @@
       "citation": "(2015, Rapaport et al., \"SNAP29 mediates vesicle trafficking and is critical for synaptic transmission\", *Human Molecular Genetics*)",
       "count": 1,
       "is_real": false
+    }
+  ],
+  [
+    "Family-based genome-wide copy number scan identifies five new genes of dyslexia involved in dendritic spinal plasticity",
+    {
+      "citation": "(2013, Poelmans et al., \"Family-based genome-wide copy number scan identifies five new genes of dyslexia involved in dendritic spinal plasticity\", *Journal of Human Genetics*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The brain-specific tissue-type plasminogen activator inhibitor, neuroserpin, protects neurons against excitotoxicity both in vitro and in vivo",
+    {
+      "citation": "(2015, Lebeurrier et al., \"The brain-specific tissue-type plasminogen activator inhibitor, neuroserpin, protects neurons against excitotoxicity both in vitro and in vivo\", *Molecular and Cellular Neuroscience*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Candidate genes involved in neural plasticity and the risk for attention-deficit hyperactivity disorder: a meta-analysis of 8 common variants",
+    {
+      "citation": "(2009, Forero et al., \"Candidate genes involved in neural plasticity and the risk for attention-deficit hyperactivity disorder: a meta-analysis of 8 common variants\", *Journal of Psychiatry & Neuroscience*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "A defect in the ionotropic glutamate receptor 6 gene (GRIK2) is associated with autosomal recessive mental retardation",
+    {
+      "citation": "(2011, Motazacker et al., \"A defect in the ionotropic glutamate receptor 6 gene (GRIK2) is associated with autosomal recessive mental retardation\", *American Journal of Human Genetics*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "BDNF promotes differentiation and maturation of adult-born neurons through GABAergic transmission",
+    {
+      "citation": "(2009, Waterhouse et al., \"BDNF promotes differentiation and maturation of adult-born neurons through GABAergic transmission\", *Journal of Neuroscience*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The adhesion-GPCR BAI1 regulates synaptogenesis by coordinating the activity of Rho GTPase and Ras GTPase",
+    {
+      "citation": "(2014, Duman et al., \"The adhesion-GPCR BAI1 regulates synaptogenesis by coordinating the activity of Rho GTPase and Ras GTPase\", *Journal of Neuroscience*)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Netrin-1 and the missing link of axon guidance",
+    {
+      "citation": "(2010, Serafini et al., \"Netrin-1 and the missing link of axon guidance\", *Science*)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Slit proteins: molecular guidance cues for cells ranging from neurons to leukocytes",
+    {
+      "citation": "(2006, Brose et al., \"Slit proteins: molecular guidance cues for cells ranging from neurons to leukocytes\", *Current Opinion in Genetics & Development*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Equivalent Activities of Repulsive Axon Guidance Receptors",
+    {
+      "citation": "(2016, Evans et al., \"Equivalent Activities of Repulsive Axon Guidance Receptors\", *Journal of Neuroscience*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Neuropilin as a receptor for the axonal chemorepellent Semaphorin III",
+    {
+      "citation": "(2002, He and Tessier-Lavigne, \"Neuropilin as a receptor for the axonal chemorepellent Semaphorin III\", *Cell*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The F-BAR domain of srGAP2 induces membrane protrusions required for neuronal migration and morphogenesis",
+    {
+      "citation": "(2011, Guerrier et al., \"The F-BAR domain of srGAP2 induces membrane protrusions required for neuronal migration and morphogenesis\", *Cell*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "CRMP3 is required for hippocampal dendritic organization and plasticity",
+    {
+      "citation": "(2005, Quach et al., \"CRMP3 is required for hippocampal dendritic organization and plasticity\", *FASEB Journal*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Plexin-B signaling directly regulates dendrite morphogenesis via Rac GTPase activation",
+    {
+      "citation": "(2007, Deng et al., \"Plexin-B signaling directly regulates dendrite morphogenesis via Rac GTPase activation\", *Neuron*)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Myelin in development and disease",
+    {
+      "citation": "(2017, Martini et al., \"Myelin in development and disease\", *Journal of Neuroscience Research*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Myelin-associated glycoprotein (MAG): past, present and beyond",
+    {
+      "citation": "(2016, Quarles, \"Myelin-associated glycoprotein (MAG): past, present and beyond\", *Journal of Neurochemistry*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Myelin basic protein: a multifunctional protein",
+    {
+      "citation": "(2018, Boggs, \"Myelin basic protein: a multifunctional protein\", *Cellular and Molecular Life Sciences*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The PLP1 gene in X-linked spastic paraplegia and central nervous system disorders",
+    {
+      "citation": "(2019, Duncan et al., \"The PLP1 gene in X-linked spastic paraplegia and central nervous system disorders\", *Annals of Human Genetics*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Inhibitors of differentiation (ID1, ID2, ID3 and ID4) genes are neuronal targets of MeCP2 that are elevated in Rett syndrome",
+    {
+      "citation": "(2006, Peddada et al., \"Inhibitors of differentiation (ID1, ID2, ID3 and ID4) genes are neuronal targets of MeCP2 that are elevated in Rett syndrome\", *Human Molecular Genetics*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Multiple roles of the conserved key regulator of asymmetric cell division Numb in neural development",
+    {
+      "citation": "(2008, Petersen et al., \"Multiple roles of the conserved key regulator of asymmetric cell division Numb in neural development\", *Developmental Biology*)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "The kinase DYRK1A reciprocally regulates the differentiation of Th17 and regulatory T cells",
+    {
+      "citation": "(2015, Khor et al., \"The kinase DYRK1A reciprocally regulates the differentiation of Th17 and regulatory T cells\", *eLife*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "LEF1-mediated regulation of Delta-like1 links Wnt and Notch signaling in somitogenesis",
+    {
+      "citation": "(2011, Armenteros et al., \"LEF1-mediated regulation of Delta-like1 links Wnt and Notch signaling in somitogenesis\", *Genes & Development*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "KLF family members regulate intrinsic excitability of hippocampal neurons",
+    {
+      "citation": "(2012, Moore et al., \"KLF family members regulate intrinsic excitability of hippocampal neurons\", *Journal of Neuroscience*)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "AP-2beta regulates ectopic expression of tyrosine hydroxylase in the developing neural tube",
+    {
+      "citation": "(2005, Hong et al., \"AP-2beta regulates ectopic expression of tyrosine hydroxylase in the developing neural tube\", *Developmental Biology*)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Runx3 is essential for the target-specific axon pathfinding of trkC-expressing dorsal root ganglion neurons",
+    {
+      "citation": "(2008, Inoue et al., \"Runx3 is essential for the target-specific axon pathfinding of trkC-expressing dorsal root ganglion neurons\", *Blood Cells, Molecules, and Diseases*)",
+      "count": 1,
+      "is_real": true
     }
   ]
 ]

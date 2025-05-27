@@ -179,7 +179,7 @@ def main():
 
     model = "grok-3-latest"
     validation_model = model
-    for i in range(20):
+    for i in range(2):
         print("Validating pathways... using g:Profiler")
         comparison_summary = validate_pathways(llm_output, ground_truth,
                                                comparison_instruction, validation_model=validation_model)
