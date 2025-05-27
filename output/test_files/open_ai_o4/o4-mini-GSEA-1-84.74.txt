@@ -1,4 +1,3 @@
-Answer:
 Myelination and Schwann cell differentiation:
 Mpz, Pmp22, Mag, Drp2, Prx, Mal, Cldn19
 
@@ -40,4 +39,3 @@ Sqor, Gldc, Aldh1a1, Hadhb
 
 Neural stem/progenitor maintenance and RNA processing:
 Nes, Msi1, Ddx1
-

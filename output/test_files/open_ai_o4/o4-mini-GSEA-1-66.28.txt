@@ -1,0 +1,20 @@
+Myelination and Schwann cell differentiation:
+PMP22, MPZ, MAG, PRX, DRP2, MAL, CLDN19,
+
+Axon guidance signaling:
+SEMA4F, SEMA3G, SLIT2, NTN1, PLXNB1, ROBO2, NRP1, NRP2,
+
+Synaptic function and plasticity:
+SYNPR, SNCG, GJA1, SRGAP1, MEF2C,
+
+Neurotrophin and growth factor signaling:
+LIFR, IGFBP3, GHR, IGF2BP2,
+
+PI3K-AKT-mTOR signaling:
+GRB14, GNAI1, PRKAR2B, EIF2AK2,
+
+Calcium signaling:
+P2RY2, ITPRIPL1, RYR3,
+
+Wnt/beta-catenin signaling:
+WNT5A, LEF1,

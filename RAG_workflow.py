@@ -1,113 +1,154 @@
-# Import necessary libraries
-import pandas as pd
+# Standard library imports
+import os
+import sys
+import time
+import re
+import json
 import gzip
 import csv
-import sys
-import os
-import time
-import json
 import hashlib
-import re
 import sqlite3
 import argparse
 import warnings
 import atexit
 import functools
+import logging
+import contextlib
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
+
+# Third-party imports
+import pandas as pd
+import numpy as np
 import requests
 from tqdm import tqdm
-import numpy as np
 from dotenv import load_dotenv
+
 import nltk
 from nltk import sent_tokenize
 from nltk.corpus import stopwords
+from nltk.data import find
+
 from PyPDF2 import PdfReader
 from transformers import AutoModel, AutoTokenizer
+
 import faiss
 from rank_bm25 import BM25Okapi, BM25Plus
-from typing import Any, Dict, List, Tuple
-# Importing LLM libraries
+
 from openai import OpenAI
 import google.generativeai as genai
 from anthropic import Anthropic
 import torch
 from openai import OpenAI as DeepSeekClient
 
-# Environment Setup
+# Environment & API clients setup
+load_dotenv()
+
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 os.environ["OMP_NUM_THREADS"] = "8"
-load_dotenv()
 
-# Setting up API keys
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-gemini_api_key = os.getenv("GEMINI_API_KEY")
-genai.configure(api_key=gemini_api_key)
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 client_claude = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-client_deepseek = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
+client_deepseek = DeepSeekClient(
+    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    base_url="https://api.deepseek.com"
+)
 client_grok = OpenAI(
     base_url="https://api.x.ai/v1",
     api_key=os.getenv("XAI_API_KEY"),
 )
-# Suppress Warnings
-warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
-warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
-warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
+
+# NLTK: silent downloader
+logging.getLogger('nltk').setLevel(logging.ERROR)
+
+
+def ensure_nltk_resource(pkg_name: str, resource_path: str):
+    """
+    Check for an NLTK resource; if missing, download quietly
+    with no stdout/stderr noise.
+    """
+    try:
+        find(resource_path)
+    except LookupError:
+        with contextlib.redirect_stdout(open(os.devnull, 'w')), \
+             contextlib.redirect_stderr(open(os.devnull, 'w')):
+            nltk.download(pkg_name, quiet=True)
+
+
+ensure_nltk_resource('punkt',
+                     'tokenizers/punkt')
+ensure_nltk_resource('stopwords', 'corpora/stopwords')
 
 
 class ConfigError(Exception):
-    """Raised when the config file is missing, malformed, or missing required keys."""
     pass
 
 
 def load_config(path: str) -> Dict[str, Any]:
     """
-    Load a JSON config from `path`, ensure required keys are present,
-    fill in any missing optional keys from defaults, and return the merged dict.
+    Load JSON config from `path`, enforce required keys,
+    fill in defaults, print each key (excluding secrets) with its source,
+    then return the merged dict.
     """
-    # 1) Define your defaults
     default_cfg: Dict[str, Any] = {
-        "number_of_expansions": 5,
-        "batch_size": 64,
-        "model_name": "mghuibregtse/biolinkbert-large-simcse-rat",
-        "amount_docs": 50,
-        "weight_faiss": 50,
-        "weight_bm25": 50,
-        "max_genes": 250,
-        "fdr_threshold": 0.05,
+        "number_of_expansions":    5,
+        "batch_size":              64,
+        "embeddings_model_name":   "mghuibregtse/biolinkbert-large-simcse-rat",
+        "generation_model":        "o4-mini",
+        "amount_docs":             50,
+        "weight_faiss":            50,
+        "weight_bm25":             50,
+        "max_genes":               [250],
+        "fdr_threshold":           0.05,
+        "query_range": 1,
     }
 
     try:
         raw = Path(path).read_text(encoding="utf-8")
-        user_cfg = json.loads(raw)
     except FileNotFoundError:
         raise ConfigError(f"Config file not found: {path}")
+
+    def _escape_newlines(m: re.Match) -> str:
+        inner = m.group(0)[1:-1].replace("\n", "\\n")
+        return f"\"{inner}\""
+    processed = re.sub(r'"(?:\\.|[^"\\])*"', _escape_newlines, raw, flags=re.DOTALL)
+
+    try:
+        user_cfg = json.loads(processed)
     except json.JSONDecodeError as e:
         raise ConfigError(f"Invalid JSON in {path!r}: {e}")
 
-    required = ["system_instruction_response", "query"]
-    missing_req = [k for k in required if k not in user_cfg]
-    if missing_req:
-        raise ConfigError(f"Missing required config key(s): {', '.join(missing_req)}")
+    # Required keys
+    for key in ("system_instruction_response", "query"):
+        if key not in user_cfg:
+            raise ConfigError(f"Missing required config key: {key}")
+
+    merged = default_cfg.copy()
+    merged.update(user_cfg)
 
     missing_opt = set(default_cfg) - set(user_cfg)
     if missing_opt:
         logging.warning("Using default for: %s", ", ".join(sorted(missing_opt)))
 
-    return {**default_cfg, **user_cfg}
+    print(f"Using config: {Path(path).name} with these parameters:")
+    for k, v in merged.items():
+        if k in ("query", "system_instruction_response"):
+            continue
+        src = "user" if k in user_cfg else "default"
+        print(f"{k}: {v} (from {src} config)")
+
+    return merged
 
 
-# Downloads and sets stopwords for BM25
-nltk.download('punkt')
-nltk.download('stopwords')
+# BM25 stop-words setup
 stop_words = set(stopwords.words('english'))
-extra_stops = {
+stop_words |= {
     "list", "genes", "identify", "mechanisms", "pathways",
     "related", "based", "following", "recent", "study"
 }
-stop_words |= extra_stops
 
-
-aggregated_times = {}
 
 os.makedirs("./logs", exist_ok=True)
 
@@ -184,16 +225,16 @@ def process_excel_data(
     df = pd.read_excel(path).head(max_genes)
     out: List[Tuple[str, str, int]] = []
 
-    def collect(sub_df: pd.DataFrame, label: str):
+    def collect(sub_df: pd.DataFrame, regulation_label: str):
         genes = sub_df['X'].tolist()
-        out.append((', '.join(genes), label, len(genes)))
+        out.append((', '.join(genes), regulation_label, len(genes)))
 
     if mode == "combined":
         df = df[df.DE != 0]
         if not df.empty and df.FDR.max() <= fdr:
             unique = set(df.DE)
-            label = "upregulated" if unique == {1} else "downregulated" if unique == {-1} else "combined"
-            collect(df, label)
+            regulation = "upregulated" if unique == {1} else "downregulated" if unique == {-1} else "combined"
+            collect(df, regulation)
 
     elif mode == "separate":
         for val, label in ((1, "upregulated"), (-1, "downregulated")):
@@ -601,7 +642,6 @@ def load_file_log(log_path='./logs/file_log.json'):
         try:
             with open(log_path, 'r', encoding='utf-8') as file_logs:
                 file_log = json.load(file_logs)
-            print(f"File log loaded from '{log_path}'.")
         except json.JSONDecodeError:
             file_log = {}
             print(f"File log at '{log_path}' is corrupted or empty. "
@@ -639,12 +679,11 @@ def save_file_log(file_log, log_path='./logs/file_log.json'):
     try:
         with open(log_path, 'w', encoding='utf-8') as file_logs:
             json.dump(file_log, file_logs, indent=4)
-        print(f"File log successfully saved to '{log_path}'.")
     except Exception as e:
         print(f"An error occurred while saving the file log: {e}")
 
 
-def load_model_and_tokenizer(force_download=False):
+def load_embeddings_model_and_tokenizer(force_download=False):
     """
     Loads and returns a tokenizer and model from pretrained sources using the Transformers library.
 
@@ -654,12 +693,9 @@ def load_model_and_tokenizer(force_download=False):
     Returns:
         A tuple containing the tokenizer and model.
     """
-    tokenizer = AutoTokenizer.from_pretrained(model_name,
-                                              force_download=force_download)
-
-    model = AutoModel.from_pretrained(model_name,
-                                      force_download=force_download)
-    return tokenizer, model
+    tokenizer = AutoTokenizer.from_pretrained(embeddings_model_name, force_download=force_download)
+    embeddings_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
+    return tokenizer, embeddings_model
 
 
 def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
@@ -680,7 +716,8 @@ def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
     ]
 
     documents = []
-    print(f"Found {len(files)} files in '{data_dir}'.")
+    if len(files) > 0:
+        print(f"Found {len(files)} files in '{data_dir}'.")
 
     for file in files:
         file_path = os.path.join(data_dir, file)
@@ -749,7 +786,7 @@ def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
     return pdf_documents
 
 
-def embed_documents(conn, index, tokenizer, model, data_dir,
+def embed_documents(conn, index, tokenizer, embeddings_model, data_dir,
                     batch_size, log_path='./logs/file_log.json',
                     pdf_dir='./data/PDF'):
     """
@@ -760,7 +797,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
         conn: The SQLite database connection.
         index: The FAISS index to update.
         tokenizer: The tokenizer for preparing text inputs.
-        model: The transformer model for generating embeddings.
+        embeddings_model: The transformer model for generating embeddings.
         data_dir: Directory containing gzipped documents.
         batch_size: The batch size for embedding computation.
         log_path: The path to the file log.
@@ -769,19 +806,18 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
     file_log = load_file_log(log_path=log_path)
 
     files_documents = load_gz_files(data_dir=data_dir)
-    print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
-
     pdf_documents = load_pdf_files(pdf_dir=pdf_dir, file_log=file_log)
-    print(f"Loaded {len(pdf_documents)} new PDF documents from '{pdf_dir}'.")
+    if len(files_documents) > 0:
+        print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
+        print(f"Loaded {len(pdf_documents)} new PDF documents from '{pdf_dir}'.")
 
     all_documents = files_documents + pdf_documents
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if device == 'cpu':
-        print("No GPU available. Using CPU for embedding.")
-        exit()
-    model.to(device)
-    model.eval()
+    if device.type != 'cuda':
+        print(f"No GPU available. Using {device} for embedding.")
+    embeddings_model.to(device)
+    embeddings_model.eval()
 
     for file, document, file_hash in all_documents:
         if file in file_log and file_log[file]['hash'] == file_hash:
@@ -813,7 +849,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
                 batch = chunks[i:i + batch_size]
                 inputs = tokenizer(batch, return_tensors="pt", truncation=True,
                                    padding=True, max_length=512).to(device)
-                outputs = model(**inputs)
+                outputs = embeddings_model(**inputs)
                 attention_mask = inputs['attention_mask']
                 token_embeddings = outputs.last_hidden_state
                 input_mask_expanded = attention_mask.unsqueeze(-1).expand(
@@ -929,7 +965,7 @@ def query_bm25_index(
     return top_ids, top_scores, details
 
 
-def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download=False):
+def query_faiss_index(query_text, index, tokenizer, embeddings_model, top_k, force_download=False):
     """
     Computes the embedding for a query and searches the FAISS index to retrieve the closest document chunks.
 
@@ -937,7 +973,7 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
         query_text: The query string.
         index: The FAISS index.
         tokenizer: The tokenizer for preparing the query.
-        model: The transformer model for generating the query embedding.
+        embeddings_model: The transformer model for generating the query embedding.
         top_k: The number of top results to retrieve.
         force_download: If True, forces re-downloading of model/tokenizer if needed.
 
@@ -945,23 +981,22 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
         A tuple containing the list of top document IDs and their corresponding distances.
     """
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if device == 'cpu':
-        print("No GPU available. Using CPU for embedding.")
-        exit()
-    loaded_model = AutoModel.from_pretrained(model_name, force_download=force_download)
-    loaded_tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
-    if model.config != loaded_model.config:
+    if device.type != 'cuda':
+        print(f"No GPU available. Using {device} for embedding.")
+    loaded_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
+    loaded_tokenizer = AutoTokenizer.from_pretrained(embeddings_model_name, force_download=force_download)
+    if embeddings_model.config != loaded_model.config:
         print("The models have different configurations.")
-        model = AutoModel.from_pretrained(model_name, force_download=force_download)
+        embeddings_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
     if str(tokenizer) != str(loaded_tokenizer):
         print("The tokenizers have different configurations.")
-        tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
-    model.to(device)
-    model.eval()
+        tokenizer = AutoTokenizer.from_pretrained(embeddings_model_name, force_download=force_download)
+    embeddings_model.to(device)
+    embeddings_model.eval()
     with torch.no_grad():
         inputs = tokenizer([query_text], return_tensors="pt", truncation=True,
                            padding=True, max_length=512).to(device)
-        outputs = model(**inputs)
+        outputs = embeddings_model(**inputs)
         query_embedding = outputs.last_hidden_state.mean(dim=1).cpu().numpy()
         faiss.normalize_L2(query_embedding)
     distances, indices = index.search(query_embedding, top_k)
@@ -971,7 +1006,7 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
 
 
 # Document Ranking and Combination
-def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
+def create_top_faiss_docs(expanded_queries, index, tokenizer, embeddings_model, top_k):
     """
     Retrieves top documents from the FAISS index for each expanded query and computes average distances.
 
@@ -979,7 +1014,7 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
         expanded_queries: A list of expanded query strings.
         index: The FAISS index.
         tokenizer: The tokenizer for processing the queries.
-        model: The transformer model for generating embeddings.
+        embeddings_model: The transformer model for generating embeddings.
         top_k: The number of top documents to retrieve per query.
 
     Returns:
@@ -988,7 +1023,7 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
     doc_distances = {}
 
     for eq in expanded_queries:
-        top_ids, distances = query_faiss_index(eq, index, tokenizer, model, top_k=top_k)
+        top_ids, distances = query_faiss_index(eq, index, tokenizer, embeddings_model, top_k=top_k)
         for doc_id, distance in zip(top_ids, distances):
             if doc_id not in doc_distances:
                 doc_distances[doc_id] = []
@@ -1168,41 +1203,28 @@ Possible expanded queries:
 
 Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
     """
-
+    expanded_queries = []
     if number > 0:
         prompt = (
             f"Based on the user's query, provide exactly {number} expanded queries that include related terms,"
             f" synonyms, and relevant expansions.\n\nUser query: \"{query_text}\"")
 
-        try:
-            response = client_open_ai.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=500,
-                temperature=0.7,
-            )
+        messages = [
+            {"role": "system", "content": system_instruction},
+            {"role": "user", "content": prompt}
+        ]
+        save = False
+        answer = query_llm(messages, prompt, system_instruction, save, generation_model=generation_model,
+                           query_range=query_range)
+        expanded_queries = answer.strip().split('\n')
+        expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for q in expanded_queries if q.strip()]
 
-            reply = response.choices[0].message.content
+        if len(expanded_queries) > number:
+            expanded_queries = expanded_queries[:number]
+        elif len(expanded_queries) < number:
+            print(f"Warning: Expected {number} queries but received {len(expanded_queries)}.")
 
-            expanded_queries = reply.strip().split('\n')
-            expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for q in expanded_queries if q.strip()]
-
-            if len(expanded_queries) > number:
-                expanded_queries = expanded_queries[:number]
-            elif len(expanded_queries) < number:
-                print(f"Warning: Expected {number} queries but received {len(expanded_queries)}.")
-
-            return expanded_queries
-
-        except Exception as e:
-            print(f"An error occurred while expanding the query: {e}")
-            return [query_text]
-    else:
-        print("Number of expanded queries requested is not positive. Returning the original query.")
-        return [query_text]
+    return expanded_queries
 
 
 def build_search_parameters(
@@ -1238,55 +1260,67 @@ def build_search_parameters(
     return params
 
 
-def query_open_ai(
+def get_generation_model_dir(model: str) -> str:
+    if model.startswith("grok"):
+        return "grok"
+    if model == "gpt-4o-mini-search-preview" or model.startswith("gpt-4"):
+        return "openai"
+    if model.startswith("o"):
+        if "o4-mini" in model:
+            return "open_ai_o4_mini"
+        if "o3-mini" in model:
+            return "open_ai_o3_mini"
+        if "o4" in model:
+            return "open_ai_o4"
+        return "open_ai_o3"
+    if model.startswith("deepseek"):
+        return "deepseek"
+    if model.startswith("claude"):
+        return "claude"
+    if model.lower().startswith("gemini"):
+        return "gemini"
+    return "openai"
+
+
+def query_llm(
     messages: list[dict],
     system_instruction_for_response: str,
     prompt: str,
     save: bool,
-    model: str,
-    range_query: int,
+    generation_model: str,
+    query_range: int,
     **kwargs
 ) -> str:
     """
-    Queries various LLM APIs using provided messages and parameters, attempting multiple times if necessary.
-    Supports Grok live search integration via kwargs without altering other branches.
-
-    Grok-specific kwargs:
-      - academic: bool
-      - academic_rss_links: list[str]
-      - from_date: str
-      - to_date: str
-      - max_results: int
-      - mode: str
-      - temperature: float
-
-    Other kwargs are passed directly to the respective client libraries.
-
-    Returns the final answer received, or None if all attempts fail.
+    Unified LLM query function supporting Grok, OpenAI, DeepSeek, Claude, and Gemini.
+    Retries `query_range` times, times each call, and optionally saves outputs to files.
     """
+
     answers: list[str] = []
-    for i in range(1, range_query + 1):
+    for i in range(1, query_range + 1):
         try:
             start_time = time.perf_counter()
+            model_dir = get_generation_model_dir(generation_model)
 
-            if model.startswith("grok"):
-                model_dir = "grok"
+            # ── Grok via raw HTTP ───────────────────────────────────────────────
+            if model_dir == "grok":
                 api_key = os.getenv("XAI_API_KEY")
                 endpoint = "https://api.x.ai/v1/chat/completions"
                 headers = {
                     "Content-Type": "application/json",
-                    "Authorization": f"Bearer {api_key}",
+                    "Authorization": f"Bearer {api_key}"
                 }
+                # Grok-specific search params
                 academic = kwargs.pop('academic', False)
-                academic_rss_links = kwargs.pop('academic_rss_links', None)
+                academic_rss = kwargs.pop('academic_rss_links', None)
                 from_date = kwargs.pop('from_date', None)
                 to_date = kwargs.pop('to_date', None)
                 max_results = kwargs.pop('max_results', 20)
                 mode = kwargs.pop('mode', 'on')
-                temperature = kwargs.pop('temperature', 0)
+                temperature_grok = kwargs.pop('temperature', 0)
 
                 payload = {
-                    "model": model,
+                    "model": generation_model,
                     "messages": messages,
                     "search_parameters": build_search_parameters(
                         mode=mode,
@@ -1294,61 +1328,39 @@ def query_open_ai(
                         to_date=to_date,
                         max_results=max_results,
                         academic=academic,
-                        academic_rss_links=academic_rss_links,
+                        academic_rss_links=academic_rss
                     ),
-                    "temperature": temperature,
+                    "temperature": temperature_grok
                 }
                 resp = requests.post(endpoint, json=payload, headers=headers)
                 resp.raise_for_status()
                 data = resp.json()
-                print(f"Got answer: {data}\n")
                 answer = data["choices"][0]["message"]["content"]
-                citations: list[str] = data.get("citations", []) or data["choices"][0].get("citations", [])
-                print(f"\n\nThese are the citations:{citations}")
 
-            # Non-Grok branches remain unchanged
-            elif model == "gpt-4o-mini-search-preview":
-                model_dir = "openai"
-                response = client_open_ai.chat.completions.create(
-                    model=model,
+            elif model_dir == "openai":
+                response = client_open_ai.chat.completions.create(  # type: ignore
+                    model=generation_model,
                     messages=messages,
+                    max_tokens=kwargs.get("max_tokens", 16384),
+                    temperature=kwargs.get("temperature", 0),
                     **kwargs
                 )
                 answer = response.choices[0].message.content
 
-            elif model.startswith("gpt-4"):
-                model_dir = "openai"
-                response = client_open_ai.chat.completions.create(
-                    model=model,
-                    messages=messages,
-                    max_tokens=16384,
-                    temperature=0,
-                    **kwargs
-                )
-                answer = response.choices[0].message.content
-
-            elif model.startswith("o"):
-                if "o4" in model:
-                    model_dir = "open_ai_o4"
-                elif "o3-mini" in model:
-                    model_dir = "open_ai_o3_mini"
-                else:
-                    model_dir = "open_ai_o3"
-                adjusted_prompt = system_instruction_for_response + prompt
-                messages = [{"role": "user", "content": adjusted_prompt}]
-                response = client_open_ai.chat.completions.create(
-                    model=model,
-                    messages=messages,
+            elif model_dir.startswith("open_ai_o"):
+                adjusted = system_instruction_for_response + prompt
+                response = client_open_ai.chat.completions.create(  # type: ignore
+                    model=generation_model,
+                    messages=[{"role": "user", "content": adjusted}],
                     max_completion_tokens=32768,
                     reasoning_effort="high",
                     **kwargs
                 )
                 answer = response.choices[0].message.content
 
-            elif model.startswith("deepseek"):
-                model_dir = "deepseek"
-                response = client_deepseek.chat.completions.create(
-                    model=model,
+            elif model_dir == "deepseek":
+                response = client_deepseek.chat.completions.create(  # type: ignore
+                    model=generation_model,
                     messages=messages,
                     stream=False,
                     temperature=0,
@@ -1356,10 +1368,39 @@ def query_open_ai(
                 )
                 answer = response.choices[0].message.content
 
+            elif model_dir == "claude":
+                claude_msgs = []
+                if system_instruction_for_response:
+                    claude_msgs.append({
+                        "role": "system",
+                        "content": system_instruction_for_response
+                    })
+                claude_msgs.extend(messages)
+
+                response = client_claude.messages.create(
+                    model=generation_model,
+                    max_tokens=kwargs.get("max_tokens", 8192),
+                    messages=claude_msgs
+                )
+                answer = "".join([part.text for part in response.content])
+
+            elif model_dir == "gemini":
+                config = types.GenerateContentConfig(
+                    system_instruction=system_instruction_for_response,
+                    max_output_tokens=kwargs.get("max_output_tokens", 1024),
+                    temperature=kwargs.get("temperature", 0.0)
+                )
+                resp = client_gemini.models.generate_content(
+                    model=generation_model,
+                    contents=prompt,
+                    config=config
+                )
+                answer = resp.text
+
             else:
-                model_dir = "openai"
-                response = client_open_ai.chat.completions.create(
-                    model=model,
+                # Fallback to OpenAI
+                response = client_open_ai.chat.completions.create(  # type: ignore
+                    model=generation_model,
                     messages=messages,
                     max_tokens=16384,
                     temperature=0,
@@ -1367,125 +1408,29 @@ def query_open_ai(
                 )
                 answer = response.choices[0].message.content
 
-            duration_seconds = round(time.perf_counter() - start_time, 2)
+            duration = round(time.perf_counter() - start_time, 2)
 
         except Exception as e:
-            print(f"An error occurred on iteration {i} using model {model}: {e}")
+            print(f"[{generation_model}][iter {i}] Error: {e}")
             continue
 
-        # Save if requested
+        # Save to disk if requested
         if save:
-            base_dir = os.path.join("./output/test_files", model_dir)
-            os.makedirs(base_dir, exist_ok=True)
-            output_filename = os.path.join(
-                base_dir,
-                f"{model}-{config_name}-{i}-{duration_seconds}.txt"
-            )
-            with open(output_filename, "w", encoding="utf-8") as file:
-                file.write(answer)
-            if citations:
-                cit_file = os.path.join("./output/text_files/citations", f"{model}-{config_name}-{i}-{duration_seconds}"
-                                                                         f"-citations.txt")
-                print(f"Writing citations to {cit_file}")
-                with open(cit_file, "w", encoding="utf-8") as f:
-                    f.write("\n".join(citations))
-            print(f"Answer {i} appended to {output_filename}")
+            out_dir = os.path.join("./output/test_files", model_dir)
+            os.makedirs(out_dir, exist_ok=True)
+            fname = f"{generation_model}-{i}-{duration}.txt"
+            path = os.path.join(out_dir, fname)
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(answer)
+            print(f"Saved iter {i} answer to {path}")
 
-        answers.append(answer)
-
-    return answers[-1] if answers else None
-
-
-def query_gemini(system_instruction, prompt):
-    """
-    Queries the Gemini API using the provided system instruction and prompt.
-    Saves each response to a file and returns the last answer generated.
-
-    Args:
-        system_instruction: The system-level instruction for Gemini.
-        prompt: The user prompt.
-
-    Returns:
-        The final answer received from the Gemini API, or None if unsuccessful.
-    """
-    model = genai.GenerativeModel("gemini-1.5-pro")
-    output_filename = "./output/test_files/all_answers_gemini.txt"
-    answers = []
-    for i in range(1, 2):
-        answer = model.generate_content(
-            f"Your system instructions:\n {system_instruction}. The user prompt:\n {prompt}")
-        answers.append(answer)
-
-        text_content = ""
-        if answer.candidates:
-            for candidate in answer.candidates:
-                for part in candidate.content.parts:
-                    if hasattr(part, 'text'):
-                        text_content += part.text
-        else:
-            text_content = "No text content found in the response."
-
-        with open(output_filename, "a", encoding="utf-8") as file:
-            file.write(f"Answer {i}:\n{text_content}\n{'=' * 50}\n")
-
-        print(f"Answer {i} appended to {output_filename}")
-
-    return answers[-1] if answers else None
-
-
-def query_claude(messages):
-    """
-    Queries Anthropic's Claude model using the provided conversation messages.
-    Saves the response to a file and returns the final answer.
-
-    Args:
-        messages: A list of message dictionaries for the conversation.
-
-    Returns:
-        The final answer received from Claude, or None if unsuccessful.
-    """
-    claude_model = "claude-3-5-sonnet-20241022"
-    output_filename = "./output/test_files/all_answers_claude.txt"
-    answers = []
-
-    system_message = next((msg["content"] for msg in messages if msg["role"] == "system"), "")
-    user_messages = [msg["content"] for msg in messages if msg["role"] == "user"]
-    assistant_messages = [msg["content"] for msg in messages if msg["role"] == "assistant"]
-
-    conversation = ""
-    for user, assistant in zip(user_messages, assistant_messages + [""]):
-        conversation += f"\n\nHuman: {user}"
-        if assistant:
-            conversation += f"\n\nAssistant: {assistant}"
-
-    for i in range(1, 2):
-        try:
-            response = client_claude.messages.create(
-                model=claude_model,
-                max_tokens=8192,
-                temperature=0,
-                system=system_message,
-                messages=[{
-                    "role": "user",
-                    "content": conversation.strip()
-                }]
-            )
-            answer = response.content[0].text
-        except Exception as e:
-            print(f"An error occurred while generating the Claude response on iteration {i}: {e}")
-            continue
-
-        with open(output_filename, "a", encoding="utf-8") as file:
-            file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")
-
-        print(f"Answer {i} appended to {output_filename}")
         answers.append(answer)
 
     return answers[-1] if answers else None
 
 
 def generate_llm_response(query_text,  gene_list_string,
-                          conn, index, tokenizer, model,
+                          conn, index, tokenizer, embeddings_model,
                           bm25_index, bm25_chunk_ids,
                           weight_faiss, weight_bm25,
                           system_instruction_for_response,
@@ -1504,7 +1449,7 @@ def generate_llm_response(query_text,  gene_list_string,
         conn: The SQLite database connection.
         index: The FAISS index.
         tokenizer: The tokenizer for the transformer model.
-        model: The transformer model used for embeddings.
+        embeddings_model: The transformer model used for embeddings.
         bm25_index: The BM25 index object.
         bm25_chunk_ids: List of chunk IDs corresponding to the BM25 index.
         weight_faiss: Weight for FAISS scores.
@@ -1522,7 +1467,6 @@ def generate_llm_response(query_text,  gene_list_string,
     """
     # Expand the retrieval query
     expanded_queries = query_expansion(query_text, number=number_of_expansions)
-    print(f"Expanded query: {expanded_queries}")
     if not expanded_queries:
         expanded_queries = [query_text]
     else:
@@ -1531,7 +1475,7 @@ def generate_llm_response(query_text,  gene_list_string,
     query_text = query_text + gene_list_string
 
     # Retrieve documents using FAISS and BM25
-    top_faiss_docs = create_top_faiss_docs(query_expanded_queries, index, tokenizer, model, top_k=50)
+    top_faiss_docs = create_top_faiss_docs(query_expanded_queries, index, tokenizer, embeddings_model, top_k=50)
     top_bm25_docs = create_top_bm25_docs(query_expanded_queries, bm25_index, bm25_chunk_ids, top_k=50)
 
     # Combine scores using weighted RRF
@@ -1566,11 +1510,12 @@ def generate_llm_response(query_text,  gene_list_string,
     os.makedirs("./output/text_files", exist_ok=True)
     with open("./output/text_files/messages.txt", "w", encoding="utf-8") as file:
         file.write(save_message)
-    print(f"Using API type: {api_type}")
+    print(f"Using LLM model: {generation_model} for response generation.")
 
     if api_type.lower() == 'openai':
         save = True
-        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, model=model, range_query=5, )
+        answer = query_llm(messages, system_instruction_for_response, prompt, save,
+                           generation_model=generation_model, query_range=query_range)
     elif api_type.lower() == 'claude':
         answer = query_claude(messages)
     elif api_type.lower() == 'gemini':
@@ -1586,7 +1531,7 @@ def generate_llm_response(query_text,  gene_list_string,
 
 def generate_response_and_save(query,
                                gene_list_string,
-                               conn, index, tokenizer, model,
+                               conn, index, tokenizer, embeddings_model,
                                bm25_index, bm25_chunk_ids,
                                weight_faiss, weight_bm25,
                                system_instruction_for_response):
@@ -1600,7 +1545,7 @@ def generate_response_and_save(query,
         conn: The SQLite database connection.
         index: The FAISS index.
         tokenizer: The tokenizer for the transformer model.
-        model: The transformer model used for embeddings.
+        embeddings_model: The transformer model used for embeddings.
         bm25_index: The BM25 index object.
         bm25_chunk_ids: List of chunk IDs corresponding to the BM25 index.
         weight_faiss: Weight for FAISS scores.
@@ -1609,7 +1554,7 @@ def generate_response_and_save(query,
     """
     answer, document_references, rrf_scores, bm25_scores, faiss_scores = generate_llm_response(
         query,  gene_list_string,
-        conn, index, tokenizer, model,
+        conn, index, tokenizer, embeddings_model,
         bm25_index, bm25_chunk_ids,
         weight_faiss, weight_bm25,
         system_instruction_for_response,
@@ -1662,7 +1607,7 @@ def process_files_in_directory(data_dir, ncbi_json_dir):
                 f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
 
-def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
+def embed_documents_and_save(index, conn, tokenizer, embeddings_model, data_dir,
                              batch_size, log_path, index_path):
     """
     Embeds documents from the specified directory, updates the FAISS index with the embeddings,
@@ -1672,13 +1617,13 @@ def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
         index: The FAISS index.
         conn: The SQLite database connection.
         tokenizer: The tokenizer for processing text.
-        model: The transformer model for embedding computation.
+        embeddings_model: The transformer model for embedding computation.
         data_dir: The directory containing the documents.
         batch_size: The batch size for processing documents.
         log_path: The file path for the file log.
         index_path: The file path to save the FAISS index.
     """
-    embed_documents(conn, index, tokenizer, model, data_dir=data_dir,
+    embed_documents(conn, index, tokenizer, embeddings_model, data_dir=data_dir,
                     batch_size=batch_size, log_path=log_path)
     save_faiss_index(index, index_path=index_path)
     conn.close()
@@ -1758,12 +1703,8 @@ def main():
     globals()['config_name'] = config_name
     globals().update(config)
 
-    print(f"Using config: {config_name}")
-
-    gene_counts = list(range(500, 1001, 50))
-    for max_genes_value in gene_counts:
-        print(f"\n\n=== Running test for max_genes = {max_genes_value} ===")
-        # Override the maximum gene count from the configuration.
+    for max_genes_value in max_genes:
+        print(f"=== Running test for max_genes = {max_genes_value} ===")
         current_max_genes = max_genes_value
         gene_list_string, regulation, num_genes = initialize_gene_list(
             max_genes=current_max_genes,
@@ -1771,8 +1712,6 @@ def main():
             excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
             de_filter_option="combined",
         )
-
-        print(f"Regulation: {regulation} with {num_genes} genes")
 
         data_dir = './data/GSEA/external_gene_data'
         log_dir = './logs'
@@ -1784,11 +1723,11 @@ def main():
         process_files_in_directory(data_dir, ncbi_json_dir)
 
         conn = initialize_database(db_path=db_path)
-        tokenizer, model = load_model_and_tokenizer()
-        embedding_dim = model.config.hidden_size
+        tokenizer, embeddings_model = load_embeddings_model_and_tokenizer()
+        embedding_dim = embeddings_model.config.hidden_size
 
         index = initialize_faiss_index(embedding_dim, index_path)
-        embed_documents_and_save(index, conn, tokenizer, model, data_dir,
+        embed_documents_and_save(index, conn, tokenizer, embeddings_model, data_dir,
                                  batch_size=batch_size, log_path=log_path,
                                  index_path=index_path)
 
@@ -1796,11 +1735,11 @@ def main():
         conn = sqlite3.connect(db_path)
         bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
-        # Single call per gene count since query_open_ai already performs 5 attempts.
+        # Single call per gene count since query_llm already performs 5 attempts.
         generate_response_and_save(
             query,
             gene_list_string,
-            conn, index, tokenizer, model,
+            conn, index, tokenizer, embeddings_model,
             bm25_index, bm25_chunk_ids,
             weight_faiss, weight_bm25,
             system_instruction_response

@@ -4,7 +4,7 @@ import re
 import time
 import json
 import markdown
-from RAG_workflow import query_open_ai
+from RAG_workflow import query_llm
 from pymed import PubMed
 import pymed
 from dotenv import load_dotenv
