@@ -11,10 +11,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from openai import OpenAI as DeepSeekClient
-
-deepseek_client = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"),
-                                 base_url="https://api.deepseek.com")
 
 log_dir = './logs'
 log_file = os.path.join(log_dir, 'validation_logs.json')
@@ -34,8 +30,8 @@ def read_latest_llm_output(answer_dir="./output/test_files"):
     if not answer_files:
         raise FileNotFoundError("No answer files found in the directory.")
     latest_file = max(answer_files, key=os.path.getmtime)
-    with open(latest_file, 'r', encoding="utf8") as f:
-        content = f.read().strip()
+    with open(latest_file, 'r', encoding="utf8") as file:
+        content = file.read().strip()
     return content, latest_file
 
 
@@ -92,6 +88,7 @@ def academic_validation(pathways, pathway_dict, academic_instruction,
             response = "No academic validation response returned."
         academic_results.append((pathway, genes, response.strip()))
     return academic_results
+
 
 pubmed = PubMed(tool="MyTool", email="my@email.address")
 
@@ -152,20 +149,20 @@ def replace_entry(match):
 
 def main():
     answer_dir = "./output/test_files/"
-    ground_truth_file = "./output/text_files/ground_truth_pathways.txt"
+    ground_truth_file = "./output/results/ground_truth_pathways.txt"
     system_instruction_file = "./configs_system_instruction/system_instruction_comparison_pathways.txt"
     academic_instruction_file = "./configs_system_instruction/system_instruction_academic_validation_test.txt"
-    output_directory = "./output/text_files/automated_comparison"
+    output_directory = "./output/results/validation_and_reporting"
     os.makedirs(output_directory, exist_ok=True)
 
-    with open(ground_truth_file, 'r', encoding="utf8") as f:
-        ground_truth = f.read().strip()
-    with open(system_instruction_file, 'r', encoding="utf8") as f:
-        comparison_instruction = f.read().strip()
+    with open(ground_truth_file, 'r', encoding="utf8") as file:
+        ground_truth = file.read().strip()
+    with open(system_instruction_file, 'r', encoding="utf8") as file:
+        comparison_instruction = file.read().strip()
 
     if os.path.exists(academic_instruction_file):
-        with open(academic_instruction_file, 'r', encoding="utf8") as f:
-            academic_instruction = f.read().strip()
+        with open(academic_instruction_file, 'r', encoding="utf8") as file:
+            academic_instruction = file.read().strip()
     else:
         print("Academic instruction file not found. Exiting program")
         import sys

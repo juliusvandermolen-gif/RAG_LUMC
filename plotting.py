@@ -27,12 +27,14 @@ def load_input_gene_set(amount: int) -> Set[str]:
     fn = INPUT_GENE_DIR / f"all_genes_{amount}.txt"
     if not fn.exists():
         raise FileNotFoundError(f"{fn} not found – please generate it first.")
+
     with fn.open(encoding="utf8") as f:
         return {normalize_gene(line) for line in f if line.strip()}
+    return {normalize_gene(line) for line in f if line.strip()}
 
 
 def clean_gene_name(raw: str) -> Optional[str]:
-    g = raw.strip().rstrip(',')
+    g = raw.strip().rstrip(', ')
     g = re.sub(r"\s*\(.*\)$", "", g)
     if not g or g.startswith("gene ") or len(g.split()) > 1:
         return None
@@ -47,10 +49,10 @@ def parse_genes_from_file(fp: Path) -> Set[str]:
             continue
         if line.startswith("Pathway Name:") or (line.startswith("**") and line.endswith("**")):
             continue
-        if ':' in line and ',' not in line:
+        if ': ' in line and ', ' not in line:
             continue
-        if ',' in line:
-            for part in line.split(','):
+        if ', ' in line:
+            for part in line.split(', '):
                 cg = clean_gene_name(part)
                 if cg:
                     genes.add(cg)
@@ -183,10 +185,9 @@ def compute_correlations(df: pd.DataFrame) -> None:
     print(results.to_string(index=False))
 
 
-
 def main():
     base_dir = Path("./output/test_files")
-    out_dir  = Path("output/text_files/PNG_HTML")
+    out_dir = Path("output/results/plots")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     all_full = []
@@ -203,13 +204,13 @@ def main():
             print(f"no data for {model}, skipping.")
             continue
 
-        #plot_and_save(df, model, out_dir)
+        # plot_and_save(df, model, out_dir)
         print(model)
         compute_correlations(df)
         sum_full = (
             df.groupby('input_genes', as_index=False).agg(
-                mean_total=('total_output_genes','mean'),
-                mean_time_sec=('time_sec','mean')
+                mean_total=('total_output_genes', 'mean'),
+                mean_time_sec=('time_sec', 'mean')
             )
             .assign(model=model)
             .sort_values('input_genes')
@@ -217,8 +218,8 @@ def main():
         sum_filt = (
             df
             .groupby('input_genes', as_index=False).agg(
-                mean_matched=('matched_genes','mean'),
-                mean_time_sec=('time_sec','mean')
+                mean_matched=('matched_genes', 'mean'),
+                mean_time_sec=('time_sec', 'mean')
             )
             .assign(model=model)
             .sort_values('input_genes')
@@ -226,7 +227,7 @@ def main():
 
         all_full.append(sum_full)
         all_filt.append(sum_filt)
-        hall_data.append(df[['filename','hallucination_perc']].assign(model=model))
+        hall_data.append(df[['filename', 'hallucination_perc']].assign(model=model))
 
     # combined unfiltered line plot
     if all_full:
@@ -266,7 +267,7 @@ def main():
     # combined filtered line plot
     if all_filt:
         combined2 = pd.concat(all_filt, ignore_index=True)
-        csv_dir = "./output/text_files/csv"
+        csv_dir = "./output/results/csv"
         if not os.path.exists(csv_dir):
             os.makedirs(csv_dir)
         combined2.to_csv(os.path.join(csv_dir, "combined_models_line_filtered.csv"), index=False)
@@ -277,7 +278,7 @@ def main():
             hover_data=['mean_time_sec'],
             labels={
                 'input_genes': 'Number of input genes',
-                'mean_matched':'Mean number of non-hallucinated genes',
+                'mean_matched': 'Mean number of non-hallucinated genes',
                 'model':       'Model'
             },
             title="Mean number of non-hallucinated genes vs. input gene count across all models",
@@ -310,7 +311,7 @@ def main():
             x='model', y='hallucination_perc',
             points='all', color='model',
             custom_data=['filename'],
-            labels={'model':'Model','hallucination_perc':'Percentage of hallucinated genes (%)'},
+            labels={'model': 'Model', 'hallucination_perc': 'Percentage of hallucinated genes (%)'},
             title="Distribution of hallucinated gene percentages across models",
             template="plotly_white",
             width=1920, height=1080
@@ -324,7 +325,7 @@ def main():
             title_font_size=28,
             legend_title_font_size=20,
             legend_font_size=22,
-            title={'x':0.5,'xanchor':'center'}
+            title={'x': 0.5, 'xanchor': 'center'}
         )
         fig.update_xaxes(
             title_font=dict(size=25),
@@ -368,7 +369,7 @@ def main():
                 color='configuration',
                 custom_data=['filename'],
                 category_orders={'configuration': order},
-                labels={'configuration':'Configuration','unique_genes':'Number of unique genes'},
+                labels={'configuration': 'Configuration', 'unique_genes': 'Number of unique genes'},
                 title="Unique gene counts per configuration (ordered by median) for OpenAI o3",
                 template="plotly_white",
                 width=1920, height=1080
@@ -381,7 +382,7 @@ def main():
                 title_font_size=32,
                 legend_title_font_size=30,
                 legend_font_size=25,
-                title={'x':0.5,'xanchor':'center'}
+                title={'x': 0.5, 'xanchor': 'center'}
             )
             fig.update_xaxes(
                 title_font=dict(size=30),
@@ -394,9 +395,6 @@ def main():
                 showgrid=True, gridcolor='lightgrey', gridwidth=1
             )
             fig.write_html(out_dir / "configurations_ran_boxplot.html")
-
-
-
 
 
 if __name__ == '__main__':

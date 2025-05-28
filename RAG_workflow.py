@@ -110,10 +110,10 @@ def load_config(path: str) -> Dict[str, Any]:
     except FileNotFoundError:
         raise ConfigError(f"Config file not found: {path}")
 
-    def _escape_newlines(m: re.Match) -> str:
+    def escape_newlines(m: re.Match) -> str:
         inner = m.group(0)[1:-1].replace("\n", "\\n")
         return f"\"{inner}\""
-    processed = re.sub(r'"(?:\\.|[^"\\])*"', _escape_newlines, raw, flags=re.DOTALL)
+    processed = re.sub(r'"(?:\\.|[^"\\])*"', escape_newlines, raw, flags=re.DOTALL)
 
     try:
         user_cfg = json.loads(processed)
@@ -153,7 +153,6 @@ stop_words |= {
 os.makedirs("./logs", exist_ok=True)
 
 
-# Gene ID Related Functions
 def compute_file_hash(file_path, block_size=65536):
     """
     Computes the SHA-256 has of a file's content.
@@ -395,7 +394,7 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
         final_unknown_genes = set()
 
     if final_unknown_genes:
-        unknown_genes_file = os.path.join('./output/text_files/unknown_genes.txt')
+        unknown_genes_file = os.path.join('./output/results/unknown_genes.txt')
         with open(unknown_genes_file, 'w') as unknown_file:
             unknown_file.write('\n'.join(final_unknown_genes))
 
@@ -1507,8 +1506,8 @@ def generate_llm_response(query_text,  gene_list_string,
         {"role": "user", "content": prompt}
     ]
     save_message = f"(role: system, content: {system_instruction_for_response}\nrole: user, content: {prompt})"
-    os.makedirs("./output/text_files", exist_ok=True)
-    with open("./output/text_files/messages.txt", "w", encoding="utf-8") as file:
+    os.makedirs("./output/results", exist_ok=True)
+    with open("./output/results/messages.txt", "w", encoding="utf-8") as file:
         file.write(save_message)
     print(f"Using LLM model: {generation_model} for response generation.")
 
@@ -1570,7 +1569,7 @@ def generate_response_and_save(query,
 
 
 # File Saving and Processing Helpers
-def save_answer_to_file(answer, document_references, file_name="./output/text_files/answer.txt"):
+def save_answer_to_file(answer, document_references, file_name="./output/results/answer.txt"):
     """
     Saves the generated answer and associated document references to text files.
 
@@ -1582,7 +1581,7 @@ def save_answer_to_file(answer, document_references, file_name="./output/text_fi
     with open(file_name, "w", encoding='utf-8') as answer_file:
         answer_file.write(f"Answer:\n{answer}\n\n")
     print(f"Answer saved to {file_name}")
-    with open("./output/text_files/documents.txt", "w", encoding='utf-8') as answer_file:
+    with open("./output/results/documents.txt", "w", encoding='utf-8') as answer_file:
         for idx, doc in enumerate(document_references, start=1):
             answer_file.write(f"{doc} \n\n")
 

@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-250-5-60.24_grok-3-latest_0.md" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-250-5-60.24_grok-3-latest_0.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-250-5-60.24_grok-3-latest_1.md" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-250-5-60.24_grok-3-latest_1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-250-5-60.24_grok-3-latest_2.md" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/automated_comparison/validation_o3-mini-GSEA-250-5-60.24_grok-3-latest_2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/messages.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_table.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/create_table.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fine_tune.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/fine_tune.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supporting scripts/gene_synonym.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/supporting scripts/gene_synonym.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +245,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-f7cd937e3587-99d813433b97-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-251.23774.439" />
+        <option value="bundled-python-sdk-47c6639f9d67-99d813433b97-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-251.25410.158" />
       </set>
     </attachedChunks>
   </component>
