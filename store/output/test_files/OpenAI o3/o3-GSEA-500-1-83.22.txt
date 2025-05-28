@@ -1,0 +1,29 @@
+Axon Guidance and Neurite Outgrowth:  
+Nrp1, Nrp2, Slit2, Robo2, Ntn1, Efna5, Plxnb1, Sema4f, Sema3g, Cntn6, Dpysl3, Dpysl5, Srgap1, Vangl2, Lrrtm3, Tnik, Kif1a, Piezo2, Itga8, Itga6, Itga7, Fras1,  
+
+Synaptic Transmission and Plasticity:  
+Adcy1, Drd4, Ryr3, P2ry2, Scn7a, Chrna3, Piezo2, Gprc5a, Gprc5b, Lpar1, Prkar2b, Ppp1r14c, Cdk5r1, Snap29, Synpr, Sncg, Synj2bp, Synm, Vgf, Atf3, Klf9, Numb, Pfn2,  
+
+Myelination and Schwann Cell Biology:  
+Mbp, Mag, Mpz, Plp1, Pmp22, Gldn, Drp2, Mal, Cd9, Cd151, Lifr, Lrp2, Adamtsl1, Gprc5b, Efemp2, Gja1, Prx,  
+
+PI3K-Akt/mTOR Neural Survival Signaling:  
+Itga6, Itga7, Itga8, Lrp2, Ppp2r5e, Ppp2r5c, Pak2, Mapk1, Map2k6, Map4k5, Dyrk1a, Nuak1, Mark3, Rrm2, Atf5, Txnrd2, Trim35,  
+
+Wnt/PCP Signaling in Neural Development:  
+Wnt5a, Lef1, Vangl2, Tnik, Dvl1 (implicit via Tnik), Plxnb1, Rarb, Zfp410, Prickle3, Ccn3, Ccn4,  
+
+Calcium and cAMP Second Messenger Pathway:  
+Ryr3, Adcy1, Prkar2b, Ppp1r14c, Ppp1r36, Pk ia, Gnai1, Itpripl1, P2ry2, Chrna3, Drd4, Piezo2,  
+
+Neurotrophin/ERK-MAPK Signaling:  
+Mapk1, Map2k6, Map4k5, Dyrk1a, Atf3, Atf5, Epas1, Lifr, Tnik, Frrs1, Hif1a, Eif2ak2,  
+
+Lipid and Cholesterol Metabolism Supporting Myelin:  
+Abca8a, Abcb4, Apod, A2m, Aldh1a1, Nampt, Sqor, Txnrd2, Fabp5, Hadhb, Hadha, Scd, Bdh1, Pnpla2, Txnrd2,  
+
+Extracellular Matrix and Axon-Glia Interaction:  
+Col15a1, Col20a1, Col11a1, Col9a3, Col8a2, Adamts17, Adamtsl1, Adamtsl3, Adam15, Efemp2, Emilin1, Fras1, Nid2, Hapln1, Matn3, Bgn, Fn1, Thbs2, Mfap5, Ltbp1, Timp1, Ccn3, Ccn4,  
+
+Inflammation and Neuroimmune Modulation in Neural Tissue:  
+Cxcl12, Cxcl14, Cxcl16, Tlr3, Ifnar1, Nlrp1a, Tnfrsf1a, Parp14, Serpine1, Serpinf1, Atf3, Trim35, Siglec10, Ighm, A2m,  

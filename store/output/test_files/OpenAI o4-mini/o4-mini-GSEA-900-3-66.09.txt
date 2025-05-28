@@ -1,0 +1,14 @@
+Axon Guidance:  
+Sema4f, Sema3g, Plxnb1, Plxna4, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Cntn6  
+
+Myelination and Myelin Sheath Formation:  
+Mbp, Mpz, Pmp22, Plp1, Mag, Prx  
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:  
+Vamp2, Snap29, Synpr, Synj2bp, Ncs1, Stxbp6  
+
+MAPK- and Ca2+-Dependent Synaptic Plasticity:  
+Mapk1, Map2k6, Map4k5, Camk4, Camk1d, Mef2c, Atf3, Atf4, Atf5, Bdnf  
+
+GPCR-Mediated Neuronal Signaling:  
+Drd4, P2ry2, Gnai1, Gng2, Gng11, Gprc5a, Gprc5b, Gpr176

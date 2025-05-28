@@ -1,0 +1,29 @@
+Axon Guidance:
+Sema4f, Sema3g, Ntn1, Slit2, Robo2, Plxnb1, Nrp1, Nrp2, Efna5, Cntn6, Cdh13,
+
+GPCR Signaling:
+Gnai1, Gprc5a, Gprc5b, Drd4, P2ry2,
+
+Synaptic Transmission:
+Snap29, Synm, Synpr, Vgf, Ryr3, Itpripl1,
+
+Myelin Sheath:
+Mpz, Mbp, Plp1, Mag, Gldn, Mal, Drp2, Cldn19,
+
+Cholesterol Metabolism:
+Apod, Abca8a, Abcb4, Lrp2, Tf, Igfbp3,
+
+Extracellular Matrix Organization:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Efemp2, Hapln1, Matn3, Emilin1, Mfap5, Adamts17, Adamtsl1, Adamtsl3, Has2,
+
+Regulation of Actin Cytoskeleton:
+Acta2, Pfn2, Prex2,
+
+Calcium Signaling:
+Ryr3, Itpripl1, Piezo2,
+
+Wnt Signaling:
+Wnt5a, Lef1, Prickle3,
+
+MAPK Signaling:
+Atf3, Atf5, Tnik,

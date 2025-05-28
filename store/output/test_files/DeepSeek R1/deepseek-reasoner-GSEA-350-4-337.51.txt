@@ -1,0 +1,718 @@
+Pathway Name: Myelin Formation and Maintenance  
+Mag, Pmp22, Prx, Mpz,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Fabp5, Abca8a, Scd, Sgms1, Serpine1, Htra1, Hif1a,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1,  
+
+Pathway Name: Schwann Cell Differentiation and Neural Crest Migration  
+Ebf1, Col9a3, Col15a1, Col20a1, Hapln1,  
+
+Pathway Name: Synaptic Plasticity and Neural Signaling  
+Synpr, Grb14, Eif2ak2, Sumo3, Adcy1,  
+
+Pathway Name: Autophagy and Lysosomal Degradation  
+Psap, Htra1, Ctsb,  
+
+Pathway Name: PPAR Signaling and Lipid Homeostasis  
+Fabp5, Scd,  
+
+Pathway Name: Extracellular Matrix Organization  
+Emilin1, Col9a3, Col15a1, Col20a1,  
+
+Pathway Name: Inflammatory Response and Microglial Activation  
+Aif1l, C1qtnf1, Timp1,  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Lef1,  
+
+Pathway Name: Hypoxia-Inducible Factor Signaling  
+Hif1a,  
+
+Pathway Name: Neural Crest Cell Migration  
+Sox10, Nrp1, Nrp2,  
+
+Pathway Name: Lysosomal and Proteasomal Pathways  
+Psap, Htra1, Sumo3,  
+
+Pathway Name: Sphingolipid Metabolism  
+Sgms1,  
+
+Pathway Name: ERK/MAPK Signaling  
+Grb14,  
+
+Pathway Name: Integrin Signaling and Cell Adhesion  
+Itga6, Itga7, Itga8,  
+
+Pathway Name: Notch Signaling Pathway  
+Dtx4,  
+
+Pathway Name: Neurotrophin Signaling  
+Ntrk1,  
+
+Pathway Name: TGF-beta Signaling  
+Ltbp1,  
+
+Pathway Name: Glutamate Metabolism  
+Gls,  
+
+Pathway Name: Voltage-Gated Ion Channel Activity  
+Scn7a,  
+
+Pathway Name: Regulation of Apoptosis  
+Bcl2,  
+
+Pathway Name: Cytoskeleton Organization  
+Tubb4a, Tuba4a,  
+
+Pathway Name: RNA Processing and Metabolism  
+Pum2,  
+
+Pathway Name: Oxidative Stress Response  
+Sod1,  
+
+Pathway Name: Cell Cycle Regulation  
+Cdk5r1,  
+
+Pathway Name: G Protein-Coupled Receptor Signaling  
+Gprc5a, Gprc5b,  
+
+Pathway Name: Fatty Acid Oxidation  
+Acadm,  
+
+Pathway Name: Neurotransmitter Transport  
+Slc6a4,  
+
+Pathway Name: DNA Repair  
+Msh2,  
+
+Pathway Name: Angiogenesis  
+Vegfa,  
+
+Pathway Name: Regulation of Transcription  
+Ebf1,  
+
+Pathway Name: Ion Transport  
+Abcb4,  
+
+Pathway Name: Cell Proliferation and Differentiation  
+Igf2bp2,  
+
+Pathway Name: Immune Response  
+Ifnar1,  
+
+Pathway Name: Calcium Signaling  
+Ryr3,  
+
+Pathway Name: Proteoglycan Metabolism  
+Chst2,  
+
+Pathway Name: Neurogenesis  
+Nes,  
+
+Pathway Name: Axonal Transport  
+Kif1a,  
+
+Pathway Name: Lipid Raft Dynamics  
+Flot1,  
+
+Pathway Name: Mitochondrial Function  
+Hadhb,  
+
+Pathway Name: Regulation of Synaptic Transmission  
+Synpr,  
+
+Pathway Name: Cell Adhesion Molecules  
+Cdh13,  
+
+Pathway Name: Regulation of Cell Migration  
+Cxcl12,  
+
+Pathway Name: Regulation of Cell Growth  
+Ccn3,  
+
+Pathway Name: Regulation of Cell Death  
+Bax,  
+
+Pathway Name: Regulation of Cell Differentiation  
+Id2,  
+
+Pathway Name: Regulation of Cell Senescence  
+Cdkn1a,  
+
+Pathway Name: Regulation of Cell Motility  
+Rhoj,  
+
+Pathway Name: Regulation of Cell Polarity  
+Pals1,  
+
+Pathway Name: Regulation of Cell Junction Assembly  
+Cldn19,  
+
+Pathway Name: Regulation of Cell Matrix Adhesion  
+Itgb1,  
+
+Pathway Name: Regulation of Cell Surface Receptor Signaling  
+Lrp2,  
+
+Pathway Name: Regulation of Cell Projection Organization  
+Dpysl3,  
+
+Pathway Name: Regulation of Cell Communication  
+Gja1,  
+
+Pathway Name: Regulation of Cell Development  
+Ebf1,  
+
+Pathway Name: Regulation of Cell Morphogenesis  
+Dpysl5,  
+
+Pathway Name: Regulation of Cell Signaling  
+Grb14,  
+
+Pathway Name: Regulation of Cell Metabolism  
+Pfkp,  
+
+Pathway Name: Regulation of Cell Homeostasis  
+Hsp90aa1,  
+
+Pathway Name: Regulation of Cell Stress Response  
+Hspa12a,  
+
+Pathway Name: Regulation of Cell Survival  
+Bcl2l1,  
+
+Pathway Name: Regulation of Cell Cycle Progression  
+Cdk5r1,  
+
+Pathway Name: Regulation of Cell Death Signaling  
+Fas,  
+
+Pathway Name: Regulation of Cell Inflammatory Response  
+Tnfrsf1a,  
+
+Pathway Name: Regulation of Cell Immune Response  
+Ighm,  
+
+Pathway Name: Regulation of Cell Defense Response  
+Irf7,  
+
+Pathway Name: Regulation of Cell Detoxification  
+Gstp1,  
+
+Pathway Name: Regulation of Cell Redox Balance  
+Txnrd2,  
+
+Pathway Name: Regulation of Cell Energy Metabolism  
+Pgam1,  
+
+Pathway Name: Regulation of Cell Biosynthetic Process  
+Pmp22,  
+
+Pathway Name: Regulation of Cell Catabolic Process  
+Ctsd,  
+
+Pathway Name: Regulation of Cell Transport  
+Slc39a13,  
+
+Pathway Name: Regulation of Cell Secretion  
+Cpe,  
+
+Pathway Name: Regulation of Cell Exocytosis  
+Rab10,  
+
+Pathway Name: Regulation of Cell Endocytosis  
+Cltc,  
+
+Pathway Name: Regulation of Cell Vesicle-Mediated Transport  
+Vps26c,  
+
+Pathway Name: Regulation of Cell Membrane Organization  
+Cd9,  
+
+Pathway Name: Regulation of Cell Organelle Organization  
+Dnm1l,  
+
+Pathway Name: Regulation of Cell Nucleus Organization  
+Nup62,  
+
+Pathway Name: Regulation of Cell Cytoskeleton Organization  
+Tubb4a,  
+
+Pathway Name: Regulation of Cell Extracellular Matrix Organization  
+Col8a2,  
+
+Pathway Name: Regulation of Cell Cell Junction Organization  
+Cldn19,  
+
+Pathway Name: Regulation of Cell Tight Junction  
+Cldn19,  
+
+Pathway Name: Regulation of Cell Gap Junction  
+Gja1,  
+
+Pathway Name: Regulation of Cell Adherens Junction  
+Cdh13,  
+
+Pathway Name: Regulation of Cell Focal Adhesion  
+Itga6,  
+
+Pathway Name: Regulation of Cell Collagen Metabolic Process  
+Col11a1,  
+
+Pathway Name: Regulation of Cell Proteoglycan Metabolic Process  
+Chst2,  
+
+Pathway Name: Regulation of Cell Glycosaminoglycan Metabolic Process  
+Chst2,  
+
+Pathway Name: Regulation of Cell Sphingolipid Metabolic Process  
+Sgms1,  
+
+Pathway Name: Regulation of Cell Phospholipid Metabolic Process  
+Pla2g4a,  
+
+Pathway Name: Regulation of Cell Steroid Metabolic Process  
+Cyp51,  
+
+Pathway Name: Regulation of Cell Fatty Acid Metabolic Process  
+Fabp5,  
+
+Pathway Name: Regulation of Cell Cholesterol Metabolic Process  
+Abca8a,  
+
+Pathway Name: Regulation of Cell Amino Acid Metabolic Process  
+Gldc,  
+
+Pathway Name: Regulation of Cell Nucleotide Metabolic Process  
+Rrm2,  
+
+Pathway Name: Regulation of Cell Carbohydrate Metabolic Process  
+Manba,  
+
+Pathway Name: Regulation of Cell Vitamin Metabolic Process  
+Aldh1a1,  
+
+Pathway Name: Regulation of Cell Cofactor Metabolic Process  
+Fth1,  
+
+Pathway Name: Regulation of Cell Heme Metabolic Process  
+Hmbs,  
+
+Pathway Name: Regulation of Cell Iron Ion Homeostasis  
+Fth1,  
+
+Pathway Name: Regulation of Cell Zinc Ion Homeostasis  
+Slc39a13,  
+
+Pathway Name: Regulation of Cell Calcium Ion Homeostasis  
+Ryr3,  
+
+Pathway Name: Regulation of Cell Sodium Ion Transport  
+Scn7a,  
+
+Pathway Name: Regulation of Cell Potassium Ion Transport  
+Kcnj10,  
+
+Pathway Name: Regulation of Cell Chloride Ion Transport  
+Clca4l,  
+
+Pathway Name: Regulation of Cell Proton Transport  
+Atp6v1a,  
+
+Pathway Name: Regulation of Cell Electron Transport Chain  
+Ndufs1,  
+
+Pathway Name: Regulation of Cell Oxidative Phosphorylation  
+Cox5a,  
+
+Pathway Name: Regulation of Cell Glycolysis  
+Pfkp,  
+
+Pathway Name: Regulation of Cell Gluconeogenesis  
+Pck1,  
+
+Pathway Name: Regulation of Cell Tricarboxylic Acid Cycle  
+Idh3a,  
+
+Pathway Name: Regulation of Cell Pentose Phosphate Pathway  
+G6pd,  
+
+Pathway Name: Regulation of Cell Fatty Acid Beta-Oxidation  
+Acadm,  
+
+Pathway Name: Regulation of Cell Amino Acid Catabolism  
+Gldc,  
+
+Pathway Name: Regulation of Cell Nucleotide Biosynthesis  
+Rrm2,  
+
+Pathway Name: Regulation of Cell DNA Replication  
+Mcm2,  
+
+Pathway Name: Regulation of Cell DNA Repair  
+Msh2,  
+
+Pathway Name: Regulation of Cell Transcription  
+Ebf1,  
+
+Pathway Name: Regulation of Cell RNA Processing  
+Pum2,  
+
+Pathway Name: Regulation of Cell Translation  
+Eif2ak2,  
+
+Pathway Name: Regulation of Cell Protein Folding  
+Hsp90aa1,  
+
+Pathway Name: Regulation of Cell Protein Degradation  
+Psma2,  
+
+Pathway Name: Regulation of Cell Protein Transport  
+Rab10,  
+
+Pathway Name: Regulation of Cell Protein Localization  
+Vps26c,  
+
+Pathway Name: Regulation of Cell Protein Modification  
+Sumo3,  
+
+Pathway Name: Regulation of Cell Signal Transduction  
+Grb14,  
+
+Pathway Name: Regulation of Cell Receptor Signaling  
+Lrp2,  
+
+Pathway Name: Regulation of Cell Growth Factor Signaling  
+Igfbp3,  
+
+Pathway Name: Regulation of Cell Cytokine Signaling  
+Il6st,  
+
+Pathway Name: Regulation of Cell Chemokine Signaling  
+Cxcl12,  
+
+Pathway Name: Regulation of Cell Hormone Signaling  
+Ghr,  
+
+Pathway Name: Regulation of Cell Neurotransmitter Signaling  
+Adcy1,  
+
+Pathway Name: Regulation of Cell Peptide Hormone Signaling  
+Insr,  
+
+Pathway Name: Regulation of Cell Steroid Hormone Signaling  
+Ar,  
+
+Pathway Name: Regulation of Cell Retinoic Acid Signaling  
+Aldh1a1,  
+
+Pathway Name: Regulation of Cell Thyroid Hormone Signaling  
+Thra,  
+
+Pathway Name: Regulation of Cell Vitamin D Signaling  
+Vdr,  
+
+Pathway Name: Regulation of Cell Wnt Signaling  
+Wnt5a,  
+
+Pathway Name: Regulation of Cell Notch Signaling  
+Dtx4,  
+
+Pathway Name: Regulation of Cell Hedgehog Signaling  
+Ptch1,  
+
+Pathway Name: Regulation of Cell TGF-beta Signaling  
+Ltbp1,  
+
+Pathway Name: Regulation of Cell BMP Signaling  
+Bmpr2,  
+
+Pathway Name: Regulation of Cell FGF Signaling  
+Fgfr1,  
+
+Pathway Name: Regulation of Cell EGF Signaling  
+Egfr,  
+
+Pathway Name: Regulation of Cell NGF Signaling  
+Ngfr,  
+
+Pathway Name: Regulation of Cell PDGF Signaling  
+Pdgfra,  
+
+Pathway Name: Regulation of Cell Insulin Signaling  
+Irs1,  
+
+Pathway Name: Regulation of Cell MAPK Signaling  
+Mapk1,  
+
+Pathway Name: Regulation of Cell PI3K-AKT Signaling  
+Akt1,  
+
+Pathway Name: Regulation of Cell JAK-STAT Signaling  
+Jak1,  
+
+Pathway Name: Regulation of Cell NF-kappaB Signaling  
+Nfkbia,  
+
+Pathway Name: Regulation of Cell Hippo Signaling  
+Yap1,  
+
+Pathway Name: Regulation of Cell cAMP Signaling  
+Adcy1,  
+
+Pathway Name: Regulation of Cell cGMP Signaling  
+Pde5a,  
+
+Pathway Name: Regulation of Cell Calcium Signaling  
+Ryr3,  
+
+Pathway Name: Regulation of Cell IP3 Signaling  
+Itpr1,  
+
+Pathway Name: Regulation of Cell Dopamine Signaling  
+DrD2,  
+
+Pathway Name: Regulation of Cell Serotonin Signaling  
+Htr2a,  
+
+Pathway Name: Regulation of Cell GABA Signaling  
+Gabra1,  
+
+Pathway Name: Regulation of Cell Glutamate Signaling  
+Gria1,  
+
+Pathway Name: Regulation of Cell Acetylcholine Signaling  
+Chrna3,  
+
+Pathway Name: Regulation of Cell Histamine Signaling  
+Hrh1,  
+
+Pathway Name: Regulation of Cell Adenosine Signaling  
+Adora2a,  
+
+Pathway Name: Regulation of Cell Cannabinoid Signaling  
+Cnr1,  
+
+Pathway Name: Regulation of Cell Opioid Signaling  
+Oprm1,  
+
+Pathway Name: Regulation of Cell Purinergic Signaling  
+P2ry2,  
+
+Pathway Name: Regulation of Cell Endocannabinoid Signaling  
+Faah,  
+
+Pathway Name: Regulation of Cell Ephrin Signaling  
+Epha4,  
+
+Pathway Name: Regulation of Cell Netrin Signaling  
+Ntn1,  
+
+Pathway Name: Regulation of Cell Slit-Robo Signaling  
+Slit2,  
+
+Pathway Name: Regulation of Cell Semaphorin Signaling  
+Sema4f,  
+
+Pathway Name: Regulation of Cell Integrin Signaling  
+Itga6,  
+
+Pathway Name: Regulation of Cell Cadherin Signaling  
+Cdh13,  
+
+Pathway Name: Regulation of Cell Gap Junction Signaling  
+Gja1,  
+
+Pathway Name: Regulation of Cell Tight Junction Signaling  
+Cldn19,  
+
+Pathway Name: Regulation of Cell Focal Adhesion Signaling  
+Itga6,  
+
+Pathway Name: Regulation of Cell Extracellular Matrix Signaling  
+Col9a3,  
+
+Pathway Name: Regulation of Cell Cytoskeleton Signaling  
+Tubb4a,  
+
+Pathway Name: Regulation of Cell Apoptosis Signaling  
+Bax,  
+
+Pathway Name: Regulation of Cell Autophagy Signaling  
+Atg5,  
+
+Pathway Name: Regulation of Cell Necroptosis Signaling  
+Ripk1,  
+
+Pathway Name: Regulation of Cell Ferroptosis Signaling  
+Gpx4,  
+
+Pathway Name: Regulation of Cell Pyroptosis Signaling  
+Nlrp3,  
+
+Pathway Name: Regulation of Cell Senescence Signaling  
+Cdkn1a,  
+
+Pathway Name: Regulation of Cell Differentiation Signaling  
+Id2,  
+
+Pathway Name: Regulation of Cell Proliferation Signaling  
+Ccn3,  
+
+Pathway Name: Regulation of Cell Migration Signaling  
+Cxcl12,  
+
+Pathway Name: Regulation of Cell Invasion Signaling  
+Mmp2,  
+
+Pathway Name: Regulation of Cell Angiogenesis Signaling  
+Vegfa,  
+
+Pathway Name: Regulation of Cell Inflammation Signaling  
+Tnfrsf1a,  
+
+Pathway Name: Regulation of Cell Immune Response Signaling  
+Ighm,  
+
+Pathway Name: Regulation of Cell Stress Response Signaling  
+Hsp90aa1,  
+
+Pathway Name: Regulation of Cell DNA Damage Response Signaling  
+Atm,  
+
+Pathway Name: Regulation of Cell Oxidative Stress Response Signaling  
+Sod1,  
+
+Pathway Name: Regulation of Cell Hypoxia Response Signaling  
+Hif1a,  
+
+Pathway Name: Regulation of Cell Nutrient Response Signaling  
+Mtor,  
+
+Pathway Name: Regulation of Cell Energy Stress Response Signaling  
+Prkaa1,  
+
+Pathway Name: Regulation of Cell ER Stress Response Signaling  
+Hspa5,  
+
+Pathway Name: Regulation of Cell Unfolded Protein Response Signaling  
+Xbp1,  
+
+Pathway Name: Regulation of Cell Heat Shock Response Signaling  
+Hsp90aa1,  
+
+Pathway Name: Regulation of Cell Cold Shock Response Signaling  
+Cirbp,  
+
+Pathway Name: Regulation of Cell Osmotic Stress Response Signaling  
+Aqp4,  
+
+Pathway Name: Regulation of Cell Mechanical Stress Response Signaling  
+Piezo2,  
+
+Pathway Name: Regulation of Cell pH Stress Response Signaling  
+Slc9a9,  
+
+Pathway Name: Regulation of Cell Ionizing Radiation Response Signaling  
+Atm,  
+
+Pathway Name: Regulation of Cell UV Response Signaling  
+Xpa,  
+
+Pathway Name: Regulation of Cell Chemical Stress Response Signaling  
+Gstp1,  
+
+Pathway Name: Regulation of Cell Drug Response Signaling  
+Abcb1,  
+
+Pathway Name: Regulation of Cell Toxin Response Signaling  
+Cyp1a1,  
+
+Pathway Name: Regulation of Cell Pathogen Response Signaling  
+Tlr3,  
+
+Pathway Name: Regulation of Cell Viral Response Signaling  
+Ifnar1,  
+
+Pathway Name: Regulation of Cell Bacterial Response Signaling  
+Tlr4,  
+
+Pathway Name: Regulation of Cell Fungal Response Signaling  
+Clec7a,  
+
+Pathway Name: Regulation of Cell Protozoan Response Signaling  
+Tlr11,  
+
+Pathway Name: Regulation of Cell Parasite Response Signaling  
+Il4,  
+
+Pathway Name: Regulation of Cell Allergen Response Signaling  
+Il13,  
+
+Pathway Name: Regulation of Cell Autoimmune Response Signaling  
+Hla-dr,  
+
+Pathway Name: Regulation of Cell Transplant Rejection Signaling  
+Hla-a,  
+
+Pathway Name: Regulation of Cell Graft-versus-Host Disease Signaling  
+Hla-b,  
+
+Pathway Name: Regulation of Cell Immune Tolerance Signaling  
+Foxp3,  
+
+Pathway Name: Regulation of Cell Immune Evasion Signaling  
+Pdcd1,  
+
+Pathway Name: Regulation of Cell Antigen Presentation Signaling  
+Hla-dm,  
+
+Pathway Name: Regulation of Cell T Cell Activation Signaling  
+Cd3e,  
+
+Pathway Name: Regulation of Cell B Cell Activation Signaling  
+Cd19,  
+
+Pathway Name: Regulation of Cell NK Cell Activation Signaling  
+Ncr1,  
+
+Pathway Name: Regulation of Cell Macrophage Activation Signaling  
+Cd68,  
+
+Pathway Name: Regulation of Cell Dendritic Cell Activation Signaling  
+Cd83,  
+
+Pathway Name: Regulation of Cell Neutrophil Activation Signaling  
+Cd177,  
+
+Pathway Name: Regulation of Cell Mast Cell Activation Signaling  
+Fcer1a,  
+
+Pathway Name: Regulation of Cell Eosinophil Activation Signaling  
+Il5ra,  
+
+Pathway Name: Regulation of Cell Basophil Activation Signaling  
+Fcer1a,  
+
+Pathway Name: Regulation of Cell Platelet Activation Signaling  
+Itga2b,  
+
+Pathway Name: Regulation of Cell Erythrocyte Activation Signaling  
+Epor,  
+
+Pathway Name: Regulation of Cell Endothelial Cell Activation Signaling  
+Sele,  
+
+Pathway Name: Regulation of Cell Epithelial Cell Activation Signaling  
+Krt8,  
+
+Pathway Name: Regulation of Cell Fibroblast Activation Signaling  
+Acta2,  
+
+Pathway Name: Regulation of Cell Smooth Muscle Cell Activation Signaling  
+Acta2,  
+
+Pathway Name: Regulation of Cell Skeletal Muscle Cell Activation Signaling  

@@ -1,0 +1,17 @@
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Dpysl5, Dpysl3, Cdh13, Wnt5a, Lef1,  
+
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Mag, Mpz, Prx, Hapln1, Lrp2, Emp2, Gprc5b, Mal, Cldn19, Col9a3, Col15a1, Col20a1,  
+
+Pathway Name: Cholesterol/Lipid Metabolism and PPAR Signaling  
+Ppard, Fabp5, Abca8a, Apod, Gldc, Steap2, Scd, Pltp, Htra1, Mal, Hs6st1, Hs6st2,  
+
+Pathway Name: Synaptic Plasticity and Ion Channel Activity  
+Synpr, Grb14, Dyrk1a, Piezo2, Gprc5b, Ebf1, Nrp1, Nrp2, P2ry2, Sumo3, Clca4l, Ano5,  
+
+Pathway Name: Neural Crest Development and ECM Organization  
+Col9a3, Col15a1, Col20a1, Hapln1, Emp2, Sncg, Matn3, Emilin1, Bgn, Timp1, Cpe,  
+
+Pathway Name: Lysosomal/Proteasomal Degradation  
+Htra1, Sumo3, Psap,

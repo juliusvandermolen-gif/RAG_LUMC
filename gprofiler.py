@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import requests
-from RAG_workflow import initialize_gene_list, extract_gene_descriptions, load_config
+from RAG_workflow import initialize_gene_list, load_config
 import argparse
 
 
@@ -101,10 +101,11 @@ if __name__ == "__main__":
     globals().update(config)
 
     print(f"Using config: {config_name}")
-
-    gene_list_string, regulation, num_genes = initialize_gene_list(max_genes=max_genes, fdr_threshold=fdr_threshold)
+    max_genes_value = ""
+    for i in max_genes:
+        max_genes_value = i
+    gene_list_string, regulation, num_genes = initialize_gene_list(max_genes=max_genes_value, fdr_threshold=fdr_threshold)
     print(f"Number of genes: {num_genes}")
-    gene_descriptions = extract_gene_descriptions(gene_list_string)
 
     genes = [gene.strip() for gene_list in gene_list_string.split(',')
              for gene in gene_list.split() if gene.strip()]
@@ -138,8 +139,8 @@ if __name__ == "__main__":
 
             # Final DataFrame with desired columns:
             df_final = df_api_best[["Pathway", "description", "annotation term", "source", "p-value", "genes"]]
-            os.makedirs("./output/text_files", exist_ok=True)
-            output_path = "./output/text_files/ground_truth_pathways.txt"
+            os.makedirs("./output/results", exist_ok=True)
+            output_path = "./output/results/ground_truth_pathways.txt"
             #df_final[["Pathway", "annotation term", "genes"]].to_csv(output_path, sep="\t", index=False)
             df_final[["Pathway", "annotation term"]].to_csv(output_path, sep="\t", index=False)
             print(f"Output written to {output_path}")

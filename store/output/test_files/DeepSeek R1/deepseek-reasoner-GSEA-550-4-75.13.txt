@@ -1,0 +1,47 @@
+Pathway Name: Myelin Formation and Maintenance  
+PMP22, MAG, MBP, MPZ, PLP1, MAL, PRX, SEPTIN4, LRP2, CLDN19, CD9, GJA1, SEPTIN5, PLLP, CNTN6  
+
+Pathway Name: Axon Guidance and Neural Crest Migration  
+NRP1, NRP2, SEMA4F, SEMA3G, SLIT2, ROBO2, EFNA5, CDH13, MET, MEF2C, PLXNB1, NTN1, L1CAM, ADAMTSL3, COL4A3BP  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+APOD, ABCA8A, PLTP, SCD, FABP5, LRP2, HTRA1, SQOR, LPL, PLPP3, CYP46A1  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+SYNPR, SNAP29, BDNF, GRB14, ADCY1, P2RY2, GABPA, GRIN2B, SLC9A9, RYR3, SLC17A7, GRM5  
+
+Pathway Name: Lysosomal and Proteasomal Degradation  
+CTSD, CTSL, CTSF, PSAP, LAMP1, CLCN3, HEXB, NPC2, ATP6V1D  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+HSP90AA1, HSPA12A, SERPINF1, ATF3, EIF2AK2, XBP1, DNAJB1, CALR, PDIA4  
+
+Pathway Name: Extracellular Matrix Organization  
+COL9A3, COL15A1, COL11A1, MATN3, EMILIN1, HAPLN1, LAMA2, FN1, THBS2, SPARC  
+
+Pathway Name: Wnt Signaling and Neural Development  
+WNT5A, LEF1, CCND1, FZD3, DVL1, TCF7L2, SFRP1, VANGL2, APC  
+
+Pathway Name: Ion Transport and Channel Activity  
+SCN7A, P2RY2, TPCN1, KCNJ10, CACNA1D, TRPM3, SLC12A5, KCNQ3  
+
+Pathway Name: Neural Cell Adhesion and Signaling  
+CNTN6, CDH13, PCDH18, L1CAM, NCAM1, CADM1, NRCAM, NFASC  
+
+Pathway Name: Neuroinflammation and Immune Regulation  
+AIF1L, C1QTNF1, C1S, TIMP1, CXCL12, CXCL14, ICOSLG, TLR3, CD55  
+
+Pathway Name: Lipid Raft and Membrane Dynamics  
+FLOT1, CAV3, STOM, MAL, MOG, GPM6A, PLP1, CLDN11, OMG  
+
+Pathway Name: Neurotrophic Factor Signaling  
+BDNF, NTF3, GDNF, NTRK2, NGFR, IGFBP3, FGF2, LIFR, CNTF  
+
+Pathway Name: Autophagy and Lysosomal Biogenesis  
+BECN1, MAP1LC3A, SQSTM1, UVRAG, ATG5, TFEB, LAMP2, CTSB, CTSD  
+
+Pathway Name: Notch Signaling and Schwann Cell Differentiation  
+NOTCH1, JAG1, HES1, HEY1, RBPJ, NUMB, DTX1, LFNG, MAML1  
+
+Pathway Name: Mitochondrial Energy Metabolism  
+HADHB, COX5A, SDHA, ATP5F1, NDUFS1, UQCRC1, CPT1A, PDHA1, SOD2

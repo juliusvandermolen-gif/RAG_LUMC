@@ -1,0 +1,17 @@
+Axon Guidance and Neurite Outgrowth:
+Slit2, Slit3, Robo2, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Plxna4, Efna5, Efna4, Epha4, Kif1a, Dpysl3, Dpysl5,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mag, Mbp, Mpz, Plp1, Drp2, Gldn, Tf, Id2, Mal, Cldn19,
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Vamp2, Rab3gap2, Snap29, Synpr, Kif1a, Synj2bp, Adcy1, Bdnf, Lrrtm3, Ppp4r3a,
+
+PI3K–MAPK Signaling in Neural Plasticity:
+Akt1, Hras, Sos1, Mapk1, Map2k6, Rasgrp3, Crkl, Pak1, Pak2, Stat3, Ppp2r5e, Ppp2r5c, Camk4,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Ctnnb1, Lef1, Vangl2, Tnik, Daam2, Rhoj,
+
+Cholesterol and Sphingolipid Metabolism in Myelin:
+Abca8a, Abca3, Abcb4, Ugt8, Apod, Agpat5, Cers6, Lrp2,

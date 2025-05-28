@@ -1,0 +1,20 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Itga8, Itga7, Kif1a, Tnik, Dpysl3, Dpysl5, Srgap1, Gnai1, Rhoj, Lrrtm3,
+
+Synaptic Transmission and Plasticity:
+Synpr, Serpini1, Cpe, Pam, Pcsk5, Prss12, Dyrk1a, Ryr3, Pfn2, Sipa1l1, Slc9a9, Map1lc3a, Msi1, Kif1a, Prkar2b, Tpcn1, Itpripl1, Nes, Srgap1, Frrs1, Ppfia4,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Drp2, Gldn, Mal,
+
+Extracellular Matrix and Integrin Signaling in Synaptogenesis:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Bgn, Efemp2, Emilin1, Htra1, Has2, Ccn3, Ccn4, Mfap5, Pxdn, Itga7, Itga8, Fhod3, Acap2, Asap1, Cdh13,
+
+Peptidergic Processing and Neurosecretory Pathway:
+Pcsk5, Prss12, Pam, Cpe, Serpini1, Ecel1,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Tnik,
+
+Calcium-Dependent Neuronal Signaling:
+Ryr3, Itpripl1, Gnai1, Prkar2b, Tpcn1, P2ry2, Piezo2,

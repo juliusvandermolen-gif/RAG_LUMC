@@ -24,6 +24,7 @@ import requests
 from tqdm import tqdm
 from dotenv import load_dotenv
 
+
 import nltk
 from nltk import sent_tokenize
 from nltk.corpus import stopwords
@@ -46,7 +47,8 @@ load_dotenv()
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
-os.environ["OMP_NUM_THREADS"] = "8"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
@@ -86,7 +88,7 @@ class ConfigError(Exception):
     pass
 
 
-def load_config(path: str) -> Dict[str, Any]:
+def load_config(path: str, print_settings: bool) -> Dict[str, Any]:
     """
     Load JSON config from `path`, enforce required keys,
     fill in defaults, print each key (excluding secrets) with its source,
@@ -97,6 +99,7 @@ def load_config(path: str) -> Dict[str, Any]:
         "batch_size":              64,
         "embeddings_model_name":   "mghuibregtse/biolinkbert-large-simcse-rat",
         "generation_model":        "o4-mini",
+        "validation_model": "grok-3-mini",
         "amount_docs":             50,
         "weight_faiss":            50,
         "weight_bm25":             50,
@@ -133,11 +136,12 @@ def load_config(path: str) -> Dict[str, Any]:
         logging.warning("Using default for: %s", ", ".join(sorted(missing_opt)))
 
     print(f"Using config: {Path(path).name} with these parameters:")
-    for k, v in merged.items():
-        if k in ("query", "system_instruction_response"):
-            continue
-        src = "user" if k in user_cfg else "default"
-        print(f"{k}: {v} (from {src} config)")
+    if print_settings:
+        for k, v in merged.items():
+            if k in ("query", "system_instruction_response"):
+                continue
+            src = "user" if k in user_cfg else "default"
+            print(f"{k}: {v} (from {src} config)")
 
     return merged
 
@@ -172,7 +176,7 @@ def compute_file_hash(file_path, block_size=65536):
     return hasher.hexdigest()
 
 
-def initialize_gene_list(max_genes, fdr_threshold, excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
+def initialize_gene_list(max_genes, fdr_threshold, excel_file_path=r"data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
                          de_filter_option="combined"):
     """
     Creates a list of genes from the specified Excel file based on filtering criteria.
@@ -594,8 +598,7 @@ def chunk_pdfs(single_document, gene_list=None, target_length=1000):
     if not sentences:
         return []
 
-    chunks = []
-    current_chunk = []
+    chunks, current_chunk = [], []
     current_length = 0
 
     for sentence in sentences:
@@ -696,7 +699,7 @@ def load_embeddings_model_and_tokenizer(force_download=False):
     embeddings_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
     return tokenizer, embeddings_model
 
-
+#TODO See whether you can edit it for more modular approach
 def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
     """
     Loads documents from files in the specified directory that are either gzipped or in .gmt format.
@@ -812,9 +815,14 @@ def embed_documents(conn, index, tokenizer, embeddings_model, data_dir,
 
     all_documents = files_documents + pdf_documents
 
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if device.type != 'cuda':
-        print(f"No GPU available. Using {device} for embedding.")
+    device = (
+        torch.device("mps")
+        if torch.backends.mps.is_available()
+        else torch.device("cuda")
+        if torch.cuda.is_available()
+        else torch.device("cpu")
+    )
+
     embeddings_model.to(device)
     embeddings_model.eval()
 
@@ -979,9 +987,14 @@ def query_faiss_index(query_text, index, tokenizer, embeddings_model, top_k, for
     Returns:
         A tuple containing the list of top document IDs and their corresponding distances.
     """
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if device.type != 'cuda':
-        print(f"No GPU available. Using {device} for embedding.")
+    device = (
+        torch.device("mps")
+        if torch.backends.mps.is_available()
+        else torch.device("cuda")
+        if torch.cuda.is_available()
+        else torch.device("cpu")
+    )
+
     loaded_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
     loaded_tokenizer = AutoTokenizer.from_pretrained(embeddings_model_name, force_download=force_download)
     if embeddings_model.config != loaded_model.config:
@@ -1352,7 +1365,7 @@ def query_llm(
                     model=generation_model,
                     messages=[{"role": "user", "content": adjusted}],
                     max_completion_tokens=32768,
-                    reasoning_effort="high",
+                    reasoning_effort="low",
                     **kwargs
                 )
                 answer = response.choices[0].message.content
@@ -1579,7 +1592,7 @@ def save_answer_to_file(answer, document_references, file_name="./output/results
         file_name: The file path where the answer will be saved.
     """
     with open(file_name, "w", encoding='utf-8') as answer_file:
-        answer_file.write(f"Answer:\n{answer}\n\n")
+        answer_file.write(answer)
     print(f"Answer saved to {file_name}")
     with open("./output/results/documents.txt", "w", encoding='utf-8') as answer_file:
         for idx, doc in enumerate(document_references, start=1):
@@ -1697,7 +1710,7 @@ def main():
     )
     args = parser.parse_args()
 
-    config = load_config(args.config)
+    config = load_config(args.config, print_settings=True)
     config_name = os.path.splitext(os.path.basename(args.config))[0]
     globals()['config_name'] = config_name
     globals().update(config)
@@ -1708,7 +1721,7 @@ def main():
         gene_list_string, regulation, num_genes = initialize_gene_list(
             max_genes=current_max_genes,
             fdr_threshold=fdr_threshold,
-            excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
+            excel_file_path=r"./data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
             de_filter_option="combined",
         )
 

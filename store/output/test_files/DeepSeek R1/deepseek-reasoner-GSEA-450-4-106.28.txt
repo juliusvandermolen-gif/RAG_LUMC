@@ -1,0 +1,35 @@
+Pathway Name: Myelin Formation and Maintenance  
+Mag, Mbp, Mpz, Plp1, Mal,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1,  
+
+Pathway Name: Synaptic Plasticity and Transmission  
+Synpr, Dyrk1a, Adcy1, Piezo2, Vgf,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Abca8a, Abcb4, Scd, Apod, Pltp,  
+
+Pathway Name: Lysosomal and Proteolytic Pathways  
+Ctsd, Ctsl, Htra1, Lrp2, Serpini1,  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col20a1, Col11a1, Emilin1, Matn3,  
+
+Pathway Name: Wnt Signaling  
+Wnt5a, Lef1,  
+
+Pathway Name: Neuroinflammatory Response  
+Aif1l, C1qtnf1, C1qtnf2, Tnfrsf1a,  
+
+Pathway Name: Glial Cell Differentiation  
+Mef2c, Ebf1, Fabp5,  
+
+Pathway Name: Growth Factor Signaling  
+Igfbp3, Pdgfb, Efna5, Fstl1, Ccn3, Ccn4,  
+
+Pathway Name: Cell Adhesion and Migration  
+Cdh13, Cd9, Itga6, Itga7, Itga8, Ddr2,  
+
+Pathway Name: Extracellular Matrix Proteolysis  
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Timp1,

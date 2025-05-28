@@ -1,0 +1,29 @@
+Axon Guidance & Neural Pathfinding:
+Cntn6, Sema4f, Sema3g, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Srgap1, Dpysl5, Dpysl3, Wnt5a, Tnik, Itga8, Cdh13, Gldn, Gnai1, Met,
+
+Synaptic Transmission & Plasticity:
+Prss12, Synpr, Sncg, Kif1a, Pfn2, Septin4, P2ry2, Ryr3, Frrs1, Piezo2, Scn7a, Tpcn1, Cpe, Serpini1, Pam, Numb, Gja1, Lrrtm3, Prkar2b, Ppfia4, Ecel1,
+
+Myelination & Glial Biology:
+Mag, Mpz, Pmp22, Drp2, Prx, Itga7, Mal, Id2, Gldn, Tubb4a, Lrp2,
+
+Extracellular Matrix & Cell Adhesion:
+Zpld1, Tex101, Qsox1, Hapln1, Sbspon, Col9a3, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Pxdn, Col15a1, Col20a1, Matn3, Mfap5, Pappa, Htra1, Chst2, Emp2, Ccn3, Ccn4, Efemp2, Emilin1, Vash1, Prss23, Rcn3, Alpl, Parm1, Cdh13, Cd151, Cd9, Cldn19, Cldnd1, Itga8,
+
+Calcium & Mechanotransduction Signaling:
+Ryr3, P2ry2, Piezo2, Itpripl1, Tpcn1, Gnai1, Scn7a, Slc9a9,
+
+Neuroimmune & Cytokine Interaction:
+A2m, Igfbp3, Cxcl12, Cxcl14, Ighm, Ifnar1, Nlrp1a, Selplg, Timp1, Aif1l, C1qtnf1, Icoslg, Serpinf1, Defb29, Nfatc1, Psap,
+
+Lipid & Cholesterol Homeostasis:
+Cers6, Sgpl1, Abca8a, Abcb4, Apod, Serinc5, Agpat5, Psap, Hadhb, Nampt, Steap2, Pltp, Tf, Sqor, Man1a1,
+
+Cytoskeletal Dynamics & Intracellular Transport:
+Tuba4a, Tubb4a, Myo1d, Acta2, Tagln, Fhod3, Nek9, Rhoj, Asap1, Acap2, Kif1a, Septin4, Cobll1, Pkp1, Cep295nl, Snx6, Vps26c, Slc9a9, Phldb2,
+
+Transcriptional & Signal Regulators of Neural Development:
+Aldh1a1, Epas1, Dyrk1a, Mef2c, Klf9, Atf3, Atf5, Runx3, Ddx1, Msi1, Cdca7l, Eif2ak2, Rrm2, Sumo3, Trim35, Zfp518a, Aff3, Taf9b, Magea4, Magea9, Peg3, Ebf1, Prkd3, Lifr, Pcsk5, Ptgfr, Grb14, Gprc5a, Gprc5b, Rnf144a, Mageb16, Tspan4, Tspan5, Fbxo11, Vrk1, Ppm1f, Cggbp1, Vopp1, Tmem26, Nes, St3gal5, Nrbp1, Ppp1r36, Rnf144a,
+
+Metabolic & Mitochondrial Support:
+Gldc, Sqor, Manba, Ctbs, Steap2, Pnpt1, Hadhb, Aldh1a1, Man1a1, Msh2, Psmd2, Fth1, Hs6st2, Hs6st1, Arsg, Aig1, Nampt, Tent5c, Pxdn, St3gal5,

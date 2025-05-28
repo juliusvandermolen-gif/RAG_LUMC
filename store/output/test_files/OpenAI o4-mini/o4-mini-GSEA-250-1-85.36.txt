@@ -1,0 +1,26 @@
+Synaptic Transmission and Plasticity:
+Ryr3, Itpripl1, P2ry2, Synpr, Sncg, Cpe, Grb14, Gnai1, Atf3, Atf5, Mef2c, Nfatc1, Runx3,
+
+Axon Guidance and Growth Cone Signaling:
+Sema4f, Sema3g, Ntn1, Slit2, Robo2, Plxnb1, Nrp1, Nrp2, Cdh13, Itga7, Itga8,
+
+Myelination and Schwann Cell Development:
+Mpz, Mag, Mal, Prx, Drp2, Gldn, Cldn19, Nes,
+
+Extracellular Matrix Organization:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Mfap5, Emilin1, Bgn, Adamts17, Adamtsl3, Adamtsl1, Has2, Agpat5,
+
+Cholesterol and Sphingolipid Metabolism:
+Pltp, Apod, Abca8a, Abcb4, Sqor, Hadhb, Aldh1a1, Cers6, St3gal5, Steap2, Manba, Alpl,
+
+Growth Factor and Neurotrophin Signaling:
+Lifr, Ghr, Igfbp3, Igf2bp2, Tf, Pappa, Ccn3, Ccn4, Ptgfr, Tnfrsf1a,
+
+Wnt/β-Catenin Developmental Signaling:
+Wnt5a, Lef1, Dyrk1a, Ebf1, Klf9, Runx3,
+
+MAPK/ERK and PKA Crosstalk:
+Tnik, Dyrk1a, Prkar2b, Map1lc3a, Atf3, Atf5,
+
+GPCR-Mediated Second Messenger Signaling:
+P2ry2, Gnai1, Cxcl12, Cxcl14, Ptgfr

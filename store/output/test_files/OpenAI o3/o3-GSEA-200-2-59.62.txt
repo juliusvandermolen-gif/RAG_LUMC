@@ -1,0 +1,14 @@
+Axon Guidance and Synaptic Connectivity:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Ntn1, Robo2, Slit2, Srgap1, Dpysl3, Dpysl5, Lrrtm3, Itga8, Kif1a, Tnik,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Prx, Drp2, Mal, Gldn, Itga7, Abca8a, Cers6, Sgpl1, Lrp2, P2ry2,
+
+Synaptic Vesicle Trafficking and Neurotransmitter Release:
+Synpr, Cpe, Serpini1, Sncg, Kif1a, Vps26c, Pfn2, Ryr3, Tuba4a, Slc9a9, Psap, Tpcn1, Frrs1,
+
+Neural Extracellular Matrix Remodeling and Node Formation:
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Hapln1, Col9a3, Col15a1, Col20a1, Qsox1, Ltbp1, Mfap5, Emilin1, Pxdn, Ppfia4, Sbspon, Matn3, Efemp2,
+
+Neuronal Calcium Signaling and Mechanotransduction:
+Ryr3, Itpripl1, Piezo2, Scn7a, Gja1, Nfatc1, P2ry2,

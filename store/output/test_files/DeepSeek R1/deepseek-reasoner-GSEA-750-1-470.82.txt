@@ -1,0 +1,86 @@
+Peripheral Nervous System Myelination:  
+Mbp, Mag, Plp1, Pmp22, Prx, Mal, Gprc5b, Ebf1,  
+
+Axon Guidance and Semaphorin Signaling:  
+Sema4f, Sema3g, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Epha4,  
+
+Synaptic Plasticity and Neurotransmission:  
+Bdnf, Synpr, Adcy1, Drd4, Ryr3, Vamp2, Snap29,  
+
+Lipid Metabolism in Myelin Formation:  
+Sqor, Abca8a, Fabp5, Scd, Pltp, Apod,  
+
+Lysosomal Function in Neural Cells:  
+Ctsd, Ctsl, Ctsf, Gm2a, Npc2, Gba1,  
+
+Extracellular Matrix Organization in Neural Development:  
+Col9a3, Col15a1, Col5a2, Col14a1, Col7a1, Lama4, Fn1, Sparc, Bgn, Comp,  
+
+MAPK/ERK Signaling in Neural Differentiation:  
+Mapk1, Map2k6, Grb14, Pak2, Rps6ka5,  
+
+Neural Crest Cell Migration:  
+Robo2, Slit2, Mef2c, Disp1,  
+
+Glial Inflammatory Response:  
+Aif1l, C1qtnf1, Ccl7, Tnfrsf1a, Timp1,  
+
+Wnt Signaling in Neural Development:  
+Wnt5a, Lef1,  
+
+Ubiquitin-Mediated Protein Degradation:  
+Ube2l3, Ubqln2, Fbxo11, Trim35, Trim59, Trim21,  
+
+Calcium Signaling in Neurons:  
+Ryr3, Scn7a,  
+
+G Protein-Coupled Receptor Signaling in Neurotransmission:  
+Gprc5b, Gprc5a, Gpr176, Drd4, Lpar1,  
+
+Cell Adhesion and Neural Circuit Formation:  
+Cdh13, Itga6, Itga7, Itga8, Cd9, Cd151, Icam1,  
+
+RNA Processing in Neural Cells:  
+Eif2ak2, Eif5, Eif2s1, Pnpt1, Sf3b6, Eif2b5,  
+
+Oxidative Stress Response in Neuroglia:  
+Gstz1, Gstt2, Gstm5l, Txnrd2,  
+
+Vesicle Trafficking in Synapses:  
+Vamp2, Snap29, Stx11, Rab10, Sec24d,  
+
+Autophagy in Neural Maintenance:  
+Map1lc3a, Ctsd, Ctsl, Ctsf, Gba1,  
+
+Hedgehog Signaling in Development:  
+Disp1,  
+
+cAMP Signaling in Neuronal Regulation:  
+Adcy1, Prkar2b,  
+
+Apoptosis in Neural Development:  
+Bdnf, Casp3, Casp6, Casp12,  
+
+Neurotrophin Signaling Pathways:  
+Bdnf,  
+
+Ion Channel Activity in Neural Signaling:  
+Scn7a,  
+
+Collagen and ECM in Neural Tissues:  
+Col9a3, Col15a1, Col5a2, Col14a1, Col7a1, Lama4, Fn1, Sparc, Bgn, Comp,  
+
+Growth Factor Signaling in Neurogenesis:  
+Pdgfb, Met, Igf2bp2, Igfbp3,  
+
+DNA Repair in Neural Cells:  
+Msh2, Rad51d, Prim1,  
+
+Mitochondrial Function in Neurons:  
+Hadhb, Hadha,  
+
+Chromatin Remodeling in Neural Differentiation:  
+Hmcn1, Baz1a, Epas1,  
+
+Actin Cytoskeleton Regulation in Neurons:  
+Acta2, Tagln, Cfl2, Pfn2,

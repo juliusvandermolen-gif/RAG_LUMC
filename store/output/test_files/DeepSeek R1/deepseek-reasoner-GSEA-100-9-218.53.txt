@@ -1,0 +1,29 @@
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Mag, Mpz, Prx, Hapln1, Emp2, Drp2, Gldn, Ltbp1,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Nrp1, Cdh13, Ntn1, Robo2, Cntn6, Srgap1, Sbspon,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Aldh1a1, Sqor, Apod, Pltp, Abca8a, Gldc, Cobll1, Steap2, Abcb4,  
+
+Pathway Name: PPAR Signaling and Lipid Homeostasis  
+Abca8a, Pltp, Aldh1a1, Apod, Sumo3,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmitter Processing  
+Cpe, Synpr, Grb14, Pcsk5, Prss12, Ccn3, Nrp1,  
+
+Pathway Name: Extracellular Matrix Organization in Neural Tissues  
+Hapln1, Col9a3, Matn3, Mfap5, Efemp2, Adamts17, Qsox1, Adamtsl3,  
+
+Pathway Name: Hypoxia Response and Astrocyte Interaction  
+Epas1, Htra1, Aldh1a1, A2m, Serpinf1,  
+
+Pathway Name: Ion Channel and Mechanosensory Signaling  
+Piezo2, P2ry2, Scn7a, Clca4l, Abcb4, Abca8a,  
+
+Pathway Name: Cellular Stress and Unfolded Protein Response  
+Htra1, Sumo3, Eif2ak2, Atf3, Serpinf1, Serpini1,  
+
+Pathway Name: Neural Crest Cell Migration and Differentiation  
+Cdh13, Nrp1, Robo2, Sema4f, Peg3, Id2, Ntn1,

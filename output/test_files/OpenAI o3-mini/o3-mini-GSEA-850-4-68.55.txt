@@ -1,8 +1,0 @@
-Axon Guidance and Neural Connectivity:
-Cntn6, Sema4f, Ntn1, Robo2, Slit2, Sema3g, Plxnb1, Nrp1, Nrp2, Cdh13
-
-Synaptic Signaling and Plasticity:
-Synpr, Bdnf, Drd4, Grid2, Mef2c, Adcy1, Camk4, Ryr3, Grik5
-
-Axonal Transport and Cytoskeletal Organization:
-Tuba4a, Tubb4a, Kif1a, Drp2, Septin4, Rhoj, Asap1, Cobl, Dnm1l

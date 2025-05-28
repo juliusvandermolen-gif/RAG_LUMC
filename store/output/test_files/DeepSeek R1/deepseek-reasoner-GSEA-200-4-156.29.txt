@@ -1,0 +1,29 @@
+Pathway Name: Myelin Formation and Maintenance  
+MAG, MPZ, PRX, MAL, Hapln1, Pmp22, PLP1, MBP, P0, Cx32,  
+
+Pathway Name: Axon Guidance and Neural Crest Development  
+Sema4f, Nrp1, Nrp2, Slit2, Robo2, Cdh13, Wnt5a, Col9a3, Sema3g, Efemp2  
+
+Pathway Name: Cholesterol and Lipid Metabolism in Neural Cells  
+Aldh1a1, Apod, Abca8a, Sumo3, Cpe, Htra1, Ltbp1, Sqor, Scarb1, Pcsk5  
+
+Pathway Name: PPAR Signaling and Lipid Homeostasis  
+Aldh1a1, Rxra, Fabp7, Pparg, Acsl1, Lpl, Cd36  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Synpr, Dyrk1a, Grb14, Piezo2, Gprc5b, Adcyap1, Ntrk2, Grin2a  
+
+Pathway Name: Autophagy and Lysosomal Processing  
+Htra1, Atf3, Sumo3, Ctsb, Hspb1, Lamp2, Sqstm1  
+
+Pathway Name: Schwann Cell Differentiation and Myelination  
+Mag, Mpz, Prx, Mal, Sox10, Egr2, Krox20, Oct6, Brn2  
+
+Pathway Name: Neural Crest Cell Migration and PNS Development  
+Sema4f, Robo2, Cdh13, Wnt5a, Twist1, Pax3, Foxd3, Sox9  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Atf3, Hspa5, Ddit3, Xbp1, Ern1, Eif2ak3, Atf6  
+
+Pathway Name: Regulation of Myelin Inhibitors and Remyelination  
+Id2, Id4, Ednrb, Ngfr, Lgi4, Nrg1, Erbb2, Erbb3

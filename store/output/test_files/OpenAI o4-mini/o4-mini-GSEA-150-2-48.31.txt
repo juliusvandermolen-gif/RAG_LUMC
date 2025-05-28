@@ -1,0 +1,17 @@
+Axon Guidance & Neuronal Connectivity:
+Cntn6, Ntn1, Sema4f, Slit2, Robo2, Nrp1, Nrp2, Dpysl5, Srgap1
+
+Synaptic Vesicle & Cytoskeletal Dynamics:
+Synpr, Sncg, Kif1a, Tuba4a, Tubb4a, Pfn2, Septin4
+
+GPCR & Calcium Signaling in Neurons:
+P2ry2, Gnai1, Ptgfr, Itpripl1, Ryr3, Nfatc1, Ppp1r14c, Scn7a, Piezo2
+
+Neural Progenitor & Differentiation:
+Msi1, Id2, Ebf1, Lifr, Runx3, Peg3, Dyrk1a
+
+Myelination & Schwann Cell Function:
+Mpz, Mag, Prx, Drp2, Gldn, Cldn19
+
+Extracellular Matrix Remodeling in Neural Development:
+Hapln1, Col9a3, Emilin1, Mfap5, Adamts17, Adamtsl1, Adamtsl3, Hs6st1, Hs6st2, Chst2

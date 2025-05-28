@@ -1,0 +1,23 @@
+Axon Guidance:
+Sema4f, Ntn1, Plxnb1, Robo2, Slit2, Wnt5a, Efna5
+
+PI3K–Akt Signaling:
+Igfbp3, Lifr, Ghr, Tf, Nrp1
+
+MAPK Signaling:
+Atf3, Atf5, Dyrk1a, Tnik
+
+Cholesterol Metabolism:
+Abca8a, Abcb4, Apod, Pltp, ApoD (Apod)
+
+Myelination:
+Mag, Mpz, Prx
+
+Wnt Signaling:
+Wnt5a, Lef1
+
+Cytoskeleton Regulation:
+Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Acta2
+
+ECM–Receptor Interaction:
+Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Hapln1, Emilin1, Mfap5, Bgn

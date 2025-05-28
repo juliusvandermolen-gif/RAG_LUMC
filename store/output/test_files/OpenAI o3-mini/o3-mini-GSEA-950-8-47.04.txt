@@ -1,0 +1,20 @@
+Synaptic Plasticity and Neurotransmission:
+PRSS12, SYNPR, BDNF, DRD4, CNTN6, CPE, SNAP29, VGF,
+
+Axon Guidance and Neural Connectivity:
+SEMA4F, NTN1, SLIT2, ROBO2, CDH13, EFNA5, PLXNB1, NRP1, NRP2,
+
+Calcium Signaling and Intracellular Calcium Dynamics:
+RYR3, CDK5R1, CAMK1D, ADCY1, ITPRIPL1,
+
+Cytoskeletal Dynamics and Axonal Transport:
+TUBA4A, TUBB4A, KIF1A, DNM1L, SEPTIN4, SEPTIN5, PFN2,
+
+GPCR and cAMP-Dependent Signaling:
+P2RY2, GPRC5A, GPRC5B, GNAI1,
+
+Neural Transcriptional Regulation:
+MEF2C, ATF3, ATF4, ATF5, KLF9, ID2, MSI1, DYRK1A,
+
+Wnt Signaling in Neural Development:
+WNT5A, LEF1,

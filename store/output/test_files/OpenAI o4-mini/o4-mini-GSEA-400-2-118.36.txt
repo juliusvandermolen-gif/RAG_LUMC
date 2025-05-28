@@ -1,0 +1,38 @@
+Axon guidance:
+Cntn6, Nrp1, Nrp2, Plxnb1, Robo2, Sema3g, Sema4f, Slit2, Ntn1
+
+Myelination and Schwann cell development:
+Gldn, Mag, Mbp, Mpz, Plp1, Pmp22
+
+Synaptic vesicle cycle and neurotransmitter release:
+Rab10, Snap29, Synj2bp, Synpr
+
+Neuroactive ligand–receptor interaction and calcium signaling:
+Chrna3, Drd4, Itpripl1, P2ry2, Piezo2, Ryr3
+
+Extracellular matrix organization and cell adhesion:
+Bgn, Cdh13, Col8a2, Col9a3, Col11a1, Col15a1, Col20a1, Efemp2, Emilin1, Hapln1, Has2, Itga6, Itga7, Itga8, Matn3, Mfap5
+
+Wnt signaling:
+Lef1, Wnt5a
+
+Rho GTPase signaling and neurite outgrowth:
+Arhgef9, Arhgap24, Asap1, Prex2, Rhoj
+
+Transcriptional regulation in neural differentiation:
+Atf3, Atf5, Ebf1, Hif1a, Klf9, Mef2c, Nfatc1, Runx3, Tead2
+
+Neurogenesis and neural stem cell maintenance:
+Id2, Msi1, Nes, Numb
+
+Neuroinflammation and innate immune responses:
+Cxcl12, Cxcl14, Cxcl16, Ifnar1, Icoslg, Nlrp1a, Tlr3, Tnfrsf1a
+
+Cytoskeleton dynamics and axonal transport:
+Cobl, Kif1a, Kif26b, Pfn2, Septin4, Septin5, Tuba4a, Tubb4a
+
+Lipid metabolism in myelination and neural membranes:
+Abca8a, Abcb4, Agpat5, Apod, Cers6, Fabp5, Pltp, Scd, Sgms1
+
+Mitochondrial function and energy metabolism:
+Bdh1, Dhrs1, Dhrs7, Dnm1l, Opa1, Pnpt1, Sqor, Txnrd2

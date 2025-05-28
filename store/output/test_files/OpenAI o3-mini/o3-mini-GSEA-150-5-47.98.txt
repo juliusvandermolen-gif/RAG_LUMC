@@ -1,0 +1,14 @@
+Axon Guidance and Neural Migration Pathway:
+Cntn6, Ntn1, Sema4f, Robo2, Slit2, Nrp1, Nrp2, Srgap1, Cdh13, Tnik, Hs6st1
+
+Synaptic Plasticity and Vesicle Transport Pathway:
+Prss12, Synpr, Kif1a, Tuba4a, Tubb4a, Ryr3, Gnai1, P2ry2, Piezo2, Dyrk1a, Pfn2, Sipa1l1, Septin4
+
+Myelination and Axon Insulation Pathway:
+Mpz, Mag, Prx, Drp2, Gldn, Cldn19, Hapln1
+
+Neural Growth Factor and Transcriptional Regulation Pathway:
+Igfbp3, Lifr, Atf3, Ebf1, Msi1, Id2, Runx3, Ecel1
+
+Extracellular Matrix and Cell Adhesion Pathway:
+Adamts17, Adamtsl3, Adamtsl1, Chst2, Col9a3, Ltbp1, Matn3, Efemp2, Emilin1, Col15a1

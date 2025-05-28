@@ -1,0 +1,17 @@
+Synaptic Signaling & Plasticity:
+Cntn6, Prss12, Cpe, Synpr, Serpini1, Sipa1l1, Pak2, Snap29, Apba1, Drd4, Adcy1, Mef2c, Atf3,
+
+Axon Guidance & Neural Connectivity:
+Sema4f, Slit2, Ntn1, Robo2, Sema3g, Plxnb1, Nrp1, Nrp2, Cdh13, Lrrtm3, Srgap1, Efna5,
+
+Neural Development & Differentiation:
+Nes, Msi1, Id2, Atf5, Dyrk1a, Klf9, Numb, Ebf1, Runx3, Pbx3, Lef1,
+
+Myelination & Schwann Cell Function:
+Mpz, Mag, Pmp22, Prx, Drp2, Mal, Plp1, Mbp, Gldn, Cldn19,
+
+Ion Channel & Neurotransmission:
+Scn7a, P2ry2, Piezo2, Gja1, Tpcn1, Chrna3, Lpar1,
+
+Neuronal Cytoskeletal & Transport:
+Tuba4a, Kif1a, Septin4, Myo1d, Pfn2, Rab10,

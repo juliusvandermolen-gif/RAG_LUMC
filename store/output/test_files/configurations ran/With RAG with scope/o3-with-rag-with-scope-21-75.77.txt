@@ -1,0 +1,14 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Plxnb1, Nrp1, Nrp2, Efna5, Wnt5a, Itga8, Rhoj, Dpysl3, Dpysl5, Lrrtm3, Srgap1, Tnik, Kif1a, Met, Cxcl12, Piezo2,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Drp2, Gldn, Mal, Abca8a, Itga7, Gja1, Tuba4a, Tubb4a, Cers6, Id2,
+
+Synaptic Transmission and Plasticity:
+Synpr, Ryr3, Lrrtm3, P2ry2, Piezo2, Kif1a, Tnik, Pfn2, Dyrk1a, Mef2c, Sumo3, Prkar2b, Numb, Sgpl1, Map1lc3a, Rhoj,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Efemp2, Bgn, Ltbp1, Timp1, Htra1, Pxdn, Cdh13,
+
+Neuroimmune Signaling in Neural Tissue:
+Ifnar1, Cxcl12, Cxcl14, Ighm, Icoslg, Selplg, Nlrp1a, Tnfrsf1a, Parp14, Eif2ak2, P2ry2,

@@ -1,0 +1,32 @@
+Axon Guidance:
+Sema4f, Sema3g, Slit2, Robo2, Plxnb1, Ntn1, Nrp1, Nrp2
+
+Wnt Signaling:
+Wnt5a, Lef1
+
+Rho GTPase Signaling:
+Arhgef9, Arhgap24, Arhgap5, Rhoj, Cdc42se2
+
+MAPK Signaling:
+Mapk1, Map2k6, Map4k5, Rasgrp3, Tnik
+
+Calcium Signaling:
+Ryr3, Itpripl1, Camk1d
+
+Synaptic Vesicle Cycle:
+Snap29, Synpr, Sncg, Synj2bp
+
+cAMP Signaling:
+Gnai1, Prkar2b
+
+GPCR Signaling:
+Gprc5a, Gprc5b, Gnai1, P2ry2
+
+Myelination:
+Mbp, Plp1, Mag, Mpz, Gldn, Cldn19
+
+Lipid Metabolism and Cholesterol Transport:
+Abca8a, Apod, Pltp, Lrp2
+
+Neuroinflammation and Immune Signaling:
+Tlr3, Ifnar1, Cxcl12, Cxcl16, Ccl7

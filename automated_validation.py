@@ -3,8 +3,10 @@ import glob
 import re
 import time
 import json
+import argparse
+from tqdm import tqdm
 import markdown
-from RAG_workflow import query_llm
+from RAG_workflow import query_llm, load_config
 from pymed import PubMed
 import pymed
 from dotenv import load_dotenv
@@ -25,14 +27,13 @@ except FileNotFoundError:
     validation_logs = {}
 
 
-def read_latest_llm_output(answer_dir="./output/test_files"):
-    answer_files = glob.glob(os.path.join(answer_dir, '*.txt'))
-    if not answer_files:
-        raise FileNotFoundError("No answer files found in the directory.")
-    latest_file = max(answer_files, key=os.path.getmtime)
-    with open(latest_file, 'r', encoding="utf8") as file:
+def read_latest_llm_output(answer_dir):
+    answer_path = os.path.join(answer_dir, "answer.txt")
+    if not os.path.isfile(answer_path):
+        raise FileNotFoundError(f"No 'answer.txt' found in {answer_dir!r}")
+    with open(answer_path, "r", encoding="utf8") as file:
         content = file.read().strip()
-    return content, latest_file
+    return content, answer_path
 
 
 def extract_pathways(answer_text):
@@ -50,7 +51,7 @@ def extract_pathways(answer_text):
     return pathways, pathway_dict
 
 
-def validate_pathways(gpt_answer, ground_truth, instruction, validation_model):
+def validate_pathways(gpt_answer, ground_truth, instruction, generation_model):
     _, pathway_dict = extract_pathways(gpt_answer)
     prompt = (
         "Based on the identified pathways, confirm whether they match the ground truth pathways. "
@@ -64,15 +65,15 @@ def validate_pathways(gpt_answer, ground_truth, instruction, validation_model):
         {"role": "system", "content": instruction},
         {"role": "user", "content": prompt}
     ]
-    answer = query_open_ai(messages, instruction, prompt, save=False, model=validation_model, range_query=1)
+    answer = query_llm(messages, instruction, prompt, save=False, generation_model=generation_model, query_range=1)
     return answer
 
 
 def academic_validation(pathways, pathway_dict, academic_instruction,
                         validation_model):
     academic_results = []
-    for pathway in pathways:
-        print(f"Validating pathway: {pathway}")
+    for pathway in tqdm(pathways, desc="Validating pathways"):
+        # print(f"Validating pathway: {pathway}")
         genes = pathway_dict[pathway]
         prompt = (
             f"For the biological pathway '{pathway}', validate the involvement of the genes: {', '.join(genes)}. "
@@ -82,8 +83,8 @@ def academic_validation(pathways, pathway_dict, academic_instruction,
             {"role": "system", "content": academic_instruction},
             {"role": "user", "content": prompt}
         ]
-        response = query_open_ai(messages, academic_instruction, prompt,
-                                 save=False, model=validation_model, range_query=1)
+        response = query_llm(messages, academic_instruction, prompt, save=False, generation_model=validation_model,
+                             query_range=1)
         if response is None:
             response = "No academic validation response returned."
         academic_results.append((pathway, genes, response.strip()))
@@ -119,9 +120,9 @@ def replace_entry(match):
         entry['count'] += 1
         is_real = entry['is_real']
         citation_str = entry.get('citation', citation_str)
-        print(f"Using cached status for: {original_title} -> is_real={is_real}")
+        # print(f"Using cached status for: {original_title} -> is_real={is_real}")
     else:
-        print(f"Querying PubMed for title: {original_title}")
+        # print(f"Querying PubMed for title: {original_title}")
         try:
             results = pubmed.query(original_title, max_results=5)
         except Exception as e:
@@ -130,7 +131,8 @@ def replace_entry(match):
 
         is_real = any(isinstance(article, pymed.article.PubMedArticle) and article.title for article in results)
         if not is_real:
-            print("The citation doesn't match any pubmed articles.")
+            # print("The citation doesn't match any pubmed articles.")
+            pass
         validation_logs[key] = {'citation': citation_str, 'count': 1, 'is_real': is_real}
 
     sorted_entries = sorted(validation_logs.items(), key=lambda item: item[1]['count'], reverse=True)
@@ -148,12 +150,25 @@ def replace_entry(match):
 
 
 def main():
-    answer_dir = "./output/test_files/"
+    answer_dir = "./output/results/"
     ground_truth_file = "./output/results/ground_truth_pathways.txt"
     system_instruction_file = "./configs_system_instruction/system_instruction_comparison_pathways.txt"
     academic_instruction_file = "./configs_system_instruction/system_instruction_academic_validation_test.txt"
     output_directory = "./output/results/validation_and_reporting"
     os.makedirs(output_directory, exist_ok=True)
+
+    parser = argparse.ArgumentParser(description="Run the RAG workflow tests for varying gene counts.")
+    parser.add_argument(
+        "--config",
+        type=str,
+        default="./configs_system_instruction/GSEA.json",
+        help="Path to the configuration JSON file"
+    )
+    args = parser.parse_args()
+    config = load_config(args.config, print_settings=False)
+    config_name = os.path.splitext(os.path.basename(args.config))[0]
+    globals()['config_name'] = config_name
+    globals().update(config)
 
     with open(ground_truth_file, 'r', encoding="utf8") as file:
         ground_truth = file.read().strip()
@@ -174,15 +189,12 @@ def main():
         print(e)
         return
 
-    model = "grok-3-latest"
-    validation_model = model
-    for i in range(2):
+    for i in range(1):
         print("Validating pathways... using g:Profiler")
         comparison_summary = validate_pathways(llm_output, ground_truth,
-                                               comparison_instruction, validation_model=validation_model)
+                                               comparison_instruction, generation_model=generation_model)
         pathways, pathway_dict = extract_pathways(llm_output)
 
-        print("Validating pathways... using literature support")
         academic_results = academic_validation(
             pathways, pathway_dict,
             academic_instruction,
@@ -196,7 +208,7 @@ def main():
         )
 
         processed_results = []
-        for pathway, genes, summary in academic_results:
+        for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
             new_summary = pattern.sub(replace_entry, summary)
             processed_results.append((pathway, genes, new_summary))
 

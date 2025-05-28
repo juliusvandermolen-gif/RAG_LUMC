@@ -1,0 +1,35 @@
+Pathway Name: Charcot-Marie-Tooth Disease and Related Myelin Maintenance  
+Mag, Mpz, Prx, Hapln1, Nrg1, Gldn, Ltbp1, Sbspon  
+
+Pathway Name: Cholesterol Biosynthesis and Lipid Metabolism  
+Abca8a, Alpl, Htra1, Id2, Cpe, Apod, Efemp2, Sumo3, Qsox1  
+
+Pathway Name: Neural Crest Cell Differentiation and Schwann Cell Development  
+Nrp1, Robo2, Ntn1, Sema4f, Parm1, Peg3, Sox10 (implied via pathway context), Epas1  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Ntn1, Col9a3, Robo2, Slit-Robo pathway-associated genes (e.g., Srgap1), Pcsk5  
+
+Pathway Name: Extracellular Matrix Organization and Cell Adhesion  
+Col9a3, Hapln1, Adamts17, Mfap5, Matn3, Efemp2, Cdh13, Pkp1  
+
+Pathway Name: Synaptic Plasticity and Glutamate Signaling  
+Synpr, Piezo2, Grb14, Nrp1, Ccn3, Gprc5b, P2ry2, Slc9a9  
+
+Pathway Name: PPAR-mediated Lipid Homeostasis and Myelination  
+Abca8a, Alpl, Apod, Id2, Pparb (implied via pathway context), Rxra (implied via pathway context)  
+
+Pathway Name: ER Stress and Unfolded Protein Response (UPR)  
+Atf3, Htra1, Serpinf1, Eif2ak2, Sumo3, Cpe  
+
+Pathway Name: Autophagy-Lysosomal Pathway  
+Htra1, Ctbs, Manba, Lrsam1 (implied via CMT4B context), Cep295nl  
+
+Pathway Name: Integrin and Rho GTPase Signaling  
+Tagln, Acta2, Srgap1, Riox2, Tubb4a, Tuba4a  
+
+Pathway Name: Neural Stem Cell Differentiation and Hypoxia Response  
+Aldh1a1, Epas1, Id2, Apod, Efemp2, Htra1  
+
+Pathway Name: RNA Processing and Spliceosome Regulation  
+Ddx1, Rrm2, Tent5c, Trim35, Cep295nl, Grb14

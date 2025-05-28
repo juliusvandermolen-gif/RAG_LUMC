@@ -1,0 +1,23 @@
+Synaptic Plasticity and Signaling:
+CNTN6, PRSS12, SYNPR, CDH13, DRD4, GRID2, BDNF, MEF2C, EFNA5,
+
+Axon Guidance and Neural Connectivity:
+NTN1, SLIT2, ROBO2, SEMA4F, SEMA3G, NRP1, NRP2, SRGAP1, DPYSL5, PLXNB1,
+
+Myelination and Schwann Cell Differentiation:
+MPZ, MAG, PMP22, PRX, MAL, MBP,
+
+Neurodevelopment and Stem Cell Regulation:
+NES, MSI1, KLF9, LEF1, NUMB,
+
+Cytoskeletal Dynamics and Axonal Transport:
+TUBA4A, TUBB4A, KIF1A, DRP2, COBL,
+
+Transcriptional and Signaling Regulation in Neurons:
+ATF3, ID2, EBF1, NFATC1, RUNX3, DYRK1A,
+
+Neurotransmitter and Ion Channel Function:
+SCN7A, PIEZO2, P2RY2,
+
+Neural Cell Adhesion and Extracellular Matrix:
+HAPLN1, COL9A3, COL15A1, FN1,

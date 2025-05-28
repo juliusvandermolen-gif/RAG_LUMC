@@ -1,0 +1,38 @@
+Axon Guidance & Netrin/Slit/Semaphorin/Ephrin Signalling:
+Ntn1, Slit2, Robo2, Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2, Epha4, Efna5, Efna4
+
+Synaptic Transmission & Plasticity:
+Bdnf, Drd4, Grik5, Adcy1, Adcy5, Snap29, Vamp2, C1qtnf1, C1qtnf2, C1qtnf12
+
+Myelination & Schwann Cell Differentiation:
+Mbp, Mpz, Plp1, Mag, Pmp22, Cldn19, Gldn
+
+Wnt/Planar Cell Polarity Signalling & Neural Crest Migration:
+Wnt5a, Lef1, Daam2, Vangl2, Prickle3
+
+Transcriptional Regulation of Neural Differentiation:
+Ebf1, Mef2c, Runx3, Nfatc1, Sp4, Atf3, Atf4, Atf5, Hes6, Klf9, Meis2, Bhlhe41
+
+Extracellular Matrix Organization & Cell Adhesion in Neural Tissue:
+Cadm1, Cdh13, Pcdh18, Col9a3, Col11a1, Col15a1, Col8a2, Col20a1, Nid2, Matn3, Mfap5, Emilin1, Fn1, Bgn
+
+Lipid Metabolism & Cholesterol Homeostasis in Myelinating Cells:
+Abca3, Abca8a, Abcb4, Apod, Pltp, Tspo
+
+GPCR-Mediated Neuromodulation & Second Messenger Signalling:
+P2ry2, Gnai1, Gng2, Gprc5a, Gprc5b, Lpar1, Ppard
+
+Calcium Signalling & Mechanotransduction in Neural Cells:
+Itpripl1, Ryr3, Tpcn1, Piezo2
+
+MAPK/ERK & Kinase Signalling in Neural Development:
+Mapk1, Map2k6, Map4k5, Pak2, Prkd3, Prkar2b, Prkg1, Tnik
+
+Small GTPase Regulation & Cytoskeletal Dynamics:
+Rhoj, Cdc42se2, Arhgef9, Arhgap24, Arhgap5, Asap1, Asap2, Prex2, Rasgrp3
+
+JAK-STAT & Cytokine Receptor Signalling in Neural Progenitors:
+Lifr, Il18rap, Ifnar1, Tnfrsf1a
+
+Stress-Activated & Translational Control Pathways:
+Eif2ak2, Eif2s1, Pum2, Ddx1, Ddx24

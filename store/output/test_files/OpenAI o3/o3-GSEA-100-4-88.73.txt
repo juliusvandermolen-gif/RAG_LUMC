@@ -1,0 +1,23 @@
+Axon Guidance and Neuronal Connectivity:
+Cntn6, Sema4f, Nrp1, Robo2, Ntn1, Srgap1, Cdh13, Gldn, Grb14, Peg3, Prss12,
+
+Synaptic Transmission and Plasticity:
+Synpr, Serpini1, Cpe, Sncg, Scn7a, Piezo2, P2ry2, Slc9a9, Clca4l, Gprc5b, Ecel1,
+
+Myelination and Node of Ranvier Organization:
+Mpz, Mag, Drp2, Prx, Gldn, Slc22a17, Ecel1,
+
+Extracellular Matrix Remodeling and Axo-Glial Interface:
+Adamts17, Adamtsl3, Hapln1, Col9a3, Ltbp1, Efemp2, Mfap5, Matn3, Pxdn, Qsox1, Htra1, Prss23, Sbspon, Zpld1, Ccn3, Tex101, Parm1, Emp2, Chst2, Igfbp3, Serpinf1, Pappa, Krtap1-5, Alpl, Marveld1,
+
+Lipid and Cholesterol Homeostasis in Neural Cells:
+Abca8a, Abcb4, Apod, Pltp, Pcsk5, A2m, Tf, Serinc5, Aldh1a1, Ptgfr, Epas1,
+
+Cytoskeletal Dynamics and Growth Cone Motility:
+Tuba4a, Tubb4a, Acta2, Tagln, Myo1d, Cobll1, Gypc, Pkp1, Cep295nl, Riox2, Sqor,
+
+Proteostasis, Autophagy and Cellular Stress Response:
+Sumo3, Manba, Man1a1, Ctbs, Ddx1, Ppp1r36, Rrm2, Steap2, Sqor, Gldc, Nrbp1, Vopp1, Tent5c, Cdca7l, Atf3,
+
+Innate Immune and Inflammatory Signaling in Nervous System:
+Tril, Defb29, Cxcl14, Ighm, Aif1l, Icoslg, Aig1, Id2, Trim35, Hs6st2, Eif2ak2, Magec2l1,

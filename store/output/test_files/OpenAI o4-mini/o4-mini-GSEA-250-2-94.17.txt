@@ -1,0 +1,23 @@
+Axon guidance:
+Slit2, Robo2, Sema3g, Sema4f, Ntn1, Plxnb1, Nrp1, Nrp2, Efna5, Dpysl3, Dpysl5,
+
+Synaptic plasticity:
+Mef2c, Nfatc1, Atf3, Atf5, Runx3, Ebf1, Id2, Klf9,
+
+Neuroactive ligand-receptor interaction:
+Gprc5a, Gprc5b, P2ry2, Ptgfr, Met, Ghr, Lifr, Ifnar1, Tnfrsf1a, Gnai1,
+
+Calcium signaling:
+Ryr3, P2ry2, Itpripl1, Piezo2, Gnai1,
+
+MAPK signaling:
+Eif2ak2, Dyrk1a, Tnik, Prkd3, Nek9, Stk39, Atf3,
+
+Wnt signaling:
+Wnt5a, Lef1,
+
+ECM-receptor interaction:
+Col9a3, Col15a1, Col20a1, Col8a2, Col11a1, Adamts17, Adamtsl1, Adamtsl3, Emilin1, Mfap5, Bgn, Sbspon, Itga7, Itga8, Cd9, Cd151, Hs6st1, Hs6st2,
+
+Myelination:
+Mpz, Mag, Prx, Mal, Gldn, Cldn19,

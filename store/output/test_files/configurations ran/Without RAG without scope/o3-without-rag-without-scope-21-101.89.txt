@@ -1,0 +1,20 @@
+Extracellular Matrix Organization:
+Adamts17, Adamtsl1, Adamtsl3, Timp1, Efemp2, Emilin1, Mfap5, Col8a2, Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Hapln1, Bgn, Ltbp1, Pxdn, Has2, Gcnt1, Serpinf1,
+
+Axon Guidance:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Dpysl3, Dpysl5, Srgap1, Gldn, Lrrtm3, Tnik, Kif1a, Itga8, Itga7,
+
+Myelination:
+Mag, Mpz, Prx, Pmp22, Drp2, Mal, Cldn19, Gldn, Tubb4a, Septin4,
+
+Angiogenesis and Vascular Development:
+Epas1, Vash1, Nrp1, Nrp2, Wnt5a, Cxcl12, Cxcl14, Slit2, Efna5, Timp1, Serpinf1, Has2, Acta2, Tagln, Itga7, Itga8, Ptgfr,
+
+TGF-β Signaling Modulation:
+Ltbp1, Adamtsl1, Adamtsl3, Adamts17, Id2, Runx3, Htra1, Serpinf1, Timp1,
+
+Immune and Chemokine Signaling:
+Cxcl12, Cxcl14, Ifnar1, Ighm, Tnfrsf1a, Defb29, Nlrp1a, Tril, Selplg, A2m, Igfbp3, Eif2ak2, Trim35, Serpinf1,
+
+Wnt Signaling:
+Wnt5a, Lef1, Lrp2, Tnik, Tspan5, Prkd3,

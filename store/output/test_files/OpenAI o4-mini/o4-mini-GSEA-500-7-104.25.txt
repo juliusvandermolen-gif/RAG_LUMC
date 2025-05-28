@@ -1,0 +1,35 @@
+Axon Guidance Pathway:
+Sema4f, Sema3g, Slit2, Robo2, Ntn1, Nrp1, Nrp2, Plxnb1, Dpysl3, Dpysl5, Efna5, Vangl2,
+
+Cell Adhesion Molecules (CAMs):
+Cntn6, Cdh13, Pcdh18, Nectin1, Cldn19, Tjp1,
+
+ECM-Receptor Interaction:
+Itga6, Itga7, Itga8, Col9a3, Col15a1, Col8a2, Col11a1, Ddr2, Fn1,
+
+Myelination:
+Mbp, Mpz, Mag, Pmp22, Plp1,
+
+Synaptic Vesicle Cycle:
+Snap29, Synpr, Sncg, Rab10,
+
+GPCR Signaling:
+Gnai1, Gng2, Drd4, Gprc5a, Gprc5b, P2ry2, Lpar1,
+
+cAMP Signaling Pathway:
+Adcy1, Prkar2b, Pkia,
+
+Calcium Signaling Pathway:
+Ryr3, Tpcn1, P2ry2, Piezo2,
+
+MAPK Signaling Pathway:
+Mapk1, Map2k6, Map4k5,
+
+Rho GTPase Signaling Pathway:
+Arhgap24, Arhgap5, Cdc42se2, Asap1,
+
+Wnt/PCP Signaling Pathway:
+Wnt5a, Lef1, Vangl2,
+
+Lipid Metabolism in CNS:
+Apod, Abca8a, Abcb4, Scd, Sgms1, Sgpl1, Pltp,

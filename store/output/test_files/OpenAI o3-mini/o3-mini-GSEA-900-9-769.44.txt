@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neural Signaling:
+Cntn6, Prss12, Synpr, P2ry2, Atf3, Mef2c, Piezo2, Drd4
+
+Axon Guidance and Neural Development:
+Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Srgap1, Slitrk6, Wnt5a, Met
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Pmp22, Mag, Drp2, Gldn, Cldn19
+
+Neural Extracellular Matrix and Cell Adhesion:
+Hapln1, Col9a3, Col15a1, Matn3, Emilin1, Cdh13, Timp1, Sbspon, Adamts17, Adamtsl3, Adamtsl1, Ltbp1
+
+Cytoskeletal Remodeling and Intracellular Transport:
+Tuba4a, Kif1a, Septin4, Septin5, Pfn2, Rab10

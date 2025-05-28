@@ -1,0 +1,23 @@
+Axon Guidance and Synaptic Plasticity:
+Ntn1, Sema4f, Robo2, Cntn6, Srgap1, Nrp1, Prss12, Tuba4a, Piezo2, Sncg, Cobll1, Parm1, Synpr
+
+Myelination and Glial Differentiation:
+Mag, Mpz, Hapln1, Gldn, Prx
+
+Ion Channel and Neurotransmission:
+Scn7a, P2ry2, Tubb4a, Slc9a9, Clca4l, Hs6st2, Slc22a17
+
+Neural Transcription, Signal Transduction, and Stress Response:
+Peg3, Id2, Atf3, Igfbp3, Epas1, Grb14, Cdca7l, Serpini1, Nrbp1, Ddx1, Pappa, Eif2ak2, Rrm2, Ppp1r36, Cep295nl, Magec2l1, Trim35, Tagln
+
+Extracellular Matrix and Cell Adhesion:
+Cdh13, Col9a3, Matn3, Adamts17, Adamtsl3, Ltbp1, Chst2, Htra1, Zpld1, Marveld1, Sbspon, Emp2, Mfap5, Pkp1, Efemp2, Pxdn, Krtap1-5, Ccn3
+
+Neural Metabolic and Protein Processing:
+Aldh1a1, Gldc, Sqor, Steap2, Apod, Tf, Pltp, Pcsk5, Qsox1, Prss23, Sumo3, Ctbs, Man1a1, Abca8a, Serinc5, Alpl, Vopp1, Manba, Tent5c, Riox2, Abcb4, Ecel1, Myo1d, Gypc
+
+Neuro-Immune and Inflammatory Response:
+A2m, Ighm, Cxcl14, Defb29, Icoslg, Tril, Aif1l, Aig1, Acta2, Ptgfr
+
+Other Neural-Associated Genes:
+Tex101

@@ -1,0 +1,11 @@
+Synaptic Plasticity & Neurotransmission Signaling:
+CNTN6, PRSS12, SYNPR, SRGAP1, SIPA1L1, MEF2C, BDNF, ADCY1, DRD4
+
+Axon Guidance & Neuronal Migration:
+NTN1, SLIT2, ROBO2, SEMA4F, SEMA3G, NRP1, NRP2, PLXNB1, EFNA5
+
+Myelination & Glial-Neural Interaction:
+PMP22, MPZ, MBP, PLP1, PRX, MAG, GLDN
+
+Intracellular Transport & Cytoskeletal Organization:
+TUBA4A, TUBB4A, KIF1A, KIF3C, DNM1L, ARF6, SEPTIN5

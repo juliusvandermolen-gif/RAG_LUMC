@@ -1,0 +1,20 @@
+Extracellular Matrix Dynamics:
+Zpld1, Adamts17, Adamtsl1, Adamtsl3, Pcsk5, Hapln1, Qsox1, Sbspon, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Mfap5, Emilin1, Ltbp1, Efemp2, Matn3, Pxdn, Bgn, Serpinf1, Pappa, Timp1, Has2, Htra1, A2m, Prss23, Igfbp3, Chst2, Hs6st1, Hs6st2, Gcnt1, Fut10, Vash1, Olfml1, Ccn3, Ccn4, Alpl, Krtap1-5,
+
+Axon Guidance and Synaptic Connectivity:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Srgap1, Dpysl3, Dpysl5, Kif1a, Lrrtm3, Sipa1l1, Tnik, Frrs1, Itga8, Wnt5a, Rhoj, Nes, Msi1, Olfm2, Ppfia4, Synpr, Prss12, Ecel1, Gja1, Sncg, Scn7a, Slitrk6, Gldn,
+
+Myelination and Peripheral Nerve Structure:
+Mag, Mpz, Pmp22, Mal, Prx, Gldn, Drp2, Itga7, Tubb4a, Gja1, Id2,
+
+Growth Factor and Developmental Signaling:
+Wnt5a, Lef1, Met, Lifr, Epas1, Ghr, Ppard, Peg3, Ccn3, Ccn4, Numb, Nfatc1, Runx3, Mybl1, Mef2c, Klf9, Dyrk1a, Tnik, Gnai1, Lrp2, Prkd3, Prkar2b, Ebf1, Stk39, Ryr3, Hmx3,
+
+Immune and Inflammatory Response:
+Ifnar1, Cxcl12, Cxcl14, Tnfrsf1a, Ighm, Defb29, Nlrp1a, Selplg, Tril, Cd9, Cd151, Magea4, Magea9, Mageb16, Magec2l1, Parp14, Rnf144a, Trim35, C1qtnf1, Ptgfr, Vopp1, P2ry2, Atf3, Atf5, Icoslg, Eif2ak2, Gpnmb,
+
+Metabolism and Lipid Homeostasis:
+Abca8a, Abcb4, Apod, Pltp, Sgpl1, Cers6, Psap, Hadhb, Nampt, Gldc, Sqor, Aldh1a1, Tf, Steap1, Steap2, Hspa12a, Fth1, Rrm2, Pgm1, Serinc5, Slc22a17, Slc35a2, Slc39a13, Slc9a9, Slco3a1, Agpat5, Sumo3, Ppm1f, Pnpt1, Papola, Dhrs1, Map1lc3a, Bace2, Arsb, Arsg, Fam20c, Chmp2b,
+
+Cytoskeleton and Cell Motility:
+Acta2, Tagln, Tuba4a, Tubb4a, Cobll1, Myo1d, Cdh13, Pkp1, Septin4, Septin5, Nek9, Fhod3, Rhoj, Asap1, Itga7, Itga8, Pfn2, Phldb2, Ano5, Acap2, Rab10, Ckap4, Cldn19, Cldnd1, Tspan4, Tspan5, Cd151, Pals1, Tmem26, Emp2, Piezo2,

@@ -1,0 +1,29 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Srgap1, Lrrtm3, Cdh13,
+
+Synaptic Plasticity and Neurotransmission:
+Prss12, Synpr, Serpini1, Sncg, Pfn2, Cpe, Ecel1, Prss23,
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Mag, Prx, Gldn, Drp2, Cldn19,
+
+Neural Lipid and Cholesterol Metabolism:
+Pltp, Abca8a, Apod, Sgpl1, Agpat5, Serinc5, St3gal5,
+
+Neural Transcription and Differentiation:
+Id2, Atf3, Ebf1, Dyrk1a, Runx3, Msi1, Peg3, Ccn3, Sumo3, Grb14, Igfbp3, Cdca7l, Epas1, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ppp1r36, Trim35, Rnf144a, Lifr, Tnik, Mageb16, Prkd3, Prkar2b, Ppp1r14c, Tmem26, Psmd2, Nfatc1, Cggbp1, Fbxo11, Zfp518a, Nek9,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Dpysl5, Myo1d, Frrs1, Snx6, Sipa1l1, Septin4, Fhod3, Vps26c,
+
+Extracellular Matrix and Cell Adhesion:
+Adamts17, Adamtsl3, Hapln1, Col9a3, Matn3, Emilin1, Col15a1, Zpld1, Qsox1, Marveld1, Chst2, Pxdn, Tspan4, Sbspon, Pkp1, Efemp2, Ltbp1, Adamtsl1, Col20a1, Cd9, Hs6st1,
+
+Ion Channels and GPCR Neurotransmission:
+P2ry2, Scn7a, Piezo2, Gprc5b, Gprc5a, Itpripl1, Slc9a9, Gnai1, Ryr3, Steap2, Lrp2, Slco3a1,
+
+Neuroimmune and Inflammatory Signaling:
+Defb29, Ighm, Tril, Icoslg, Selplg, Ifnar1, A2m, Cxcl14,
+
+Neural Metabolic Regulation:
+Gldc, Aldh1a1, Sqor, Tf, Manba, Man1a1, Ctbs,

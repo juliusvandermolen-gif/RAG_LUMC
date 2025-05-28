@@ -1,0 +1,44 @@
+Pathway Name: Axon Guidance and Neural Signaling  
+Gene A, Gene B, Gene C, Sema4f, Nrp1, Piezo2, Ntn1, Mag, Cdh13, Robo2, Srgap1, Pkp1, Steap2, Cpe, Cxcl14,  
+
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Gene A, Gene B, Gene C, Mpz, Prx, Mag, Hapln1, Gldn, Emp2, Ltbp1, Pmp22 (implicit via CMT1A context), Adamtsl3, Qsox1,  
+
+Pathway Name: Cholesterol and Lipid Metabolism in Myelin  
+Gene A, Gene B, Gene C, Abca8a, Pltp, Htra1, Apod, Sumo3, Grb14, Efemp2, Man1a1, Hs6st2, Scn7a,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Gene A, Gene B, Gene C, Synpr, Prss12, Grb14, Ccn3, P2ry2, Gprc5b, Tent5c, Serinc5, Drp2,  
+
+Pathway Name: Extracellular Matrix Organization  
+Gene A, Gene B, Gene C, Col9a3, Matn3, Hapln1, Adamts17, Marveld1, Mfap5, Efemp2, Sbspon,  
+
+Pathway Name: Neural Crest Development and Differentiation  
+Gene A, Gene B, Gene C, Id2, Peg3, Nrp1, Cdh13, Acta2, Tagln, Alpl, Epas1,  
+
+Pathway Name: PPAR/RXR Signaling and Lipid Homeostasis  
+Gene A, Gene B, Gene C, Aldh1a1, Apod, Pltp, Abca8a, Efemp2, Manba, Serpinf1,  
+
+Pathway Name: ER Stress and Protein Processing  
+Gene A, Gene B, Gene C, Htra1, Sumo3, Atf3, Eif2ak2, Serpini1, Pcsk5, A2m,  
+
+Pathway Name: MAPK/ERK Signaling and Cell Growth  
+Gene A, Gene B, Gene C, Grb14, Ccn3, Igfbp3, Tf, Rrm2, Ecel1, Riox2,  
+
+Pathway Name: Oligodendrocyte Differentiation and Myelin Maintenance  
+Gene A, Gene B, Gene C, Mag, Mpz, Prx, Gldn, Hapln1, Sqor, Pmp22 (implicit),  
+
+Pathway Name: Neuroinflammation and Glial Activation  
+Gene A, Gene B, Gene C, A2m, Ighm, Aif1l, Htra1, Tril, Cdca7l, Ccl14 (Cxcl14),  
+
+Pathway Name: Retinoic Acid Signaling in Neural Development  
+Gene A, Gene B, Gene C, Aldh1a1, Rarb (implicit via lipid context), Cdh13, Epas1,  
+
+Pathway Name: Ion Transport and Channel Activity  
+Gene A, Gene B, Gene C, Scn7a, P2ry2, Slc9a9, Abcb4, Clca4l, Tubb4a, Tuba4a,  
+
+Pathway Name: RNA Processing and Spliceosome Regulation  
+Gene A, Gene B, Gene C, Ddx1, Sumo3, Rrm2, Cep295nl, Trim35, Nrbp1,  
+
+Pathway Name: Proteasome and Lysosomal Degradation  
+Gene A, Gene B, Gene C, Htra1, Ctbs, Manba, Serpini1, A2m, Pcsk5,

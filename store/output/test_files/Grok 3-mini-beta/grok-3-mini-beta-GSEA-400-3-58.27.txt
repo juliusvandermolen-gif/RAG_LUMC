@@ -1,0 +1,11 @@
+Myelin Sheath Assembly:
+Mag, Mbp, Mpz, Plp1, Gldn, Hapln1, Mfap5, Nid2, Col9a3, Col11a1, Col15a1, Col20a1, 
+
+Axonal Guidance Pathway:
+Sema4f, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Wnt5a, Efna5, 
+
+Lipid Metabolism Pathway:
+Aldh1a1, Hadhb, Hadha, Alpl, Abca8a, Slc22a17, Ppard, Has2, Fut10, Hif1a, Chpf2, Cers6, Sgms1, 
+
+MAPK Signaling Pathway:
+Grb14, Pak2, Map1lc3a, Stk39, Dpysl5, Dpysl3, Crkl, Mark3,

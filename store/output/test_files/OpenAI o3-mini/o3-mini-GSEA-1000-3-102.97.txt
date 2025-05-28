@@ -1,0 +1,11 @@
+Synaptic Signaling & Plasticity Pathway:
+Cntn6, Prss12, Synpr, Snap29, Sipa1l1, Vgf, Drd4, Adcy1, Ryr3, Lpar1, Sema3g
+
+Axon Guidance & Neural Development Pathway:
+Ntn1, Robo2, Slit2, Srgap1, Dpysl5, Dpysl3, Cdh13, Nrp1, Nrp2, Olfm2, Wnt5a, Lef1, Epha4, Efna5, Id2, Numb, Mef2c
+
+Myelination & Glial Cell Function Pathway:
+Mag, Mpz, Drp2, Prx, Gldn, Mal, Cldn19, Mbp
+
+Lipid Metabolism & Membrane Dynamics in Neural Cells Pathway:
+Pltp, Apod, Abca8a, St3gal5, Cers6, Scd, Agpat5, Ppard, Sgms1

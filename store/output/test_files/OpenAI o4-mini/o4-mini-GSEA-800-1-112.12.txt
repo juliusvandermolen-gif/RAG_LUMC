@@ -1,0 +1,29 @@
+Synaptic Transmission and Plasticity:  
+Bdnf, Grik5, Drd4, Snap29, Vamp2, Ppp1r36, Ppp1r14c, Camk1d, Camk4, Itpripl1, P2ry2, Slc9a9  
+
+Axon Guidance and Neuronal Migration:  
+Sema4f, Sema3g, Slit2, Plxnb1, Nrp1, Nrp2, Efna5, Efna4, Epha4, Robo2, Ntn1, Cntn6, Cadm1  
+
+Neurotrophic and Chemokine Signaling:  
+Bdnf, Ghr, Lifr, Igfbp3, Igf2bp2, Ccn3, Ccn4, Epas1, Cxcl12, Cxcl14  
+
+MAPK/ERK Signaling:  
+Mapk1, Map2k6, Map4k5, Mapk8ip1, Rps6ka5, Eif2ak2  
+
+Calcium Signaling and Homeostasis:  
+Itpripl1, P2ry2, Piezo2, Tpcn1, Slc9a9  
+
+Myelination and Schwann Cell Function:  
+Mbp, Mog, Plp1, Mpz, Gldn, Pmp22, Mal, Cldn19  
+
+Extracellular Matrix and Cell Adhesion:  
+Cntn6, Cadm1, Cdh13, Itga6, Itga7, Itga8, Vcl, Fn1, Col15a1, Col20a1, Col8a2, Col9a3, Col11a1, Col16a1, Col5a2  
+
+Mitochondrial Dynamics and Bioenergetics:  
+Opa1, Dnm1l, Sqor, Pnpt1, Hadhb  
+
+Rho GTPase and Cytoskeletal Regulation:  
+Arhgap24, Arhgap5, Rhoj, Cdc42se2, Pak2, Rasgrp3, Tnik  
+
+Wnt Signaling and Neural Crest Development:  
+Wnt5a, Lef1, Lrp2

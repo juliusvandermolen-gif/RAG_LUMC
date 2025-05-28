@@ -1,0 +1,29 @@
+Pathway Name: Myelin Sheath Formation and Maintenance  
+Mpz, Pmp22, Mag, Mbp, Plp1, Gprc5b, Gprc5a, Prx, Mal, Cldn19,  
+
+Pathway Name: Cholesterol and Lipid Metabolism in Myelination  
+Abca8a, Abcb4, Apod, Cers6, Pltp, Scd, Fabp5, Htra1,  
+
+Pathway Name: Axon Guidance and Neural Crest Migration  
+Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Col9a3, Col15a1, Col11a1, Col20a1, Col8a2, Emilin1, Hapln1, Efna5, Met,  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Lef1,  
+
+Pathway Name: Neuregulin-ERBB Signaling Pathway  
+Grb14, Lifr,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Synpr, Synj2bp, Sipa1l1, Vgf, Snap29, Drd4, Adcy1, Ebf1,  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Ctsd, Ctsl, Map1lc3a,  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col11a1, Col20a1, Col8a2, Hapln1, Mfap5, Emilin1, Matn3, Comp,  
+
+Pathway Name: PI3K-AKT-mTOR Signaling Pathway  
+Grb14, Igfbp3, Hif1a,  
+
+Pathway Name: MAPK/ERK Signaling Pathway  
+Dyrk1a, Htra1, Pak2,

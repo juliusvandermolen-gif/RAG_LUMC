@@ -1,0 +1,23 @@
+Schwann Cell Differentiation and Myelination:  
+Mag, Mpz, Id2, Fabp5, Hapln1, Cdh13, Gprc5b, Pmp22, Qsox1, Serpinf1, Col9a3, Col15a1, Matn3, Ltbp1  
+
+Axon Guidance and Semaphorin Signaling:  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5, Wnt5a, Celsr3, Ecel1, Dpysl5, Dpysl3  
+
+Cholesterol and Lipid Metabolism in Myelin Maintenance:  
+Scd, Sqor, Abca8a, Apod, Htra1, Fabp5, Hsd17b7, Cers6, Sgms1, Gldc, Gbe1, Pltp, Acap2  
+
+Neural Crest Cell Migration and Development:  
+Cdh13, Robo2, Nrp2, Ltbp1, Emilin1, Col20a1, Prickle3, Shroom3, Tubb4a, Tuba4a, Tspan4, Tspan5  
+
+Synaptic Plasticity and Neurotransmission:  
+Synpr, Dyrk1a, Grb14, Sgms1, Grin2b, P2ry2, Adcyap1r1, Ntrk2, Sipa1l1, Septin4, Septin5, Sv2b  
+
+PPAR Signaling in Lipid Homeostasis:  
+Fabp5, Rxra, Ppargc1a, Acsl3, Acsl5, Acaa2, Hadhb, Cpt1a, Acadm, Acadl, Acadvl  
+
+Lysosomal and Ubiquitin-Proteasome System:  
+Htra1, Sumo3, Ufd1, Psmd2, Ctsd, Ctsb, Laptm5, Psap, Lamp1, Lamp2, Ubqln1, Ubqln2  
+
+Extracellular Matrix Organization in Neural Development:  
+Col9a3, Col15a1, Hapln1, Matn3, Efemp2, Mfap5, Bgn, Emilin1, Col8a2, Col11a1, Col20a1, Fn1

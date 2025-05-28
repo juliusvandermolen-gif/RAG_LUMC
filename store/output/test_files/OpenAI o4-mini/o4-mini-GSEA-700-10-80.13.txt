@@ -1,0 +1,26 @@
+Axon guidance:
+NTN1, SLIT2, ROBO2, SEMA3G, SEMA4F, PLXNB1, NRP1, NRP2, EFNA5
+
+Myelination:
+MPZ, MAG, PMP22, PLP1, MBP, DRP2, GLDN, CLDN19
+
+Synaptic vesicle cycle:
+SNAP29, VAMP2, SYNPR, DNM1, PACSIN3
+
+Calcium signaling:
+P2RY2, ITPRIPL1, RYR3, PIEZO2, CAMK1D
+
+cAMP/PKA signaling:
+ADCY1, PRKAR2B
+
+MAPK signaling pathway:
+MAPK1, MAP2K6, MAP4K5, MAPK8IP1, RPS6KA5
+
+PI3K‑Akt signaling pathway:
+PDGFB, GHR, LIFR, IGFBP3, GRB14, GNAI1, GNAQ
+
+Wnt signaling pathway:
+WNT5A, LEF1, TNIK
+
+Synaptic plasticity:
+BDNF, MEF2C, SP4, ATF3, ATF5, EBF1

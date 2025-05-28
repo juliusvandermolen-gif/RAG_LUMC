@@ -1,0 +1,23 @@
+Synaptic Plasticity and Neurotransmission:
+Cntn6, Prss12, Synpr, Serpini1, Sipa1l1, Kif1a, Cpe, Efna5, Nrp1, Nrp2, Ryr3, Pak2, Dyrk1a, Mef2c, Dpysl5
+
+Axon Guidance and Neural Development:
+Ntn1, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Cntn6, Dpysl3, Olfm2, Lef1, Wnt5a, Efna5, Cdh13
+
+Intracellular Trafficking and Cytoskeletal Dynamics:
+Tuba4a, Tubb4a, Cobl, Pfn2, Septin4, Septin5, Tagln, Rab10, Snx6, Vps26c, Chmp2b, Tbccd1, Ckap4
+
+Calcium and cAMP Signaling Pathway:
+Ryr3, Itpripl1, Tpcn1, Inpp5a, Gnai1, Pkia
+
+Transcriptional and Epigenetic Regulation:
+Mef2c, Dyrk1a, Atf3, Klf9, Numb, Ebf1, Runx3, Id2, Sim2, Taf9b, Sumo3
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Lifr, Met, Nampt, Ccn3, Ccn4, Ghr, Cxcl12, Epas1
+
+Myelination and Glial Development:
+Mpz, Prx, Mag, Pmp22, Gldn, Mal, Drp2, Cldn19
+
+Extracellular Matrix and Cell Adhesion in Neural Signaling:
+Hapln1, Marveld1, Sbspon, Col9a3, Chst2, Ltbp1, Adamtsl3, Adamtsl1, Cdh13, Col15a1, Col11a1, Col8a2, Emilin1, Bgn

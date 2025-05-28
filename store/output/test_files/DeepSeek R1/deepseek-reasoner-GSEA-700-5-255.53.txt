@@ -1,0 +1,59 @@
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Pmp22, Mbp, Mpz, Mag, Plp1, Prx, Sema4f, Nrp1, Nrp2, Robo2, Slit2, Cntn6, Gprc5b, Gprc5a, Lrp2, Cd9, Cd151, Pals1, Lama4, Nectin1, Pkp1  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Abca8a, Abcb4, Scd, Npc2, Lrp2, Sqor, Pltp, Apod  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Ctsd, Ctbs, Ctsf, Ctsl, Clcf1, C1qtnf1, C1qtnf2, C1qtnf12  
+
+Pathway Name: MAPK/ERK Signaling  
+Mapk1, Grb14, Map2k6, Pak2  
+
+Pathway Name: Extracellular Matrix Remodeling  
+Adamts17, Col9a3, Col15a1, Col20a1, Matn3, Sparc, Emilin1, Efemp2, Has2, Papola, Pcolce, Col14a1, Col11a1, Col8a2, Col7a1  
+
+Pathway Name: Axon Guidance and Neural Crest Development  
+Sema4f, Nrp1, Nrp2, Slit2, Robo2, Efna5, Epha4, Plxnb1, Sema3g, Ntn1  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Bdnf, Synpr, Snap29, Sgms1, Sipa1l1, Synj2bp, Dlg1, Grid2  
+
+Pathway Name: Inflammatory Response  
+A2m, C1qtnf1, C1qtnf2, C1qtnf12, Tnfrsf1a, Il18rap, Ccl7  
+
+Pathway Name: Cytoskeleton Organization and Axonal Transport  
+Tubb4a, Tuba4a, Acta2, Tagln, Cald1, Pfn2, Dync2i1, Drp2, Kif1a, Kif26b, Kif3c  
+
+Pathway Name: Wnt Signaling and Neural Patterning  
+Wnt5a, Lef1, Ctnnd2  
+
+Pathway Name: Ubiquitination and Protein Degradation  
+Ube2l3, Fbxo11, Cul4b, Rnf144a, Trim35, Trim59, Trim21, Trim13  
+
+Pathway Name: Growth Factor and Neurotrophic Signaling  
+Igfbp3, Bdnf, Pdgfb, Efna5, Wnt5a  
+
+Pathway Name: Notch Signaling and Neural Differentiation  
+Hes6, Dtx4  
+
+Pathway Name: Ion Transport and Channels  
+Scn7a, P2ry2  
+
+Pathway Name: Neural Development and Differentiation  
+Mef2c, Sox10, Nes, Ebf1, Runx3  
+
+Pathway Name: Peroxisome-Related Lipid Metabolism  
+Hsdl7b12, Scp2, Acadl  
+
+Pathway Name: Cell Adhesion and Neural Migration  
+Cdh13, Itga6, Itga7, Itga8, Cd59b  
+
+Pathway Name: Neurotransmitter Release and Vesicle Dynamics  
+Snap29, Vamp2, Synpr  
+
+Pathway Name: Endocytosis and Membrane Trafficking  
+Dnm1l, Dnmbp, Clta, Cltb  
+
+Pathway Name: Oxidative Stress Response  
+Gstz1, Gstt2, Gstm5l, Txnrd2

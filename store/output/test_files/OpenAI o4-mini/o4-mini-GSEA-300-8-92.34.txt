@@ -1,0 +1,26 @@
+Axon Guidance and Neural Pathfinding:
+Cntn6, Sema3g, Sema4f, Slit2, Robo2, Ntn1, Plxnb1, Nrp1, Nrp2, Efna5, Cdh13, Itga7, Itga8,
+
+Peripheral Myelination and Schwann Cell Development:
+Pmp22, Mpz, Mag, Prx, Drp2, Gldn,
+
+Synaptic Signaling and Plasticity:
+Synpr, Sncg, Cpe, Dpysl3, Dpysl5, Prex2, Srgap1, Mef2c, Nfatc1, Ebf1, Cobl,
+
+GPCR and cAMP Signaling in Neurons:
+P2ry2, Gprc5a, Gprc5b, Gnai1, Prkar2b,
+
+Calcium Signaling and Homeostasis:
+Ryr3, Itpripl1, Piezo2,
+
+Cytoskeleton Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Septin4, Septin5, Acta2, Pfn2, Fhod3, Shroom3,
+
+Extracellular Matrix Organization and Cell Adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Hapln1, Emilin1, Bgn, Mfap5, Col9a3, Col11a1, Col15a1, Col8a2, Col20a1, Cd151, Cd9,
+
+Wnt/β-Catenin Signaling in Neural Differentiation:
+Wnt5a, Lef1,
+
+Sphingolipid and Lipid Metabolism in Myelin Homeostasis:
+Cers6, Sgms1, Sgpl1, Apod, Pltp,

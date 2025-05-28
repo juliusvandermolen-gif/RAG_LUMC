@@ -1,0 +1,35 @@
+Axon Guidance and Neuronal Projection Guidance:
+Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Cntn6
+
+Myelination and Schwann Cell Development:
+Pmp22, Mpz, Mag, Mal, Nes
+
+Synaptic Organization and Plasticity:
+Synpr, Sncg, Cdh13, Lrrtm3, Pfn2
+
+Ion Transport and Neurotransmission:
+P2ry2, Scn7a, Ryr3, Itpripl1, Piezo2, Gja1
+
+Extracellular Matrix and Cell Adhesion in Neural Tissue:
+Cntn6, Cdh13, Itga7, Itga8, Cd151, Cd9, Hapln1, Col9a3, Col15a1, Col20a1, Emilin1, Mfap5, Adamts17, Adamtsl3, Adamtsl1, Ltbp1
+
+Lipid Metabolism and Myelin Maintenance:
+Abca8a, Abcb4, Apod, Serinc5, Sgpl1, St3gal5, Cers6, Psap, Nampt
+
+Wnt/β-catenin Signaling:
+Wnt5a, Lrp2
+
+Growth Factor and Receptor Tyrosine Kinase Signaling:
+Met, Lifr, Igfbp3
+
+Transcriptional Regulation in Neural Differentiation:
+Mef2c, Atf3, Atf5, Nfatc1, Klf9, Runx3, Ebf1, Id2, Ddx1, Numb
+
+Cytoskeleton Organization and Axonal Transport:
+Kif1a, Dpysl5, Dpysl3, Tuba4a, Tubb4a, Pfn2, Septin4, Acta2
+
+MAPK and PI3K/Akt Signaling:
+Tnik, Prkd3, Dyrk1a, Gnai1, Prkar2b, Grb14
+
+Neuroinflammation and Immune Response in Neural Tissue:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, C1qtnf1, Tril, Icoslg

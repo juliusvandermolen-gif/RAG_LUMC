@@ -1,0 +1,23 @@
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Pmp22, Mag, Mbp, Plp1, Gldc, Pcsk5, Hapln1, Emp2, Prx, Lrp2, Cldn19, Gprc5b, Ebf1, Lpar1, Pdgfb, Nectin1, Plp1, Pcdh18, Mbp, Pdgfb, Plp1  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Cdh13, Col15a1, Col11a1, Col9a3, Col20a1, Emilin1, Cpe, Cdh13  
+
+Pathway Name: Cholesterol and Sphingolipid Metabolism  
+Abca8a, Abcb4, Apod, Cpe, Gldc, Htra1, Cers6, Scd, Pltp, Pnpla2, Stom, Fabp5, Pltp, Cers6, Scd  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Ctsd, Ctsl, Ctsf, Sumo3, Htra1, Lamp1 (implicit via references), Ctsd, Ctsl, Ctsf, Htra1  
+
+Pathway Name: MAPK/ERK Signaling in Neural Development  
+Mapk1, Map2k6, Grb14, Dyrk1a, Pak2, Steap1, Steap2, Lifr, Efna5, Rarb, Hsp90aa1, Mapk1, Dyrk1a  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Synpr, Adcy1, Grb14, Vgf, Piezo2, Drd4, Grin-associated (implicit), Adcy1, Synpr, Vgf, Piezo2, Drd4  
+
+Pathway Name: Neural Crest Cell Migration and Differentiation  
+Sox10 (implicit), Robo2, Slit2, Twist1 (implicit), Cdh13, Col9a3, Col20a1, Emilin1, Nrp1, Nrp2, Efna5  
+
+Pathway Name: Inflammatory Response in Neural Tissue  
+A2m, Htra1, C1s, Ccl7, Ifnar1, Tnfrsf1a, Siglec10, Cxcl12, Cxcl14, Cxcl16, Ifi30, Ccl7, Cxcl12, Cxcl14

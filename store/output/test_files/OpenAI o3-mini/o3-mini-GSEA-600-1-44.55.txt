@@ -1,0 +1,14 @@
+Axon Guidance and Neuronal Migration:
+Cntn6, Sema4f, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema3g, Efna5, Plxnb1
+
+Synaptic Plasticity and Neural Signaling:
+Prss12, Synpr, Adcy1, Drd4, Gnai1, P2ry2, Piezo2, Met
+
+Myelination and Schwann Cell Development:
+Pmp22, Mpz, Mag, Mbp, Cldn19
+
+Transcriptional Regulation in Neural Development:
+Id2, Atf3, Mef2c, Dyrk1a, Lef1, Ebf1, Klf9, Runx3
+
+Axonal Transport and Cytoskeletal Dynamics:
+Tuba4a, Tubb4a, Kif1a, Dnm1l, Septin4, Septin5

@@ -1,0 +1,14 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Sema4f, Sema3g, Srgap1, Itga8, Kif1a, Dpysl3, Dpysl5, Tnik, Gnai1, Lrrtm3, Gldn, Rhoj, Piezo2, Pfn2, Hs6st2, Hs6st1, Cdh13, Cxcl12, Wnt5a, Runx3,
+
+Peripheral Myelination and Schwann Cell Development:
+Pmp22, Mpz, Mag, Drp2, Mal, Cldn19, Cers6, Itga7, Itga8, P2ry2, Nfatc1, Id2, Mef2c, Gja1, Gldn, Wnt5a,
+
+Synaptic Plasticity and Neurotransmission:
+Synpr, Sncg, Serpini1, Ryr3, Prkar2b, Dyrk1a, Frrs1, P2ry2, Kif1a, Tnik, Gnai1, Prss12, Piezo2, Scn7a, Serpinf1, Cpe, Pam, Ecel1, Gja1,
+
+Neural Extracellular Matrix Organization:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col15a1, Col20a1, Hapln1, Matn3, Mfap5, Ltbp1, Pxdn, Emp2, Sbspon, Timp1, Htra1, Ccn3, Efemp2, Emilin1,
+
+Neural Cholesterol and Sphingolipid Homeostasis:
+Abca8a, Abcb4, St3gal5, Cers6, Sgpl1, Agpat5, Apod, Nampt, Serinc5,

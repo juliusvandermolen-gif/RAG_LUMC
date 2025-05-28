@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Signaling:
+Ntn1, Robo2, Slit2, Slit3, Nrp1, Nrp2, Plxnb1, Plxna4, Sema4f, Sema3g, Efna5, Efna4, Epha4, Cntn6, Dpysl3, Dpysl5, Itga1, Itga6, Itga8, Asap1, Rhoj, Srgap1, Tnik, Crkl, Vangl2,
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Vamp2, Snap29, Kif1a, Synpr, Bdnf, Vgf, Grid2, Grik5, Adcy1, Adcy5, Ncs1, Dlg1, Ryr3, Camk1d, Camk4, Lpar1, Drd4, Lrrtm3, Itpripl1,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mbp, Plp1, Mag, Drp2, Gldn, Cldn19, Itga6, Pdgfb, Id2, Timp1, Lrp2, P2ry2,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Ctnnb1, Vangl2, Tnik, Daam2,
+
+MAPK/ERK and PI3K–AKT Signaling in Neuronal Plasticity:
+Mapk1, Map2k6, Mapk8ip1, Akt1, Sos1, Gnai1, Bdnf, Fgfr1, Epha4, Pdgfb, Crkl, Rassf1, Stat3, Mef2c,
+
+Calcium Signaling and Mechanotransduction:
+Ryr3, Itpripl1, Camk1d, Camk4, Piezo2, Ncs1, Adcy1, Adcy5, Chrna3,

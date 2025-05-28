@@ -1,0 +1,14 @@
+Synaptic Plasticity & Neurotransmission:
+Cntn6, Synpr, Drd4, Sema4f, Sema3g, Cdh13, Adcy1, Efna5, Met, Snap29, Vgf
+
+Axon Guidance & Neuronal Migration:
+Robo2, Slit2, Ntn1, Nrp1, Nrp2, Srgap1, Plxnb1
+
+Neural Differentiation & Transcriptional Regulation:
+Nes, Mef2c, Id2, Atf3, Atf5, Ebf1, Lef1, Msi1, Klf9
+
+Myelination & Schwann Cell Differentiation:
+Pmp22, Mpz, Plp1, Mbp, Mal, Gldn, Mag, Drp2
+
+Cytoskeletal Organization & Axonal Transport:
+Tuba4a, Kif1a, Dnm1l, Arf6, Tagln, Septin4, Septin5, Pfn2

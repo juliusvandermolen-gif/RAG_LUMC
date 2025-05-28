@@ -1,0 +1,35 @@
+Pathway Name: Myelin Sheath Formation  
+Pmp22, Mpz, Mag, Prx,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Aldh1a1, Ppard, Abca8a, Pltp, Lrp2,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Ntn1, Slit2, Nrp1, Plxnb1, Sema3g, Robo2, Efna5,  
+
+Pathway Name: Synaptic Plasticity and Neural Signaling  
+Srgap1, Grb14, Nrp1, Slc9a9, Synpr, Dpysl5, Dpysl3, Cdh13,  
+
+Pathway Name: Autophagy and Lysosomal Degradation  
+Lrp2, Htra1, Sumo3, Psmd2,  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col20a1, Col8a2, Col11a1, Matn3, Hapln1, Emilin1, Bgn,  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Atf3, Eif2ak2, Hsp90aa1, Hspa12a,  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Lef1,  
+
+Pathway Name: Inflammatory Response in Neuropathy  
+Aif1l, Bgn, Timp1, C1qtnf1, Cxcl12, Cxcl14, Ighm, Ifnar1,  
+
+Pathway Name: Cell Adhesion and Migration  
+Cdh13, Itga8, Itga7, Cd9, Sema4f, Nrp1,  
+
+Pathway Name: Transcription Regulation in Neural Development  
+Ebf1, Runx3, Mef2c, Klf9,  
+
+Pathway Name: Ion Transport and Channels  
+Slc39a13, Slc22a17, Abcb4, Scn7a, Kif1a,

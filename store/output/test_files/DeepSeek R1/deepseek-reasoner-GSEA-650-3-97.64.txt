@@ -1,0 +1,44 @@
+**Pathway Name: Axon Guidance**  
+Ntn1, Sema4f, Sema3g, Plxna1, Nrp1, Nrp2, Robo2, Slit2, Efna5, Cdh13, Col9a3, Col15a1, Col11a1, Col20a1, Sparc, Vldlr, Tubb4a, Tuba4a  
+
+**Pathway Name: Myelin Sheath Assembly and Maintenance**  
+Mbp, Mpz, Plp1, Mag, Prx, Gldn, Pmp22, Cldn19, Cldnd1, Hapln1, Lrp2, Emp1, Emp2, Mal, Bace2, Cnp, Cntn6, Drp2, Lgi4, Adam22  
+
+**Pathway Name: Synaptic Vesicle Cycle and Neurotransmitter Release**  
+Vgf, Synpr, Synm, Snap29, Vamp2, Sgms1, Stx11, Syt1, Sv2b, Sv2c, Cplx1, Cplx2, Rab3a, Rab3c, Rab10, Syp, Syt4, Syt7, Svil  
+
+**Pathway Name: Cholesterol and Lipid Metabolism in Myelination**  
+Abca8a, Abcb4, Sqor, Scd, Apod, Fabp5, Cers6, Pltp, Pnpla2, Apoc1, Apoc2, Apoc3, Apoc4, Ldlrad3, Lrp2, Vldlr, Hmgcr, Hmgcs1, Dhcr7  
+
+**Pathway Name: Neurotrophin Signaling and Neuronal Survival**  
+Bdnf, Ntrk1, Ntrk2, Ntrk3, Ngfr, Grb14, Grb2, Sos1, Sos2, Akt1, Akt2, Akt3, Bad, Bax, Bcl2, Casp3, Casp6, Casp9, Parp1, Parp14  
+
+**Pathway Name: Glutamatergic Synapse**  
+Grik5, Grin1, Grin2a, Grin2b, Grin2d, Slc1a2, Slc1a3, Slc1a7, Slc17a6, Slc17a7, Slc17a8, Gria1, Gria2, Gria3, Gria4, Grid2, Grin3a, Grin3b  
+
+**Pathway Name: Calcium Signaling**  
+Ryr3, Itpr1, Itpr2, Itpr3, Calm1, Calm2, Calm3, Cacna1a, Cacna1b, Cacna1c, Cacna1d, Cacna1e, Cacna1g, Cacna1h, Cacna1s, Cacnb1, Cacnb2, Cacnb3  
+
+**Pathway Name: Notch Signaling**  
+Notch1, Notch2, Notch3, Notch4, Jag1, Jag2, Dll1, Dll3, Dll4, Hes1, Hes5, Hes6, Hey1, Hey2, HeyL, Rbpj, Mfng, Lfng, Rfng  
+
+**Pathway Name: Wnt Signaling**  
+Wnt5a, Fzd1, Fzd2, Fzd3, Fzd4, Fzd5, Fzd6, Fzd7, Fzd8, Fzd9, Fzd10, Lrp5, Lrp6, Dvl1, Dvl2, Dvl3, Axin1, Axin2, Apc, Ctnnb1  
+
+**Pathway Name: ERK/MAPK Signaling**  
+Mapk1, Mapk3, Mapk8, Mapk9, Mapk14, Mapk12, Mapk13, Map2k1, Map2k2, Map2k3, Map2k4, Map2k6, Map2k7, Kras, Hras, Nras, Raf1, Braf, Mekk1, Mekk2  
+
+**Pathway Name: Autophagy and Lysosomal Degradation**  
+Ctsd, Ctsl, Ctsb, Lamp1, Lamp2, Atg5, Atg7, Atg12, Becn1, Ulk1, Ulk2, Sqstm1, Tfeb, Tfe3, Mcoln1, Mcoln2, Mcoln3, Cln3, Cln5  
+
+**Pathway Name: Extracellular Matrix Organization**  
+Col9a3, Col15a1, Col11a1, Col20a1, Col14a1, Col8a2, Col4a1, Col4a2, Col4a3, Col4a4, Col4a5, Col4a6, Fn1, Sparc, Lama4, Lamb1, Lamb2, Lamb3, Lamc1  
+
+**Pathway Name: Neural Crest Cell Migration and Differentiation**  
+Sox10, Sox9, Twist1, Twist2, Snai1, Snai2, Zeb1, Zeb2, Ednra, Ednrb, Ets1, Ets2, Pax3, Pax7, Msx1, Msx2, Tfap2a, Tfap2b, Tfap2c  
+
+**Pathway Name: Ion Transport and Channel Activity**  
+Scn7a, Kcnq2, Kcnq3, Kcnq5, Kcnma1, Kcnmb1, Kcnmb2, Kcnmb3, Kcnmb4, Cacna1a, Cacna1b, Cacna1c, Trpv1, Trpv2, Trpv4, Trpm7, Trpm8, Trpa1  
+
+**Pathway Name: Inflammation and Immune Response in Neural Repair**  
+Aif1l, C1qtnf1, C1qtnf2, C1s, C3, Ccl7, Cxcl12, Cxcl14, Tlr3, Tlr4, Il18rap, Ifnar1, Cd59b, Cd55, Cd9, Cd151, Cd302, Cdca7l, Cdca4

@@ -1,0 +1,11 @@
+Axon Guidance and Synaptic Plasticity:
+Cntn6, Prss12, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Srgap1, Synpr
+
+Myelination and Neural Differentiation:
+Mpz, Mag, Pmp22, Drp2, Plp1, Mal, Cldn19
+
+Neural Signaling and Calcium Homeostasis:
+Drd4, Adcy1, Ryr3, Piezo2, Mapk1, Kif1a, Gnai1, Itpripl1, Snap29
+
+Transcriptional Regulation in Neural Development:
+Id2, Mef2c, Atf3, Atf5, Dyrk1a, Klf9, Ebf1

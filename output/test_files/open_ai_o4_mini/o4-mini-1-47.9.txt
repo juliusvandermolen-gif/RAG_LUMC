@@ -1,0 +1,29 @@
+Axon Guidance and Growth Cone Dynamics:
+Ntn1, Slit2, Robo2, Sema4f, Sema3g, Plxnb1, Nrp1, Nrp2, Efna5,
+
+Synaptic Vesicle Cycling and Plasticity:
+Synpr, Sncg, Dpysl3, Dpysl5, Cpe,
+
+Myelin Sheath Formation and Schwann Cell Differentiation:
+Mpz, Prx, Gldn, Drp2, Cldn19, Mal, Mag,
+
+Neural Crest Cell Fate and Lineage Specification:
+Id2, Ebf1, Runx3, Mef2c, Nfatc1, Klf9,
+
+Wnt/β-Catenin Signaling in Neural Patterning:
+Wnt5a, Lef1,
+
+P2Y Receptor-Mediated Calcium Signaling:
+P2ry2, Itpripl1,
+
+G-Protein Coupled Receptor Signaling in Neural Cells:
+Gnai1, Gprc5a, Gprc5b,
+
+Cholesterol Homeostasis and Lipid Transport in Neural Cells:
+Abca8a, Abcb4, Apod,
+
+Extracellular Matrix and Cell Adhesion in Neural Development:
+Itga7, Itga8, Cdh13, Col9a3, Col11a1, Col15a1, Hapln1,
+
+Autophagy and Ubiquitin-Proteasome Pathway in Neural Cells:
+Map1lc3a, Psmd2, Fbxo11, Rnf144a, Trim35,

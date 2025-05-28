@@ -1,0 +1,14 @@
+Axon Guidance Pathway:
+Sema4f, Nrp1, Nrp2, Slit2, Robo2, Ntn1, Cntn6, Dpysl5, Dpysl3, Plxnb1, Unc5c, Robo1, Robo3, Unc5b, Unc5a, Unc5d, Dcc, Unc5c, Robo1, Robo3, Unc5b, Unc5a, Unc5d, Dcc,
+
+Myelination Pathway:
+Mag, Mpz, Plp1, Mbp, Pmp22, Cnp, Mobp, Mal, Gjb1, Pmp2, Cldn19, Mpz, Plp1, Mbp, Cnp, Mobp, Mal, Gjb1, Pmp2, Cldn19,
+
+Synaptic Plasticity Pathway:
+Bdnf, Synpr, Grin2b, Camk2a, Ppp3ca, Creb1, Mapk1, Akt1, Camk2b, Ppp3cb, Creb2, Mapk3, Akt2, Camk2d, Ppp3cc, Creb3, Mapk8, Akt3, Camk4, Ppp3r1, Creb5, Mapk9, Bdnf, Synpr, Grin2b, Camk2a, Ppp3ca, Creb1, Mapk1, Akt1, Camk2b, Ppp3cb, Creb2, Mapk3, Akt2, Camk2d, Ppp3cc, Creb3, Mapk8, Akt3, Camk4, Ppp3r1, Creb5, Mapk9,
+
+Lipid Metabolism Pathway:
+Aldh1a1, Apod, Abca8a, Abcb4, Hsd17b4, Acsl1, Acsl3, Acsl4, Acsl5, Acsl6, Acot1, Acot2, Acot3, Acot4, Acot5, Acot6, Acot7, Acot8, Acot9, Acot10, Acot11, Acot12, Acot13, Acot14, Acot15, Hadha, Hadhb, Echs1, Ehhadh, Acox1, Acox2, Acox3, Decr1, Decr2, Aldh1a1, Apod, Abca8a, Abcb4, Hsd17b4, Acsl1, Acsl3, Acsl4, Acsl5, Acsl6, Acot1, Acot2, Acot3, Acot4, Acot5, Acot6, Acot7, Acot8, Acot9, Acot10, Acot11, Acot12, Acot13, Acot14, Acot15, Hadha, Hadhb, Echs1, Ehhadh, Acox1, Acox2, Acox3, Decr1, Decr2,
+
+PI3K-AKT Signaling Pathway:
+Akt1, Akt2, Akt3, Pik3ca, Pik3cb, Pik3cd, Pik3cg, Pten, Pdk1, Mtor, Tsc1, Tsc2, Rictor, Rptor, Foxo1, Foxo3, Foxo4, Gsk3b, Bad, Casp9, Creb1, Mapk1, Mapk3, Akt1, Akt2, Akt3, Pik3ca, Pik3cb, Pik3cd, Pik3cg, Pten, Pdk1, Mtor, Tsc1, Tsc2, Rictor, Rptor, Foxo1, Foxo3, Foxo4, Gsk3b, Bad, Casp9, Creb1, Mapk1, Mapk3,

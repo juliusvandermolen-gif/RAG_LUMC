@@ -1,0 +1,17 @@
+Axon Guidance and Neurite Outgrowth:  
+Ntn1, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Sema4f, Sema3g, Wnt5a, Dpysl3, Dpysl5, Vangl2, Tnik, Srgap1, Itga8, Itga7, Itga1, Kif1a, Kif3c, Rhoj, Arhgap5, Met,
+
+Peripheral Nerve Myelination:  
+Pmp22, Mpz, Mbp, Mag, Plp1, Drp2, Mal, Gldn, Cldn19, Id2,
+
+Synaptic Signaling and Plasticity:  
+Bdnf, Vgf, Synpr, Adcy1, Ryr3, Lrrtm3, Camk1d, Grik5, Drd4, Chrna3, Piezo2, P2ry2, Lpar1, Scn7a, Cdh13, Pfn2,
+
+MAPK/ERK and PI3K–Akt Neurodevelopmental Signaling:  
+Mapk1, Map2k6, Mapk8ip1, Met, Pdgfb, Pak2, Rassf1, Creb3, Atf3, Ppp2r5c, Ppp2r5e, Eif2ak2, Tnik, Gnai1,
+
+Extracellular Matrix Organization and Axon Regeneration:  
+Adamts17, Adamtsl3, Adamtsl1, Adam15, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Efemp2, Emilin1, Matn3, Hapln1, Ltbp1, Fn1, Timp1, Nid2, Postn, Fras1,
+
+GPCR and Chemokine-Mediated Neuromodulation:  
+Cxcl12, Cxcl14, Cxcl16, Ccl7, Ptgfr, P2ry2, Lpar1, Gprc5a, Gprc5b, Drd4, Chrna3,

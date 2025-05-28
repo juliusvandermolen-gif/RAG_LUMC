@@ -1,0 +1,23 @@
+Axon guidance signaling:
+Sema4f, Sema3g, Slit2, Slit3, Robo2, Nrp1, Nrp2, Plxnb1, Plxna4, Efna5, Efna4, Epha4, Cxcl12, Ntn1
+
+Synaptic vesicle cycle and neurotransmitter release:
+Vamp2, Snap29, Synpr, Rab3gap2
+
+Synaptic plasticity and long-term potentiation:
+Camk4, Camk1d, Atf3, Atf4, Atf5, Bdnf, Grik5
+
+Myelination and myelin sheath formation:
+Mbp, Mog, Plp1, Mag, Mpz, Pmp22, Tppp
+
+Calcium signaling in neurons:
+Adcy1, Adcy5, Itpripl1, Ryr3, Camk4, Camk1d
+
+Rho GTPase-mediated cytoskeletal dynamics:
+Rhoj, Cdc42se2, Arhgef6, Arhgef9, Arhgap24, Arhgap5, Trio, Pak1, Pak2
+
+Axonal transport and mitochondrial dynamics:
+Kif1a, Kif3c, Klc1, Dnm1l, Dync2i1, Opa1
+
+Wnt and MAPK signaling in neural development:
+Wnt5a, Ctnnb1, Lef1, Mapk1, Map2k6, Map4k5, Rasgrp3, Hras

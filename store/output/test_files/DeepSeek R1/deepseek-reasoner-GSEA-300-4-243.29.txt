@@ -1,0 +1,41 @@
+Pathway Name: Myelin Assembly and Maintenance  
+Mag, Mpz, Prx, Mal, Hapln1, Emp2, Cldn19, Pmp22,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Sqor, Ppard, Fabp5, Apod, Abca8a, Scd, Pltp, Cers6, Gldc, Hs6st1, Hs6st2,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl5, Dpysl3, Robo2, Slit2, Sema3g, Ntn1,  
+
+Pathway Name: PPAR Signaling Pathway  
+Ppard, Fabp5,  
+
+Pathway Name: Lysosomal and Proteasomal Degradation  
+Htra1, Sumo3, Manba, Ctbs, Lrp2, Timp1,  
+
+Pathway Name: Neural Crest Cell Migration and Schwann Cell Differentiation  
+Robo2, Slit2, Nrp1, Plxnb1, Ebf1, Mef2c,  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col20a1, Hapln1, Emilin1, Matn3, Bgn, Fnbp1, Timp1, Cpe, Serpine1,  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Lef1,  
+
+Pathway Name: Synaptic Plasticity and Neuronal Signaling  
+Synpr, Dpysl5, Dpysl3, Ntn1, Gprc5a, Gprc5b, Piezo2, Scn7a, P2ry2,  
+
+Pathway Name: TGF-beta Signaling  
+Ltbp1, Htra1, Serpine1,  
+
+Pathway Name: Neurotrophic Factor Signaling  
+Ntn1, Efna5, Lifr, Igfbp3,  
+
+Pathway Name: Neural Differentiation and Transcription Regulation  
+Ebf1, Runx3, Mef2c, Atf3, Atf5, Klf9,  
+
+Pathway Name: Inflammatory Response and Immune Signaling  
+Ifnar1, Ighm, Cxcl12, Cxcl14, Tnfrsf1a, Timp1,  
+
+Pathway Name: Cholesterol Transport and Homeostasis  
+Abca8a, Apod, Pltp, Scd, Fabp5, Ppard,

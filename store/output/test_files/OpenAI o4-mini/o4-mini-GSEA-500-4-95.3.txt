@@ -1,0 +1,38 @@
+Synaptic Transmission and Plasticity:
+Snap29, Synpr, Synj2bp, Drd4, P2ry2, Chrna3, Gprc5a, Gprc5b, Gnai1,
+
+Axon Guidance:
+Sema3g, Sema4f, Ntn1, Slit2, Robo2, Plxnb1, Nrp1, Nrp2, Dpysl3, Dpysl5, Efna5, Pcdh18, Cdh13,
+
+Integrin Signaling:
+Itga6, Itga7, Itga8,
+
+Wnt Signaling:
+Wnt5a, Lef1,
+
+MAPK Signaling:
+Mapk1, Map2k6, Map4k5, Mef2c,
+
+Calcium Signaling:
+Itpripl1, Ryr3,
+
+Myelination and Schwann Cell Development:
+Mbp, Mpz, Plp1, Mag, Pmp22, Gldn, Cldn19,
+
+Cholesterol and Lipid Metabolism:
+Abca8a, Abcb4, Apod, Ppard, Has2,
+
+Cytoskeleton Organization:
+Tuba4a, Tubb4a, Septin4, Septin5, Pfn2,
+
+Axonal Transport:
+Kif1a, Kif26b, Dnm1l,
+
+Neuroinflammation and Immune Signaling:
+Cxcl12, Cxcl14, Cxcl16, Ccl7, Ifnar1, Tlr3,
+
+Transcriptional Regulation in Neural Differentiation:
+Ebf1, Lmo4, Runx3, Nfatc1, Klf9, Sim2, Atf3, Atf5,
+
+Proteasome and Lysosomal Degradation:
+Psmd2, Ufd1, Ctsd, Ctsl, Ctsf,

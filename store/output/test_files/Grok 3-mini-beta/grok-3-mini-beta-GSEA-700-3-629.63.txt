@@ -1,0 +1,8 @@
+Myelin Sheath Assembly:
+Pmp22, Mbp, Plp1, Mag, Mpz, Cntn6, Hapln1, Gja1, Cldn19, Col9a3, Col11a1, Col15a1, Col20a1, Efemp2, Emilin1, Gldn, Has2, Htra1, Itga6, Itga7, Itga8, Lama4, Matn3, Mfap5, Nid2, Pxdn, Robo2, Sema4f, Sema3g, Slit2, Tagln, Tuba4a, Tubb4a,
+
+Synaptic Plasticity and Signaling:
+Sncg, Synpr, Mapk1, Gnai1, Dpysl5, Dpysl3, Grb14, Id2, Nrp1, Nrp2, Prkar2b, Rhoj, Srgap1, Wnt5a, Cxcl12, Cxcl14, Efna5, Epha4, Grik5, Lef1, Met, Mef2c, Nfatc1, Piezo2, Plxnb1, Prkd3, Runx3, Tnik,
+
+Lipid Metabolism in Neural Cells:
+Aldh1a1, Gldc, Hadhb, Alpl, Apod, Bgn, Echs1, G6pc3, Gcnt1, Gcnt4, Gpnmb, Gstz1, Hadha, Hs6st1, Hs6st2, Mgat3, Pgm1, Scd, Slc35a2, St6gal1, Ugt8, Adamts17, Adamts6, Col8a2, Dhrs1, Dhrs7, Fut10, Galnt10, Galnt17, Ogdhl, P4htm, Ptgr2, Qprt, Sgms1, St3gal5, Tmed10, Tmed4, Tnfaip6,

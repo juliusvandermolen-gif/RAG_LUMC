@@ -1,0 +1,23 @@
+Myelination and Schwann cell development:
+Mpz, Plp1, Mbp, Mag, Pmp22, Drp2, Prx, Cldn19, Mal, Gja1
+
+Axon guidance:
+Sema3g, Sema4f, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Ntn1, Efna5, Wnt5a, Vangl2, Slitrk6, Srgap1
+
+Synaptic signaling and plasticity:
+Drd4, Adcy1, Snap29, Synpr, Synm, Itpripl1, Ryr3, P2ry2, Tpcn1, Piezo2, Scn7a, Vgf
+
+Rho GTPase–mediated cytoskeletal dynamics:
+Rhoj, Gnai1, Arhgap24, Arhgef9, Asap1, Arf6
+
+MAPK/ERK kinase cascade:
+Prkd3, Prkar2b, Tnik, Dyrk1a, Atf3, Atf5
+
+Lipid metabolism and transport in neural cells:
+Abca8a, Abcb4, Apod, Hadhb, Aldh1a1, Steap1, Steap2, Cers6, Sqor
+
+PPAR signaling:
+Ppard, Rarb
+
+JAK–STAT signaling:
+Lifr, Ifnar1

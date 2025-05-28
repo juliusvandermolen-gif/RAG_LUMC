@@ -1,0 +1,17 @@
+Axon Guidance and Neural Circuit Formation:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Dpysl5, Dpysl3, Plxnb1, Efna5, Rhoj, Srgap1, Itga8, Sema3g, Kif1a, Gldn, Lrrtm3, Slitrk6,
+
+Myelination and Node of Ranvier Assembly:
+Prx, Mag, Mpz, Pmp22, Mal, Drp2, Gldn, Cldn19, Gja1,
+
+Synaptic Plasticity and Vesicle Trafficking:
+Prss12, Synpr, Sncg, Ryr3, Piezo2, Pfn2, Numb, Msi1, Slc9a9, Lrrtm3, Slitrk6, Kif1a, Tnik,
+
+Semaphorin–Neuropilin–Plexin Signaling:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Itga8, Gnai1, Rhoj, Dyrk1a,
+
+Extracellular Matrix Remodeling and Neural Adhesion:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Col9a3, Col15a1, Col20a1, Col11a1, Bgn, Efemp2, Emilin1, Hapln1, Pxdn, Timp1,

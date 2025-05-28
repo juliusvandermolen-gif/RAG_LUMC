@@ -1,0 +1,11 @@
+Axon Guidance & Synapse Formation:
+CNTN6, SEMA4F, NTN1, ROBO2, SLIT2, NRP1, NRP2, CDH13, EFNA5, EPHA4, PLXNB1, SLITRK6
+
+Synaptic Transmission & Plasticity:
+SYNPR, DRD4, ADCY1, BDNF, VGF, GNAI1, CAMK1D, RYR3, MET, WNT5A, CHRNA3, GRID2, GPRC5B
+
+Cytoskeletal Dynamics & Vesicle Transport:
+TUBA4A, KIF1A, DNM1L, RAB10, SNAP29
+
+Neural Differentiation & Development:
+NES, MEF2C, ATF3, KLF9, NUMB, MSI1

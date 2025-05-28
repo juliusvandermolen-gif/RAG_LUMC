@@ -1,0 +1,20 @@
+Synaptic Plasticity and Neural Signaling:
+CNTN6, PRSS12, SYNPR, DRD4, BDNF, PIEZO2
+
+Axon Guidance and Neurite Outgrowth:
+NTN1, SLIT2, ROBO2, NRP1, NRP2, SEMA4F, SEMA3G, SRGAP1
+
+Schwann Cell Differentiation and Myelination:
+PMP22, MPZ, PRX, MAG, DRP2, MBP, GLDN
+
+Neural Extracellular Matrix and Cell Adhesion:
+HAPLN1, COL9A3, COL15A1, COL11A1, COL8A2, CDH13, PCDH18, PKP1
+
+Neural Transcriptional Regulation and Differentiation:
+ID2, ATF3, MEF2C, NFATC1, KLF9, EBF1, NUMB, DYRK1A
+
+Cytoskeletal Dynamics and Axonal Transport:
+TUBA4A, KIF1A, SEPTIN4, SEPTIN5, DNM1L
+
+Cholesterol and Lipid Homeostasis in Neural Cells:
+ABCA8A, PLTP, SGPL1, CERS6, ST3GAL5

@@ -1,0 +1,29 @@
+Axon guidance pathway:
+Sema4f, Ntn1, Slit2, Plxnb1, Nrp1, Nrp2, Efna5, Robo2
+
+Synaptic signaling & plasticity:
+Cpe, Synpr, P2ry2, Itpripl1, Eif2ak2, Nfatc1, Mef2c, Atf3, Ebf1
+
+Neuroactive ligand–receptor interaction:
+Ptgfr, Gprc5b, Gprc5a, P2ry2, Lifr, Ghr
+
+Wnt signaling pathway:
+Wnt5a, Lef1
+
+PI3K–Akt signaling pathway:
+Lifr, Itga7, Itga8, Tnik
+
+MAPK signaling pathway:
+Dyrk1a, Tnik
+
+Myelination pathway:
+Mpz, Mag, Mal, Prx, Drp2, Cldn19, Serinc5
+
+ECM–receptor interaction:
+Col9a3, Col11a1, Col8a2, Col15a1, Col20a1, Hapln1, Mfap5, Emilin1, Bgn
+
+Focal adhesion:
+Itga7, Itga8, Cdh13, Tagln, Acta2, Ppfia4
+
+Cytoskeletal regulation:
+Tuba4a, Tubb4a, Septin4, Septin5, Kif1a

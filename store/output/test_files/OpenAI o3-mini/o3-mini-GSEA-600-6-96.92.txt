@@ -1,0 +1,17 @@
+Axon Guidance:
+CNTN6, SEMA4F, NTN1, SRGAP1, ROBO2, NRP1, NRP2, SLIT2, PLXNB1, EFNA5, SEMA3G, SLITRK6, DPYSL5, CDH13
+
+Synaptic Plasticity:
+SYNPR, SIPA1L1, SNAP29, ARHGEF9, MEF2C, BDNF, APBA1, SYNJ2BP, KIF1A
+
+Myelination and Schwann Cell Differentiation:
+MPZ, PMP22, MAG, DRP2, PLP1, MBP, MAL, PRX, GLDN
+
+Calcium and Ion Channel Signaling:
+SCN7A, PIEZO2, RYR3, ADCY1, ITPRIPL1, TPCN1, NCS1, DRD4
+
+Neuronal Transcriptional Regulation:
+ID2, ATF3, MEF2C, DYRK1A, KLF9, EBF1, NUMB, RUNX3
+
+Neurotrophic and Growth Factor Signaling:
+BDNF, LIF, MET, IGFBP3, CCN3, CXCL12, GHR

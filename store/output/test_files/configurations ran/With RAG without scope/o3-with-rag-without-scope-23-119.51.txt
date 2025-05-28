@@ -1,0 +1,23 @@
+Peripheral Myelination and Schwann Cell Differentiation:
+Mag, Mpz, Pmp22, Prx, Drp2, Gldn, Mal, Cldn19, Itga7, Itga8, Nes,
+
+Extracellular Matrix Organization and Collagen Fibrillogenesis:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Mfap5, Emilin1, Adamts17, Adamtsl1, Adamtsl3, Efemp2, Bgn, Ltbp1, Pxdn,
+
+Axon Guidance and Neuronal Pathfinding:
+Ntn1, Slit2, Robo2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl3, Dpysl5, Tnik, Rhoj, Gnai1,
+
+Lipid and Cholesterol Transport and Metabolism:
+Abca8a, Abcb4, Pltp, Apod, Cers6, Sgpl1, Agpat5, Hadhb, Sqor, Ppard, Nampt,
+
+Serine Protease Activity and ECM Remodeling:
+Prss12, Prss23, Htra1, Pcsk5, Adamts17, Adamtsl1, Adamtsl3, Timp1, Serpini1, Serpinf1, Cpe, Ctbs, A2m,
+
+Immune and Cytokine Signaling:
+Ifnar1, Tnfrsf1a, Tril, Cxcl12, Cxcl14, Defb29, Selplg, Nlrp1a, Ighm, Id2, Aif1l, C1qtnf1,
+
+Cell Adhesion and Integrin Signaling:
+Cntn6, Cdh13, Cd9, Cd151, Itga7, Itga8, Pkp1, Tspan4, Tspan5, Tagln, Acta2, Pfn2, Gja1,
+
+TGF-beta and Wnt Signaling Crosstalk:
+Ltbp1, Wnt5a, Lef1, Runx3, Tnik, Epas1,

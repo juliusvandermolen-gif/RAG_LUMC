@@ -1,0 +1,23 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Robo2, Slit2, Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2, Efna5, Dpysl3, Dpysl5, Kif1a, Slitrk6, Srgap1, Gldn, Itga8, Tnik, Lrrtm3,
+
+Synaptic Vesicle Cycling and Neurotransmission:
+Synpr, Kif1a, Numb, Tuba4a, Tubb4a, Map1lc3a, Ryr3, Gnai1, Pfn2, P2ry2, Frrs1, Serpini1, Dpysl3, Dpysl5, Scn7a,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Prx, Gldn, Drp2, Mal, Cntn6,
+
+Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Dyrk1a, Id2, Mef2c, Ccn3, Ccn4,
+
+Calcium Signaling and Second Messenger Dynamics:
+Ryr3, Itpripl1, Tpcn1, Gnai1, Inpp5a, P2ry2, Nfatc1,
+
+Extracellular Matrix Organization in Neural Tissue:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Emilin1, Hapln1, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Mfap5, Matn3, Bgn, Qsox1, Htra1, Gpnmb,
+
+Neuroimmune and Cytokine Signaling:
+Ifnar1, Nlrp1a, Tnfrsf1a, Cxcl12, Cxcl14, Ighm, Selplg, Timp1, Igfbp3, Atf3,
+
+Cell Adhesion and Junction Dynamics:
+Cdh13, Cldn19, Cd9, Cd151, Pkp1, Gja1, Pals1, Tspan4, Tspan5, Cldnd1,

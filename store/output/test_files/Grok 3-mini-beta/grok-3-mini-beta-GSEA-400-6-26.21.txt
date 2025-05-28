@@ -1,0 +1,11 @@
+Myelination Pathway:
+MAG, MBP, PMP22, Mpz, PLP1, Gldn, Mbp, Mpz, Pmp22, Mag,
+
+Axon Guidance Pathway:
+SEMA4F, SEMA3G, NRP1, NRP2, SLIT2, CNTN6, SEMA4F, SEMA3G, NRP1, NRP2, SLIT2, CNTN6,
+
+Lipid Metabolism Pathway:
+ALDH1A1, HADHB, CERS6, ALDH1A1, HADHB, CERS6, GBE1, HADHA, 
+
+Synaptic Plasticity Pathway:
+GRB14, SYNPR, GRB14, SYNPR, GRB14, SYNPR,

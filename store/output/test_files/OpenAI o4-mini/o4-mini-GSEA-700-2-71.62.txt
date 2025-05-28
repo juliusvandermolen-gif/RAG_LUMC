@@ -1,0 +1,29 @@
+Axon guidance:
+Ntn1, Slit2, Robo2, Srgap1, Epha4, Efna5, Cntn6
+
+Semaphorin–Plexin signaling:
+Sema4f, Sema3g, Plxnb1, Nrp1, Nrp2
+
+Synaptic vesicle cycle:
+Snap29, Vamp2, Synpr
+
+Long-term potentiation:
+Camk1d, Cdk5r1, Mapk1, Map2k6, Creb3, Bdnf
+
+Glutamatergic synapse:
+Grik5, Drd4, Adcy1
+
+Calcium signaling:
+P2ry2, Itpripl1, Mcu, Camk1d, Adcy1
+
+Wnt signaling:
+Wnt5a, Lef1
+
+Cell adhesion molecules:
+Cntn6, Cdh13, Pcdh18, Itga6, Itga7, Itga8
+
+Extracellular matrix–receptor interaction:
+Adamts17, Adamtsl1, Adamtsl3, Mfap5, Emilin1
+
+Myelination and Schwann cell development:
+Mbp, Mpz, Prx, Mag, Mal, Gldn, Pmp22

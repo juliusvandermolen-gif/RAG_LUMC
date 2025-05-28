@@ -1,0 +1,23 @@
+Synaptic Vesicle Recycling and Neurotransmitter Release:
+Vamp2, Snap29, Synpr, Synj2bp, Cdk5r1,
+
+Axon Guidance and Synapse Formation:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Sema3g, Nrp1, Nrp2, Efna5, Plxnb1, Srgap1, Cdh13,
+
+Synaptic Plasticity and Signal Transduction:
+Prss12, Bdnf, Mef2c, Adcy1, Arhgef9, Sipa1l1, Camk1d, Grik5, Comt,
+
+Neuronal Differentiation and Neurogenesis:
+Id2, Peg3, Msi1, Nes, Numb, Ebf1, Dyrk1a, Hes6,
+
+Ion Channel and Neural Excitability:
+Scn7a, Piezo2, Ryr3, Chrna3,
+
+Myelination and Glial Support:
+Pmp22, Mag, Mpz, Mbp, Plp1,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Kif1a, Dnm1l, Septin4, Pfn2, Rab10,
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Lifr, Met, Apod,

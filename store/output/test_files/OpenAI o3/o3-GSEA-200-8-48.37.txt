@@ -1,0 +1,17 @@
+Axon Guidance & Neurite Outgrowth:
+Cntn6, Ntn1, Robo2, Slit2, Sema3g, Sema4f, Nrp1, Nrp2, Gldn, Itga8, Itga7, Cdh13, Lrrtm3, Dpysl3, Dpysl5, Tnik, Wnt5a, Kif1a, Tuba4a, Tubb4a, Rhoj, Srgap1, Pfn2, Gnai1,
+
+Synaptic Signaling & Plasticity:
+Synpr, Lrrtm3, Frrs1, P2ry2, Ryr3, Scn7a, Piezo2, Kif1a, Numb, Mef2c, Dyrk1a, Serpini1, Sncg, Gja1, Itpripl1,
+
+Myelination & Schwann Cell Function:
+Pmp22, Mpz, Mag, Mal, Drp2, Prx, Cldn19, Abca8a, Ppp1r14c, Cers6, St3gal5, Lrp2, Timp1,
+
+Extracellular Matrix & Neural Morphogenesis:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Col9a3, Col15a1, Col20a1, Mfap5, Emilin1, Hapln1, Pxdn, Efemp2, Matn3,
+
+Neuroimmune Crosstalk in Neural Tissue:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, Selplg, A2m, Ighm, Igfbp3, C1qtnf1, Runx3, Ptgfr, Sgpl1,
+
+Myelin Lipid Metabolism & Membrane Homeostasis:
+Abca8a, Abcb4, Agpat5, Pltp, Apod, St3gal5, Cers6, Serinc5, Sgpl1, Nampt, Hadhb,

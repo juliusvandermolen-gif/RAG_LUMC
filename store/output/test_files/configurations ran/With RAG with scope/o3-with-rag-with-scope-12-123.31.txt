@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Slit2, Robo2, Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Efna5, Ntn1, Cntn6, Dpysl5, Dpysl3, Srgap1, Itga8, Kif1a, Gnai1, Tnik, Lrrtm3, Itpripl1, Pfn2,
+
+Peripheral Nerve Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Mal, Gldn, Drp2, Tubb4a, Tuba4a, Abca8a, Igfbp3, Itga7, Gja1, Cldn19,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Synpr, Ryr3, P2ry2, Rab10, Kif1a, Tuba4a, Tubb4a, Pfn2, Ppp1r14c, Prkar2b, Dpysl3, Dpysl5,
+
+Retinoic Acid and Wnt Signaling in Neural Development:
+Aldh1a1, Wnt5a, Lef1, Dyrk1a, Mef2c, Klf9, Runx3, Id2, Nes, Atf3, Atf5,
+
+Extracellular Matrix Remodeling in Neural Tissue:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Efemp2, Mfap5, Hapln1, Matn3, Col9a3, Col11a1, Col15a1, Col20a1, Pxdn, Col8a2, Bgn, Emilin1, Gpnmb,
+
+Calcium and Mechanotransduction Signaling:
+Ryr3, Piezo2, Itpripl1, Tpcn1, P2ry2,
