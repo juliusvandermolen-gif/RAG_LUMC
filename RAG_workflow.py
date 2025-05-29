@@ -66,7 +66,7 @@ client_grok = OpenAI(
 logging.getLogger('nltk').setLevel(logging.ERROR)
 
 
-def ensure_nltk_resource(pkg_name: str, resource_path: str):
+def ensure_nltk_resource(pkg_name: str, resource_path: str) -> None:
     """
     Check for an NLTK resource; if missing, download quietly
     with no stdout/stderr noise.
@@ -157,7 +157,7 @@ stop_words |= {
 os.makedirs("./logs", exist_ok=True)
 
 
-def compute_file_hash(file_path, block_size=65536):
+def compute_file_hash(file_path: str, block_size: int = 65536) -> str:
     """
     Computes the SHA-256 has of a file's content.
 
@@ -176,8 +176,12 @@ def compute_file_hash(file_path, block_size=65536):
     return hasher.hexdigest()
 
 
-def initialize_gene_list(max_genes, fdr_threshold, excel_file_path=r"data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
-                         de_filter_option="combined"):
+def initialize_gene_list(
+    max_genes: list,
+    fdr_threshold: float,
+    excel_file_path: str = r"data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
+    de_filter_option: str = "combined"
+) -> Tuple[str, str, int]:
     """
     Creates a list of genes from the specified Excel file based on filtering criteria.
 
@@ -251,7 +255,7 @@ def process_excel_data(
     return out
 
 
-def load_gene_id_cache(file_path):
+def load_gene_id_cache(file_path: str) -> Dict[str, str]:
     """
     Loads the gene ID cache from a JSON file.
 
@@ -272,7 +276,7 @@ def load_gene_id_cache(file_path):
         return {}
 
 
-def save_gene_id_cache(cache, file_path):
+def save_gene_id_cache(cache: int, file_path: str) -> None:
     """
     Saves the gene ID cache to a JSON file.
 
@@ -285,7 +289,7 @@ def save_gene_id_cache(cache, file_path):
         json.dump(cache, gene_id_file, indent=4)
 
 
-def search_genes(unknown_genes, gene_cache, cache_file):
+def search_genes(unknown_genes: list, gene_cache: Dict, cache_file: str) -> Dict[str, str]:
     """
     Searches for gene symbols for a set of unknown genes using the MyGene.info API.
     Updates the gene cache with resolved symbols and saves the updated cache.
@@ -325,7 +329,11 @@ def search_genes(unknown_genes, gene_cache, cache_file):
     return resolved_genes
 
 
-def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
+def convert_gene_id_to_symbols(
+    file: str,
+    data_dir: str,
+    ncbi_json_dir: str
+) -> Tuple[List[str], List[str]]:
     """
     Converts gene IDs in a file to gene symbols using a cached mapping and by searching unknown genes via an API.
     If the file is compressed, it is decompressed before processing.
@@ -408,7 +416,9 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
 
 
 # Database Functions
-def initialize_database(db_path='./database/reference_chunks.db'):
+def initialize_database(
+    db_path: str = './database/reference_chunks.db'
+) -> sqlite3.Connection:
     """
     Initializes the SQLite database and creates the 'chunks' table if it does not exist.
 
@@ -434,7 +444,12 @@ def initialize_database(db_path='./database/reference_chunks.db'):
     return conn
 
 
-def insert_chunk(conn, file_name, chunk_index, text):
+def insert_chunk(
+    conn: sqlite3.Connection,
+    file_name: str,
+    chunk_index: int,
+    text: str
+) -> int:
     """
     Inserts a text chunk into the database.
 
@@ -456,7 +471,7 @@ def insert_chunk(conn, file_name, chunk_index, text):
     return cursor.lastrowid
 
 
-def fetch_chunks(conn):
+def fetch_chunks(conn: sqlite3.Connection) -> List[Tuple[int, str]]:
     """
     Retrieves all chunks from the database.
 
@@ -471,7 +486,10 @@ def fetch_chunks(conn):
     return cursor.fetchall()
 
 
-def fetch_chunks_by_ids(conn, ids):
+def fetch_chunks_by_ids(
+    conn: sqlite3.Connection,
+    ids: List[int]
+) -> Dict[int, str]:
     """
     Retrieves chunks from the database that match the specified IDs.
 
@@ -494,7 +512,10 @@ def fetch_chunks_by_ids(conn, ids):
 
 
 # FAISS Functions
-def save_faiss_index(index, index_path='./database/faiss_index.bin'):
+def save_faiss_index(
+    index: Any,  # faiss.IndexIDMap
+    index_path: str = './database/faiss_index.bin'
+) -> None:
     """
     Saves the FAISS index to a file.
 
@@ -505,7 +526,10 @@ def save_faiss_index(index, index_path='./database/faiss_index.bin'):
     faiss.write_index(index, index_path)
 
 
-def load_faiss_index(embedding_dim, index_path='./database/faiss_index.bin'):
+def load_faiss_index(
+    embedding_dim: int,
+    index_path: str = './database/faiss_index.bin'
+) -> Any:  # faiss.IndexIDMap
     """
     Loads a FAISS index from a file. If the file does not exist, creates a new IndexIDMap based on an IndexFlatIP.
 
@@ -528,7 +552,10 @@ def load_faiss_index(embedding_dim, index_path='./database/faiss_index.bin'):
     return index
 
 
-def initialize_faiss_index(embedding_dim, index_path):
+def initialize_faiss_index(
+    embedding_dim: int,
+    index_path: str
+) -> Any:  # faiss.IndexIDMap
     """
     Load or recreate a FAISS index using the specified embedding dimension and index path.
     If the existing index is invalid, it is deleted and a new one is created.
@@ -552,7 +579,7 @@ def initialize_faiss_index(embedding_dim, index_path):
 
 
 # Chunking Functions
-def chunk_documents(documents):
+def chunk_documents(documents: List[str]) -> List[str]:
     """
     Splits documents into chunks by breaking them into non-empty lines.
 
@@ -580,7 +607,11 @@ def chunk_documents(documents):
     return chunked_docs
 
 
-def chunk_pdfs(single_document, gene_list=None, target_length=1000):
+def chunk_pdfs(
+    single_document: List[Tuple[str, str, str]],
+    gene_list: Optional[List[str]] = None,
+    target_length: int = 1000
+) -> List[str]:
     """
     Splits the text content of a PDF document into chunks based on sentence tokenization and target length.
     Optionally filters chunks based on the presence of any gene from a provided gene list.
@@ -621,7 +652,9 @@ def chunk_pdfs(single_document, gene_list=None, target_length=1000):
 
 
 # Embedding & Loading Functions
-def load_file_log(log_path='./logs/file_log.json'):
+def load_file_log(
+    log_path: str = './logs/file_log.json'
+) -> Dict[str, Any]:
     """
     Loads a file log from a JSON file, creating the log directory and file if necessary.
 
@@ -661,7 +694,10 @@ def load_file_log(log_path='./logs/file_log.json'):
     return file_log
 
 
-def save_file_log(file_log, log_path='./logs/file_log.json'):
+def save_file_log(
+    file_log: dict,
+    log_path: str = './logs/file_log.json'
+) -> None:
     """
     Saves the file log to a JSON file, ensuring the log directory exists.
 
@@ -685,7 +721,9 @@ def save_file_log(file_log, log_path='./logs/file_log.json'):
         print(f"An error occurred while saving the file log: {e}")
 
 
-def load_embeddings_model_and_tokenizer(force_download=False):
+def load_embeddings_model_and_tokenizer(
+    force_download: bool = False
+) -> Tuple[Any, Any]:
     """
     Loads and returns a tokenizer and model from pretrained sources using the Transformers library.
 
@@ -700,7 +738,9 @@ def load_embeddings_model_and_tokenizer(force_download=False):
     return tokenizer, embeddings_model
 
 #TODO See whether you can edit it for more modular approach
-def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
+def load_gz_files(
+    data_dir: str = './data/GSEA/external_gene_data'
+) -> List[Tuple[str, str, str]]:
     """
     Loads documents from files in the specified directory that are either gzipped or in .gmt format.
     Computes a file hash for each document and returns a list of documents with their metadata.
@@ -744,7 +784,10 @@ def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
     return documents
 
 
-def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
+def load_pdf_files(
+    pdf_dir: str = './data/PDF',
+    file_log: Optional[dict] = None
+) -> List[Tuple[str, str, str]]:
     """
     Loads PDF documents from the specified directory, skipping those already recorded in the file log.
 
@@ -788,9 +831,16 @@ def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
     return pdf_documents
 
 
-def embed_documents(conn, index, tokenizer, embeddings_model, data_dir,
-                    batch_size, log_path='./logs/file_log.json',
-                    pdf_dir='./data/PDF'):
+def embed_documents(
+    conn: sqlite3.Connection,
+    index: Any,  # faiss.IndexIDMap
+    tokenizer: Any,
+    embeddings_model: Any,
+    data_dir: str,
+    batch_size: int,
+    log_path: str = './logs/file_log.json',
+    pdf_dir: str = './data/PDF'
+) -> None:
     """
     Embeds text from documents (both gzipped and PDF files) using a transformer model,
     updates the FAISS index with the embeddings, and records file metadata in a log.
@@ -892,7 +942,7 @@ def embed_documents(conn, index, tokenizer, embeddings_model, data_dir,
 
 
 # BM25 and Query Functions
-def tokenize(text):
+def tokenize(text: str) -> List[str]:
     """
     Tokenizes the input text into lowercase words, excluding common stopwords.
 
@@ -905,7 +955,9 @@ def tokenize(text):
     return [word for word in re.findall(r'\b[\w-]+\b', text.lower()) if word not in stop_words]
 
 
-def build_bm25_index(conn):
+def build_bm25_index(
+    conn: sqlite3.Connection
+) -> Tuple[BM25Okapi, List[int], List[str]]:
     """
     Builds a BM25 index for the text chunks stored in the database.
 
@@ -929,10 +981,10 @@ def build_bm25_index(conn):
 
 
 def query_bm25_index(
-        query: str,
-        index: BM25Okapi,
-        chunk_ids: List[int],
-        top_k: int = 1_000
+    query: str,
+    index: BM25Okapi,
+    chunk_ids: List[int],
+    top_k: int = 1000
 ) -> Tuple[List[int], List[float], Dict[int, Any]]:
     """
         Queries the BM25 index using the provided query text and returns the top scoring documents along with details.
@@ -972,7 +1024,14 @@ def query_bm25_index(
     return top_ids, top_scores, details
 
 
-def query_faiss_index(query_text, index, tokenizer, embeddings_model, top_k, force_download=False):
+def query_faiss_index(
+    query_text: str,
+    index: Any,  # faiss.IndexIDMap
+    tokenizer: Any,
+    embeddings_model: Any,
+    top_k: int,
+    force_download: bool = False
+) -> Tuple[List[int], List[float]]:
     """
     Computes the embedding for a query and searches the FAISS index to retrieve the closest document chunks.
 
@@ -1018,7 +1077,13 @@ def query_faiss_index(query_text, index, tokenizer, embeddings_model, top_k, for
 
 
 # Document Ranking and Combination
-def create_top_faiss_docs(expanded_queries, index, tokenizer, embeddings_model, top_k):
+def create_top_faiss_docs(
+    expanded_queries: List[str],
+    index: Any,
+    tokenizer: Any,
+    embeddings_model: Any,
+    top_k: int
+) -> List[Tuple[int, Tuple[float, str]]]:
     """
     Retrieves top documents from the FAISS index for each expanded query and computes average distances.
 
@@ -1052,7 +1117,12 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, embeddings_model, 
     return top_faiss_docs
 
 
-def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
+def create_top_bm25_docs(
+    expanded_queries: List[str],
+    bm25_index: BM25Okapi,
+    chunk_ids: List[int],
+    top_k: int
+) -> List[Tuple[int, Dict[str, Any]]]:
     """
     Retrieves top documents from the BM25 index for each expanded query and aggregates their scores.
 
@@ -1100,7 +1170,12 @@ def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
     return top_bm25_docs
 
 
-def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
+def weighted_rrf(
+    top_bm25_docs: List[Tuple[int, Dict[str, Any]]],
+    top_faiss_docs: List[Tuple[int, Tuple[float, str]]],
+    weight_faiss: float,
+    weight_bm25: float
+) -> Dict[int, Dict[str, Any]]:
     """
     Combine BM25 and FAISS scores using specified weights.
 
@@ -1137,7 +1212,13 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
     return combined_scores
 
 
-def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs):
+def rank_and_retrieve_documents(
+    rrf_scores: Dict[int, Dict[str, Any]],
+    conn: sqlite3.Connection,
+    top_faiss_docs: List[Tuple[int, Tuple[float, str]]],
+    top_bm25_docs: List[Tuple[int, Dict[str, Any]]],
+    amount_docs: int
+) -> Tuple[List[str], Dict[int, Dict[str, Any]]]:
     """
     Ranks documents based on combined RRF scores, retrieves the corresponding text chunks from the database,
     and returns them in ranked order.
@@ -1189,7 +1270,10 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs,
 
 
 # Query Expansion and Response Generation
-def query_expansion(query_text, number):
+def query_expansion(
+    query_text: str,
+    number: int
+) -> List[str]:
     """
     Expands a given query into a specified number of alternative queries by generating synonyms and related phrases.
 
@@ -1295,14 +1379,14 @@ def get_generation_model_dir(model: str) -> str:
 
 
 def query_llm(
-    messages: list[dict],
+    messages: List[dict],
     system_instruction_for_response: str,
     prompt: str,
     save: bool,
     generation_model: str,
     query_range: int,
     **kwargs
-) -> str:
+) -> Optional[str]:
     """
     Unified LLM query function supporting Grok, OpenAI, DeepSeek, Claude, and Gemini.
     Retries `query_range` times, times each call, and optionally saves outputs to files.
@@ -1441,12 +1525,26 @@ def query_llm(
     return answers[-1] if answers else None
 
 
-def generate_llm_response(query_text,  gene_list_string,
-                          conn, index, tokenizer, embeddings_model,
-                          bm25_index, bm25_chunk_ids,
-                          weight_faiss, weight_bm25,
-                          system_instruction_for_response,
-                          api_type='openai'):
+def generate_llm_response(
+    query_text: str,
+    gene_list_string: str,
+    conn: sqlite3.Connection,
+    index: Any,
+    tokenizer: Any,
+    embeddings_model: Any,
+    bm25_index: BM25Okapi,
+    bm25_chunk_ids: List[int],
+    weight_faiss: float,
+    weight_bm25: float,
+    system_instruction_for_response: str,
+    api_type: str = 'openai'
+) -> Tuple[
+    Optional[str],
+    List[str],
+    Dict[int, Dict[str, Any]],
+    Dict[int, Any],
+    Dict[int, Any]
+]:
     """
     Generates a response from a language model by performing the following steps:
     - Expanding the input query.
@@ -1541,12 +1639,19 @@ def generate_llm_response(query_text,  gene_list_string,
     return answer, document_references, rrf_scores, bm25_scores, faiss_scores
 
 
-def generate_response_and_save(query,
-                               gene_list_string,
-                               conn, index, tokenizer, embeddings_model,
-                               bm25_index, bm25_chunk_ids,
-                               weight_faiss, weight_bm25,
-                               system_instruction_for_response):
+def generate_response_and_save(
+    query: str,
+    gene_list_string: str,
+    conn: sqlite3.Connection,
+    index: Any,
+    tokenizer: Any,
+    embeddings_model: Any,
+    bm25_index: BM25Okapi,
+    bm25_chunk_ids: List[int],
+    weight_faiss: float,
+    weight_bm25: float,
+    system_instruction_for_response: str
+) -> None:
     """
     Generates a response from an LLM using the provided query and gene information,
     saves the answer and associated scores to files, and closes the database connection.
@@ -1582,7 +1687,12 @@ def generate_response_and_save(query,
 
 
 # File Saving and Processing Helpers
-def save_answer_to_file(answer, document_references, file_name="./output/results/answer.txt"):
+def save_answer_to_file(
+    answer: str,
+    document_references: List[str],
+    file_name: str = "./output/results/answer.txt"
+) -> None:
+
     """
     Saves the generated answer and associated document references to text files.
 
@@ -1599,7 +1709,10 @@ def save_answer_to_file(answer, document_references, file_name="./output/results
             answer_file.write(f"{doc} \n\n")
 
 
-def process_files_in_directory(data_dir, ncbi_json_dir):
+def process_files_in_directory(
+    data_dir: str,
+    ncbi_json_dir: str
+) -> None:
     """
     Processes all .gmt.gz files in the given directory by converting gene IDs to symbols and logging unknown genes.
 
@@ -1619,8 +1732,16 @@ def process_files_in_directory(data_dir, ncbi_json_dir):
                 f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
 
-def embed_documents_and_save(index, conn, tokenizer, embeddings_model, data_dir,
-                             batch_size, log_path, index_path):
+def embed_documents_and_save(
+    index: Any,
+    conn: sqlite3.Connection,
+    tokenizer: Any,
+    embeddings_model: Any,
+    data_dir: str,
+    batch_size: int,
+    log_path: str,
+    index_path: str
+) -> None:
     """
     Embeds documents from the specified directory, updates the FAISS index with the embeddings,
     and then saves the updated index and closes the database connection.
@@ -1641,7 +1762,12 @@ def embed_documents_and_save(index, conn, tokenizer, embeddings_model, data_dir,
     conn.close()
 
 
-def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./output/scores.xlsx"):
+def export_scores_to_excel(
+    rrf_scores: Dict[int, Any],
+    bm25_scores: Dict[int, Any],
+    faiss_scores: Dict[int, Any],
+    file_name: str = "./output/scores.xlsx"
+) -> None:
     """
     Exports combined RRF, BM25, and FAISS scores to an Excel file.
 
@@ -1675,7 +1801,10 @@ def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./o
     print(f"Scores saved to {file_name}")
 
 
-def save_scores_to_file(scores, file_name):
+def save_scores_to_file(
+    scores: Dict[int, Any],
+    file_name: str
+) -> None:
     """
     Saves scores to a text file, including details about tokens that contributed to each score.
 
@@ -1700,7 +1829,7 @@ def save_scores_to_file(scores, file_name):
     print(f"Scores saved to {file_name}")
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Run the RAG workflow tests for varying gene counts.")
     parser.add_argument(
         "--config",
