@@ -99,13 +99,13 @@ def load_config(path: str, print_settings: bool) -> Dict[str, Any]:
         "batch_size":              64,
         "embeddings_model_name":   "mghuibregtse/biolinkbert-large-simcse-rat",
         "generation_model":        "o4-mini",
-        "validation_model": "grok-3-mini",
+        "validation_model":        "grok-3-mini",
         "amount_docs":             50,
         "weight_faiss":            50,
         "weight_bm25":             50,
         "max_genes":               [250],
         "fdr_threshold":           0.05,
-        "query_range": 1,
+        "query_range":             1,
     }
 
     try:

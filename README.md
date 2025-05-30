@@ -1,6 +1,3 @@
-
-# RAG Pipeline for LUMC
-
 ![Project Logo](./data/PNG/LUMC_logo.png)
 
 ## Table of Contents
@@ -8,191 +5,177 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Installation](#installation)
-   - [Prerequisites](#prerequisites)
-   - [Clone the Repository](#clone-the-repository)
-   - [Create a Virtual Environment (Recommended)](#create-a-virtual-environment-recommended)
-   - [Install Dependencies](#install-dependencies)
 4. [Configuration](#configuration)
-   - [Configuration Files](#configuration-files)
-   - [Key Configuration Parameters](#key-configuration-parameters)
-   - [Environment Variables](#environment-variables)
 5. [Input and Output](#input-and-output)
-   - [Input Directories](#input-directories)
-   - [Output Directories](#output-directories)
-6. [Running the Application](#running-the-application)
-   - [Prepare Your Data](#prepare-your-data)
-   - [Execute the Script](#execute-the-script)
-   - [Monitoring Execution](#monitoring-execution)
-   - [Adding New Data](#adding-new-data)
-7. [Troubleshooting](#troubleshooting)
-   - [Common Issues](#common-issues)
-   - [Logs and Monitoring](#logs-and-monitoring)
-8. [Contact](#contact)
+6. [Running the Pipeline](#running-the-pipeline)
+7. [Fine-Tuning the Model](#fine-tuning-the-model)
+8. [Troubleshooting](#troubleshooting)
+9. [Contact](#contact)
 
-
-
+---
 
 ## Introduction
 
-The **Modular RAG pipeline for LUMC** is a pipeline designed to facilitate information retrieval from biomedical literature using Retrieval-Augmented Generation (RAG). Leveraging natural language processing (NLP) techniques, embedding models, and efficient search algorithms, this tool provides accurate and relevant responses to user queries. 
+The **Modular RAG pipeline for LUMC** streamlines Retrieval-Augmented Generation (RAG) for biomedical literature queries. Leveraging embedding models, hybrid search (FAISS + BM25), and large language models, it delivers accurate, context-aware answers based on system instructions and user queries.
 
-The overview of the pipeline can be seen the in the figure below
+An overview of the workflow:
 
 ![Pipeline overview](./data/PNG/pipeline.drawio.png)
+
+---
+
 ## Features
 
-- **Query Expansion:** Enhances user queries by generating related terms and synonyms using OpenAI's GPT-4o model
-- **Domain knowledge indexing:** Processing, chunking and indexes biomedical literature and gene information for efficient retrieval
-- **Hybrid retrieval**: Combines FAISS and BM25, that are ranked, for document ranking and retrieval
-- **Response Generation:** Utilizes GPT-o3-mini-high to generate informative and contextually relevant responses using the system instruction, query and retrieved documents
+* **Query Expansion:** Generate synonyms and related terms via GPT-4o.
+* **Indexing:** Chunk and index biomedical texts & gene data.
+* **Hybrid Retrieval:** Rank documents using combined FAISS and BM25 scores.
+* **Response Generation:** Produce answers with GPT-3.5/4 guided by system instructions.
 
-
+---
 
 ## Installation
 
-### Prerequisites
+You can set up the environment via **Conda** or **pip**:
 
-- Python 3.8 or higher
-- **pip** package manager
-
-### Clone the Repository
+**Conda (recommended)**
 
 ```bash
-git clone https://github.com/mghuibregtse/RAG_LUMC.git
-cd RAG_LUMC
+conda env create -f environment.yaml
+conda activate rag_lumc
 ```
 
-### Create a Virtual Environment (Recommended)
+**pip**
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-### Install Dependencies
-
-```bash
+python3 -m venv venv
+source venv/bin/activate  # Windows: venv\\Scripts\\activate
 pip install -r requirements.txt
 ```
-The requirements.txt file contains all the necessary packages for the project. However, some libraries like torch may require specific installation steps based on your system and hardware. Refer to the [PyTorch Installation Guide](https://pytorch.org/get-started/locally/) for detailed instructions. Make sure that [CUDA](https://developer.nvidia.com/cuda-downloads) is installed and configured correctly if you are using a GPU, 
+
+> For GPU support, see the [PyTorch guide](https://pytorch.org/get-started/locally/) and ensure CUDA is configured.
+
+---
 
 ## Configuration
 
-All configurations are managed through JSON files located in the `./configs_system_instruction/` directory.
+All settings live in **JSON** files under `./configs_system_instruction/`.
 
-### Configuration Files
+* **config\_template.json**: Base template
+* **GSEA.json**: GSEA-specific example
 
-- Default Configuration: `config_template.json`
-- GSEA Configuration: `GSEA.json`
+Key parameters (as used in GSEA.json):
 
-### Key Configuration Parameters
-
-- `query`: The user's search question
-- `number_of_expansions`: Number of different versions of the query to generate
-- `batch_size`: Number of documents to process in each batch
-- `model`: Name of the transformer model to use for embeddings (see https://huggingface.co/ for different models.)
-- `amount_docs`: Number of top documents to retrieve
-- `weight_faiss`: Weight assigned to FAISS scores during ranking
-- `weight_bm25`: Weight assigned to BM25 scores during ranking
-- `system_instruction_response`: An instruction for the LLM to specify the input, output, structure.
+| Parameter                     | Description                                        |
+| ----------------------------- | -------------------------------------------------- |
+| `query`                       | User's question                                    |
+| `number_of_expansions`        | How many query variations to generate              |
+| `batch_size`                  | Documents processed per batch                      |
+| `embeddings_model_name`       | Hugging Face repo path for embeddings              |
+| `generation_model`            | LLM name for response generation (e.g. o4-mini)    |
+| `validation_model`            | Model for validation or scoring (e.g. grok-3-mini) |
+| `amount_docs`                 | Top-K docs to retrieve                             |
+| `weight_faiss`, `weight_bm25` | Scoring weights for ranking                        |
+| `max_genes`                   | Maximum genes for enrichment (e.g. \[250])         |
+| `fdr_threshold`               | FDR cutoff for pathway significance                |
+| `query_range`                 | Neighborhood depth for related terms               |
+| `system_instruction_response` | LLM instruction template                           |
 
 ### Environment Variables
 
-Create a `.env` file in the root directory. Depending on which model you'd want to use, add different api keys.
-Per different vendor for LLMs, check out the quick start, where you can create your own API key.
-- [OpenAI](https://platform.openai.com/docs/quickstart)
-- [Gemini](https://ai.google.dev/gemini-api/docs/quickstart?lang=python)
-- [Anthropic](https://docs.anthropic.com/en/api/getting-started)
+Only keys for the models you actually use are required. If you're calling multiple LLMs or embedding providers, set the ones you need. Hugging Face access is **highly recommended**, while others are optional.
+
+| Variable                | Description                                   |
+| ----------------------- | --------------------------------------------- |
+| `HUGGINGFACE_API_TOKEN` | **Required** for loading HF models/embeddings |
+| `OPENAI_API_KEY`        | Optional: for OpenAI models (GPT-4, GPT-3.5)  |
+| `GROK_API_KEY`          | Optional: for Grok endpoints                  |
+| `ANTHROPIC_API_KEY`     | Optional: for Anthropic Claude                |
+| `GEMINI_API_KEY`        | Optional: for Gemini API access               |
+
+Store them in a `.env` file at the repo root:
 
 ```bash
-OPENAI_API_KEY=your_openai_api_key_here
-GEMINI_API_KEY=your_gemini_api_key_here
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
+HUGGINGFACE_API_TOKEN=your_token
+# only if used:
+# OPENAI_API_KEY=...
+# GROK_API_KEY=...
+# ANTHROPIC_API_KEY=...
+# GEMINI_API_KEY=...
 ```
+
+---
 
 ## Input and Output
 
 ### Input Directories
 
-- Configuration Files: `./configs_system_instruction/`
-- Data Files: `./data/GSEA/external_gene_data` (contains `.gmt.gz` and `.txt.gz` files)
-- PDF Documents: `./data/PDF/`
+* `./configs_system_instruction/` - JSON configs
+* `./data/GSEA/external_gene_data/` - `.gmt.gz`, `.txt.gz`
+* `./data/PDF/` - PDF docs
 
 ### Output Directories
 
-- Database: `./database/reference_chunks.db` (SQLite database storing document chunks)
-- FAISS Index: `./database/faiss_index.bin`
-- Logs:
-  - `./logs/file_log.json`
-  - `./logs/time.txt`
-- Responses:
-  - `./output/text_file/tanswer.txt`
-  - `./output/text_file/documents.txt`
-  - `./output/text_file/scores.xlsx`
+* `./database/reference_chunks.db` - SQLite chunks
+* `./database/faiss_index.bin` - FAISS index
+* `./logs/` - pipeline logs and timing info
+* `./output/text_file/` - `tanswer.txt`, `documents.txt`, `scores.xlsx`
 
+---
 
-## Running the Application
+## Running the Pipeline
 
-### Prepare Your Data
+The end-to-end pipeline is executed via **run\_all\_files.py**, which handles data processing, indexing, retrieval, and response generation.
 
-Ensure that your data files are placed in the appropriate directories:
-- `.gmt.gz` and `.txt.gz` files in `./data/GSEA/external_gene_data`
-- PDF documents in `./data/PDF/`
+* To run any configuration by its filename (without path or extension):
 
-### Execute the Script
+  ```bash
+  python run_all_files.py --<config_name>
+  ```
 
-```bash
-python your_script_name.py
-```
+  For example, for the GSEA config:
 
-Replace `your_script_name.py` with the actual name of your Python script.
+  ```bash
+  python run_all_files.py --GSEA
+  ```
 
-### Monitoring Execution
+Alternatively, invoke individual steps:
 
-Execution times for various functions are logged in `time.txt`. Check this file to monitor performance and identify potential bottlenecks.
+* **RAG\_workflow\.py**: Core retrieval and generation logic
 
+  ```bash
+  python RAG_workflow.py --config configs_system_instruction/<config_name>.json
+  ```
+* **automated\_validation.py**: Validation routines
+* **plotting.py**: Custom result plots
+* **gprofiler.py**: Gene enrichment analysis
 
-### Adding New Data
-As this current pipeline is build for specific usecases, it can be extended to other usecases by changing the input data. This new input data has to be chunked and processed accordingly fit into the current pipeline.
+---
 
+## Fine-Tuning the Model
+
+To adapt the LLM to domain specifics, use the **fine\_tune.ipynb** notebook:
+
+1. Launch Jupyter:
+
+   ```bash
+   jupyter lab fine_tune.ipynb
+   ```
+2. Prepare your training dataset and run the cells.
+3. Save the new checkpoint and update your JSON config `generation_model` field to point to it.
+
+---
 
 ## Troubleshooting
 
-### Common Issues
+* **Dependency issues:** Re-run the install steps (Conda or pip).
+* **API errors:** Check that your `.env` keys match the services you’re calling.
+* **Memory errors:** Lower `batch_size` in your config.
+* **Index load failures:** Verify `faiss_index.bin` exists and matches embedding dims.
 
-Missing Dependencies:
-- Ensure all required packages are installed via `pip install -r requirements.txt`
-- Some packages like torch may need specific installation commands
 
-API Key Errors:
-- Verify that the OpenAI API key is correctly set in the `.env` file
-- Ensure that the key has the necessary permissions and is not expired
-
-Data File Issues:
-- Confirm that data files are placed in the correct directories
-- Check for file corruption, especially for `.gz` and `.pdf` files
-
-Memory Errors:
-- Adjust `batch_size` in the configuration to a lower number if encountering memory issues
-- Ensure your system has sufficient RAM and, if available, GPU resources
-
-FAISS Index Loading Errors:
-- Verify that `faiss_index.bin` exists and is not corrupted
-- Ensure that the embedding dimensions match between the model and the FAISS index
-
-### Logs and Monitoring
-
-- Execution Times: Review `time.txt` for function execution times
-- Error Messages: Check console outputs for any error messages during execution
-- Output Files: Inspect `unknown_genes.txt` and other output files for unexpected content
-
+---
 
 ## Contact
 
-For any questions or support, please contact:
-
-- Name: Mathieu Huibregtse
-- Email: mghuibregtse@gmail.com
-- [LinkedIn](https://www.linkedin.com/in/mghuibregtse/)
-- [GitHub](https://github.com/mghuibregtse)
-
+Mathieu Huibregtse • [mghuibregtse@gmail.com](mailto:mghuibregtse@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/mghuibregtse/) • [GitHub](https://github.com/mghuibregtse)
