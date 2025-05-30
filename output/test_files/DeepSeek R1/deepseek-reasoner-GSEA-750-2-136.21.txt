@@ -1,0 +1,59 @@
+Pathway Name: Myelin Formation and Maintenance  
+Mag, Mpz, Plp1, Abca3, Fabp5, Scd, Htra1, Mal, Mbp, Cldn19, Emp1, Pmp22, Cd9, Gprc5b, Lrp2, Cnp, Sema4f, Nectin1, Cldnd1, S100b  
+
+Pathway Name: Neuregulin-ErbB Signaling  
+Lifr, Grb14, Nrg1, Efna5, Met, Pik3r1, Sos1, Pak2, Shc1, Ptpn11  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Plxnb1, Nrp2, Slit2, Efna5, Epha4, Robo2, Cdh13  
+
+Pathway Name: ERK/MAPK Signaling  
+Mapk1, Map2k6, Grb14, Sumo3, Rps6ka5, Dusp6, Ets1, Elk1, Fos, Jun  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Lef1, Fzd2, Ctnnb1, Tcf7l2, Axin2, Dvl1, Gsk3b, Apcdd1, Nkd1  
+
+Pathway Name: Lysosomal and Proteolytic Pathways  
+Ctsd, Ctsl, Ctsb, Htra1, Serpini1, Lamp1, Hexb, Galc, Psap, Ctsf  
+
+Pathway Name: Calcium Signaling and Mitochondrial Regulation  
+P2ry2, Mcu, Ryr3, Atp2b1, Slc8a1, Camk1d, Stim1, Orai1, Vdac1, Slc25a23  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Abca3, Fabp5, Scd, Hmgcr, Ldlr, Apod, Pltp, Lipa, Soat1, Acat2  
+
+Pathway Name: Synaptic Plasticity and Neurotrophic Signaling  
+Bdnf, Ntrk2, Synpr, Vamp2, Syp, Dlg1, Grin2a, Gabbr2, Adcy1, Prkaca  
+
+Pathway Name: Extracellular Matrix and Cell Adhesion  
+Adamts17, Adamtsl3, Col4a1, Col15a1, Col5a2, Hapln1, Sparc, Fn1, Lama4, Itga6  
+
+Pathway Name: Notch and JAG1 Signaling  
+Notch1, Jag1, Dll1, Hes1, Hey1, Rbpj, Adam10, Psen1, Numb, Dtx1  
+
+Pathway Name: Hypoxia Response and Astrocyte Interaction  
+Hif1a, Vegfa, Ldha, Pgk1, Eno1, Slc2a1, Bnip3, Ndrg1, P4ha1, Hmox1  
+
+Pathway Name: Ion Transport and Channels  
+Scn7a, Kcnj10, Kcnma1, Cacna1a, Clcn3, Trpc1, Trpv4, Slc12a5, Slc1a3, Kcnq2  
+
+Pathway Name: Neuroinflammation and Immune Regulation  
+Aif1l, C1qtnf1, Cxcl12, Cxcl14, Tnfrsf1a, Il18rap, Cd59b, Trem2, C3, C1s  
+
+Pathway Name: Autophagy and Ubiquitination  
+Becn1, Atg5, Sqstm1, Ubb, Ubc, Park7, Hspa8, Hsp90aa1, Psma1, Psmd2  
+
+Pathway Name: Neural Crest Development and Migration  
+Sox10, Twist1, Snai2, Foxd3, Ednrb, Cdh2, Itgb1, Rac1, Cdc42, Rhoa  
+
+Pathway Name: TGF-β and BMP Signaling  
+Tgfb1, Bmpr2, Smad4, Ltbp1, Inhba, Gdf6, Acvr1b, Tgfbr2, Smad7, Ski  
+
+Pathway Name: GPCR and cAMP Signaling  
+Gnai1, Adcy1, Prkar2b, Pde4d, Creb1, Epac1, Gnas, Grk2, Arrb1, Adrb2  
+
+Pathway Name: RNA Binding and Translation Regulation  
+Msi1, Elavl1, Fmr1, Ddx1, Eif4e, Eif2s1, Pabpc1, Rplp0, Eef2, Rps7  
+
+Pathway Name: Apoptosis and Survival Pathways  
+Bcl2, Bax, Casp3, Casp9, Apaf1, Birc5, Bad, Bim, Akt1, Mcl1

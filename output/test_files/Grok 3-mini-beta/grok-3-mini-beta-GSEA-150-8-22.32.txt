@@ -1,0 +1,14 @@
+Axonal Guidance Pathway:
+Cntn6, Sema4f, Ntn1, Robo2, Nrp1, Nrp2, Slit2,
+
+Myelin Formation and Maintenance Pathway:
+Mag, Mpz, Hapln1, Chst2, Alpl,
+
+Synaptic Plasticity and Signaling Pathway:
+Synpr, Piezo2, Slc9a9, Gnai1, Prkar2b, Dyrk1a,
+
+Lipid Metabolism in Neural Cells Pathway:
+Aldh1a1, Gldc, Abca8a, Abcb4,
+
+Autophagy and Lysosomal Pathway:
+Gldc, Mag, Mpz, Hapln1,

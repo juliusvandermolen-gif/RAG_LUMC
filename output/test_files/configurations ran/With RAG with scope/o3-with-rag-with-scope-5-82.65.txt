@@ -1,0 +1,23 @@
+Axon Guidance and Neuronal Navigation:
+Cntn6, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Itga8, Dpysl5, Dpysl3, Srgap1, Tnik, Kif1a, Lrrtm3,
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Synpr, Kif1a, Ryr3, Prkar2b, Prkd3, Frrs1, P2ry2, Sncg, Cpe, Pam, Map1lc3a, Slc9a9, Piezo2, Mef2c, Dyrk1a, Septin5, Pfn2,
+
+Schwann Cell Myelination and Axon–Glia Interaction:
+Pmp22, Mpz, Mag, Drp2, Gldn, Mal, Cldn19, Id2, Msi1, Tf, Numb,
+
+Wnt/β-Catenin Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Dyrk1a, Kif1a,
+
+Calcium-Dependent Neural Signaling:
+Ryr3, Itpripl1, Piezo2, Prkar2b, Prkd3, P2ry2, Gnai1, Nfatc1,
+
+Myelin Lipid and Cholesterol Metabolism:
+Abca8a, Abcb4, Apod, Pltp, Sgpl1, Cers6, Agpat5, Lrp2, Pmp22, Mpz, Mag,
+
+PI3K–Akt/MAPK Neurotrophic Signaling:
+Prkar2b, Gnai1, Runx3, Id2, Mef2c, Kif1a, Met, Atf3, Atf5, Epas1,
+
+Neural Extracellular Matrix Organization:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Efemp2, Mfap5, Hapln1, Matn3, Bgn, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Emilin1, Ccn3, Ccn4,

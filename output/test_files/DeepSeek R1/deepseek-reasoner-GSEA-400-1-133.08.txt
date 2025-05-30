@@ -1,0 +1,205 @@
+Pathway Name: Myelination and Lipid Metabolism  
+Abca8a, Abcb4, Apod, Cers6, Htra1, Ltbp1, Mbp, Mpz, Pmp22, Plp1, Serpine1, Steap1, Steap2, Sumo3, Tf, Tubb4a, Tuba4a, Vgf  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Nrp1, Nrp2, Plxnb1, Sema3g, Sema4f, Sema4f, Slit2, Col15a1, Col20a1, Col9a3, Efemp2, Lrp2, Mag, Nid2, Pcdh18, Robo2  
+
+Pathway Name: Extracellular Matrix Organization  
+Adamts17, Adamtsl3, Col11a1, Col15a1, Col20a1, Col8a2, Col9a3, Comp, Efemp2, Emilin1, Hapln1, Mfap5, Matn3, Timp1  
+
+Pathway Name: Neuregulin-ERBB Signaling  
+Grb14, Nrg1, Pik3ca, Akt1, Efemp2, Lifr, Met, Pcsk5, Pdgfb, Prkar2b, Sumo3, Tnik  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Dyrk1a, Gnai1, Gprc5a, Gprc5b, Piezo2, Sipa1l1, Synpr, Tpcn1, Vps26c, Cdh13, Ckb, Drd4, Ntrk2, Ryr3, Snap29, Syp  
+
+Pathway Name: Autophagy and Lysosomal Pathways  
+Ctsd, Ctsl, Htra1, Lamp1, Lrp2, Psap, Tfeb, Tmem86a, Vps8, Wdfy3, Atg5, Becn1, Gabarap, Map1lc3a  
+
+Pathway Name: Cholesterol Biosynthesis and Transport  
+Abca8a, Abcb4, Apod, Hmgcr, Hsd17b7, Insig1, Ldlr, Scarb1, Sqor, Star, Tspo, Vldlr  
+
+Pathway Name: Inflammatory and Immune Response  
+A2m, Cxcl12, Cxcl14, Cxcl16, Htra1, Ighm, Il1r1, Tnfrsf1a, Tnfaip6, Cd9, Cd55, Cd151, Ifnar1, Lpar1, Selplg  
+
+Pathway Name: Neural Crest and Schwann Cell Development  
+Sox10, Ebf1, Erbb3, Fabp5, Gprc5a, Id2, Krox20, Mef2c, Nfatc1, Prx, Robo2, Runx3, S100b, Zeb2, Zfp518a  
+
+Pathway Name: PI3K-AKT-mTOR Signaling  
+Akt1, Grb14, Pdpk1, Pik3ca, Pik3r1, Pten, Rictor, Rps6kb1, Tsc1, Tsc2, Ulk1, Vps34, Ywhag  
+
+Pathway Name: Ion Channel and Transporters  
+Abca8a, Abcb4, Cacna1a, Cacnb2, Kcnj10, Kcnq2, Scn7a, Slc22a17, Slc39a13, Slc9a9, Trpv4, Tpcn1  
+
+Pathway Name: Notch Signaling Pathway  
+Dll1, Jag1, Notch1, Hes1, Hes5, Hey1, Rbpj, Adam17, Psen1, Psen2, Numb, Dtx4  
+
+Pathway Name: Wnt Signaling and Axon Pathfinding  
+Wnt5a, Fzd3, Dvl1, Apc, Ctnnb1, Lef1, Tcf7, Axin2, Gsk3b, Rspo1, Vangl2, Celsr1  
+
+Pathway Name: cAMP-PKA Signaling  
+Adcy1, Prkar2b, Pde4d, Creb1, Atf3, Pkia, Rap1gap, Rapgef3, Gnas, Gnal, Drd4  
+
+Pathway Name: Endocytosis and Vesicle Trafficking  
+Cltc, Dynll1, Ehd1, Eps15, Snap29, Stxbp1, Synj2bp, Vps26c, Vps8, Ap2a1, Ap2m1, Rab10  
+
+Pathway Name: Oxidative Stress and Antioxidant Response  
+Sod1, Sod2, Gpx1, Prdx1, Txnrd2, Nqo1, Hmox1, Cat, Gclc, Gclm, Nrf2, Keap1  
+
+Pathway Name: Apoptosis and Cell Survival  
+Bcl2, Bax, Casp3, Casp9, Bad, Bcl2l1, Birc5, Tp53, Mcl1, Trp73, Hsp90aa1, Hspa12a  
+
+Pathway Name: Neurotrophin Signaling  
+Ntrk2, Ngf, Bdnf, Ntf3, Ntf4, Ngfr, Sort1, Sh2b1, Shc1, Sos1, Grb2, Mapk1  
+
+Pathway Name: Ubiquitination and Protein Degradation  
+Ube2d1, Ube2e1, Ube2g1, Ube2n, Ube3a, Fbxo11, Park2, Usp7, Usp9x, Cul4b, Skp1, Cullin1  
+
+Pathway Name: Calcium Signaling  
+Ryr3, Itpr1, Camk2a, Camk2b, Calm1, S100a1, S100b, Trpc1, Trpc4, Trpv4, Stim1, Orai1  
+
+Pathway Name: Glycolysis and Energy Metabolism  
+Hk2, Pgk1, Pgam1, Eno1, Ldha, Pfkp, Pkm, Slc2a1, Slc2a3, Slc16a1, Mct1, Pdk1  
+
+Pathway Name: JAK-STAT Signaling  
+Jak1, Jak2, Stat1, Stat3, Stat5a, Stat5b, Socs1, Socs3, Cish, Il6st, Lifr, Osmr  
+
+Pathway Name: TGF-β Signaling  
+Tgfbr1, Tgfbr2, Smad2, Smad3, Smad4, Smad7, Ltbp1, Serpine1, Thbs1, Inhba, Bmpr1a, Acvr1b  
+
+Pathway Name: RNA Processing and Translation  
+Eif2ak2, Eif2b5, Eif4e, Eif4g1, Rps6, Rps19, Rpl5, Rpl10, Ddx1, Pabpc1, Syncrip, Zc3h14  
+
+Pathway Name: DNA Repair and Replication  
+Brca1, Brca2, Rad51, Xrcc1, Parp1, Parp14, Msh2, Pold1, Pcna, Rpa1, Rpa2, Fen1  
+
+Pathway Name: Hypoxia Response  
+Hif1a, Epas1, Vegfa, Slc2a1, Pgk1, Ldha, Bnip3, Ndrg1, Egln1, Egln3, Vhl, Hmox1  
+
+Pathway Name: Cell Adhesion and Migration  
+Cdh13, Itga6, Itga7, Itga8, Itgb1, Itgb4, Pecam1, Vcam1, Icam1, Jam2, Cldn19, Cgn  
+
+Pathway Name: Circadian Rhythm Regulation  
+Per1, Per2, Cry1, Cry2, Bmal1, Clock, Npas2, Rora, Rorb, Nr1d1, Ciart, Dbp  
+
+Pathway Name: Neurotransmitter Release and Recycling  
+Snap25, Syn1, Syn2, Syt1, Syt4, Sv2a, Sv2b, Rab3a, Rab3b, Stx1a, Stxbp1, Vamp2  
+
+Pathway Name: Glutamate Receptor Signaling  
+Gria1, Gria2, Gria3, Gria4, Grin1, Grin2a, Grin2b, Grin2d, Slc1a2, Slc1a3, Shank1, Homer1  
+
+Pathway Name: GABAergic Signaling  
+Gabra1, Gabrb2, Gabrg2, Gabbr1, Slc6a1, Slc6a11, Gad1, Gad2, Abat, Gabat, Gls, Glul  
+
+Pathway Name: Dopaminergic Signaling  
+Th, Ddc, Slc6a3, Drd1, Drd2, Drd4, Comt, Maoa, Maob, Dat, Snca, Park7  
+
+Pathway Name: Serotonergic Signaling  
+Slc6a4, Htr1a, Htr2a, Htr2c, Tph1, Tph2, Maoa, Maob, Ddc, Slc18a2, Vmat1, Vmat2  
+
+Pathway Name: Cholinergic Signaling  
+Chat, Slc5a7, Ache, Chrm1, Chrm3, Chrna3, Chrna4, Chrnb2, Slc18a3, Vacht, Prkar2b, Pde4d  
+
+Pathway Name: Histaminergic Signaling  
+Hdc, Hrh1, Hrh2, Hrh3, Hrh4, Hnmt, Dao, Slc22a3, Slc22a17, Ptgds, Ltc4s, Alox5  
+
+Pathway Name: Purinergic Signaling  
+P2ry2, P2rx7, Entpd1, Entpd2, Nt5e, Adora1, Adora2a, Adora2b, Adora3, Panx1, Panx2, Panx3  
+
+Pathway Name: Ephrin-Eph Receptor Signaling  
+Epha4, Ephb2, Efnb1, Efnb2, EphrinA1, EphrinA5, EphA7, EphB3, EphB4, EphB6, Src, Fyn  
+
+Pathway Name: Retinoic Acid Signaling  
+Rarb, Rara, Rxra, Rxrb, Crabp1, Crabp2, Cyp26a1, Cyp26b1, Aldh1a1, Aldh1a2, Aldh1a3, Rbp1  
+
+Pathway Name: Hedgehog Signaling  
+Shh, Smo, Ptch1, Gli1, Gli2, Gli3, Sufu, Hip1, Disp1, Boc, Cdon, Gas1  
+
+Pathway Name: PPAR Signaling  
+Ppard, Pparg, Rxra, Rxrb, Fabp5, Acsl1, Acsl3, Acox1, Cpt1a, Cpt1b, Ucp1, Ucp2  
+
+Pathway Name: NF-κB Signaling  
+Nfkb1, Rela, Ikbkb, Ikbkg, Tnfrsf1a, Traf2, Traf6, Chuk, Tab1, Tab2, Nfkbia, Nfkbib  
+
+Pathway Name: MAPK Signaling  
+Mapk1, Mapk3, Mapk8, Mapk14, Kras, Raf1, Mek1, Mek2, Elk1, Fos, Jun, Myc  
+
+Pathway Name: mTORC1 Signaling  
+Mtor, Rptor, Rictor, Akt1, Tsc1, Tsc2, Rheb, S6k1, 4e-bp1, Ulk1, Deptor, Pras40  
+
+Pathway Name: Lysophospholipid Signaling  
+Lpar1, Lpar2, Lpar3, Lpar4, Lpar5, Lpar6, Autotaxin, Enpp2, Agpat1, Agpat2, Agpat3, Agpat5  
+
+Pathway Name: Sphingolipid Metabolism  
+Sgms1, Sgpl1, Cers6, Asah1, Asah2, Sphk1, Sphk2, S1pr1, S1pr2, S1pr3, Degs1, Degs2  
+
+Pathway Name: Fatty Acid Oxidation  
+Acadm, Acadl, Acads, Hadha, Hadhb, Cpt1a, Cpt2, Acadm, Acadl, Acads, Eci1, Eci2  
+
+Pathway Name: Glycogen Metabolism  
+Gys1, Gys2, Pygm, Pygl, Agl, Gbe1, Gaa, G6pc, Pgm1, Phka1, Phkb, Phkg1  
+
+Pathway Name: Pentose Phosphate Pathway  
+G6pd, Pgd, Tkt, Taldo1, Rpe, Rpia, Prps1, Prps2, Nnt, Idh1, Idh2, Me1  
+
+Pathway Name: One-Carbon Metabolism  
+Mthfr, Mtr, Mtrr, Shmt1, Shmt2, Dhfr, Tyms, Cbs, Cth, Mat1a, Mat2a, Mat2b  
+
+Pathway Name: Amino Acid Transport  
+Slc1a5, Slc7a5, Slc7a1, Slc7a2, Slc3a2, Slc6a9, Slc6a19, Slc38a1, Slc38a2, Slc38a5, Slc43a1, Slc43a2  
+
+Pathway Name: Nucleotide Synthesis  
+Rrm2, Tyms, Dhfr, Mthfd1, Mthfd2, Paics, Pfas, Gart, Atic, Impdh1, Impdh2, Gmps  
+
+Pathway Name: Proteasome and Ubiquitination  
+Psmd2, Psmb5, Psmb8, Uba1, Uba52, Ubb, Ubc, Ube2n, Ube2v1, Usp14, Usp25, Usp47  
+
+Pathway Name: Ribosome Biogenesis  
+Rpl5, Rpl10, Rpl11, Rpl22, Rps6, Rps19, Rps27a, Npm1, Ncl, Nop56, Fbl, Ddx21  
+
+Pathway Name: Telomere Maintenance  
+Terf1, Terf2, Pot1, Tinf2, Dkc1, Nhp2, Nop10, Gar1, Rtelo1, Tert, Atm, Atr  
+
+Pathway Name: Centrosome and Spindle Assembly  
+Cep97, Cep295nl, Cep152, Cep192, Plk1, Plk4, Stil, Sas6, Cdk1, Cdk2, Cdc20, Cdc25c  
+
+Pathway Name: Cell Cycle Regulation  
+Cdk1, Cdk2, Cdk4, Cdk6, Ccnd1, Ccnd3, Ccne1, Ccna2, Ccnb1, Ccng1, P21, P27  
+
+Pathway Name: Apical-Basal Polarity  
+Par3, Par6, Pals1, Crumbs3, Patj, Scrib, Dlg1, Dlg3, Lgl1, Lgl2, Mark2, Mark3  
+
+Pathway Name: Tight Junction Assembly  
+Cldn19, Tjp1, Ocln, Marveld1, Marveld2, Marveld3, Cgn, Cldn1, Cldn3, Cldn5, Cldn7, Cldn12  
+
+Pathway Name: Gap Junction Communication  
+Gja1, Gjb1, Gjb2, Gjc1, Gjd2, Gjd3, Panx1, Panx2, Panx3, Inx1, Inx2, Inx3  
+
+Pathway Name: Focal Adhesion Dynamics  
+Itga6, Itgb1, Fak1, Paxillin, Talin1, Vinculin, Zyxin, Actn1, Actn4, Tns1, Tns3, Parva  
+
+Pathway Name: Actin Cytoskeleton Remodeling  
+Acta2, Actb, Actg1, Cfl1, Cfl2, Arpc2, Arpc3, Arpc4, Arpc5, Wasl, Wasp, Profilin  
+
+Pathway Name: Microtubule Dynamics  
+Tuba4a, Tubb4a, Tubb2b, Tubb3, Map1a, Map1b, Map2, Stmn1, Kif5a, Kif5b, Kif1a, Kif26b  
+
+Pathway Name: Intermediate Filament Organization  
+Vim, Gfap, Nestin, Desmin, Krt8, Krt18, Krt19, Krtap1-5, Ina, Synemin, Prph, Nefl  
+
+Pathway Name: Nuclear Pore Complex  
+Nup62, Nup98, Nup107, Nup133, Nup153, Nup205, Nup214, Nup358, Tpr, Ran, Ranbp1, Ranbp2  
+
+Pathway Name: RNA Splicing and Processing  
+Srsf1, Srsf2, Srsf3, Srsf6, Tra2a, Tra2b, Snrnp70, Snrpa1, Snrpb, Snrpd1, Snrpe, Snrpf  
+
+Pathway Name: Chromatin Remodeling  
+Hdac1, Hdac2, Hdac3, Brd4, Ep300, Crebbp, Smarca4, Smarcb1, Arid1a, Arid1b, Chd1, Chd4  
+
+Pathway Name: DNA Methylation and Epigenetics  
+Dnmt1, Dnmt3a, Dnmt3b, Tet1, Tet2, Tet3, Mecp2, Uhrf1, Uhrf2, Mbd1, Mbd2, Mbd4  
+
+Pathway Name: miRNA Biogenesis and Regulation  
+Dicer1, Drosha, Dgcr8, Ago1, Ago2, Ago3, Ago4, Xpo5, Tarbp2, Hmga2, Lin28a, Lin28b  
+
+Pathway Name: Long Non-Coding RNA Regulation  

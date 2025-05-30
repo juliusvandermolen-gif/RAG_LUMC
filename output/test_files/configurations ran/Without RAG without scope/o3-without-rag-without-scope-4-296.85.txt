@@ -1,0 +1,29 @@
+Extracellular Matrix and Glycosaminoglycan Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Arsb, Arsg, Bgn, Chst2, Col8a2, Col9a3, Col11a1, Col15a1, Col20a1, Ccn3, Ccn4, Efemp2, Emilin1, Fut10, Gcnt1, Hapln1, Has2, Hs6st1, Hs6st2, Htra1, Krtap1-5, Ltbp1, Matn3, Mfap5, Pappa, Pxdn, Sbspn, Serpinf1, Slc35a2, Timp1, Zpld1, Alpl,
+
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Plxnb1, Nrp1, Nrp2, Efna5, Slitrk6, Srgap1, Tnik, Dyrk1a, Dpysl3, Dpysl5, Lrrtm3, Kif1a, Itga8, Gldn, Prss12, Synpr,
+
+Myelination and Nerve Fiber Integrity:
+Mag, Mpz, Pmp22, Drp2, Prx, Gldn,
+
+Cytoskeleton and Cell Junction Organization:
+Acta2, Acap2, Aif1l, Aig1, Asap1, Cd9, Cd151, Cdh13, Clca4l, Cldn19, Cldnd1, Cobll1, Emp2, Fhod3, Gypc, Itga7, Itga8, Kif1a, Mal, Marveld1, Nes, Pfn2, Phldb2, Pkp1, Ppp1r14c, Rhoj, Septin4, Septin5, Sipa1l1, Stard13, Tagln, Tmem26, Tspan4, Tspan5, Tuba4a, Tubb4a, Vash1, Cep295nl, Nek9,
+
+Developmental Growth Factor Signaling (Wnt/TGF-β/GH):
+Wnt5a, Lef1, Tnik, Ccn3, Ccn4, Ltbp1, Htra1, Pappa, Serpinf1, Lifr, Ghr, Met, Igfbp3, Ptgfr, Gnai1, Grb14, Epas1,
+
+Immune and Chemokine Signaling:
+C1qtnf1, Cxcl12, Cxcl14, Defb29, Ighm, Ifnar1, Icoslg, Nfatc1, Nlrp1a, Parp14, Runx3, Selplg, Tnfrsf1a, Tril,
+
+Lipid and Redox Metabolism:
+A2m, Abca8a, Abcb4, Agpat5, Apod, Cers6, Dhrs1, Fth1, Hadhb, Nampt, Pgm1, Pltp, Ppard, Psap, Ptgfr, Sgpl1, Sqor, Steap1, Steap2, Tf, Aldh1a1, Gldc,
+
+Vesicle Trafficking and Endocytosis:
+Chmp2b, Lrp2, Rab10, Snx4, Snx6, Tbccd1, Tpcn1, Vopp1, Vps8, Vps26c, Ppfia4, Itpripl1,
+
+Protein Processing, Ubiquitination and Autophagy:
+Bace2, Cpe, Ctbs, Ecel1, Eif2ak2, Fam20c, Fbxo11, Map1lc3a, Pam, Pcsk5, Ppm1f, Psmd2, Qsox1, Rcn3, Rnf144a, Serinc5, Sumo3, Tex101, Trim35, Tent5c, Stk39, Smc6, Msh2, Poglut1,
+
+Transcriptional and Post-Transcriptional Regulation:
+Aff3, Atf3, Atf5, Cdca7l, Ddx1, Ebf1, Epas1, Gtf2e1, Hmx3, Id2, Klf9, Magea4, Magea9, Mageb16, Magec2l1, Mef2c, Mybl1, Numb, Peg3, Rrm2, Taf9b, Vrk1, Zfp518a, Msi1, Ppp1r36, Cggbp1, St3gal5,

@@ -15,7 +15,7 @@ import functools
 import logging
 import contextlib
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Tuple, Optional
 
 # Third-party imports
 import pandas as pd
@@ -38,6 +38,7 @@ from rank_bm25 import BM25Okapi, BM25Plus
 
 from openai import OpenAI
 import google.generativeai as genai
+from google.generativeai import types
 from anthropic import Anthropic
 import torch
 from openai import OpenAI as DeepSeekClient
@@ -51,9 +52,15 @@ os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-client_claude = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-client_deepseek = DeepSeekClient(
+client_gemini = OpenAI(
+    api_key=os.getenv("GEMINI_API_KEY"),
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+)
+client_claude = OpenAI(
+    api_key=os.getenv("CLAUDE_API_KEY"), 
+    base_url="https://api.anthropic.com/v1/"  
+)
+client_deepseek = OpenAI(
     api_key=os.getenv("DEEPSEEK_API_KEY"),
     base_url="https://api.deepseek.com"
 )
@@ -61,6 +68,7 @@ client_grok = OpenAI(
     base_url="https://api.x.ai/v1",
     api_key=os.getenv("XAI_API_KEY"),
 )
+
 
 # NLTK: silent downloader
 logging.getLogger('nltk').setLevel(logging.ERROR)
@@ -406,7 +414,8 @@ def convert_gene_id_to_symbols(
         final_unknown_genes = set()
 
     if final_unknown_genes:
-        unknown_genes_file = os.path.join('./output/results/unknown_genes.txt')
+        os.makedirs("./output/support", exist_ok=True)
+        unknown_genes_file = os.path.join('./output/support/unknown_genes.txt')
         with open(unknown_genes_file, 'w') as unknown_file:
             unknown_file.write('\n'.join(final_unknown_genes))
 
@@ -1297,7 +1306,8 @@ Possible expanded queries:
 3. "GGT5 and its involvement in glutathione homeostasis"
 4. "Impact of GGT5 on glutathione biosynthesis and metabolism"
 
-Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
+Consider the context of the user query and ensure that the expanded queries are relevant to the topic.
+Only return the expanded queries, no explanation is needed.
     """
     expanded_queries = []
     if number > 0:
@@ -1311,10 +1321,9 @@ Also, consider the context of the user query and ensure that the expanded querie
         ]
         save = False
         answer = query_llm(messages, prompt, system_instruction, save, generation_model=generation_model,
-                           query_range=query_range)
+                           query_range=1)
         expanded_queries = answer.strip().split('\n')
         expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for q in expanded_queries if q.strip()]
-
         if len(expanded_queries) > number:
             expanded_queries = expanded_queries[:number]
         elif len(expanded_queries) < number:
@@ -1358,24 +1367,24 @@ def build_search_parameters(
 
 def get_generation_model_dir(model: str) -> str:
     if model.startswith("grok"):
-        return "grok"
+        return "Grok 3-mini-beta"
     if model == "gpt-4o-mini-search-preview" or model.startswith("gpt-4"):
-        return "openai"
+        return "OpenAI websearch"
     if model.startswith("o"):
         if "o4-mini" in model:
-            return "open_ai_o4_mini"
+            return "OpenAI o4-mini"
         if "o3-mini" in model:
-            return "open_ai_o3_mini"
+            return "OpenAI o3-mini"
         if "o4" in model:
-            return "open_ai_o4"
-        return "open_ai_o3"
+            return "OpenAI o4"
+        return "OpenAI o3"
     if model.startswith("deepseek"):
-        return "deepseek"
+        return "DeepSeek R1"
     if model.startswith("claude"):
-        return "claude"
+        return "Claude"
     if model.lower().startswith("gemini"):
-        return "gemini"
-    return "openai"
+        return "Gemini"
+    return "OpenAI"
 
 
 def query_llm(
@@ -1385,11 +1394,12 @@ def query_llm(
     save: bool,
     generation_model: str,
     query_range: int,
+    gene_count: int = None,
     **kwargs
 ) -> Optional[str]:
     """
     Unified LLM query function supporting Grok, OpenAI, DeepSeek, Claude, and Gemini.
-    Retries `query_range` times, times each call, and optionally saves outputs to files.
+    Retries query_range times, times each call, and optionally saves outputs to files.
     """
 
     answers: list[str] = []
@@ -1397,9 +1407,8 @@ def query_llm(
         try:
             start_time = time.perf_counter()
             model_dir = get_generation_model_dir(generation_model)
-
             # ── Grok via raw HTTP ───────────────────────────────────────────────
-            if model_dir == "grok":
+            if model_dir == "Grok 3-mini-beta":
                 api_key = os.getenv("XAI_API_KEY")
                 endpoint = "https://api.x.ai/v1/chat/completions"
                 headers = {
@@ -1433,17 +1442,16 @@ def query_llm(
                 data = resp.json()
                 answer = data["choices"][0]["message"]["content"]
 
-            elif model_dir == "openai":
+            elif model_dir == "OpenAI":
                 response = client_open_ai.chat.completions.create(  # type: ignore
                     model=generation_model,
                     messages=messages,
-                    max_tokens=kwargs.get("max_tokens", 16384),
                     temperature=kwargs.get("temperature", 0),
                     **kwargs
                 )
                 answer = response.choices[0].message.content
 
-            elif model_dir.startswith("open_ai_o"):
+            elif model_dir.startswith("OpenAI o"):
                 adjusted = system_instruction_for_response + prompt
                 response = client_open_ai.chat.completions.create(  # type: ignore
                     model=generation_model,
@@ -1454,7 +1462,7 @@ def query_llm(
                 )
                 answer = response.choices[0].message.content
 
-            elif model_dir == "deepseek":
+            elif model_dir == "DeepSeek R1":
                 response = client_deepseek.chat.completions.create(  # type: ignore
                     model=generation_model,
                     messages=messages,
@@ -1464,41 +1472,26 @@ def query_llm(
                 )
                 answer = response.choices[0].message.content
 
-            elif model_dir == "claude":
-                claude_msgs = []
-                if system_instruction_for_response:
-                    claude_msgs.append({
-                        "role": "system",
-                        "content": system_instruction_for_response
-                    })
-                claude_msgs.extend(messages)
-
-                response = client_claude.messages.create(
+            # OpenAI SDK is in beta at the moment, maybe in the future, more arguments will be included
+            elif model_dir == "Claude":
+                response = client_claude.chat.completions.create(
                     model=generation_model,
-                    max_tokens=kwargs.get("max_tokens", 8192),
-                    messages=claude_msgs
+                    messages=messages,
                 )
-                answer = "".join([part.text for part in response.content])
+                answer = response.choices[0].message.content
 
-            elif model_dir == "gemini":
-                config = types.GenerateContentConfig(
-                    system_instruction=system_instruction_for_response,
-                    max_output_tokens=kwargs.get("max_output_tokens", 1024),
-                    temperature=kwargs.get("temperature", 0.0)
-                )
-                resp = client_gemini.models.generate_content(
+            elif model_dir == "Gemini":
+                response = client_gemini.chat.completions.create(
                     model=generation_model,
-                    contents=prompt,
-                    config=config
+                    messages=messages,
+                    temperature=0.0
                 )
-                answer = resp.text
-
+                answer = response.choices[0].message.content
             else:
                 # Fallback to OpenAI
                 response = client_open_ai.chat.completions.create(  # type: ignore
                     model=generation_model,
                     messages=messages,
-                    max_tokens=16384,
                     temperature=0,
                     **kwargs
                 )
@@ -1514,11 +1507,14 @@ def query_llm(
         if save:
             out_dir = os.path.join("./output/test_files", model_dir)
             os.makedirs(out_dir, exist_ok=True)
-            fname = f"{generation_model}-{i}-{duration}.txt"
-            path = os.path.join(out_dir, fname)
+            if gene_count is not None:
+                file_name = f"{generation_model}-GSEA-{gene_count}-{i}-{duration}.txt"
+            else:
+                file_name = f"{generation_model}-{i}-{duration}.txt"
+
+            path = os.path.join(out_dir, file_name)
             with open(path, "w", encoding="utf-8") as f:
                 f.write(answer)
-            print(f"Saved iter {i} answer to {path}")
 
         answers.append(answer)
 
@@ -1537,7 +1533,8 @@ def generate_llm_response(
     weight_faiss: float,
     weight_bm25: float,
     system_instruction_for_response: str,
-    api_type: str = 'openai'
+    gene_count: Optional[int] = None,
+
 ) -> Tuple[
     Optional[str],
     List[str],
@@ -1554,6 +1551,7 @@ def generate_llm_response(
     - Querying the specified LLM API (OpenAI, Claude, or Gemini).
 
     Args:
+        gene_count:
         query_text: The original user query.
         gene_list_string: A comma-separated string of gene names.
         conn: The SQLite database connection.
@@ -1590,7 +1588,6 @@ def generate_llm_response(
 
     # Combine scores using weighted RRF
     rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
-    print(f"Retrieving top {amount_docs} documents based on RRF scores.")
     retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
         rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=amount_docs
     )
@@ -1617,21 +1614,12 @@ def generate_llm_response(
         {"role": "user", "content": prompt}
     ]
     save_message = f"(role: system, content: {system_instruction_for_response}\nrole: user, content: {prompt})"
-    os.makedirs("./output/results", exist_ok=True)
-    with open("./output/results/messages.txt", "w", encoding="utf-8") as file:
+    os.makedirs("./output/support", exist_ok=True)
+    with open("./output/support/messages.txt", "w", encoding="utf-8") as file:
         file.write(save_message)
-    print(f"Using LLM model: {generation_model} for response generation.")
 
-    if api_type.lower() == 'openai':
-        save = True
-        answer = query_llm(messages, system_instruction_for_response, prompt, save,
-                           generation_model=generation_model, query_range=query_range)
-    elif api_type.lower() == 'claude':
-        answer = query_claude(messages)
-    elif api_type.lower() == 'gemini':
-        answer = query_gemini(system_instruction_for_response, prompt)
-    else:
-        raise ValueError("Unsupported API type. Choose from 'openai', 'claude', 'gemini'.")
+    answer = query_llm(messages, system_instruction_for_response, prompt, save=True,
+                       generation_model=generation_model, query_range=query_range, gene_count=gene_count)
 
     bm25_scores = dict([(doc_id, details['score']) for doc_id, details in top_bm25_docs])
     faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
@@ -1650,13 +1638,15 @@ def generate_response_and_save(
     bm25_chunk_ids: List[int],
     weight_faiss: float,
     weight_bm25: float,
-    system_instruction_for_response: str
+    system_instruction_for_response: str,
+    gene_count: int = None,
 ) -> None:
     """
     Generates a response from an LLM using the provided query and gene information,
     saves the answer and associated scores to files, and closes the database connection.
 
     Args:
+        gene_count:
         query: The original user query.
         gene_list_string: A comma-separated string of gene names.
         conn: The SQLite database connection.
@@ -1674,13 +1664,20 @@ def generate_response_and_save(
         conn, index, tokenizer, embeddings_model,
         bm25_index, bm25_chunk_ids,
         weight_faiss, weight_bm25,
-        system_instruction_for_response,
+        system_instruction_for_response, gene_count
     )
 
     if answer and answer != "Processing complete.":
         save_answer_to_file(answer, document_references)
-
-        export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./output/scores.xlsx")
+        support_dir = Path("./output/support")
+        support_dir.mkdir(parents=True, exist_ok=True)
+        output_file = support_dir / "scores.xlsx"
+        export_scores_to_excel(
+            rrf_scores,
+            bm25_scores,
+            faiss_scores,
+            file_name=str(output_file)
+        )
     else:
         print("Failed to generate a response from the LLM.")
     conn.close()
@@ -1703,8 +1700,9 @@ def save_answer_to_file(
     """
     with open(file_name, "w", encoding='utf-8') as answer_file:
         answer_file.write(answer)
-    print(f"Answer saved to {file_name}")
-    with open("./output/results/documents.txt", "w", encoding='utf-8') as answer_file:
+    #print(f"Answer saved to {file_name}")
+    os.makedirs("./output/support", exist_ok=True)
+    with open("./output/support/documents.txt", "w", encoding='utf-8') as answer_file:
         for idx, doc in enumerate(document_references, start=1):
             answer_file.write(f"{doc} \n\n")
 
@@ -1798,7 +1796,6 @@ def export_scores_to_excel(
     df = pd.DataFrame(data)
     df = df.sort_values(by="RRF Score", ascending=False)
     df.to_excel(file_name, index=False)
-    print(f"Scores saved to {file_name}")
 
 
 def save_scores_to_file(
@@ -1830,7 +1827,9 @@ def save_scores_to_file(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run the RAG workflow tests for varying gene counts.")
+    parser = argparse.ArgumentParser(
+        description="Run the RAG workflow tests for varying gene counts."
+    )
     parser.add_argument(
         "--config",
         type=str,
@@ -1844,47 +1843,59 @@ def main() -> None:
     globals()['config_name'] = config_name
     globals().update(config)
 
-    for max_genes_value in max_genes:
-        print(f"=== Running test for max_genes = {max_genes_value} ===")
-        current_max_genes = max_genes_value
-        gene_list_string, regulation, num_genes = initialize_gene_list(
-            max_genes=current_max_genes,
-            fdr_threshold=fdr_threshold,
-            excel_file_path=r"./data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
-            de_filter_option="combined",
-        )
+    total_runs = len(max_genes) * query_range
+    pbar = tqdm(total=total_runs, desc="Starting GSEA runs")
+    for gene_count in max_genes:
+        for iteration in range(1, query_range + 1):
+            # update description
+            pbar.set_description(f"GSEA for {gene_count} genes, iteration {iteration}/{query_range}")
 
-        data_dir = './data/GSEA/external_gene_data'
-        log_dir = './logs'
-        log_path = os.path.join(log_dir, 'file_log.json')
-        index_path = './database/faiss_index.bin'
-        db_path = './database/reference_chunks.db'
-        ncbi_json_dir = './data/JSON/'
+            current_max_genes = gene_count
+            gene_list_string, regulation, num_genes = initialize_gene_list(
+                max_genes=current_max_genes,
+                fdr_threshold=fdr_threshold,
+                excel_file_path=r"./data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
+                de_filter_option="combined",
+            )
 
-        process_files_in_directory(data_dir, ncbi_json_dir)
+            data_dir = './data/GSEA/external_gene_data'
+            log_dir = './logs'
+            log_path = os.path.join(log_dir, 'file_log.json')
+            index_path = './database/faiss_index.bin'
+            db_path = './database/reference_chunks.db'
+            ncbi_json_dir = './data/JSON/'
 
-        conn = initialize_database(db_path=db_path)
-        tokenizer, embeddings_model = load_embeddings_model_and_tokenizer()
-        embedding_dim = embeddings_model.config.hidden_size
+            process_files_in_directory(data_dir, ncbi_json_dir)
 
-        index = initialize_faiss_index(embedding_dim, index_path)
-        embed_documents_and_save(index, conn, tokenizer, embeddings_model, data_dir,
-                                 batch_size=batch_size, log_path=log_path,
-                                 index_path=index_path)
+            conn = initialize_database(db_path=db_path)
+            tokenizer, embeddings_model = load_embeddings_model_and_tokenizer()
+            embedding_dim = embeddings_model.config.hidden_size
 
-        index = load_faiss_index(embedding_dim, index_path=index_path)
-        conn = sqlite3.connect(db_path)
-        bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
+            index = initialize_faiss_index(embedding_dim, index_path)
+            embed_documents_and_save(
+                index, conn, tokenizer, embeddings_model,
+                data_dir, batch_size=batch_size,
+                log_path=log_path, index_path=index_path
+            )
 
-        # Single call per gene count since query_llm already performs 5 attempts.
-        generate_response_and_save(
-            query,
-            gene_list_string,
-            conn, index, tokenizer, embeddings_model,
-            bm25_index, bm25_chunk_ids,
-            weight_faiss, weight_bm25,
-            system_instruction_response
-        )
+            index = load_faiss_index(embedding_dim, index_path=index_path)
+            conn = sqlite3.connect(db_path)
+            bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
+
+            generate_response_and_save(
+                query,
+                gene_list_string,
+                conn, index, tokenizer, embeddings_model,
+                bm25_index, bm25_chunk_ids,
+                weight_faiss, weight_bm25,
+                system_instruction_response,
+                gene_count
+            )
+
+            pbar.update()
+
+    pbar.close()
+
 
 
 if __name__ == "__main__":

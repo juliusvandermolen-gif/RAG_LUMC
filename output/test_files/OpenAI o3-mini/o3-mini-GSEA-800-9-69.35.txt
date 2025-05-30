@@ -1,0 +1,20 @@
+Synaptic Plasticity & Neural Signaling:
+Cntn6, Prss12, Synpr, Bdnf, Vgf, Adcy1, Cdh13, Gprc5a, Gprc5b, Gnai1, Drd4, Met
+
+Axon Guidance & Neurite Outgrowth:
+Ntn1, Robo2, Slit2, Sema4f, Sema3g, Efna5, Plxnb1, Srgap1
+
+Myelination & Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Mbp, Gldn, Drp2
+
+Calcium & Ion Channel Signaling:
+Scn7a, Ryr3, Piezo2, Itpripl1
+
+Transcriptional Regulation & Neural Development:
+Atf3, Atf5, Id2, Mef2c, Dyrk1a, Klf9, Lef1, Ebf1, Numb, Runx3, Sim2, Msi1, Nes
+
+Cytoskeletal Dynamics & Axonal Transport:
+Kif1a, Tuba4a, Dnm1l, Kif26b, Septin4, Septin5, Snap29, Rab10
+
+Retinoic Acid Signaling & Neural Differentiation:
+Aldh1a1, Rarb

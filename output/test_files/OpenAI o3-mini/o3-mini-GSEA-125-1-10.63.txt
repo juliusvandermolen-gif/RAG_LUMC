@@ -1,0 +1,17 @@
+Neural Development and Axon Guidance:
+Cntn6, Ntn1, Robo2, Slit2, Mag, Gldn, Srgap1
+
+Synaptic Plasticity and Neural Signaling:
+Prss12, Sema4f, Synpr, P2ry2, Piezo2, Atf3
+
+Extracellular Matrix and Cell Adhesion:
+Hapln1, Col9a3, Col20a1, Col15a1, Cdh13, Emilin1, Ltbp1
+
+Protein Processing and Ubiquitination:
+Adamts17, Pcsk5, Prss23, Sumo3, Rnf144a, Prkar2b
+
+Lipid Metabolism and Transport:
+Aldh1a1, Pltp, Abca8a, Abcb4
+
+Growth Factor and Receptor Signaling:
+Igfbp3, Tf, Efemp2, Lifr

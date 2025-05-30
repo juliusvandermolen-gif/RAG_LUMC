@@ -1,0 +1,29 @@
+Axon guidance and neurite outgrowth:
+Sema3g, Sema4f, Slit2, Ntn1, Robo2, Plxnb1, Nrp1, Nrp2, Efna5, Cntn6
+
+Synaptic transmission and plasticity:
+Bdnf, Grik5, Synpr, Snap29, Vamp2, P2ry2
+
+MAPK signaling pathway:
+Mapk1, Map2k6, Mapk8ip1, Map4k5, Mef2c, Creb3
+
+Calcium signaling pathway:
+Itpripl1, Ryr3, Camk1d, Atp2b1, Piezo2, Tpcn1
+
+Wnt signaling and planar cell polarity:
+Wnt5a, Lef1, Prickle3, Daam2, Vangl2
+
+GPCR-mediated neural signaling:
+Drd4, Gnai1, Gng2, Gprc5a, Gprc5b, Gpr176
+
+Autophagy and lysosomal degradation:
+Map1lc3a, Ctbs, Ctsd, Ctsl, Ctsf
+
+Sphingolipid and cholesterol metabolism:
+Sgms1, Sgpl1, Sptlc2, Apod, Cers6, Scd
+
+Myelination and axon–glia interactions:
+Mbp, Plp1, Mag, Mpz, Pmp22
+
+Rho GTPase–mediated cytoskeletal remodeling:
+Cdc42se2, Arhgap24, Arhgef9, Rhoj, Pak2, Cfl2, Fhod3

@@ -1,0 +1,11 @@
+Axon Guidance and Synaptic Connectivity:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Wnt5a, Plxnb1, Efna5, Slitrk6, Cdh13, Lrrtm3,
+
+Myelination and Glial Function:
+Mpz, Pmp22, Mag, Mbp, Plp1, Drp2, Cldn19, Gldn, Mal,
+
+Synaptic Plasticity and Neurotransmission:
+Synpr, Bdnf, Vgf, Drd4, Kif1a, Adcy1, Arf6,
+
+Neuronal Cytoskeleton and Intracellular Transport:
+Tuba4a, Tubb4a, Septin4, Septin5, Dnm1l, Pak2, Gnai1,

@@ -1,0 +1,23 @@
+Axon guidance:
+Sema4f, Ntn1, Robo2, Nrp1, Cntn6, Srgap1, Cdh13
+
+Myelination and myelin maintenance:
+Mpz, Mag, Drp2, Prx, Gldn, Mfap5
+
+Synaptic plasticity and vesicle organization:
+Prss12, Cpe, Synpr, Sncg, Scn7a, Serpini1, P2ry2
+
+Extracellular matrix organization and proteolysis:
+Adamts17, Adamtsl3, Hapln1, Col9a3, Matn3, Efemp2, Sbspon, Pxdn, Htra1
+
+Lipid metabolism in myelination:
+Abca8a, Abcb4, Pltp, Apod, Aldh1a1, Sqor, Man1a1, Manba
+
+Neurotrophin and GPCR signaling:
+Nrp1, P2ry2, Ecel1, Igfbp3, Gprc5b, Ptgfr, Piezo2
+
+Transcriptional regulation and stress response:
+Id2, Atf3, Eif2ak2, Ddx1, Sumo3, Epas1, Peg3
+
+Immune and inflammatory signaling in neural tissue:
+Cxcl14, Ighm, Tril, Icoslg, A2m, Defb29

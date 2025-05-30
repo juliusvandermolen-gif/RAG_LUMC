@@ -1,0 +1,20 @@
+Synaptic Plasticity and Neurotransmission:
+Synpr, Cpe, Drd4, Adcy1, Grid2, Synj2bp, Bdnf, Vgf
+
+Axon Guidance and Neuronal Migration:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Cdh13, Efna5, Plxnb1, Sema3g, Slitrk6, Rhoj
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Kif1a, Tubb4a, Septin4, Septin5, Acta2, Dnm1l, Cdk5r1, Arf6
+
+Neural Differentiation and Stem Cell Maintenance:
+Nes, Msi1, Id2, Atf3, Atf5, Mef2c, Lef1, Ebf1, Klf9, Hes6, Numb
+
+Ion Channels and Receptor Signaling:
+Piezo2, Scn7a, P2ry2, Gja1
+
+Myelination and Glial Function:
+Mag, Mpz, Pmp22, Drp2, Mal, Gldn, Plp1, Mbp
+
+Intracellular Signal Transduction:
+Mapk1, Map2k6, Gnai1, Ryr3, Itpripl1, Eif2ak2

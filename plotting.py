@@ -6,14 +6,12 @@ import os
 import pandas as pd
 import plotly.express as px
 from scipy.stats import pearsonr
+import shutil
 
 # plotting defaults
 figure_width = 1000
 figure_height = 600
 figure_kwargs = {'width': figure_width, 'height': figure_height}
-
-# where your input-gene lists live:
-INPUT_GENE_DIR = Path(r"supporting scripts/calculate_overlap")
 
 
 def normalize_gene(gene: str) -> str:
@@ -23,8 +21,8 @@ def normalize_gene(gene: str) -> str:
     return g
 
 
-def load_input_gene_set(amount: int) -> Set[str]:
-    fn = INPUT_GENE_DIR / f"all_genes_{amount}.txt"
+def load_input_gene_set(amount: int, input_gene_dir: Path) -> Set[str]:
+    fn = input_gene_dir / f"all_genes_{amount}.txt"
     if not fn.exists():
         raise FileNotFoundError(f"{fn} not found – please generate it first.")
 
@@ -64,14 +62,14 @@ def parse_filename(f: Path) -> Tuple[Optional[int], Optional[float]]:
     if len(parts) < 3:
         return None, None
     try:
-        g = int(parts[-3])
-        t = float(parts[-1])
+        gene_amount = int(parts[-3])
+        time = float(parts[-1])
     except ValueError:
         return None, None
-    return g, t
+    return gene_amount, time
 
 
-def collect_data_for_model(model_dir: Path) -> pd.DataFrame:
+def collect_data_for_model(model_dir: Path, input_gene_dir: Path) -> pd.DataFrame:
     rec = []
     for f in model_dir.glob("*.txt"):
         ig, tm = parse_filename(f)
@@ -82,7 +80,7 @@ def collect_data_for_model(model_dir: Path) -> pd.DataFrame:
         raw_norm = {normalize_gene(g) for g in raw}
 
         try:
-            inp_set = load_input_gene_set(ig)
+            inp_set = load_input_gene_set(ig, input_gene_dir)
         except FileNotFoundError:
             inp_set = set()
 
@@ -185,7 +183,29 @@ def compute_correlations(df: pd.DataFrame) -> None:
     print(results.to_string(index=False))
 
 
+# TODO, maybe change the range to be more adative based on the sizes used during generation
+def create_input_dir(input_gene_dir: Path) -> None:
+    input_gene_dir.mkdir(parents=True, exist_ok=True)
+
+    df = pd.read_excel("./data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx")
+    genes = df['X'].dropna().astype(str).tolist()
+
+    for size in range(100, 1001, 50):
+        file_path = input_gene_dir / f"all_genes_{size}.txt"
+
+        if file_path.exists() and file_path.is_dir():
+            shutil.rmtree(file_path)
+
+        elif file_path.exists():
+            file_path.unlink()
+
+        with file_path.open('w') as f:
+            f.write("\n".join(genes[:size]))
+
+
 def main():
+    input_gene_dir = Path("output/text_files/all_genes/test")
+    create_input_dir(input_gene_dir)
     base_dir = Path("./output/test_files")
     out_dir = Path("output/results/plots")
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -199,7 +219,7 @@ def main():
         if not model_dir.is_dir() or model_dir.name == "configurations ran":
             continue
         model = model_dir.name
-        df = collect_data_for_model(model_dir)
+        df = collect_data_for_model(model_dir, input_gene_dir)
         if df.empty:
             print(f"no data for {model}, skipping.")
             continue

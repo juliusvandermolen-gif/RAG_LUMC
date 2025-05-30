@@ -1,0 +1,14 @@
+Synaptic Plasticity and Organization Pathway:
+Cntn6, Prss12, Synpr, Bdnf, Cdh13
+
+Axon Guidance and Neural Connectivity Pathway:
+Ntn1, Robo2, Slit2, Sema4f, Nrp1, Nrp2, Wnt5a, Efna5, Plxnb1, Slitrk6
+
+Calcium and Neurotransmitter Signaling Pathway:
+Adcy1, Ryr3, Drd4, P2ry2, Gnai1, Camk1d
+
+MAPK/ERK Signaling Pathway in Neurons:
+Mapk1, Map2k6, Mef2c, Atf3
+
+Neural Differentiation and Stem Cell Maintenance Pathway:
+Nes, Msi1, Id2, Klf9, Hes6, Numb

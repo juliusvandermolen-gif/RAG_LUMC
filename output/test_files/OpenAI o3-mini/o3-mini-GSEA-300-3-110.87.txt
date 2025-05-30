@@ -1,0 +1,17 @@
+Synaptic Plasticity and Neurotransmission:
+Prss12, Synpr, Cntn6, Cpe, Serpini1, Cdh13, Ntn1,
+
+Axon Guidance and Neural Circuit Formation:
+Sema4f, Robo2, Slit2, Nrp1, Nrp2, Srgap1,
+
+Neurite Outgrowth and Cytoskeletal Remodeling:
+Tuba4a, Tubb4a, Kif1a, Dpysl5, Cobl, Pfn2,
+
+Neural Development and Transcriptional Regulation:
+Id2, Atf3, Msi1, Mef2c, Dyrk1a, Ebf1, Klf9, Runx3, Numb,
+
+Extracellular Matrix and Neural Adhesion:
+Hapln1, Col9a3, Adamts17, Adamtsl3, Ltbp1, Emilin1, Itga7, Matn3, Col15a1, Has2,
+
+Neural Signal Transduction and Receptor Activity:
+Met, Wnt5a, Gprc5b, Gprc5a, Tf, Igfbp3, Epas1,

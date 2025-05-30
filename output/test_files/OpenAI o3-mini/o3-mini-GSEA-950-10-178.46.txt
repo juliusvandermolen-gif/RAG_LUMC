@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neurotransmission:
+Bdnf, Synpr, Grid2, Drd4, Adcy1, Ryr3, Synj2bp,
+
+Axon Guidance and Neural Migration:
+Cntn6, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Robo2, Slit2, Cdh13,
+
+Neuronal Differentiation and Development:
+Nes, Mef2c, Met, Atf3, Id2,
+
+Axonal Transport and Cytoskeletal Dynamics:
+Kif1a, Tuba4a, Septin4, Dnm1l, Gnai1,
+
+MAPK/ERK Signaling in Neural Cells:
+Mapk1, Map2k6, Pak2, Cdk5r1,

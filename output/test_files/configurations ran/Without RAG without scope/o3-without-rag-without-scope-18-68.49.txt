@@ -1,0 +1,23 @@
+Extracellular Matrix Organization and Remodeling:
+Zpld1, Adamts17, Adamtsl1, Adamtsl3, Htra1, Timp1, Ltbp1, Efemp2, Emilin1, Bgn, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Matn3, Mfap5, Pxdn, Pappa, Qsox1, Serpinf1, Serpini1, Ccn3, Ccn4, Wnt5a, Has2, Prss12, Prss23,
+
+Axon Guidance and Neuronal Connectivity:
+Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Plxnb1, Nrp1, Nrp2, Efna5, Lrrtm3, Dpysl3, Dpysl5, Tnik, Prx, Mag, Mpz, Gldn, Kif1a, Synpr, Cdh13, Cldn19, Cldnd1, Srgap1, Piezo2, Gja1, Itpripl1, Slitrk6, Sncg, Scn7a,
+
+Lipid Transport and Metabolism:
+Abca8a, Abcb4, Pltp, Apod, Psap, Cers6, Agpat5, Ppard, Nampt, Lrp2, Sgpl1, St3gal5, Slc35a2, Slc39a13, Gpnmb, Steap1, Steap2,
+
+Immune and Inflammatory Response:
+Cxcl12, Cxcl14, Ighm, A2m, Ifnar1, Nlrp1a, Selplg, Tnfrsf1a, Parp14, C1qtnf1, Defb29, Tril, Icoslg, Aif1l, Runx3, Id2, Atf3, Eif2ak2,
+
+Redox and Iron Homeostasis:
+Sqor, Steap2, Steap1, Fth1, Tf, Rrm2, Dhrs1, Qsox1, Nampt,
+
+Hypoxia Response and Angiogenesis:
+Epas1, Vash1, Nampt, Serpinf1, Wnt5a, Timp1, Igfbp3, Eif2ak2,
+
+Cytoskeleton Organization and Cell Motility:
+Acta2, Tagln, Tuba4a, Tubb4a, Pfn2, Septin4, Septin5, Nes, Itga7, Itga8, Myo1d, Fhod3, Rhoj, Asap1, Stard13, Klhl29,
+
+Wnt/β-Catenin and Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Tnik, Ppard, Mef2c, Runx3,

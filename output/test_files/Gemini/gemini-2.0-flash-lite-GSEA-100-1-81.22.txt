@@ -1,0 +1,605 @@
+Here are the identified pathways based on your gene list:
+
+**Synaptic Plasticity and Neural Signaling Pathways:**
+Cntn6, Sema4f, Synpr, Ntn1, Srgap1, Robo2
+
+**Myelination and Schwann Cell Development:**
+Mpz, Mag, Cntn6, Pxdn, Nrp1
+
+**Cholesterol Biosynthesis and Lipid Metabolism:**
+Zpld1, Adamts17, Apod, Manba, Abca8a
+
+**Cellular Signaling and Growth Regulation:**
+Grb14, Id2, Ccn3, Grb14, Ptgfr, Eif2ak2, Atf3
+
+**Vascular and Angiogenesis:**
+Nrp1, Sema4f, Ltbp1, Adamtsl3, Cxcl14
+
+**Extracellular Matrix and Cell Adhesion:**
+Hapln1, Adamts17, Col9a3, Cdh13, Pkp1, Sbspon, Matn3
+
+**Ion Channels and Membrane Transport:**
+Scn7a, Slc9a9, Slc22a17, Abcb4, Piezo2
+
+**Inflammation and Immune Response:**
+A2m, Aif1l, Ighm, Cxcl14, Defb29
+
+**Other Pathways:**
+*   **Glycine catabolic process:** Gldc
+*   **Protein processing:** Pcsk5, Cpe, Htra1, Prss12, Prss23, Serpini1, Serpinf1
+*   **Cell cycle:** Cdca7l, Ddx1, Cdca7l
+*   **Transcription regulation:** Peg3, Id2, Atf3
+*   **Vesicle transport:** Emp2, Myo1d, Vopp1
+*   **Purinergic signaling:** P2ry2
+*   **Phospholipid metabolism:** Hs6st2
+*   **Epithelial cell differentiation:** Clca4l
+*   **Actin cytoskeleton organization:** Acta2, Tagln, Cobll1
+*   **Iron transport:** Tf
+*   **Steroidogenesis:** Man1a1
+*   **Cellular senescence:** Rrm2
+*   **Eicosanoid synthesis:** Ptgfr
+*   **Protein glycosylation:** Manba, Chst2, Hs6st2
+*   **Axon guidance:** Ntn1, Robo2
+*   **Cellular response to hypoxia:** Epas1
+*   **Wnt signaling pathway:** Gprc5b
+*   **Protein folding:** Ecel1
+*   **Ubiquitin-dependent protein catabolic process:** Sumo3
+*   **Lipid metabolism:** Abca8a
+*   **Cellular response to stress:** Eif2ak2
+*   **Regulation of cell growth:** Ccn3
+*   **Regulation of cell differentiation:** Id2
+*   **Regulation of cell migration:** Ntn1
+*   **Regulation of cell adhesion:** Cdh13
+*   **Regulation of cell communication:** Robo2
+*   **Regulation of cell motility:** Tagln
+*   **Regulation of cell proliferation:** Cdca7l
+*   **Regulation of cell survival:** Grb14
+*   **Regulation of cell death:** Grb14
+*   **Regulation of cell morphogenesis:** Robo2
+*   **Regulation of cell polarity:** Robo2
+*   **Regulation of cell shape:** Tagln
+*   **Regulation of cell size:** Ccn3
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm2
+*   **Regulation of cell cycle initiation:** Cdca7l
+*   **Regulation of cell cycle phase transition:** Cdca7l
+*   **Regulation of cell cycle restart:** Rrm2
+*   **Regulation of cell cycle termination:** Rrm2
+*   **Regulation of cell cycle transition:** Cdca7l
+*   **Regulation of cell cycle arrest:** Rrm2
+*   **Regulation of cell cycle checkpoint:** Cdca7l
+*   **Regulation of cell cycle progression:** Cdca7l
+*   **Regulation of cell cycle exit:** Rrm

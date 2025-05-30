@@ -1,8 +1,0 @@
-Axon Guidance Pathway:
-CNTN6, NTN1, NRP1, NRP2, PLXNB1, ROBO2, SEMA3G, SEMA4F, SLIT2,
-
-Myelin Sheath Assembly:
-HAPLN1, MAG, MBP, MPZ, PLP1,
-
-Synaptic Plasticity Pathway:
-BDNF, CAMK1D, DPYSL5, SYNPR,

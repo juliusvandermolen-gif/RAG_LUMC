@@ -1,0 +1,14 @@
+Axon Guidance Pathway:  
+Ntn1, Sema4f, Robo2, Nrp1, Cntn6, Srgap1,  
+
+Myelin Formation and Maintenance Pathway:  
+Mag, Mpz, Drp2, Hapln1, Ltbp1, Adamts17, Adamtsl3, Mfap5, Hs6st2, Matn3,  
+
+Synaptic Plasticity and Signaling Pathway:  
+Synpr, Piezo2, Scn7a, Cpe, P2ry2, Ptgfr, Slc9a9,  
+
+Lipid Metabolism Pathway:  
+Aldh1a1, Abca8a, Pltp, Sqor, Serpini1, Serpinf1, Abcb4, Man1a1, Manba, Serinc5, Apod, Efemp2, A2m, Tf,  
+
+Neural Development and Differentiation Pathway:  
+Id2, Gldc, Cobll1, Pcsk5, Peg3, Tril, Sumo3, Riox2, Cdh13, Epas1, Gprc5b, Ddx1, Eif2ak2, Atf3, Trim35, Gldn, Alpl, Robo2, Ntn1, Sema4f, Nrp1, Cntn6, Srgap1, Piezo2, Synpr, Scn7a, P2ry2, Ptgfr, Slc9a9, Cxcl14, Ighm, Pxdn, Tent5c, Magec2l1, Pkp1, Ecel1, Icoslg, Ppp1r36, Krtap1-5, Robo2,

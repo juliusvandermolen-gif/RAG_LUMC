@@ -1,0 +1,35 @@
+Neural Plasticity and Synaptic Signaling:
+Cntn6, Ntn1, Robo2, Sema4f, Nrp1, Cdh13, Sncg, Mag, Srgap1
+
+Extracellular Matrix and Cell Adhesion:
+Col9a3, Hapln1, Adamts17, Adamtsl3, Ltbp1, Pxdn, Efemp2, Mfap5, Matn3, Pkp1
+
+Schwann Cell Development and Myelination:
+Mpz, Mag, Drp2, Prx, Ntn1, Sema4f, Nrp1, Cdh13
+
+Cholesterol and Lipid Metabolism:
+Aldh1a1, Apod, Pltp, Abca8a, Abcb4, Alpl
+
+Neural Crest and Peripheral Nervous System Development:
+Zpld1, Prss12, Pcsk5, Ecel1, Piezo2, Epas1, Tubb4a, Tuba4a
+
+Proteostasis and Protein Processing:
+Cpe, Prss23, Prss12, Pcsk5, Htra1, Serpini1, Serpinf1, Sumo3, Ctbs, Manba
+
+Cell Signaling and Transcriptional Regulation:
+Id2, Atf3, Grb14, Epas1, Peg3, Ccn3, Igfbp3, Nrbp1, Cdca7l, Riox2
+
+Axonal Transport and Cytoskeleton:
+Tubb4a, Tuba4a, Cobll1, Aif1l, Tagln, Acta2, Myo1d, Gldn
+
+Ion Channels and Transporters:
+Scn7a, Slc9a9, Slc22a17, Steap2, Ptgfr, P2ry2, Piezo2, Gypc
+
+Immune and Inflammatory Response:
+A2m, Ighm, Icoslg, Tril, Cxcl14, Aif1l, Tf, Eif2ak2
+
+Metabolic Processes:
+Gldc, Sqor, Aldh1a1, Man1a1, Hs6st2, Chst2, Rrm2, Tex101
+
+Growth Factor Signaling and Neurotrophic Support:
+Igfbp3, Ccn3, Pappa, Tf, Serpinf1, Cxcl14, Gprc5b

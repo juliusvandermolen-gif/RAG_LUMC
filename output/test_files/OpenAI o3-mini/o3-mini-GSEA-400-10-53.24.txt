@@ -1,0 +1,14 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Efna5, Plxnb1, Wnt5a
+
+Synaptic Plasticity and Neurotransmission:
+Prss12, Synpr, P2ry2, Drd4, Adcy1, Mef2c, Gnai1, Kif1a, Cdk5r1
+
+Neural Cell Adhesion and Extracellular Matrix Organization:
+Hapln1, Col9a3, Cdh13, Matn3, Peg3, Emilin1, Col11a1, Col15a1, Col8a2
+
+Intracellular Signaling and Cytoskeletal Dynamics:
+Tuba4a, Septin4, Septin5, Rab10, Dnm1l, Pak2, Arhgef9, Rhoj, Cdk5r1
+
+Myelination and Glial-Neural Signaling:
+Pmp22, Mpz, Mag, Mal, Drp2, Gldn

@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Navigation:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Sema3g, Sema4f, Efna5, Srgap1, Dpysl3, Dpysl5, Tnik, Kif1a, Rhoj, Asap1, Itga8, Itga7,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Prx, Drp2, Gldn, Mal, Cldn19,
+
+Synaptic Plasticity and Vesicle Trafficking:
+Synpr, P2ry2, Ryr3, Piezo2, Kif1a, Prkar2b, Dyrk1a, Mef2c, Serpini1, Klf9, Id2, Eif2ak2, Tuba4a, Map1lc3a, Nes, Numb, Sncg, Atf3, Cpe, Sumo3,
+
+Extracellular Matrix and Perineuronal Net Remodeling:
+Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Adamts17, Adamtsl1, Adamtsl3, Mfap5, Emilin1, Ltbp1, Matn3, Efemp2, Timp1, Ccn3, Ccn4, Qsox1, Pxdn,
+
+Lipid and Sphingolipid Metabolism in Neural Development:
+Abca8a, Abcb4, St3gal5, Cers6, Sgpl1, Apod, Ppard, Nampt, Agpat5, Hadhb, Sqor,
+
+Wnt/Planar Cell Polarity Signaling in Neurodevelopment:
+Wnt5a, Lef1, Tnik, Dyrk1a,

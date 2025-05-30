@@ -1,0 +1,53 @@
+Axon Guidance:
+Cntn6, Sema4f, Sema3g, Slit2, Robo2, Plxnb1, Nrp1, Nrp2, Efna5, Dpysl5, Dpysl3
+
+Myelin Sheath Formation:
+Mbp, Mpz, Plp1, Mag
+
+Synaptic Vesicle Cycle:
+Snap29, Synpr, Synj2bp, Sncg, Vgf
+
+Neuropeptide Processing:
+Cpe, Pcsk5, Pam
+
+Cell Adhesion Molecules:
+Cdh13, Cldn19, Cldnd1, Nectin1, Pcdh18
+
+Calcium Signaling Pathway:
+Itpripl1, Ryr3, P2ry2, Piezo2, Tpcn1
+
+Extracellular Matrix Organization:
+Col9a3, Col15a1, Col8a2, Col11a1, Col20a1, Comp, Bgn, Mfap5, Emilin1, Efemp2, Hapln1
+
+Ubiquitin-mediated Proteolysis:
+Psmd2, Rnf144a, Fbxo11, Trim35, Trim59, Cul4b, Ufd1
+
+Autophagy and Lysosomal Degradation:
+Map1lc3a, Ctbs, Ctsd, Ctsl, Ctsf
+
+Fatty Acid Metabolism:
+Hadhb, Bdh1
+
+Lipid Transport:
+Apod, Pltp, Abca8a, Abcb4
+
+PPAR Signaling Pathway:
+Ppard, Apod, Pltp
+
+Wnt Signaling Pathway:
+Wnt5a, Lef1, Lrp2
+
+Notch Signaling Pathway:
+Numb, Dtx4
+
+Hypoxia Response / HIF Pathway:
+Hif1a, Epas1
+
+Integrin Signaling Pathway:
+Itga6, Itga7, Itga8
+
+Cytoskeleton Organization:
+Tuba4a, Tubb4a, Septin4, Septin5, Kif1a, Kif26b, Dnm1l
+
+G-Protein Coupled Receptor Signaling:
+Drd4, P2ry2, Gprc5b, Gprc5a, Gnai1

@@ -1,0 +1,53 @@
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Mpz, Mbp, Pmp22, Mag, Prx, Ebf1, Mef2c,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Abca8a, Abca3, Scd, Sqor, Apod, Pmp22,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Bdnf, Nrp1, Nrp2, Epha4, Sema4f, Sema3g, Synpr, Vamp2, Sipa1l1,  
+
+Pathway Name: Axon Guidance and Neurite Outgrowth  
+Slit2, Robo2, Ntn1, Plxnb1, Efna5, Sema4f, Sema3g,  
+
+Pathway Name: MAPK/ERK Signaling  
+Mapk1, Pak2, Pak1, Grb14, Hras,  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Ctsd, Ctsl, Ctbs, Atg3,  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col5a2, Lama4, Hapln1, Cdh13, Cd9, Cd151,  
+
+Pathway Name: Wnt Signaling  
+Wnt5a, Lef1, Ctnnb1,  
+
+Pathway Name: Inflammatory Response and Glial Activation  
+Aif1l, Bgn, Timp1, C1qtnf1, Ccl7,  
+
+Pathway Name: Calcium Ion Signaling  
+Ryr3, Camk4,  
+
+Pathway Name: TGF-beta Signaling  
+Ltbp1, Tgfbi, Serpine1,  
+
+Pathway Name: Ubiquitin-Proteasome System  
+Ube2l3, Fbxo11, Sumo3,  
+
+Pathway Name: Hypoxia Response  
+Hif1a, Epas1,  
+
+Pathway Name: Neurotrophin Signaling  
+Bdnf,  
+
+Pathway Name: Notch Signaling  
+Adamts17, Hes6,  
+
+Pathway Name: Ion Transport and Channels  
+Scn7a, Kcnd3,  
+
+Pathway Name: Regulation of Actin Cytoskeleton  
+Acta2, Tubb4a, Tuba4a, Cfl2,  
+
+Pathway Name: cAMP Signaling  
+Adcy1, Adcy5,

@@ -1,0 +1,23 @@
+Axon Guidance & Synaptic Connectivity:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Ntn1, Plxnb1, Efna5, Dpysl3, Dpysl5, Lrrtm3, Tnik, Kif1a, Gnai1, Gldn, Pcdh18, Cadm1, Cdh13, Srgap1, Rhoj, Daam2,
+
+Myelination & Schwann Cell Development:
+Pmp22, Mag, Mpz, Plp1, Mbp, Drp2, Gldn, Cldn19, Itga6, Itga7, Ugt8, Lrp2, Pdgfb,
+
+Synaptic Transmission & Plasticity:
+Adcy1, Prkar2b, Camk1d, P2ry2, Drd4, Chrna3, Grik5, Lpar1, Snap29, Synpr, Synj2bp, Bdnf, Vgf, Ryr3, Ppp1r14c, Ncs1, Itpripl1,
+
+Neurotrophin & Growth Factor Signaling:
+Bdnf, Met, Pdgfb, Wnt5a, Igfbp3, Ghr, Lifr, Gas6, Rarb, Epas1, Efna5,
+
+MAPK/ERK & PI3K-Akt Signaling:
+Mapk1, Map2k6, Map4k5, Dyrk1a, Tnik, Mef2c, Prkd3, Pak2, Prkg1, Camk1d, Atf3, Atf5, Eif2ak2, Igf2bp2, Ghr, Pdgfb, Bdnf, Lifr, Nuak1, Mapk8ip1, Stk39, Sav1, Mark3,
+
+GPCR-Mediated Neuromodulation:
+Drd4, Lpar1, P2ry2, Gnai1, Adgrl3, Adgrg2, Gprc5a, Gprc5b, Gng2, Ptgfr,
+
+Lipid Metabolism for Myelin Integrity:
+Abca8a, Abcb4, Apod, Pltp, Ugt8, Cers6, Sgms1, Smpd1, Scd, Acadl, Hadhb, Hadha, Txnrd2, Nampt, Fabp5, Plod3, Enpp2, Pnpla2, Agpat5, Sgpl1, Stard4,
+
+Cytoskeleton & Axonal Transport Dynamics:
+Tuba4a, Tubb4a, Acta2, Myo1d, Kif1a, Kif3c, Kif26b, Septin4, Septin5, Actr10, Cfl2, Dnm1l, Vangl2, Wdr35, Ccdc50, Svil, Pard6g, Palld, Fnbp1, Arhgap24,

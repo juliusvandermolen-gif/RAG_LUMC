@@ -1,8 +1,0 @@
-Synaptic Plasticity and Neurotransmission Pathway:
-Bdnf, Drd4, Synpr, Adcy1, Cpe, Snap29, Kif1a, Ryr3, Mef2c, Cdh13
-
-Axon Guidance and Neural Development Pathway:
-Ntn1, Slit2, Robo2, Sema4f, Sema3g, Nrp1, Nrp2, Cntn6
-
-Myelination and Glial Differentiation Pathway:
-Mpz, Mag, Drp2, Gldn, Cldn19, Emp2

@@ -1,0 +1,31 @@
+Here are the identified pathways and associated genes based on your input:
+
+**Synaptic Plasticity and Neural Signaling Pathways**
+Cntn6, Sema4f, Cpe, Ntn1, Nrp1, Robo2, Synpr, Grb14, P2ry2, Slc9a9, Cdh13, Sncg, Drp2, Gprc5b, Eif2ak2, Atf3, Icoslg, Ppp1r36, Gldn, Slc22a17, Ptgfr, Myo1d, Aif1l, Pxdn, Piezo2, Srgap1, Robo2, Ntn1, Sema4f, Synpr, Grb14, P2ry2, Slc9a9, Cdh13, Sncg, Drp2, Gprc5b, Eif2ak2, Atf3, Icoslg, Ppp1r36, Gldn, Slc22a17, Ptgfr, Myo1d, Aif1l, Pxdn, Piezo2, Srgap1
+
+**Myelination and Schwann Cell Development**
+Mpz, Mag, Cntn6, Cdh13, Ntn1, Pxdn, Mpz, Mag, Cntn6, Cdh13, Ntn1, Pxdn
+
+**Cellular Signaling and Regulation**
+Zpld1, Adamts17, Cobll1, Pcsk5, Qsox1, Cpe, Hapln1, Parm1, Sqor, Sbspon, Peg3, Emp2, Clca4l, Chst2, Acta2, Htra1, Igfbp3, Tril, A2m, Ccn3, Prss23, Sumo3, Grb14, Steap2, Id2, Tf, Adamtsl3, Ltbp1, Prx, Defb29, Cdca7l, Gypc, Manba, Serpini1, Mag, Nrbp1, Srgap1, Vopp1, Pltp, Man1a1, Drp2, Slc22a17, Tagln, Cep295nl, Aif1l, Mfap5, Ctbs, Hs6st2, Tubb4a, Abca8a, Cxcl14, Ighm, Pxdn, Serinc5, Tent5c, Nrp1, Piezo2, Apod, Matn3, Sncg, Slc9a9, Riox2, Cdh13, Abcb4, Scn7a, Magec2l1, Pkp1, Epas1, Gprc5b, Efemp2, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ecel1, Serpinf1, Atf3, Icoslg, Ppp1r36, Trim35, Gldn, Krtap1-5, Alpl, Robo2, Zpld1, Adamts17, Cobll1, Pcsk5, Qsox1, Cpe, Hapln1, Parm1, Sqor, Sbspon, Peg3, Emp2, Clca4l, Chst2, Acta2, Htra1, Igfbp3, Tril, A2m, Ccn3, Prss23, Sumo3, Grb14, Steap2, Id2, Tf, Adamtsl3, Ltbp1, Prx, Defb29, Cdca7l, Gypc, Manba, Serpini1, Mag, Nrbp1, Srgap1, Vopp1, Pltp, Man1a1, Drp2, Slc22a17, Tagln, Cep295nl, Aif1l, Mfap5, Ctbs, Hs6st2, Tubb4a, Abca8a, Cxcl14, Ighm, Pxdn, Serinc5, Tent5c, Nrp1, Piezo2, Apod, Matn3, Sncg, Slc9a9, Riox2, Cdh13, Abcb4, Scn7a, Magec2l1, Pkp1, Epas1, Gprc5b, Efemp2, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ecel1, Serpinf1, Atf3, Icoslg, Ppp1r36, Trim35, Gldn, Krtap1-5, Alpl, Robo2
+
+**Lipid Metabolism and Transport**
+Abca8a, Apod, Abcb4, Manba, Pltp, Abca8a, Apod, Abcb4, Manba, Pltp
+
+**Axon Guidance and Neural Development**
+Ntn1, Sema4f, Robo2, Nrp1, Ntn1, Sema4f, Robo2, Nrp1
+
+**Inflammation and Immune Response**
+A2m, Aif1l, Ighm, A2m, Aif1l, Ighm
+
+**Vascular and Extracellular Matrix**
+Adamts17, Hapln1, Col9a3, Adamtsl3, Mfap5, Adamts17, Hapln1, Col9a3, Adamtsl3, Mfap5
+
+**Cholesterol Metabolism**
+Apod, Abca8a, Apod, Abca8a
+
+**Cell Cycle and Proliferation**
+Cdca7l, Rrm2, Cdca7l, Rrm2
+
+**Other Pathways**
+Prss12, Gldc, Tex101, Aldh1a1, Myo1d, Prss23, Steap2, Tf, Defb29, Gypc, Serpini1, Ctbs, Hs6st2, Serinc5, Matn3, Riox2, Pkp1, Ecel1, Trim35, Krtap1-5, Alpl, Prss12, Gldc, Tex101, Aldh1a1, Myo1d, Prss23, Steap2, Tf, Defb29, Gypc, Serpini1, Ctbs, Hs6st2, Serinc5, Matn3, Riox2, Pkp1, Ecel1, Trim35, Krtap1-5, Alpl

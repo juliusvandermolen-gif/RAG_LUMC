@@ -1,8 +1,0 @@
-Synaptic Plasticity & Neural Signaling Pathway:
-Prss12, Synpr, Cntn6, Cpe, P2ry2, Scn7a, Piezo2, Serpinf1
-
-Axon Guidance & Neuronal Connectivity Pathway:
-Ntn1, Robo2, Sema4f, Srgap1, Nrp1, Cdh13, Peg3
-
-Myelination & Glial Support Pathway:
-Mpz, Mag, Prx, Drp2, Gldn

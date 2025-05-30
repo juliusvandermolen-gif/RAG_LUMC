@@ -1,0 +1,29 @@
+Synaptic Transmission and Neuronal Communication:
+Cntn6, Mag, Nrp1, P2ry2, Scn7a, Sncg, Synpr
+
+Axon Guidance and Neural Development:
+Sema4f, Ntn1, Robo2, Srgap1, Nrp1, Cdh13
+
+Myelination and Schwann Cell Function:
+Mag, Mpz, Drp2, Prx
+
+Extracellular Matrix and Neural Structure:
+Col9a3, Hapln1, Matn3, Mfap5, Pxdn, Efemp2
+
+Neural Crest Development:
+Id2, Epas1, Atf3
+
+Ion Channel and Membrane Transport:
+Scn7a, P2ry2, Slc9a9, Slc22a17, Piezo2, Abca8a, Abcb4
+
+Growth Factor Signaling:
+Igfbp3, Grb14, Pappa, Ccn3, Nrp1
+
+Neural Plasticity and Cytoskeletal Dynamics:
+Tuba4a, Tubb4a, Myo1d, Tagln, Acta2
+
+Proteolytic Processing and Protein Modification:
+Prss12, Prss23, Pcsk5, Cpe, Htra1, Sumo3
+
+Cholesterol and Lipid Metabolism:
+Apod, Pltp, Serinc5

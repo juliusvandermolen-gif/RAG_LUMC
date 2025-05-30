@@ -1,0 +1,14 @@
+Axon Guidance and Synaptic Plasticity:
+CNTN6, SEMA4F, SEMA3G, SLIT2, ROBO2, NRP1, NRP2, CDH13, EFNA5, PLXNB1, NTN1
+
+Synaptic Vesicle Dynamics and Neurotransmitter Signaling:
+SYNPR, SNAP29, VAMP2, GRID2, DRD4, P2RY2
+
+GPCR‐Linked Neural Signaling:
+GPRC5A, GPRC5B, GPR176, GNAI1
+
+Calcium Signaling in Neural Plasticity:
+RYR3, CAMK1D, ADCY1, ATP2B1
+
+Neural Development and Transcriptional Regulation:
+NES, MSI1, MEF2C, ID2, ATF3, ATF5, KLF9, EBF1, RUNX3, DYRK1A, TEAD2

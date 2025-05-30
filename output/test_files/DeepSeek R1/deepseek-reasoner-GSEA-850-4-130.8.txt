@@ -1,0 +1,53 @@
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Gene A, Gene B, Gene C, Mag, Mbp, Plp1, Pmp22, Prkar2b, Scd, Abca8a, Abcb4, Abca3, Emp2, Cldn19, Lrp2, Gprc5b, Gprc5a, Nectin1, Mal, Cd9, Mpz, Pmp22, Cers6, Lpar1, Vldlr, Sgms1,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Gene A, Gene B, Gene C, Sema4f, Nrp1, Nrp2, Slit2, Plxnb1, Epha4, Efna5, Robo2, Col4a3, Cdh13, Sema3g, Cntn6, Dpysl5, Dpysl3, Dpysl2,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Gene A, Gene B, Gene C, Bdnf, Synpr, Grin1, P2ry2, Adcy1, Grin2b, Drd4, Grin2a, Gabpa, Grin2d, Adcy5, Ryr3, Camk4, Piezo2,  
+
+Pathway Name: Extracellular Matrix Organization and Remodeling  
+Gene A, Gene B, Gene C, Col9a3, Col15a1, Col5a2, Col11a1, Col16a1, Col7a1, Col14a1, Col20a1, Htra1, Adamts17, Adamtsl3, Adamtsl1, Adamts6, Sparc, Fbln1, Lama4,  
+
+Pathway Name: Lipid Metabolism and Transport  
+Gene A, Gene B, Gene C, Apod, Fabp5, Pltp, Scd, Abca8a, Abcb4, Abca3, Plpp3, Lipa, Plppr3, Plpp1, Plpp2, Gpat3, Agpat5,  
+
+Pathway Name: Calcium Signaling and Ion Homeostasis  
+Gene A, Gene B, Gene C, Ryr3, Camk4, Atp2b1, Trpc1, Cacna1c, Cacna2d1, Slc8a1, Slc8a3, Slc24a2,  
+
+Pathway Name: Wnt Signaling and Neural Development  
+Gene A, Gene B, Gene C, Wnt5a, Lef1, Tcf7l2, Ctnnb1, Dvl1, Dvl2, Axin2, Apcdd1,  
+
+Pathway Name: Neural Crest Development and Differentiation  
+Gene A, Gene B, Gene C, Mef2c, Sox10, Twist1, Pax3, Foxd3, Ednrb, Snai2, Ets1,  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Gene A, Gene B, Gene C, Ctsd, Ctsl, Ctsb, Lamp1, Atg5, Atg7, Becn1, Sqstm1,  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Gene A, Gene B, Gene C, Hsp90aa1, Hspa12a, Hspb1, Ddit3, Xbp1, Atf6, Ern1, Eif2ak2,  
+
+Pathway Name: Neurotrophin Signaling and Neuronal Survival  
+Gene A, Gene B, Gene C, Bdnf, Ntrk2, Ngfr, Ntf3, Ntf4, Grb2, Sos1, Mapk1,  
+
+Pathway Name: GPCR Signaling and Neuronal Communication  
+Gene A, Gene B, Gene C, Gprc5b, Gprc5a, Adcy1, Adcy5, Grk5, Gnai1, Gnaq, Gabpa,  
+
+Pathway Name: Notch Signaling and Glial-Axonal Interaction  
+Gene A, Gene B, Gene C, Notch1, Jag1, Dll1, Hes1, Hes5, Rbpj, Mfng,  
+
+Pathway Name: Cholesterol Homeostasis in Myelination  
+Gene A, Gene B, Gene C, Abca8a, Abcb4, Abca3, Scarb1, Apod, Hmgcr, Dhcr7,  
+
+Pathway Name: Cytoskeletal Dynamics and Neurite Outgrowth  
+Gene A, Gene B, Gene C, Tubb4a, Tuba4a, Dync1h1, Actb, Actg1, Map1b, Map2,  
+
+Pathway Name: RNA Binding and Translational Regulation  
+Gene A, Gene B, Gene C, Msi1, Elavl1, Fmr1, Cpeb1, Pum2, Zfp36,  
+
+Pathway Name: Apoptosis and Neural Circuit Pruning  
+Gene A, Gene B, Gene C, Bax, Bcl2, Casp3, Casp6, Apaf1, Trp53,  
+
+Pathway Name: Neuroinflammation and Glial Activation  
+Gene A, Gene B, Gene C, Aif1l, C1qtnf1, C1qtnf2, Cxcl12, Cxcl14, Tnfrsf1a,

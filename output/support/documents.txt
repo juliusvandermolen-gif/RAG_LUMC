@@ -1,0 +1,69 @@
+|Reference 1 (BM25) with RRF Score: 10.4686
+ELife 2014 (3). https://doi.org/10.7554/ 
+ELIFE.01901.001 . Li, Z., Ngan, E.S.-W., 2022. New insights empowered by single-cell sequencing: From 
+neural crest to enteric nervous system. Comput. Struct. Biotechnol. J. 20, 
+2464 –2472. https://doi.org/10.1016/J.CSBJ.2022.05.025 . Li, H.-Y., Say, E.H.M., Zhou, X.-F., 2007. Isolation and characterization of neural crest 
+progenitors from adult dorsal root ganglia. Stem Cells (Dayton, Ohio) 25 (8), 
+2053 –2065. https://doi.org/10.1634/STEMCELLS.2007-0080 . Li, Y., Kang, S., Halawani, D., Wang, Y., Alves, C.J., Ramakrishnan, A., Estill, M., 
+Shen, L., Li, F., He, X., Friedel, R.H., Zou, H., 2022. Macrophages facilitate peripheral 
+nerve regeneration by organizing regeneration tracks through Plexin-B2. Genes Dev. 36 (3–4), 133–148. https://doi.org/10.1101/GAD.349063.121 . Lin, W., Sanchez, H.B., Deerinckt, T., Morris, J.K., Ellisman, M., Lee, K.F., 2000. Aberrant 
+development of motor axons and neuromuscular synapses in erbB2-deficient mice. Proc. Natl. Acad. Sci. U. S. A. 
+
+|Reference 2 (BM25) with RRF Score: 9.6537
+Feedback Loops and MicroRNA Regulatio n: 
+• MYC expression is tightly regulated by feedback loops and microRNAs. PMP22 may alter 
+the expression of specific microRNAs that target MYC, such as  let-7 or miR-34a, 
+thereby affecting MYC levels . Experimental Validatio n 
+ 
+To establish a causal relationship, you could:  
+• Use Western blottin g or qPC R to measure MYC expression after PMP22 overexpression . • Apply  pharmacological inhibitor s or genetic tools (e.g., CRISPR) to block suspected 
+signaling pat hways and observe changes in MYC expression . • Assess the role of ER stress markers (e.g., CHOP, BiP) to link PMP22 overexpression to 
+UPR . By understanding these mechanisms, you might 
+uncover novel insights into cellular stress, growth, and 
+oncogenic tran sformation driven by PMP22 
+overexpression. 
+
+|Reference 3 (BM25) with RRF Score: 8.9602
+occurring for the same gene mutation (particularly for the 
+CMT1A duplication), sometimes even within the same family; 
+the slow disease progression in many CMT cases, which is 
+good for the patients but makes it difficult to measure wor -
+sening in natural history studies and assess benefit from 
+tested treatments; and the rarity of the majority of CMT 
+types, a challenge for studies on pathomechanisms and clin-
+ical trials. Therefore, there is still a lot of work to do with 
+preclinical and clinical studies before effective treatments 
+become available for many CMT forms. From the preclinical standpoint, it is important to work on 
+reliable animal models reproducing the disease as close as 
+possible. There are many novel available models, particularly 
+rodents, but flies and zebrafishes are also gaining popularity 
+because they allow cheaper and more rapid studies with 
+greater animal numbers; the use of patient-specific iPSCs to 
+derive neural cells constitutes a major advance to understand 
+pathogenic mechanisms of disease and to test potential ther -
+apeutic compounds [61]. 
+
+|Reference 4 (BM25) with RRF Score: 8.9453
+The intracellular domain of dystroglycan interacts 
+with DRP2 and L-PRX. DG (dystroglycan) conditional KO in Schwann cells display a neuropathic phenotype morpho-logically characterized by irregular folding of myelin, dis-organization of microvilli, and consequent altered clustering of 
+ Na+ channels at the node [14]. These features are not 
+typical of laminin mutants and their receptors in develop-ment such as β1 integrin, suggesting that this phenotype is not due to altered ECM-Schwann cell communication. One hypothesis is that loss of function of proteins within the DG complex in Schwann cells leads to myelin instability [14]. DRP2 and L-PRX anchor DG in the Schwann cell apposi-tions, which defines the boundaries of the cytoplasm-filled adjacent regions, the Cajal bands (Fig. 1b, d) [13, 15, 17]. Consistent with this, in addition to Cajal bands disruption, loss of either PRX or of DRP2 is associated with myelin abnormalities that share similarities with those observed in the DG mutant. Other adhesion molecules involved in myelin stability in 
+this region is the integrin α6 β4. 
+
+|Reference 5 (BM25) with RRF Score: 8.8873
+We identify a number of strategies to reduce pTau in a
+CE-dependent manner and ﬁnd that allosteric activation ofCYP46A1 is a neuron-speciﬁc CE-lowering strategy particularly
+well tolerated by human astrocytes. Collectively, our data identify
+a CYP46A1-CE-Tau axis as an early druggable pathway in AD. RESULTS
+A Drug Screen in iPSC-Derived Human FAD Neurons to
+Identify Compounds that Reduce pTau Accumulation
+pThr231Tau is an early marker of AD pathology that correlateswell with cognitive decline ( Buerger et al., 2002; Luna-Mun ˜oz
+et al., 2007 ). pThr231Tau accumulates in APP duplication
+(APP
+dp) iPSC-derived FAD neurons ( Israel et al., 2012 ). To iden-tify compounds that reduce pTau accumulation in these FAD
+neurons, we screened a collection of 1,684 approved and
+preclinical drugs for their efﬁcacy to lower neuronal pThr231Tau. For our screen, neural progenitor cells (NPCs; line APPdp1-6)
+(Israel et al., 2012 ) were differentiated to neurons ( Figures S1 A
+and S1B) for 3 weeks, replated in 384 well plates, and allowed
+to mature for 2 weeks before treatment with compound at5mM for 5 days. 
+

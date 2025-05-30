@@ -1,0 +1,11 @@
+Synaptic Signaling and Plasticity:
+Cntn6, Synpr, Sema4f, Efna5, Cxcl12
+
+Axon Guidance:
+Ntn1, Slit2, Robo2, Sema3g, Srgap1
+
+Myelin and Glial Function:
+Mpz, Pmp22, Mag, Drp2, Hapln1
+
+Neural Transcriptional Regulation:
+Id2, Atf3, Mef2c, Dyrk1a, Nfatc1

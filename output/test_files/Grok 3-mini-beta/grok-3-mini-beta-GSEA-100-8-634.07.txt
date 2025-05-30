@@ -1,0 +1,14 @@
+Myelin Sheath Assembly:
+Mag, Mpz, Hapln1, Col9a3, Gldn,
+
+Axon Guidance:
+Ntn1, Sema4f, Robo2, Srgap1, Cntn6,
+
+Lipid Metabolism in Neural Cells:
+Aldh1a1, Sqor, Abca8a, Pltp,
+
+Synaptic Signaling:
+Synpr, Piezo2, Cpe, Slc9a9,
+
+Inflammatory Response in Neural Context:
+Cxcl14, A2m, Tril, Ighm,

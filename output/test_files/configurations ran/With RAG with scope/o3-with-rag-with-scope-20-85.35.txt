@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Itga8, Srgap1, Tnik,
+
+Peripheral Myelination and Schwann Cell Function:
+Pmp22, Mpz, Mag, Prx, Gldn, Drp2, Mal, Cldn19, Gja1,
+
+Synaptic Vesicle Transport and Plasticity:
+Synpr, Kif1a, Sncg, Dpysl3, Dpysl5, Pfn2, Tubb4a, Map1lc3a, P2ry2, Prkar2b,
+
+Calcium Signaling and Mechanotransduction:
+Ryr3, Piezo2, Itpripl1, Tpcn1, P2ry2,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Klf9,
+
+Cholesterol and Sphingolipid Homeostasis in Myelin:
+Abca8a, Abcb4, Pltp, Apod, Cers6, Sgpl1, Steap1, Steap2,
+
+PI3K-Akt/Neurotrophic Signaling:
+Igfbp3, Lifr, Ghr, Prkd3, Gnai1, Dyrk1a, Atf3, Eif2ak2, Rrm2,

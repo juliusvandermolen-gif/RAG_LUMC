@@ -1,0 +1,20 @@
+Axon guidance:
+Sema4f, Sema3g, Slit2, Ntn1, Efna5, Plxnb1, Nrp1, Nrp2, Robo2, Srgap1, Dpysl3, Dpysl5
+
+Synaptic plasticity and neurotransmission:
+Snap29, Synpr, Sncg, Drd4, Grik5, Chrna3, P2ry2, Cntn6, Camk1d, Mef2c, Mapk1, Bdnf
+
+Myelination and Schwann cell development:
+Mbp, Mpz, Mag, Plp1, Prx, Gldn, Cldn19
+
+Extracellular matrix–receptor interaction and cell adhesion:
+Hapln1, Bgn, Fn1, Emilin1, Mfap5, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Nid2, Sparc, Thbs2, Adam15, Adamts17, Adamtsl1, Adamtsl3, Adamts6, Sbspon, Pxdn
+
+MAPK signaling pathway:
+Mapk1, Map2k6, Map4k5, Mapk8ip1, Tnik, Nek9, Dyrk1a
+
+Sphingolipid metabolism:
+Sgpl1, Sgms1, Cers6
+
+Neurotrophin signaling pathway:
+Bdnf, Camk1d, Mapk1, Mef2c, Rasgrp3, Crkl

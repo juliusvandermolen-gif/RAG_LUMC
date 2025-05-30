@@ -1,0 +1,11 @@
+Axon Guidance and Neural Development Pathway:
+Cntn6, Ntn1, Robo2, Sema4f, Srgap1, Id2, Gldn, Peg3,
+
+Synaptic Signaling and Plasticity Pathway:
+Synpr, P2ry2, Piezo2, Nrp1, Gprc5b, Cdh13, Atf3, Tril, Ccn3, Sumo3, Grb14, Ptgfr, Serpini1, Scn7a, Epas1, Sncg,
+
+Neurotransmitter Processing and Neuropeptide Modulation Pathway:
+Prss12, Cpe, Aldh1a1, Gldc, Igfbp3, Pappa,
+
+Extracellular Matrix and Cytoskeletal Remodeling Pathway:
+Adamts17, Adamtsl3, Hapln1, Acta2, Tuba4a, Col9a3, Tagln, Mpz, Mag, Ltbp1, Prx, Drp2, Htra1, Myo1d, Mfap5, Hs6st2, Tubb4a, Pxdn, Matn3, Pkp1, Apod,

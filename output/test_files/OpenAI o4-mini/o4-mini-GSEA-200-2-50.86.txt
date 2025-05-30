@@ -1,0 +1,23 @@
+Axon Guidance and Neuronal Pathfinding:  
+Cntn6, Sema4f, Sema3g, Slit2, Nrp1, Nrp2, Robo2, Ntn1, Wnt5a, Cdh13  
+
+Synaptic Plasticity and Neurotransmission:  
+Synpr, Sncg, Itpripl1, Ryr3, Gja1, P2ry2, Slc9a9, St3gal5  
+
+Growth Factor and Neurotrophin Signaling:  
+Lifr, IGFBP3, Met, Grb14, Prkd3, Dyrk1a  
+
+Myelination and Myelin Lipid Metabolism:  
+Mpz, Mag, Mal, Pmp22, Apod, Pltp, Abca8a, Abcb4, Agpat5, Sgpl1, Cers6  
+
+Neuroimmune Signaling and Inflammation:  
+Cxcl12, Cxcl14, Icoslg, Ifnar1, Nlrp1a, C1qtnf1, Trim35  
+
+Cytoskeletal Dynamics and Axonal Transport:  
+Tuba4a, Tubb4a, Pfn2, Septin4, Dpysl5, Rhoj, Gnai1  
+
+Extracellular Matrix Organization in Neural Development:  
+Hapln1, Col9a3, Col15a1, Col20a1, Emilin1, Mfap5, Adamts17, Adamtsl3, Adamtsl1  
+
+Transcriptional Regulation of Neural Differentiation:  
+Id2, Ebf1, Klf9, Atf3, Atf5, Nfatc1, Mef2c, Runx3  

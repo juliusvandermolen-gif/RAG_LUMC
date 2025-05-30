@@ -1,0 +1,26 @@
+Axon Guidance and Neuronal Connectivity:
+Cntn6, Prss12, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Efna5, Dpysl3, Dpysl5, Lrrtm3, Gldn, Mag, Mpz, Pmp22, Nes, Piezo2, Kif1a, Synpr, Pfn2, Ryr3, P2ry2, Scn7a, Tnik, Itga8, Slitrk6, Cdh13, Lrp2, Drp2, Itpripl1,
+
+Extracellular Matrix Organization and Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Prss23, Matn3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Mfap5, Emilin1, Efemp2, Bgn, Pxdn, Pappa, Serpinf1, Htra1, Timp1, Arsb, Has2, Fam20c, Gpnmb, Sbspon, C1qtnf1,
+
+Integrin-Mediated Cell Adhesion and Cytoskeletal Dynamics:
+Itga7, Itga8, Cd9, Cd151, Tagln, Acta2, Pfn2, Fhod3, Rhoj, Stard13, Asap1, Tspan4, Tspan5, Gja1, Prx,
+
+Lipid Transport and Metabolism:
+Apod, Pltp, Abca8a, Abcb4, Cers6, Nampt, Ppard, Pgm1, Agpat5, Steap1, Steap2, Sgpl1, Serinc5,
+
+Immune and Inflammatory Signaling:
+Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Selplg, Igfbp3, Ighm, Nlrp1a, Id2, Runx3, Parp14, Atf3, Atf5, Eif2ak2, Trim35, Ddx1,
+
+Oxidative Stress and Mitochondrial Metabolism:
+Sqor, Gldc, Aldh1a1, Hadhb, Fth1, Hspa12a, Hsp90aa1, Rrm2, Nampt, Pnpt1, Tf,
+
+Protein Processing, Autophagy and Vesicular Trafficking:
+Map1lc3a, Sumo3, Fbxo11, Psmd2, Vps26c, Vps8, Snx4, Snx6, Chmp2b, Rnf144a, Pcsk5, Poglut1, Tbccd1, Gtf2e1, Cpsf2,
+
+Noncanonical Wnt and Developmental Signaling:
+Wnt5a, Lef1, Tnik, Mef2c, Msi1, Dyrk1a, Epas1, Ebf1, Klf9, Ghr, Ppp1r14c,
+
+Angiogenesis and Vascular Remodeling:
+Epas1, Vash1, Wnt5a, Rhoj, Gja1, Cxcl12, Has2, Itga8, Lef1,

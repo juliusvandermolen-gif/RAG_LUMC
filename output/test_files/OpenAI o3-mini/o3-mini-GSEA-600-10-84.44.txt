@@ -1,0 +1,20 @@
+Axon Guidance and Synaptic Plasticity Pathway:
+CNTN6, PRSS12, SEMA4F, NTN1, SLIT2, ROBO2, SRGAP1, NRP1, NRP2, EFNA5, DPYSL5, NPDC1,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release Pathway:
+SYNPR, CPE, SNAP29, DRD4, ADCY1, BDNF,
+
+Neural Differentiation and Development Signaling Pathway:
+NES, ID2, MSI1, MEF2C, NUMB, MET, LIFR, AFF3, EBF1, KLF9,
+
+MAPK/ERK and Calcium Signaling Pathway:
+MAPK1, MAP2K6, Tnik, RYR3, ITPRIPL1, ADCY1,
+
+Myelination and Lipid Homeostasis Pathway:
+MPZ, MAG, PMP22, PLP1,
+
+GPCR Signaling in Neurons:
+DRD4, GPRC5A, GPRC5B, P2RY2, GNAI1,
+
+Cytoskeletal Dynamics and Axonal Transport Pathway:
+TUBA4A, TUBB4A, KIF1A, DNM1L, MYO1D,

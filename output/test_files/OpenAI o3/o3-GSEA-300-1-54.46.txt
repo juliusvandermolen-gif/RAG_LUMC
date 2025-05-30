@@ -1,0 +1,23 @@
+Axon Guidance and Growth Cone Signaling:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Efna5, Plxnb1, Sema3g, Sema4f, Hs6st1, Hs6st2, Kif1a, Dpysl3, Dpysl5, Tnik, Srgap1, Gnai1, Itga8, Id2,
+
+Peripheral Myelination and Schwann Cell Differentiation:
+Pmp22, Mag, Mpz, Prx, Gldn, Drp2, Mal, Itga7, Prkar2b, Cd9,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Synpr, Serpini1, Prss12, Cpe, Lrrtm3, Frrs1, Kif1a, P2ry2, Ryr3, Itpripl1, Sumo3, Pfn2,
+
+Extracellular Matrix and Neural Cell Adhesion:
+Cntn6, Hapln1, Col9a3, Col15a1, Col20a1, Col11a1, Ltbp1, Adamtsl1, Adamtsl3, Adamts17, Efemp2, Emilin1, Cdh13, Itga8, Gja1, Sbspon,
+
+Calcium and Mechanosensory Ion Channel Signaling:
+Ryr3, Itpripl1, Scn7a, Piezo2, P2ry2, Tpcn1,
+
+Wnt/β-Catenin and Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Prickle3, Dyrk1a, Ppard, Mef2c, Sim2,
+
+Lipid and Cholesterol Homeostasis in Neural Tissue:
+Abca8a, Abcb4, Fabp5, Cers6, Apod, Nampt, Sgms1, Agpat5, Slc35a2, Txnrd2,
+
+Rho GTPase–Actin Cytoskeleton Remodeling in Neurite Extension:
+Rhoj, Pak2, Acap2, Arf6, Prex2, Fnbp1, Stard13, Asap1, Fhod3, Shroom3, Pfn2, Tuba4a, Tubb4a,

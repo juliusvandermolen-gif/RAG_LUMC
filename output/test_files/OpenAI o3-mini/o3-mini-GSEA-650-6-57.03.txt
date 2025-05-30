@@ -1,0 +1,20 @@
+Axon Guidance and Neuronal Migration:
+Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Plxnb1, Efna5, Nrp1, Nrp2, Olfm2, Cdh13,
+
+Synaptic Transmission and Plasticity:
+Synpr, Snap29, Cpe, Drd4, Adcy1, Bdnf, Grik5, Vgf,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Septin4, Septin5, Acta2, Dnm1l, Rab10, Kif1a, Kif26b, Pfn2, Dpysl5, Srgap1,
+
+Neural Signal Transduction and Transcription Regulation:
+Atf3, Mef2c, Id2, Dyrk1a, Cdk5r1, Ebf1, Klf9, Mapk1, Map2k6, Runx3,
+
+Myelination and Lipid Homeostasis:
+Pmp22, Mag, Mpz, Drp2, Gldn, Abca8a, Pltp, Mal, Cldn19,
+
+Calcium Signaling and Ion Channels:
+Scn7a, Piezo2, Ryr3, Tpcn1,
+
+Neural Development and Stem Cell Maintenance:
+Nes, Msi1, Hmx3, Hes6, Numb,

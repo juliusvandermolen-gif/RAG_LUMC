@@ -1,0 +1,26 @@
+Axon guidance and neuronal migration:
+Ntn1, Robo2, Slit2, Sema3g, Sema4f, Efna5, Plxnb1, Nrp1, Nrp2,
+
+Synaptic transmission and plasticity:
+Snap29, Synpr, Rab10, Arf6, Adcy1, Itpripl1, Prkar2b, Gnai1, P2ry2, Lpar1, Drd4,
+
+Myelination and myelin lipid metabolism:
+Pmp22, Mbp, Plp1, Mag, Mal, Drp2, Abca8a, Abcb4, Apod, Sqor, Sgms1, Cers6,
+
+Extracellular matrix organization and cell adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Hapln1, Mfap5, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Emilin1, Fn1, Bgn, Itga6, Itga7, Itga8, Cdh13,
+
+Wnt/planar cell polarity signaling:
+Wnt5a, Lef1, Prickle3, Vangl2,
+
+PI3K-Akt signaling:
+Lifr, Ghr, Igfbp3, Gprc5a, Gprc5b,
+
+MAPK signaling:
+Map4k5, Tnik, Mef2c, Dyrk1a, Nfatc1,
+
+Calcium signaling:
+Itpripl1, Ryr3, Piezo2, Tpcn1,
+
+Chemokine and innate immune signaling:
+Cxcl12, Cxcl14, Tril, Ifnar1, Nlrp1a,

@@ -1,0 +1,8 @@
+Synaptic Plasticity & Neural Signaling:
+Cntn6, Prss12, Sema4f, Synpr, Ntn1, Id2, Srgap1, Nrp1, Nrp2
+
+Myelination & Schwann Cell Function:
+Peg3, Drp2, Mpz, Prx, Robo2, Cdh13, Gldn, Lifr, Hapln1
+
+Axonal Transport & Cytoskeletal Dynamics:
+Tuba4a, Parm1, Marveld1, Acta2, Tagln, Tubb4a, Kif1a

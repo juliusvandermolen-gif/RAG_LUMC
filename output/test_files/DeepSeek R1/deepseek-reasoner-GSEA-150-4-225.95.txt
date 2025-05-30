@@ -1,0 +1,47 @@
+**Pathway Name: Myelination and Schwann Cell Differentiation**  
+Mag, Mpz, Prx, Drp2, Gldn, Lrp2, Hapln1, Cldn19, Ntn1, Ebf1, Pkp1, Ltbp1, Sbspon  
+
+**Pathway Name: Cholesterol and Lipid Metabolism**  
+Abca8a, Pltp, Alpl, Apod, Serinc5, Sgpl1, Agpat5, Cpe, Steap2, Sumo3, Efemp2, Man1a1  
+
+**Pathway Name: Axon Guidance and Neural Crest Migration**  
+Nrp1, Nrp2, Sema4f, Slit2, Robo2, Dpysl5, Efemp2, Col9a3, Col15a1, Col20a1, Dyrk1a, Srgap1  
+
+**Pathway Name: Synaptic Plasticity and Neural Signaling**  
+Synpr, Grb14, P2ry2, Cxcl14, Piezo2, Lrrtm3, Adora2b, Ryr3, Septin4, Gnai1, Prkd3, Kif1a  
+
+**Pathway Name: Extracellular Matrix Remodeling**  
+Adamts17, Col9a3, Col20a1, Col15a1, Adamtsl3, Mfap5, Emilin1, Pxdn, Marveld1, Hs6st1, Hs6st2  
+
+**Pathway Name: PPAR Signaling and Retinoic Acid Metabolism**  
+Aldh1a1, Abca8a, Pltp, Rxr-related genes (e.g., Lrp2), Apod, Sgpl1  
+
+**Pathway Name: Proteasome and Lysosomal Degradation**  
+Htra1, Psmd2, Manba, Ctbs, Fbxo11, Trim35, Nrbp1  
+
+**Pathway Name: Calcium Signaling and Ion Transport**  
+Ryr3, Itpripl1, P2ry2, Clca4l, Scn7a, Tubb4a, Tuba4a  
+
+**Pathway Name: Growth Factor and Cytokine Signaling**  
+Igfbp3, Lifr, Ccn3, Fbxo11, Serpinf1, Ecel1, Atf3, Gprc5b  
+
+**Pathway Name: Neural Crest Development and Differentiation**  
+Ebf1, Dyrk1a, Sox10-related regulators (e.g., Prx), Id2, Sncg, Runx3, Zfp518a  
+
+**Pathway Name: RNA Processing and Translation Regulation**  
+Ddx1, Cggbp1, Msi1, Zfp518a, Tent5c, Rrm2, Eif2ak2  
+
+**Pathway Name: Ubiquitination and Protein Modification**  
+Nrbp1, Trim35, Fbxo11, Sumo3, Psmd2, Ube2-related regulators (e.g., Rnf144a)  
+
+**Pathway Name: Cell Adhesion and Axon-Glia Interaction**  
+Cdh13, Cd9, Tagln, Cd151, Selplg, Tspan4, Emp2, Cntn6  
+
+**Pathway Name: Hypoxia and Stress Response**  
+Epas1, Htra1, Atf3, Eif2ak2, Tril, Aldh1a1, Sqor  
+
+**Pathway Name: Sphingolipid and Ganglioside Metabolism**  
+Sgpl1, St3gal5, Galectin-related genes (e.g., Lrrtm3), Manba, Ctbs  
+
+**Pathway Name: Axonal Transport and Cytoskeleton Dynamics**  
+Kif1a, Tubb4a, Tuba4a, Pfn2, Myo1d, Dpysl5, Cobll1

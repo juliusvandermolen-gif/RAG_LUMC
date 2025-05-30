@@ -1,0 +1,14 @@
+Axon Guidance Pathway:
+Sema4f, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Ephb2, Epha4, Plxnb1, Rhoj, Dpysl5, Dpysl3, Dpysl2, Unc5c, Unc5d, Unc5b, Efna5, Efna4, Sema3g, Met, Itga8, Itga7, Itga6, Itga1, 
+
+Myelin Sheath Assembly Pathway:
+Pmp22, Mag, Mbp, Mpz, Plp1, Cntn6, Prss12, Adamts17, Hapln1, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Col7a1, Col5a2, Col14a1, Col16a1, Gja1, Gldn, Sox10, Mbp, Pmp22, Mag, Mpz, Plp1, 
+
+Synaptic Plasticity Pathway:
+Bdnf, Camk4, Mapk1, Akt1, Grb14, Gnai1, Prkar2b, Dyrk1a, Pak2, Pak1, Rhoj, Dpysl5, Dpysl3, Dpysl2, Synpr, Synm, Vgf, Snap29, Synj2bp, 
+
+MAPK Signaling Pathway:
+Mapk1, Map2k6, Pak2, Pak1, Camk4, Camk1d, Dpysl5, Dpysl3, Dpysl2, Raf1, Map3k1, Mapk8, Mapk9, 
+
+PI3K-AKT Signaling Pathway:
+Akt1, Gnaq, Gnai1, Prkar2b, Pdpk1, Pten, Pdk1, Irs1, Irs2, Pik3ca, Pik3cb,

@@ -1,0 +1,44 @@
+Myelination and Schwann Cell Differentiation:  
+Mbp, Plp1, Mag, Mpz, Prx, Hapln1, Cntn6, Gldn, Sema4f, Nrp1, Nrp2, Plxnb1, Cadm1,  
+
+Axon Guidance and Semaphorin Signaling:  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5, Epha4,  
+
+Cholesterol and Lipid Metabolism:  
+Apod, Abca8a, Abcb4, Abca3, Htra1, Pltp, Scd, Fabp5, Cers6,  
+
+Synaptic Vesicle Cycle and Neurotransmission:  
+Synpr, Vamp2, Snap29, Stx11,  
+
+Neurotrophic Signaling (BDNF/TrkB Pathway):  
+Bdnf, Grb14, Igfbp3,  
+
+Extracellular Matrix and Cell Adhesion:  
+Col9a3, Col15a1, Col5a2, Col16a1, Col11a1, Col7a1, Col20a1, Hapln1, Cdh13, Cd9, Cd151, Lama4, Fbln1, Sparc, Emilin1, Comp,  
+
+Calcium Signaling Pathway:  
+Ryr3, Camk4,  
+
+Wnt Signaling Pathway:  
+Wnt5a, Lef1,  
+
+Lysosomal and Autophagy Pathways:  
+Ctsd, Ctsl,  
+
+Inflammatory Response in Neural Tissue:  
+Tnfrsf1a, C1qtnf1, Lif, Ccl7,  
+
+ErbB Signaling Pathway:  
+Grb14,  
+
+Glutamatergic Signaling:  
+Grik5,  
+
+Notch Signaling Pathway:  
+Hes6,  
+
+cAMP Signaling Pathway:  
+Adcy1, Adcy5,  
+
+Apoptosis and Cell Survival:  
+Bdnf, Casp3, Casp6,

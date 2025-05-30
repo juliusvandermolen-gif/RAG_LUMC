@@ -1,0 +1,44 @@
+Synaptic Plasticity and Neuronal Signaling:  
+Synpr, Dyrk1a, Grb14, Nrp1, Nrp2, Ppp1r14c, Ppp1r36, Ryr3, Sumo3, Wnt5a  
+
+Myelin Formation and Maintenance:  
+Mbp, Plp1, Mag, Mpz, Mal, Gldn, Hapln1, Cldn19, Emp1, Pmp22  
+
+Axon Guidance and Semaphorin Signaling:  
+Sema4f, Sema3g, Ntn1, Slit2, Robo2, Efna5, Plxnb1, Vangl2, Cdh13, Col15a1  
+
+Cholesterol and Lipid Metabolism in Myelinating Glia:  
+Abca8a, Abcb4, Scn7a, Apod, Pltp, Scd, Fabp5, Cers6, Gpnmb, Hsd17b12  
+
+Extracellular Matrix Organization and Neural Plasticity:  
+Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col11a1, Col20a1, Matn3, Bgn, Fn1, Emilin1  
+
+TGF-β Signaling in Neural Development and Repair:  
+Ltbp1, Tf, Igfbp3, Serpinf1, Inpp5a, Tnfrsf1a, Comp, Thbs2, Smc6, Pdgfb  
+
+SUMOylation/Ubiquitination in Protein Trafficking and Myelin Maintenance:  
+Sumo3, Ube2l3, Psmd2, Trim59, Trim35, Ufd1, Cul4b, Rnf144a, Fbxo11, Dtx4  
+
+Hypoxia Response and Neural Metabolic Adaptation:  
+Hif1a, Epas1, Nampt, Hsp90aa1, Hspa12a, Pgk1, Eno1, Pfkp, Pfkl, Aldh1a1  
+
+Cytoskeletal Dynamics and Radial Sorting of Axons:  
+Tubb4a, Tuba4a, Dnm1l, Prx, Dpysl5, Dpysl3, Sipa1l1, Septin4, Septin5, Tagln  
+
+Lysosomal Function and Myelin Turnover:  
+Ctsd, Ctsl, Ctsf, Manba, Hexb, Arsb, Lamp2, Atp6v1d, Acap2, Nlrp1a  
+
+Apolipoprotein-Mediated Lipid Transport:  
+A2m, Apod, Clu, Lrp2, Vgf, Scarb1, Pltp, Abca8a, Abcb4, Scn7a  
+
+Neuregulin-ErbB Signaling and Schwann Cell Differentiation:  
+Nrg1, Erbb2, Erbb3, Pik3ca, Akt1, Mapk1, Grb2, Shc1, Sos1, Kras  
+
+Glycosphingolipid Biosynthesis and Membrane Integrity:  
+St3gal5, Hs6st1, Hs6st2, Fut10, Gcnt1, B4galt1, Ugcg, Galc, Asah1, Gla  
+
+Cell Adhesion and Axon-Glia Interaction:  
+Cntn6, Cd9, Cd151, Itga6, Itga7, Itga8, Cdh13, Pkp1, Jam3, Cldn19  
+
+Neural Crest Migration and Schwann Cell Precursor Development:  
+Sox10, Ebf1, Zeb2, Twist1, Snai2, Foxd3, Pax3, Ednrb, Mitf, Ret

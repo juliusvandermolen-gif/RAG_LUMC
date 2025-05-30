@@ -1,0 +1,11 @@
+Myelination Pathway:
+PMP22, MAG, HAPLN1, GJA1, NES, Mpz, 
+
+Axonal Guidance Pathway:
+SEMA4F, SEMA3G, NRP1, NRP2, SLIT2, PLXNB1, CNTN6, 
+
+Synaptic Plasticity Pathway:
+SYNPR, DPYSL5, DPYSL3, GRB14, 
+
+Lipid Metabolism Pathway:
+ALDH1A1, HADHB, GBE1, PGM1, ACAP2,

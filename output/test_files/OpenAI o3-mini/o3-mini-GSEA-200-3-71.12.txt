@@ -1,0 +1,11 @@
+Axon Guidance and Neuronal Migration:
+Cntn6, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Srgap1, Cdh13, Dpysl5, Cxcl12,
+
+Synaptic Plasticity and Neural Signaling:
+Prss12, Synpr, Atf3, Kif1a, Ryr3, Lrrtm3, Scn7a, P2ry2, Piezo2, Mef2c, Gja1, Gprc5b,
+
+Myelination and Glial Differentiation:
+Mpz, Pmp22, Prx, Mag, Drp2, Mal, Gldn, Cldn19,
+
+Neural Development and Differentiation:
+Nes, Msi1, Dyrk1a, Wnt5a, Met, Numb, Ebf1, Klf9, Igfbp3, Id2,

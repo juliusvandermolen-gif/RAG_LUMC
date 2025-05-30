@@ -1,0 +1,56 @@
+Pathway Name: Myelination and Schwann Cell Differentiation  
+Mpz, Mbp, Mag, Prx, Pmp22, Cnp, Cldn19, Lrp2, Plp1, Mal, Gjb1, Mag, Egr2, Sox10, Ncmap, Pmp22, Cldn19, Lrp2, Plp1, Mal, Gjb1, Mag  
+
+Pathway Name: Synaptic Plasticity and Neural Signaling  
+Bdnf, Grin2a, Sema4f, Nrp1, Nrp2, Grin1, Sema3g, Grin2b, Grin2c, Synpr, Snap25, Syp, Dlg4, Shank3, Grin2a, Bdnf  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Nrp1, Nrp2, Plxnb1, Sema3g, Sema5a, Sema6d, Plxna1, Plxna2, Efna5, Robo2, Slit2, Ntn1, Dcc, Unc5b  
+
+Pathway Name: Lipid Metabolism and Cholesterol Biosynthesis  
+Hmgcr, Sqor, Abca1, Apod, Sc5d, Ugt8a, Hsd17b7, Dhcr24, Cyp51, Msmo1, Nsdhl, Sc4mol, Fdft1, Idi1, Mvd  
+
+Pathway Name: ERK/MAPK Signaling Pathway  
+Mapk1, Map2k6, Grb14, Raf1, Kras, Hras, Nras, Elk1, Fos, Jun, Ets1, Rps6ka1, Creb1, Creb3l2, Atf2, Mapk8ip1  
+
+Pathway Name: Autophagy and Lysosomal Pathways  
+Ctsd, Ctsl, Lamp2, Ctsb, Ctsz, Atg5, Atg7, Becn1, Sqstm1, Ulk1, Tfeb, Vps34, Gabarap, Laptm5, Hexb  
+
+Pathway Name: Neuregulin Signaling  
+Nrg1, Erbb2, Erbb3, Erbb4, Pi3k, Akt1, mTOR, Sos1, Shc1, Grb2, Gab1, Foxo1, Foxo3, Bcl2, Bclxl  
+
+Pathway Name: Extracellular Matrix Organization  
+Col4a1, Col9a3, Col15a1, Hapln1, Fn1, Lama4, Lamb1, Lamc1, Sparc, Tnc, Tnr, Vcan, Bgn, Dcn, Lum  
+
+Pathway Name: Cholesterol Transport and Homeostasis  
+Abca1, Apod, Lrp2, Vldlr, Scarb1, Abcg1, Abcg4, Npc1, Npc2, Soat1, Acat1, Ldlr, Lrpap1, Stard4, Stard13  
+
+Pathway Name: Ion Channel Activity  
+Scn7a, Kcnj10, Cacna1a, Kcnq2, Kcnq3, Kcnma1, Trpv4, Trpm7, Trpc1, Clcn3, Clcn4, Clca1, Clic1, Asic1, Asic2  
+
+Pathway Name: Actin Cytoskeleton and Cell Migration  
+Acta2, Tagln, Actb, Actg1, Tubb4a, Tuba4a, Dync1h1, Dctn1, Arpc2, Wasf3, Cfl2, Cfl1, Rac1, Cdc42, Rhoa  
+
+Pathway Name: Neurotrophin Signaling  
+Ngf, Ntrk1, Ntrk2, Ntrk3, Ngfr, P75ntr, Trka, Trkb, Trkc, Sh2b1, Sh2b2, Sh2b3, Pi3k, Akt1, Mapk1  
+
+Pathway Name: Lysophospholipid Signaling  
+Lpar1, Lpar2, Lpar3, Lpar4, Lpar5, Lpar6, Edg2, Edg4, Edg5, Edg7, Edg8, Autotaxin, Enpp2, Agpat3, Agpat5  
+
+Pathway Name: Notch Signaling Pathway  
+Notch1, Jag1, Dll1, Dll3, Dll4, Hes1, Hes5, Hey1, Hey2, Rbpj, Numb, Numbl, Dtx1, Dtx4, Mfng  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Fzd3, Fzd6, Lrp5, Lrp6, Dvl1, Dvl2, Dvl3, Gsk3b, Axin1, Axin2, Apc, Tcf7, Lef1, Ctnnb1  
+
+Pathway Name: TGF-β Signaling Pathway  
+Tgfb1, Tgfb2, Tgfb3, Tgfbr1, Tgfbr2, Smad2, Smad3, Smad4, Smad7, Ltbp1, Thbs1, Thbs2, Bmpr1a, Bmpr2, Acvr1  
+
+Pathway Name: Complement System and Inflammation  
+C1qtnf1, C1qtnf2, C3, C4a, C5, Cfb, Cfh, CfI, C1s, C1r, C1qa, C1qb, C1qc, C4bpa, C4bpb  
+
+Pathway Name: Ubiquitin-Proteasome System  
+Ubb, Ubc, Ube2l3, Ube2n, Ube2d1, Ube2d2, Ube2d3, Ube2g1, Ube2g2, Usp7, Usp14, Usp25, Usp47, Psma1, Psmd2  
+
+Pathway Name: cAMP Signaling Pathway  
+Adcy1, Adcy5, Pde4b, Pde7a, Pde8a, Prkar2b, Prkaca, Prkacb, Creb1, Creb3l2, Atf3, Epac1, Rap1a, Rap1b, Gnas

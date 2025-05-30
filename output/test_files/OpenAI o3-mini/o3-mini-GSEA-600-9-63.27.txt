@@ -1,0 +1,32 @@
+Synaptic Transmission and Plasticity:
+PRSS12, SYNPR, BDNF, CDK5R1, ADCY1, GNAI1, DRD4, MEF2C, ATF3, KIF1A,
+
+Axon Guidance and Neural Development:
+CNTN6, SEMA4F, NTN1, ROBO2, SLIT2, NRP1, NRP2, MET, WNT5A, CDH13,
+
+Myelination and Glial Support:
+PMP22, MPZ, MAG, MAL, GLDN, CLDN19, DRP2,
+
+Intracellular Transport and Cytoskeletal Dynamics:
+TUBA4A, TUBB4A, KIF1A, RAB10, ARF6,
+
+Neurotrophic and Growth Factor Signaling:
+IGFBP3, TF, PAPPA, EPAS1, CXCL12, LIFR,
+
+Neural Transcriptional Regulation:
+PEG3, ID2, ATF3, EBF1, DYRK1A, KLF9, LEF1, RUNX3,
+
+Extracellular Matrix and Cell Adhesion:
+HAPLN1, COL9A3, COL20A1, COL15A1, COL11A1, COL8A2, CDH13, LTBP1, EMILIN1, FN1, THBS2,
+
+Calcium and Ion Signaling:
+ITPRIPL1, RYR3, SCN7A,
+
+Lipid Metabolism and Membrane Dynamics:
+ABCA8A, PLTP, ABCB4, SGPL1, CERS6, AGPAT5,
+
+Protein Degradation and Autophagy in Neural Cells:
+SUMO3, PSMD2, FBXO11, TRIM35, UFD1, MAP1LC3A,
+
+Neuroinflammation and Immune Response:
+IFNAR1, NLRP1A, ICOSLG, A2M, TRIL,

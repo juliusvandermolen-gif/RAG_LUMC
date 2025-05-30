@@ -1,0 +1,20 @@
+Synaptic Signaling and Plasticity Pathway:
+Cntn6, Prss12, Synpr, Atf3, Mef2c, Adcy1, Drd4, Chrna3, Snap29, Vgf,
+
+Axon Guidance and Neurite Outgrowth Pathway:
+Sema4f, Sema3g, Ntn1, Robo2, Slit2, Gldn, Plxnb1, Efna5, Nrp1, Nrp2, Srgap1, Dpysl5, Arhgef9, Arhgap24,
+
+Myelination and Schwann Cell Development Pathway:
+Mpz, Mag, Pmp22, Mbp, Plp1, Prx, Mal,
+
+Cell Adhesion and Extracellular Matrix Modulation in Neural Development:
+Cdh13, Hapln1, Matn3, Emilin1, Peg3, Col9a3, Col15a1, Col11a1, Col8a2, Pcdh18,
+
+Cytoskeletal Dynamics and Axonal Transport in Neurons:
+Tuba4a, Kif1a, Acta2, Septin4, Septin5, Dnm1l, Rab10, Pfn2, Pak2, Tagln,
+
+Neural Differentiation and Transcriptional Regulation Pathway:
+Mef2c, Atf3, Id2, Klf9, Dyrk1a, Ebf1, Runx3, Msi1, Nes, Numb,
+
+Neuroinflammation and Stress Response Pathway:
+Htra1, Igfbp3, Icoslg, Ifnar1, Irf7, Tlr3, Hif1a, A2m, Cxcl14, Nlrp1a,

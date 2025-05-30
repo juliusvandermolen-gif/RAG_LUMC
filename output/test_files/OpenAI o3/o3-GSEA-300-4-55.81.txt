@@ -1,0 +1,14 @@
+Axon Guidance & Neurite Outgrowth:
+Cntn6, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Efna5, Itga8, Itga7, Wnt5a, Gldn, Dpysl3, Dpysl5, Srgap1, Rhoj, Tnik, Kif1a, Lrrtm3, Cdh13, Slitrk6,
+
+Schwann Cell Myelination:
+Pmp22, Mpz, Mag, Drp2, Mal, Id2, Cldn19, Gldn, Dyrk1a, Mef2c, P2ry2, Lrp2, Itpripl1, Has2, Wnt5a,
+
+Synaptic Transmission & Plasticity:
+Synpr, Sncg, Ryr3, Scn7a, Piezo2, P2ry2, Kif1a, Pfn2, Frrs1, Slc9a9, Cers6, Lrrtm3, Tubb4a, Dpysl3, Dpysl5,
+
+Non‑Canonical Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Tnik, Rhoj, Prickle3, Frmd6, Lef1, Dpysl3, Dpysl5,
+
+Neural Extracellular Matrix & Adhesion Remodeling:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Adamts17, Adamtsl3, Adamtsl1, Hapln1, Mfap5, Emilin1, Efemp2, Prx, Pxdn, Bgn, Qsox1, Htra1, Ltbp1, Plod3, Matn3, Has2, Itga8, Itga7, Cd151, Cdh13, Tspan4, Tspan5, Selplg,

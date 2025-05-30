@@ -1,0 +1,20 @@
+Axon Guidance and Synaptic Plasticity:
+Cntn6, Sema4f, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Synpr, Piezo2, Cdh13, Efna5, Wnt5a, Prss12, Cpe, Srgap1, Dpysl5, Sema3g, Plxnb1, Lrrtm3, Dpysl3, Ppfia4, Gprc5a, Pam, Cpm, Sncg,
+
+Myelination and Schwann Cell Development:
+Mpz, Mag, Pmp22, Drp2, Mal, Gldn, Prx,
+
+Neuronal Differentiation and Transcriptional Regulation:
+Mef2c, Id2, Atf3, Klf9, Ebf1, Nfatc1, Runx3, Dyrk1a, Msi1, Nes, Peg3, Cobll1, Tril, Sumo3, Nrbp1, Rrm2, Trim35, Alpl, Ddx1, Zfp518a, Poglut1, Aff3, Taf9b, Olfm2, Atf5, Mybl1, Lef1, Numb, Hmx3, Papola, Gtf2e1,
+
+Neural Signal Transduction:
+Scn7a, Ryr3, Tubb4a, Gnai1, P2ry2, Itpripl1, Grb14, Pcsk5, Tuba4a, Sqor, Myo1d, Steap2, Ptgfr, Slc9a9, Snx6, Prkd3, Prkar2b, Sipa1l1, Kif1a, Tnik, Ppp1r14c, Vps26c, Slco3a1, Acap2, Tpcn1, Inpp5a, Tnfrsf1a, Parp14, Chmp2b, Bace2, Hsp90aa1, Rab10, Septin4, Fhod3, Ppm1f, Stk39, Map1lc3a, Eif2ak2, Ecel1, Gprc5b,
+
+Neurotrophic and Growth Factor Signaling:
+Met, Lifr, Tf, Nampt, Igfbp3, A2m, Ccn3, Epas1, Serpinf1, Lrp2, Cxcl12, Ghr, Psap, Igf2bp2, Gpnmb, Ccn4,
+
+Extracellular Matrix and Cell Adhesion/Remodeling:
+Zpld1, Hapln1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Cdh13, Emilin1, Matn3, Bgn, Chst2, Adamts17, Adamtsl3, Adamtsl1, Prss23, Ltbp1, Qsox1, Marveld1, Mfap5, Ctbs, Hs6st2, Pxdn, Pkp1, Efemp2, Cldn19, Tspan4, St3gal5, Cd9, Hs6st1, Itga8, Itga7, Arsg, Timp1, Has2, Fut10, Pals1, Fam20c, Ckap4,
+
+Lipid Metabolism and Homeostasis in Neural Cells:
+Aldh1a1, Abca8a, Pltp, Ppard, Cers6, Apod, Serinc5, Sgpl1, Agpat5,

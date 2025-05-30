@@ -1,0 +1,47 @@
+**Myelination and Schwann Cell Differentiation:**  
+Mag, Mbp, Plp1, Prx, Mpz, Mal, Cldn19, Pmp22, Gldn, Mog, Mef2c, Cldnd1, Sbspon, Qsox1, Hapln1, Emp2, Nectin1, Pdgfb,  
+
+**Semaphorin-Plexin Signaling and Axon Guidance:**  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5,  
+
+**Cholesterol and Lipid Metabolism in Myelination:**  
+Htra1, Lrp2, Apod, Sqor, Abca8a, Scd, Fabp5, Gldc,  
+
+**Synaptic Plasticity and Neurotransmission:**  
+Bdnf, Synpr, Grb14, Cdh13, Adcy1, Wnt5a, Drd4, Sipa1l1,  
+
+**ERK/MAPK Signaling Pathway:**  
+Sumo3, Hsp90aa1, Eif2ak2, Pak2, Prkg1,  
+
+**Neural Crest Cell Differentiation and Migration:**  
+Id2, Ebf1, Mef2c,  
+
+**Lysosomal and Autophagic Pathways:**  
+Ctsd, Ctsl, Ctsf,  
+
+**Extracellular Matrix and Cell Adhesion:**  
+Col9a3, Col15a1, Col11a1, Col20a1, Hapln1, Sparc, Matn3, Emilin1,  
+
+**Neuregulin-ErbB Signaling:**  
+Adamts17, Adamtsl3, Lifr,  
+
+**Ion Channels and Transporters:**  
+Piezo2, Scn7a,  
+
+**Wnt Signaling Pathway:**  
+Wnt5a, Lef1,  
+
+**Notch Signaling Pathway:**  
+Dtx4,  
+
+**TGF-beta Signaling Pathway:**  
+Ltbp1,  
+
+**cAMP Signaling Pathway:**  
+Adcy1, Prkar2b,  
+
+**Complement System:**  
+C1qtnf1, C1qtnf2, C1s,  
+
+**Apoptosis and Cell Survival:**  
+Atf3, Casp3, Casp6,

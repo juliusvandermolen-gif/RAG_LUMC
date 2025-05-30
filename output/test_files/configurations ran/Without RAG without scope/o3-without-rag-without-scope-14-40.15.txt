@@ -1,0 +1,20 @@
+Axon Guidance and Neuronal Development:
+Cntn6, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema4f, Sema3g, Plxnb1, Efna5, Lrrtm3, Srgap1, Dpysl3, Dpysl5, Gldn, Mag, Mpz, Pmp22, Synpr, Piezo2, Itga8, Kif1a, Ryr3,
+
+Extracellular Matrix Organization and Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Matn3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Ltbp1, Pxdn, Efemp2, Emilin1, Bgn, Has2, Mfap5, Timp1, Pappa,
+
+Integrin Signaling and Focal Adhesion:
+Itga7, Itga8, Cd151, Cd9, Tagln, Acta2, Rhoj, Asap1, Stard13, Pfn2, Fhod3, Ppp1r14c,
+
+Wnt Signaling and Planar Cell Polarity:
+Wnt5a, Lef1, Tnik, Cdh13, Mef2c, Dyrk1a, Rhoj,
+
+Immune and Cytokine Signaling:
+Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Nlrp1a, Icoslg, Selplg, Defb29, C1qtnf1, A2m, Serpinf1,
+
+Lipid Transport and Metabolism:
+Abca8a, Abcb4, Apod, Pltp, Sgpl1, Agpat5, Nampt, Sqor, Hadhb, Pgm1, Ppard,
+
+Protein Folding and Stress Response:
+Hsp90aa1, Hspa12a, Pnpt1, Atf3, Atf5, Eif2ak2, Map1lc3a, Pam, Ddx1,

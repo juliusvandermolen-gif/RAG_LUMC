@@ -1,0 +1,8 @@
+Myelin Sheath Assembly and Maintenance:
+Mpz, Mag, Gja1, Gldn, Hapln1, Apod, Alpl, 
+
+Axon Guidance:
+Nrp1, Nrp2, Sema4f, Sema3g, Robo2, Slit2, Cntn6, Ntn1, Plxnb1, 
+
+Synaptic Plasticity and Signaling:
+Synpr, Dpysl5, Dpysl3, Gnai1, Grb14, Atf3, Atf5,

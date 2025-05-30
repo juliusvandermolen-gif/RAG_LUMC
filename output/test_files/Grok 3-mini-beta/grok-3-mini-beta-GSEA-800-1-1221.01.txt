@@ -1,0 +1,8 @@
+Axon Guidance Pathway:  
+Sema4f, Sema3g, Nrp1, Nrp2, Robo2, Slit2, Cntn6,  
+
+Synaptic Plasticity Pathway:  
+Bdnf, Synpr, Sncg, Camk4, Dlg1, Gnai1, Gnaq,  
+
+Myelination Pathway:  
+Mag, Mbp, Plp1, Mpz, Hapln1,

@@ -1,0 +1,11 @@
+Axon Guidance Signaling Pathway:
+Cntn6, Sema4f, Sema3g, Slit2, Robo2, Ntn1, Nrp1, Nrp2, Efna5, Plxnb1, Srgap1, Dpysl5, Dpysl3, Cdh13,
+
+Synaptic Plasticity and Vesicle Transport Pathway:
+Prss12, Synpr, Cpe, Kif1a, Sipa1l1, Septin5, Rab10, P2ry2,
+
+Myelination and Glial Signaling Pathway:
+Mpz, Pmp22, Mag, Drp2, Gldn, Cldn19, Mal, Prx,
+
+Neural Differentiation and Transcriptional Regulation Pathway:
+Id2, Mef2c, Atf3, Numb, Peg3, Nes, Msi1, Hmx3, Klf9, Runx3, Ebf1

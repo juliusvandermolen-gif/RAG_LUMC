@@ -1,0 +1,14 @@
+Axon Guidance & Neural Crest Development:
+Robo2, Slit2, Sema4f, Sema3g, Ntn1, Nrp1, Nrp2, Plxnb1, Cntn6, Efna5
+
+Synaptic Plasticity & Neural Signaling:
+Synpr, Adcy1, Snap29, Cdh13, Kif1a, Ryr3, Vgf, Drd4, Mef2c, Met
+
+Neural Myelination & Lipid Metabolism:
+Mpz, Pmp22, Mbp, Plp1, Drp2, Gldn, Mal, Pltp, Abca8a
+
+MAPK/ERK Signaling & Transcriptional Regulation:
+Mapk1, Map2k6, Tnik, Atf3, Atf5, Dyrk1a, Id2, Klf9, Tead2
+
+Axonal Transport & Cytoskeletal Dynamics:
+Kif1a, Dnm1l, Tuba4a, Septin4, Rab10, Acta2

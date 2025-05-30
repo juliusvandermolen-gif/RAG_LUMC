@@ -1,0 +1,11 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Ntn1, Sema4f, Robo2, Slit2, Srgap1, Nrp1, Nrp2, Plxnb1, Efna5, Cdh13, Wnt5a, Met, Slitrk6, Arhgef9, Dpysl5
+
+Synaptic Plasticity and Neurotransmission:
+Prss12, Synpr, Sipa1l1, Snap29, Apba1, Adcy1, Cdk5r1, Drd4, Vgf, P2ry2, Kif1a
+
+Neural Development and Differentiation:
+Id2, Peg3, Ebf1, Mef2c, Atf3, Dyrk1a, Numb, Klf9, Nes, Runx3
+
+Neuron-Glia Interaction and Myelination:
+Gldn, Mpz, Pmp22, Mag, Prx, Mal, Plp1, Drp2, Cldn19

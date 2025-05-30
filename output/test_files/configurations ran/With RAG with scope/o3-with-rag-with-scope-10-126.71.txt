@@ -1,0 +1,20 @@
+Myelination and Node of Ranvier Organization:
+Pmp22, Mpz, Mag, Drp2, Gldn, Mal, Gja1, Cldn19, Abca8a,
+
+Myelin Lipid Metabolism:
+Abca8a, Abcb4, Cers6, Sgpl1, Agpat5, St3gal5, Hadhb,
+
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl3, Dpysl5, Srgap1, Rhoj, Itga8, Kif1a, Tnik,
+
+Synaptic Transmission and Plasticity:
+Synpr, Lrrtm3, Sncg, P2ry2, Scn7a, Ryr3, Gnai1, Piezo2, Pfn2, Dyrk1a, Numb, Kif1a, Frrs1, Prkar2b, Serpini1, Msi1, Psap, Itpripl1,
+
+Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Klf9,
+
+Extracellular Matrix and Neural Adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Hapln1, Matn3, Emilin1, Mfap5, Bgn, Efemp2, Cdh13, Itga7, Itga8,
+
+Autophagy-Lysosome and Proteostasis:
+Map1lc3a, Ctbs, Psmd2, Psap, Eif2ak2, Sumo3, Trim35, Fbxo11, Rnf144a, Vps8, Vps26c, Chmp2b, Tpcn1,

@@ -1,0 +1,11 @@
+Synaptic Plasticity and Neural Signaling:
+Cntn6, Prss12, Sema4f, Synpr, P2ry2, Piezo2, Efemp2, Eif2ak2, Atf3, Rrm2
+
+Axon Guidance and Neural Circuit Formation:
+Ntn1, Robo2, Slit2, Srgap1, Dpysl5, Gldn, Kif1a, Tnik, Gnai1
+
+Extracellular Matrix and Cell Adhesion in Neural Development:
+Hapln1, Col9a3, Matn3, Emilin1, Cdh13, Col20a1, Col15a1, Ltbp1, Adamts17, Adamtsl3, Adamtsl1
+
+Neural Differentiation and Developmental Regulation:
+Id2, Lifr, Ebf1, Epas1, Trim35, Sumo3, Ccn3, Atf3, Pappa, Ppp1r36

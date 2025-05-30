@@ -1,0 +1,56 @@
+Pathway Name: Charcot-Marie-Tooth Disease and Hereditary Neuropathies  
+Drp2, Prx, Mag, Hapln1, Lrp2, Emp2, Cd9, Ltbp1, Cpe, Col9a3, Col15a1, Col20a1  
+
+Pathway Name: Neural Crest Cell Migration and Differentiation  
+Nrp1, Nrp2, Robo2, Slit2, Dyrk1a, Runx3, Piezo2, Adamtsl3  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Nrp1, Nrp2, Robo2, Slit2, Hs6st1, Hs6st2, Dpysl5  
+
+Pathway Name: Cholesterol Biosynthesis and Lipid Metabolism  
+Aldh1a1, Sqor, Cpe, Col9a3, Col15a1, Col20a1, Abca8a, Lrp2, Agpat5, Steap2, Apod, Scn7a  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Synpr, Grb14, Sumo3, Sema4f, Nrp1, Nrp2, Slc9a9, Ryr3, Septin4  
+
+Pathway Name: JAK-STAT Signaling in Glial Differentiation  
+Ifnar1, Lifr, Ccn3, Serpinf1  
+
+Pathway Name: PPAR-Mediated Myelination and Lipid Homeostasis  
+Aldh1a1, Abca8a, Agpat5, Fabp5 (implicit via lipid transport), Apod  
+
+Pathway Name: Lysosomal/Proteasomal Degradation Pathways  
+Htra1, Ctbs, Psmd2, Vps26c, Atf3, Serpini1  
+
+Pathway Name: Extracellular Matrix Organization in Myelination  
+Hapln1, Col9a3, Col15a1, Col20a1, Adamtsl3, Ltbp1, Emilin1, Mfap5, Sbspon  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Atf3, Htra1, Sumo3, Eif2ak2, Hspa1l (implicit via stress pathways)  
+
+Pathway Name: Iron Ion Homeostasis and Oligodendrocyte Function  
+Tf, Steap2, Lrp2, Abcb4  
+
+Pathway Name: Neural Cell Adhesion and Signaling  
+Cntn6, Cd9, Cdh13, Ighm, Pkp1, Epas1, Gprc5b, Gprc5a, Lrrtm3  
+
+Pathway Name: Neurotrophic Factor Signaling and Growth Regulation  
+Ntn1, Igfbp3, Id2, Tf, Ccn3, Apod, Slit2  
+
+Pathway Name: RNA Processing and Metabolic Regulation  
+Ddx1, Riox2, Cggbp1, Rrm2, Eif2ak2, Msi1, Sncg  
+
+Pathway Name: Peripheral Myelin Protein Dynamics  
+Pmp22 (implicit via CMT context), Mag, Prx, Drp2, Emp2, Cd9, P2ry2  
+
+Pathway Name: Hypoxia-Regulated Cholesterol Transport  
+Htra1, Aldh1a1, Hs6st1, Hs6st2 (implicit via hypoxia pathways)  
+
+Pathway Name: Mechanosensory Signaling in Neurons  
+Piezo2, Tubb4a, Tuba4a, Myo1d, Tagln  
+
+Pathway Name: Glutamate and Neurotransmitter Regulation  
+Slc22a17, Slco3a1, Grb14, Slc9a9  
+
+Pathway Name: Oligodendrocyte Differentiation and Myelin Maintenance  
+Mbp (implicit via myelin context), Id2, Sox10 (implicit), Qki (implicit via lipid synthesis), Fabp5

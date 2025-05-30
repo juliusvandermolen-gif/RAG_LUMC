@@ -1,8 +1,0 @@
-Synaptic Signaling and Axon Guidance:
-Cntn6, Prss12, Sema4f, Sema3g, Slit2, Ntn1, Robo2, Synpr, Snap29, Cpe, Adcy1
-
-Myelination and Schwann Cell Differentiation:
-Pmp22, Mpz, Mag, Drp2, Gldn, Cldn19
-
-Cytoskeletal Dynamics and Axonal Transport:
-Tuba4a, Tubb4a, Kif1a, Dnm1l, Septin4, Septin5, Pfn2

@@ -1,0 +1,11 @@
+Axon Guidance and Synaptic Plasticity:
+Cntn6, Sema4f, Sema3g, Slit2, Ntn1, Robo2, Nrp1, Nrp2, Cdh13, Synpr, Mef2c, Adcy1, Drd4, Gnai1, Kif1a, Pak2, Met, Efna5, P2ry2, Gprc5a, Gprc5b, 
+
+Myelination and Glial Cell Differentiation:
+Mpz, Mag, Pmp22, Drp2, Gldn, Hapln1, Plp1, Mbp, 
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Rab10, Dnm1l, Arf6, Itga6, Itga7, Itga8, Rhoj, Asap1, 
+
+Transcriptional Regulation and Neural Signal Transduction:
+Id2, Atf3, Atf5, Dyrk1a, Klf9, Eif2ak2, Runx3, Nfatc1, Lef1, Tead2, Ebf1, Msi1, Wnt5a,

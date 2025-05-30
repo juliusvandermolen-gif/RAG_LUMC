@@ -1,0 +1,14 @@
+Synaptic Plasticity and Neural Signaling Pathway:
+Cntn6, Prss12, Sema4f, Synpr, Bdnf, Drd4, Adcy1, Gnai1, Ryr3, Camk4
+
+Axon Guidance and Neural Connectivity Pathway:
+Ntn1, Slit2, Robo2, Sema3g, Cdh13, Nrp1, Nrp2, Itga8, Met
+
+Neural Differentiation and Transcription Regulation Pathway:
+Id2, Mef2c, Atf3, Atf4, Dyrk1a, Klf9, Ebf1, Numb, Lef1
+
+Cytoskeletal Dynamics and Axonal Transport Pathway:
+Kif1a, Drp2, Septin4, Septin5, Pfn2, Tuba4a, Tubb4a, Rab10, Snap29
+
+Myelination and Neuron-Glia Interaction Pathway:
+Mpz, Pmp22, Mag, Plp1, Mbp, Cldn19, Gldn

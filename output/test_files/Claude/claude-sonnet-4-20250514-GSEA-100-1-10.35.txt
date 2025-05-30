@@ -1,0 +1,29 @@
+Axon Guidance and Pathfinding:
+Sema4f, Ntn1, Robo2, Nrp1
+
+Myelin Formation and Maintenance:
+Mag, Mpz, Drp2, Prx
+
+Synaptic Transmission and Neurotransmitter Signaling:
+Cpe, Synpr, P2ry2, Scn7a
+
+Neural Cell Adhesion and Migration:
+Cntn6, Cdh13, Srgap1, Pkp1
+
+Extracellular Matrix and Neural Development:
+Col9a3, Hapln1, Adamts17, Adamtsl3, Ltbp1, Matn3, Mfap5
+
+Ion Channel Function and Neural Excitability:
+Scn7a, Piezo2, P2ry2
+
+Neural Crest Development:
+Peg3, Id2, Atf3
+
+Calcium Signaling in Neurons:
+P2ry2, Piezo2, Cpe
+
+Growth Factor Signaling:
+Igfbp3, Grb14, Ccn3, Pappa
+
+Cholesterol and Lipid Metabolism in Neural Function:
+Apod, Pltp, Abca8a, Abcb4

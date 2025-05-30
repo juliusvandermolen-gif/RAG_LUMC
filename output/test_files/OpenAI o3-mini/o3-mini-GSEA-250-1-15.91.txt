@@ -1,0 +1,14 @@
+Synaptic Signaling & Plasticity:
+Cntn6, Synpr, Sema4f, P2ry2, Cxcl14, Piezo2, Cdh13, Scn7a, Sema3g,
+
+Axon Guidance & Neuronal Development:
+Ntn1, Robo2, Slit2, Efna5, Plxnb1, Itga8, Mef2c, Rhoj, Dpysl3, Srgap1, Gnai1,
+
+Myelination & Glial Development:
+Mpz, Pmp22, Drp2, Mag, Gldn, Mal, Cd9, Lrp2, Hapln1,
+
+Neural Transcriptional Regulation & Stress Response:
+Id2, Atf3, Ebf1, Dyrk1a, Klf9, Msi1, Runx3, Atf5, Trim35,
+
+Cytoskeletal Dynamics & Neuronal Morphogenesis:
+Tuba4a, Kif1a, Septin4, Septin5, Pfn2, Rab10, Map1lc3a, Grb14,

@@ -1,0 +1,20 @@
+Myelin Sheath Assembly:
+MAG, MPZ, PMP22, GJA1, MAL, Mpz, Pmp22, Cx32, MBP, 
+
+Axonal Guidance and Signaling:
+CNTN6, SEMA4F, SEMA3G, NRP1, NRP2, SLIT2, ROBO2, PLXNB1, EFNA5, 
+
+Lipid Metabolism in Neural Cells:
+ALDH1A1, GBE1, ACAT2, HADHA, HADHB, SQLE, HMGCR, 
+
+Synaptic Plasticity and Neural Signaling:
+GRB14, PAK2, DPYSL5, DPYSL3, CAMK2A, SYNPR, VGF, 
+
+Wnt Signaling Pathway:
+WNT5A, LEF1, LRP2, 
+
+Neuregulin Signaling Pathway:
+ERBB2, ERBB3, ERBB4, NRG1, 
+
+Autophagy and Axonal Degeneration:
+BECN1, ATG5, SQSTM1, OPTN, SARM1,

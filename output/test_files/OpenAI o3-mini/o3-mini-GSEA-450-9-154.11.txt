@@ -1,0 +1,11 @@
+Synaptic Plasticity and Neural Signaling Pathway:
+Prss12, Synpr, Adcy1, P2ry2, Snap29, Drd4, Arhgef9, Sipa1l1, Mef2c, Vgf, Pcdh18, Apba1, Gja1
+
+Axon Guidance and Neural Connectivity Pathway:
+Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Srgap1, Plxnb1, Efna5, Lrrtm3, Dpysl5, Cdh13, Slitrk6, Wnt5a, Lef1
+
+Myelination and Schwann Cell Differentiation Pathway:
+Mpz, Pmp22, Mag, Prx, Drp2, Gldn, Plp1, Mal, Mbp, Cldn19, Itga6
+
+Neural Development and Neurogenesis Pathway:
+Nes, Msi1, Id2, Peg3, Atf3, Ebf1, Dyrk1a, Klf9, Numb, Pbx3, Hmx3, Atf5, Runx3

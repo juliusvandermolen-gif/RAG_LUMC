@@ -1,0 +1,50 @@
+Pathway Name: Charcot-Marie-Tooth Disease (CMT) Pathway  
+PMP22, MPZ, PRX, MAG  
+
+Pathway Name: Myelination and Schwann Cell Differentiation  
+MPZ, MAG, PRX, PLXNB1, NRP1, NRP2, EFNA5, CD9, PPARD  
+
+Pathway Name: Lipid Metabolism and Cholesterol Biosynthesis  
+PMP22, APOD, ALDH1A1, SGPL1, CERS6, HADHB, PPARD, PLTP, ABCA8A, HS6ST1, HS6ST2, PSAP, CPM  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+SEMA4F, SEMA3G, NRP1, NRP2, PLXNB1, EFNA5, SLIT2, ROBO2  
+
+Pathway Name: PPAR/RXR Activation Pathway  
+PPARD, PLTP, APOD  
+
+Pathway Name: Lysosomal and Proteasomal Degradation  
+PSAP, CTBS, LRP2, BACE2, HTRA1  
+
+Pathway Name: Synaptic Plasticity and Neural Signaling  
+SYNPR, GRB14, P2RY2, RYR3, DYRK1A, KIF1A, ST3GAL5  
+
+Pathway Name: Extracellular Matrix and Cell Adhesion  
+COL9A3, COL15A1, COL20A1, COL8A2, COL11A1, CDH13, CLDN19, EMILIN1, EFEMP2, MFAP5  
+
+Pathway Name: Wnt Signaling Pathway  
+WNT5A, LEF1  
+
+Pathway Name: TGF-β Signaling Pathway  
+LTBP1  
+
+Pathway Name: MAPK/ERK Signaling Pathway  
+GRB14, DYRK1A, STK39, MEF2C  
+
+Pathway Name: Calcium Signaling  
+RYR3, P2RY2, ITPRIPL1  
+
+Pathway Name: Inflammatory Response  
+A2M, AIF1L, GPNMB, TIMP1, C1QTNF1  
+
+Pathway Name: Autophagy and Stress Response  
+MAP1LC3A, ATF3, ATF5, HSP90AA1, HSPA12A  
+
+Pathway Name: Neural Crest Development and Migration  
+SEMA3G, SEMA4F, ROBO2, SLIT2, NTN1, EFNA5  
+
+Pathway Name: Axonal Transport and Cytoskeleton Regulation  
+KIF1A, TUBA4A, TUBB4A, PFN2  
+
+Pathway Name: Ion Channel and Transporter Activity  
+SCN7A, ABCB4, SLC9A9, SLC39A13, PIEZO2, TPCN1, CLCA4L

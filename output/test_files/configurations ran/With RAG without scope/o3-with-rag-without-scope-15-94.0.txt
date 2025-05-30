@@ -1,0 +1,17 @@
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Lrrtm3, Dpysl3, Dpysl5, Srgap1, Gldn, Kif1a, Gnai1,
+
+Peripheral Myelination and Schwann Cell Function:
+Mpz, Mag, Pmp22, Mal, Cldn19, Gldn, Itga7, Itga8, Gja1,
+
+Extracellular Matrix Organization and Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Efemp2, Emilin1, Mfap5, Ltbp1, Bgn, Hapln1, Matn3, Pxdn, Timp1,
+
+Lipid and Cholesterol Transport and Metabolism:
+Abca8a, Abcb4, Apod, Pltp, Cers6, Sgpl1, St3gal5, Hadhb, Agpat5, Nampt, Gcnt1, Slc35a2, Pmp22,
+
+Inflammatory and Immune Signaling:
+Ifnar1, Nlrp1a, Tnfrsf1a, Cxcl12, Cxcl14, Selplg, Ighm, Runx3, Igfbp3, Parp14,
+
+Proteostasis and Cell Stress Response:
+Sumo3, Trim35, Rnf144a, Atf3, Atf5, Eif2ak2, Psmd2, Map1lc3a, Hsp90aa1, Gtf2e1,

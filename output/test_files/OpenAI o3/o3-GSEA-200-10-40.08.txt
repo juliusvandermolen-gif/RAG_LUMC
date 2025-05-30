@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Navigation:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Ntn1, Srgap1, Dpysl3, Dpysl5, Lrrtm3, Kif1a, Wnt5a, Rhoj, Itga8, Tnik,
+
+Peripheral Myelination and Node of Ranvier Assembly:
+Pmp22, Mpz, Mag, Drp2, Prx, Gldn, Mal, P2ry2, Cldn19, Cldnd1, Gja1, Itga7, Itga8,
+
+Synaptic Vesicle Processing and Neuropeptide Secretion:
+Synpr, Sncg, Cpe, Pcsk5, Pam, Serpini1, Ppfia4, Ryr3, Tpcn1, Kif1a,
+
+Cholesterol and Sphingolipid Homeostasis in Neural Cells:
+Abca8a, Abcb4, Pltp, Apod, Cers6, Sgpl1, Agpat5, Nampt, Tf, Lrp2,
+
+Extracellular Matrix Remodeling and Signaling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Timp1, Ltbp1, Efemp2, Emilin1, Mfap5, Matn3, Col9a3, Col15a1, Col20a1, Pxdn, Hapln1, Ccn3, Ccn4,
+
+Mechanotransduction and Ion Channel Signaling in Sensory Neurons:
+Piezo2, Scn7a, P2ry2, Ryr3, Itpripl1, Tpcn1, Gnai1,
