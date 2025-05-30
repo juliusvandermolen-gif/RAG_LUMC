@@ -29,7 +29,7 @@ An overview of the workflow:
 * **Query Expansion:** Generate synonyms and related terms via GPT-4o.
 * **Indexing:** Chunk and index biomedical texts & gene data.
 * **Hybrid Retrieval:** Rank documents using combined FAISS and BM25 scores.
-* **Response Generation:** Produce answers with GPT-3.5/4 guided by system instructions.
+* **Response Generation:** Produce answers with GPT guided by system instructions.
 
 ---
 
