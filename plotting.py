@@ -162,40 +162,37 @@ def compute_correlations(df: pd.DataFrame) -> None:
     coverage = df['total_output_genes'] / df['input_genes']
 
     # 1) time vs coverage
-    r_tc, p_tc = pearsonr(coverage, df['time_sec'])
+    if coverage.nunique() > 1 and df['time_sec'].nunique() > 1:
+        r_tc, p_tc = pearsonr(coverage, df['time_sec'])
+        print(f"  time vs coverage (%):    r = {r_tc:.3f}, p = {p_tc:.3e}")
+    else:
+        print("  Skipping time vs coverage: not enough variation to compute correlation.")
 
     # 2) input size vs total (unique) output
-    r_iu, p_iu = pearsonr(df['input_genes'], df['total_output_genes'])
-
-    results = pd.DataFrame([
-        {
-            'Metric': 'time vs coverage (%)',
-            'r': f"{r_tc:.3f}",
-            'p': f"{p_tc:.3e}"
-        },
-        {
-            'Metric': 'input vs output size',
-            'r': f"{r_iu:.3f}",
-            'p': f"{p_iu:.3e}"
-        }
-    ])
-
-    print(results.to_string(index=False))
+    if df['input_genes'].nunique() > 1 and df['total_output_genes'].nunique() > 1:
+        r_iu, p_iu = pearsonr(df['input_genes'], df['total_output_genes'])
+        print(f"  input vs output size:    r = {r_iu:.3f}, p = {p_iu:.3e}")
+    else:
+        print("  Skipping input vs output size: not enough variation to compute correlation.")
 
 
-# TODO, maybe change the range to be more adative based on the sizes used during generation
-def create_input_dir(input_gene_dir: Path) -> None:
+def create_input_dir(input_gene_dir: Path, max_genes: Optional[Set[int]] = None) -> None:
     input_gene_dir.mkdir(parents=True, exist_ok=True)
 
     df = pd.read_excel("./data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx")
     genes = df['X'].dropna().astype(str).tolist()
 
-    for size in range(100, 1001, 50):
+    sizes = list(range(100, 1001, 50))
+    if max_genes:
+        for sz in max_genes:
+            if sz not in sizes:
+                sizes.append(sz)
+
+    for size in sorted(sizes):
         file_path = input_gene_dir / f"all_genes_{size}.txt"
 
         if file_path.exists() and file_path.is_dir():
             shutil.rmtree(file_path)
-
         elif file_path.exists():
             file_path.unlink()
 
@@ -203,8 +200,9 @@ def create_input_dir(input_gene_dir: Path) -> None:
             f.write("\n".join(genes[:size]))
 
 
+
 def main():
-    input_gene_dir = Path("output/text_files/all_genes/test")
+    input_gene_dir = Path("output/all_genes")
     create_input_dir(input_gene_dir)
     base_dir = Path("./output/test_files")
     out_dir = Path("output/results/plots")

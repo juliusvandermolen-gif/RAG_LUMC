@@ -29,6 +29,7 @@ if platform.system() == "Windows":
 
 print(f"Using config: {CONFIG_NAME}")
 
+
 def run_module_main(module_name, argv):
     """Temporarily swap in sys.argv, then run module.__main__."""
     old_argv = sys.argv

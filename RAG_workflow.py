@@ -96,7 +96,7 @@ class ConfigError(Exception):
     pass
 
 
-def load_config(path: str, print_settings: bool) -> Dict[str, Any]:
+def load_config(path: str, print_settings: Optional[bool] = False) -> Dict[str, Any]:
     """
     Load JSON config from `path`, enforce required keys,
     fill in defaults, print each key (excluding secrets) with its source,
@@ -1698,6 +1698,7 @@ def save_answer_to_file(
         document_references: A list of document reference strings.
         file_name: The file path where the answer will be saved.
     """
+    os.makedirs(os.path.dirname(file_name), exist_ok=True)
     with open(file_name, "w", encoding='utf-8') as answer_file:
         answer_file.write(answer)
     #print(f"Answer saved to {file_name}")

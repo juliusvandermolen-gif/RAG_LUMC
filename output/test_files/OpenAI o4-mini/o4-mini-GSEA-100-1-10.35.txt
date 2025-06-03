@@ -1,0 +1,32 @@
+Axon Guidance:
+Sema4f, Ntn1, Robo2, Nrp1, Cdh13, Cntn6, Srgap1
+
+Synaptic Signaling and Vesicle Cycling:
+Synpr, P2ry2, Scn7a, Piezo2, Sncg
+
+Myelination and Schwann Cell Function:
+Mpz, Mag, Prx
+
+Extracellular Matrix Organization in Neural Tissue:
+Hapln1, Adamts17, Adamtsl3, Ltbp1, Mfap5, Col9a3, Matn3, Efemp2, Sbspon, Marveld1, Gypc, Gldn
+
+Protease and Protease Inhibitor Network in Neural Plasticity:
+Prss12, Prss23, Pcsk5, Htra1, Qsox1, Serpini1
+
+Growth Factor and PI3K-Akt Signaling:
+Igfbp3, Nrp1, Epas1, Grb14
+
+Retinoic Acid–Mediated Neurogenesis:
+Aldh1a1
+
+Transcriptional Regulation of Neural Differentiation:
+Id2, Atf3
+
+Proteoglycan Sulfation and Glycosylation:
+Chst2, Hs6st2, Man1a1, Manba
+
+Oxidative Metabolism and Mitochondrial Function:
+Sqor, Drp2
+
+Neurotrophic and Neuroprotective Factors:
+Ccn3, Tf, Apod

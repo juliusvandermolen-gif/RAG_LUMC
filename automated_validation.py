@@ -2,6 +2,8 @@ import os
 import glob
 import re
 import time
+import sys
+from pathlib import Path
 import json
 import argparse
 from tqdm import tqdm
@@ -10,6 +12,7 @@ from RAG_workflow import query_llm, load_config
 from pymed import PubMed
 import pymed
 from dotenv import load_dotenv
+from plotting import normalize_gene, load_input_gene_set, create_input_dir
 
 load_dotenv()
 
@@ -167,8 +170,13 @@ def main():
     args = parser.parse_args()
     config = load_config(args.config, print_settings=False)
     config_name = os.path.splitext(os.path.basename(args.config))[0]
+    size = config["max_genes"][0]
     globals()['config_name'] = config_name
     globals().update(config)
+
+    input_gene_dir = Path("output/all_genes")
+    create_input_dir(input_gene_dir)
+    input_set = load_input_gene_set(size, input_gene_dir)
 
     with open(ground_truth_file, 'r', encoding="utf8") as file:
         ground_truth = file.read().strip()
@@ -180,7 +188,6 @@ def main():
             academic_instruction = file.read().strip()
     else:
         print("Academic instruction file not found. Exiting program")
-        import sys
         sys.exit(1)
 
     try:
@@ -188,6 +195,21 @@ def main():
     except FileNotFoundError as e:
         print(e)
         return
+    _, pathway_dict = extract_pathways(llm_output)
+    output_genes = {
+        normalize_gene(g)
+        for genes in pathway_dict.values()
+        for g in genes
+        if g.strip()
+    }
+
+    total_output = len(output_genes)
+    matched = sum(1 for g in output_genes if g in input_set)
+    hallucination_perc = (
+        (total_output - matched) / total_output * 100.0
+        if total_output > 0
+        else 0.0
+    )
 
     for i in range(1):
         print("Validating pathways... using g:Profiler")
@@ -214,11 +236,18 @@ def main():
 
         with open(md_filename, 'w', encoding="utf8") as md:
             md.write(f"# Pathway Validation Report for {base_name}\n\n")
+            md.write("## Hallucination statistics\n")
+            md.write(f"- **Input gene‐count (size)**: {size}\n")
+            md.write(f"- **Total unique output genes**: {total_output}\n")
+            md.write(f"- **Matched (non‐hallucinated)**: {matched}\n")
+            md.write(f"- **Hallucination percentage**: {hallucination_perc:.2f}%\n\n")
+
+            md.write("## Table of Contents\n")
             toc = [
                 ("Credible sources found", "#credible-sources-found"),
                 ("Original genes / pathways", "#original-genes--pathways"),
                 ("Automated validation of pathways", "#automated-validation-of-pathways"),
-                ("g:Profiler comparison summary", "#gprofiler-comparison-summary")
+                ("g:Profiler comparison summary", "#gprofiler-comparison-summary"),
             ]
             for title, anchor in toc:
                 md.write(f"- [{title}]({anchor})\n")
@@ -249,3 +278,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

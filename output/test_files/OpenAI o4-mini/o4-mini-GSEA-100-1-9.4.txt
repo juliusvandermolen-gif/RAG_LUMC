@@ -1,0 +1,23 @@
+Axon Guidance:
+Sema4f, Nrp1, Robo2, Ntn1
+
+Myelination:
+Mpz, Mag, Prx, Drp2
+
+ECM Organization and Perineuronal Net:
+Hapln1, Matn3, Col9a3, Mfap5, Efemp2, Adamts17, Adamtsl3, Hs6st2, Sbspon
+
+Synaptic Vesicle Cycle and Plasticity:
+Synpr, Cpe, Sncg
+
+Purinergic Signaling:
+P2ry2
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, A2m, Tf, Epas1
+
+Cytoskeleton Remodeling and Neurite Outgrowth:
+Srgap1, Tuba4a, Tubb4a, Myo1d, Acta2
+
+Retinoic Acid Signaling:
+Aldh1a1
