@@ -15,7 +15,7 @@ import functools
 import logging
 import contextlib
 from pathlib import Path
-from typing import Any, Dict, List, Tuple, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 # Third-party imports
 import pandas as pd
@@ -185,7 +185,7 @@ def compute_file_hash(file_path: str, block_size: int = 65536) -> str:
 
 
 def initialize_gene_list(
-    max_genes: list,
+    max_genes: int,
     fdr_threshold: float,
     excel_file_path: str = r"data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
     de_filter_option: str = "combined"
@@ -194,16 +194,19 @@ def initialize_gene_list(
     Creates a list of genes from the specified Excel file based on filtering criteria.
 
     Args:
-        excel_file_path: The path to the Excel file.
-        de_filter_option: Specifies whether to combine or separate up- and down-regulated genes.
-        max_genes: The maximum number of genes to process.
+        max_genes: An integer specifying the maximum number of genes to process.
         fdr_threshold: The threshold for the false discovery rate (FDR).
+        excel_file_path: The path to the Excel file containing gene data
+            (default: "data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx").
+        de_filter_option: Specifies whether to combine or separate up‐ and down‐regulated genes
+            (default: "combined").
 
     Returns:
         A tuple containing:
-            - gene_list: A comma-separated string of gene names.
-            - regulation: A string indicating the regulation type ('upregulated', 'downregulated', or 'combined').
-            - num_genes: The number of genes processed.
+            - gene_list_string: A comma‐separated string of selected gene names.
+            - regulation: A string indicating the regulation type
+              ('upregulated', 'downregulated', or 'combined').
+            - num_genes: The number of genes included in the final list.
     """
     results = process_excel_data(excel_file_path, de_filter_option, max_genes, fdr_threshold)
     if results:
@@ -284,31 +287,41 @@ def load_gene_id_cache(file_path: str) -> Dict[str, str]:
         return {}
 
 
-def save_gene_id_cache(cache: int, file_path: str) -> None:
+def save_gene_id_cache(
+    cache: Dict[str, str],
+    file_path: str
+) -> None:
     """
     Saves the gene ID cache to a JSON file.
 
     Args:
-        cache: The gene ID cache dictionary to save.
-        file_path: The path to the file where the cache should be saved.
+        cache: A dictionary mapping gene IDs (as strings) to their resolved gene symbols.
+        file_path: The path to the JSON file where the cache should be saved.
+
+    Returns:
+        None. Writes the cache dictionary to disk in JSON format.
     """
     print(f"\n\n\nSaving cache to {file_path}\n\n")
     with open(file_path, 'w', encoding='utf-8') as gene_id_file:
         json.dump(cache, gene_id_file, indent=4)
 
 
-def search_genes(unknown_genes: list, gene_cache: Dict, cache_file: str) -> Dict[str, str]:
+def search_genes(
+    unknown_genes: Set[str],
+    gene_cache: Dict[str, str],
+    cache_file: str
+) -> Dict[str, str]:
     """
     Searches for gene symbols for a set of unknown genes using the MyGene.info API.
-    Updates the gene cache with resolved symbols and saves the updated cache.
+    Updates the gene cache with newly resolved symbols and saves the updated cache.
 
     Args:
-        unknown_genes: A collection of gene IDs that need symbol resolution.
-        gene_cache: A dictionary containing already resolved gene IDs.
-        cache_file: The path to the cache file.
+        unknown_genes: A list of gene IDs (strings) that require symbol resolution.
+        gene_cache: A dictionary containing already resolved gene ID → symbol mappings.
+        cache_file: The path to the JSON file where the updated cache will be saved.
 
     Returns:
-        A dictionary mapping the original gene IDs to their resolved gene symbols.
+        A dictionary mapping each original gene ID (str) to its resolved gene symbol (str).
     """
     url = "https://mygene.info/v3/gene/"
     resolved_genes = {}
@@ -500,14 +513,15 @@ def fetch_chunks_by_ids(
     ids: List[int]
 ) -> Dict[int, str]:
     """
-    Retrieves chunks from the database that match the specified IDs.
+    Retrieves text chunks from the database that match the specified chunk IDs.
 
     Args:
         conn: The SQLite database connection.
-        ids: A list of chunk IDs to fetch.
+        ids: A list of integer chunk IDs to fetch.
 
     Returns:
-        A list of text contents corresponding to the provided chunk IDs.
+        A dictionary mapping each chunk ID (int) to its corresponding text content (str).
+        If 'ids' is empty, returns an empty dictionary.
     """
 
     if not ids:
@@ -622,16 +636,20 @@ def chunk_pdfs(
     target_length: int = 1000
 ) -> List[str]:
     """
-    Splits the text content of a PDF document into chunks based on sentence tokenization and target length.
-    Optionally filters chunks based on the presence of any gene from a provided gene list.
+    Splits the text content of PDF documents into chunks based on sentence tokenization
+    and a target minimum length. Optionally filters chunks by the presence of any gene from a provided list.
 
     Args:
-        single_document: A tuple containing the file name, content, and file hash.
-        gene_list: An optional list of gene names to filter chunks.
-        target_length: The target minimum length of each chunk in characters.
+        single_document: A list of tuples, where each tuple contains:
+            - file_name: The name of the PDF file (str).
+            - content: The extracted text content from that PDF (str).
+            - file_hash: A hash of the PDF file contents (str).
+        gene_list: An optional list of gene names (strings) to filter chunks.
+                   If provided, only chunks containing at least one gene from this list are retained.
+        target_length: The target minimum length (in characters) of each chunk (default: 1000).
 
     Returns:
-        A list of text chunks extracted from the document.
+        A list of text chunks (each chunk is a string) extracted from the PDF(s).
     """
     file_name, content, file_hash = single_document[0]
     sentences = sent_tokenize(content)
@@ -667,11 +685,14 @@ def load_file_log(
     """
     Loads a file log from a JSON file, creating the log directory and file if necessary.
 
+    If the log file does not exist, initializes an empty dictionary and writes it to disk.
+
     Args:
-        log_path: The path to the JSON file that stores the file log.
+        log_path: The path to the JSON file that stores the file log (default: "./logs/file_log.json").
 
     Returns:
-        A dictionary representing the file log.
+        A dictionary representing the file log (filename → metadata). If the file is corrupted
+        or cannot be decoded as JSON, returns an empty dictionary after reinitializing the file.
     """
     log_dir = os.path.dirname(log_path)
     if not os.path.exists(log_dir):
@@ -685,19 +706,17 @@ def load_file_log(
     if os.path.exists(log_path):
         try:
             with open(log_path, 'r', encoding='utf-8') as file_logs:
-                file_log = json.load(file_logs)
+                json.load(file_logs)
         except json.JSONDecodeError:
             file_log = {}
-            print(f"File log at '{log_path}' is corrupted or empty. "
-                  f"Initialized with an empty log.")
+            print(f"File log at '{log_path}' is corrupted or empty. Initialized with an empty log.")
             save_file_log(file_log, log_path)
         except Exception as e:
             print(f"An error occurred while loading the file log: {e}")
             file_log = {}
     else:
         file_log = {}
-        print(
-            f"No existing file log found. Creating a new file log at '{log_path}'.")
+        print(f"No existing file log found. Creating a new file log at '{log_path}'.")
         save_file_log(file_log, log_path)
 
     return file_log
@@ -746,7 +765,8 @@ def load_embeddings_model_and_tokenizer(
     embeddings_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
     return tokenizer, embeddings_model
 
-#TODO See whether you can edit it for more modular approach
+
+# TODO See whether you can edit it for more modular approach
 def load_gz_files(
     data_dir: str = './data/GSEA/external_gene_data'
 ) -> List[Tuple[str, str, str]]:
@@ -795,17 +815,21 @@ def load_gz_files(
 
 def load_pdf_files(
     pdf_dir: str = './data/PDF',
-    file_log: Optional[dict] = None
+    file_log: Optional[Dict[str, Any]] = None
 ) -> List[Tuple[str, str, str]]:
     """
     Loads PDF documents from the specified directory, skipping those already recorded in the file log.
 
     Args:
-        pdf_dir: The directory containing PDF files.
-        file_log: An optional dictionary of previously processed files.
+        pdf_dir: The directory containing PDF files (default: "./data/PDF").
+        file_log: An optional dictionary mapping PDF filenames (str) to metadata. PDFs present in this log
+                  will be skipped to avoid reprocessing.
 
     Returns:
-        A list of tuples, each containing the PDF file name, extracted content, and file hash.
+        A list of tuples, each containing:
+            - file_name: The PDF file name (str).
+            - content: The full extracted text content of the PDF (str).
+            - file_hash: A SHA-256 hash of the PDF file (str).
     """
     pdf_documents = []
     if not os.path.exists(pdf_dir):
@@ -1334,12 +1358,35 @@ Only return the expanded queries, no explanation is needed.
 
 def build_search_parameters(
     mode: str = "on",
-    from_date: str = None,
-    to_date: str = None,
+    from_date: Optional[str] = None,
+    to_date: Optional[str] = None,
     max_results: int = 20,
     academic: bool = False,
-    academic_rss_links: list[str] = None,
-) -> dict:
+    academic_rss_links: Optional[List[str]] = None
+) -> Dict[str, Any]:
+    """
+    Constructs a dictionary of search parameters for a generic web/news search.
+
+    Args:
+        mode: Search mode ("on" or "off"), determining whether to perform live searches (default: "on").
+        from_date: Optional start date filter in "YYYY-MM-DD" format.
+        to_date: Optional end date filter in "YYYY-MM-DD" format.
+        max_results: Maximum number of search results to return (default: 20).
+        academic: If True, include academic RSS sources in the search (default: False).
+        academic_rss_links: An optional list of RSS feed URLs (strings) for academic sources.
+                            If None and academic=True, a default ArXiv feed will be used.
+
+    Returns:
+        A dictionary of parameters suitable for passing to a search API, for example:
+            {
+                "mode": ...,
+                "return_citations": True,
+                "max_search_results": ...,
+                "sources": [...],
+                "from_date": ...,
+                "to_date": ...
+            }
+    """
     sources = [
         {"type": "web"},
         {"type": "x"},
@@ -1366,6 +1413,16 @@ def build_search_parameters(
 
 
 def get_generation_model_dir(model: str) -> str:
+    """
+    Maps a model identifier string to the corresponding subdirectory name used for storing outputs.
+
+    Args:
+        model: The generation model name (e.g., "o4-mini", "gpt-4", "grok-3-mini-beta").
+
+    Returns:
+        A string representing the directory name under "./output/test_files/" where
+        this model's outputs should be saved.
+    """
     if model.startswith("grok"):
         return "Grok 3-mini-beta"
     if model == "gpt-4o-mini-search-preview" or model.startswith("gpt-4"):
@@ -1388,18 +1445,36 @@ def get_generation_model_dir(model: str) -> str:
 
 
 def query_llm(
-    messages: List[dict],
+    messages: List[Dict[str, Any]],
     system_instruction_for_response: str,
     prompt: str,
     save: bool,
     generation_model: str,
     query_range: int,
-    gene_count: int = None,
-    **kwargs
+    gene_count: Optional[int] = None,
+    **kwargs: Any
 ) -> Optional[str]:
     """
-    Unified LLM query function supporting Grok, OpenAI, DeepSeek, Claude, and Gemini.
-    Retries query_range times, times each call, and optionally saves outputs to files.
+    Unified LLM query function that supports Grok, OpenAI, DeepSeek, Claude, and Gemini.
+    Retries up to 'query_range' times, measures each call's duration, and optionally saves
+    the model output to disk.
+
+    Args:
+        messages: A list of message dictionaries in the form {'role': str, 'content': str}
+                  to send to the chat completion endpoint.
+        system_instruction_for_response: The system‐level instruction guiding LLM behavior.
+        prompt: The user prompt to append after the system instruction (str).
+        save: If True, save each LLM response to a file under "./output/test_files/<model_dir>/".
+        generation_model: The name of the model to query (e.g., "o4-mini").
+        query_range: Number of retry attempts for the LLM call.
+        gene_count: Optional integer indicating how many genes were used; incorporated into saved filename.
+        **kwargs: Additional model-specific keyword arguments (e.g., temperature, max_tokens).
+
+    Returns:
+        The final LLM-generated string (str) if successful, or None if all attempts fail.
+
+    Raises:
+        Any exceptions from the underlying HTTP/SDK calls are caught and printed; no exception is propagated.
     """
 
     answers: list[str] = []
@@ -1474,16 +1549,16 @@ def query_llm(
 
             # OpenAI SDK is in beta at the moment, maybe in the future, more arguments will be included
             elif model_dir == "Claude":
-                response = client_claude.chat.completions.create(
+                response = client_claude.chat.completions.create(  # type: ignore
                     model=generation_model,
-                    messages=messages,
+                    messages=messages,  # type: ignore
                 )
                 answer = response.choices[0].message.content
 
             elif model_dir == "Gemini":
-                response = client_gemini.chat.completions.create(
+                response = client_gemini.chat.completions.create(  # type: ignore
                     model=generation_model,
-                    messages=messages,
+                    messages=messages,  # type: ignore
                     temperature=0.0
                 )
                 answer = response.choices[0].message.content
@@ -1528,13 +1603,12 @@ def generate_llm_response(
     index: Any,
     tokenizer: Any,
     embeddings_model: Any,
-    bm25_index: BM25Okapi,
+    bm25_index: Any,
     bm25_chunk_ids: List[int],
     weight_faiss: float,
     weight_bm25: float,
     system_instruction_for_response: str,
-    gene_count: Optional[int] = None,
-
+    gene_count: Optional[int] = None
 ) -> Tuple[
     Optional[str],
     List[str],
@@ -1544,34 +1618,33 @@ def generate_llm_response(
 ]:
     """
     Generates a response from a language model by performing the following steps:
-    - Expanding the input query.
-    - Retrieving relevant documents using FAISS and BM25.
-    - Combining scores using weighted reciprocal rank fusion (RRF).
-    - Constructing a prompt with the retrieved documents.
-    - Querying the specified LLM API (OpenAI, Claude, or Gemini).
+      1. Expands the input query into multiple variants.
+      2. Retrieves relevant document chunks using FAISS and BM25.
+      3. Combines scores using weighted Reciprocal Rank Fusion (RRF).
+      4. Builds a prompt containing the retrieved documents plus the original query.
+      5. Queries the specified LLM API (OpenAI, Claude, Gemini, etc.) to generate a final answer.
 
     Args:
-        gene_count:
-        query_text: The original user query.
-        gene_list_string: A comma-separated string of gene names.
-        conn: The SQLite database connection.
-        index: The FAISS index.
-        tokenizer: The tokenizer for the transformer model.
-        embeddings_model: The transformer model used for embeddings.
-        bm25_index: The BM25 index object.
-        bm25_chunk_ids: List of chunk IDs corresponding to the BM25 index.
-        weight_faiss: Weight for FAISS scores.
-        weight_bm25: Weight for BM25 scores.
-        system_instruction_for_response: The system instruction to guide the LLM response.
-        api_type: The API type to use ('openai', 'claude', or 'gemini').
+        query_text: The original user query (str).
+        gene_list_string: A comma‐separated string of gene names (str).
+        conn: An active SQLite database connection for chunk storage.
+        index: The FAISS index object for embedding-based retrieval.
+        tokenizer: The tokenizer used to preprocess text for embeddings.
+        embeddings_model: The transformer model used to generate embeddings.
+        bm25_index: The BM25 index object for lexical retrieval.
+        bm25_chunk_ids: A list of integer chunk IDs corresponding to the BM25 index.
+        weight_faiss: Weight (float) assigned to FAISS-based scores in RRF.
+        weight_bm25: Weight (float) assigned to BM25-based scores in RRF.
+        system_instruction_for_response: The system‐level instruction string to guide LLM generation.
+        gene_count: Optional integer representing how many genes were processed; used in saved filenames.
 
     Returns:
         A tuple containing:
-            - The generated answer.
-            - A list of document references.
-            - The combined RRF scores.
-            - BM25 scores.
-            - FAISS scores.
+            - answer: The final generated answer from the LLM (or None on failure).
+            - document_references: A list of strings, each summarizing a retrieved chunk and its source.
+            - rrf_scores: A dictionary mapping chunk IDs (int) to their combined RRF score and metadata.
+            - bm25_scores: A dictionary mapping chunk IDs (int) to their BM25-specific score details.
+            - faiss_scores: A dictionary mapping chunk IDs (int) to their FAISS distance values.
     """
     # Expand the retrieval query
     expanded_queries = query_expansion(query_text, number=number_of_expansions)
@@ -1634,30 +1707,36 @@ def generate_response_and_save(
     index: Any,
     tokenizer: Any,
     embeddings_model: Any,
-    bm25_index: BM25Okapi,
+    bm25_index: Any,
     bm25_chunk_ids: List[int],
     weight_faiss: float,
     weight_bm25: float,
     system_instruction_for_response: str,
-    gene_count: int = None,
+    gene_count: Optional[int] = None
 ) -> None:
     """
-    Generates a response from an LLM using the provided query and gene information,
-    saves the answer and associated scores to files, and closes the database connection.
+    Orchestrates a full retrieval‐augmented generation (RAG) workflow:
+      1. Calls generate_llm_response(...) to retrieve documents and generate an LLM answer.
+      2. Saves the LLM answer and retrieved document references to disk.
+      3. Exports combined retrieval scores (RRF, BM25, FAISS) to an Excel file.
+      4. Closes the database connection.
 
     Args:
-        gene_count:
-        query: The original user query.
-        gene_list_string: A comma-separated string of gene names.
-        conn: The SQLite database connection.
-        index: The FAISS index.
-        tokenizer: The tokenizer for the transformer model.
-        embeddings_model: The transformer model used for embeddings.
+        query: The original user query (str).
+        gene_list_string: A comma‐separated string of gene names (str).
+        conn: An active SQLite database connection.
+        index: The FAISS index object.
+        tokenizer: The tokenizer used for embeddings.
+        embeddings_model: The transformer model used to embed text.
         bm25_index: The BM25 index object.
-        bm25_chunk_ids: List of chunk IDs corresponding to the BM25 index.
-        weight_faiss: Weight for FAISS scores.
-        weight_bm25: Weight for BM25 scores.
-        system_instruction_for_response: The system instruction for generating the LLM response.
+        bm25_chunk_ids: A list of integer chunk IDs for BM25 retrieval.
+        weight_faiss: Weight (float) for FAISS scores in RRF combination.
+        weight_bm25: Weight (float) for BM25 scores in RRF combination.
+        system_instruction_for_response: The system‐level instruction string for the LLM.
+        gene_count: Optional integer indicating gene count; included in filenames for saved outputs.
+
+    Returns:
+        None. Writes the LLM answer, document references, and scores to disk, then closes 'conn'.
     """
     answer, document_references, rrf_scores, bm25_scores, faiss_scores = generate_llm_response(
         query,  gene_list_string,
@@ -1701,7 +1780,6 @@ def save_answer_to_file(
     os.makedirs(os.path.dirname(file_name), exist_ok=True)
     with open(file_name, "w", encoding='utf-8') as answer_file:
         answer_file.write(answer)
-    #print(f"Answer saved to {file_name}")
     os.makedirs("./output/support", exist_ok=True)
     with open("./output/support/documents.txt", "w", encoding='utf-8') as answer_file:
         for idx, doc in enumerate(document_references, start=1):
@@ -1896,7 +1974,6 @@ def main() -> None:
             pbar.update()
 
     pbar.close()
-
 
 
 if __name__ == "__main__":

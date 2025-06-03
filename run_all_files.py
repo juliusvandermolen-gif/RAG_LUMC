@@ -5,11 +5,10 @@ import platform
 import runpy
 import multiprocessing as mp
 
-# 1) Force spawn from the get-go (before any torch / MPS import)
 mp.set_start_method("spawn", force=True)
 
-# 2) Turn off tokenizers parallelism to avoid fork-after-threads
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 
 # Helper to pick up the config flag
 def resolve_config_name(default="GSEA"):
@@ -17,6 +16,7 @@ def resolve_config_name(default="GSEA"):
         if arg.startswith("--") and arg != "--config":
             return arg[2:]
     return default
+
 
 CONFIG_NAME = resolve_config_name("GSEA")
 CONFIG_PATH = f"./configs_system_instruction/{CONFIG_NAME}.json"
@@ -39,7 +39,7 @@ def run_module_main(module_name, argv):
     finally:
         sys.argv = old_argv
 
-# 3) In-process calls—no subprocesses after torch/MPS is alive
+
 print("Running RAG_workflow.py…")
 run_module_main("RAG_workflow", ["--config", CONFIG_PATH])
 
