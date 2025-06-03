@@ -1,0 +1,11 @@
+Axon guidance:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Robo2, Slit2, Plxnb1,
+
+Myelin sheath assembly:
+Mag, Mbp, Mpz, Plp1, Hapln1,
+
+Synaptic plasticity:
+Bdnf, Camk1d, Dpysl5, Synpr, Sncg,
+
+Wnt signaling pathway:
+Wnt5a, Lef1,

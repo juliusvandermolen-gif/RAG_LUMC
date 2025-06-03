@@ -1,0 +1,59 @@
+Pathway Name: Cholesterol and Lipid Metabolism in Myelination  
+Pmp22, Mbp, Mag, Plp1, Abca8a, Fabp5, Scd, Gldc, Hapln1, Cers6, Sgms1, Svil, Gpnmb, Ccl7, Apod, Vldlr, Pltp, Apoe, Pmp22, Htra1, Cst3, Lrp2, Gstz1, Gba1, Srebf1, Npc2, Abca1, Slc25a15, Scp2  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Slit2, Robo2, Cdh13, Col4a1, Col9a3, Col15a1, Emilin1, Lama4, Sparc, Ddr2, Ctnnd2, Lpar1, Rarb, Cxcl12, Cxcl14  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Bdnf, Grb14, Adcy1, P2ry2, Ryr3, Synpr, Vamp2, Snap29, Gabpa, Grik5, Gria1, Drd4, Grin2b, Gprc5b, Gprc5a, Chrm3, Chrnb2, Slc9a9, Slc4a1ap, Slc39a13  
+
+Pathway Name: PI3K-AKT-MTOR Signaling and Cell Growth Regulation  
+Pik3r1, Akt1, Mtor, Rptor, Rictor, Ppp2r5c, Ppp2r3c, Rps6ka5, Eif4ebp1, Tsc1, Tsc2, Rheb, Mapk1, Mapk8ip1, Rassf1, Rictor, Pten, Inpp5a, Pdgfb, Igfbp3, Lif, Ccn3, Ccn4  
+
+Pathway Name: Extracellular Matrix Organization and Cell Adhesion  
+Col9a3, Col15a1, Col20a1, Col7a1, Col14a1, Col11a1, Col8a2, Col4a1, Hapln1, Sparc, Lama4, Emilin1, Postn, Fn1, Tnc, Cd9, Cd151, Itga6, Itga7, Itga8, Cdh13, Ctnnd2, Ddr2, Tspan4, Tspan15  
+
+Pathway Name: Neural Crest and Schwann Cell Development  
+Sox10, Ebf1, Mef2c, Runx3, Zeb1, Twist1, Pax3, Pax7, Erbb2, Erbb3, Nrg1, Ncam1, L1cam, Mpz, Prx, Gjb1, Krox20, Oct6, Brn2, Tfap2a, Crabp1, Crabp2  
+
+Pathway Name: Endoplasmic Reticulum Stress and Unfolded Protein Response  
+Htra1, Serpinf1, Atf3, Xbp1, Ern1, Eif2ak2, Eif2s1, Ddit3, Hspa5, Hsp90aa1, Calr, Pdia3, Man1a1, Edem1, Derl1, Sec24d, Sel1l, Syvn1, Creb3, Arf6, Ufd1  
+
+Pathway Name: Calcium Signaling and Ion Transport  
+Ryr3, P2ry2, Trpc1, Trpc4, Trpv4, Cacna1c, Cacna1d, Atp2b1, Slc8a1, Slc24a2, Slc24a3, Kcnj10, Kcnma1, Kcnq2, Kcnq3, Scn7a, Scn1b, Cacnb2, Camk1d, Camk2b, Calm1, S100b  
+
+Pathway Name: Wnt/β-Catenin Signaling and Neural Patterning  
+Wnt5a, Fzd3, Fzd6, Dvl1, Dvl2, Gsk3b, Ctnnb1, Tcf7, Lef1, Axin2, Apc, Ccnd1, Ccnd3, Myc, Tnik, Nkd1, Nkd2, Sfrp1, Sfrp2, Dkk1, Rspo1  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Ctsd, Ctsl, Ctsb, Ctsf, Lamp1, Lamp2, Atg5, Atg7, Becn1, Sqstm1, Ulk1, Ulk2, Tfeb, Mcoln1, Cln3, Grn, Hexb, Gusb, Naglu, Manba, Gla  
+
+Pathway Name: Notch Signaling and Glial Differentiation  
+Notch1, Jag1, Dll1, Hes1, Hes5, Hey1, Hey2, Rbpj, Mfng, Lfng, Dtx1, Dtx4, Numb, Adam10, Adam17, Psen1, Psen2, Nicastrin, Aph1a, Aph1b  
+
+Pathway Name: TGF-β and BMP Signaling in Neural Development  
+Tgfb1, Tgfb2, Tgfb3, Bmp4, Bmp7, Smad1, Smad2, Smad3, Smad4, Smad5, Smad6, Smad7, Acvr1, Acvr2a, Acvr2b, Bmpr1a, Bmpr1b, Ltbp1, Adamtsl3, Thbs2, Fstl1, Inhba, Gdf6  
+
+Pathway Name: Neurotrophin and Growth Factor Signaling  
+Ntrk1, Ntrk2, Ntrk3, Ngf, Bdnf, Ntf3, Ntf4, Ngfr, Gfra1, Gfra2, Ret, Cntn6, Cntf, Lif, Cntfr, Pdgfb, Pdgfra, Fgf2, Fgfr1, Fgfr2, Egf, Egfr  
+
+Pathway Name: Oxidative Stress and Antioxidant Defense  
+Sod1, Sod2, Cat, Gpx1, Gpx4, Prdx1, Prdx2, Prdx3, Prdx4, Prdx5, Prdx6, Nrf2, Keap1, Hmox1, Hmox2, Txnrd2, Gclc, Gclm, Nqo1, Srxn1, Ho1  
+
+Pathway Name: cAMP-PKA Signaling and Neuronal Differentiation  
+Adcy1, Adcy5, Prkar2b, Pkia, Pde4b, Pde4d, Creb1, Creb3, Atf3, Epac1, Rap1a, Rap1b, Gnas, Gnal, Drd4, Grin2b, Grin2a, Grin1, Grin2d, Grin2c  
+
+Pathway Name: Ubiquitin-Proteasome System and Protein Degradation  
+Ube2l3, Ube2n, Ube2v1, Ube3a, Usp6nl, Usp15, Usp25, Fbxo11, Fbxo32, Skp1, Cul4b, Cul3, Psmd2, Psma1, Psmb5, Uchl1, Uchl3, Park7, Usp14, Usp25  
+
+Pathway Name: JAK-STAT Signaling in Glial Communication  
+Jak1, Jak2, Stat1, Stat3, Stat5a, Stat5b, Socs1, Socs3, Cish, Il6st, Lifr, Osmr, Cntfr, Il10rb, Il4ra, Il13ra1, Il2rg, Il7r, Il15ra, Il21r  
+
+Pathway Name: Hedgehog Signaling and Neural Patterning  
+Shh, Smo, Ptch1, Ptch2, Gli1, Gli2, Gli3, Sufu, Hhip, Boc, Cdo, Gas1, Ihh, Dhh, Disp1, Rab23, Kif7, Tulp3, Evc, Evc2  
+
+Pathway Name: Complement System and Neuroinflammation  
+C1qtnf1, C1qtnf2, C1s, C3, C4a, C5, Cfh, CfI, Cfb, Cfd, C9, Cd59b, Cd55, Cr1l, Cr2, C1qa, C1qb, C1qc, C3ar1, C5ar1  
+
+Pathway Name: RNA Binding and Post-Transcriptional Regulation  
+Msi1, Elavl1, Elavl2, Elavl3, Elavl4, Fmr1, Fxr1, Fxr2, Zfp36, Zfp36l1, Zfp36l2, Qki, Nova1, Nova2, Ptbp1, Ptbp2, Rbm3, Rbm4, Rbm5, Rbm10

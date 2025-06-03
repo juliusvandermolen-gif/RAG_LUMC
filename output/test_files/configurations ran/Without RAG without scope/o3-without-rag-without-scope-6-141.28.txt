@@ -1,0 +1,35 @@
+Extracellular Matrix Organization and Remodeling:
+Adamts17, Adamtsl3, Adamtsl1, Htra1, Ltbp1, Mfap5, Emilin1, Bgn, Ccn3, Ccn4, Serpinf1, Hapln1, Has2, Matn3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Pxdn, Qsox1, Efemp2,
+
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Ntn1, Robo2, Slit2, Plxnb1, Efna5, Dpysl3, Dpysl5, Srgap1, Kif1a, Lrrtm3, Nes, Gldn, Itga8, Itga7, Tnik,
+
+Myelination and Node of Ranvier Formation:
+Mpz, Pmp22, Mal, Prx, Mag, Drp2, Gldn, Tubb4a, Tuba4a, Septin4, Itpripl1, Cldn19,
+
+Vascular Development and Angiogenesis:
+Epas1, Vash1, Ltbp1, Wnt5a, Ccn3, Ccn4, Serpinf1, Cxcl12, Has2, Nrp1, Nrp2, Itga7, Itga8,
+
+Immune and Inflammatory Signaling:
+Ifnar1, Eif2ak2, Tril, Icoslg, Cxcl14, Cxcl12, Nlrp1a, Tnfrsf1a, Parp14, Defb29, Ighm, Selplg, Runx3, Id2, A2m, Igfbp3,
+
+Lipid Metabolism and Transport:
+Pltp, Apod, Abca8a, Abcb4, Psap, Cers6, Agpat5, Serinc5, Hadhb, Sgpl1, Ppard, Nampt, Frrs1,
+
+Iron Homeostasis and Redox Regulation:
+Tf, Fth1, Steap2, Frrs1, Sqor, Slc22a17, Rrm2, Steap1,
+
+Wnt Signaling:
+Wnt5a, Lef1, Tnik, Lrp2,
+
+Cytoskeletal Dynamics and Contractility:
+Acta2, Tagln, Pfn2, Fhod3, Septin4, Myo1d, Ppp1r14c, Krtap1-5, Nes,
+
+Glycosaminoglycan Biosynthesis and Sulfation:
+Has2, Chst2, Hs6st2, Hs6st1, Fut10, Arsb, Arsg, Poglut1, Gcnt1, Slc35a2, Hapln1,
+
+Autophagy and Vesicular Trafficking:
+Map1lc3a, Rab10, Snx4, Snx6, Vps8, Vps26c, Chmp2b, Tpcn1, Acap2,
+
+Stress Response and Ubiquitin/SUMO Modification:
+Sumo3, Atf3, Atf5, Hsp90aa1, Hspa12a, Trim35, Rnf144a, Fbxo11, Psmd2, Ppm1f,

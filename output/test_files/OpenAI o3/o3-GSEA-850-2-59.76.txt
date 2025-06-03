@@ -1,0 +1,23 @@
+Axon Guidance and Neuronal Pathfinding:
+Ntn1, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Efna5, Epha4, Sema3g, Sema4f, Cntn6, Srgap1, Lrrtm3, Itga8, Dpysl3, Dpysl5, Kif1a,
+
+Myelination and Schwann Cell Development:
+Mpz, Mag, Pmp22, Mbp, Plp1, Drp2, Prx, Gldn, Mal, Ugt8, Itga6, Itga7, Lrp2,
+
+Synaptic Vesicle Cycling and Neurotransmission:
+Vamp2, Adcy1, Adcy5, Bdnf, Grik5, Ryr3, P2ry2, Synpr, Camk1d, Camk4, Grid2, Lrrtm3, Kif1a, Drd4,
+
+PI3K-Akt/MAPK Signaling:
+Sos1, Grb14, Mapk1, Map2k6, Pak1, Pak2, Dyrk1a, Tnik, Ppp2r5e, Ppp2r5c, Ppp2r3c, Prkd3, Rps6ka5,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Vangl2, Prickle3, Daam2, Ctnnd2,
+
+Cholesterol and Sphingolipid Metabolism in Myelination:
+Abca8a, Abcb4, Apod, Pltp, Sgms1, Cers6, Scd, Txnrd2, Hadhb, Ugt8, Lpcat4, Smpd1, Sqor,
+
+Calcium Signaling and Excitability:
+Ryr3, Itpripl1, P2ry2, Camk1d, Camk4, Piezo2, Cald1,
+
+Extracellular Matrix and Integrin Signaling in Neural Development:
+Fn1, Col15a1, Col11a1, Col20a1, Col9a3, Lama4, Nid2, Postn, Thbs2, Svep1, Itga1, Itga6, Itga7, Itga8,

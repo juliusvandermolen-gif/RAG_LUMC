@@ -1,0 +1,23 @@
+Axon Guidance and Synaptogenesis:
+Cntn6, Prss12, Sema4f, Sema3g, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Tnik, Kif1a, Lrrtm3, Srgap1, Dpysl5, Dpysl3, Frrs1, Gldn, Gja1, Itga8, Wnt5a, Lef1, Mef2c,
+
+Myelination and Glial Differentiation:
+Pmp22, Mag, Mpz, Prx, Drp2, Gldn, Mal, Id2, Abca8a, Abcb4, Cers6, Itga7, Itga8,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Synpr, Ppfia4, Pfn2, Kif1a, Ryr3, Scn7a, Piezo2, P2ry2, Cpe, Sgpl1, Dpysl3, Dpysl5, Slc22a17, Slc35a2, Slc9a9, Slco3a1, Slc39a13, Tspan5,
+
+Neurotrophic and MAPK/Wnt Signaling:
+Met, Lifr, Wnt5a, Lef1, Cxcl12, Ghr, Dyrk1a, Nfatc1, Runx3, Klf9, Ppard,
+
+Mechanosensory and Calcium-Ion Channel Signaling:
+Piezo2, Scn7a, Ryr3, Gja1, Tpcn1, Itpripl1, P2ry2, Cdh13,
+
+Neuroimmune and Cytokine Response:
+Tnfrsf1a, Ifnar1, Nlrp1a, Cxcl12, Cxcl14, Ighm, A2m, Defb29, Serpinf1, C1qtnf1, Icoslg, Selplg, Cd9, Cd151, Timp1,
+
+Extracellular Matrix Remodeling in Neural Development:
+Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Matn3, Bgn, Adamts17, Adamtsl3, Adamtsl1, Htra1, Pcsk5, Ltbp1, Hapln1, Mfap5, Emilin1, Pxdn, Qsox1, Efemp2,
+
+Lipid Metabolism and Cholesterol Homeostasis:
+Abca8a, Abcb4, Apod, Pltp, Agpat5, Hadhb, Nampt, Psap, Sgpl1, Sqor,

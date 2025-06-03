@@ -1,0 +1,23 @@
+Axon Guidance and Neurite Outgrowth:
+Slit2, Robo2, Ntn1, Sema3g, Sema4f, Efna5, Efna4, Epha4, Plxnb1, Plxna4, Nrp1, Nrp2, Lrrtm3, Dpysl2, Dpysl3, Dpysl5, Srgap1, Itga8, Tnik, Vangl2, Rhoj, Cdh13, Gpc1, Gldn,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mag, Plp1, Mbp, Mal, Drp2, Gldn, Cldn19, Itga6, Ugt8, Fn1, Lrp2, Pdgfb, Lama4, Lamb1,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Vamp2, Synpr, Synm, Snap29, Dnm1, Dnm1l, Kif1a, Apba1, Bdnf, Grik5, Grid2, Adcy1, Adcy5, Numb, Synj2bp, Cpe, Serpini1, Scn7a, P2ry2, Ryr3, Chrna3, Drd4,
+
+cAMP/PKA–CREB Signaling in Synaptic Plasticity:
+Prkar2b, Pkia, Atf3, Atf4, Atf5, Camk1d, Camk4, Mapk1, Mapk8ip1, Sos1, Hras, Gnai1, Gnaq, Lpar1, Adcy1, Adcy5, Creb3,
+
+PI3K–AKT–mTOR Signaling for Neural Growth:
+Akt1, Pak1, Pak2, Sos1, Rps6ka5, Mapk1, Eif2ak2, Ppp2r5c, Ppp2r5e, Ppp2r3c,
+
+Cytoskeletal Dynamics and Axonal Transport:
+Tuba4a, Tubb4a, Tubb2a, Septin4, Septin5, Septin11, Pfn2, Fhod3, Kif1a, Kif26b, Kif3c, Ttll5, Tppp, Tppp3, Daam2, Arhgap24, Arhgap5, Arhgef6, Trio,
+
+Calcium Signaling and Neuronal Excitability:
+Ryr3, Itpripl1, Piezo2, Camk1d, Camk4, Atp2b1, Scn7a, Kcnd3, Gnai1, Gnaq, P2ry2, Adcy1, Adcy5, Ncs1,
+
+Myelin Lipid and Cholesterol Metabolism:
+Abca8a, Abcb4, Abcb6, Abca3, Abcg3l1, Agpat5, Sgms1, Sgpl1, Cers6, Gm2a, Apod, Fabp5, Scd, Pnpla2, Pnpla8, Pltp, Nampt, Hadhb, Hadha,

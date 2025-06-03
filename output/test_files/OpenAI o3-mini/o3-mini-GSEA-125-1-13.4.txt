@@ -1,0 +1,11 @@
+Synaptic Plasticity & Neural Signaling:
+Cntn6, Prss12, Synpr, Atf3, Eif2ak2, Rrm2,
+
+Axon Guidance & Neurite Outgrowth:
+Ntn1, Robo2, Slit2, Srgap1, Dpysl5, Gnai1, Tnik,
+
+Myelination & Schwann Cell Function:
+Mpz, Drp2, Prx, Mag, Gldn, Cldn19, Lrp2,
+
+Cell Adhesion & Extracellular Matrix Remodeling:
+Adamts17, Hapln1, Col9a3, Col15a1, Emilin1, Matn3, Cdh13,

@@ -1,0 +1,11 @@
+Synaptic Plasticity and Signaling:
+CNTN6, PRSS12, SEMA4F, SYNPR, ID2, MEF2C, PKN2, GNAI1,
+
+Axon Guidance and Neurite Outgrowth:
+NTN1, ROBO2, SEMA3G, SLIT2, PLXNB1, DPYSL5,
+
+Cytoskeletal Dynamics and Neural Signaling:
+TUBA4A, DRP2, KIF1A, SEPTIN4, GNAI1,
+
+Neural Development and Extracellular Matrix Regulation:
+HAPLN1, COL9A3, PEG3, MAG, LIFR, NES,

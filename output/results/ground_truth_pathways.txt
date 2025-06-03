@@ -1,0 +1,11 @@
+Pathway	annotation term
+extracellular region	GO:0005576
+extracellular matrix	GO:0031012
+external encapsulating structure	GO:0030312
+cell periphery	GO:0071944
+Extracellular matrix organization	REAC:R-RNO-1474244
+positive regulation of cell-matrix adhesion	GO:0001954
+vesicle	GO:0031982
+response to external stimulus	GO:0009605
+Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs)	REAC:R-RNO-381426
+myelin sheath	GO:0043209

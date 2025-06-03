@@ -1,0 +1,20 @@
+Extracellular Matrix Organization and Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Hapln1, Efemp2, Emilin1, Mfap5, Bgn, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Pxdn, Matn3, Timp1, Serpinf1, Qsox1,
+
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Srgap1, Itga8, Dpysl3, Dpysl5, Kif1a, Tnik, Lrrtm3, Piezo2,
+
+Peripheral Nerve Myelination:
+Mpz, Pmp22, Mag, Mal, Drp2, Gldn,
+
+Lipid and Sphingolipid Metabolism:
+Abca8a, Abcb4, Apod, Pltp, Serinc5, Cers6, Sgpl1, St3gal5, Agpat5, Slc35a2, Nampt,
+
+Integrin Signaling and Actin Cytoskeleton Dynamics:
+Itga7, Itga8, Cd151, Acta2, Tagln, Pfn2, Fhod3, Rhoj, Asap1, Stard13, Acap2, Myo1d,
+
+Inflammatory and Cytokine Signaling:
+Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Nlrp1a, Selplg, Ighm, C1qtnf1, Runx3,
+
+Protein Folding, Degradation and Stress Response:
+Atf3, Atf5, Eif2ak2, Hsp90aa1, Hspa12a, Map1lc3a, Psmd2, Rrm2,

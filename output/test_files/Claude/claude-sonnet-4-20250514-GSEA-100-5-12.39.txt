@@ -1,0 +1,44 @@
+Neural Development and Synaptic Function:
+Cntn6, Nrp1, Sema4f, Ntn1, Robo2, Srgap1
+
+Myelination and Peripheral Nerve Development:
+Mag, Mpz, Drp2, Prx
+
+Extracellular Matrix and Neural Structure:
+Col9a3, Hapln1, Mfap5, Matn3, Ltbp1, Adamts17, Adamtsl3
+
+Ion Channel and Synaptic Transmission:
+Scn7a, P2ry2, Piezo2, Slc9a9, Slc22a17
+
+Neural Crest Development:
+Id2, Epas1, Atf3
+
+Neurotransmitter Processing and Vesicle Function:
+Cpe, Synpr, Serinc5
+
+Cell Adhesion and Migration:
+Cdh13, Pkp1, Emp2
+
+Growth Factor Signaling:
+Igfbp3, Grb14, Ccn3, Pappa
+
+Protein Processing and Degradation:
+Prss12, Prss23, Htra1, Pcsk5, Ecel1
+
+Cytoskeletal Organization:
+Tuba4a, Tubb4a, Acta2, Tagln, Myo1d
+
+Metabolic Pathways in Neural Cells:
+Aldh1a1, Gldc, Sqor, Man1a1, Manba
+
+Transcriptional Regulation:
+Sumo3, Ddx1, Eif2ak2, Rrm2
+
+Neural Inflammation and Immune Response:
+A2m, Serpini1, Serpinf1, Cxcl14, Ighm, Aif1l
+
+Lipid Transport and Metabolism:
+Apod, Pltp, Abca8a, Abcb4
+
+Cell Cycle and Proliferation:
+Peg3, Cdca7l, Tent5c

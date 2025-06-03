@@ -1,0 +1,37 @@
+Based on the provided genes and their suspected involvement in synaptic plasticity and neural signaling pathways, here are the associated biological pathways:
+
+**Axon Guidance and Neural Pathfinding:**
+Cntn6, Sema4f, Ntn1, Robo2, Nrp1, Srgap1
+
+**Myelination and White Matter Development:**
+Mag, Mpz, Drp2, Cntn6
+
+**Synaptic Plasticity and Neurotransmission:**
+Synpr, P2ry2, Cpe, Piezo2, Serinc5
+
+**Neural Cell Adhesion and Migration:**
+Cntn6, Cdh13, Pkp1, Marveld1
+
+**Extracellular Matrix and Neural Scaffold:**
+Col9a3, Hapln1, Matn3, Mfap5, Efemp2, Pxdn
+
+**Neurodevelopmental Signaling:**
+Id2, Epas1, Atf3, Peg3
+
+**Ion Channel and Membrane Transport:**
+Scn7a, Slc22a17, Slc9a9, Abca8a, Abcb4
+
+**Neuroinflammation and Immune Response:**
+Aif1l, Cxcl14, Ighm, Serpini1, Serpinf1
+
+**Cytoskeletal Organization in Neurons:**
+Tuba4a, Tubb4a, Tagln, Acta2, Myo1d
+
+**Neural Metabolism and Energy:**
+Aldh1a1, Gldc, Sqor, Tf, Apod
+
+**Proteolytic Processing in Neural Function:**
+Prss12, Prss23, Adamts17, Adamtsl3, Htra1
+
+**Neural Growth and Differentiation:**
+Igfbp3, Ccn3, Grb14, Pappa, Ltbp1

@@ -5,35 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fine-tuning_model.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/PNG/1_epoch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/PNG/base_30_epochs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/PNG/base_6_epochs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/PNG/fine-tuned_30_epochs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/PNG/fine-tuned_6_epochs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/PNG/finetuned_1_epoch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/test.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/train.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/model/val.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_deepseek.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_deepseek.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_grok.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_grok.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o3.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o3_mini.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o3_mini.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o4.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/box_open_ai_o4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/combined_models_line.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/combined_models_line.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_deepseek.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_deepseek.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_grok.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_grok.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o3.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o3_mini.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o3_mini.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o4.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/line_open_ai_o4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_combined.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_combined.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_validation.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_validation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_values.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/text_files/PNG_HTML/spearman_values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gprofiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/gprofiler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotting.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +56,7 @@
     &quot;Python.RAG_workflow.executor&quot;: &quot;Run&quot;,
     &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;Python.automated_validation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.g:profiler.executor&quot;: &quot;Run&quot;,
     &quot;Python.hugginface_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.insta.executor&quot;: &quot;Run&quot;,
     &quot;Python.plotting.executor&quot;: &quot;Run&quot;,
@@ -92,9 +67,9 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;final__handin&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Python/RAG/plotting.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mghuibregtse/Documents/Python/RAG_LUMC/output&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -109,6 +84,18 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/output" />
+      <recent name="$PROJECT_DIR$/output/test_files" />
+      <recent name="$PROJECT_DIR$/output/test_files/open_ai_o4_mini" />
+      <recent name="$PROJECT_DIR$/output/text_files/all_genes" />
+      <recent name="C:\Python\RAG\supporting scripts\validation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/output/support" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.plotting">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
@@ -148,6 +135,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/automated_validation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="g:profiler" type="PythonConfigurationType" factoryName="Python">
+      <module name="RAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gprofiler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,6 +238,7 @@
     <list>
       <item itemvalue="Python.RAG_workflow" />
       <item itemvalue="Python.automated_validation" />
+      <item itemvalue="Python.g:profiler" />
       <item itemvalue="Python.insta" />
       <item itemvalue="Python.plotting" />
       <item itemvalue="Python.visualize_length" />
@@ -255,6 +266,7 @@
       <workItem from="1745517739222" duration="339000" />
       <workItem from="1746123211640" duration="1584000" />
       <workItem from="1746561062542" duration="331000" />
+      <workItem from="1747343312771" duration="1314000" />
     </task>
     <servers />
   </component>
@@ -265,6 +277,6 @@
     <SUITE FILE_PATH="coverage/plotting_py$plotting.coverage" NAME="plotting Coverage Results" MODIFIED="1744836289975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/automated_validation_py$plotting.coverage" NAME="plotting Coverage Results" MODIFIED="1744911308540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RAG_workflow_py$RAG_workflow.coverage" NAME="RAG_workflow Coverage Results" MODIFIED="1745517997124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/automated_validation_py$automated_validation.coverage" NAME="automated_validation Coverage Results" MODIFIED="1744877516931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/automated_validation_py$automated_validation.coverage" NAME="automated_validation Coverage Results" MODIFIED="1747343332649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

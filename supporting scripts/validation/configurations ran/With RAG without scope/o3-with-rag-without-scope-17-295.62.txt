@@ -1,0 +1,14 @@
+Extracellular Matrix Organization & Cell Adhesion:
+Zpld1, Adamts17, Adamtsl1, Adamtsl3, Tex101, Qsox1, Hapln1, Marveld1, Parm1, Sbspon, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Emp2, Chst2, Acta2, Htra1, Igfbp3, A2m, Ccn3, Ccn4, Prss23, Pappa, Serpinf1, Serpini1, Ltbp1, Tagln, Mfap5, Pxdn, Matn3, Cdh13, Pkp1, Efemp2, Krtap1-5, Alpl, Tspan4, Tspan5, Cd9, Cldn19, Cd151, Itga7, Itga8, Emilin1, Bgn, Vash1, Fam20c, Has2, Arsg, Arsb, Fut10, Gcnt1, Hs6st1, Hs6st2, Wnt5a, Gpnmb, Olfm2, Olfml1,
+
+Axon Guidance, Synaptic Connectivity & Myelination:
+Cntn6, Prss12, Sema4f, Tuba4a, Prx, Synpr, Myo1d, Id2, Ntn1, Mag, Srgap1, Drp2, Mpz, Nrp1, Piezo2, Sncg, Scn7a, Slit2, Robo2, Plxnb1, Efna5, Sema3g, Nrp2, Kif1a, Lrrtm3, Gja1, Itga7, Itga8, Nes, Gldn, Dpysl3, Dpysl5, Dyrk1a, Ryr3, P2ry2, Phldb2, Met, Mal, Msi1, Pfn2, Sipa1l1, Fhod3, Itpripl1, Slitrk6, Inpp5a, Tnik, Gnai1, Ecel1, Ebf1,
+
+Lipid Transport, Metabolism & Membrane Dynamics:
+Gldc, Aldh1a1, Sqor, Tf, Grb14, Steap2, Pltp, Abca8a, Abcb4, Serinc5, Slc22a17, Slc9a9, Slc35a2, Slc39a13, Slco3a1, Sgpl1, Agpat5, Cers6, Apod, Nampt, Ppard, Hadhb, Pgm1, Psap, Fth1, C1qtnf1, Lrp2, Aig1, St3gal5, Frrs1, Stard13, Rab10, Dhrs1, Steap1, Ano5,
+
+Immune, Inflammatory & Cytokine Signaling:
+Tril, Defb29, Cxcl14, Cxcl12, Ighm, Ifnar1, Nlrp1a, Selplg, Eif2ak2, Atf3, Atf5, Trim35, Ptgfr, Aif1l, Epas1, Rnf144a, Ebf1, Nfatc1, Runx3, Lef1, Tnfrsf1a, Parp14, Ghr, Icoslg, Gpnmb, Mybl1,
+
+Proteostasis, Autophagy & Vesicular Trafficking:
+Sumo3, Pcsk5, Cpe, Manba, Vopp1, Man1a1, Ctbs, Tent5c, Riox2, Ddx1, Rrm2, Nrbp1, Ppp1r36, Snx6, Snx4, Chmp2b, Vps8, Vps26c, Map1lc3a, Psmd2, Tpcn1, Fbxo11, Ppp1r14c, Taf9b, Gtf2e1, Papola, Cenpo, Smc6, Msh2, Rcn3, Bace2, Klhl29, Vrk1, Cpsf2, Cpm, Hsp90aa1, Hspa12a, Stk39, Tbccd1, Asap1, Zfyve28, Zfp518a, Poglut1, Pam,

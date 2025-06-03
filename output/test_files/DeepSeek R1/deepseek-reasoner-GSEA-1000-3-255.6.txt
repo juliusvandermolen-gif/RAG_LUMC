@@ -1,0 +1,50 @@
+Pathway Name: Myelin Formation and Cholesterol Metabolism  
+Mbp, Plp1, Mag, Pmp22, Gldn, Cldn19, Mal, Abca8a, Abcb4, Abcg3l1, Apod, Htra1, Scarb1, Cnp,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Nrp1, Nrp2, Plxna4, Slit2, Slit3, Sema3g, Efna5, Epha4, Plxnb1,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Bdnf, Vamp2, Synpr, Gabpa, Grb14, Syp, Grin1, Grin2b, Syt1,  
+
+Pathway Name: Lysosomal and Autophagy Pathways  
+Ctsd, Ctsl, Cst3, Atg3, Map1lc3a, Lamp1, Ctsf,  
+
+Pathway Name: Extracellular Matrix Remodeling  
+Adamts1, Adamts17, Col9a3, Col15a1, Col5a2, Col16a1, Sparc, Lama4, Lamb1, Fn1,  
+
+Pathway Name: PI3K-AKT-mTOR Signaling  
+Akt1, Grb14, Sos1, Rps6kb2, Igfbp3, Igfbp4, Mtor,  
+
+Pathway Name: ERK/MAPK Signaling  
+Mapk1, Mapk8ip1, Mef2c, Rps6ka5, Map2k6,  
+
+Pathway Name: Wnt Signaling Pathway  
+Wnt5a, Ctnnb1, Lef1, Fzd2,  
+
+Pathway Name: TGF-beta Signaling  
+Tgfbi, Ltbp1, Serpine1, Smad3,  
+
+Pathway Name: Cell Adhesion and Integrin Signaling  
+Cdh13, Icam1, Cd9, Itga7, Itga6, Itga8, Cd44,  
+
+Pathway Name: Ubiquitin-Proteasome System  
+Ube2l3, Fbxo11, Ubr7, Ufd1, Park7,  
+
+Pathway Name: Cytokine and Chemokine Signaling  
+Ccl7, Cxcl12, Cxcl14, Lif, Il18rap, Cxcl16,  
+
+Pathway Name: GPCR and G-protein Signaling  
+Gprc5a, Gprc5b, Gnaq, Gnai1, Gng2, Gng11,  
+
+Pathway Name: Neuregulin and Growth Factor Signaling  
+Sos1, Grb14, Nrp1, Nrp2, Erbb2,  
+
+Pathway Name: Notch Signaling Pathway  
+Hes6, Dtx4, Notch1, Jag1,  
+
+Pathway Name: Ion Transport and Channel Activity  
+Scn7a, Kcnd3, Trpc1, Cacna1c,  
+
+Pathway Name: cAMP-Mediated Signaling  
+Adcy1, Adcy5, Pkia, Prkar2b,

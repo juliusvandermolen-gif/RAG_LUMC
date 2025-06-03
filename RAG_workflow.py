@@ -1,176 +1,171 @@
-# Import necessary libraries
-import pandas as pd
+# Standard library imports
+import os
+import sys
+import time
+import re
+import json
 import gzip
 import csv
-import sys
-import os
-import time
-import json
 import hashlib
-import re
 import sqlite3
 import argparse
 import warnings
 import atexit
 import functools
+import logging
+import contextlib
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+# Third-party imports
+import pandas as pd
+import numpy as np
 import requests
 from tqdm import tqdm
-import numpy as np
 from dotenv import load_dotenv
+
+
 import nltk
 from nltk import sent_tokenize
 from nltk.corpus import stopwords
+from nltk.data import find
+
 from PyPDF2 import PdfReader
 from transformers import AutoModel, AutoTokenizer
+
 import faiss
 from rank_bm25 import BM25Okapi, BM25Plus
 
-# Importing LLM libraries
-from langchain.docstore.document import Document
 from openai import OpenAI
 import google.generativeai as genai
+from google.generativeai import types
 from anthropic import Anthropic
 import torch
 from openai import OpenAI as DeepSeekClient
 
-# Environment Setup
-os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
-os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
-os.environ["OMP_NUM_THREADS"] = "8"
+# Environment & API clients setup
 load_dotenv()
 
-# Setting up API keys
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-gemini_api_key = os.getenv("GEMINI_API_KEY")
-genai.configure(api_key=gemini_api_key)
-client_claude = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-client_deepseek = DeepSeekClient(api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
+client_gemini = OpenAI(
+    api_key=os.getenv("GEMINI_API_KEY"),
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+)
+client_claude = OpenAI(
+    api_key=os.getenv("CLAUDE_API_KEY"), 
+    base_url="https://api.anthropic.com/v1/"  
+)
+client_deepseek = OpenAI(
+    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    base_url="https://api.deepseek.com"
+)
 client_grok = OpenAI(
     base_url="https://api.x.ai/v1",
     api_key=os.getenv("XAI_API_KEY"),
 )
-# Suppress Warnings
-warnings.filterwarnings("ignore", category=UserWarning, message=".*symlinks.*")
-warnings.filterwarnings("ignore", category=FutureWarning, message=".*resume_download.*")
-warnings.filterwarnings("ignore", category=FutureWarning, message=".*torch.load.*")
 
 
-def load_config(filename):
+# NLTK: silent downloader
+logging.getLogger('nltk').setLevel(logging.ERROR)
+
+
+def ensure_nltk_resource(pkg_name: str, resource_path: str) -> None:
     """
-    Load and process a JSON configuration file, escaping newline characters in string literals,
-    enforce required fields, fill in defaults, and report any defaults used.
+    Check for an NLTK resource; if missing, download quietly
+    with no stdout/stderr noise.
     """
-    default_cfg = {
-        "number_of_expansions": 5,
-        "batch_size": 64,
-        "model_name": "mghuibregtse/biolinkbert-large-simcse-rat",
-        "amount_docs": 50,
-        "weight_faiss": 50,
-        "weight_bm25": 50,
-        "max_genes": 250,
-        "fdr_threshold": 0.05,
+    try:
+        find(resource_path)
+    except LookupError:
+        with contextlib.redirect_stdout(open(os.devnull, 'w')), \
+             contextlib.redirect_stderr(open(os.devnull, 'w')):
+            nltk.download(pkg_name, quiet=True)
+
+
+ensure_nltk_resource('punkt',
+                     'tokenizers/punkt')
+ensure_nltk_resource('stopwords', 'corpora/stopwords')
+
+
+class ConfigError(Exception):
+    pass
+
+
+def load_config(path: str, print_settings: Optional[bool] = False) -> Dict[str, Any]:
+    """
+    Load JSON config from `path`, enforce required keys,
+    fill in defaults, print each key (excluding secrets) with its source,
+    then return the merged dict.
+    """
+    default_cfg: Dict[str, Any] = {
+        "number_of_expansions":    5,
+        "batch_size":              64,
+        "embeddings_model_name":   "mghuibregtse/biolinkbert-large-simcse-rat",
+        "generation_model":        "o4-mini",
+        "validation_model":        "grok-3-mini",
+        "amount_docs":             50,
+        "weight_faiss":            50,
+        "weight_bm25":             50,
+        "max_genes":               [250],
+        "fdr_threshold":           0.05,
+        "query_range":             1,
     }
 
-    with open(filename, 'r', encoding='utf-8') as config_file:
-        raw_content = config_file.read()
+    try:
+        raw = Path(path).read_text(encoding="utf-8")
+    except FileNotFoundError:
+        raise ConfigError(f"Config file not found: {path}")
 
-    def escape_newlines_in_string_literal(match):
-        s = match.group(0)
-        inner = s[1:-1].replace('\n', '\\n')
-        return '"' + inner + '"'
-
-    pattern = r'"(?:\\.|[^"\\])*"'
-    processed = re.sub(pattern, escape_newlines_in_string_literal, raw_content, flags=re.DOTALL)
+    def escape_newlines(m: re.Match) -> str:
+        inner = m.group(0)[1:-1].replace("\n", "\\n")
+        return f"\"{inner}\""
+    processed = re.sub(r'"(?:\\.|[^"\\])*"', escape_newlines, raw, flags=re.DOTALL)
 
     try:
         user_cfg = json.loads(processed)
     except json.JSONDecodeError as e:
-        sys.stderr.write(f"ERROR: invalid JSON in {filename}: {e}\n")
-        sys.exit(1)
+        raise ConfigError(f"Invalid JSON in {path!r}: {e}")
 
-    required = {
-        "system_instruction_response":
-            "is vital for this application. Please add 'system_instruction_response' to your config JSON and try again.",
-        "query":
-            "is required to know what genes or questions to analyze. Please add 'query' to your config JSON and try again."
-    }
-    for field, msg in required.items():
-        if not user_cfg.get(field):
-            sys.stderr.write(f"ERROR: '{field}' {msg}\n")
-            sys.exit(1)
+    # Required keys
+    for key in ("system_instruction_response", "query"):
+        if key not in user_cfg:
+            raise ConfigError(f"Missing required config key: {key}")
 
-    missing_keys = [key for key in default_cfg if key not in user_cfg]
-    if missing_keys:
-        sys.stderr.write(
-            "WARNING: The following config parameters were not specified and will use default values:\n"
-            + ", ".join(missing_keys) + "\n"
-        )
+    merged = default_cfg.copy()
+    merged.update(user_cfg)
 
-    cfg = default_cfg.copy()
-    cfg.update(user_cfg)
-    return cfg
+    missing_opt = set(default_cfg) - set(user_cfg)
+    if missing_opt:
+        logging.warning("Using default for: %s", ", ".join(sorted(missing_opt)))
+
+    print(f"Using config: {Path(path).name} with these parameters:")
+    if print_settings:
+        for k, v in merged.items():
+            if k in ("query", "system_instruction_response"):
+                continue
+            src = "user" if k in user_cfg else "default"
+            print(f"{k}: {v} (from {src} config)")
+
+    return merged
 
 
-# Downloads and sets stopwords for BM25
-nltk.download('punkt')
-nltk.download('stopwords')
+# BM25 stop-words setup
 stop_words = set(stopwords.words('english'))
-extra_stops = {
+stop_words |= {
     "list", "genes", "identify", "mechanisms", "pathways",
     "related", "based", "following", "recent", "study"
 }
-stop_words |= extra_stops
 
 
-aggregated_times = {}
-with open("./logs/time.txt", "w") as f:
-    f.write("")
+os.makedirs("./logs", exist_ok=True)
 
 
-def timer(func):
-    """
-    Decorator that measures the execution time of the decorated function and accumulates it.
-    Args:
-        func: The function to be decorated.
-
-    Returns:
-        A wrapper function that executes the original function, accumulates its execution time in the
-         global "aggregated_times" dictionary.
-
-    """
-
-    @functools.wraps(func)
-    def wrapper_timer(*args, **kwargs):
-        start_time = time.perf_counter()
-        result = func(*args, **kwargs)
-        end_time = time.perf_counter()
-        elapsed_time = end_time - start_time
-        aggregated_times[func.__name__] = aggregated_times.get(func.__name__, 0) + elapsed_time
-
-        return result
-
-    return wrapper_timer
-
-
-def flush_aggregated_times():
-    """
-    Writes the aggregated execution times of the functions to the file 'time.txt'.
-    Returns:
-        None
-
-    """
-    with open("./logs/time.txt", "a") as file:
-        for func_name, total_time in aggregated_times.items():
-            if total_time > 0.1:
-                file.write(f"Function '{func_name}' executed in {total_time:.4f} seconds (aggregated)\n")
-
-
-atexit.register(flush_aggregated_times)
-
-
-# Gene ID Related Functions
-@timer
-def compute_file_hash(file_path, block_size=65536):
+def compute_file_hash(file_path: str, block_size: int = 65536) -> str:
     """
     Computes the SHA-256 has of a file's content.
 
@@ -189,23 +184,29 @@ def compute_file_hash(file_path, block_size=65536):
     return hasher.hexdigest()
 
 
-@timer
-def initialize_gene_list(max_genes, fdr_threshold, excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
-                         de_filter_option="combined"):
+def initialize_gene_list(
+    max_genes: int,
+    fdr_threshold: float,
+    excel_file_path: str = r"data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
+    de_filter_option: str = "combined"
+) -> Tuple[str, str, int]:
     """
     Creates a list of genes from the specified Excel file based on filtering criteria.
 
     Args:
-        excel_file_path: The path to the Excel file.
-        de_filter_option: Specifies whether to combine or separate up- and down-regulated genes.
-        max_genes: The maximum number of genes to process.
+        max_genes: An integer specifying the maximum number of genes to process.
         fdr_threshold: The threshold for the false discovery rate (FDR).
+        excel_file_path: The path to the Excel file containing gene data
+            (default: "data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx").
+        de_filter_option: Specifies whether to combine or separate up‐ and down‐regulated genes
+            (default: "combined").
 
     Returns:
         A tuple containing:
-            - gene_list: A comma-separated string of gene names.
-            - regulation: A string indicating the regulation type ('upregulated', 'downregulated', or 'combined').
-            - num_genes: The number of genes processed.
+            - gene_list_string: A comma‐separated string of selected gene names.
+            - regulation: A string indicating the regulation type
+              ('upregulated', 'downregulated', or 'combined').
+            - num_genes: The number of genes included in the final list.
     """
     results = process_excel_data(excel_file_path, de_filter_option, max_genes, fdr_threshold)
     if results:
@@ -217,16 +218,21 @@ def initialize_gene_list(max_genes, fdr_threshold, excel_file_path=r".\data\GSEA
     return gene_list_string, regulation, num_genes
 
 
-@timer
-def process_excel_data(excel_file_path, de_filter_option, max_genes, fdr_threshold):
+def process_excel_data(
+    path: str,
+    mode: str,
+    max_genes: int,
+    fdr: float
+) -> List[Tuple[str, str, int]]:
     """
     Processes an Excel file to filter and extract gene data based on differential expression and FDR threshold.
 
     Args:
-        fdr_threshold:
-        max_genes:
-        excel_file_path: The file path to the Excel file containing gene data.
-        de_filter_option: The differential expression filter option ('combined' or 'separate').
+
+        path: The file path to the Excel file containing gene data.
+        mode: The differential expression filter option ('combined' or 'separate').
+        max_genes: number of genes to process.
+        fdr: False discovery rate threshold for filtering.
 
     Returns:
         A list of tuples. Each tuple contains:
@@ -234,91 +240,33 @@ def process_excel_data(excel_file_path, de_filter_option, max_genes, fdr_thresho
             - A regulation label ('upregulated', 'downregulated', or 'combined').
             - The number of genes included in that subset.
     """
-    data = pd.read_excel(excel_file_path)
-    results = []
-    data = data.iloc[:max_genes]
+    df = pd.read_excel(path).head(max_genes)
+    out: List[Tuple[str, str, int]] = []
 
-    if de_filter_option == "combined":
-        data = data[data['DE'] != 0]
-        if not data.empty and data['FDR'].max() <= fdr_threshold:
-            genes_list = data['X'].tolist()
-            num_genes = len(genes_list)
-            unique_de_values = data['DE'].unique()
+    def collect(sub_df: pd.DataFrame, regulation_label: str):
+        genes = sub_df['X'].tolist()
+        out.append((', '.join(genes), regulation_label, len(genes)))
 
-            regulation = (
-                "upregulated" if len(unique_de_values) == 1 and unique_de_values[0] == 1 else
-                "downregulated" if len(unique_de_values) == 1 and unique_de_values[0] == -1 else
-                "combined"
-            )
-            results.append((', '.join(genes_list), regulation, num_genes))
+    if mode == "combined":
+        df = df[df.DE != 0]
+        if not df.empty and df.FDR.max() <= fdr:
+            unique = set(df.DE)
+            regulation = "upregulated" if unique == {1} else "downregulated" if unique == {-1} else "combined"
+            collect(df, regulation)
 
-    elif de_filter_option == "separate":
-        for de_value, regulation_label in [(1, "upregulated"), (-1, "downregulated")]:
-            filtered_data = data[data['DE'] == de_value]
-            if not filtered_data.empty and filtered_data['FDR'].max() <= fdr_threshold:
-                genes_list = filtered_data['X'].tolist()
-                num_genes = len(genes_list)
-                results.append((', '.join(genes_list), regulation_label, num_genes))
+    elif mode == "separate":
+        for val, label in ((1, "upregulated"), (-1, "downregulated")):
+            sub = df[df.DE == val]
+            if not sub.empty and sub.FDR.max() <= fdr:
+                collect(sub, label)
 
     else:
-        raise ValueError("Invalid DE filter option. Use 'combined' or 'separate'.")
+        raise ValueError(f"Unknown mode {mode!r}; expected 'combined' or 'separate'")
 
-    return results
-
-
-@timer
-def extract_gene_descriptions(gene_list_string,
-                              gene_data_file=r'.\data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'):
-    """
-    Extracts gene descriptions for the genes provided in a comma-separated string by looking up a gene data file.
-
-    Args:
-        gene_list_string: A comma-separated string of gene names.
-        gene_data_file: The file path to a compressed CSV file containing gene names and their descriptions.
-
-    Returns:
-        A dictionary mapping gene names to their descriptions. If the gene list is empty, the gene data file
-        is missing, or an error occurs during processing, an empty dictionary is returned.
-    """
-    if not gene_list_string:
-        print("Gene list is empty. No descriptions to extract.")
-        return {}
-
-    gene_names = [gene.strip() for gene in gene_list_string.split(',') if gene.strip()]
-    gene_names_set = set(gene_names)
-
-    print(f"Total genes to process: {len(gene_names_set)}")
-    gene_description_dict = {}
-
-    if not os.path.exists(gene_data_file):
-        print(f"Gene data file '{gene_data_file}' does not exist.")
-        return gene_description_dict
-
-    try:
-        with gzip.open(gene_data_file, 'rt', newline='', encoding='utf-8') as gene_file:
-            reader = csv.DictReader(gene_file)
-            for row in reader:
-                gene_name = row.get('Gene name', '').strip()
-                if gene_name in gene_names_set:
-                    description = row.get('Gene description', '').strip()
-                    gene_description_dict[gene_name] = description
-                    # Optionally remove found genes to speed up
-                    gene_names_set.remove(gene_name)
-                    if not gene_names_set:
-                        break  # All genes found
-    except Exception as e:
-        print(f"Error processing the gene data file: {e}")
-        return gene_description_dict
-
-    missing_genes = gene_names_set
-    if missing_genes:
-        print(f"The following genes were not found in the gene data file: {', '.join(missing_genes)}")
-
-    return gene_description_dict
+    return out
 
 
-@timer
-def load_gene_id_cache(file_path):
+def load_gene_id_cache(file_path: str) -> Dict[str, str]:
     """
     Loads the gene ID cache from a JSON file.
 
@@ -339,33 +287,41 @@ def load_gene_id_cache(file_path):
         return {}
 
 
-@timer
-def save_gene_id_cache(cache, file_path):
+def save_gene_id_cache(
+    cache: Dict[str, str],
+    file_path: str
+) -> None:
     """
     Saves the gene ID cache to a JSON file.
 
     Args:
-        cache: The gene ID cache dictionary to save.
-        file_path: The path to the file where the cache should be saved.
+        cache: A dictionary mapping gene IDs (as strings) to their resolved gene symbols.
+        file_path: The path to the JSON file where the cache should be saved.
+
+    Returns:
+        None. Writes the cache dictionary to disk in JSON format.
     """
     print(f"\n\n\nSaving cache to {file_path}\n\n")
     with open(file_path, 'w', encoding='utf-8') as gene_id_file:
         json.dump(cache, gene_id_file, indent=4)
 
 
-@timer
-def search_genes(unknown_genes, gene_cache, cache_file):
+def search_genes(
+    unknown_genes: Set[str],
+    gene_cache: Dict[str, str],
+    cache_file: str
+) -> Dict[str, str]:
     """
     Searches for gene symbols for a set of unknown genes using the MyGene.info API.
-    Updates the gene cache with resolved symbols and saves the updated cache.
+    Updates the gene cache with newly resolved symbols and saves the updated cache.
 
     Args:
-        unknown_genes: A collection of gene IDs that need symbol resolution.
-        gene_cache: A dictionary containing already resolved gene IDs.
-        cache_file: The path to the cache file.
+        unknown_genes: A list of gene IDs (strings) that require symbol resolution.
+        gene_cache: A dictionary containing already resolved gene ID → symbol mappings.
+        cache_file: The path to the JSON file where the updated cache will be saved.
 
     Returns:
-        A dictionary mapping the original gene IDs to their resolved gene symbols.
+        A dictionary mapping each original gene ID (str) to its resolved gene symbol (str).
     """
     url = "https://mygene.info/v3/gene/"
     resolved_genes = {}
@@ -394,8 +350,11 @@ def search_genes(unknown_genes, gene_cache, cache_file):
     return resolved_genes
 
 
-@timer
-def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
+def convert_gene_id_to_symbols(
+    file: str,
+    data_dir: str,
+    ncbi_json_dir: str
+) -> Tuple[List[str], List[str]]:
     """
     Converts gene IDs in a file to gene symbols using a cached mapping and by searching unknown genes via an API.
     If the file is compressed, it is decompressed before processing.
@@ -468,7 +427,8 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
         final_unknown_genes = set()
 
     if final_unknown_genes:
-        unknown_genes_file = os.path.join('./output/text_files/unknown_genes.txt')
+        os.makedirs("./output/support", exist_ok=True)
+        unknown_genes_file = os.path.join('./output/support/unknown_genes.txt')
         with open(unknown_genes_file, 'w') as unknown_file:
             unknown_file.write('\n'.join(final_unknown_genes))
 
@@ -478,8 +438,9 @@ def convert_gene_id_to_symbols(file, data_dir, ncbi_json_dir):
 
 
 # Database Functions
-@timer
-def initialize_database(db_path='./database/reference_chunks.db'):
+def initialize_database(
+    db_path: str = './database/reference_chunks.db'
+) -> sqlite3.Connection:
     """
     Initializes the SQLite database and creates the 'chunks' table if it does not exist.
 
@@ -505,8 +466,12 @@ def initialize_database(db_path='./database/reference_chunks.db'):
     return conn
 
 
-@timer
-def insert_chunk(conn, file_name, chunk_index, text):
+def insert_chunk(
+    conn: sqlite3.Connection,
+    file_name: str,
+    chunk_index: int,
+    text: str
+) -> int:
     """
     Inserts a text chunk into the database.
 
@@ -528,8 +493,7 @@ def insert_chunk(conn, file_name, chunk_index, text):
     return cursor.lastrowid
 
 
-@timer
-def fetch_chunks(conn):
+def fetch_chunks(conn: sqlite3.Connection) -> List[Tuple[int, str]]:
     """
     Retrieves all chunks from the database.
 
@@ -544,17 +508,20 @@ def fetch_chunks(conn):
     return cursor.fetchall()
 
 
-@timer
-def fetch_chunks_by_ids(conn, ids):
+def fetch_chunks_by_ids(
+    conn: sqlite3.Connection,
+    ids: List[int]
+) -> Dict[int, str]:
     """
-    Retrieves chunks from the database that match the specified IDs.
+    Retrieves text chunks from the database that match the specified chunk IDs.
 
     Args:
         conn: The SQLite database connection.
-        ids: A list of chunk IDs to fetch.
+        ids: A list of integer chunk IDs to fetch.
 
     Returns:
-        A list of text contents corresponding to the provided chunk IDs.
+        A dictionary mapping each chunk ID (int) to its corresponding text content (str).
+        If 'ids' is empty, returns an empty dictionary.
     """
 
     if not ids:
@@ -563,13 +530,15 @@ def fetch_chunks_by_ids(conn, ids):
     query = f"SELECT id, text FROM chunks WHERE id IN ({placeholder})"
     cursor = conn.cursor()
     cursor.execute(query, ids)
-    rows = cursor.fetchall()               
+    rows = cursor.fetchall()
     return {row[0]: row[1] for row in rows}
 
 
 # FAISS Functions
-@timer
-def save_faiss_index(index, index_path='./database/faiss_index.bin'):
+def save_faiss_index(
+    index: Any,  # faiss.IndexIDMap
+    index_path: str = './database/faiss_index.bin'
+) -> None:
     """
     Saves the FAISS index to a file.
 
@@ -580,8 +549,10 @@ def save_faiss_index(index, index_path='./database/faiss_index.bin'):
     faiss.write_index(index, index_path)
 
 
-@timer
-def load_faiss_index(embedding_dim, index_path='./database/faiss_index.bin'):
+def load_faiss_index(
+    embedding_dim: int,
+    index_path: str = './database/faiss_index.bin'
+) -> Any:  # faiss.IndexIDMap
     """
     Loads a FAISS index from a file. If the file does not exist, creates a new IndexIDMap based on an IndexFlatIP.
 
@@ -604,8 +575,10 @@ def load_faiss_index(embedding_dim, index_path='./database/faiss_index.bin'):
     return index
 
 
-@timer
-def initialize_faiss_index(embedding_dim, index_path):
+def initialize_faiss_index(
+    embedding_dim: int,
+    index_path: str
+) -> Any:  # faiss.IndexIDMap
     """
     Load or recreate a FAISS index using the specified embedding dimension and index path.
     If the existing index is invalid, it is deleted and a new one is created.
@@ -629,8 +602,7 @@ def initialize_faiss_index(embedding_dim, index_path):
 
 
 # Chunking Functions
-@timer
-def chunk_documents(documents):
+def chunk_documents(documents: List[str]) -> List[str]:
     """
     Splits documents into chunks by breaking them into non-empty lines.
 
@@ -658,27 +630,33 @@ def chunk_documents(documents):
     return chunked_docs
 
 
-@timer
-def chunk_pdfs(single_document, gene_list=None, target_length=1000):
+def chunk_pdfs(
+    single_document: List[Tuple[str, str, str]],
+    gene_list: Optional[List[str]] = None,
+    target_length: int = 1000
+) -> List[str]:
     """
-    Splits the text content of a PDF document into chunks based on sentence tokenization and target length.
-    Optionally filters chunks based on the presence of any gene from a provided gene list.
+    Splits the text content of PDF documents into chunks based on sentence tokenization
+    and a target minimum length. Optionally filters chunks by the presence of any gene from a provided list.
 
     Args:
-        single_document: A tuple containing the file name, content, and file hash.
-        gene_list: An optional list of gene names to filter chunks.
-        target_length: The target minimum length of each chunk in characters.
+        single_document: A list of tuples, where each tuple contains:
+            - file_name: The name of the PDF file (str).
+            - content: The extracted text content from that PDF (str).
+            - file_hash: A hash of the PDF file contents (str).
+        gene_list: An optional list of gene names (strings) to filter chunks.
+                   If provided, only chunks containing at least one gene from this list are retained.
+        target_length: The target minimum length (in characters) of each chunk (default: 1000).
 
     Returns:
-        A list of text chunks extracted from the document.
+        A list of text chunks (each chunk is a string) extracted from the PDF(s).
     """
     file_name, content, file_hash = single_document[0]
     sentences = sent_tokenize(content)
     if not sentences:
         return []
 
-    chunks = []
-    current_chunk = []
+    chunks, current_chunk = [], []
     current_length = 0
 
     for sentence in sentences:
@@ -701,16 +679,20 @@ def chunk_pdfs(single_document, gene_list=None, target_length=1000):
 
 
 # Embedding & Loading Functions
-@timer
-def load_file_log(log_path='./logs/file_log.json'):
+def load_file_log(
+    log_path: str = './logs/file_log.json'
+) -> Dict[str, Any]:
     """
     Loads a file log from a JSON file, creating the log directory and file if necessary.
 
+    If the log file does not exist, initializes an empty dictionary and writes it to disk.
+
     Args:
-        log_path: The path to the JSON file that stores the file log.
+        log_path: The path to the JSON file that stores the file log (default: "./logs/file_log.json").
 
     Returns:
-        A dictionary representing the file log.
+        A dictionary representing the file log (filename → metadata). If the file is corrupted
+        or cannot be decoded as JSON, returns an empty dictionary after reinitializing the file.
     """
     log_dir = os.path.dirname(log_path)
     if not os.path.exists(log_dir):
@@ -724,27 +706,26 @@ def load_file_log(log_path='./logs/file_log.json'):
     if os.path.exists(log_path):
         try:
             with open(log_path, 'r', encoding='utf-8') as file_logs:
-                file_log = json.load(file_logs)
-            print(f"File log loaded from '{log_path}'.")
+                json.load(file_logs)
         except json.JSONDecodeError:
             file_log = {}
-            print(f"File log at '{log_path}' is corrupted or empty. "
-                  f"Initialized with an empty log.")
+            print(f"File log at '{log_path}' is corrupted or empty. Initialized with an empty log.")
             save_file_log(file_log, log_path)
         except Exception as e:
             print(f"An error occurred while loading the file log: {e}")
             file_log = {}
     else:
         file_log = {}
-        print(
-            f"No existing file log found. Creating a new file log at '{log_path}'.")
+        print(f"No existing file log found. Creating a new file log at '{log_path}'.")
         save_file_log(file_log, log_path)
 
     return file_log
 
 
-@timer
-def save_file_log(file_log, log_path='./logs/file_log.json'):
+def save_file_log(
+    file_log: dict,
+    log_path: str = './logs/file_log.json'
+) -> None:
     """
     Saves the file log to a JSON file, ensuring the log directory exists.
 
@@ -764,13 +745,13 @@ def save_file_log(file_log, log_path='./logs/file_log.json'):
     try:
         with open(log_path, 'w', encoding='utf-8') as file_logs:
             json.dump(file_log, file_logs, indent=4)
-        print(f"File log successfully saved to '{log_path}'.")
     except Exception as e:
         print(f"An error occurred while saving the file log: {e}")
 
 
-@timer
-def load_model_and_tokenizer(force_download=False):
+def load_embeddings_model_and_tokenizer(
+    force_download: bool = False
+) -> Tuple[Any, Any]:
     """
     Loads and returns a tokenizer and model from pretrained sources using the Transformers library.
 
@@ -780,16 +761,15 @@ def load_model_and_tokenizer(force_download=False):
     Returns:
         A tuple containing the tokenizer and model.
     """
-    tokenizer = AutoTokenizer.from_pretrained(model_name,
-                                              force_download=force_download)
-
-    model = AutoModel.from_pretrained(model_name,
-                                      force_download=force_download)
-    return tokenizer, model
+    tokenizer = AutoTokenizer.from_pretrained(embeddings_model_name, force_download=force_download)
+    embeddings_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
+    return tokenizer, embeddings_model
 
 
-@timer
-def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
+# TODO See whether you can edit it for more modular approach
+def load_gz_files(
+    data_dir: str = './data/GSEA/external_gene_data'
+) -> List[Tuple[str, str, str]]:
     """
     Loads documents from files in the specified directory that are either gzipped or in .gmt format.
     Computes a file hash for each document and returns a list of documents with their metadata.
@@ -807,7 +787,8 @@ def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
     ]
 
     documents = []
-    print(f"Found {len(files)} files in '{data_dir}'.")
+    if len(files) > 0:
+        print(f"Found {len(files)} files in '{data_dir}'.")
 
     for file in files:
         file_path = os.path.join(data_dir, file)
@@ -832,17 +813,23 @@ def load_gz_files(data_dir='./data/GSEA/external_gene_data'):
     return documents
 
 
-@timer
-def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
+def load_pdf_files(
+    pdf_dir: str = './data/PDF',
+    file_log: Optional[Dict[str, Any]] = None
+) -> List[Tuple[str, str, str]]:
     """
     Loads PDF documents from the specified directory, skipping those already recorded in the file log.
 
     Args:
-        pdf_dir: The directory containing PDF files.
-        file_log: An optional dictionary of previously processed files.
+        pdf_dir: The directory containing PDF files (default: "./data/PDF").
+        file_log: An optional dictionary mapping PDF filenames (str) to metadata. PDFs present in this log
+                  will be skipped to avoid reprocessing.
 
     Returns:
-        A list of tuples, each containing the PDF file name, extracted content, and file hash.
+        A list of tuples, each containing:
+            - file_name: The PDF file name (str).
+            - content: The full extracted text content of the PDF (str).
+            - file_hash: A SHA-256 hash of the PDF file (str).
     """
     pdf_documents = []
     if not os.path.exists(pdf_dir):
@@ -877,10 +864,16 @@ def load_pdf_files(pdf_dir='./data/PDF', file_log=None):
     return pdf_documents
 
 
-@timer
-def embed_documents(conn, index, tokenizer, model, data_dir,
-                    batch_size, log_path='./logs/file_log.json',
-                    pdf_dir='./data/PDF'):
+def embed_documents(
+    conn: sqlite3.Connection,
+    index: Any,  # faiss.IndexIDMap
+    tokenizer: Any,
+    embeddings_model: Any,
+    data_dir: str,
+    batch_size: int,
+    log_path: str = './logs/file_log.json',
+    pdf_dir: str = './data/PDF'
+) -> None:
     """
     Embeds text from documents (both gzipped and PDF files) using a transformer model,
     updates the FAISS index with the embeddings, and records file metadata in a log.
@@ -889,7 +882,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
         conn: The SQLite database connection.
         index: The FAISS index to update.
         tokenizer: The tokenizer for preparing text inputs.
-        model: The transformer model for generating embeddings.
+        embeddings_model: The transformer model for generating embeddings.
         data_dir: Directory containing gzipped documents.
         batch_size: The batch size for embedding computation.
         log_path: The path to the file log.
@@ -898,19 +891,23 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
     file_log = load_file_log(log_path=log_path)
 
     files_documents = load_gz_files(data_dir=data_dir)
-    print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
-
     pdf_documents = load_pdf_files(pdf_dir=pdf_dir, file_log=file_log)
-    print(f"Loaded {len(pdf_documents)} new PDF documents from '{pdf_dir}'.")
+    if len(files_documents) > 0:
+        print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
+        print(f"Loaded {len(pdf_documents)} new PDF documents from '{pdf_dir}'.")
 
     all_documents = files_documents + pdf_documents
 
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if device == 'cpu':
-        print("No GPU available. Using CPU for embedding.")
-        exit()
-    model.to(device)
-    model.eval()
+    device = (
+        torch.device("mps")
+        if torch.backends.mps.is_available()
+        else torch.device("cuda")
+        if torch.cuda.is_available()
+        else torch.device("cpu")
+    )
+
+    embeddings_model.to(device)
+    embeddings_model.eval()
 
     for file, document, file_hash in all_documents:
         if file in file_log and file_log[file]['hash'] == file_hash:
@@ -942,7 +939,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
                 batch = chunks[i:i + batch_size]
                 inputs = tokenizer(batch, return_tensors="pt", truncation=True,
                                    padding=True, max_length=512).to(device)
-                outputs = model(**inputs)
+                outputs = embeddings_model(**inputs)
                 attention_mask = inputs['attention_mask']
                 token_embeddings = outputs.last_hidden_state
                 input_mask_expanded = attention_mask.unsqueeze(-1).expand(
@@ -978,8 +975,7 @@ def embed_documents(conn, index, tokenizer, model, data_dir,
 
 
 # BM25 and Query Functions
-@timer
-def tokenize(text):
+def tokenize(text: str) -> List[str]:
     """
     Tokenizes the input text into lowercase words, excluding common stopwords.
 
@@ -992,8 +988,9 @@ def tokenize(text):
     return [word for word in re.findall(r'\b[\w-]+\b', text.lower()) if word not in stop_words]
 
 
-@timer
-def build_bm25_index(conn):
+def build_bm25_index(
+    conn: sqlite3.Connection
+) -> Tuple[BM25Okapi, List[int], List[str]]:
     """
     Builds a BM25 index for the text chunks stored in the database.
 
@@ -1012,61 +1009,62 @@ def build_bm25_index(conn):
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
     tokenized_corpus = [tokenize(doc) for doc in chunk_texts]
-    #bm25 = BM25Plus(tokenized_corpus)
     bm25 = BM25Okapi(tokenized_corpus)
     return bm25, chunk_ids, chunk_texts
 
 
-@timer
-def query_bm25_index(query_text, bm25_index, chunk_ids, top_k=1000):
+def query_bm25_index(
+    query: str,
+    index: BM25Okapi,
+    chunk_ids: List[int],
+    top_k: int = 1000
+) -> Tuple[List[int], List[float], Dict[int, Any]]:
     """
-    Queries the BM25 index using the provided query text and returns the top scoring documents along with details.
+        Queries the BM25 index using the provided query text and returns the top scoring documents along with details.
 
-    Args:
-        query_text: The text query.
-        bm25_index: The BM25 index object.
-        chunk_ids: List of chunk IDs corresponding to the BM25 index.
-        top_k: The number of top results to return.
+        Args:
+            query: The text query.
+            index: The BM25 index object.
+            chunk_ids: List of chunk IDs corresponding to the BM25 index.
+            top_k: The number of top results to return.
 
-    Returns:
-        A tuple containing:
-            - A list of top chunk IDs.
-            - A list of their corresponding scores.
-            - A dictionary with detailed token contributions for each chunk.
-    """
-    query_tokens = tokenize(query_text)
-    scores = bm25_index.get_scores(query_tokens)
-    top_n = np.argsort(scores)[::-1][:top_k]
-    top_ids = [chunk_ids[i] for i in top_n]
-    top_scores = [scores[i] for i in top_n]
+        Returns:
+            A tuple containing:
+                - A list of top chunk IDs.
+                - A list of their corresponding scores.
+                - A dictionary with detailed token contributions for each chunk.
+        """
+    tokens = tokenize(query)
+    scores = index.get_scores(tokens)
+    order = np.argsort(scores)[::-1][:top_k]
 
-    detailed_scores = {}
-    for idx, score in zip(top_n, top_scores):
-        chunk_id = chunk_ids[idx]
-        relevant_tokens = []
-        for token in query_tokens:
-            if token in bm25_index.idf:
-                tf = bm25_index.doc_freqs[idx].get(token, 0)
-                if tf > 0:
-                    idf = bm25_index.idf[token]
-                    k1 = bm25_index.k1
-                    b = bm25_index.b
-                    doc_len = bm25_index.doc_len[idx]
-                    avgdl = bm25_index.avgdl
-                    numerator = (k1 + 1) * tf
-                    denominator = k1 * ((1 - b) + b * (doc_len / avgdl)) + tf
-                    token_score = idf * (numerator / denominator)
-                    relevant_tokens.append(f"{token} with score {token_score:.4f}")
-        detailed_scores[chunk_id] = {
-            'score': round(score, 4),
-            'tokens': relevant_tokens if relevant_tokens else None
-        }
+    top_ids = [chunk_ids[i] for i in order]
+    top_scores = [float(scores[i]) for i in order]
 
-    return top_ids, top_scores, detailed_scores
+    details: Dict[int, Any] = {}
+    for i, s in zip(order, top_scores):
+        cid = chunk_ids[i]
+        tok_details = []
+        for t in tokens:
+            tf = index.doc_freqs[i].get(t, 0)
+            if tf:
+                idf, b, avgdl, k1 = index.idf[t], index.b, index.avgdl, index.k1
+                numerator = (k1+1)*tf
+                denominator = k1*(1-b + b*(index.doc_len[i]/avgdl)) + tf
+                tok_details.append(f"{t} score={idf*(numerator/denominator):.4f}")
+        details[cid] = {"score": round(s, 4), "tokens": tok_details or None}
+
+    return top_ids, top_scores, details
 
 
-@timer
-def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download=False):
+def query_faiss_index(
+    query_text: str,
+    index: Any,  # faiss.IndexIDMap
+    tokenizer: Any,
+    embeddings_model: Any,
+    top_k: int,
+    force_download: bool = False
+) -> Tuple[List[int], List[float]]:
     """
     Computes the embedding for a query and searches the FAISS index to retrieve the closest document chunks.
 
@@ -1074,31 +1072,35 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
         query_text: The query string.
         index: The FAISS index.
         tokenizer: The tokenizer for preparing the query.
-        model: The transformer model for generating the query embedding.
+        embeddings_model: The transformer model for generating the query embedding.
         top_k: The number of top results to retrieve.
         force_download: If True, forces re-downloading of model/tokenizer if needed.
 
     Returns:
         A tuple containing the list of top document IDs and their corresponding distances.
     """
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if device == 'cpu':
-        print("No GPU available. Using CPU for embedding.")
-        exit()
-    loaded_model = AutoModel.from_pretrained(model_name, force_download=force_download)
-    loaded_tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
-    if model.config != loaded_model.config:
+    device = (
+        torch.device("mps")
+        if torch.backends.mps.is_available()
+        else torch.device("cuda")
+        if torch.cuda.is_available()
+        else torch.device("cpu")
+    )
+
+    loaded_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
+    loaded_tokenizer = AutoTokenizer.from_pretrained(embeddings_model_name, force_download=force_download)
+    if embeddings_model.config != loaded_model.config:
         print("The models have different configurations.")
-        model = AutoModel.from_pretrained(model_name, force_download=force_download)
+        embeddings_model = AutoModel.from_pretrained(embeddings_model_name, force_download=force_download)
     if str(tokenizer) != str(loaded_tokenizer):
         print("The tokenizers have different configurations.")
-        tokenizer = AutoTokenizer.from_pretrained(model_name, force_download=force_download)
-    model.to(device)
-    model.eval()
+        tokenizer = AutoTokenizer.from_pretrained(embeddings_model_name, force_download=force_download)
+    embeddings_model.to(device)
+    embeddings_model.eval()
     with torch.no_grad():
         inputs = tokenizer([query_text], return_tensors="pt", truncation=True,
                            padding=True, max_length=512).to(device)
-        outputs = model(**inputs)
+        outputs = embeddings_model(**inputs)
         query_embedding = outputs.last_hidden_state.mean(dim=1).cpu().numpy()
         faiss.normalize_L2(query_embedding)
     distances, indices = index.search(query_embedding, top_k)
@@ -1108,8 +1110,13 @@ def query_faiss_index(query_text, index, tokenizer, model, top_k, force_download
 
 
 # Document Ranking and Combination
-@timer
-def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
+def create_top_faiss_docs(
+    expanded_queries: List[str],
+    index: Any,
+    tokenizer: Any,
+    embeddings_model: Any,
+    top_k: int
+) -> List[Tuple[int, Tuple[float, str]]]:
     """
     Retrieves top documents from the FAISS index for each expanded query and computes average distances.
 
@@ -1117,7 +1124,7 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
         expanded_queries: A list of expanded query strings.
         index: The FAISS index.
         tokenizer: The tokenizer for processing the queries.
-        model: The transformer model for generating embeddings.
+        embeddings_model: The transformer model for generating embeddings.
         top_k: The number of top documents to retrieve per query.
 
     Returns:
@@ -1126,7 +1133,7 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
     doc_distances = {}
 
     for eq in expanded_queries:
-        top_ids, distances = query_faiss_index(eq, index, tokenizer, model, top_k=top_k)
+        top_ids, distances = query_faiss_index(eq, index, tokenizer, embeddings_model, top_k=top_k)
         for doc_id, distance in zip(top_ids, distances):
             if doc_id not in doc_distances:
                 doc_distances[doc_id] = []
@@ -1143,8 +1150,12 @@ def create_top_faiss_docs(expanded_queries, index, tokenizer, model, top_k):
     return top_faiss_docs
 
 
-@timer
-def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
+def create_top_bm25_docs(
+    expanded_queries: List[str],
+    bm25_index: BM25Okapi,
+    chunk_ids: List[int],
+    top_k: int
+) -> List[Tuple[int, Dict[str, Any]]]:
     """
     Retrieves top documents from the BM25 index for each expanded query and aggregates their scores.
 
@@ -1192,8 +1203,12 @@ def create_top_bm25_docs(expanded_queries, bm25_index, chunk_ids, top_k):
     return top_bm25_docs
 
 
-@timer
-def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
+def weighted_rrf(
+    top_bm25_docs: List[Tuple[int, Dict[str, Any]]],
+    top_faiss_docs: List[Tuple[int, Tuple[float, str]]],
+    weight_faiss: float,
+    weight_bm25: float
+) -> Dict[int, Dict[str, Any]]:
     """
     Combine BM25 and FAISS scores using specified weights.
 
@@ -1230,8 +1245,13 @@ def weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25):
     return combined_scores
 
 
-@timer
-def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs):
+def rank_and_retrieve_documents(
+    rrf_scores: Dict[int, Dict[str, Any]],
+    conn: sqlite3.Connection,
+    top_faiss_docs: List[Tuple[int, Tuple[float, str]]],
+    top_bm25_docs: List[Tuple[int, Dict[str, Any]]],
+    amount_docs: int
+) -> Tuple[List[str], Dict[int, Dict[str, Any]]]:
     """
     Ranks documents based on combined RRF scores, retrieves the corresponding text chunks from the database,
     and returns them in ranked order.
@@ -1283,8 +1303,10 @@ def rank_and_retrieve_documents(rrf_scores, conn, top_faiss_docs, top_bm25_docs,
 
 
 # Query Expansion and Response Generation
-@timer
-def query_expansion(query_text, number):
+def query_expansion(
+    query_text: str,
+    number: int
+) -> List[str]:
     """
     Expands a given query into a specified number of alternative queries by generating synonyms and related phrases.
 
@@ -1308,294 +1330,337 @@ Possible expanded queries:
 3. "GGT5 and its involvement in glutathione homeostasis"
 4. "Impact of GGT5 on glutathione biosynthesis and metabolism"
 
-Also, consider the context of the user query and ensure that the expanded queries are relevant to the topic.
+Consider the context of the user query and ensure that the expanded queries are relevant to the topic.
+Only return the expanded queries, no explanation is needed.
     """
-
+    expanded_queries = []
     if number > 0:
         prompt = (
             f"Based on the user's query, provide exactly {number} expanded queries that include related terms,"
             f" synonyms, and relevant expansions.\n\nUser query: \"{query_text}\"")
 
-        try:
-            response = client_open_ai.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=500,
-                temperature=0.7,
-            )
+        messages = [
+            {"role": "system", "content": system_instruction},
+            {"role": "user", "content": prompt}
+        ]
+        save = False
+        answer = query_llm(messages, prompt, system_instruction, save, generation_model=generation_model,
+                           query_range=1)
+        expanded_queries = answer.strip().split('\n')
+        expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for q in expanded_queries if q.strip()]
+        if len(expanded_queries) > number:
+            expanded_queries = expanded_queries[:number]
+        elif len(expanded_queries) < number:
+            print(f"Warning: Expected {number} queries but received {len(expanded_queries)}.")
 
-            reply = response.choices[0].message.content
-
-            expanded_queries = reply.strip().split('\n')
-            expanded_queries = [q.lstrip("-•*").lstrip("0123456789. ").strip() for q in expanded_queries if q.strip()]
-
-            if len(expanded_queries) > number:
-                expanded_queries = expanded_queries[:number]
-            elif len(expanded_queries) < number:
-                print(f"Warning: Expected {number} queries but received {len(expanded_queries)}.")
-
-            return expanded_queries
-
-        except Exception as e:
-            print(f"An error occurred while expanding the query: {e}")
-            return [query_text]
-    else:
-        print("Number of expanded queries requested is not positive. Returning the original query.")
-        return [query_text]
+    return expanded_queries
 
 
-def query_open_ai(messages, system_instruction_for_response, prompt, save, range_query, model,
-                  **kwargs):
+def build_search_parameters(
+    mode: str = "on",
+    from_date: Optional[str] = None,
+    to_date: Optional[str] = None,
+    max_results: int = 20,
+    academic: bool = False,
+    academic_rss_links: Optional[List[str]] = None
+) -> Dict[str, Any]:
     """
-    Queries the OpenAI API using provided messages and parameters, attempting multiple times if necessary.
-    Optionally saves responses to a file.
+    Constructs a dictionary of search parameters for a generic web/news search.
 
     Args:
-        messages: A list of message dictionaries for the conversation.
-        system_instruction_for_response: System-level instruction for the API.
-        prompt: The user prompt to send.
-        save: A boolean indicating whether to save the response.
-        range_query: The number of query attempts.
-        model: The OpenAI model to use.
-        **kwargs: Additional parameters to pass to the API call.
+        mode: Search mode ("on" or "off"), determining whether to perform live searches (default: "on").
+        from_date: Optional start date filter in "YYYY-MM-DD" format.
+        to_date: Optional end date filter in "YYYY-MM-DD" format.
+        max_results: Maximum number of search results to return (default: 20).
+        academic: If True, include academic RSS sources in the search (default: False).
+        academic_rss_links: An optional list of RSS feed URLs (strings) for academic sources.
+                            If None and academic=True, a default ArXiv feed will be used.
 
     Returns:
-        The final answer received from the API, or None if all attempts fail.
+        A dictionary of parameters suitable for passing to a search API, for example:
+            {
+                "mode": ...,
+                "return_citations": True,
+                "max_search_results": ...,
+                "sources": [...],
+                "from_date": ...,
+                "to_date": ...
+            }
     """
-    answers = []
-    for i in range(1, range_query+1):
+    sources = [
+        {"type": "web"},
+        {"type": "x"},
+        {"type": "news"},
+    ]
+    if academic:
+        default_arxiv = "https://export.arxiv.org/rss/cs"
+        rss_links = academic_rss_links or [default_arxiv]
+        for link in rss_links:
+            sources.append({"type": "rss", "links": [link]})
+
+    params: dict = {
+        "mode": mode,
+        "return_citations": True,
+        "max_search_results": max_results,
+        "sources": sources,
+    }
+    if from_date:
+        params["from_date"] = from_date
+    if to_date:
+        params["to_date"] = to_date
+
+    return params
+
+
+def get_generation_model_dir(model: str) -> str:
+    """
+    Maps a model identifier string to the corresponding subdirectory name used for storing outputs.
+
+    Args:
+        model: The generation model name (e.g., "o4-mini", "gpt-4", "grok-3-mini-beta").
+
+    Returns:
+        A string representing the directory name under "./output/test_files/" where
+        this model's outputs should be saved.
+    """
+    if model.startswith("grok"):
+        return "Grok 3-mini-beta"
+    if model == "gpt-4o-mini-search-preview" or model.startswith("gpt-4"):
+        return "OpenAI websearch"
+    if model.startswith("o"):
+        if "o4-mini" in model:
+            return "OpenAI o4-mini"
+        if "o3-mini" in model:
+            return "OpenAI o3-mini"
+        if "o4" in model:
+            return "OpenAI o4"
+        return "OpenAI o3"
+    if model.startswith("deepseek"):
+        return "DeepSeek R1"
+    if model.startswith("claude"):
+        return "Claude"
+    if model.lower().startswith("gemini"):
+        return "Gemini"
+    return "OpenAI"
+
+
+def query_llm(
+    messages: List[Dict[str, Any]],
+    system_instruction_for_response: str,
+    prompt: str,
+    save: bool,
+    generation_model: str,
+    query_range: int,
+    gene_count: Optional[int] = None,
+    **kwargs: Any
+) -> Optional[str]:
+    """
+    Unified LLM query function that supports Grok, OpenAI, DeepSeek, Claude, and Gemini.
+    Retries up to 'query_range' times, measures each call's duration, and optionally saves
+    the model output to disk.
+
+    Args:
+        messages: A list of message dictionaries in the form {'role': str, 'content': str}
+                  to send to the chat completion endpoint.
+        system_instruction_for_response: The system‐level instruction guiding LLM behavior.
+        prompt: The user prompt to append after the system instruction (str).
+        save: If True, save each LLM response to a file under "./output/test_files/<model_dir>/".
+        generation_model: The name of the model to query (e.g., "o4-mini").
+        query_range: Number of retry attempts for the LLM call.
+        gene_count: Optional integer indicating how many genes were used; incorporated into saved filename.
+        **kwargs: Additional model-specific keyword arguments (e.g., temperature, max_tokens).
+
+    Returns:
+        The final LLM-generated string (str) if successful, or None if all attempts fail.
+
+    Raises:
+        Any exceptions from the underlying HTTP/SDK calls are caught and printed; no exception is propagated.
+    """
+
+    answers: list[str] = []
+    for i in range(1, query_range + 1):
         try:
-            print(f"Trying to generate a response using model {model} (attempt {i})...")
-            # Record start time for this request attempt
             start_time = time.perf_counter()
+            model_dir = get_generation_model_dir(generation_model)
+            # ── Grok via raw HTTP ───────────────────────────────────────────────
+            if model_dir == "Grok 3-mini-beta":
+                api_key = os.getenv("XAI_API_KEY")
+                endpoint = "https://api.x.ai/v1/chat/completions"
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {api_key}"
+                }
+                # Grok-specific search params
+                academic = kwargs.pop('academic', False)
+                academic_rss = kwargs.pop('academic_rss_links', None)
+                from_date = kwargs.pop('from_date', None)
+                to_date = kwargs.pop('to_date', None)
+                max_results = kwargs.pop('max_results', 20)
+                mode = kwargs.pop('mode', 'on')
+                temperature_grok = kwargs.pop('temperature', 0)
 
-            # answer = response.choices[0].message.content
-            if model == "gpt-4o-mini-search-preview":
-                model_dir = "openai"
-                response = client_open_ai.chat.completions.create(
-                    model=model,
-                    messages=messages,
-                    **kwargs
-                )
-            elif model.startswith("gpt-4"):
-                model_dir = "openai"
-                response = client_open_ai.chat.completions.create(
-                    model=model,
-                    messages=messages,
-                    max_tokens=16384,
-                    temperature=0,
-                    **kwargs
-                )
-            elif model.startswith("o"):
-                if "o4" in model:
-                    model_dir = "open_ai_o4"
-                elif "o3" in model:
-                    model_dir = "open_ai_o3"
-                elif "o3-mini" in model:
-                    model_dir = "open_ai_o3_mini"
-                adjusted_prompt = system_instruction_for_response + prompt
-                messages = [{"role": "user", "content": adjusted_prompt}]
-                response = client_open_ai.chat.completions.create(
-                    model=model,
-                    messages=messages,
-                    max_completion_tokens=32768,  # For mini: 65536, for preview: 32768
-                    reasoning_effort="high",
-                    **kwargs
-                )
+                payload = {
+                    "model": generation_model,
+                    "messages": messages,
+                    "search_parameters": build_search_parameters(
+                        mode=mode,
+                        from_date=from_date,
+                        to_date=to_date,
+                        max_results=max_results,
+                        academic=academic,
+                        academic_rss_links=academic_rss
+                    ),
+                    "temperature": temperature_grok
+                }
+                resp = requests.post(endpoint, json=payload, headers=headers)
+                resp.raise_for_status()
+                data = resp.json()
+                answer = data["choices"][0]["message"]["content"]
 
-            elif model.startswith("deepseek"):
-                model_dir = "deepseek"
-                response = client_deepseek.chat.completions.create(
-                    model=model,
+            elif model_dir == "OpenAI":
+                response = client_open_ai.chat.completions.create(  # type: ignore
+                    model=generation_model,
+                    messages=messages,
+                    temperature=kwargs.get("temperature", 0),
+                    **kwargs
+                )
+                answer = response.choices[0].message.content
+
+            elif model_dir.startswith("OpenAI o"):
+                adjusted = system_instruction_for_response + prompt
+                response = client_open_ai.chat.completions.create(  # type: ignore
+                    model=generation_model,
+                    messages=[{"role": "user", "content": adjusted}],
+                    max_completion_tokens=32768,
+                    reasoning_effort="low",
+                    **kwargs
+                )
+                answer = response.choices[0].message.content
+
+            elif model_dir == "DeepSeek R1":
+                response = client_deepseek.chat.completions.create(  # type: ignore
+                    model=generation_model,
                     messages=messages,
                     stream=False,
                     temperature=0,
                     **kwargs
                 )
-            elif model.startswith("grok"):
-                model_dir = "grok"
-                response = client_grok.chat.completions.create(
-                    model=model, # or "grok-3-mini-fast-beta"
-                    reasoning_effort="high",
-                    messages=messages,
-                    temperature=0,
-                )
+                answer = response.choices[0].message.content
 
+            # OpenAI SDK is in beta at the moment, maybe in the future, more arguments will be included
+            elif model_dir == "Claude":
+                response = client_claude.chat.completions.create(  # type: ignore
+                    model=generation_model,
+                    messages=messages,  # type: ignore
+                )
+                answer = response.choices[0].message.content
+
+            elif model_dir == "Gemini":
+                response = client_gemini.chat.completions.create(  # type: ignore
+                    model=generation_model,
+                    messages=messages,  # type: ignore
+                    temperature=0.0
+                )
+                answer = response.choices[0].message.content
             else:
-                response = client_open_ai.chat.completions.create(
-                    model=model,
+                # Fallback to OpenAI
+                response = client_open_ai.chat.completions.create(  # type: ignore
+                    model=generation_model,
                     messages=messages,
-                    max_tokens=16384,
                     temperature=0,
                     **kwargs
                 )
-            # Record end time and compute duration
-            end_time = time.perf_counter()
-            duration_seconds = round(end_time - start_time, 2)
+                answer = response.choices[0].message.content
 
-            answer = response.choices[0].message.content
+            duration = round(time.perf_counter() - start_time, 2)
 
         except Exception as e:
-            print(f"An error occurred on iteration {i} using model {model}: {e}")
+            print(f"[{generation_model}][iter {i}] Error: {e}")
             continue
 
+        # Save to disk if requested
         if save:
-            os.makedirs("./output/test_files", exist_ok=True)
-            output_filename = f"./output/test_files/{model_dir}/{model}-{config_name}-{i}-{duration_seconds}.txt"
-            with open(output_filename, "w", encoding="utf-8") as file:
-                file.write(answer)
-            print(f"Answer {i} appended to {output_filename}")
+            out_dir = os.path.join("./output/test_files", model_dir)
+            os.makedirs(out_dir, exist_ok=True)
+            if gene_count is not None:
+                file_name = f"{generation_model}-GSEA-{gene_count}-{i}-{duration}.txt"
+            else:
+                file_name = f"{generation_model}-{i}-{duration}.txt"
+
+            path = os.path.join(out_dir, file_name)
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(answer)
+
         answers.append(answer)
 
     return answers[-1] if answers else None
 
 
-def query_gemini(system_instruction, prompt):
-    """
-    Queries the Gemini API using the provided system instruction and prompt.
-    Saves each response to a file and returns the last answer generated.
-
-    Args:
-        system_instruction: The system-level instruction for Gemini.
-        prompt: The user prompt.
-
-    Returns:
-        The final answer received from the Gemini API, or None if unsuccessful.
-    """
-    model = genai.GenerativeModel("gemini-1.5-pro")
-    output_filename = "./output/test_files/all_answers_gemini.txt"
-    answers = []
-    for i in range(1, 2):
-        answer = model.generate_content(
-            f"Your system instructions:\n {system_instruction}. The user prompt:\n {prompt}")
-        answers.append(answer)
-
-        text_content = ""
-        if answer.candidates:
-            for candidate in answer.candidates:
-                for part in candidate.content.parts:
-                    if hasattr(part, 'text'):
-                        text_content += part.text
-        else:
-            text_content = "No text content found in the response."
-
-        with open(output_filename, "a", encoding="utf-8") as file:
-            file.write(f"Answer {i}:\n{text_content}\n{'=' * 50}\n")
-
-        print(f"Answer {i} appended to {output_filename}")
-
-    return answers[-1] if answers else None
-
-
-def query_claude(messages):
-    """
-    Queries Anthropic's Claude model using the provided conversation messages.
-    Saves the response to a file and returns the final answer.
-
-    Args:
-        messages: A list of message dictionaries for the conversation.
-
-    Returns:
-        The final answer received from Claude, or None if unsuccessful.
-    """
-    claude_model = "claude-3-5-sonnet-20241022"
-    output_filename = "./output/test_files/all_answers_claude.txt"
-    answers = []
-
-    system_message = next((msg["content"] for msg in messages if msg["role"] == "system"), "")
-    user_messages = [msg["content"] for msg in messages if msg["role"] == "user"]
-    assistant_messages = [msg["content"] for msg in messages if msg["role"] == "assistant"]
-
-    conversation = ""
-    for user, assistant in zip(user_messages, assistant_messages + [""]):
-        conversation += f"\n\nHuman: {user}"
-        if assistant:
-            conversation += f"\n\nAssistant: {assistant}"
-
-    for i in range(1, 2):
-        try:
-            response = client_claude.messages.create(
-                model=claude_model,
-                max_tokens=8192,
-                temperature=0,
-                system=system_message,
-                messages=[{
-                    "role": "user",
-                    "content": conversation.strip()
-                }]
-            )
-            answer = response.content[0].text
-        except Exception as e:
-            print(f"An error occurred while generating the Claude response on iteration {i}: {e}")
-            continue
-
-        with open(output_filename, "a", encoding="utf-8") as file:
-            file.write(f"Answer {i}:\n{answer}\n{'=' * 50}\n")
-
-        print(f"Answer {i} appended to {output_filename}")
-        answers.append(answer)
-
-    return answers[-1] if answers else None
-
-
-@timer
-def generate_llm_response(query_text, gene_descriptions_string, gene_list_string,
-                          conn, index, tokenizer, model,
-                          bm25_index, bm25_chunk_ids,
-                          weight_faiss, weight_bm25,
-                          system_instruction_for_response,
-                          api_type='openai'):
+def generate_llm_response(
+    query_text: str,
+    gene_list_string: str,
+    conn: sqlite3.Connection,
+    index: Any,
+    tokenizer: Any,
+    embeddings_model: Any,
+    bm25_index: Any,
+    bm25_chunk_ids: List[int],
+    weight_faiss: float,
+    weight_bm25: float,
+    system_instruction_for_response: str,
+    gene_count: Optional[int] = None
+) -> Tuple[
+    Optional[str],
+    List[str],
+    Dict[int, Dict[str, Any]],
+    Dict[int, Any],
+    Dict[int, Any]
+]:
     """
     Generates a response from a language model by performing the following steps:
-    - Expanding the input query.
-    - Retrieving relevant documents using FAISS and BM25.
-    - Combining scores using weighted reciprocal rank fusion (RRF).
-    - Constructing a prompt with the retrieved documents.
-    - Querying the specified LLM API (OpenAI, Claude, or Gemini).
+      1. Expands the input query into multiple variants.
+      2. Retrieves relevant document chunks using FAISS and BM25.
+      3. Combines scores using weighted Reciprocal Rank Fusion (RRF).
+      4. Builds a prompt containing the retrieved documents plus the original query.
+      5. Queries the specified LLM API (OpenAI, Claude, Gemini, etc.) to generate a final answer.
 
     Args:
-        query_text: The original user query.
-        gene_descriptions_string: A string of gene descriptions.
-        gene_list_string: A comma-separated string of gene names.
-        conn: The SQLite database connection.
-        index: The FAISS index.
-        tokenizer: The tokenizer for the transformer model.
-        model: The transformer model used for embeddings.
-        bm25_index: The BM25 index object.
-        bm25_chunk_ids: List of chunk IDs corresponding to the BM25 index.
-        weight_faiss: Weight for FAISS scores.
-        weight_bm25: Weight for BM25 scores.
-        system_instruction_for_response: The system instruction to guide the LLM response.
-        api_type: The API type to use ('openai', 'claude', or 'gemini').
+        query_text: The original user query (str).
+        gene_list_string: A comma‐separated string of gene names (str).
+        conn: An active SQLite database connection for chunk storage.
+        index: The FAISS index object for embedding-based retrieval.
+        tokenizer: The tokenizer used to preprocess text for embeddings.
+        embeddings_model: The transformer model used to generate embeddings.
+        bm25_index: The BM25 index object for lexical retrieval.
+        bm25_chunk_ids: A list of integer chunk IDs corresponding to the BM25 index.
+        weight_faiss: Weight (float) assigned to FAISS-based scores in RRF.
+        weight_bm25: Weight (float) assigned to BM25-based scores in RRF.
+        system_instruction_for_response: The system‐level instruction string to guide LLM generation.
+        gene_count: Optional integer representing how many genes were processed; used in saved filenames.
 
     Returns:
         A tuple containing:
-            - The generated answer.
-            - A list of document references.
-            - The combined RRF scores.
-            - BM25 scores.
-            - FAISS scores.
+            - answer: The final generated answer from the LLM (or None on failure).
+            - document_references: A list of strings, each summarizing a retrieved chunk and its source.
+            - rrf_scores: A dictionary mapping chunk IDs (int) to their combined RRF score and metadata.
+            - bm25_scores: A dictionary mapping chunk IDs (int) to their BM25-specific score details.
+            - faiss_scores: A dictionary mapping chunk IDs (int) to their FAISS distance values.
     """
     # Expand the retrieval query
     expanded_queries = query_expansion(query_text, number=number_of_expansions)
-    print(f"Expanded query: {expanded_queries}")
     if not expanded_queries:
         expanded_queries = [query_text]
     else:
         expanded_queries.append(query_text)
-    query_expanded_queries = [f"{eq} {gene_descriptions_string}" for eq in expanded_queries]
+    query_expanded_queries = [f"{eq} {gene_list_string}" for eq in expanded_queries]
     query_text = query_text + gene_list_string
 
     # Retrieve documents using FAISS and BM25
-    top_faiss_docs = create_top_faiss_docs(query_expanded_queries, index, tokenizer, model, top_k=50)
+    top_faiss_docs = create_top_faiss_docs(query_expanded_queries, index, tokenizer, embeddings_model, top_k=50)
     top_bm25_docs = create_top_bm25_docs(query_expanded_queries, bm25_index, bm25_chunk_ids, top_k=50)
 
     # Combine scores using weighted RRF
     rrf_scores = weighted_rrf(top_bm25_docs, top_faiss_docs, weight_faiss, weight_bm25)
-    print(f"Retrieving top {amount_docs} documents based on RRF scores.")
     retrieved_chunks_ordered, combined_docs = rank_and_retrieve_documents(
         rrf_scores, conn, top_faiss_docs, top_bm25_docs, amount_docs=amount_docs
     )
@@ -1622,20 +1687,12 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
         {"role": "user", "content": prompt}
     ]
     save_message = f"(role: system, content: {system_instruction_for_response}\nrole: user, content: {prompt})"
-    os.makedirs("./output/text_files", exist_ok=True)
-    with open("./output/text_files/messages.txt", "w", encoding="utf-8") as file:
+    os.makedirs("./output/support", exist_ok=True)
+    with open("./output/support/messages.txt", "w", encoding="utf-8") as file:
         file.write(save_message)
-    print(f"Using API type: {api_type}")
 
-    if api_type.lower() == 'openai':
-        save = True
-        answer = query_open_ai(messages, system_instruction_for_response, prompt, save, range_query=1, model="o4-mini")
-    elif api_type.lower() == 'claude':
-        answer = query_claude(messages)
-    elif api_type.lower() == 'gemini':
-        answer = query_gemini(system_instruction_for_response, prompt)
-    else:
-        raise ValueError("Unsupported API type. Choose from 'openai', 'claude', 'gemini'.")
+    answer = query_llm(messages, system_instruction_for_response, prompt, save=True,
+                       generation_model=generation_model, query_range=query_range, gene_count=gene_count)
 
     bm25_scores = dict([(doc_id, details['score']) for doc_id, details in top_bm25_docs])
     faiss_scores = {doc_id: distance for doc_id, (distance, eq) in top_faiss_docs}
@@ -1643,51 +1700,75 @@ def generate_llm_response(query_text, gene_descriptions_string, gene_list_string
     return answer, document_references, rrf_scores, bm25_scores, faiss_scores
 
 
-@timer
-def generate_response_and_save(query,
-                               gene_descriptions_string, gene_list_string,
-                               conn, index, tokenizer, model,
-                               bm25_index, bm25_chunk_ids,
-                               weight_faiss, weight_bm25,
-                               system_instruction_for_response):
+def generate_response_and_save(
+    query: str,
+    gene_list_string: str,
+    conn: sqlite3.Connection,
+    index: Any,
+    tokenizer: Any,
+    embeddings_model: Any,
+    bm25_index: Any,
+    bm25_chunk_ids: List[int],
+    weight_faiss: float,
+    weight_bm25: float,
+    system_instruction_for_response: str,
+    gene_count: Optional[int] = None
+) -> None:
     """
-    Generates a response from an LLM using the provided query and gene information,
-    saves the answer and associated scores to files, and closes the database connection.
+    Orchestrates a full retrieval‐augmented generation (RAG) workflow:
+      1. Calls generate_llm_response(...) to retrieve documents and generate an LLM answer.
+      2. Saves the LLM answer and retrieved document references to disk.
+      3. Exports combined retrieval scores (RRF, BM25, FAISS) to an Excel file.
+      4. Closes the database connection.
 
     Args:
-        query: The original user query.
-        gene_descriptions_string: A string of gene descriptions.
-        gene_list_string: A comma-separated string of gene names.
-        conn: The SQLite database connection.
-        index: The FAISS index.
-        tokenizer: The tokenizer for the transformer model.
-        model: The transformer model used for embeddings.
+        query: The original user query (str).
+        gene_list_string: A comma‐separated string of gene names (str).
+        conn: An active SQLite database connection.
+        index: The FAISS index object.
+        tokenizer: The tokenizer used for embeddings.
+        embeddings_model: The transformer model used to embed text.
         bm25_index: The BM25 index object.
-        bm25_chunk_ids: List of chunk IDs corresponding to the BM25 index.
-        weight_faiss: Weight for FAISS scores.
-        weight_bm25: Weight for BM25 scores.
-        system_instruction_for_response: The system instruction for generating the LLM response.
+        bm25_chunk_ids: A list of integer chunk IDs for BM25 retrieval.
+        weight_faiss: Weight (float) for FAISS scores in RRF combination.
+        weight_bm25: Weight (float) for BM25 scores in RRF combination.
+        system_instruction_for_response: The system‐level instruction string for the LLM.
+        gene_count: Optional integer indicating gene count; included in filenames for saved outputs.
+
+    Returns:
+        None. Writes the LLM answer, document references, and scores to disk, then closes 'conn'.
     """
     answer, document_references, rrf_scores, bm25_scores, faiss_scores = generate_llm_response(
-        query, gene_descriptions_string, gene_list_string,
-        conn, index, tokenizer, model,
+        query,  gene_list_string,
+        conn, index, tokenizer, embeddings_model,
         bm25_index, bm25_chunk_ids,
         weight_faiss, weight_bm25,
-        system_instruction_for_response,
+        system_instruction_for_response, gene_count
     )
 
     if answer and answer != "Processing complete.":
         save_answer_to_file(answer, document_references)
-
-        export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./output/scores.xlsx")
+        support_dir = Path("./output/support")
+        support_dir.mkdir(parents=True, exist_ok=True)
+        output_file = support_dir / "scores.xlsx"
+        export_scores_to_excel(
+            rrf_scores,
+            bm25_scores,
+            faiss_scores,
+            file_name=str(output_file)
+        )
     else:
         print("Failed to generate a response from the LLM.")
     conn.close()
 
 
 # File Saving and Processing Helpers
-@timer
-def save_answer_to_file(answer, document_references, file_name="./output/text_files/answer.txt"):
+def save_answer_to_file(
+    answer: str,
+    document_references: List[str],
+    file_name: str = "./output/results/answer.txt"
+) -> None:
+
     """
     Saves the generated answer and associated document references to text files.
 
@@ -1696,16 +1777,19 @@ def save_answer_to_file(answer, document_references, file_name="./output/text_fi
         document_references: A list of document reference strings.
         file_name: The file path where the answer will be saved.
     """
+    os.makedirs(os.path.dirname(file_name), exist_ok=True)
     with open(file_name, "w", encoding='utf-8') as answer_file:
-        answer_file.write(f"Answer:\n{answer}\n\n")
-    print(f"Answer saved to {file_name}")
-    with open("./output/text_files/documents.txt", "w", encoding='utf-8') as answer_file:
+        answer_file.write(answer)
+    os.makedirs("./output/support", exist_ok=True)
+    with open("./output/support/documents.txt", "w", encoding='utf-8') as answer_file:
         for idx, doc in enumerate(document_references, start=1):
             answer_file.write(f"{doc} \n\n")
 
 
-@timer
-def process_files_in_directory(data_dir, ncbi_json_dir):
+def process_files_in_directory(
+    data_dir: str,
+    ncbi_json_dir: str
+) -> None:
     """
     Processes all .gmt.gz files in the given directory by converting gene IDs to symbols and logging unknown genes.
 
@@ -1725,9 +1809,16 @@ def process_files_in_directory(data_dir, ncbi_json_dir):
                 f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
 
-@timer
-def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
-                             batch_size, log_path, index_path):
+def embed_documents_and_save(
+    index: Any,
+    conn: sqlite3.Connection,
+    tokenizer: Any,
+    embeddings_model: Any,
+    data_dir: str,
+    batch_size: int,
+    log_path: str,
+    index_path: str
+) -> None:
     """
     Embeds documents from the specified directory, updates the FAISS index with the embeddings,
     and then saves the updated index and closes the database connection.
@@ -1736,20 +1827,24 @@ def embed_documents_and_save(index, conn, tokenizer, model, data_dir,
         index: The FAISS index.
         conn: The SQLite database connection.
         tokenizer: The tokenizer for processing text.
-        model: The transformer model for embedding computation.
+        embeddings_model: The transformer model for embedding computation.
         data_dir: The directory containing the documents.
         batch_size: The batch size for processing documents.
         log_path: The file path for the file log.
         index_path: The file path to save the FAISS index.
     """
-    embed_documents(conn, index, tokenizer, model, data_dir=data_dir,
+    embed_documents(conn, index, tokenizer, embeddings_model, data_dir=data_dir,
                     batch_size=batch_size, log_path=log_path)
     save_faiss_index(index, index_path=index_path)
     conn.close()
 
 
-@timer
-def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./output/scores.xlsx"):
+def export_scores_to_excel(
+    rrf_scores: Dict[int, Any],
+    bm25_scores: Dict[int, Any],
+    faiss_scores: Dict[int, Any],
+    file_name: str = "./output/scores.xlsx"
+) -> None:
     """
     Exports combined RRF, BM25, and FAISS scores to an Excel file.
 
@@ -1780,11 +1875,12 @@ def export_scores_to_excel(rrf_scores, bm25_scores, faiss_scores, file_name="./o
     df = pd.DataFrame(data)
     df = df.sort_values(by="RRF Score", ascending=False)
     df.to_excel(file_name, index=False)
-    print(f"Scores saved to {file_name}")
 
 
-@timer
-def save_scores_to_file(scores, file_name):
+def save_scores_to_file(
+    scores: Dict[int, Any],
+    file_name: str
+) -> None:
     """
     Saves scores to a text file, including details about tokens that contributed to each score.
 
@@ -1809,9 +1905,10 @@ def save_scores_to_file(scores, file_name):
     print(f"Scores saved to {file_name}")
 
 
-@timer
-def main():
-    parser = argparse.ArgumentParser(description="Run the RAG workflow tests for varying gene counts.")
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Run the RAG workflow tests for varying gene counts."
+    )
     parser.add_argument(
         "--config",
         type=str,
@@ -1820,65 +1917,63 @@ def main():
     )
     args = parser.parse_args()
 
-    config = load_config(args.config)
+    config = load_config(args.config, print_settings=True)
     config_name = os.path.splitext(os.path.basename(args.config))[0]
     globals()['config_name'] = config_name
     globals().update(config)
 
-    print(f"Using config: {config_name}")
+    total_runs = len(max_genes) * query_range
+    pbar = tqdm(total=total_runs, desc="Starting GSEA runs")
+    for gene_count in max_genes:
+        for iteration in range(1, query_range + 1):
+            # update description
+            pbar.set_description(f"GSEA for {gene_count} genes, iteration {iteration}/{query_range}")
 
-    #gene_counts = list(range(100, 1001, 100))
-    gene_counts = [250]
-    for max_genes_value in gene_counts:
-        print(f"\n\n=== Running test for max_genes = {max_genes_value} ===")
-        # Override the maximum gene count from the configuration.
-        current_max_genes = max_genes_value
-        gene_list_string, regulation, num_genes = initialize_gene_list(
-            max_genes=current_max_genes,
-            fdr_threshold=fdr_threshold,
-            excel_file_path=r".\data\GSEA\genes_of_interest\PMP22_VS_WT.xlsx",
-            de_filter_option="combined",
-        )
+            current_max_genes = gene_count
+            gene_list_string, regulation, num_genes = initialize_gene_list(
+                max_genes=current_max_genes,
+                fdr_threshold=fdr_threshold,
+                excel_file_path=r"./data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
+                de_filter_option="combined",
+            )
 
-        print(f"Regulation: {regulation} with {num_genes} genes")
+            data_dir = './data/GSEA/external_gene_data'
+            log_dir = './logs'
+            log_path = os.path.join(log_dir, 'file_log.json')
+            index_path = './database/faiss_index.bin'
+            db_path = './database/reference_chunks.db'
+            ncbi_json_dir = './data/JSON/'
 
-        gene_list = extract_gene_descriptions(
-            gene_list_string=gene_list_string,
-            gene_data_file=r'.\data\GSEA\external_gene_data\rat_genes_consolidated.txt.gz'
-        )
-        gene_descriptions_string = ', '.join([f"{gene}: {desc}" for gene, desc in gene_list.items()])
+            process_files_in_directory(data_dir, ncbi_json_dir)
 
-        data_dir = './data/GSEA/external_gene_data'
-        log_dir = './logs'
-        log_path = os.path.join(log_dir, 'file_log.json')
-        index_path = './database/faiss_index.bin'
-        db_path = './database/reference_chunks.db'
-        ncbi_json_dir = './data/JSON/'
+            conn = initialize_database(db_path=db_path)
+            tokenizer, embeddings_model = load_embeddings_model_and_tokenizer()
+            embedding_dim = embeddings_model.config.hidden_size
 
-        process_files_in_directory(data_dir, ncbi_json_dir)
+            index = initialize_faiss_index(embedding_dim, index_path)
+            embed_documents_and_save(
+                index, conn, tokenizer, embeddings_model,
+                data_dir, batch_size=batch_size,
+                log_path=log_path, index_path=index_path
+            )
 
-        conn = initialize_database(db_path=db_path)
-        tokenizer, model = load_model_and_tokenizer()
-        embedding_dim = model.config.hidden_size
+            index = load_faiss_index(embedding_dim, index_path=index_path)
+            conn = sqlite3.connect(db_path)
+            bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
-        index = initialize_faiss_index(embedding_dim, index_path)
-        embed_documents_and_save(index, conn, tokenizer, model, data_dir,
-                                 batch_size=batch_size, log_path=log_path,
-                                 index_path=index_path)
+            generate_response_and_save(
+                query,
+                gene_list_string,
+                conn, index, tokenizer, embeddings_model,
+                bm25_index, bm25_chunk_ids,
+                weight_faiss, weight_bm25,
+                system_instruction_response,
+                gene_count
+            )
 
-        index = load_faiss_index(embedding_dim, index_path=index_path)
-        conn = sqlite3.connect(db_path)
-        bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
+            pbar.update()
 
-        # Single call per gene count since query_open_ai already performs 5 attempts.
-        generate_response_and_save(
-            query,
-            gene_descriptions_string, gene_list_string,
-            conn, index, tokenizer, model,
-            bm25_index, bm25_chunk_ids,
-            weight_faiss, weight_bm25,
-            system_instruction_response
-        )
+    pbar.close()
 
 
 if __name__ == "__main__":

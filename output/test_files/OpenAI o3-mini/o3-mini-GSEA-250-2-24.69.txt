@@ -1,0 +1,8 @@
+Synaptic Plasticity & Neural Signaling:
+Cntn6, Prss12, Sema4f, Synpr, Ntn1, Nrp1, Nrp2, Robo2, Kif1a, P2ry2, Piezo2, Cdh13, Atf3, Mef2c
+
+Schwann Cell Differentiation & Myelination:
+Mpz, Drp2, Prx, Pmp22, Mag, Gldn, Robo2, Itga7, Cd9
+
+Neural Development & Neurogenesis:
+Zpld1, Nes, Lifr, Met, Lef1, Dyrk1a, Atf5, Numb, Klf9

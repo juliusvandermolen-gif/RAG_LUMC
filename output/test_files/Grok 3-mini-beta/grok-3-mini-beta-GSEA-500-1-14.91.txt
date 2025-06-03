@@ -1,0 +1,17 @@
+Myelination Pathway:  
+PMP22, MAG, Mbp, MPZ, PLP1,  
+
+Axon Guidance Pathway:  
+SEMA4F, SEMA3G, NRP1, NRP2, SLIT2, ROBO2,  
+
+Synaptic Plasticity Pathway:  
+SYNPR, SYNM, GRB14, MAPK1,  
+
+Lipid Metabolism in Neural Cells Pathway:  
+ALDH1A1, GLDC, HADHB, ENSRNOG00000062503, ENSRNOG00000063649, ENSRNOG00000066444, ENSRNOG00000062927,  
+
+Neural Crest Development Pathway:  
+CNTN6, HAPLN1, SOX10 (not listed, but inferred from context), LIFR, EBF1,  
+
+Signaling Pathways in Neural Development:  
+WNT5A, AKT1 (not listed, but related), GRB14, MAPK1, CXCR4, CXCL12,

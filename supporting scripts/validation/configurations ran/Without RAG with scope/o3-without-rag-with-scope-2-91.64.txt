@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Efna5, Dpysl3, Dpysl5, Kif1a, Srgap1, Slitrk6, Itga8, Gldn, Lrrtm3, Tspan4, Tspan5, Cdh13, Cobll1, Rhoj, Tnik,
+
+Synaptic Vesicle Trafficking and Exocytosis:
+Synpr, Kif1a, Numb, Frrs1, Ppfia4, Dpysl3, Dpysl5, Cpe, Psap, Prss12, Serpini1, Map1lc3a, Tuba4a, Tubb4a,
+
+Long-Term Potentiation and Synaptic Plasticity:
+Ryr3, Prkar2b, Gnai1, Kif1a, Dyrk1a, Mef2c, Numb, Dpysl3, Dpysl5, Lrrtm3, Synpr, Atf5, Itpripl1, P2ry2, Klf9, Id2, Eif2ak2,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Prx, Drp2, Gldn, Cldn19, Mal, Cntn6,
+
+Calcium-Mediated Neural Signaling:
+Ryr3, Itpripl1, Piezo2, Tpcn1, Prkar2b, Gnai1, P2ry2, Gja1,
+
+Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Dyrk1a, Runx3, Mef2c, Cd9,
+
+Extracellular Matrix Remodeling in Neural Tissue:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Emilin1, Efemp2, Hs6st1, Hs6st2, Hapln1, Bgn, Mfap5,

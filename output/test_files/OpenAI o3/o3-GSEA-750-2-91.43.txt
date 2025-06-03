@@ -1,0 +1,23 @@
+Axon Guidance and Growth Cone Dynamics:
+Slit2, Robo2, Ntn1, Plxnb1, Sema4f, Sema3g, Nrp1, Nrp2, Efna5, Efna4, Epha4, Tnik, Vangl2, Met, Itga8, Sorcs2,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Vamp2, Snap29, Dnm1, Kif1a, Adcy1, Adcy5, Synpr, Synj2bp, Grik5, Grid2, Drd4, Frrs1, Bdnf, Dlg1, Lrrtm3,
+
+Myelination and Schwann Cell Function:
+Pmp22, Mpz, Mbp, Plp1, Mag, Mal, Drp2, Gldn, Ugt8, Pdgfb, Itga7, Itga6, Gja1,
+
+Calcium-Dependent Synaptic Plasticity:
+Ryr3, Itpripl1, P2ry2, Piezo2, Ncs1, Camk1d, Adcy1, Adcy5, Rps6ka5, Grik5,
+
+cAMP/PKA Signaling:
+Adcy1, Adcy5, Drd4, Lpar1, Gnai1, Gnaq, Prkar2b, Pkia, Ppp1r14c, Ppp1r16b, Ppp2r5c, Ppp2r5e, Ppp2r3c,
+
+ERK/MAPK Signaling in Neuronal Differentiation:
+Mapk1, Map2k6, Map4k5, Mapk8ip1, Dyrk1a, Rassf1, Rassf2, Rassf7, Epha4, Nfatc1, Bdnf,
+
+Wnt/Planar Cell Polarity Pathway in Neural Development:
+Wnt5a, Vangl2, Lef1, Tnik, Daam2, Prickle3, Ctnnd2, Frmd6, Rasal2,
+
+Cholesterol and Lipid Metabolism in Neural Development:
+Apod, Abca8a, Abca3, Abcb4, Lpcat4, Pltp, Cers6, Sptlc2, Stard4, Cyp4v3, Bdh1, Pnpla2,

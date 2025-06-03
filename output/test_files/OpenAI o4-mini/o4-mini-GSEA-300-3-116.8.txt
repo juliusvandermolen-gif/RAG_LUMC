@@ -1,0 +1,29 @@
+Axon Guidance:
+Ntn1, Slit2, Robo2, Plxnb1, Sema4f, Sema3g, Nrp1, Nrp2, Srgap1, Dpysl3, Dpysl5
+
+Myelination and Myelin Maintenance:
+Pmp22, Mpz, Mag, Mal, Cldn19, Gldn
+
+Myelin Lipid Metabolism:
+Abca8a, Abcb4, Apod, Pltp, Cers6, Sgms1
+
+ECM-Receptor Interaction:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Mfap5, Emilin1, Bgn, Adamts17, Adamtsl1, Adamtsl3, Sbspon, Efemp2, Matn3, Has2
+
+Cell Adhesion Molecules:
+Cntn6, Cdh13, Itga7, Itga8, Cd9, Cd151, Pkp1
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Prickle3
+
+GPCR Signaling:
+Gnai1, P2ry2, Ptgfr, Gprc5a, Gprc5b
+
+Transcriptional Regulation in Neuronal Differentiation:
+Mef2c, Nfatc1, Runx3, Ebf1, Klf9, Id2, Atf3, Atf5, Numb, Nes, Msi1
+
+Ubiquitin-Mediated Proteolysis:
+Fbxo11, Rnf144a, Ufd1, Sumo3
+
+Endosomal Transport and Autophagy:
+Rab10, Vps26c, Vps8, Snx4, Snx6, Chmp2b, Map1lc3a

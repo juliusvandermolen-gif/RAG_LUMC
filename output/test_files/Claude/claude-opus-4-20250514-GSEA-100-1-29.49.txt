@@ -1,0 +1,41 @@
+Synaptic Plasticity and Neurotransmission:
+Zpld1, Cntn6, Prss12, Gldc, Pcsk5, Cpe, Hapln1, Synpr, Prss23, Mag, Srgap1, P2ry2, Nrp1, Piezo2, Sncg, Slc9a9, Scn7a, Robo2
+
+Neural Development and Axon Guidance:
+Cntn6, Sema4f, Hapln1, Ntn1, Mag, Srgap1, Nrp1, Robo2, Cdh13, Epas1
+
+Myelination and Schwann Cell Function:
+Mag, Nrbp1, Drp2, Mpz, Tubb4a, Apod, Cdh13, Alpl
+
+Extracellular Matrix and Cell Adhesion:
+Adamts17, Cobll1, Hapln1, Col9a3, Adamtsl3, Ltbp1, Ntn1, Mfap5, Pxdn, Matn3, Cdh13, Efemp2
+
+Cholesterol and Lipid Metabolism:
+Aldh1a1, Pltp, Abca8a, Abcb4, Apod, Alpl
+
+Neural Crest and Glial Cell Development:
+Cntn6, Cobll1, Sema4f, Mag, Mpz, Nrp1, Epas1
+
+Calcium Signaling and Ion Transport:
+Piezo2, P2ry2, Slc9a9, Scn7a, Gypc, Slc22a17
+
+Growth Factor Signaling and Cell Proliferation:
+Igfbp3, Grb14, Id2, Nrp1, Pappa, Atf3
+
+Protein Processing and Degradation:
+Prss12, Pcsk5, Cpe, Prss23, Sumo3, Htra1, Serpini1, Ctbs, Serpinf1, Ecel1
+
+Cytoskeleton and Structural Proteins:
+Tuba4a, Acta2, Myo1d, Tagln, Aif1l, Tubb4a, Pkp1
+
+Immune Response and Inflammation:
+A2m, Tril, Tf, Cxcl14, Ighm, Icoslg, Eif2ak2
+
+Cell Cycle and DNA Regulation:
+Peg3, Cdca7l, Rrm2, Ddx1, Trim35
+
+Metabolic Processes:
+Gldc, Sqor, Manba, Man1a1, Riox2, Steap2
+
+Neural Plasticity and Regeneration:
+Atf3, Id2, Srgap1, Nrp1, Robo2, Gldn

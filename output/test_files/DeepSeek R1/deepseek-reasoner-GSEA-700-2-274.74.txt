@@ -1,0 +1,65 @@
+Pathway Name: Myelin Synthesis and Schwann Cell Differentiation  
+Mpz, Mbp, Mag, Pmp22, Prx, Cldn19, Hapln1, Lrp2, Gldn, Mal, Plp1, Cldnd1, Nectin1, Pals1, Emp1, Sbspon, Col9a3, Col15a1, Col8a2, Col14a1, Col7a1, Col11a1, Col20a1, Efemp2, Sparc, Emilin1, Fras1, Lama4, Matn3, Tspan4, Tspan5, Tspan15, Cd9, Cd151, Cd302, Cd59b, Cd55, Cdca7l, Cdca4, Cdkn1a, Cpe, Cldn19, Cldnd1  
+
+Pathway Name: Lipid Metabolism and Cholesterol Homeostasis  
+Scd, Fabp5, Abca8a, Aldh1a1, Htra1, Lrp2, Gldc, Hs6st1, Hs6st2, Hs6st3, Gpat11, Agpat5, Gbe1, Gba1, Gypc, Pltp, Sgms1, Cers6, Acot7, Lipg, Plpp1, Lrp2, Vldlr, Apod, Apoe, A2m, Abcb4, Abca8a, Abca1, Hmgcr, Hsd17b7, Sqor, Hsd11b1, Hsd3b7, Hsd17b12, Hsd17b4, Hsd17b10, Hsd17b14, Hsd3b1, Hsd3b2  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Dcc, Unc5b, Epha4, Efnb2, Sema6a, Sema6d, Sema7a, PlexinA1, PlexinA2, PlexinA3, PlexinA4, PlexinD1, PlexinB2, PlexinB3, Rgma, Rgmb, Rgmc, Ntn1, Dcc, Unc5c, Ephb2, Ephb3, Ephb4, Epha7, Epha5, Efnb3  
+
+Pathway Name: MAPK/ERK and PI3K-AKT Signaling Pathways  
+Mapk1, Map2k6, Grb14, Sumo3, Pak2, Akt1, Akt2, Akt3, Pik3ca, Pik3cb, Pik3cg, Pik3r1, Pik3r2, Pik3r3, Pdpk1, Mtor, Rps6ka5, Rps6kb1, Rps6kb2, Rps6ka1, Rps6ka2, Rps6ka3, Rps6ka4, Rps6ka6, Elk1, Elk3, Elk4, Fos, Jun, Myc, Ets1, Ets2, Spred1, Spred2, Spred3, Sprouty1, Sprouty2, Sprouty4  
+
+Pathway Name: Lysosomal Function and Autophagy  
+Ctsd, Ctsl, Laptm4a, Hsp90aa1, Htra1, Lamp1, Lamp2, Ctsb, Ctsc, Ctsf, Ctsk, Ctsz, Atg5, Atg7, Atg12, Atg16l1, Becn1, Uvrag, Rubicon, Wipi1, Wipi2, Gabarap, Gabarapl1, Gabarapl2, Sqstm1, Nbr1, Calcoco2, Tmem74, Tmem175, Tmem86a, Tmem106c, Tmem59  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col7a1, Hapln1, Sparc, Emilin1, Fras1, Lama4, Matn3, Tspan4, Tspan5, Tspan15, Cd9, Cd151, Cd302, Cd59b, Cd55, Cdca7l, Cdca4, Cdkn1a, Cpe, Cldn19, Cldnd1, Nectin1, Pals1, Emp1, Sbspon, Col8a2, Col14a1, Col11a1, Col20a1, Efemp2  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Synpr, Bdnf, Vamp2, Adcy1, Grin1, Grin2a, Grin2b, Grin2c, Grin2d, Grin3a, Grin3b, Gabbr1, Gabbr2, Gabra1, Gabra2, Gabra3, Gabra4, Gabra5, Gabra6, Gabrb1, Gabrb2, Gabrb3, Gabrd, Gabre, Gabrg1, Gabrg2, Gabrg3, Gabrp, Gabrq, Glra1, Glra2, Glra3, Glrb, Slc6a1, Slc6a11, Slc6a12, Slc6a13, Slc6a17, Slc6a3, Slc6a4, Slc6a5, Slc6a6, Slc6a7, Slc6a8, Slc6a9  
+
+Pathway Name: Neural Crest Development and Migration  
+Robo2, Slit2, Sox10, Foxd3, Twist1, Snai1, Snai2, Zeb1, Zeb2, Ets1, Ets2, Pax3, Pax7, Tfap2a, Tfap2b, Tfap2c, Ednrb, Edn3, Ednra, Gdnf, Ret, Gfra1, Gfra2, Ncam1, Ncam2, Cadm1, Cadm2, Cadm3, Cadm4, Igsf10, Igsf11, Igsf21, Igsf22, Igsf23, Igsf9, Igsf9b, Igsf5  
+
+Pathway Name: Inflammatory Response and Immune Regulation  
+C1qtnf1, C3, C4a, C4b, C5, C6, C7, C8a, C8b, C9, C1qa, C1qb, C1qc, C1r, C1s, C2, Cfh, CfI, Cfp, Cfb, Cfd, Cfi, Cflar, Cfl1, Cfl2, Cxcl12, Cxcl14, Cxcl16, Ccl7, Ccr1, Ccr2, Ccr3, Ccr4, Ccr5, Ccr6, Ccr7, Ccr8, Ccr9, Ccr10, Cxcr1, Cxcr2, Cxcr3, Cxcr4, Cxcr5, Cxcr6, Cxcr7  
+
+Pathway Name: Cholesterol Biosynthesis and Transport  
+Hmgcr, Hmgcs1, Hmgcs2, Mvd, Fdps, Sqle, Lss, Cyp51, Nsdhl, Sc5d, Dhcr7, Dhcr24, Ebp, Sc4mol, Msmo1, Lbr, Tm7sf2, Npc1, Npc2, Abca1, Abca8a, Abcb4, Abcg1, Abcg4, Abcg5, Abcg8, Apod, Apoe, A2m, Lrp2, Vldlr, Lrp1, Lrpap1, Lrp3, Lrp4, Lrp5, Lrp6, Lrp8, Lrp10, Lrp11, Lrp12  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Hsp90aa1, Hspa12a, Hspa5, Hspa8, Hspa9, Hspa1a, Hspa1b, Hspa1l, Hspa2, Hspa4, Hspa4l, Hspa6, Hspa13, Hspa14, Xbp1, Atf3, Atf4, Atf5, Atf6, Ern1, Eif2ak2, Eif2s1, Ddit3, Chop, Bip, Calr, Pdia3, Pdia4, Pdia5, Pdia6, Pdia7, Pdia8, Pdia9, Pdia10, Pdia11, Pdia12, Pdia13, Pdia14, Pdia15, Pdia16  
+
+Pathway Name: cAMP Signaling and Ion Channel Activity  
+Adcy1, Adcy5, Adcy8, Adcy9, Adcy10, Pde4a, Pde4b, Pde4c, Pde4d, Pde7a, Pde7b, Pde8a, Pde8b, Pde10a, Pde11a, Prkar2b, Prkaca, Prkacb, Prkacg, Prkar1a, Prkar1b, Prkar2a, Kcnj3, Kcnj6, Kcnj9, Kcnj10, Kcnj13, Kcnj15, Kcnj16, Kcnj2, Kcnj4, Kcnj5, Kcnj12, Kcnj14, Kcnj18, Kcnj1, Kcnj11, Kcnq1, Kcnq2, Kcnq3, Kcnq4, Kcnq5  
+
+Pathway Name: Notch Signaling and Cell Fate Determination  
+Notch1, Notch2, Notch3, Notch4, Jag1, Jag2, Dll1, Dll3, Dll4, Rbpj, Hes1, Hes5, Hey1, Hey2, HeyL, Numb, Numbl, Dtx1, Dtx2, Dtx3, Dtx4, Lfng, Mfng, Rfng, Psen1, Psen2, Psenen, Nicastrin, Aph1a, Aph1b, Pen2, Adam10, Adam17, Adamts17, Adamtsl1, Adamtsl3, Adamts6, Adam15  
+
+Pathway Name: Wnt Signaling and Neural Patterning  
+Wnt5a, Fzd1, Fzd2, Fzd3, Fzd4, Fzd5, Fzd6, Fzd7, Fzd8, Fzd9, Fzd10, Lrp5, Lrp6, Dvl1, Dvl2, Dvl3, Axin1, Axin2, Apc, Gsk3b, Ctnnb1, Tcf7, Tcf7l1, Tcf7l2, Lef1, Sfrp1, Sfrp2, Sfrp4, Sfrp5, Dkk1, Dkk2, Dkk3, Dkk4, Wif1, Rspo1, Rspo2, Rspo3, Rspo4, Porcn, Wls, Cxxc4, Nkd1, Nkd2  
+
+Pathway Name: TGF-β Signaling and Glial Cell Interaction  
+Tgfbr1, Tgfbr2, Tgfbr3, Smad1, Smad2, Smad3, Smad4, Smad5, Smad6, Smad7, Smad9, Bmpr1a, Bmpr1b, Bmpr2, Acvr1, Acvrl1, Acvr1b, Acvr2a, Acvr2b, Acvrl1, Inhba, Inhbb, Inhbc, Inhbe, Ltbp1, Ltbp2, Ltbp3, Ltbp4, Thbs1, Thbs2, Thbs3, Thbs4, Tgfbi, Tgfbi3, Gdf15, Gdf6, Gdf7, Gdf9, Gdf10, Gdf11, Gdf15  
+
+Pathway Name: Neurotrophin Signaling and Neuronal Survival  
+Bdnf, Ntrk1, Ntrk2, Ntrk3, Ngf, Ngfr, Ntf3, Ntf4, Ntf5, Sort1, TrkA, TrkB, TrkC, P75NTR, Sh2b1, Sh2b2, Sh2b3, Shc1, Shc2, Shc3, Shc4, Grb2, Sos1, Sos2, Rasgrf1, Rasgrf2, Rasgrp1, Rasgrp2, Rasgrp3, Rasgrp4, Rap1a, Rap1b, Rap2a, Rap2b, Rap2c, RalA, RalB, RalGDS, RalGEF, RalGPS1, RalGPS2  
+
+Pathway Name: Glutamate Receptor Signaling  
+Grin1, Grin2a, Grin2b, Grin2c, Grin2d, Grin3a, Grin3b, Gria1, Gria2, Gria3, Gria4, Grik1, Grik2, Grik3, Grik4, Grik5, Grm1, Grm2, Grm3, Grm4, Grm5, Grm6, Grm7, Grm8, Slc1a1, Slc1a2, Slc1a3, Slc1a6, Slc1a7, Slc17a6, Slc17a7, Slc17a8, Slc38a1, Slc38a2, Slc38a3, Slc38a4, Slc38a5, Slc38a6, Slc38a7, Slc38a8, Slc38a9, Slc38a10  
+
+Pathway Name: Calcium Signaling and Ion Homeostasis  
+Cacna1a, Cacna1b, Cacna1c, Cacna1d, Cacna1e, Cacna1f, Cacna1g, Cacna1h, Cacna1i, Cacna1s, Cacnb1, Cacnb2, Cacnb3, Cacnb4, Cacng1, Cacng2, Cacng3, Cacng4, Cacng5, Cacng6, Cacng7, Cacng8, Itpr1, Itpr2, Itpr3, Ryr1, Ryr2, Ryr3, Atp2a1, Atp2a2, Atp2a3, Atp2b1, Atp2b2, Atp2b3, Atp2b4, Slc8a1, Slc8a2, Slc8a3, Slc24a1, Slc24a2, Slc24a3, Slc24a4, Slc24a5  
+
+Pathway Name: Apoptosis and Cell Cycle Regulation  
+Bcl2, Bax, Bak1, Bok, Bcl2l1, Bcl2l2, Bcl2l10, Bcl2l11, Bcl2l12, Bcl2l13, Mcl1, Apaf1, Casp3, Casp6, Casp7, Casp8, Casp9, Casp12, P53, Mdm2, Mdm4, Cdkn1a, Cdkn1b, Cdkn1c, Cdkn2a, Cdkn2b, Cdkn2c, Cdkn2d, Ccnd1, Ccnd2, Ccnd3, Ccne1, Ccne2, Cdk1, Cdk2, Cdk4, Cdk6, Cdk7, Cdk8, Cdk9, Cdk10, Cdk12, Cdk13, Cdk14, Cdk16, Cdk17, Cdk18, Cdk19, Cdk20  
+
+Pathway Name: Hypoxia Response and Angiogenesis  
+Hif1a, Vegfa, Vegfb, Vegfc, Vegfd, Flt1, Flt4, Kdr, Nrp1, Nrp2, Angpt1, Angpt2, Tie1, Tie2, Pdgfb, Pdgfra, Pdgfrb, Fgf2, Fgf1, Fgf5, Fgf7, Fgf10, Fgf18, Fgfr1, Fgfr2, Fgfr3, Fgfr4, Epo, Epor, Adm, Adm2, Edn1, Edn2, Edn3, Ednra, Ednrb, Nos1, Nos2, Nos3, Hmox1, Hmox2, Sod1, Sod2, Sod3, Gpx1, Gpx2, Gpx3, Gpx4, Gpx5, Gpx6, Gpx7, Gpx8  
+
+Pathway Name: GABAergic and Glycinergic Neurotransmission  
+Gabra1, Gabra2, Gabra3, Gabra4, Gabra5, Gabra6, Gabrb1, Gabrb2, Gabrb3, Gabrd, Gabre, Gabrg1, Gabrg2, Gabrg3, Gabrp, Gabrq, Glra1, Glra2, Glra3, Glrb, Slc6a1, Slc6a11, Slc6a12, Slc6a13, Slc6a17, Slc6a3, Slc6a4, Slc6a5, Slc6a6, Slc6a7, Slc6a8, Slc6a9, Slc32a1, Slc38a1, Slc38a2, Slc38a3, Slc38a4, Slc38a5, Slc38a6, Slc38a7, Slc38a8, Slc38a9, Slc38a10  
+
+Pathway Name: Dopaminergic and Serotonergic Signaling  
+Slc6a3, Slc6a4, Drd1, Drd2, Drd3, Drd4, Drd5, Htr1a, Htr1b, Htr1d, Htr1e, Htr1f, H

@@ -1,40 +1,52 @@
-import sys
-import asyncio
-import platform
-import subprocess
+#!/usr/bin/env python3
 import os
+import sys
+import platform
+import runpy
+import multiprocessing as mp
+
+mp.set_start_method("spawn", force=True)
+
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
+# Helper to pick up the config flag
 def resolve_config_name(default="GSEA"):
-    """
-    Check sys.argv for an unknown flag (like --GSEA_test).
-    If found, return the flag name (without '--'). Otherwise, return the default.
-    """
-    # Skip the first element (script name)
     for arg in sys.argv[1:]:
-        # If the argument starts with '--' and it's not '--config'
         if arg.startswith("--") and arg != "--config":
-            # Remove the '--' and return the rest as the config name
             return arg[2:]
     return default
 
 
-# Determine the configuration name based on command-line arguments.
 CONFIG_NAME = resolve_config_name("GSEA")
 CONFIG_PATH = f"./configs_system_instruction/{CONFIG_NAME}.json"
 
 print(platform.system())
 if platform.system() == "Windows":
+    import asyncio
     from asyncio import WindowsSelectorEventLoopPolicy
-
     asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 
 print(f"Using config: {CONFIG_NAME}")
-print("Running RAG_workflow.py...")
-subprocess.run(f"python RAG_workflow.py --config {CONFIG_PATH}", shell=True, check=True)
 
-print("Running gprofiler.py...")
-subprocess.run(f"python gprofiler.py --config {CONFIG_PATH}", shell=True, check=True)
 
-print("Running automated_validation.py...")
-subprocess.run("python automated_validation.py", shell=True, check=True)
+def run_module_main(module_name, argv):
+    """Temporarily swap in sys.argv, then run module.__main__."""
+    old_argv = sys.argv
+    sys.argv = [module_name] + argv
+    try:
+        runpy.run_module(module_name, run_name="__main__", alter_sys=False)
+    finally:
+        sys.argv = old_argv
+
+
+print("Running RAG_workflow.py…")
+run_module_main("RAG_workflow", ["--config", CONFIG_PATH])
+
+print("Running gprofiler.py…")
+run_module_main("gprofiler",   ["--config", CONFIG_PATH])
+
+print("Running automated_validation.py…")
+run_module_main("automated_validation", [])
+
+print("All done.")

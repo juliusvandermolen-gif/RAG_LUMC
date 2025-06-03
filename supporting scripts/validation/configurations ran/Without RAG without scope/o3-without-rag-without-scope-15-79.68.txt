@@ -1,0 +1,23 @@
+Extracellular Matrix Organization and Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Htra1, Timp1, Efemp2, Emilin1, Bgn, Matn3, Hapln1, Ltbp1, Mfap5, Qsox1, Pxdn, Ccn3, Ccn4, Has2,
+
+Axon Guidance and Neuronal Pathfinding:
+Cntn6, Nrp1, Nrp2, Slit2, Plxnb1, Robo2, Efna5, Sema4f, Sema3g, Ntn1, Dpysl3, Dpysl5, Srgap1, Tnik, Kif1a, Gnai1, Lrrtm3, Gldn,
+
+Myelination and Peripheral Nervous System Development:
+Mpz, Mag, Pmp22, Drp2, Prx, Gldn, Mal, Cldn19, Itga8,
+
+Immune and Inflammatory Signaling:
+Nlrp1a, Ifnar1, Tnfrsf1a, Cxcl12, Cxcl14, Ighm, Icoslg, Defb29, Selplg, Trim35, Rnf144a, Parp14, Runx3, Id2,
+
+Wnt/TGF-β Developmental Signaling:
+Wnt5a, Lef1, Tnik, Ltbp1, Ccn3, Ccn4, Itga8, Epas1, Lrp2,
+
+Insulin/IGF Hormonal Regulation:
+Igfbp3, Pcsk5, Pappa, Igf2bp2, Pam, Cpe, Grb14, Prkar2b, Ppard, Ghr,
+
+Redox and Metabolic Homeostasis:
+Sqor, Hadhb, Nampt, Aldh1a1, Gldc, Fth1, Hspa12a, Hsp90aa1, Apod, Pltp, Abca8a, Pgm1,
+
+Cell Adhesion and Junction Assembly:
+Cdh13, Cldn19, Cldnd1, Gja1, Itga7, Itga8, Cd151, Pkp1, Pals1, Tspan4, Tspan5, Tagln, Acta2, Ppfia4, Nes,

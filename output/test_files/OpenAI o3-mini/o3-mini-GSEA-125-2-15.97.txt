@@ -1,0 +1,14 @@
+Synaptic Plasticity & Neural Signaling:
+Cntn6, Prss12, Synpr, Ntn1, Sema4f, Piezo2, Robo2, Slit2, St3gal5
+
+Myelination & Axon Guidance:
+Mpz, Mag, Drp2, Gldn, Lrp2, Srgap1, Kif1a
+
+Extracellular Matrix & Cell Adhesion:
+Hapln1, Col9a3, Col20a1, Col15a1, Cdh13, Matn3, Emilin1, Adamts17, Adamtsl3, Adamtsl1
+
+Neural Growth & Regeneration:
+Id2, Atf3, Epas1, Lifr, Ptgfr, Tf, Trim35, Pkp1
+
+Signal Transduction & Intracellular Regulation:
+Grb14, Sumo3, Prss23, Rrm2, Eif2ak2, Ddx1, Rnf144a

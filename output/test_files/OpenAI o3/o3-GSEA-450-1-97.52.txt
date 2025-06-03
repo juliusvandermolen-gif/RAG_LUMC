@@ -1,0 +1,26 @@
+Axon Guidance and Neural Pathfinding:
+Slit2, Robo2, Ntn1, Nrp1, Nrp2, Plxnb1, Efna5, Wnt5a, Sema4f, Sema3g, Tnik, Srgap1, Dpysl3, Dpysl5, Itga8, Rhoj, Kif1a,
+
+Peripheral Myelination and Node Assembly:
+Pmp22, Mpz, Plp1, Mag, Mbp, Drp2, Gldn, Cldn19, Itga6, Itga7, Scn7a, Kif1a,
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Synpr, Sncg, Frrs1, Numb, Adcy1, Snap29, Kif1a, Pfn2, Lrrtm3, Chrna3, Drd4, Lpar1, P2ry2, Ryr3, Synj2bp, Piezo2, Gja1,
+
+Calcium Homeostasis and Excitation-Secretion Coupling:
+Ryr3, Piezo2, Adcy1, Itpripl1, Gja1, Chrna3, P2ry2, Drd4,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Vangl2, Lef1, Tnik, Frmd6, Prickle3, Rhoj,
+
+Chemokine and Cytokine Signaling in Neural Cells:
+Cxcl12, Cxcl14, Cxcl16, Ifnar1, Tnfrsf1a, Tnfaip6, Nlrp1a, Siglec10, Selplg, Irf7,
+
+Lipid and Cholesterol Metabolism in Myelin Maintenance:
+Abca8a, Abcb4, Apod, Pltp, Pnpla2, Pmp22, Plp1, Mpz, Lrp2, Lrpprc, Ppard, Adipor1, Scd, Cers6, Sgms1, Agpat5, Fabp5, Enpp2, Mboat2, St3gal5,
+
+MAPK and Stress-Activated Kinase Signaling in Neurodevelopment:
+Atf3, Atf5, Dyrk1a, Map4k5, Stk39, Pak2, Nuak1, Eif2ak2, Prkd3, Tnik, Mark3, Ppp2r5e, Cul4b, Hsp90aa1, Ddr2, Epas1, Hif1a, Vrk1,
+
+Extracellular Matrix and Neurotrophic Modulation:
+Fn1, Thbs2, Fstl1, Emilin1, Efemp2, Ccn3, Ccn4, Col15a1, Col20a1, Col11a1, Nid2, Timp1, Vash1,

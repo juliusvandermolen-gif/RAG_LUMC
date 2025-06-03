@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Sema4f, Sema3g, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Plxnb1, Efna5, Tnik, Itga8, Dpysl3, Dpysl5, Kif1a, Srgap1, Rhoj, Lrrtm3, Gldn, Cobl, Shroom3,
+
+Synaptic Transmission and Plasticity:
+Bdnf, Drd4, Adcy1, Ryr3, Grid2, Grik5, Lpar1, Vgf, Vamp2, Synpr, Chrna3, P2ry2, Slc9a9, Scn7a, Cadm1,
+
+Myelination and Schwann Cell Development:
+Pmp22, Mpz, Mbp, Plp1, Mag, Mal, Drp2, Ugt8, Itga6, Itga7, Gldn, Gja1,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Vangl2, Lef1, Tnik, Rhoj, Daam2, Dyrk1a, Ppp2r5c,
+
+Extracellular Matrix–Integrin Interaction in Neural Tissues:
+Itga6, Itga7, Itga8, Itga1, Fn1, Col15a1, Col20a1, Col11a1, Col8a2, Col14a1, Lama4, Nid2, Postn, Thbs2, Timp1, Emilin1, Pdgfb, Sparc, Vldlr, Efemp2,
+
+Cholesterol and Sphingolipid Homeostasis in Myelin:
+Abca8a, Smpd1, Sgms1, Gba1, Ugt8, Pmp22, Mpz, Mal, Plp1, Mag,

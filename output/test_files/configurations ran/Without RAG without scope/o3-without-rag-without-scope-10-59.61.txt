@@ -1,0 +1,17 @@
+Extracellular Matrix Organization and Collagen Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Bgn, Col8a2, Col9a3, Col11a1, Col15a1, Col20a1, Efemp2, Emilin1, Has2, Htra1, Ltbp1, Matn3, Mfap5, Pappa, Pxdn, Timp1, Ccn3, Ccn4,
+
+Axon Guidance and Neural Development:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Robo2, Slit2, Ntn1, Efna5, Lrrtm3, Dpysl3, Dpysl5, Gldn, Mag, Mpz, Kif1a, Itpripl1, Ryr3, Tnik, Met, Itga8, Piezo2, Nes, Scn7a, Pmp22, Tuba4a, Tubb4a, Synpr,
+
+Immune and Inflammatory Signalling:
+Cxcl14, Cxcl12, Ighm, Ifnar1, Nlrp1a, Tnfrsf1a, Selplg, Icoslg, Defb29, A2m, Serpinf1, Serpini1, P2ry2, Ptgfr, Runx3,
+
+Lipid Metabolism and Transport:
+Apod, Abca8a, Abcb4, Pltp, Agpat5, Cers6, Sgpl1, Hadhb, Ppard, Steap1, Steap2, Nampt, Lrp2,
+
+Hypoxia Response and Angiogenesis:
+Epas1, Wnt5a, Vash1, Nrp1, Nrp2, Plxnb1, Has2, Itga8, Klf9, Nampt,
+
+Cell Adhesion and Junction Organization:
+Cdh13, Cldn19, Cldnd1, Pkp1, Tspan4, Tspan5, Cd9, Itga8, Gja1,

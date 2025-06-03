@@ -1,0 +1,17 @@
+Extracellular Matrix Organization and Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Timp1, Pxdn, Bgn, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Efemp2, Emilin1, Mfap5, Hapln1, Ccn3, Ccn4, Ltbp1, Pappa, Hs6st1, Hs6st2, Chst2, Has2, Qsox1, Olfml1, Sbspon, Gcnt1, Itga7, Itga8, Cd151,
+
+Axon Guidance and Synaptic Connectivity:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Robo2, Slit2, Efna5, Ntn1, Srgap1, Lrrtm3, Dpysl3, Dpysl5, Kif1a, Dyrk1a, Hs6st1, Hs6st2, Itga8, Itga7, Tnik, Piezo2,
+
+Peripheral Myelin Formation and Maintenance:
+Pmp22, Mpz, Mag, Prx, Mal, Drp2, Gldn, Cldn19, Lrp2, Gja1, Itpripl1,
+
+Lipid and Cholesterol Metabolism and Transport:
+Abca8a, Abcb4, Apod, Pltp, Lrp2, Nampt, Sgpl1, Cers6, Agpat5, Hadhb, Ppard, St3gal5, Psap, Sqor, Pgm1, C1qtnf1, Gpnmb, Steap1, Steap2, Has2,
+
+Innate Immune and Inflammatory Response:
+Ifnar1, Cxcl12, Cxcl14, Ighm, Selplg, Nlrp1a, Tnfrsf1a, Defb29, Trim35, Id2, Parp14, Cggbp1, Icoslg, A2m, Rnf144a, Runx3, Eif2ak2, Atf3, Timp1, Tf,
+
+Cellular Stress, Protein Quality Control and Autophagy:
+Hsp90aa1, Hspa12a, Map1lc3a, Psmd2, Sumo3, Atf3, Atf5, Eif2ak2, Rrm2, Msh2, Pnpt1, Smc6, Stk39, Vps8, Vps26c, Fbxo11,

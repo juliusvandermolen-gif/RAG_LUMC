@@ -1,0 +1,44 @@
+Pathway Name: Myelin Sheath Formation and Maintenance  
+Mag, Mpz, Plp1, Mbp, Mal,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+Scd, Hadhb, Abca8a, Abca3, Abcb4, Pltp, Lrp2, Apod,  
+
+Pathway Name: Sphingolipid Biosynthesis and Metabolism  
+Sptlc2, Cers6, Smpd1, Sgms1,  
+
+Pathway Name: Neural Crest Differentiation and Schwann Cell Development  
+Mef2c, Nrp1, Nrp2, Efna5, Epha4,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxna4, Plxnb1,  
+
+Pathway Name: PI3K-AKT-mTOR Signaling  
+Akt1, Grb14, Rps6ka5,  
+
+Pathway Name: ERK/MAPK Signaling  
+Mapk1, Map2k6,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+Bdnf, Synpr, Vgf, Snap29,  
+
+Pathway Name: Extracellular Matrix Organization  
+Col9a3, Col15a1, Col16a1, Col5a2, Col11a1, Col7a1, Col8a2, Col20a1, Col14a1,  
+
+Pathway Name: Wnt/β-catenin Signaling  
+Wnt5a, Lef1, Ctnnb1,  
+
+Pathway Name: Lysosomal Function and Autophagy  
+Ctsd,  
+
+Pathway Name: Inflammatory and Immune Response  
+Tnfrsf1a, Il18rap, Icam1, Ccl7, Cxcl12, Cxcl14,  
+
+Pathway Name: Ion Transport and Channel Activity  
+Scn7a, Kif1a, Slc25a22,  
+
+Pathway Name: Ether Lipid and Plasmalogen Metabolism  
+Agmo, Hs6st1, Hs6st2, Hs6st3,  
+
+Pathway Name: Regulation of Actin Cytoskeleton  
+Acta2, Tubb4a, Tuba4a, Cfl2,

@@ -1,0 +1,29 @@
+Pathway Name: Myelin Formation and Maintenance  
+Pmp22, Mag, Mbp, Plp1, Prx, Mal, Gjb1, Mpz, Cldn19, Lrp2, Hapln1, Sema4f, Nrg1, Erbb2, Sox10, Egr2, Oct6, Brn2, Prkar2b, Pllp, Cnp, Mag, Qdpr, Cldn19, Mog, Pmp22, Cldn19, Cldnd1, Emp2, Gprc5b, Gprc5a, Tspan4, Cd9, Cd151, Cd59b, Cd302, Cd55, Cdca7l, Cdca4, Cdkn1a, Cd44, Cd82, Cd63, Cd81, Cd200, Cd47, Cd9, Cd81, Cd63, Cd44, Cd82, Cd47, Cd200, Cd302, Cd55, Cd59b, Cd151, Cdca4, Cdca7l, Cdkn1a  
+
+Pathway Name: Synaptic Plasticity and Long-Term Potentiation  
+Bdnf, Ntrk2, Grin1, Grin2a, Grin2b, Grin2d, Grin3a, Grin3b, Grin2c, Synpr, Syp, Syn1, Syn2, Snap25, Stx1a, Stxbp1, Syt1, Syt4, Syt11, Syt7, Syt13, Syt5, Syt9, Syt6, Syt12, Syt14, Syt16, Syt17, Sytl4, Sytl5, Sytl1, Sytl2, Sytl3, Sytl4, Sytl5, Dlg4, Dlgap1, Dlgap2, Dlgap3, Dlgap4, Shank1, Shank2, Shank3, Homer1, Homer2, Homer3, Crmp1, Crmp2, Crmp4, Crmp5, Dpysl2, Dpysl3, Dpysl5, Camk2a, Camk2b, Camk2d, Camk2g, Prkaca, Prkacb, Prkacg, Prkar2a, Prkar2b, Ppp1r1b, Ppp1r9a, Ppp1r9b, Ppp3ca, Ppp3cb, Ppp3cc, Ppp3r1, Ppp3r2  
+
+Pathway Name: Lipid Metabolism and Cholesterol Biosynthesis  
+Abca8a, Abcb4, Abca1, Abca2, Abca3, Abca4, Abca5, Abca6, Abca7, Abca9, Abca10, Abca12, Abca13, Fabp5, Fabp7, Fabp3, Fabp4, Scd, Acsl3, Acsl4, Acsl5, Acsl6, Acsl1, Acsl2, Acaa2, Acat1, Acat2, Hmgcr, Hmgcs1, Hmgcs2, Sqle, Lss, Cyp51, Nsdhl, Sc5d, Dhcr7, Dhcr24, Msmo1, Mvd, Fdps, Fdft1, Idi1, Idi2, Mvk, Pmvk, Pdss1, Pdss2, Decr1, Decr2, Ech1, Echs1, Acaa1a, Acaa1b, Acaa2, Hsd17b7, Hsd17b4, Hsd17b12, Hsd17b10, Hsd17b11, Hsd17b8  
+
+Pathway Name: Axon Guidance and Neurite Outgrowth  
+Sema4f, Nrp1, Nrp2, Slit2, Robo1, Robo2, Robo3, Robo4, Epha4, Epha5, Epha7, Ephb2, Ephb3, Ephb4, Efnb1, Efnb2, Efnb3, Efna1, Efna2, Efna3, Efna4, Efna5, Plxna1, Plxna2, Plxna3, Plxna4, Plxnb1, Plxnb2, Plxnb3, Plxnc1, Plxnd1, Unc5a, Unc5b, Unc5c, Unc5d, Dcc, Ntn1, Ntn4, Dscam, Dscaml1, Dscam2, Dscam3, Dscam4, Dscam5, Dscam6, Dscam7, Dscam8, Dscam9  
+
+Pathway Name: Neural Crest Cell Migration and Differentiation  
+Sox10, Sox9, Sox8, Sox2, Sox3, Twist1, Twist2, Snai1, Snai2, Zeb1, Zeb2, Ebf1, Ebf2, Ebf3, Ebf4, Phox2a, Phox2b, Ascl1, Ascl2, Ascl3, Ascl4, Ascl5, Neurod1, Neurod2, Neurod4, Neurod6, Neurog1, Neurog2, Neurog3, Olig1, Olig2, Olig3, Olig4, Olig5, Olig6, Olig7, Olig8, Olig9, Olig10, Olig11, Olig12, Olig13, Olig14, Olig15  
+
+Pathway Name: ER Stress and Unfolded Protein Response  
+Htra1, Atf3, Atf4, Atf5, Atf6, Xbp1, Ern1, Ern2, Eif2ak2, Eif2ak3, Eif2ak4, Eif2s1, Eif2s2, Eif2s3, Ddit3, Chop, Bip, Hspa5, Hsp90b1, Hspa8, Hspa9, Hspa1a, Hspa1b, Hspa1l, Hspa2, Hspa4, Hspa4l, Hspa12a, Hspa14, Hspa13, Hspa12b, Hspa12a, Hspa1a, Hspa1b, Hspa1l, Hspa2, Hspa4, Hspa4l, Hspa5, Hspa8, Hspa9, Hsp90aa1, Hsp90ab1, Hsp90b1, Hspa12a, Hspa12b, Hspa13, Hspa14  
+
+Pathway Name: Glial Cell Differentiation and Schwann Cell Development  
+Sox10, Egr2, Oct6, Brn2, Krox20, Nrg1, Erbb2, Erbb3, Erbb4, Gpr126, Pmp22, Mpz, Mbp, Plp1, Mag, Prx, Cldn19, Lrp2, Hapln1, Sema4f, Nrg1, Erbb2, Sox10, Egr2, Oct6, Brn2, Pllp, Cnp, Mag, Qdpr, Cldn19, Mog, Pmp22, Cldn19, Cldnd1, Emp2, Gprc5b, Gprc5a, Tspan4, Cd9, Cd151, Cd59b, Cd302, Cd55, Cdca7l, Cdca4, Cdkn1a, Cd44, Cd82, Cd63, Cd81, Cd200, Cd47, Cd9, Cd81, Cd63, Cd44, Cd82, Cd47, Cd200, Cd302, Cd55, Cd59b, Cd151, Cdca4, Cdca7l, Cdkn1a  
+
+Pathway Name: Neuroinflammation and Immune Response in Neural Tissue  
+C3, Ccl7, Tnfrsf1a, Tnfrsf1b, Tnfrsf10a, Tnfrsf10b, Tnfrsf10c, Tnfrsf10d, Tnfrsf11a, Tnfrsf11b, Tnfrsf12a, Tnfrsf13b, Tnfrsf13c, Tnfrsf14, Tnfrsf17, Tnfrsf18, Tnfrsf19, Tnfrsf21, Tnfrsf25, Tnfrsf4, Tnfrsf8, Tnfrsf9, Il1r1, Il1r2, Il1rap, Il1rl1, Il1rl2, Il1rn, Il6r, Il6st, Il10ra, Il10rb, Il12rb1, Il12rb2, Il13ra1, Il13ra2, Il15ra, Il17ra, Il17rb, Il17rc, Il17rd, Il17re, Il18r1, Il18rap, Il21r, Il22ra1, Il22ra2, Il23r, Il27ra, Il31ra, Il4r, Il7r, Il9r, Ifnar1, Ifnar2, Ifngr1, Ifngr2  
+
+Pathway Name: Calcium Ion Signaling and Homeostasis  
+Ryr3, Itpr1, Itpr2, Itpr3, Cacna1a, Cacna1b, Cacna1c, Cacna1d, Cacna1e, Cacna1f, Cacna1g, Cacna1h, Cacna1i, Cacna1s, Cacna2d1, Cacna2d2, Cacna2d3, Cacna2d4, Cacnb1, Cacnb2, Cacnb3, Cacnb4, Cacng1, Cacng2, Cacng3, Cacng4, Cacng5, Cacng6, Cacng7, Cacng8, Trpc1, Trpc2, Trpc3, Trpc4, Trpc5, Trpc6, Trpc7, Trpm1, Trpm2, Trpm3, Trpm4, Trpm5, Trpm6, Trpm7, Trpm8, Trpv1, Trpv2, Trpv3, Trpv4, Trpv5, Trpv6  
+
+Pathway Name: Extracellular Matrix Organization and Cell Adhesion  
+Col9a3, Col15a1, Col11a1, Col4a1, Col4a2, Col4a3, Col4a4, Col4a5, Col4a6, Col5a1, Col5a2, Col5a3, Col6a1, Col6a2, Col6a3, Col6a4, Col6a5, Col6a6, Col7a1, Col8a1, Col8a2, Col10a1, Col12a1, Col14a1, Col16a1, Col18a1, Col19a1, Col20a1, Col21a1, Col22a1, Col23a1, Col24a1, Col25a1, Col27a1, Col28a1, Fn1, Sparc, Lama4, Lamb1, Lamb2, Lamb3, Lamb4, Lamc1, Lamc2, Lamc3, Itga6, Itga7, Itga8, Itgb1, Itgb2, Itgb3, Itgb4, Itgb5, Itgb6, Itgb7, Itgb8

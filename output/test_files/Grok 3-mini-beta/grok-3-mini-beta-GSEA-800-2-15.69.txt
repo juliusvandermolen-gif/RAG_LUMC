@@ -1,0 +1,14 @@
+Myelination Pathway:  
+Pmp22, Mbp, Plp1, Mag, Mpz, Hapln1, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Col7a1, Col14a1, Col16a1, Col5a2,  
+
+PI3K-AKT-mTOR Signaling Pathway:  
+Akt1, Mtor, Pten, Pdk1, Pdpk1, Pik3ca, Pik3cb, Pik3cd, Pik3r1, Tsc1, Tsc2, Rictor, Rptor, Eif4e, Eif4ebp1,  
+
+Cholesterol Biosynthesis and Lipid Metabolism Pathway:  
+Hmgcr, Hmgcs1, Fdps, Sqle, Dhcr7, Dhcr24, Lss, Idi1, Mvk, Pmvk, Mvk, Fdft1, Cyp51, Sc5d, Nsdhl,  
+
+Synaptic Plasticity and Neural Signaling Pathway:  
+Bdnf, Camk4, Mapk1, Mapk3, Map2k1, Map2k2, Creb1, Nfkb1, Grin1, Grin2a, Grin2b, Camk2a, Camk2b,  
+
+Autophagy Pathway:  
+Atg5, Atg7, Becn1, Ulk1, Map1lc3a, Map1lc3b, Sqstm1, Atg12, Atg16l1,  

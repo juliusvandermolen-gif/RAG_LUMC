@@ -1,0 +1,23 @@
+Extracellular Matrix Organization:
+Zpld1, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Timp1, Pxdn, Htra1, Pappa, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Efemp2, Emilin1, Mfap5, Bgn, Hapln1, Has2, Sbspon, Ccn3, Ccn4, Arsg, Arsb, Olfml1, Gpnmb,
+
+Axon Guidance and Neuronal Connectivity:
+Cntn6, Prss12, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Ntn1, Plxnb1, Efna5, Met, Dpysl3, Dpysl5, Lrrtm3, Kif1a, Srgap1, Itpripl1, Hs6st1, Hs6st2, Drp2, Mag, Mpz, Gldn, Prx, Scn7a, Piezo2, Synpr, P2ry2, Tubb4a, Ryr3, Slitrk6,
+
+Integrin-Mediated Cell Adhesion and Cytoskeletal Remodeling:
+Itga8, Itga7, Cd9, Cd151, Tspan4, Tspan5, Emp2, Pkp1, Cldn19, Cldnd1, Tagln, Acta2, Fhod3, Pfn2, Rhoj, Asap1, Acap2, Stard13, Myo1d, Nes, Tuba4a, Septin4, Septin5, Gja1, Ppfia4,
+
+Wnt Signaling and Developmental Patterning:
+Wnt5a, Lef1, Lrp2, Tnik, Ppard, Dyrk1a, Klf9, Gprc5a, Gprc5b, Pcsk5, Rnf144a, Ccn3, Ccn4,
+
+Hypoxia and Angiogenesis:
+Epas1, Cxcl12, Cxcl14, Nampt, Serpinf1, Vash1, Nrp1, Nrp2, Ptgfr, Timp1, Apod, Met, Plxnb1, Gja1, Igfbp3,
+
+Lipid Transport and Metabolism:
+Abca8a, Abcb4, Pltp, Apod, Agpat5, Cers6, Sgpl1, Lrp2, Ppard, Nampt, C1qtnf1, Serinc5, St3gal5,
+
+Protein Ubiquitination and Autophagy:
+Map1lc3a, Psmd2, Fbxo11, Trim35, Rnf144a, Sumo3, Stk39, Nek9,
+
+Myelination and Peripheral Nervous System Development:
+Mpz, Pmp22, Mag, Drp2, Mal, Gldn, Prx, Scn7a, Cntn6, Dpysl3, Dpysl5,

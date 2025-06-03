@@ -1,0 +1,11 @@
+Axon Guidance:
+Cntn6, Sema4f, Ntn1, Robo2,
+
+Synaptic Signaling & Plasticity:
+Prss12, Synpr, Efna5, Nrp1, Nrp2,
+
+Cytoskeletal Dynamics & Axonal Transport:
+Tuba4a, Kif1a, Septin4, Dpysl3, Dpysl5,
+
+Myelination & Neural Differentiation:
+Mpz, Prx, Drp2, Nes, Hapln1, Gldn,

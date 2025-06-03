@@ -1,0 +1,23 @@
+Axon Guidance and Neuronal Connectivity:
+Cntn6, Sema3g, Sema4f, Nrp1, Nrp2, Slit2, Robo2, Ntn1, Plxnb1, Efna5, Lrrtm3, Kif1a, Dpysl3, Dpysl5, Gldn, Itga8, Piezo2, Ryr3, Mef2c, Nes, Srgap1, Synpr,
+
+Myelination and Schwann Cell Structure:
+Mag, Mpz, Pmp22, Drp2, Mal, Cldn19, Prx, Gja1, Itga7, Sgpl1, Cers6,
+
+Extracellular Matrix Organization and Cell Adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Matn3, Hapln1, Mfap5, Bgn, Emilin1, Peg3, Itga7, Itga8, Cd151, Emp2, Parm1,
+
+Lipid Metabolism and Cholesterol Homeostasis:
+Abca8a, Abcb4, Apod, Pltp, Nampt, Steap1, Steap2, Sgpl1, Cers6, Ppard, Tf, Hadhb, Fth1, Fam20c, Ptgfr,
+
+Wnt Signaling and Developmental Regulation:
+Wnt5a, Lef1, Tnik, Dyrk1a, Ccn3, Ccn4,
+
+Cytoskeletal Dynamics and Cell Migration:
+Acta2, Tagln, Tuba4a, Tubb4a, Pfn2, Fhod3, Septin4, Septin5, Nek9, Rhoj, Asap1, Acap2, Myo1d, Id2, Klf9, Prkd3, Ppm1f, Stard13,
+
+Immune and Inflammatory Response:
+Ifnar1, Nlrp1a, Tnfrsf1a, Cxcl12, Cxcl14, Igfbp3, Ighm, A2m, C1qtnf1, Selplg, Runx3, Atf3, Trim35, Parp14, Nfatc1, Eif2ak2, Sumo3, Psmd2, Timp1,
+
+Glycosaminoglycan and Heparan Sulfate Biosynthesis:
+Hs6st1, Hs6st2, Chst2, St3gal5, Fut10, Has2, Arsg, Arsb, Gcnt1, Manba, Man1a1, Slc35a2, Poglut1, Pgm1,

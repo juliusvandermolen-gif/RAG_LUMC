@@ -1,0 +1,11 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Sema4f, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Epha4, Dpysl3, Dpysl5, Srgap1, Lrrtm3, Vangl2, Kif1a, Itga8, Itga7, Itga6, Itga1, Tnik, Rhoj, Asap1, Arhgef9, Daam2, Wnt5a,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mag, Mpz, Plp1, Mbp, Mog, Gldn, Drp2, Ugt8, Mal, St3gal5, Cers6, Cldn19,
+
+Synaptic Transmission and Plasticity:
+Prss12, Synpr, Vamp2, Bdnf, Adcy1, Grik5, Grid2, Ryr3, Drd4, Chrna3, Cpe, Cdk5r1, Camk1d, Ncs1, Frrs1,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Vangl2, Daam2, Lef1, Tnik, Rhoj, Frmd6, Prickle3,

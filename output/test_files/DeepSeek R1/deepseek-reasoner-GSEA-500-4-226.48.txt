@@ -1,0 +1,44 @@
+Pathway Name: Myelin Sheath Formation and Maintenance  
+PMP22, MPZ, MAG, MBP, PLP1, GJA1, CLDN19, SEPTIN4, SEPTIN5,  
+
+Pathway Name: Axon Guidance and Semaphorin Signaling  
+SEMA4F, SEMA3G, NRP1, NRP2, PLXNB1, SLIT2, ROBO2, EFNA5, DPYSL5, DPYSL3,  
+
+Pathway Name: Cholesterol and Lipid Metabolism  
+PMP22, ABCA8A, ABCB4, APOD, PLTP, SCD, SQOR,  
+
+Pathway Name: Lysosomal Pathway  
+CTSD, CTSL, CTSF,  
+
+Pathway Name: MAPK/ERK Signaling  
+MAPK1, MAP2K6, DYRK1A, ATF3, EIF2AK2,  
+
+Pathway Name: Synaptic Plasticity and Neurotransmission  
+SYNPR, SYNM, GRB14, GNG2, GNAI1, ADCY1, DRD4, P2RY2, RYR3, SIPA1L1,  
+
+Pathway Name: Extracellular Matrix Organization  
+COL9A3, COL15A1, COL20A1, COL11A1, COL8A2, BGN, FN1, MATN3, EFEMP2, HAS2,  
+
+Pathway Name: Inflammatory Response  
+CXCL12, CXCL14, TNFRSF1A, IFNAR1, CCL7, TIMP1, BACE2,  
+
+Pathway Name: Autophagy and Ubiquitination  
+MAP1LC3A, UBE2L3, FBXO11, CUL4B,  
+
+Pathway Name: Neural Crest Development  
+MEF2C, EBF1, FOXN2,  
+
+Pathway Name: Hypoxia Response  
+HIF1A, SERPINE1,  
+
+Pathway Name: Notch Signaling  
+ADAMTS17, ADAMTSL1, ADAMTSL3,  
+
+Pathway Name: Wnt Signaling  
+WNT5A, LEF1,  
+
+Pathway Name: Ion Transport and Channels  
+SCN7A, KIF1A, KIF26B, TPCN1, PIEZO2,  
+
+Pathway Name: Complement System  
+C1QTNF1, C1QTNF2, C1S,

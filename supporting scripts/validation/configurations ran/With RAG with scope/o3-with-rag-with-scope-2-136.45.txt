@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Sema3g, Sema4f, Itga8, Itga7, Dpysl3, Dpysl5, Srgap1, Tnik, Kif1a, Dyrk1a, Rhoj, Wnt5a, Tuba4a, Cdh13, Lrrtm3, Gldn,
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Pmp22, Mag, Drp2, Prx, Mal, Gldn, Cldn19, St3gal5, Abca8a, Sgpl1, Cers6, Apod, Abcb4, Bace2, Chmp2b, Map1lc3a, Tf, Hs6st2,
+
+Synaptic Transmission and Plasticity:
+Synpr, Serpini1, Serpinf1, Ryr3, Scn7a, P2ry2, Piezo2, Kif1a, Prkar2b, Mef2c, Frrs1, Dpysl3, Dpysl5, Lrrtm3,
+
+Extracellular Matrix Organization in Neural Development:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Mfap5, Emilin1, Efemp2, Bgn, Pxdn, Matn3, Timp1, Has2, Sbspon, Parm1, Emp2,
+
+Neurotrophic and Growth Factor Signaling:
+Met, Lifr, Ghr, Wnt5a, Lef1, Igfbp3, Igf2bp2, Runx3, Epas1, Nrp1, Nrp2, Pappa, Pcsk5, Cpe, Nampt,
+
+Ion Channel and Calcium Signaling:
+Scn7a, Ryr3, Piezo2, Tpcn1, Itpripl1, Gnai1, Gja1, P2ry2,
+
+Lipid Metabolism and Myelin Integrity:
+Abca8a, Abcb4, Sgpl1, Cers6, Agpat5, St3gal5, Ppard, Nampt, Apod, Lrp2, Serinc5, Hadhb, Sqor,

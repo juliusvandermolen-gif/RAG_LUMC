@@ -1,0 +1,17 @@
+Axon Guidance & Synaptogenesis:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Srgap1, Pkp1, Kif1a
+
+Myelination & Schwann Cell Function:
+Mpz, Drp2, Gldn, Mag, Prx, Ltbp1, Cldn19
+
+Neural Signaling & Synaptic Plasticity:
+Synpr, Atf3, P2ry2, Piezo2, Tuba4a, Tf, Tnik, Nrp1, Nrp2, Gprc5a
+
+Extracellular Matrix & Cell Adhesion:
+Hapln1, Col9a3, Col20a1, Col15a1, Matn3, Emilin1, Cdh13, Cd9
+
+Neural Development & Differentiation:
+Prss12, Id2, Trim35, Ebf1, Lifr
+
+Metabolic Modulators in Neural Context:
+Aldh1a1, Htra1, Igfbp3, A2m, Eif2ak2, Rrm2

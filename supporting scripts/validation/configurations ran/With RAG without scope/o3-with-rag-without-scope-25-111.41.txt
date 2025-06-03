@@ -1,0 +1,14 @@
+Peripheral nerve myelination:
+Pmp22, Mpz, Mag, Prx, Drp2, Mal, Gldn, Cldn19, Itga7, Itga8, Gja1,
+
+Extracellular matrix organization:
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Pappa, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Mfap5, Matn3, Emilin1, Bgn, Efemp2, Pxdn, Timp1, Ltbp1,
+
+Axon guidance and neuronal connectivity:
+Nrp1, Nrp2, Robo2, Slit2, Sema4f, Sema3g, Ntn1, Plxnb1, Efna5, Srgap1, Dpysl3, Dpysl5, Tnik, Kif1a, Lrrtm3, Piezo2, Cntn6, Synpr,
+
+Lipid and cholesterol metabolism:
+Abca8a, Abcb4, Pltp, Apod, Sgpl1, Cers6, C1qtnf1, Agpat5, Gpnmb, Hadhb, Serinc5, Pmp22, Steap1, Steap2,
+
+Innate and adaptive immune signaling:
+Ifnar1, Selplg, Tnfrsf1a, Cxcl12, Cxcl14, Ighm, Tril, Defb29, Nlrp1a, Icoslg, Runx3, Aif1l, Id2, Ebf1, Cd9, Cd151,

@@ -1,16 +1,36 @@
 import os
 import pandas as pd
 import requests
-from RAG_workflow import initialize_gene_list, extract_gene_descriptions, load_config
+from RAG_workflow import initialize_gene_list, load_config
 import argparse
 
 
-def query_gprofiler_rest(genes, organism="rnorvegicus", user_threshold=0.05):
+def query_gprofiler_rest(
+    genes_list: List[str],
+    organism: str = "rnorvegicus",
+    user_threshold: float = 0.05
+) -> pd.DataFrame:
+    """
+    Send a POST request to the g:Profiler REST API to perform gene set enrichment analysis.
+
+    Args:
+        genes_list: A list of gene identifiers to query.
+        organism: The organism database to use (default: "rnorvegicus").
+        user_threshold: The significance threshold (p-value) for returned results (default: 0.05).
+
+    Returns:
+        A pandas DataFrame containing the raw JSON results from g:Profiler, with additional
+        transformation of the 'intersections' field into human-readable gene names if available.
+
+    Raises:
+        requests.HTTPError: If the HTTP request to g:Profiler returns an error status.
+        ValueError: If the response JSON cannot be parsed or expected fields are missing.
+    """
     url = "https://biit.cs.ut.ee/gprofiler/api/gost/profile/"
     sources = ["GO:BP", "GO:MF", "GO:CC", "KEGG", "REAC"]
     payload = {
         "organism": organism,
-        "query": genes,
+        "query": genes_list,
         "user_threshold": user_threshold,
         "sources": sources,
         "significance_threshold_method": "g_SCS",
@@ -38,8 +58,8 @@ def query_gprofiler_rest(genes, organism="rnorvegicus", user_threshold=0.05):
                     if len(v) == 1:
                         reverse_mapping[v[0]] = k
                     else:
-                        for i in v:
-                            reverse_mapping[i] = i
+                        for items in v:
+                            reverse_mapping[items] = items
                 reverse_mappings[query] = reverse_mapping
             # Update each result's intersections to contain gene names
             for result in data["result"]:
@@ -57,8 +77,16 @@ def query_gprofiler_rest(genes, organism="rnorvegicus", user_threshold=0.05):
     return df
 
 
-def flatten_list(nested_list):
-    """Recursively flattens a nested list."""
+def flatten_list(nested_list: List[Any]) -> List[Any]:
+    """
+    Recursively flatten a nested list structure into a single flat list of elements.
+
+    Args:
+        nested_list: A potentially nested list of items, where items may themselves be lists.
+
+    Returns:
+        A flat list containing all non-list elements from the original nested_list, in depth-first order.
+    """
     flat = []
     for item in nested_list:
         if isinstance(item, list):
@@ -68,7 +96,24 @@ def flatten_list(nested_list):
     return flat
 
 
-def filter_best_per_parent(df):
+def filter_best_per_parent(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    From a DataFrame of enrichment results, keep only the best (lowest p-value) term per parent ontology.
+
+    The function expects the DataFrame to contain at least the columns 'p_value', 'parents', and 'native'.
+    It sorts rows by ascending p-value, then iterates and keeps the first occurrence of each term whose
+    parent has not already been included. If required columns are missing, the input DataFrame is returned unchanged.
+
+    Args:
+        df: A pandas DataFrame containing enrichment results, with columns:
+            - 'p_value': Numeric p-value of each enrichment term.
+            - 'parents': A list of parent term IDs associated with each enrichment term.
+            - 'native': The unique term ID for each enrichment result.
+
+    Returns:
+        A pandas DataFrame filtered to include only one (best p-value) term per parent. If the required
+        columns are not present, returns df without modification.
+    """
     required_cols = {'p_value', 'parents', 'native'}
     if not required_cols.issubset(df.columns):
         return df
@@ -101,10 +146,12 @@ if __name__ == "__main__":
     globals().update(config)
 
     print(f"Using config: {config_name}")
-
-    gene_list_string, regulation, num_genes = initialize_gene_list(max_genes=max_genes, fdr_threshold=fdr_threshold)
+    max_genes_value = ""
+    for i in max_genes:
+        max_genes_value = i
+    gene_list_string, regulation, num_genes = initialize_gene_list(max_genes=max_genes_value,
+                                                                   fdr_threshold=fdr_threshold)
     print(f"Number of genes: {num_genes}")
-    gene_descriptions = extract_gene_descriptions(gene_list_string)
 
     genes = [gene.strip() for gene_list in gene_list_string.split(',')
              for gene in gene_list.split() if gene.strip()]
@@ -112,7 +159,7 @@ if __name__ == "__main__":
     if genes:
         try:
             # Query g:Profiler using the REST API
-            df_api = query_gprofiler_rest(genes=genes, organism="rnorvegicus", user_threshold=0.05)
+            df_api = query_gprofiler_rest(genes_list=genes, organism="rnorvegicus", user_threshold=0.05)
 
             # Filter for significant results (p-value < 0.05)
             df_api_sig = df_api[df_api["p_value"] < 0.05].copy()
@@ -138,9 +185,8 @@ if __name__ == "__main__":
 
             # Final DataFrame with desired columns:
             df_final = df_api_best[["Pathway", "description", "annotation term", "source", "p-value", "genes"]]
-            os.makedirs("./output/text_files", exist_ok=True)
-            output_path = "./output/text_files/ground_truth_pathways.txt"
-            #df_final[["Pathway", "annotation term", "genes"]].to_csv(output_path, sep="\t", index=False)
+            os.makedirs("./output/results", exist_ok=True)
+            output_path = "./output/results/ground_truth_pathways.txt"
             df_final[["Pathway", "annotation term"]].to_csv(output_path, sep="\t", index=False)
             print(f"Output written to {output_path}")
 

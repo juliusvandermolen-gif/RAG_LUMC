@@ -1,0 +1,32 @@
+Axon guidance and synaptogenesis:
+Sema4f, Sema3g, Slit2, Robo2, Ntn1, Plxnb1, Nrp1, Nrp2,
+
+Synaptic transmission and cAMP signaling:
+Synpr, Snap29, Vgf, Drd4, Adcy1, Prkar2b,
+
+Myelination and glial cell development:
+Pmp22, Mbp, Plp1, Mag, Prx, Mpz, Gldn, Cldn19, Cldnd1,
+
+Lipid metabolism and cholesterol homeostasis:
+Aldh1a1, Apod, Abca8a, Abcb4, Pltp, Sgms1, St3gal5, Cers6, Lrp2,
+
+ECM composition and cell adhesion:
+Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Hapln1, Emilin1, Mfap5, Sbspon, Matn3, Bgn, Itga6, Itga7, Itga8, Cdh13, Pcdh18, Cntn6,
+
+Growth factor signaling (PI3K-Akt / MAPK pathway):
+Mapk1, Map2k6, Grb14, Igfbp3, Lifr, Ccn3,
+
+Wnt signaling and planar cell polarity:
+Wnt5a, Lef1, Vangl2, Daam2,
+
+Calcium signaling:
+Ryr3, Itpripl1, Piezo2,
+
+GPCR signaling:
+Gnai1, P2ry2, Gprc5b, Gprc5a,
+
+Neuroinflammation and immune modulation:
+Cxcl12, Cxcl14, Cxcl16, Ccl7, Icoslg, Ifnar1, Nlrp1a,
+
+Autophagy and lysosomal function:
+Map1lc3a, Ctbs, Ctsd, Ctsf, Ctsl,

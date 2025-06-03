@@ -1,0 +1,41 @@
+Axon guidance:  
+Robo2, Slit2, Ntn1, Efna5, Cdh13  
+
+Semaphorin-Plexin signaling:  
+Sema4f, Sema3g, Plxnb1, Nrp1, Nrp2  
+
+Synaptic vesicle cycle:  
+Snap29, Synpr  
+
+Neurotransmitter/GPCR signaling:  
+Drd4, P2ry2, Gprc5a, Gprc5b, Gnai1  
+
+Calcium signaling:  
+Camk1d, Ryr3, Itpripl1, Piezo2  
+
+MAPK signaling:  
+Mapk1, Map2k6, Map4k5, Mapk8ip1, Tnik  
+
+Wnt signaling:  
+Wnt5a, Lef1  
+
+Neural transcription factor network:  
+Atf3, Atf5, Mef2c, Nfatc1, Klf9, Sp4, Runx3, Ebf1, Hes6, Rarb  
+
+Myelination and lipid homeostasis:  
+Mbp, Mpz, Plp1, Mal, Abca8a, Abcb4, Pltp, Apod  
+
+Cytoskeleton and axonal transport:  
+Tuba4a, Tubb4a, Dnm1l, Dync2i1, Kif1a, Kif3c, Kif26b, Arhgap24, Arhgap5, Asap1, Asap2, Actr10  
+
+ECM-Receptor interaction:  
+Itga1, Itga6, Itga7, Itga8, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Fn1, Hapln1, Matn3, Emilin1, Sbspon, Emp2  
+
+Chemokine and neuroinflammation:  
+Cxcl12, Cxcl14, Ccl7, Il18rap, Tnfrsf1a, Ifnar1, Cxcl16  
+
+Ubiquitin-proteasome and SUMOylation:  
+Ufd1, Ube2l3, Psmd2, Trim35, Trim13, Trim21, Sumo3  
+
+RNA processing and translation control:  
+Pum2, Eif2ak2, Eif2b5, Eif2s1, Papola, Pnpt1

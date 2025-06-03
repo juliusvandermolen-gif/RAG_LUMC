@@ -1,0 +1,20 @@
+ErbB signaling pathway:
+Nrg1, Lifr, ErbB2, ErbB3, ErbB4,
+
+PI3K-AKT signaling pathway:
+Akt1, Pik3ca, Pik3cb, Pik3r1, Pten, Pdpk1,
+
+MAPK signaling pathway:
+Mapk1, Mapk3, Map2k1, Map2k2, Mapk8, Mapk14,
+
+Myelin sheath formation:
+Mbp, Mag, Plp1, Pmp22, Mpz, Cnp, Mobp,
+
+Lipid metabolism:
+Acat1, Acsl1, Acsl3, Acot1, Acot2, Acsl4,
+
+Autophagy:
+Atg5, Atg7, Becn1, Map1lc3a, Sqstm1, Ulk1,
+
+Synaptic plasticity:
+Bdnf, Camk2a, Camk4, Grin1, Grin2a, Syn1,
