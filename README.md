@@ -40,7 +40,7 @@ You can set up the environment via **Conda** or **pip**:
 **Conda (recommended)**
 
 ```bash
-conda env create -f environment.yaml
+conda env create -f environment.yml
 conda activate rag_lumc
 ```
 
