@@ -1,0 +1,14 @@
+Axon Guidance and Growth Cone Dynamics:
+Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, SrGAP1, Dpysl3, Dpysl5, Tnik, Lrrtm3, Gnai1,
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Drp2, Mag, Mal, Prx, Gldn, Cldn19, Pmp22 (if present), Ndrg1 (not in list though), but only from list: Mpz, Drp2, Mag, Mal, Prx, Gldn,
+
+Synaptic Vesicle Transport and Neurotransmission:
+Cpe, Synpr, Kif1a, P2ry2, Ryr3, Itpripl1, Numb, Ppfia4, Pam, Pfn2, Map1lc3a,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Rhoj, Dvl? (not), but from list: Wnt5a, Lef1, Tnik, Rhoj,
+
+Extracellular Matrix Remodeling in Neural Crest and Axon Pathfinding:
+Col9a3, Col11a1, Col15a1, Col20a1, Hapln1, Efemp2, Adamts17, Adamtsl1, Adamtsl3, Matn3, Pxdn, Bgn, Mfap5, Emilin1, Vash1,

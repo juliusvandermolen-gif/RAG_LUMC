@@ -15,7 +15,7 @@ import functools
 import logging
 import contextlib
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple, Set
 
 # Third-party imports
 import pandas as pd
@@ -23,7 +23,6 @@ import numpy as np
 import requests
 from tqdm import tqdm
 from dotenv import load_dotenv
-
 
 import nltk
 from nltk import sent_tokenize
@@ -57,8 +56,8 @@ client_gemini = OpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
 client_claude = OpenAI(
-    api_key=os.getenv("CLAUDE_API_KEY"), 
-    base_url="https://api.anthropic.com/v1/"  
+    api_key=os.getenv("CLAUDE_API_KEY"),
+    base_url="https://api.anthropic.com/v1/"
 )
 client_deepseek = OpenAI(
     api_key=os.getenv("DEEPSEEK_API_KEY"),
@@ -68,7 +67,6 @@ client_grok = OpenAI(
     base_url="https://api.x.ai/v1",
     api_key=os.getenv("XAI_API_KEY"),
 )
-
 
 # NLTK: silent downloader
 logging.getLogger('nltk').setLevel(logging.ERROR)
@@ -83,7 +81,7 @@ def ensure_nltk_resource(pkg_name: str, resource_path: str) -> None:
         find(resource_path)
     except LookupError:
         with contextlib.redirect_stdout(open(os.devnull, 'w')), \
-             contextlib.redirect_stderr(open(os.devnull, 'w')):
+                contextlib.redirect_stderr(open(os.devnull, 'w')):
             nltk.download(pkg_name, quiet=True)
 
 
@@ -103,17 +101,17 @@ def load_config(path: str, print_settings: Optional[bool] = False) -> Dict[str, 
     then return the merged dict.
     """
     default_cfg: Dict[str, Any] = {
-        "number_of_expansions":    5,
-        "batch_size":              64,
-        "embeddings_model_name":   "mghuibregtse/biolinkbert-large-simcse-rat",
-        "generation_model":        "o4-mini",
-        "validation_model":        "grok-3-mini",
-        "amount_docs":             50,
-        "weight_faiss":            50,
-        "weight_bm25":             50,
-        "max_genes":               [250],
-        "fdr_threshold":           0.05,
-        "query_range":             1,
+        "number_of_expansions": 5,
+        "batch_size": 64,
+        "embeddings_model_name": "mghuibregtse/biolinkbert-large-simcse-rat",
+        "generation_model": "o4-mini",
+        "validation_model": "grok-3-mini",
+        "amount_docs": 50,
+        "weight_faiss": 50,
+        "weight_bm25": 50,
+        "max_genes": [250],
+        "fdr_threshold": 0.05,
+        "query_range": 1,
     }
 
     try:
@@ -124,6 +122,7 @@ def load_config(path: str, print_settings: Optional[bool] = False) -> Dict[str, 
     def escape_newlines(m: re.Match) -> str:
         inner = m.group(0)[1:-1].replace("\n", "\\n")
         return f"\"{inner}\""
+
     processed = re.sub(r'"(?:\\.|[^"\\])*"', escape_newlines, raw, flags=re.DOTALL)
 
     try:
@@ -161,7 +160,6 @@ stop_words |= {
     "related", "based", "following", "recent", "study"
 }
 
-
 os.makedirs("./logs", exist_ok=True)
 
 
@@ -185,10 +183,10 @@ def compute_file_hash(file_path: str, block_size: int = 65536) -> str:
 
 
 def initialize_gene_list(
-    max_genes: int,
-    fdr_threshold: float,
-    excel_file_path: str = r"data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
-    de_filter_option: str = "combined"
+        max_genes: int,
+        fdr_threshold: float,
+        excel_file_path: str = r"data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx",
+        de_filter_option: str = "combined"
 ) -> Tuple[str, str, int]:
     """
     Creates a list of genes from the specified Excel file based on filtering criteria.
@@ -219,10 +217,10 @@ def initialize_gene_list(
 
 
 def process_excel_data(
-    path: str,
-    mode: str,
-    max_genes: int,
-    fdr: float
+        path: str,
+        mode: str,
+        max_genes: int,
+        fdr: float
 ) -> List[Tuple[str, str, int]]:
     """
     Processes an Excel file to filter and extract gene data based on differential expression and FDR threshold.
@@ -288,8 +286,8 @@ def load_gene_id_cache(file_path: str) -> Dict[str, str]:
 
 
 def save_gene_id_cache(
-    cache: Dict[str, str],
-    file_path: str
+        cache: Dict[str, str],
+        file_path: str
 ) -> None:
     """
     Saves the gene ID cache to a JSON file.
@@ -307,9 +305,9 @@ def save_gene_id_cache(
 
 
 def search_genes(
-    unknown_genes: Set[str],
-    gene_cache: Dict[str, str],
-    cache_file: str
+        unknown_genes: Set[str],
+        gene_cache: Dict[str, str],
+        cache_file: str
 ) -> Dict[str, str]:
     """
     Searches for gene symbols for a set of unknown genes using the MyGene.info API.
@@ -351,9 +349,9 @@ def search_genes(
 
 
 def convert_gene_id_to_symbols(
-    file: str,
-    data_dir: str,
-    ncbi_json_dir: str
+        file: str,
+        data_dir: str,
+        ncbi_json_dir: str
 ) -> Tuple[List[str], List[str]]:
     """
     Converts gene IDs in a file to gene symbols using a cached mapping and by searching unknown genes via an API.
@@ -439,7 +437,7 @@ def convert_gene_id_to_symbols(
 
 # Database Functions
 def initialize_database(
-    db_path: str = './database/reference_chunks.db'
+        db_path: str = './database/reference_chunks.db'
 ) -> sqlite3.Connection:
     """
     Initializes the SQLite database and creates the 'chunks' table if it does not exist.
@@ -687,12 +685,8 @@ def load_file_log(
 
     If the log file does not exist, initializes an empty dictionary and writes it to disk.
 
-    Args:
-        log_path: The path to the JSON file that stores the file log (default: "./logs/file_log.json").
-
     Returns:
-        A dictionary representing the file log (filename → metadata). If the file is corrupted
-        or cannot be decoded as JSON, returns an empty dictionary after reinitializing the file.
+        A dictionary representing the file log (filename → metadata).
     """
     log_dir = os.path.dirname(log_path)
     if not os.path.exists(log_dir):
@@ -706,7 +700,7 @@ def load_file_log(
     if os.path.exists(log_path):
         try:
             with open(log_path, 'r', encoding='utf-8') as file_logs:
-                json.load(file_logs)
+                file_log = json.load(file_logs)
         except json.JSONDecodeError:
             file_log = {}
             print(f"File log at '{log_path}' is corrupted or empty. Initialized with an empty log.")
@@ -720,6 +714,7 @@ def load_file_log(
         save_file_log(file_log, log_path)
 
     return file_log
+
 
 
 def save_file_log(
@@ -1905,14 +1900,49 @@ def save_scores_to_file(
     print(f"Scores saved to {file_name}")
 
 
+def create_config():
+    template = load_config("configs_system_instruction/config_template.json")
+    print(template)
+    specifications = input("Add any specifications you wish to use: ")
+    query = input("What is your research question?")
+
+    instruction = (f"I have a template for a config file, based on this template, and the specifications the user has"
+                   f"given, create a new config.json file. So fill in the template based on the spefications while"
+                   f" maintaining the same structure/formatting. If no information is given about a certain thing in the"
+                   f" config, take the one from the template and fill in the placeholders\n template: {template} \n "
+                   f"specifications: {specifications}")
+    config_name = input("What is your configuration name?")
+    messages = [
+        {"role": "system", "content": instruction},
+        {"role": "user", "content": query}
+    ]
+    new_config = query_llm(messages, query, instruction, save=False, generation_model="o3-mini", query_range=1)
+    with open(f"configs_system_instruction/{config_name}.json", "w", encoding='utf-8') as config_file:
+        json.dump(new_config, config_file, indent=4)
+    print(new_config)
+    return config_name
+
+
 def main() -> None:
+    config_name = ""
+    while True:
+        question_create_config = (input("Do you want to leverage the AI to create a config?\n"
+                                        "Yes or No\n")
+                                  .lower())
+        if question_create_config == "yes":
+            config_name = create_config()
+            break
+        elif question_create_config == "no":
+            break
+
+    config = f"{config_name}.json" if question_create_config == "yes" else "GSEA.json"
     parser = argparse.ArgumentParser(
         description="Run the RAG workflow tests for varying gene counts."
     )
     parser.add_argument(
         "--config",
         type=str,
-        default="./configs_system_instruction/GSEA.json",
+        default=f"./configs_system_instruction/{config}",
         help="Path to the configuration JSON file"
     )
     args = parser.parse_args()
@@ -1921,6 +1951,8 @@ def main() -> None:
     config_name = os.path.splitext(os.path.basename(args.config))[0]
     globals()['config_name'] = config_name
     globals().update(config)
+
+
 
     total_runs = len(max_genes) * query_range
     pbar = tqdm(total=total_runs, desc="Starting GSEA runs")

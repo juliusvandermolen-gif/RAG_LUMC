@@ -1,0 +1,20 @@
+Axon Guidance and Neuronal Projection Development:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Sema3g, Sema4f, Efna5, Dpysl3, Dpysl5, Lrrtm3, Itga8, Tnik, Kif1a, Wnt5a, Rhoj, Srgap1, Gnai1, Cdh13
+
+Peripheral Myelination and Schwann Cell Differentiation:
+Mpz, Pmp22, Prx, Mag, Mal, Drp2, Gldn, Cers6, Psap, Id2, Dyrk1a, Klf9, Serpini1, Gprc5b
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Synpr, Pfn2, Pam, Prkar2b, Scn7a, Ryr3, P2ry2, Ppp1r14c, Sncg, Sumo3, Msi1, Numb, Gja1, Tuba4a
+
+Extracellular Matrix Organization and Axon–ECM Interaction:
+Col11a1, Col15a1, Col20a1, Col8a2, Col9a3, Hapln1, Matn3, Emilin1, Efemp2, Ltbp1, Mfap5, Adamts17, Adamtsl1, Adamtsl3, Adamtsl3, Sqor
+
+Non-canonical Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Tnik, Rhoj, Vash1, Ppm1f, Ppp1r36
+
+PI3K-Akt and Growth Factor Signaling:
+Met, Ghr, Igfbp3, Nampt, Tf, Lifr, Epas1, Efna5, Grb14, Pam
+
+Calcium Signaling and Mechanotransduction:
+Ryr3, Piezo2, P2ry2, Itpripl1, Scn7a, Hs6st2, Nfatc1, Tubb4a

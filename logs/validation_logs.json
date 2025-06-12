@@ -3,7 +3,7 @@
     "Neuronal guidance genes in health and diseases",
     {
       "citation": "(2022, Kong et al., \"Neuronal guidance genes in health and diseases\", *Protein & Cell*)",
-      "count": 6,
+      "count": 8,
       "is_real": true
     }
   ],
@@ -19,7 +19,7 @@
     "Expression of Genes Involved in Axon Guidance: How Much Have We Learned?",
     {
       "citation": "(2020, Suetterlin et al., \"Expression of Genes Involved in Axon Guidance: How Much Have We Learned?\", *International Journal of Molecular Sciences*)",
-      "count": 3,
+      "count": 5,
       "is_real": true
     }
   ],
@@ -91,6 +91,30 @@
     "Synaptic Vesicle Glycoprotein 2C: a role in Parkinson\u2019s disease",
     {
       "citation": "(2024, Janusz et al., \"Synaptic Vesicle Glycoprotein 2C: a role in Parkinson\u2019s disease\", *Frontiers in Cellular Neuroscience*)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Axon guidance pathways and the control of gene expression",
+    {
+      "citation": "(2022, Russell et al., \"Axon guidance pathways and the control of gene expression\", *Developmental Dynamics*)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Proteome profile of peripheral myelin in healthy mice and in a neuropathy model",
+    {
+      "citation": "(2020, Fledrich et al., \"Proteome profile of peripheral myelin in healthy mice and in a neuropathy model\", *eLife*)",
+      "count": 2,
+      "is_real": false
+    }
+  ],
+  [
+    "A molecular mechanism to diversify Ca2+ signaling downstream of Gs protein-coupled receptors",
+    {
+      "citation": "(2024, Schneider et al., \"A molecular mechanism to diversify Ca2+ signaling downstream of Gs protein-coupled receptors\", *Nature Communications*)",
       "count": 2,
       "is_real": true
     }
@@ -376,14 +400,6 @@
     }
   ],
   [
-    "Axon guidance pathways and the control of gene expression",
-    {
-      "citation": "(2022, Russell et al., \"Axon guidance pathways and the control of gene expression\", *Developmental Dynamics*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
     "CNTN6 \u2013 UDN",
     {
       "citation": "(2024, HMS Undiagnosed Diseases Network, \"CNTN6 \u2013 UDN\", *Undiagnosed Diseases Network Report*)",
@@ -392,17 +408,97 @@
     }
   ],
   [
-    "Proteome profile of peripheral myelin in healthy mice and in a neuropathy model",
+    "Periaxin, a novel protein of myelinating Schwann cells with a possible role in axonal ensheathment",
     {
-      "citation": "(2020, Fledrich et al., \"Proteome profile of peripheral myelin in healthy mice and in a neuropathy model\", *eLife*)",
+      "citation": "(1994, Gillespie et al., \"Periaxin, a novel protein of myelinating Schwann cells with a possible role in axonal ensheathment\", *Neuron*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "SARS-CoV-2 Uses a Second Receptor, Neuropilin-1, to Infect Human Cells",
+    {
+      "citation": "(2020, Cantrell et al., \"SARS-CoV-2 Uses a Second Receptor, Neuropilin-1, to Infect Human Cells\", *Cell*)",
       "count": 1,
       "is_real": false
     }
   ],
   [
-    "Periaxin, a novel protein of myelinating Schwann cells with a possible role in axonal ensheathment",
+    "Multifaceted Role of Neuropilins in the Immune System: Potential Targets for Immunotherapy",
     {
-      "citation": "(1994, Gillespie et al., \"Periaxin, a novel protein of myelinating Schwann cells with a possible role in axonal ensheathment\", *Neuron*)",
+      "citation": "(2017, Chaudhary et al., \"Multifaceted Role of Neuropilins in the Immune System: Potential Targets for Immunotherapy\", *Frontiers in Immunology*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Slit/Robo signals prevent spinal motor neuron emigration by organizing the spinal cord basement membrane",
+    {
+      "citation": "(2019, Dickson et al., \"Slit/Robo signals prevent spinal motor neuron emigration by organizing the spinal cord basement membrane\", *bioRxiv* (Note: Not peer-reviewed; thus, no evidence found in PubMed/Google Scholar) | No evidence found. |\n| Axon Guidance and Growth Cone Dynamics | Sema4f | GO:0007411 (axon guidance))",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Ephrin-Eph signaling in axon guidance and beyond",
+    {
+      "citation": "(2020, Klein et al., \"Ephrin-Eph signaling in axon guidance and beyond\", *Developmental Biology*)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "PMP22 duplication dysregulates lipid homeostasis and plasma membrane organization in developing human Schwann cells",
+    {
+      "citation": "(2024, Prior et al., \"PMP22 duplication dysregulates lipid homeostasis and plasma membrane organization in developing human Schwann cells\", *Brain*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Newly produced synaptic vesicle proteins are preferentially used in synaptic transmission",
+    {
+      "citation": "(2017, Takamori et al., \"Newly produced synaptic vesicle proteins are preferentially used in synaptic transmission\", *The EMBO Journal*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Synaptic vesicle-omics in mice captures signatures of aging and synucleinopathy",
+    {
+      "citation": "(2025, Farsi et al., \"Synaptic vesicle-omics in mice captures signatures of aging and synucleinopathy\", *Nature Communications*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Pathogenic convergence of CNVs in genes functionally associated to a severe neuromotor developmental delay syndrome",
+    {
+      "citation": "(2021, Cort\u00e8s et al., \"Pathogenic convergence of CNVs in genes functionally associated to a severe neuromotor developmental delay syndrome\", *Human Genomics*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Wnt/Planar cell polarity signaling: A new paradigm for cancer therapy",
+    {
+      "citation": "(2009, Yang-Snyder et al., \"Wnt/Planar cell polarity signaling: A new paradigm for cancer therapy\", *Molecular Cancer Therapeutics*)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Improved genetically encoded green cAMP (cAMPinG1) and red calcium (RCaMP3) indicators for dual-color monitoring of cAMP and calcium signaling in vivo",
+    {
+      "citation": "(2024, Masayuki et al., \"Improved genetically encoded green cAMP (cAMPinG1) and red calcium (RCaMP3) indicators for dual-color monitoring of cAMP and calcium signaling in vivo\", *Nature Methods*)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Structure and Function of Ryanodine Receptors and IP3 Receptors",
+    {
+      "citation": "(2022, Van Petegem et al., \"Structure and Function of Ryanodine Receptors and IP3 Receptors\", *Biochemical Journal*)",
       "count": 1,
       "is_real": true
     }
