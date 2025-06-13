@@ -99,8 +99,15 @@ pubmed = PubMed(tool="MyTool", email="my@email.address")
 total_matches = 0
 credible_matches = 0
 
+
 pattern = re.compile(
-    r'(\d{4}),\s+([^,]+),\s+\\?"(.*?)"\\?,\s+([^<]+)(<br>.*)',
+    r'\(?\s*'                    # optional opening parenthesis
+    r'(\d{4})\s*,\s*'            # 1) year
+    r'([^,]+?)\s*,\s*'           # 2) authors
+    r'"([^"]+)"\s*,\s*'          # 3) title
+    r'([^\)>]+?)\s*'             # 4) journal (up to ')' or '>')
+    r'\)?\s*>\s*'                # optional closing parenthesis + '>'
+    r'(.+)',                     # 5) rest of summary
     re.MULTILINE
 )
 
@@ -109,47 +116,80 @@ def replace_entry(match):
     global total_matches, credible_matches, validation_logs
     total_matches += 1
 
-    year = match.group(1).strip()
-    authors = match.group(2).strip()
+    year_str = match.group(1).strip()
+    authors_str = match.group(2).strip()
     original_title = match.group(3).strip()
-    journal = match.group(4).strip()
-    orig_summary = match.group(5).strip()
-    citation_str = f"({year}, {authors}, \"{original_title}\", {journal})"
+    journal_str = match.group(4).strip()
+    original_summary = match.group(5).strip()
 
+    # Removes sources from like Twitter (with grok)
+    if original_summary.lower().startswith("no evidence found"):
+        return "No evidence found."
+
+    # Build cache key
     key = original_title
 
     if key in validation_logs:
         entry = validation_logs[key]
         entry['count'] += 1
         is_real = entry['is_real']
-        citation_str = entry.get('citation', citation_str)
-        # print(f"Using cached status for: {original_title} -> is_real={is_real}")
+        citation_str = entry['citation']
     else:
-        # print(f"Querying PubMed for title: {original_title}")
+        query = f'"{original_title}"[Title:~0]'
         try:
-            results = pubmed.query(original_title, max_results=5)
+            results = list(pubmed.query(query, max_results=1))
         except Exception as e:
             print("PubMed query error:", e)
             results = []
 
-        is_real = any(isinstance(article, pymed.article.PubMedArticle) and article.title for article in results)
-        if not is_real:
-            # print("The citation doesn't match any pubmed articles.")
-            pass
-        validation_logs[key] = {'citation': citation_str, 'count': 1, 'is_real': is_real}
+        if results:
+            art = results[0]
+            year = getattr(art.publication_date, 'year', year_str)
+            journal = art.journal or journal_str
+            title = art.title
+            if art.authors:
+                first = art.authors[0]
+                last = first.get('lastname', '').strip()
+                author_label = f"{last} et al." if len(art.authors) > 1 else last
+            else:
+                author_label = authors_str
 
-    sorted_entries = sorted(validation_logs.items(), key=lambda item: item[1]['count'], reverse=True)
+            is_real = True
+            citation_str = f'({year}, {author_label}, "{title}", {journal})'
+        else:
+            # No direct match → keep all original values
+            year = year_str
+            author_label = authors_str
+            journal = journal_str
+            title = original_title
+            is_real = False
+            citation_str = f'({year}, {author_label}, "{title}", {journal})'
+
+        validation_logs[key] = {
+            'citation': citation_str,
+            'count':    1,
+            'is_real':  is_real
+        }
+
+    sorted_entries = sorted(
+        validation_logs.items(),
+        key=lambda item: item[1]['count'],
+        reverse=True
+    )
     with open(log_file, 'w', encoding='utf8') as logf:
         json.dump(sorted_entries, logf, indent=2)
 
+    # Style output
+    styled = (
+        f'<span style="color:green;" >\n{citation_str}</span>'
+        if is_real else
+        f'<span style="color:red;" >\n{citation_str}</span>'
+    )
     if is_real:
-        styled = f'<span style="color:green;">{citation_str}</span>'
         credible_matches += 1
-    else:
-        styled = f'<span style="color:red;">{citation_str}</span>'
 
     time.sleep(1)
-    return f'{styled}{orig_summary}'
+    return f"{styled}{original_summary}"
 
 
 def main():

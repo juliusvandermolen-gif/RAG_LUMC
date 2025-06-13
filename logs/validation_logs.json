@@ -1,104 +1,80 @@
 [
   [
-    "Neuronal guidance genes in health and diseases",
+    "Down syndrome and DYRK1A overexpression: relationships and future therapeutic directions",
     {
-      "citation": "(2022, Kong et al., \"Neuronal guidance genes in health and diseases\", *Protein & Cell*)",
-      "count": 8,
+      "citation": "(2024, Murphy et al., \"Down syndrome and DYRK1A overexpression: relationships and future therapeutic directions.\", Frontiers in molecular neuroscience)",
+      "count": 3,
       "is_real": true
     }
   ],
   [
-    "Analysis of Peripheral Nerve Expression Profiles Identifies a Novel Myelin Glycoprotein, MP11",
+    "A molecular mechanism to diversify Ca2+ signaling downstream of Gs protein-coupled receptors",
     {
-      "citation": "(2008, Srinivasan et al., \"Analysis of Peripheral Nerve Expression Profiles Identifies a Novel Myelin Glycoprotein, MP11\", *Journal of Neuroscience*)",
-      "count": 5,
-      "is_real": true
-    }
-  ],
-  [
-    "Expression of Genes Involved in Axon Guidance: How Much Have We Learned?",
-    {
-      "citation": "(2020, Suetterlin et al., \"Expression of Genes Involved in Axon Guidance: How Much Have We Learned?\", *International Journal of Molecular Sciences*)",
-      "count": 5,
-      "is_real": true
-    }
-  ],
-  [
-    "Variability in proteoglycan biosynthetic genes reveals new facets of heparan sulfates diversity. A systematic review and analysis",
-    {
-      "citation": "(2022, Duval et al., \"Variability in proteoglycan biosynthetic genes reveals new facets of heparan sulfates diversity. A systematic review and analysis\", *medRxiv*)",
+      "citation": "(2024, Inoue et al., \"A molecular mechanism to diversify Ca2+ signaling downstream of Gs protein-coupled receptors\", *Nature Communications*)",
       "count": 3,
       "is_real": false
     }
   ],
   [
-    "Id1, Id2, and Id3 gene expression in neural cells during development",
+    "Neuronal guidance genes in health and diseases",
     {
-      "citation": "(1998, Sun et al., \"Id1, Id2, and Id3 gene expression in neural cells during development\", *Genes & Development*)",
+      "citation": "(2023, Yuasa-Kawada et al., \"Neuronal guidance genes in health and diseases.\", Protein & cell)",
       "count": 3,
-      "is_real": true
-    }
-  ],
-  [
-    "Genetic variability in proteoglycan biosynthetic genes reveals new facets of heparan sulfate diversity",
-    {
-      "citation": "(2024, Duval et al., \"Genetic variability in proteoglycan biosynthetic genes reveals new facets of heparan sulfate diversity\", *medRxiv*)",
-      "count": 3,
-      "is_real": true
-    }
-  ],
-  [
-    "Slit2-Robo Signaling Promotes Glomerular Vascularization and Nephron Development",
-    {
-      "citation": "(2021, Mah et al., \"Slit2-Robo Signaling Promotes Glomerular Vascularization and Nephron Development\", *Journal of the American Society of Nephrology*)",
-      "count": 3,
-      "is_real": true
-    }
-  ],
-  [
-    "Corticofugal Neuron-Associated Genes ROBO1, SRGAP1, and CTIP2 Exhibit an Anterior to Posterior Gradient of Expression in Early Fetal Human Neocortex Development",
-    {
-      "citation": "(2010, Garcia-Frigola et al., \"Corticofugal Neuron-Associated Genes ROBO1, SRGAP1, and CTIP2 Exhibit an Anterior to Posterior Gradient of Expression in Early Fetal Human Neocortex Development\", *Cerebral Cortex*)",
-      "count": 2,
-      "is_real": true
-    }
-  ],
-  [
-    "Targeted disruption of Aldh1a1 (Raldh1) provides evidence for a complex mechanism of retinoic acid synthesis in the developing retina",
-    {
-      "citation": "(2003, Fan et al., \"Targeted disruption of Aldh1a1 (Raldh1) provides evidence for a complex mechanism of retinoic acid synthesis in the developing retina\", *Mechanisms of Development*)",
-      "count": 2,
-      "is_real": true
-    }
-  ],
-  [
-    "Neuroprotective Effect of Apolipoprotein D against Human Coronavirus OC43-Induced Encephalitis in Mice",
-    {
-      "citation": "(2008, Belloir et al., \"Neuroprotective Effect of Apolipoprotein D against Human Coronavirus OC43-Induced Encephalitis in Mice\", *Journal of Neuroscience*)",
-      "count": 2,
-      "is_real": true
-    }
-  ],
-  [
-    "Axon guidance proteins in neurological disorders",
-    {
-      "citation": "(2015, Ch\u00e9dotal et al., \"Axon guidance proteins in neurological disorders\", *The Lancet Neurology*)",
-      "count": 2,
-      "is_real": true
-    }
-  ],
-  [
-    "Synaptic Vesicle Glycoprotein 2C: a role in Parkinson\u2019s disease",
-    {
-      "citation": "(2024, Janusz et al., \"Synaptic Vesicle Glycoprotein 2C: a role in Parkinson\u2019s disease\", *Frontiers in Cellular Neuroscience*)",
-      "count": 2,
       "is_real": true
     }
   ],
   [
     "Axon guidance pathways and the control of gene expression",
     {
-      "citation": "(2022, Russell et al., \"Axon guidance pathways and the control of gene expression\", *Developmental Dynamics*)",
+      "citation": "(2017, Russell et al., \"Axon guidance pathways and the control of gene expression.\", Developmental dynamics : an official publication of the American Association of Anatomists)",
+      "count": 3,
+      "is_real": true
+    }
+  ],
+  [
+    "Expression of Genes Involved in Axon Guidance: How Much Have We Learned?",
+    {
+      "citation": "(2020, Kim et al., \"Expression of Genes Involved in Axon Guidance: How Much Have We Learned?\", International journal of molecular sciences)",
+      "count": 3,
+      "is_real": true
+    }
+  ],
+  [
+    "Robo2\u2013Slit and Dcc\u2013Netrin1 Coordinate Neuron Axonal Pathfinding within the Embryonic Axon Tracts",
+    {
+      "citation": "(2012, Zhang et al., \"Robo2--slit and Dcc--netrin1 coordinate neuron axonal pathfinding within the embryonic axon tracts.\", The Journal of neuroscience : the official journal of the Society for Neuroscience)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Multifaceted Role of Neuropilins in the Immune System: Potential Targets for Immunotherapy",
+    {
+      "citation": "(2017, Roy et al., \"Multifaceted Role of Neuropilins in the Immune System: Potential Targets for Immunotherapy.\", Frontiers in immunology)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Advances in Intracellular Calcium Signaling Reveal Untapped Targets for Cancer Therapy",
+    {
+      "citation": "(2021, Sharma et al., \"Advances in Intracellular Calcium Signaling Reveal Untapped Targets for Cancer Therapy.\", Biomedicines)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Analysis of Peripheral Nerve Expression Profiles Identifies a Novel Myelin Glycoprotein, MP11",
+    {
+      "citation": "(2008, Ryu et al., \"Analysis of peripheral nerve expression profiles identifies a novel myelin glycoprotein, MP11.\", The Journal of neuroscience : the official journal of the Society for Neuroscience)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Structure and Function of Ryanodine Receptors",
+    {
+      "citation": "(1994, Coronado et al., \"Structure and function of ryanodine receptors.\", The American journal of physiology)",
       "count": 2,
       "is_real": true
     }
@@ -106,359 +82,55 @@
   [
     "Proteome profile of peripheral myelin in healthy mice and in a neuropathy model",
     {
-      "citation": "(2020, Fledrich et al., \"Proteome profile of peripheral myelin in healthy mice and in a neuropathy model\", *eLife*)",
-      "count": 2,
-      "is_real": false
-    }
-  ],
-  [
-    "A molecular mechanism to diversify Ca2+ signaling downstream of Gs protein-coupled receptors",
-    {
-      "citation": "(2024, Schneider et al., \"A molecular mechanism to diversify Ca2+ signaling downstream of Gs protein-coupled receptors\", *Nature Communications*)",
+      "citation": "(2020, Siems et al., \"Proteome profile of peripheral myelin in healthy mice and in a neuropathy model.\", eLife)",
       "count": 2,
       "is_real": true
     }
   ],
   [
-    "Piezo1/2 mediate mechanotransduction essential for bone formation through concerted activation of NFAT-YAP1-\u00df-catenin",
+    "Identification and characterization of the vesicular GABA transporter",
     {
-      "citation": "(2020, Murthy et al., \"Piezo1/2 mediate mechanotransduction essential for bone formation through concerted activation of NFAT-YAP1-\u00df-catenin\", *eLife*)",
-      "count": 1,
+      "citation": "(1997, McIntire et al., \"Identification and characterization of the vesicular GABA transporter.\", Nature)",
+      "count": 2,
       "is_real": true
     }
   ],
   [
-    "Synaptic Vesicle Glycoprotein 2A Knockout in Parvalbumin and Somatostatin Interneurons Drives Seizures in the Postnatal Mouse Brain",
+    "The involvement of collagen family genes in tumor enlargement of gastric cancer",
     {
-      "citation": "(2025, Bao et al., \"Synaptic Vesicle Glycoprotein 2A Knockout in Parvalbumin and Somatostatin Interneurons Drives Seizures in the Postnatal Mouse Brain\", *Journal of Neuroscience*)",
-      "count": 1,
+      "citation": "(2023, Sun et al., \"The involvement of collagen family genes in tumor enlargement of gastric cancer.\", Scientific reports)",
+      "count": 2,
       "is_real": true
     }
   ],
   [
-    "Periaxin, a Novel Protein of Myelinating Schwann Cells with a Possible Role in Axonal Ensheathment",
+    "Wnt/Planar cell polarity signaling: A new paradigm for cancer therapy",
     {
-      "citation": "(1994, Gillespie et al., \"Periaxin, a Novel Protein of Myelinating Schwann Cells with a Possible Role in Axonal Ensheathment\", *Neuron*)",
-      "count": 1,
+      "citation": "(2009, Wang, \"Wnt/Planar cell polarity signaling: a new paradigm for cancer therapy.\", Molecular cancer therapeutics)",
+      "count": 2,
       "is_real": true
-    }
-  ],
-  [
-    "HAPLN1 and the brain extracellular matrix in health and disease",
-    {
-      "citation": "(2023, Kwok et al., \"HAPLN1 and the brain extracellular matrix in health and disease\", *Neural Regeneration Research*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "Latent TGF-\u03b2 binding proteins in development and disease",
-    {
-      "citation": "(2021, Hynes et al., \"Latent TGF-\u03b2 binding proteins in development and disease\", *Matrix Biology*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Collagen IX in the extracellular matrix of cartilage and neural tissues",
-    {
-      "citation": "(2022, F\u00e4ssler et al., \"Collagen IX in the extracellular matrix of cartilage and neural tissues\", *Journal of Biological Chemistry*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "EFEMP2 mutations and extracellular matrix disorganization in disease",
-    {
-      "citation": "(2020, Hulleman et al., \"EFEMP2 mutations and extracellular matrix disorganization in disease\", *Matrix Biology*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "Expression of a serine protease (motopsin PRSS12) mRNA in the mouse brain: in situ hybridization histochemical study\\",
-    {
-      "citation": "(1999, Hirota et al., \"Expression of a serine protease (motopsin PRSS12) mRNA in the mouse brain: in situ hybridization histochemical study\\\", *Brain Research*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Quantitative Proteomics Reveal Region-Specific Alterations in Neuroserpin-Deficient Mouse Brain and Retina: Insights into Serpini1 Function\\",
-    {
-      "citation": "(2024, Hill et al., \"Quantitative Proteomics Reveal Region-Specific Alterations in Neuroserpin-Deficient Mouse Brain and Retina: Insights into Serpini1 Function\\\", *Biomolecules*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Epidermal autonomous VEGFA/Flt1/Nrp1 functions mediate psoriasis-like disease",
-    {
-      "citation": "(2020, Diacovo et al., \"Epidermal autonomous VEGFA/Flt1/Nrp1 functions mediate psoriasis-like disease\", *Science Advances*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "GRB14: A prognostic biomarker driving tumor progression in gastric cancer through the PI3K/AKT signaling pathway by interacting with COBLL1",
-    {
-      "citation": "(2025, Zhang et al., \"GRB14: A prognostic biomarker driving tumor progression in gastric cancer through the PI3K/AKT signaling pathway by interacting with COBLL1\", *Open Life Sciences*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Activation of ATF3 via the Integrated Stress Response Pathway Regulates Innate Immune Response to Restrict Zika Virus",
-    {
-      "citation": "(2023, Castillo et al., \"Activation of ATF3 via the Integrated Stress Response Pathway Regulates Innate Immune Response to Restrict Zika Virus\", *bioRxiv*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "The genetics and pathology of oxidative phosphorylation",
-    {
-      "citation": "(2001, Saraste M., \"The genetics and pathology of oxidative phosphorylation\", *Nature Reviews Genetics*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Intravenous Administration of a Transferrin Receptor Antibody-Nerve Growth Factor Conjugate Prevents the Degeneration of Cholinergic Striatal Neurons in a Model of Huntington Disease",
-    {
-      "citation": "(1994, Friden et al., \"Intravenous Administration of a Transferrin Receptor Antibody-Nerve Growth Factor Conjugate Prevents the Degeneration of Cholinergic Striatal Neurons in a Model of Huntington Disease\", *Proceedings of the National Academy of Sciences of the United States of America*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "Targeting Purinergic Receptor P2Y2 Prevents the Growth of Pancreatic Ductal Adenocarcinoma by Inhibiting Cancer Cell Glycolysis",
-    {
-      "citation": "(2019, Yu et al., \"Targeting Purinergic Receptor P2Y2 Prevents the Growth of Pancreatic Ductal Adenocarcinoma by Inhibiting Cancer Cell Glycolysis\", *Clinical Cancer Research*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Urine peptidome in combination with transcriptomics analysis highlights MMP7, MMP14 and PCSK5 for further investigation in chronic kidney disease",
-    {
-      "citation": "(2022, Siwy et al., \"Urine peptidome in combination with transcriptomics analysis highlights MMP7, MMP14 and PCSK5 for further investigation in chronic kidney disease\", *Proteomics Clinical Applications*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Quantitative Proteomics Reveal Region-Specific Alterations in Neuroserpin-Deficient Mouse Brain and Retina: Insights into Serpini1 Function",
-    {
-      "citation": "(2023, Gallart-Palau et al., \"Quantitative Proteomics Reveal Region-Specific Alterations in Neuroserpin-Deficient Mouse Brain and Retina: Insights into Serpini1 Function\", *Biomolecules*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "IGFBP3 Modulates Lung Tumorigenesis and Cell Growth through IGF1 Signaling",
-    {
-      "citation": "(2017, Tang et al., \"IGFBP3 Modulates Lung Tumorigenesis and Cell Growth through IGF1 Signaling\", *Molecular Cancer Research*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Endothelial Neuropilin-1: a multifaced signal transducer with an emerging role in inflammation and atherosclerosis beyond angiogenesis",
-    {
-      "citation": "(2024, Appleton et al., \"Endothelial Neuropilin-1: a multifaced signal transducer with an emerging role in inflammation and atherosclerosis beyond angiogenesis\", *Biochemical Society Transactions*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Genetic Evidence That Retinaldehyde Dehydrogenase Raldh1 (Aldh1a1) Functions Downstream of Alcohol Dehydrogenase Adh1 in Metabolism of Retinol to Retinoic Acid",
-    {
-      "citation": "(2002, Fan et al., \"Genetic Evidence That Retinaldehyde Dehydrogenase Raldh1 (Aldh1a1) Functions Downstream of Alcohol Dehydrogenase Adh1 in Metabolism of Retinol to Retinoic Acid\", *Journal of Biological Chemistry*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Activation of the ATF3 gene through a co-ordinated amino acid-sensing response programme that controls transcriptional regulation of responsive genes",
-    {
-      "citation": "(2006, Hai et al., \"Activation of the ATF3 gene through a co-ordinated amino acid-sensing response programme that controls transcriptional regulation of responsive genes\", *Biochemical Journal*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Oligomannosylation and MAN1A1 expression associate strongly with a subset of human cancer types",
-    {
-      "citation": "(2021, Li et al., \"Oligomannosylation and MAN1A1 expression associate strongly with a subset of human cancer types\", *bioRxiv*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "Drp1 controls complex II assembly and skeletal muscle metabolism by Sdhaf2 action on mitochondria",
-    {
-      "citation": "(2024, Mishra et al., \"Drp1 controls complex II assembly and skeletal muscle metabolism by Sdhaf2 action on mitochondria\", *Science Advances*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "The neuroprotective role of CncC in a Drosophila model of Parkinson\u2019s disease",
-    {
-      "citation": "(2023, Authors not specified in source, \"The neuroprotective role of CncC in a Drosophila model of Parkinson\u2019s disease\", *PLOS One*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "CNTN6 \u2013 UDN: Genetic and Clinical Insights into Neurodevelopmental Disorders",
-    {
-      "citation": "(2024, O'Donnell et al., \"CNTN6 \u2013 UDN: Genetic and Clinical Insights into Neurodevelopmental Disorders\", *Undiagnosed Diseases Network Journal*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "Corticofugal Neuron-Associated Genes ROBO1, SRGAP1, and CTIP2 Exhibit an Anterior to Posterior Gradient of Expression in Early Fetal Human Neocortex",
-    {
-      "citation": "(2010, Bielle et al., \"Corticofugal Neuron-Associated Genes ROBO1, SRGAP1, and CTIP2 Exhibit an Anterior to Posterior Gradient of Expression in Early Fetal Human Neocortex\", *Cerebral Cortex*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Cellular and behavioral effects of altered NaV1.2 sodium channel ion permeability in Scn2aK1422E mice",
-    {
-      "citation": "(2022, Perez et al., \"Cellular and behavioral effects of altered NaV1.2 sodium channel ion permeability in Scn2aK1422E mice\", *Human Molecular Genetics*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "AAV9-mediated Schwann cell-targeted gene therapy rescues a model of demyelinating neuropathy",
-    {
-      "citation": "(2021, Fledrich et al., \"AAV9-mediated Schwann cell-targeted gene therapy rescues a model of demyelinating neuropathy\", *Gene Therapy*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "Regulation of Peripheral Nerve Myelin Maintenance by Gene Repression through Polycomb Repressive Complex 2",
-    {
-      "citation": "(2015, Pereira et al., \"Regulation of Peripheral Nerve Myelin Maintenance by Gene Repression through Polycomb Repressive Complex 2\", *Journal of Neuroscience*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "A genetic compensatory mechanism regulated by Jun and Mef2d modulates the expression of distinct class IIa Hdacs to ensure peripheral nerve myelination and repair",
-    {
-      "citation": "(2022, Fledrich et al., \"A genetic compensatory mechanism regulated by Jun and Mef2d modulates the expression of distinct class IIa Hdacs to ensure peripheral nerve myelination and repair\", *eLife*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "A mental retardation gene, motopsin/prss12, modulates cell morphology by interaction with seizure-related gene 6",
-    {
-      "citation": "(2013, Mitsui et al., \"A mental retardation gene, motopsin/prss12, modulates cell morphology by interaction with seizure-related gene 6\", *Human Molecular Genetics*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "c-Myc regulates the coordinated transcription of brain disease-related PDCD10-SERPINI1 bidirectional gene pair",
-    {
-      "citation": "(2009, Tomkins et al., \"c-Myc regulates the coordinated transcription of brain disease-related PDCD10-SERPINI1 bidirectional gene pair\", *Genome Research*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "The adaptor protein Grb14 regulates the localization of 3-phosphoinositide-dependent kinase-1",
-    {
-      "citation": "(2004, Dephoure et al., \"The adaptor protein Grb14 regulates the localization of 3-phosphoinositide-dependent kinase-1\", *Journal of Biological Chemistry*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Mitochondrial dysfunction in schizophrenia: evidence for compromised brain metabolism and oxidative stress",
-    {
-      "citation": "(2004, Karry et al., \"Mitochondrial dysfunction in schizophrenia: evidence for compromised brain metabolism and oxidative stress\", *Molecular Psychiatry*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Overexpression of CCN3 Inhibits Inflammation and Progression of Atherosclerosis in Apolipoprotein E-Deficient Mice",
-    {
-      "citation": "(2014, Bai et al., \"Overexpression of CCN3 Inhibits Inflammation and Progression of Atherosclerosis in Apolipoprotein E-Deficient Mice\", *PLOS One*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "CNTN6 \u2013 UDN",
-    {
-      "citation": "(2024, HMS Undiagnosed Diseases Network, \"CNTN6 \u2013 UDN\", *Undiagnosed Diseases Network Report*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "Periaxin, a novel protein of myelinating Schwann cells with a possible role in axonal ensheathment",
-    {
-      "citation": "(1994, Gillespie et al., \"Periaxin, a novel protein of myelinating Schwann cells with a possible role in axonal ensheathment\", *Neuron*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "SARS-CoV-2 Uses a Second Receptor, Neuropilin-1, to Infect Human Cells",
-    {
-      "citation": "(2020, Cantrell et al., \"SARS-CoV-2 Uses a Second Receptor, Neuropilin-1, to Infect Human Cells\", *Cell*)",
-      "count": 1,
-      "is_real": false
-    }
-  ],
-  [
-    "Multifaceted Role of Neuropilins in the Immune System: Potential Targets for Immunotherapy",
-    {
-      "citation": "(2017, Chaudhary et al., \"Multifaceted Role of Neuropilins in the Immune System: Potential Targets for Immunotherapy\", *Frontiers in Immunology*)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Slit/Robo signals prevent spinal motor neuron emigration by organizing the spinal cord basement membrane",
-    {
-      "citation": "(2019, Dickson et al., \"Slit/Robo signals prevent spinal motor neuron emigration by organizing the spinal cord basement membrane\", *bioRxiv* (Note: Not peer-reviewed; thus, no evidence found in PubMed/Google Scholar) | No evidence found. |\n| Axon Guidance and Growth Cone Dynamics | Sema4f | GO:0007411 (axon guidance))",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Ephrin-Eph signaling in axon guidance and beyond",
-    {
-      "citation": "(2020, Klein et al., \"Ephrin-Eph signaling in axon guidance and beyond\", *Developmental Biology*)",
-      "count": 1,
-      "is_real": false
     }
   ],
   [
     "PMP22 duplication dysregulates lipid homeostasis and plasma membrane organization in developing human Schwann cells",
     {
-      "citation": "(2024, Prior et al., \"PMP22 duplication dysregulates lipid homeostasis and plasma membrane organization in developing human Schwann cells\", *Brain*)",
-      "count": 1,
+      "citation": "(2024, Prior et al., \"PMP22 duplication dysregulates lipid homeostasis and plasma membrane organization in developing human Schwann cells.\", Brain : a journal of neurology)",
+      "count": 2,
       "is_real": true
     }
   ],
   [
-    "Newly produced synaptic vesicle proteins are preferentially used in synaptic transmission",
+    "Structural basis of calmodulin modulation of human ryanodine receptor 3",
     {
-      "citation": "(2017, Takamori et al., \"Newly produced synaptic vesicle proteins are preferentially used in synaptic transmission\", *The EMBO Journal*)",
+      "citation": "(2024, Van Petegem et al., \"Structural basis of calmodulin modulation of human ryanodine receptor 3\", *Cell*<br)",
+      "count": 2,
+      "is_real": false
+    }
+  ],
+  [
+    "Recombinant Slit2 suppresses neuroinflammation and Cdc42-mediated brain infiltration of peripheral immune cells via Robo1\u2013srGAP1 pathway in a rat model of germinal matrix hemorrhage",
+    {
+      "citation": "(2023, Li et al., \"Recombinant Slit2 suppresses neuroinflammation and Cdc42-mediated brain infiltration of peripheral immune cells via Robo1-srGAP1 pathway in a rat model of germinal matrix hemorrhage.\", Journal of neuroinflammation)",
       "count": 1,
       "is_real": true
     }
@@ -466,7 +138,7 @@
   [
     "Synaptic vesicle-omics in mice captures signatures of aging and synucleinopathy",
     {
-      "citation": "(2025, Farsi et al., \"Synaptic vesicle-omics in mice captures signatures of aging and synucleinopathy\", *Nature Communications*)",
+      "citation": "(2025, Gao et al., \"Synaptic vesicle-omics in mice captures signatures of aging and synucleinopathy.\", Nature communications)",
       "count": 1,
       "is_real": true
     }
@@ -474,31 +146,127 @@
   [
     "Pathogenic convergence of CNVs in genes functionally associated to a severe neuromotor developmental delay syndrome",
     {
-      "citation": "(2021, Cort\u00e8s et al., \"Pathogenic convergence of CNVs in genes functionally associated to a severe neuromotor developmental delay syndrome\", *Human Genomics*)",
+      "citation": "(2021, Garc\u00eda-Hern\u00e1ndez et al., \"Pathogenic convergence of CNVs in genes functionally associated to a severe neuromotor developmental delay syndrome.\", Human genomics)",
       "count": 1,
       "is_real": true
     }
   ],
   [
-    "Wnt/Planar cell polarity signaling: A new paradigm for cancer therapy",
+    "Non-canonical WNT-signaling controls differentiation of lymphatics and extension lymphangiogenesis via RAC and JNK signaling",
     {
-      "citation": "(2009, Yang-Snyder et al., \"Wnt/Planar cell polarity signaling: A new paradigm for cancer therapy\", *Molecular Cancer Therapeutics*)",
+      "citation": "(2019, Lutze et al., \"Non-canonical WNT-signaling controls differentiation of lymphatics and extension lymphangiogenesis via RAC and JNK signaling.\", Scientific reports)",
       "count": 1,
       "is_real": true
     }
   ],
   [
-    "Improved genetically encoded green cAMP (cAMPinG1) and red calcium (RCaMP3) indicators for dual-color monitoring of cAMP and calcium signaling in vivo",
+    "Nearly all neuromodulators & neuropeptides are integrated through GPCRs to converge onto the cAMP pathway",
     {
-      "citation": "(2024, Masayuki et al., \"Improved genetically encoded green cAMP (cAMPinG1) and red calcium (RCaMP3) indicators for dual-color monitoring of cAMP and calcium signaling in vivo\", *Nature Methods*)",
+      "citation": "(2022, Massengill et al., \"Nearly all neuromodulators & neuropeptides are integrated through GPCRs to converge onto the cAMP pathway\", *Nature Communications*)",
       "count": 1,
       "is_real": false
     }
   ],
   [
-    "Structure and Function of Ryanodine Receptors and IP3 Receptors",
+    "Protein-protein interactions in intracellular Ca2+-release channel function",
     {
-      "citation": "(2022, Van Petegem et al., \"Structure and Function of Ryanodine Receptors and IP3 Receptors\", *Biochemical Journal*)",
+      "citation": "(1999, MacKrill, \"Protein-protein interactions in intracellular Ca2+-release channel function.\", The Biochemical journal)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Novel insights into the GCN2 pathway and its targeting. Therapeutic value in cancer and lessons from lung fibrosis development",
+    {
+      "citation": "(2024, Piecyk et al., \"Novel insights into the GCN2 pathway and its targeting. Therapeutic value in cancer and lessons from lung fibrosis development.\", The FEBS journal)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Peripheral myelin protein 22 alters membrane architecture",
+    {
+      "citation": "(2017, Mittendorf et al., \"Peripheral myelin protein 22 alters membrane architecture.\", Science advances)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Regulation of Peripheral Nerve Myelin Maintenance by Gene Repression through Polycomb Repressive Complex 2",
+    {
+      "citation": "(2015, Ma et al., \"Regulation of Peripheral Nerve Myelin Maintenance by Gene Repression through Polycomb Repressive Complex 2.\", The Journal of neuroscience : the official journal of the Society for Neuroscience)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Spatially resolved DNP-assisted NMR illuminates the conformational ensemble of \u03b1-synuclein in intact viable cells",
+    {
+      "citation": "(2025, Kragelj et al., \"Spatially resolved DNP-assisted NMR illuminates the conformational ensemble of \u03b1-synuclein in intact viable cells.\", Proceedings of the National Academy of Sciences of the United States of America)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The first detailed spatial model of the complete synaptic vesicle cycle in a hippocampal en passant synapse",
+    {
+      "citation": "(2025, Andrew Gallimore, \"The first detailed spatial model of the complete synaptic vesicle cycle in a hippocampal en passant synapse\", as referenced in synaptic function discussions<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Happy to report that we found what we believe the first ever #GPCR for neurotransmitter glycine",
+    {
+      "citation": "(2023, Kirill Martemyanov Lab, \"Happy to report that we found what we believe the first ever #GPCR for neurotransmitter glycine\", as noted in research posts<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "The Genetics of Axon Guidance and Axon Regeneration in Caenorhabditis elegans",
+    {
+      "citation": "(2017, Chisholm et al., \"The Genetics of Axon Guidance and Axon Regeneration in Caenorhabditis elegans.\", Genetics)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Schwann cells ER-associated degradation contributes to myelin maintenance in adult nerves and limits demyelination in CMT1B mice",
+    {
+      "citation": "(2019, Volpi et al., \"Schwann cells ER-associated degradation contributes to myelin maintenance in adult nerves and limits demyelination in CMT1B mice.\", PLoS genetics)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Regulation of the PMP22 Gene through an Intronic Enhancer",
+    {
+      "citation": "(2011, Jones et al., \"Regulation of the PMP22 gene through an intronic enhancer.\", The Journal of neuroscience : the official journal of the Society for Neuroscience)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Genetics of synaptic vesicle function: Toward the complete functional anatomy of an organelle",
+    {
+      "citation": "(1999, Fern\u00e1ndez-Chac\u00f3n et al., \"Genetics of synaptic vesicle function: toward the complete functional anatomy of an organelle.\", Annual review of physiology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Purinergic signaling in health and disease",
+    {
+      "citation": "(2020, Ferrari et al., \"Eosinophils and Purinergic Signaling in Health and Disease.\", Frontiers in immunology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Novel insights into the GCN2 pathway and its targeting: Therapeutic value in cancer and lessons from lung fibrosis development",
+    {
+      "citation": "(2024, Piecyk et al., \"Novel insights into the GCN2 pathway and its targeting. Therapeutic value in cancer and lessons from lung fibrosis development.\", The FEBS journal)",
       "count": 1,
       "is_real": true
     }

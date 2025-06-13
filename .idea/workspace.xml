@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pub_med_test.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/GSEA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs_system_instruction/config_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs_system_instruction/config_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gprofiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/gprofiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/validation_logs.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/validation_logs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/results/validation_and_reporting/validation_answer_grok-3-mini_0.md" beforeDir="false" afterPath="$PROJECT_DIR$/output/results/validation_and_reporting/validation_answer_grok-3-mini_0.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bug__fixes&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/mghuibregtse/Documents/Python/RAG_LUMC/output&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -101,7 +100,7 @@
       <recent name="$PROJECT_DIR$/output/support" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.RAG_workflow">
+  <component name="RunManager" selected="Python.automated_validation">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />

@@ -5,6 +5,7 @@ from RAG_workflow import initialize_gene_list, load_config
 import argparse
 from typing import Any, Dict, List, Optional, Tuple, Set
 
+
 def query_gprofiler_rest(
     genes_list: List[str],
     organism: str = "rnorvegicus",
