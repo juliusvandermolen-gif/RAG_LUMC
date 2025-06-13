@@ -1900,58 +1900,106 @@ def save_scores_to_file(
     print(f"Scores saved to {file_name}")
 
 
-def create_config():
-    template = load_config("configs_system_instruction/config_template.json")
-    print(template)
-    specifications = input("Add any specifications you wish to use: ")
-    query = input("What is your research question?")
-
-    instruction = (f"I have a template for a config file, based on this template, and the specifications the user has"
-                   f"given, create a new config.json file. So fill in the template based on the spefications while"
-                   f" maintaining the same structure/formatting. If no information is given about a certain thing in the"
-                   f" config, take the one from the template and fill in the placeholders\n template: {template} \n "
-                   f"specifications: {specifications}")
-    config_name = input("What is your configuration name?")
-    messages = [
-        {"role": "system", "content": instruction},
-        {"role": "user", "content": query}
-    ]
-    new_config = query_llm(messages, query, instruction, save=False, generation_model="o3-mini", query_range=1)
-    with open(f"configs_system_instruction/{config_name}.json", "w", encoding='utf-8') as config_file:
-        json.dump(new_config, config_file, indent=4)
-    print(new_config)
-    return config_name
+# def confirm_input(prompt: str) -> str:
+#     """
+#     Prompt the user, echo back their entry, and ask to confirm.
+#     Loop until they confirm with Y/Enter.
+#     """
+#     while True:
+#         entry = input(prompt).strip()
+#         print(f"\nYou entered:\n  {entry}\n")
+#         confirm = input("Is this correct? (Y/n): ").strip().lower()
+#         if confirm in ("", "y", "yes"):
+#             return entry
+#         print("Okay, let's try again.\n")
+#
+#
+# def create_config():
+#     # 1) Load the template dict
+#     template = load_config("configs_system_instruction/config_template.json")
+#
+#     # 2) For every top‐level key except the big instruction blob, ask:
+#     filled = {}
+#     for key, default in template.items():
+#         if key == "system_instruction_response":
+#             continue  # handle later
+#         prompt = (
+#             f"Enter a value for '{key}':\n"
+#             f"  [default: {default}]\n"
+#             "> "
+#         )
+#         val = confirm_input(prompt)
+#         filled[key] = val if val else default
+#
+#     # 3) Now handle system_instruction_response:
+#     sis = template["system_instruction_response"]
+#
+#     #   a) find ALL bracketed placeholders
+#     raw_placeholders = re.findall(r"\[([^\]]+?)\]", sis)
+#     #   b) dedupe, preserving order
+#     seen = []
+#     for ph in raw_placeholders:
+#         if ph not in seen:
+#             seen.append(ph)
+#
+#     #   c) for each placeholder, prompt the user
+#     for ph in seen:
+#         prompt = (
+#             f"Fill in the placeholder:\n"
+#             f"  [{ph}]\n"
+#             "> "
+#         )
+#         replacement = confirm_input(prompt)
+#         sis = sis.replace(f"[{ph}]", replacement)
+#
+#     filled["system_instruction_response"] = sis
+#
+#     # 4) Finally ask for the output filename
+#     config_name = confirm_input(
+#         "What should the output config file be called (no .json)?\n> "
+#     )
+#     output_path = f"configs_system_instruction/{config_name}.json"
+#
+#     # 5) Write it out
+#     with open(output_path, "w", encoding="utf-8") as f:
+#         json.dump(filled, f, indent=2)
+#
+#     print(f"\n✅ Saved new config to {output_path}")
+#     return output_path
 
 
 def main() -> None:
-    config_name = ""
-    while True:
-        question_create_config = (input("Do you want to leverage the AI to create a config?\n"
-                                        "Yes or No\n")
-                                  .lower())
-        if question_create_config == "yes":
-            config_name = create_config()
-            break
-        elif question_create_config == "no":
-            break
+    # Previously used AI-driven config creation flow—disabled for now
+    # config_name = ""
+    # while True:
+    #     question_create_config = (
+    #         input("Do you want to leverage the AI to create a config?\n"
+    #               "Yes or No\n")
+    #         .lower()
+    #     )
+    #     if question_create_config == "yes":
+    #         config_name = create_config()
+    #         break
+    #     elif question_create_config == "no":
+    #         break
 
-    config = f"{config_name}.json" if question_create_config == "yes" else "GSEA.json"
     parser = argparse.ArgumentParser(
         description="Run the RAG workflow tests for varying gene counts."
     )
     parser.add_argument(
         "--config",
         type=str,
-        default=f"./configs_system_instruction/{config}",
+        default="./configs_system_instruction/GSEA.json",
         help="Path to the configuration JSON file"
     )
     args = parser.parse_args()
 
-    config = load_config(args.config, print_settings=True)
+    config_dict = load_config(args.config, print_settings=True)
+
     config_name = os.path.splitext(os.path.basename(args.config))[0]
     globals()['config_name'] = config_name
-    globals().update(config)
-
+    globals().update(config_dict)
+    exit()
 
 
     total_runs = len(max_genes) * query_range

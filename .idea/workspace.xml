@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pub_med_test.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gprofiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/gprofiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/validation_logs.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/validation_logs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/results/validation_and_reporting/validation_answer_grok-3-mini_0.md" beforeDir="false" afterPath="$PROJECT_DIR$/output/results/validation_and_reporting/validation_answer_grok-3-mini_0.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_workflow.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,7 @@
       <recent name="$PROJECT_DIR$/output/support" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.automated_validation">
+  <component name="RunManager" selected="Python.RAG_workflow">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
