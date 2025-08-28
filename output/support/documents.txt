@@ -1,479 +1,60 @@
-|Reference 1 (BM25) with RRF Score: 13.6832
-Thus, by analogy with epithelial cell polar -
-ity, the abaxonal membrane of myelinated fibers is defined as a basolateral-like region, whereas the adaxonal membrane, SLI, paranodes and microvilli are considered apical-like regions [18, 19]. Schwann Cell Development
-During early vertebrate development, neural crest cells delaminate from the neural tube, proliferate, and migrate to generate a broad spectrum of cell types including, among others, Schwann cells, melanocytes, sympathetic neurons, sensory neurons, and skeletal and connective tissues of the head [24– 26]. The cell fate largely depends from the region 
-of origin of the neural tube from which neural crest cells migrate. These regions are defined in an anterior–posterior axis direction as cranial, cardiac, vagal, trunk, and sacral. In particular, Schwann cells, dorsal root ganglia (DRG) sensory neurons, sympathetic neurons, and satellite cells associated with sensory neurons, all originate from ventrally migrating trunk neural crest cells [27]. 
+|Reference 1 (BM25) with RRF Score: 12.4114
+ENSRNOG00000017052,Pianp,PILR alpha associated neural protein 
 
-|Reference 2 (BM25) with RRF Score: 13.6832
-Thus, by analogy with epithelial cell polar -
-ity, the abaxonal membrane of myelinated fibers is defined as a basolateral-like region, whereas the adaxonal membrane, SLI, paranodes and microvilli are considered apical-like regions [18, 19]. Schwann Cell Development
-During early vertebrate development, neural crest cells delaminate from the neural tube, proliferate, and migrate to generate a broad spectrum of cell types including, among others, Schwann cells, melanocytes, sympathetic neurons, sensory neurons, and skeletal and connective tissues of the head [24– 26]. The cell fate largely depends from the region 
-of origin of the neural tube from which neural crest cells migrate. These regions are defined in an anterior–posterior axis direction as cranial, cardiac, vagal, trunk, and sacral. In particular, Schwann cells, dorsal root ganglia (DRG) sensory neurons, sympathetic neurons, and satellite cells associated with sensory neurons, all originate from ventrally migrating trunk neural crest cells [27]. 
+|Reference 2 (BM25) with RRF Score: 11.4004
+ENSRNOG00000013721,Nepro,nucleolus and neural progenitor protein 
 
-|Reference 3 (BM25) with RRF Score: 13.4654
-●Compounds preventing axonal degeneration or rescuing altered axo-
-nal transport have the potentiality to cure many hereditary neuro -
-pathies irrespective of the primary triggering defect: this is the case 
-for the inhibitors of SARM1 and of HDAC6, an active field of research. ●Intervention on more specific metabolic pathways is also promising, 
-such as for L-Serine to treat HSN1 by reducing neurotoxic deoxy -
-sphingolipids, or compounds acting on the PYKfive enzyme in the 
-phosphoinositides metabolism in CMT4B, or S-adenosylmethionine 
-(SAM) to supply purine nucleotides in CMTX5 and its allelic disorders. ●Mutations in sorbitol dehydrogenase has been very recently asso -
-ciated with a relatively common form of CMT2/dHMN and high levels 
-of sorbitol. Inhibitors of aldose reductase, developed in the past for 
-diabetic neuropathy, are good candidates for its treatment. Table 1. List of CMT genes associated with the different types of CMT and related neuropathies. Charcot-Marie-Tooth disease and related neuropathies
-Demyelinating CMT Intermediate CMT Axonal CMT dHMN HSAN
-AD AR X- linked AD AR X- linked AD AR X- linked AD/AR/X-linked AD/AR
-PMP22 GDAP1 GJB1 DNM2 KARS GJB1 MFN2 HARS MFN2 AIFM1 HSPB8 ATP7A SPTCL1 CLTCL1
-MPZ MTMR2 
-MTMR13 
-MTMR5YARS PLEKHG5 AIFM1 RAB7A VCP LMNA PRPS1 HSPB1 DYNC1H1 SPTCL2 PRNP
-LITAF MPZ COX6A1 DRP2 TRPV4 MORC2 MED25 PDK3 HSPB3 BICD2 ATL1 CCT5
-EGR2 IFN2 GARS NEFH GDAP1 FBXO38 MYH14 DNMT1 FLVCR1
-NEFL SH3TC2 GNB4 NEFL ATP1A1 MME BSCL2 AARS ATL3 ZFHX2
-PMP2 NDRG1 NEFL HSPB1 TFG SPG11 GARS HARS WNK1
-FBLN5 EGR2 MPZ BSCL2 MPV17 REEP1 HINT1 FAM134B
-ARHGEF10 PRX GDAP1 NAGLU HINT1 SLC5A7 VRK1 KIF1A
-HK1 HSPB8 KIF5A IGHMBP2 DCTN1 SETX SCN9A
-FGD4 DNM2 MTATP6 TRIM2 TRPV4 CHCHD10 IκBKAP
-FIG4 AARS DCAF8 DNAJB2 DNAJB2 SORD NTRK1
-SURF1 LRSAM1 TUBB3 C12orf65 IGHMBP2 TBX5 β-NGF
-CTDP1 DHTKD1 DGAT2 SORD PLEKHG5 DST
-MME SLC25A46 SIGMAR1 SCN11A
-MARS SACS LAS1L PRDM12
-AD = autosomal dominant, AR = autosomal recessive, CMT = Charcot-Marie-Tooth disease, dHMN = distal hereditary motor neuropathy, HSAN = hereditary sensory 
-and autonomic neuropathy 702
- C. PISCIOTTA ET AL. 
+|Reference 3 (BM25) with RRF Score: 11.4004
+ENSRNOG00000018528,Nrl,neural retina leucine zipper 
 
-|Reference 4 (BM25) with RRF Score: 13.4654
-●Compounds preventing axonal degeneration or rescuing altered axo-
-nal transport have the potentiality to cure many hereditary neuro -
-pathies irrespective of the primary triggering defect: this is the case 
-for the inhibitors of SARM1 and of HDAC6, an active field of research. ●Intervention on more specific metabolic pathways is also promising, 
-such as for L-Serine to treat HSN1 by reducing neurotoxic deoxy -
-sphingolipids, or compounds acting on the PYKfive enzyme in the 
-phosphoinositides metabolism in CMT4B, or S-adenosylmethionine 
-(SAM) to supply purine nucleotides in CMTX5 and its allelic disorders. ●Mutations in sorbitol dehydrogenase has been very recently asso -
-ciated with a relatively common form of CMT2/dHMN and high levels 
-of sorbitol. Inhibitors of aldose reductase, developed in the past for 
-diabetic neuropathy, are good candidates for its treatment. Table 1. List of CMT genes associated with the different types of CMT and related neuropathies. Charcot-Marie-Tooth disease and related neuropathies
-Demyelinating CMT Intermediate CMT Axonal CMT dHMN HSAN
-AD AR X- linked AD AR X- linked AD AR X- linked AD/AR/X-linked AD/AR
-PMP22 GDAP1 GJB1 DNM2 KARS GJB1 MFN2 HARS MFN2 AIFM1 HSPB8 ATP7A SPTCL1 CLTCL1
-MPZ MTMR2 
-MTMR13 
-MTMR5YARS PLEKHG5 AIFM1 RAB7A VCP LMNA PRPS1 HSPB1 DYNC1H1 SPTCL2 PRNP
-LITAF MPZ COX6A1 DRP2 TRPV4 MORC2 MED25 PDK3 HSPB3 BICD2 ATL1 CCT5
-EGR2 IFN2 GARS NEFH GDAP1 FBXO38 MYH14 DNMT1 FLVCR1
-NEFL SH3TC2 GNB4 NEFL ATP1A1 MME BSCL2 AARS ATL3 ZFHX2
-PMP2 NDRG1 NEFL HSPB1 TFG SPG11 GARS HARS WNK1
-FBLN5 EGR2 MPZ BSCL2 MPV17 REEP1 HINT1 FAM134B
-ARHGEF10 PRX GDAP1 NAGLU HINT1 SLC5A7 VRK1 KIF1A
-HK1 HSPB8 KIF5A IGHMBP2 DCTN1 SETX SCN9A
-FGD4 DNM2 MTATP6 TRIM2 TRPV4 CHCHD10 IκBKAP
-FIG4 AARS DCAF8 DNAJB2 DNAJB2 SORD NTRK1
-SURF1 LRSAM1 TUBB3 C12orf65 IGHMBP2 TBX5 β-NGF
-CTDP1 DHTKD1 DGAT2 SORD PLEKHG5 DST
-MME SLC25A46 SIGMAR1 SCN11A
-MARS SACS LAS1L PRDM12
-AD = autosomal dominant, AR = autosomal recessive, CMT = Charcot-Marie-Tooth disease, dHMN = distal hereditary motor neuropathy, HSAN = hereditary sensory 
-and autonomic neuropathy 702
- C. PISCIOTTA ET AL. 
+|Reference 4 (BM25) with RRF Score: 11.4004
+ENSRNOG00000006235,Nell2,neural EGFL like 2 
 
-|Reference 5 (BM25) with RRF Score: 12.1871
-Feedback Loops and MicroRNA Regulatio n: 
-• MYC expression is tightly regulated by feedback loops and microRNAs. PMP22 may alter 
-the expression of specific microRNAs that target MYC, such as  let-7 or miR-34a, 
-thereby affecting MYC levels . Experimental Validatio n 
- 
-To establish a causal relationship, you could:  
-• Use Western blottin g or qPC R to measure MYC expression after PMP22 overexpression . • Apply  pharmacological inhibitor s or genetic tools (e.g., CRISPR) to block suspected 
-signaling pat hways and observe changes in MYC expression . • Assess the role of ER stress markers (e.g., CHOP, BiP) to link PMP22 overexpression to 
-UPR . By understanding these mechanisms, you might 
-uncover novel insights into cellular stress, growth, and 
-oncogenic tran sformation driven by PMP22 
-overexpression. 
+|Reference 5 (BM25) with RRF Score: 11.4004
+ENSRNOG00000015675,Nell1,neural EGFL like 1 
 
-|Reference 6 (BM25) with RRF Score: 11.4604
-In addition, neural 
-crest derived satellite glia maintain a tight communication with the 
-soma of sensory, sympathetic, and parasympathetic neurons and neural 
-crest derivatives are furthermore an indispensable part of the enteric 
-nervous system. The remarkable plasticity of SCs becomes evident in the 
-context of a nerve injury, where SC transdifferentiate into intriguing 
-repair cells, which orchestrate a regenerative response that promotes 
-nerve repair. Indeed, the multiple adaptations of SCs are captivating, but 
-remain often ill-resolved on the molecular level. Here, we summarize 
-and discuss the knowns and unknowns of the vast array of functions that 
-this single cell type can cover in peripheral nervous system develop -
-ment, maintenance, and repair. Abbreviations: c-JUN, c-JUN transcription factor; C3, complement component 3; CCL2, CC motif chemokine ligand 2; CNS, central nervous system; CR3, com-
-plement receptor 3; CXCL12, C-X-C motif chemokine 12; CXCR4, C-X-C motif chemokine receptor 4; DCC, deleted in colorectal cancer, Netrin-1 receptor; DHH, desert 
-hedgehog protein; ERBB, Erb-B receptor tyrosine kinase; GDNF, glial cell derived neurotrophic factor; GPCR/GPCRs, G-protein coupled receptor/receptors; HLA, 
-human leucocyte antigen; IH3, Diwanka; LAMA2, laminin subunit alpha 2; MCP1, monocyte chemoattractant protein 1; MHCII, major histocompatibility complex II; 
-NG2, neuron-glial antigen 2; NMJ/NMJs, neuromuscular junction/junctions; NRG1, neuregulin 1; p75NTR, neurotrophin receptor p75; PNS, peripheral nervous 
-system; RNA, Ribonucleic acid; SC/SCs, Schwann cell/cells; scRNAseq, single cell RNA sequencing; SGC/SGCs, satellite glial cell/cells; SOX10, Sry-related HMg-Box 
-gene 10; TRAP1, Tumor necrosis factor receptor associated protein 1; USH2A, usherin; VEGFR1, vascular endothelial growth factor receptor 1. 
+|Reference 6 (BM25) with RRF Score: 10.6138
+ENSRNOG00000013102,Npdc1,"neural proliferation, differentiation and control, 1" 
 
-|Reference 7 (BM25) with RRF Score: 11.4604
-In addition, neural 
-crest derived satellite glia maintain a tight communication with the 
-soma of sensory, sympathetic, and parasympathetic neurons and neural 
-crest derivatives are furthermore an indispensable part of the enteric 
-nervous system. The remarkable plasticity of SCs becomes evident in the 
-context of a nerve injury, where SC transdifferentiate into intriguing 
-repair cells, which orchestrate a regenerative response that promotes 
-nerve repair. Indeed, the multiple adaptations of SCs are captivating, but 
-remain often ill-resolved on the molecular level. Here, we summarize 
-and discuss the knowns and unknowns of the vast array of functions that 
-this single cell type can cover in peripheral nervous system develop -
-ment, maintenance, and repair. Abbreviations: c-JUN, c-JUN transcription factor; C3, complement component 3; CCL2, CC motif chemokine ligand 2; CNS, central nervous system; CR3, com-
-plement receptor 3; CXCL12, C-X-C motif chemokine 12; CXCR4, C-X-C motif chemokine receptor 4; DCC, deleted in colorectal cancer, Netrin-1 receptor; DHH, desert 
-hedgehog protein; ERBB, Erb-B receptor tyrosine kinase; GDNF, glial cell derived neurotrophic factor; GPCR/GPCRs, G-protein coupled receptor/receptors; HLA, 
-human leucocyte antigen; IH3, Diwanka; LAMA2, laminin subunit alpha 2; MCP1, monocyte chemoattractant protein 1; MHCII, major histocompatibility complex II; 
-NG2, neuron-glial antigen 2; NMJ/NMJs, neuromuscular junction/junctions; NRG1, neuregulin 1; p75NTR, neurotrophin receptor p75; PNS, peripheral nervous 
-system; RNA, Ribonucleic acid; SC/SCs, Schwann cell/cells; scRNAseq, single cell RNA sequencing; SGC/SGCs, satellite glial cell/cells; SOX10, Sry-related HMg-Box 
-gene 10; TRAP1, Tumor necrosis factor receptor associated protein 1; USH2A, usherin; VEGFR1, vascular endothelial growth factor receptor 1. 
+|Reference 7 (BM25) with RRF Score: 10.6138
+ENSRNOG00000031890,Ncam1,neural cell adhesion molecule 1 
 
-|Reference 8 (BM25) with RRF Score: 10.6660
-Perinatally, in rodents, SCs radially sort and subsequently myelinate 
-individual axons larger than 1 μm in diameter, while small calibre axons become organised in non-myelinating 
-Remak bundles. SCs have a vital role in maintaining axonal health throughout life and several specialized SC 
-types perform essential functions at specific locations, such as terminal SC at the neuromuscular junction (NMJ) 
-or SC within cutaneous sensory end organs. In addition, neural crest derived satellite glia maintain a tight 
-communication with the soma of sensory, sympathetic, and parasympathetic neurons and neural crest de-
-rivatives are furthermore an indispensable part of the enteric nervous system. The remarkable plasticity of SCs 
-becomes evident in the context of a nerve injury, where SC transdifferentiate into intriguing repair cells, which 
-orchestrate a regenerative response that promotes nerve repair. Indeed, the multiple adaptations of SCs are 
-captivating, but remain often ill-resolved on the molecular level. 
+|Reference 8 (BM25) with RRF Score: 10.6138
+ENSRNOG00000002126,Ncam2,neural cell adhesion molecule 2 
 
-|Reference 9 (BM25) with RRF Score: 10.6660
-Perinatally, in rodents, SCs radially sort and subsequently myelinate 
-individual axons larger than 1 μm in diameter, while small calibre axons become organised in non-myelinating 
-Remak bundles. SCs have a vital role in maintaining axonal health throughout life and several specialized SC 
-types perform essential functions at specific locations, such as terminal SC at the neuromuscular junction (NMJ) 
-or SC within cutaneous sensory end organs. In addition, neural crest derived satellite glia maintain a tight 
-communication with the soma of sensory, sympathetic, and parasympathetic neurons and neural crest de-
-rivatives are furthermore an indispensable part of the enteric nervous system. The remarkable plasticity of SCs 
-becomes evident in the context of a nerve injury, where SC transdifferentiate into intriguing repair cells, which 
-orchestrate a regenerative response that promotes nerve repair. Indeed, the multiple adaptations of SCs are 
-captivating, but remain often ill-resolved on the molecular level. 
+|Reference 9 (BM25) with RRF Score: 10.6138
+ENSRNOG00000016944,Rax,retina and anterior neural fold homeobox 
 
-|Reference 10 (BM25) with RRF Score: 10.5624
-3A and Supplementary Fig. 2) and iPSC-derived 
-Schwann cells (iPSC-SCs) (Fig. 3A) from a patient line, CS67i-CMT-n1, alongside its isogenic control iPSC line, isogenic-CS67i-CMT (referred to as ‘CMT1A’ and ‘isogenic’ lines, respectively) (Supplementary Figs 4 and 5
-). The isogenic line contained one copy of PMP22 less, in com -
-parison to its CMT1A mutant counterpart ( Supplementary Fig. 6).During differentiation, the iPSC colonies acquired a Schwann cell- 
-like morphology, accompanied by the expression of key proteins 
-marking the transitions from iPSCs to early neural crest cells, SCPs and, ultimately, Schwann cells (Fig. 3B and Supplementary Figs 2 
-and 3). Moreover, we documented the temporal expression profile of 
-genes essential to Schwann cell lineage development (Fig. 3C). We 
-also observed that these iPSC-SCs were capable of producing myelin when co-cultured with mouse dorsal root ganglion neurons (Fig. 3D). Bulk RNA-seq indicated that the transcriptome of CMT1A and 
-isogenic iPSC-SCPs was similar to that of neural crest progenitors 
-(Fig. 
+|Reference 10 (BM25) with RRF Score: 9.9286
+ENSRNOG00000002582,Hand1,heart and neural crest derivatives expressed 1 
 
-|Reference 11 (BM25) with RRF Score: 10.5624
-3A and Supplementary Fig. 2) and iPSC-derived 
-Schwann cells (iPSC-SCs) (Fig. 3A) from a patient line, CS67i-CMT-n1, alongside its isogenic control iPSC line, isogenic-CS67i-CMT (referred to as ‘CMT1A’ and ‘isogenic’ lines, respectively) (Supplementary Figs 4 and 5
-). The isogenic line contained one copy of PMP22 less, in com -
-parison to its CMT1A mutant counterpart ( Supplementary Fig. 6).During differentiation, the iPSC colonies acquired a Schwann cell- 
-like morphology, accompanied by the expression of key proteins 
-marking the transitions from iPSCs to early neural crest cells, SCPs and, ultimately, Schwann cells (Fig. 3B and Supplementary Figs 2 
-and 3). Moreover, we documented the temporal expression profile of 
-genes essential to Schwann cell lineage development (Fig. 3C). We 
-also observed that these iPSC-SCs were capable of producing myelin when co-cultured with mouse dorsal root ganglion neurons (Fig. 3D). Bulk RNA-seq indicated that the transcriptome of CMT1A and 
-isogenic iPSC-SCPs was similar to that of neural crest progenitors 
-(Fig. 
+|Reference 11 (BM25) with RRF Score: 9.9286
+ENSRNOG00000060448,Hand2,heart and neural crest derivatives expressed 2 
 
-|Reference 12 (BM25) with RRF Score: 10.5003
-ELife 2014 (3). https://doi.org/10.7554/ 
-ELIFE.01901.001 . Li, Z., Ngan, E.S.-W., 2022. New insights empowered by single-cell sequencing: From 
-neural crest to enteric nervous system. Comput. Struct. Biotechnol. J. 20, 
-2464 –2472. https://doi.org/10.1016/J.CSBJ.2022.05.025 . Li, H.-Y., Say, E.H.M., Zhou, X.-F., 2007. Isolation and characterization of neural crest 
-progenitors from adult dorsal root ganglia. Stem Cells (Dayton, Ohio) 25 (8), 
-2053 –2065. https://doi.org/10.1634/STEMCELLS.2007-0080 . Li, Y., Kang, S., Halawani, D., Wang, Y., Alves, C.J., Ramakrishnan, A., Estill, M., 
-Shen, L., Li, F., He, X., Friedel, R.H., Zou, H., 2022. Macrophages facilitate peripheral 
-nerve regeneration by organizing regeneration tracks through Plexin-B2. Genes Dev. 36 (3–4), 133–148. https://doi.org/10.1101/GAD.349063.121 . Lin, W., Sanchez, H.B., Deerinckt, T., Morris, J.K., Ellisman, M., Lee, K.F., 2000. Aberrant 
-development of motor axons and neuromuscular synapses in erbB2-deficient mice. Proc. Natl. Acad. Sci. U. S. A. 
+|Reference 12 (BM25) with RRF Score: 9.9286
+ENSRNOG00000010205,Mturn,"maturin, neural progenitor differentiation regulator homolog" 
 
-|Reference 13 (BM25) with RRF Score: 10.5003
-ELife 2014 (3). https://doi.org/10.7554/ 
-ELIFE.01901.001 . Li, Z., Ngan, E.S.-W., 2022. New insights empowered by single-cell sequencing: From 
-neural crest to enteric nervous system. Comput. Struct. Biotechnol. J. 20, 
-2464 –2472. https://doi.org/10.1016/J.CSBJ.2022.05.025 . Li, H.-Y., Say, E.H.M., Zhou, X.-F., 2007. Isolation and characterization of neural crest 
-progenitors from adult dorsal root ganglia. Stem Cells (Dayton, Ohio) 25 (8), 
-2053 –2065. https://doi.org/10.1634/STEMCELLS.2007-0080 . Li, Y., Kang, S., Halawani, D., Wang, Y., Alves, C.J., Ramakrishnan, A., Estill, M., 
-Shen, L., Li, F., He, X., Friedel, R.H., Zou, H., 2022. Macrophages facilitate peripheral 
-nerve regeneration by organizing regeneration tracks through Plexin-B2. Genes Dev. 36 (3–4), 133–148. https://doi.org/10.1101/GAD.349063.121 . Lin, W., Sanchez, H.B., Deerinckt, T., Morris, J.K., Ellisman, M., Lee, K.F., 2000. Aberrant 
-development of motor axons and neuromuscular synapses in erbB2-deficient mice. Proc. Natl. Acad. Sci. U. S. A. 
+|Reference 13 (BM25) with RRF Score: 9.3267
+ENSRNOG00000005561,Brinp1,BMP/retinoic acid inducible neural specific 1 
 
-|Reference 14 (BM25) with RRF Score: 10.2953
-How can PMP22  overexpression  change  MYC expression  as rationalized by chatGPT  
- 
-Certainly! Let’s explore how overexpression of  PMP22 
-(Peripheral Myelin Protein 22 ) could influence  MYC expression, considering mechanisms 
-in cell biology and biochemistry . Backgroun d 
-• PMP2 2 is a transmembrane glycoprotein primarily 
-expressed in Schwann cells, contributing to myelin 
-sheath formation. It is also involved in regulating cell 
-growth, adhesion, and apoptosis. • MYC is a transcription factor that regulates genes 
-involved in proliferation , metabolism, and apoptosis. Possible Mechanisms Linking PMP22 
-Overexpression to MYC Expressio n 
-1. Altered Signaling Pathway s: 
-• PMP22 is known to interact with signaling pathways, particularly those involving cell 
-growth and differentiation. Overexpressi on may activate or inhibit signaling cascades 
-like PI3K -AKT or MAP K. 
-• These pathways can modulate  MYC expression directly or indirectly through upstream 
-regulators such as  mTO R or transcription factors like  NF-κB. 
+|Reference 14 (BM25) with RRF Score: 9.3267
+ENSRNOG00000014548,Nedd9,"neural precursor cell expressed, developmentally down-regulated 9" 
 
-|Reference 15 (BM25) with RRF Score: 10.2363
-Yellow lines with a B represent binding proteins, red indicates the upregulated, and blue signifies 
-downregulated genes in TrJ samples ( n = 10 nerves, from 5 mice), as compared with Wt ( n = 8 nerves, from 4 mice). 14714159, 2024, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jnc.16189 by Leiden University Libraries, Wiley Online Library on [20/11/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+|Reference 15 (BM25) with RRF Score: 9.3267
+ENSRNOG00000005592,Brinp2,BMP/retinoic acid inducible neural specific 2 
 
-   |  3163
-DEFILIPPI  et al. TABLE 1  Differentially expressed protein groups within TrJ 
-sciatic nerves corresponding to myelin and axonal compartments. Group Gene log2FC Pval
-Myelin Actr1a −0.63 0.0144
-Myelin Alb 0.75 0.0364
-Myelin Arf6 −0.91 0.025
-Myelin Aspa −1.25 0.0065
-Myelin Atp1a2 −0.57 0.0417
-Myelin Atp1b1 −0.88 0.0344
-Myelin Cd59a −3.39 0.0312
-Myelin Cd9 −2.51 0.0044
-Myelin Cers2 −0.94 0.0217
-Myelin Ckmt1 −0.98 0.0134
-Myelin Cnrip1 −0.91 0.0488
-Myelin Drp2 −3.13 0.0016
-Myelin Ehd1 −0.97 0.0254
-Myelin Ehd3 −1.1 0.0213
-Myelin Ezr 1.14 0.0142
-Myelin Galc −0.83 0.0275
-Myelin Gjb1 −2.34 0.0032
-Myelin Gnao1 −1.2 0.0062
-Myelin Mpz −1.72 0.0044
-Myelin Napb −1.21 0.0342
-Myelin Napg −0.82 0.0388
-Myelin Ncstn 1.36 0.0114
-Myelin Ndrg1 −0.68 0.0136
-Myelin Nsf −0.81 0.0492
-Myelin Pdia3 0.93 0.0392
-Myelin Pgam1 −1.08 0.0425
-Myelin Plcb1 −2.01 0.0101
-Myelin Pllp −2.01 0.0043
-Myelin Pmp2 −2.11 0.0014
-Myelin Ppp3r1 −2.3 0.0089
-Myelin Prx −1.57 0.008
-Myelin Psap 1.31 0.0138
-Myelin Rala −1.83 0.0114
-Myelin Rheb −1.55 0.0062
-Myelin Serinc5 1.92 0.0024
-Myelin Syn2 −0.89 0.0449
-Myelin Tagln3 −1.74 0.0128
-Myelin Tufm 0.69 0.0295
-Myelin Vcp 0.67 0.0261
-Myelin Hspd1 0.55 0.023
-Myelin Hspg2 0.77 0.0294
-Myelin Ina −1.37 0.0226
-Axon Aak1 −0.96 0.0214
-Axon Adam10 −0.75 0.0308
-Axon Alcam −0.87 0.0191
-Axon Aldoc −1.59 0.0089Group Gene log2FC Pval
-Axon Amph −1.19 0.0131
-Axon Ank3 −0.67 0.0201
-Axon Ap3b1 0.99 0.0124
-Axon Ap3m1 0.67 0.0274
-Axon Apbb1 −1.55 0.043
-Axon Atp6v0d1 0.67 0.022
-Axon Avil −0.98 0.0248
-Axon C4b 0.76 0.0402
-Axon Cadm1 −1.28 0.0056
-Axon Calb1 −2.49 0.0062
-Axon Calb2 −2.6 0.0101
-Axon Cdh2 −1.14 0.0317
-Axon Cplx1 −2.92 0.0026
-Axon Cpne6 −1.36 0.0228
-Axon Crmp1 −0.67 0.0384
-Axon Csf1r 1.87 0.0282
-Axon Ctsz 1.73 0.0121
-Axon Cttn 1.23 0.0082
-Axon Dclk1 0.94 0.0229
-Axon Dctn1 −0.59 0.0205
-Axon Dctn2 −0.86 0.0087
-Axon Dip2b 0.62 0.0466
-Axon Dlg3 1.3 0.0076
-Axon Dnm3 −1.13 0.0483
-Axon Dpysl3 −1.09 0.0126
-Axon Dpysl5 −1.16 0.0162
-Axon Dync1i1 −2.16 0.0028
-Axon Exoc8 −1.89 0.0044
-Axon Fez1 −2.87 0.0101
-Axon Fkbp1a −1.35 0.0299
-Axon Flna 0.71 0.0275
-Axon Flot1 −0.85 0.0103
-Axon Fn1 1.16 0.0206
-Axon G3bp1 1.01 0.0141
-Axon Gars −0.8 0.0222
-Axon Gldn 2.44 8.00E-  
-04
-Axon Golga2 1.39 0.0493
-Axon Gpm6a −3.21 0.0307
-Axon Grcc10 −1.42 0.017
-Axon Grk2 −0.82 0.0492
-Axon Gsk3b −1.07 0.0268
-Axon Hnrnpk 0.85 0.0492
-Axon Hpca −0.91 0.008
-Axon Hsp90ab1 0.72 0.0486
-Axon Impa1 −0.82 0.0254
-Axon Kcnab2 −1.97 0.0082TABLE 1  (Continued)
- 14714159, 2024, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jnc.16189 by Leiden University Libraries, Wiley Online Library on [20/11/2024]. 
+|Reference 16 (BM25) with RRF Score: 9.3267
+ENSRNOG00000002811,Brinp3,BMP/retinoic acid inducible neural specific 3 
 
-|Reference 16 (BM25) with RRF Score: 10.2363
-Yellow lines with a B represent binding proteins, red indicates the upregulated, and blue signifies 
-downregulated genes in TrJ samples ( n = 10 nerves, from 5 mice), as compared with Wt ( n = 8 nerves, from 4 mice). 14714159, 2024, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jnc.16189 by Leiden University Libraries, Wiley Online Library on [20/11/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+|Reference 17 (BM25) with RRF Score: 8.4014
+ENSRNOG00000001314,Fam20c,"FAM20C, golgi associated secretory pathway kinase" 
 
-   |  3163
-DEFILIPPI  et al. TABLE 1  Differentially expressed protein groups within TrJ 
-sciatic nerves corresponding to myelin and axonal compartments. Group Gene log2FC Pval
-Myelin Actr1a −0.63 0.0144
-Myelin Alb 0.75 0.0364
-Myelin Arf6 −0.91 0.025
-Myelin Aspa −1.25 0.0065
-Myelin Atp1a2 −0.57 0.0417
-Myelin Atp1b1 −0.88 0.0344
-Myelin Cd59a −3.39 0.0312
-Myelin Cd9 −2.51 0.0044
-Myelin Cers2 −0.94 0.0217
-Myelin Ckmt1 −0.98 0.0134
-Myelin Cnrip1 −0.91 0.0488
-Myelin Drp2 −3.13 0.0016
-Myelin Ehd1 −0.97 0.0254
-Myelin Ehd3 −1.1 0.0213
-Myelin Ezr 1.14 0.0142
-Myelin Galc −0.83 0.0275
-Myelin Gjb1 −2.34 0.0032
-Myelin Gnao1 −1.2 0.0062
-Myelin Mpz −1.72 0.0044
-Myelin Napb −1.21 0.0342
-Myelin Napg −0.82 0.0388
-Myelin Ncstn 1.36 0.0114
-Myelin Ndrg1 −0.68 0.0136
-Myelin Nsf −0.81 0.0492
-Myelin Pdia3 0.93 0.0392
-Myelin Pgam1 −1.08 0.0425
-Myelin Plcb1 −2.01 0.0101
-Myelin Pllp −2.01 0.0043
-Myelin Pmp2 −2.11 0.0014
-Myelin Ppp3r1 −2.3 0.0089
-Myelin Prx −1.57 0.008
-Myelin Psap 1.31 0.0138
-Myelin Rala −1.83 0.0114
-Myelin Rheb −1.55 0.0062
-Myelin Serinc5 1.92 0.0024
-Myelin Syn2 −0.89 0.0449
-Myelin Tagln3 −1.74 0.0128
-Myelin Tufm 0.69 0.0295
-Myelin Vcp 0.67 0.0261
-Myelin Hspd1 0.55 0.023
-Myelin Hspg2 0.77 0.0294
-Myelin Ina −1.37 0.0226
-Axon Aak1 −0.96 0.0214
-Axon Adam10 −0.75 0.0308
-Axon Alcam −0.87 0.0191
-Axon Aldoc −1.59 0.0089Group Gene log2FC Pval
-Axon Amph −1.19 0.0131
-Axon Ank3 −0.67 0.0201
-Axon Ap3b1 0.99 0.0124
-Axon Ap3m1 0.67 0.0274
-Axon Apbb1 −1.55 0.043
-Axon Atp6v0d1 0.67 0.022
-Axon Avil −0.98 0.0248
-Axon C4b 0.76 0.0402
-Axon Cadm1 −1.28 0.0056
-Axon Calb1 −2.49 0.0062
-Axon Calb2 −2.6 0.0101
-Axon Cdh2 −1.14 0.0317
-Axon Cplx1 −2.92 0.0026
-Axon Cpne6 −1.36 0.0228
-Axon Crmp1 −0.67 0.0384
-Axon Csf1r 1.87 0.0282
-Axon Ctsz 1.73 0.0121
-Axon Cttn 1.23 0.0082
-Axon Dclk1 0.94 0.0229
-Axon Dctn1 −0.59 0.0205
-Axon Dctn2 −0.86 0.0087
-Axon Dip2b 0.62 0.0466
-Axon Dlg3 1.3 0.0076
-Axon Dnm3 −1.13 0.0483
-Axon Dpysl3 −1.09 0.0126
-Axon Dpysl5 −1.16 0.0162
-Axon Dync1i1 −2.16 0.0028
-Axon Exoc8 −1.89 0.0044
-Axon Fez1 −2.87 0.0101
-Axon Fkbp1a −1.35 0.0299
-Axon Flna 0.71 0.0275
-Axon Flot1 −0.85 0.0103
-Axon Fn1 1.16 0.0206
-Axon G3bp1 1.01 0.0141
-Axon Gars −0.8 0.0222
-Axon Gldn 2.44 8.00E-  
-04
-Axon Golga2 1.39 0.0493
-Axon Gpm6a −3.21 0.0307
-Axon Grcc10 −1.42 0.017
-Axon Grk2 −0.82 0.0492
-Axon Gsk3b −1.07 0.0268
-Axon Hnrnpk 0.85 0.0492
-Axon Hpca −0.91 0.008
-Axon Hsp90ab1 0.72 0.0486
-Axon Impa1 −0.82 0.0254
-Axon Kcnab2 −1.97 0.0082TABLE 1  (Continued)
- 14714159, 2024, 9, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jnc.16189 by Leiden University Libraries, Wiley Online Library on [20/11/2024]. 
+|Reference 18 (BM25) with RRF Score: 7.9816
+ENSRNOG00000019556,Cd9,CD9 molecule 
 
-|Reference 17 (BM25) with RRF Score: 9.9908
-DiVincenzo
-et al. described the frequency, detection rate, and mutation types in 14 representative
-genes ( PMP22 ,GJB1 ,MPZ ,MFN2 ,SH3TC2 ,GDAP1 ,NEFL ,LITAF ,GARS ,HSPB1 ,FIG4 ,
-EGR2 ,PRX , and RAB7A ) related to CMT in a cohort study of 17,880 patients tested in a
-commercial genetic laboratory. Genetic anomalies were detected in 18.5% (n = 3312) of the
-total population. Sanger sequencing and multiplex ligation-dependent probe ampliﬁcation
-revealed that duplications (56.7%) or deletions (21.9%) in PMP22 were reported for most of
-the positive results; next, mutations were detected in GJB1 (6.7%), MPZ (5.3%), and MFN2
-(4.3%). GJB1 deletions and mutations in the residual genes were 5.3% of the anomalies. Of
-the individuals presenting a positive genetic outcome in a CMT-related gene, 94.9% had a
-mutation in one of the following four genes ( PMP22 ,GJB1 ,MPZ , orMFN2 ) [8]. Effective pharmacological treatments for CMT are currently lacking. This review dis-
-cusses the treatment of CMT with the four main causative genes. 
+|Reference 19 (BM25) with RRF Score: 7.9816
+ENSRNOG00000006076,Steap2,STEAP2 metalloreductase 
 
-|Reference 18 (BM25) with RRF Score: 9.6516
-Differentiated astrocytes were 
-exposed to hypoxia (0.2 % oxygen) for 48 h which was confirmed by 
-increased expression of HIF1 α on Western blot (Fig. 1a). After appro -
-priate quality control, total cellular RNA was sequenced (n 3 samples each for normoxia and hypoxia). 1365 genes were found to be differ -
-entially expressed (log2fold changeF1 and adjusted p-valueD0.1) out of 
-which 585 were upregulated while 780 were downregulated in astro-
-cytes exposed to hypoxia as compared to normoxic controls (Fig. 1b, 
-Supplementary Table S1 and S2). Gene set enrichment analysis to look 
-for key gene ontology terms affected in hypoxic injury to astrocytes 
-(Supplementary Table S3 and S4) revealed that terms relating to sterol 
-and cholesterol biosynthetic pathways (normalised enrichment score 
-(NES) 2.35, adjusted p-value 0.004) were positively enriched in hypoxic 
-astrocytes (Fig. 1c). Pathway analysis (Supplementary table S5 and S6) 
-showed the positive enrichment of HIF 1 signaling pathway (NES 2.06, 
-adjusted p-value 0.0034) validating the hypoxia exposure in our in vitro 
-model. 
-
-|Reference 19 (BM25) with RRF Score: 9.6306
-To test the efficacy of ASO6 in reducing rat Pmp22 mRNA, 
-we treated 6-week-old CMT1A rats weekly for 12 weeks with PBS, control ASO (12.5 mg/kg), or ASO6 (12.5 mg/kg) and sacrificed the rats following electrophysiological testing performed 1 week in RT4-D6P2T cells and in vivo screening of ASOs in Sprague- Dawley rats and identified an active ASO (ASO6) that effectively suppressed rat Pmp22 mRNA in a dose-dependent manner, but had no effect on mouse Pmp22 mRNA (Supplemental Figure 5, 
-Figure 2. Transcriptional changes in C22 mice following ASO treatment. (A) Hierarchical clustering of the expression profiles of 76 DEGs. (B) Subset of lip-
-id biosynthetic genes, Schwann cell differentiation markers, myelin inhibitors, and myelin-related genes altered by 9 weeks after ASO1 treatment. (C) PCA of 76 DEGs. Correlation analyses of CMAP amplitude and mRNA expression of (D) Bzw2 (Pearson r
-2 = 0.51, P < 0.01), (E) Ugt8a (Pearson r2 = 0.52, P < 0.01), 
-and (F) Sc5d (Pearson r2 = 0.48, P < 0.01). (G–J) qRT-PCR confirmation of mRNA expression of Sc5d, Mpz, Pou3f1, and Id2 in ASO1-treated sciatic nerves. 
-
-|Reference 20 (BM25) with RRF Score: 9.6306
-To test the efficacy of ASO6 in reducing rat Pmp22 mRNA, 
-we treated 6-week-old CMT1A rats weekly for 12 weeks with PBS, control ASO (12.5 mg/kg), or ASO6 (12.5 mg/kg) and sacrificed the rats following electrophysiological testing performed 1 week in RT4-D6P2T cells and in vivo screening of ASOs in Sprague- Dawley rats and identified an active ASO (ASO6) that effectively suppressed rat Pmp22 mRNA in a dose-dependent manner, but had no effect on mouse Pmp22 mRNA (Supplemental Figure 5, 
-Figure 2. Transcriptional changes in C22 mice following ASO treatment. (A) Hierarchical clustering of the expression profiles of 76 DEGs. (B) Subset of lip-
-id biosynthetic genes, Schwann cell differentiation markers, myelin inhibitors, and myelin-related genes altered by 9 weeks after ASO1 treatment. (C) PCA of 76 DEGs. Correlation analyses of CMAP amplitude and mRNA expression of (D) Bzw2 (Pearson r
-2 = 0.51, P < 0.01), (E) Ugt8a (Pearson r2 = 0.52, P < 0.01), 
-and (F) Sc5d (Pearson r2 = 0.48, P < 0.01). (G–J) qRT-PCR confirmation of mRNA expression of Sc5d, Mpz, Pou3f1, and Id2 in ASO1-treated sciatic nerves. 
+|Reference 20 (BM25) with RRF Score: 7.9612
+ENSRNOG00000062503,, 
 

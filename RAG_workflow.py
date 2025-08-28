@@ -809,8 +809,8 @@ def load_gz_files(
 
 
 def load_pdf_files(
-    pdf_dir: str = './data/PDF',
-    file_log: Optional[Dict[str, Any]] = None
+        pdf_dir: str = './data/PDF',
+        file_log: Optional[Dict[str, Any]] = None
 ) -> List[Tuple[str, str, str]]:
     """
     Loads PDF documents from the specified directory, skipping those already recorded in the file log.
@@ -833,41 +833,54 @@ def load_pdf_files(
 
     file_log = file_log or {}
 
-    for file in os.listdir(pdf_dir):
-        if file.lower().endswith('.pdf'):
-            if file in file_log:
-                continue
+    # Debug: Show what's in the file log for PDFs
+    pdf_files = [f for f in os.listdir(pdf_dir) if f.lower().endswith('.pdf')]
+    print(f"\nDEBUG: Found {len(pdf_files)} PDF files in {pdf_dir}")
 
-            file_path = os.path.join(pdf_dir, file)
-            try:
-                reader = PdfReader(file_path)
-                pages_text = []
-                for page in reader.pages:
-                    pages_text.append(page.extract_text() or "")
-                content = "\n".join(pages_text).strip()
-                if content:
-                    file_hash = compute_file_hash(file_path)
-                    pdf_documents.append((file, content, file_hash))
-                    print(
-                        f"Loaded PDF '{file}' with {len(pages_text)} pages. Document length: {len(content)}"
-                        f" characters.")
-                else:
-                    print(f"Skipped empty PDF '{file}'.")
-            except Exception as e:
-                print(f"Failed to read PDF '{file}': {e}")
+    skipped_count = 0
+    processed_count = 0
+
+    for file in pdf_files:
+        if file in file_log:
+            print(
+                f"  - Skipping '{file}' (already in file log with hash: {file_log[file].get('hash', 'unknown')[:8]}...)")
+            skipped_count += 1
+            continue
+
+        file_path = os.path.join(pdf_dir, file)
+        try:
+            print(f"  - Processing '{file}'...")
+            reader = PdfReader(file_path)
+            pages_text = []
+            for page in reader.pages:
+                pages_text.append(page.extract_text() or "")
+            content = "\n".join(pages_text).strip()
+
+            if content:
+                file_hash = compute_file_hash(file_path)
+                pdf_documents.append((file, content, file_hash))
+                print(
+                    f"    ✓ Loaded PDF '{file}' with {len(pages_text)} pages. Document length: {len(content)} characters.")
+                processed_count += 1
+            else:
+                print(f"    ✗ Skipped empty PDF '{file}'.")
+        except Exception as e:
+            print(f"    ✗ Failed to read PDF '{file}': {e}")
+
+    print(f"PDF Summary: {processed_count} new PDFs loaded, {skipped_count} skipped (already processed)")
 
     return pdf_documents
 
 
 def embed_documents(
-    conn: sqlite3.Connection,
-    index: Any,  # faiss.IndexIDMap
-    tokenizer: Any,
-    embeddings_model: Any,
-    data_dir: str,
-    batch_size: int,
-    log_path: str = './logs/file_log.json',
-    pdf_dir: str = './data/PDF'
+        conn: sqlite3.Connection,
+        index: Any,
+        tokenizer: Any,
+        embeddings_model: Any,
+        data_dir: str,
+        batch_size: int,
+        log_path: str = './logs/file_log.json',
+        pdf_dir: str = './data/PDF'
 ) -> None:
     """
     Embeds text from documents (both gzipped and PDF files) using a transformer model,
@@ -887,11 +900,22 @@ def embed_documents(
 
     files_documents = load_gz_files(data_dir=data_dir)
     pdf_documents = load_pdf_files(pdf_dir=pdf_dir, file_log=file_log)
-    if len(files_documents) > 0:
-        print(f"Loaded {len(files_documents)} documents from '{data_dir}'.")
-        print(f"Loaded {len(pdf_documents)} new PDF documents from '{pdf_dir}'.")
+
+    # Debug: Check what we loaded
+    print(f"DEBUG: Loaded {len(files_documents)} .gz/.gmt files from '{data_dir}'")
+    if files_documents:
+        print(f"  Files: {[doc[0] for doc in files_documents[:3]]}...")  # Show first 3 filenames
+    print(f"DEBUG: Loaded {len(pdf_documents)} new PDF files from '{pdf_dir}'")
+    if pdf_documents:
+        print(f"  PDFs: {[doc[0] for doc in pdf_documents[:3]]}...")  # Show first 3 filenames
 
     all_documents = files_documents + pdf_documents
+
+    if not all_documents:
+        print("WARNING: No documents found to process!")
+        print(f"  Checked data_dir: {data_dir}")
+        print(f"  Checked pdf_dir: {pdf_dir}")
+        return
 
     device = (
         torch.device("mps")
@@ -904,8 +928,11 @@ def embed_documents(
     embeddings_model.to(device)
     embeddings_model.eval()
 
+    total_chunks_inserted = 0
+
     for file, document, file_hash in all_documents:
         if file in file_log and file_log[file]['hash'] == file_hash:
+            print(f"Skipping already processed file: {file}")
             continue
         else:
             print(f"Processing file: {file}")
@@ -925,6 +952,7 @@ def embed_documents(
             print(f"No chunks created for file '{file}'. Skipping embedding.")
             continue
 
+        print(f"Created {len(chunks)} chunks from '{file}'")
         print(f"Embedding chunks of '{file}' on device: {device}")
         embeddings = []
 
@@ -956,6 +984,9 @@ def embed_documents(
         for idx, chunk_text in enumerate(chunks):
             chunk_id = insert_chunk(conn, file, idx, chunk_text)
             chunk_ids.append(chunk_id)
+            total_chunks_inserted += 1
+
+        print(f"Inserted {len(chunk_ids)} chunks into database for file '{file}'")
 
         faiss_ids = np.array(chunk_ids).astype('int64')
         index.add_with_ids(embeddings_np, faiss_ids)
@@ -964,6 +995,8 @@ def embed_documents(
             'hash': file_hash,
             'num_embeddings': embeddings_np.shape[0]
         }
+
+    print(f"DEBUG: Total chunks inserted into database: {total_chunks_inserted}")
 
     save_faiss_index(index, index_path='./database/faiss_index.bin')
     save_file_log(file_log, log_path=log_path)
@@ -988,24 +1021,43 @@ def build_bm25_index(
 ) -> Tuple[BM25Okapi, List[int], List[str]]:
     """
     Builds a BM25 index for the text chunks stored in the database.
-
-    Args:
-        conn: The SQLite database connection.
-
-    Returns:
-        A tuple containing the BM25 index object, a list of chunk IDs, and a list of chunk texts.
     """
     cursor = conn.cursor()
     cursor.execute('SELECT id, text FROM chunks')
     data = cursor.fetchall()
+
+    # Debug: Check if we have any chunks
+    if not data:
+        print("WARNING: No chunks found in database!")
+        print("Creating empty BM25 index...")
+        # Return empty structures to avoid crash
+        return BM25Okapi([["dummy"]]), [], []
+
     chunk_ids = []
     chunk_texts = []
     for row in data:
         chunk_ids.append(row[0])
         chunk_texts.append(row[1])
+
+    print(f"Building BM25 index with {len(chunk_texts)} chunks")
     tokenized_corpus = [tokenize(doc) for doc in chunk_texts]
-    bm25 = BM25Okapi(tokenized_corpus)
-    return bm25, chunk_ids, chunk_texts
+
+    # Filter out empty documents
+    non_empty_corpus = []
+    non_empty_ids = []
+    non_empty_texts = []
+    for tokens, chunk_id, chunk_text in zip(tokenized_corpus, chunk_ids, chunk_texts):
+        if tokens:  # Only include non-empty token lists
+            non_empty_corpus.append(tokens)
+            non_empty_ids.append(chunk_id)
+            non_empty_texts.append(chunk_text)
+
+    if not non_empty_corpus:
+        print("WARNING: All documents are empty after tokenization!")
+        return BM25Okapi([["dummy"]]), [], []
+
+    bm25 = BM25Okapi(non_empty_corpus)
+    return bm25, non_empty_ids, non_empty_texts
 
 
 def query_bm25_index(
@@ -1969,20 +2021,6 @@ def save_scores_to_file(
 
 
 def main() -> None:
-    # Previously used AI-driven config creation flow—disabled for now
-    # config_name = ""
-    # while True:
-    #     question_create_config = (
-    #         input("Do you want to leverage the AI to create a config?\n"
-    #               "Yes or No\n")
-    #         .lower()
-    #     )
-    #     if question_create_config == "yes":
-    #         config_name = create_config()
-    #         break
-    #     elif question_create_config == "no":
-    #         break
-
     parser = argparse.ArgumentParser(
         description="Run the RAG workflow tests for varying gene counts."
     )
@@ -1999,11 +2037,38 @@ def main() -> None:
     config_name = os.path.splitext(os.path.basename(args.config))[0]
     globals()['config_name'] = config_name
     globals().update(config_dict)
-    exit()
 
+    # Debug: Check data directories at start
+    print("\n=== Checking data directories ===")
+    dirs_to_check = [
+        ('./data/GSEA/external_gene_data', ['.gz', '.gmt']),
+        ('./data/PDF', ['.pdf']),
+        ('./data/GSEA/genes_of_interest', ['.xlsx'])
+    ]
+
+    for dir_path, extensions in dirs_to_check:
+        if os.path.exists(dir_path):
+            all_files = os.listdir(dir_path)
+            relevant_files = [f for f in all_files
+                              if any(f.endswith(ext) for ext in extensions)]
+            print(f"✓ {dir_path}: {len(relevant_files)} relevant files")
+            if relevant_files and len(relevant_files) <= 5:
+                for f in relevant_files:
+                    print(f"    - {f}")
+        else:
+            print(f"✗ {dir_path}: DIRECTORY NOT FOUND")
+
+    # Check for the Excel file specifically
+    excel_path = "./data/GSEA/genes_of_interest/PMP22_VS_WT.xlsx"
+    if os.path.exists(excel_path):
+        print(f"✓ Excel file found: {excel_path}")
+    else:
+        print(f"✗ Excel file NOT FOUND: {excel_path}")
+    print("=" * 40 + "\n")
 
     total_runs = len(max_genes) * query_range
     pbar = tqdm(total=total_runs, desc="Starting GSEA runs")
+
     for gene_count in max_genes:
         for iteration in range(1, query_range + 1):
             # update description
@@ -2017,6 +2082,10 @@ def main() -> None:
                 de_filter_option="combined",
             )
 
+            print(f"DEBUG: Gene list created with {num_genes} genes")
+            if num_genes > 0:
+                print(f"  First few genes: {', '.join(gene_list_string.split(', ')[:5])}...")
+
             data_dir = './data/GSEA/external_gene_data'
             log_dir = './logs'
             log_path = os.path.join(log_dir, 'file_log.json')
@@ -2024,23 +2093,66 @@ def main() -> None:
             db_path = './database/reference_chunks.db'
             ncbi_json_dir = './data/JSON/'
 
+            print("\nProcessing files in directory...")
             process_files_in_directory(data_dir, ncbi_json_dir)
 
+            print("\nInitializing database and embeddings...")
             conn = initialize_database(db_path=db_path)
             tokenizer, embeddings_model = load_embeddings_model_and_tokenizer()
             embedding_dim = embeddings_model.config.hidden_size
 
             index = initialize_faiss_index(embedding_dim, index_path)
+
+            print("\nEmbedding documents...")
             embed_documents_and_save(
                 index, conn, tokenizer, embeddings_model,
                 data_dir, batch_size=batch_size,
                 log_path=log_path, index_path=index_path
             )
 
+            # Debug: Check database content after embedding
+            print("\n=== Database Status Check ===")
+            conn_check = sqlite3.connect(db_path)
+            cursor = conn_check.cursor()
+            cursor.execute("SELECT COUNT(*) FROM chunks")
+            chunk_count = cursor.fetchone()[0]
+            print(f"Database has {chunk_count} chunks after embedding")
+
+            if chunk_count == 0:
+                print("WARNING: No chunks in database! Checking for issues...")
+                print("  - Check if file_log.json exists and delete it to force reprocessing")
+                print("  - Ensure data files exist in the expected directories")
+                print("  - Check file formats are correct (.gz, .gmt, .pdf)")
+                conn_check.close()
+                pbar.update()
+                continue  # Skip this iteration since we have no data
+
+            # Get sample of chunks to verify content
+            cursor.execute("SELECT file_name, COUNT(*) FROM chunks GROUP BY file_name LIMIT 5")
+            file_counts = cursor.fetchall()
+            print("Sample of files with chunks:")
+            for file_name, count in file_counts:
+                print(f"  - {file_name}: {count} chunks")
+            conn_check.close()
+            print("=" * 40 + "\n")
+
+            # Continue with the workflow
+            print("Loading FAISS index and building BM25...")
             index = load_faiss_index(embedding_dim, index_path=index_path)
             conn = sqlite3.connect(db_path)
-            bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
 
+            # Build BM25 with error handling
+            try:
+                bm25_index, bm25_chunk_ids, bm25_chunk_texts = build_bm25_index(conn)
+                print(f"BM25 index built with {len(bm25_chunk_ids)} documents")
+            except ZeroDivisionError as e:
+                print(f"ERROR building BM25 index: {e}")
+                print("This usually means no chunks were found in the database")
+                conn.close()
+                pbar.update()
+                continue
+
+            print("\nGenerating response...")
             generate_response_and_save(
                 query,
                 gene_list_string,
@@ -2052,8 +2164,10 @@ def main() -> None:
             )
 
             pbar.update()
+            print(f"Completed iteration {iteration} for {gene_count} genes\n")
 
     pbar.close()
+    print("\n=== All runs completed ===")
 
 
 if __name__ == "__main__":
