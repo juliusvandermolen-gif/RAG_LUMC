@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Slit2, Robo2, Ntn1, Nrp1, Nrp2, Plxnb1, Sema4f, Sema3g, Efna5, Lrrtm3, Dpysl3, Dpysl5, Tnik, Itga8, Cdh13,
+
+Schwann Cell Myelination and Peripheral Nerve Maintenance:
+Mpz, Pmp22, Prx, Mag, Drp2, Gldn, Tf, Id2, Serpini1, Ccn3,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Synpr, Sncg, Ryr3, Kif1a, Pfn2, Map1lc3a, Pam, Cpe, Scn7a, Gnai1,
+
+Extracellular Matrix Organization and Axon–Glia Interface:
+Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Adamts17, Adamtsl1, Adamtsl3, Efemp2, Mfap5, Emilin1, Ltbp1, Bgn, Has2,
+
+Non-Canonical Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Dyrk1a, Tnik, Rhoj, Asap1, Acap2, Fhod3, Ppp1r14c,
+
+cAMP and Calcium Second-Messenger Signaling:
+Prkar2b, Ryr3, Itpripl1, Gnai1, Ptgfr, P2ry2, Piezo2, Cxcl12, Atf3, Eif2ak2,

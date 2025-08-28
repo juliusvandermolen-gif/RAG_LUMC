@@ -1,11 +1,11 @@
 {
   "query": "[PLACEHOLDER QUERY: e.g., 'your query here' (must be a valid search string)]",
-  "number_of_expansions": [PLACEHOLDER NoE: e.g., 3 (must be a positive integer)],
-  "batch_size": [PLACEHOLDER BATCH_SIZE: e.g., 64 (must be a positive integer, typically a power of 2)],
+  "number_of_expansions": "[PLACEHOLDER NoE: e.g., 3 (must be a positive integer)]",
+  "batch_size": "[PLACEHOLDER BATCH_SIZE: e.g., 64 (must be a positive integer, typically a power of 2)]",
   "model_name": "[INSERT_MODEL_NAME: e.g., 'michiyasunaga/BioLinkBERT-large' (refer to model repository if needed)]",
-  "amount_docs": [PLACEHOLDER AMOUNT_DOCS: e.g., 10 (can be any positive integer; consider context size limits, avoid extremely large numbers)],
-  "weight_faiss": [PLACEHOLDER WEIGHT_FAISS: e.g., 20 (integer 0-100; note: weight_faiss + weight_bm25 must equal 100)],
-  "weight_bm25": [PLACEHOLDER WEIGHT_BM25: e.g., 80 (integer 0-100; note: weight_faiss + weight_bm25 must equal 100)],
+  "amount_docs": "[PLACEHOLDER AMOUNT_DOCS: e.g., 10 (can be any positive integer; consider context size limits, avoid extremely large numbers)]",
+  "weight_faiss": "[PLACEHOLDER WEIGHT_FAISS: e.g., 50 (integer 0-100; note: weight_faiss + weight_bm25 must equal 100)]",
+  "weight_bm25": "[PLACEHOLDER WEIGHT_BM25: e.g.,50 (integer 0-100; note: weight_faiss + weight_bm25 must equal 100)]",
   "system_instruction_response": "You are a knowledgeable expert assistant in [INSERT DOMAIN/AREA OF SPECIALIZATION]. Your primary objective is to [INSERT TASK DESCRIPTION]. Your response should adhere to the following guidelines:
 
 1. Input Acceptance and Data Context:
@@ -40,6 +40,5 @@
    - Do not critique or modify any user-provided hypotheses or analyses; base evaluations solely on the input data and established domain expertise.
    - Handle synonyms and ambiguous terms by referencing [PLACEHOLDER FOR SYNONYM HANDLING OR ALTERNATIVE TERMS].
    - Adapt the level of detail based on the complexity of the input and the specific requirements of the task ([PLACEHOLDER FOR DETAIL LEVEL GUIDANCE]).
-   - [INSERT ANY ADDITIONAL GUIDELINES OR CUSTOM INSTRUCTIONS HERE]
-"
+   - [INSERT ANY ADDITIONAL GUIDELINES OR CUSTOM INSTRUCTIONS HERE]"
 }

@@ -1,14 +1,1 @@
-{
-    "genes-14-01391-v2.pdf": {
-        "hash": "bc5e84dbecdcdeb4c86c3a50a43110424b7747b3a7f09d6fb832fbf580b28437",
-        "num_embeddings": 67
-    },
-    "How can PMP22 overexpression change MYC expression as rationalized by chatGPT.pdf": {
-        "hash": "47f1da894cce8b97102b12c7ccc107abd59f55a8249917f57bdff8f17e5a6c24",
-        "num_embeddings": 3
-    },
-    "These are genes that differentially regulated in immortalized schwann cells.pdf": {
-        "hash": "2545cde7d1d4b15122426de3d8254b15023c521c5e8e9a1f2171d1120b03c278",
-        "num_embeddings": 1
-    }
-}
+{}

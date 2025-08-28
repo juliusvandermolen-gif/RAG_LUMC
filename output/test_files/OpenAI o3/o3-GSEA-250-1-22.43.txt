@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Nrp1, Nrp2, Plxnb1, Sema3g, Sema4f, Slit2, Robo2, Ntn1, Efna5, Itga8, Dpysl3, Dpysl5, Kif1a, Lrrtm3, Rhoj, Srgap1, Tnik, Gnai1,
+
+Myelination and Schwann Cell Differentiation:
+Mag, Mpz, Prx, Drp2, Gldn, Mal, Cldn19,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Cpe, Pam, Pcsk5, Synpr, Pfn2, Prkar2b, Sumo3, Kif1a, Map1lc3a, Ryr3, P2ry2, Gnai1, Scn7a, Tubb4a, Tuba4a,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Rhoj,
+
+Mechanotransduction and Calcium Signaling in Sensory Neurons:
+Piezo2, Ryr3, Itpripl1, P2ry2, Gnai1, Tubb4a,
+
+Extracellular Matrix Modulation of Neural Pathways:
+Col11a1, Col15a1, Col20a1, Col8a2, Col9a3, Matn3, Hapln1, Pxdn, Ltbp1, Adamts17, Adamtsl1, Adamtsl3, Efemp2, Emilin1, Mfap5, Htra1,
