@@ -82,11 +82,13 @@ def ensure_nltk_resource(pkg_name: str, resource_path: str) -> None:
     except LookupError:
         with contextlib.redirect_stdout(open(os.devnull, 'w')), \
                 contextlib.redirect_stderr(open(os.devnull, 'w')):
+            nltk.download('punkt_tab') # Download punkt_tab
             nltk.download(pkg_name, quiet=True)
 
 
 ensure_nltk_resource('punkt',
                      'tokenizers/punkt')
+ensure_nltk_resource('punkt_tab', 'tokenizers/punkt_tab')
 ensure_nltk_resource('stopwords', 'corpora/stopwords')
 
 
