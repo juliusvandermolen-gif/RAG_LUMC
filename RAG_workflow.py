@@ -80,13 +80,14 @@ def ensure_nltk_resource(pkg_name: str, resource_path: str) -> None:
     try:
         find(resource_path)
     except LookupError:
+        print(f"resource'{pkg_name}' not found. Downloading...")
         with contextlib.redirect_stdout(open(os.devnull, 'w')), \
                 contextlib.redirect_stderr(open(os.devnull, 'w')):
             nltk.download(pkg_name, quiet=True)
 
 
-ensure_nltk_resource('punkt',
-                     'tokenizers/punkt')
+ensure_nltk_resource('punkt_tab',
+                     'tokenizers/punkt_tab')
 ensure_nltk_resource('stopwords', 'corpora/stopwords')
 
 
