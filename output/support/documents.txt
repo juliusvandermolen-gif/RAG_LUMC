@@ -1,60 +1,60 @@
-|Reference 1 (BM25) with RRF Score: 12.4114
+|Reference 1 (BM25) with RRF Score: 13.8219
 ENSRNOG00000017052,Pianp,PILR alpha associated neural protein 
 
-|Reference 2 (BM25) with RRF Score: 11.4004
+|Reference 2 (BM25) with RRF Score: 13.8219
+ENSRNOG00000017052,Pianp,PILR alpha associated neural protein 
+
+|Reference 3 (BM25) with RRF Score: 12.1905
 ENSRNOG00000013721,Nepro,nucleolus and neural progenitor protein 
 
-|Reference 3 (BM25) with RRF Score: 11.4004
+|Reference 4 (BM25) with RRF Score: 12.1905
 ENSRNOG00000018528,Nrl,neural retina leucine zipper 
 
-|Reference 4 (BM25) with RRF Score: 11.4004
-ENSRNOG00000006235,Nell2,neural EGFL like 2 
-
-|Reference 5 (BM25) with RRF Score: 11.4004
+|Reference 5 (BM25) with RRF Score: 12.1905
 ENSRNOG00000015675,Nell1,neural EGFL like 1 
 
-|Reference 6 (BM25) with RRF Score: 10.6138
-ENSRNOG00000013102,Npdc1,"neural proliferation, differentiation and control, 1" 
+|Reference 6 (BM25) with RRF Score: 12.1905
+ENSRNOG00000018528,Nrl,neural retina leucine zipper 
 
-|Reference 7 (BM25) with RRF Score: 10.6138
-ENSRNOG00000031890,Ncam1,neural cell adhesion molecule 1 
+|Reference 7 (BM25) with RRF Score: 12.1905
+ENSRNOG00000006235,Nell2,neural EGFL like 2 
 
-|Reference 8 (BM25) with RRF Score: 10.6138
+|Reference 8 (BM25) with RRF Score: 12.1905
+ENSRNOG00000013721,Nepro,nucleolus and neural progenitor protein 
+
+|Reference 9 (BM25) with RRF Score: 12.1905
+ENSRNOG00000006235,Nell2,neural EGFL like 2 
+
+|Reference 10 (BM25) with RRF Score: 12.1905
+ENSRNOG00000015675,Nell1,neural EGFL like 1 
+
+|Reference 11 (BM25) with RRF Score: 11.5998
 ENSRNOG00000002126,Ncam2,neural cell adhesion molecule 2 
 
-|Reference 9 (BM25) with RRF Score: 10.6138
+|Reference 12 (BM25) with RRF Score: 11.5998
 ENSRNOG00000016944,Rax,retina and anterior neural fold homeobox 
 
-|Reference 10 (BM25) with RRF Score: 9.9286
-ENSRNOG00000002582,Hand1,heart and neural crest derivatives expressed 1 
+|Reference 13 (BM25) with RRF Score: 11.5998
+ENSRNOG00000031890,Ncam1,neural cell adhesion molecule 1 
 
-|Reference 11 (BM25) with RRF Score: 9.9286
+|Reference 14 (BM25) with RRF Score: 11.5998
+ENSRNOG00000016944,Rax,retina and anterior neural fold homeobox 
+
+|Reference 15 (BM25) with RRF Score: 11.5998
+ENSRNOG00000013102,Npdc1,"neural proliferation, differentiation and control, 1" 
+
+|Reference 16 (BM25) with RRF Score: 11.5998
+ENSRNOG00000013102,Npdc1,"neural proliferation, differentiation and control, 1" 
+
+|Reference 17 (BM25) with RRF Score: 11.5998
+ENSRNOG00000002126,Ncam2,neural cell adhesion molecule 2 
+
+|Reference 18 (BM25) with RRF Score: 11.5998
+ENSRNOG00000031890,Ncam1,neural cell adhesion molecule 1 
+
+|Reference 19 (BM25) with RRF Score: 11.0639
 ENSRNOG00000060448,Hand2,heart and neural crest derivatives expressed 2 
 
-|Reference 12 (BM25) with RRF Score: 9.9286
-ENSRNOG00000010205,Mturn,"maturin, neural progenitor differentiation regulator homolog" 
-
-|Reference 13 (BM25) with RRF Score: 9.3267
-ENSRNOG00000005561,Brinp1,BMP/retinoic acid inducible neural specific 1 
-
-|Reference 14 (BM25) with RRF Score: 9.3267
-ENSRNOG00000014548,Nedd9,"neural precursor cell expressed, developmentally down-regulated 9" 
-
-|Reference 15 (BM25) with RRF Score: 9.3267
-ENSRNOG00000005592,Brinp2,BMP/retinoic acid inducible neural specific 2 
-
-|Reference 16 (BM25) with RRF Score: 9.3267
-ENSRNOG00000002811,Brinp3,BMP/retinoic acid inducible neural specific 3 
-
-|Reference 17 (BM25) with RRF Score: 8.4014
-ENSRNOG00000001314,Fam20c,"FAM20C, golgi associated secretory pathway kinase" 
-
-|Reference 18 (BM25) with RRF Score: 7.9816
-ENSRNOG00000019556,Cd9,CD9 molecule 
-
-|Reference 19 (BM25) with RRF Score: 7.9816
-ENSRNOG00000006076,Steap2,STEAP2 metalloreductase 
-
-|Reference 20 (BM25) with RRF Score: 7.9612
-ENSRNOG00000062503,, 
+|Reference 20 (BM25) with RRF Score: 11.0639
+ENSRNOG00000002582,Hand1,heart and neural crest derivatives expressed 1 
 
