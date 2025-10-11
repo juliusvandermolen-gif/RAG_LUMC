@@ -50,7 +50,14 @@ os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
+# Seeing the available gpt models
+print('\nAvailable GPT models:')
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+models = client_open_ai.models.list()
+for m in models:
+    print(m.id)
+print('\n')
+
 client_gemini = OpenAI(
     api_key=os.getenv("GEMINI_API_KEY"),
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
@@ -106,7 +113,7 @@ def load_config(path: str, print_settings: Optional[bool] = False) -> Dict[str, 
         "batch_size": 64,
         "embeddings_model_name": "mghuibregtse/biolinkbert-large-simcse-rat",
         "generation_model": "o4-mini",
-        "validation_model": "grok-3-mini",
+        "validation_model": "gpt-5",
         "amount_docs": 50,
         "weight_faiss": 50,
         "weight_bm25": 50,
@@ -1475,6 +1482,8 @@ def get_generation_model_dir(model: str) -> str:
         return "Grok 3-mini-beta"
     if model == "gpt-4o-mini-search-preview" or model.startswith("gpt-4"):
         return "OpenAI websearch"
+    if model.startswith("gpt-5"):
+        return "OpenAI GPT-5"
     if model.startswith("o"):
         if "o4-mini" in model:
             return "OpenAI o4-mini"
@@ -1525,6 +1534,8 @@ def query_llm(
         Any exceptions from the underlying HTTP/SDK calls are caught and printed; no exception is propagated.
     """
 
+    print(f"model_dir = {get_generation_model_dir(generation_model)}")
+
     answers: list[str] = []
     for i in range(1, query_range + 1):
         try:
@@ -1564,6 +1575,14 @@ def query_llm(
                 resp.raise_for_status()
                 data = resp.json()
                 answer = data["choices"][0]["message"]["content"]
+
+            elif model_dir.startswith("OpenAI GPT-5"):
+                response = client_open_ai.chat.completions.create(
+                    model=generation_model,
+                    messages=messages,
+                    **kwargs
+                )
+                answer = response.choices[0].message.content
 
             elif model_dir == "OpenAI":
                 response = client_open_ai.chat.completions.create(  # type: ignore
