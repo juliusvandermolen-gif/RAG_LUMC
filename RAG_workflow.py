@@ -87,7 +87,6 @@ def ensure_nltk_resource(pkg_name: str, resource_path: str) -> None:
     try:
         find(resource_path)
     except LookupError:
-        print(f"resource'{pkg_name}' not found. Downloading...")
         with contextlib.redirect_stdout(open(os.devnull, 'w')), \
                 contextlib.redirect_stderr(open(os.devnull, 'w')):
             nltk.download(pkg_name, quiet=True)
