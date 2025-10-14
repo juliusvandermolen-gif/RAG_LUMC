@@ -93,8 +93,8 @@ def ensure_nltk_resource(pkg_name: str, resource_path: str) -> None:
             nltk.download(pkg_name, quiet=True)
 
 
-ensure_nltk_resource('punkt_tab',
-                     'tokenizers/punkt_tab')
+ensure_nltk_resource('punkt',
+                     'tokenizers/punkt')
 ensure_nltk_resource('stopwords', 'corpora/stopwords')
 
 
@@ -905,7 +905,6 @@ def embed_documents(
         pdf_dir: Directory containing PDF files.
     """
     file_log = load_file_log(log_path=log_path)
-
     files_documents = load_gz_files(data_dir=data_dir)
     pdf_documents = load_pdf_files(pdf_dir=pdf_dir, file_log=file_log)
 
@@ -1482,6 +1481,8 @@ def get_generation_model_dir(model: str) -> str:
         return "Grok 3-mini-beta"
     if model == "gpt-4o-mini-search-preview" or model.startswith("gpt-4"):
         return "OpenAI websearch"
+    if model.startswith("gpt-5"):
+        return "OpenAI GPT-5"
     if model.startswith("o"):
         if "o4-mini" in model:
             return "OpenAI o4-mini"
@@ -1571,6 +1572,14 @@ def query_llm(
                 resp.raise_for_status()
                 data = resp.json()
                 answer = data["choices"][0]["message"]["content"]
+
+            elif model_dir.startswith("OpenAI GPT-5"):
+                response = client_open_ai.chat.completions.create(
+                    model=generation_model,
+                    messages=messages,
+                    **kwargs
+                )
+                answer = response.choices[0].message.content
 
             elif model_dir == "OpenAI":
                 response = client_open_ai.chat.completions.create(  # type: ignore
