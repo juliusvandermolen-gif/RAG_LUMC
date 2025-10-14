@@ -50,7 +50,14 @@ os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
+# Seeing the available gpt models
+print('\nAvailable GPT models:')
 client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+models = client_open_ai.models.list()
+for m in models:
+    print(m.id)
+print('\n')
+
 client_gemini = OpenAI(
     api_key=os.getenv("GEMINI_API_KEY"),
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
@@ -106,7 +113,7 @@ def load_config(path: str, print_settings: Optional[bool] = False) -> Dict[str, 
         "batch_size": 64,
         "embeddings_model_name": "mghuibregtse/biolinkbert-large-simcse-rat",
         "generation_model": "o4-mini",
-        "validation_model": "grok-3-mini",
+        "validation_model": "gpt-5",
         "amount_docs": 50,
         "weight_faiss": 50,
         "weight_bm25": 50,

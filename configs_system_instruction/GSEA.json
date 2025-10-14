@@ -4,7 +4,7 @@
   "batch_size": 64,
   "embeddings_model_name": "mghuibregtse/biolinkbert-large-simcse-rat",
   "generation_model": "o3",
-  "validation_model": "grok-3-mini",
+  "validation_model": "gpt-5-mini",
   "amount_docs": 20,
   "weight_faiss": 50,
   "weight_bm25": 50,
