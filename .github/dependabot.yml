@@ -5,7 +5,20 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
+  - package-ecosystem: "pip" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "monthly"
+      interval: "daily"
+      time: "11:55"
+      timezone: "Europe/Amsterdam"
+    allow:
+      - dependency-name: "transformers"
+
+  - package-ecosystem: "conda"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "11:55"
+      timezone: "Europe/Amsterdam"
+    allow:
+      - dependency-name: "transformers"
