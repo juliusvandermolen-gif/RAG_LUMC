@@ -1,0 +1,23 @@
+Semaphorin-Neuropilin-Plexin Signaling:
+Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Tnik, Srgap1, Dpysl5, Gnai1
+
+Netrin-Mediated Axon Guidance:
+Ntn1, Robo2, Dpysl3, Dpysl5, Srgap1, Tnik, Itga7, Gnai1
+
+Slit-Robo Signaling:
+Slit2, Robo2, Srgap1, Nrp2, Tnik
+
+Non-Canonical Wnt/PCP Signaling:
+Wnt5a, Lef1, Tnik, Rhoj
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Drp2, Gldn, Mal, Tubb4a, Kif1a
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Serpini1, Synpr, Pfn2, Kif1a, Map1lc3a, Ryr3, Itpripl1, Numb, Pam, Psap, Tuba4a, Tubb4a
+
+Extracellular Matrix and Cell Adhesion in Neural Plasticity:
+Cdh13, Itga7, Itga8, Efna5, Col11a1, Col15a1, Col20a1, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Timp1, Has2, Matn3, Emilin1, Bgn
+
+Calcium and Mechanotransduction Signaling:
+Ryr3, Itpripl1, P2ry2, Piezo2, Tpcn1, Gnai1, Ppp1r14c, Numb
