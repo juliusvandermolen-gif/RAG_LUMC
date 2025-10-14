@@ -1,56 +1,41 @@
 Pathway	annotation term
 cell periphery	GO:0071944
-multicellular organismal process	GO:0032501
 extracellular region	GO:0005576
 regulation of cell motility	GO:2000145
-system development	GO:0048731
 regulation of locomotion	GO:0040012
+multicellular organismal process	GO:0032501
+response to stimulus	GO:0050896
 locomotion	GO:0040011
-anatomical structure development	GO:0048856
 cell migration	GO:0016477
-vesicle	GO:0031982
-developmental process	GO:0032502
-cell motility	GO:0048870
-protein binding	GO:0005515
-endomembrane system	GO:0012505
-response to external stimulus	GO:0009605
-extracellular matrix	GO:0031012
-positive regulation of biological process	GO:0048518
+system development	GO:0048731
+anatomical structure development	GO:0048856
 Extracellular matrix organization	REAC:R-RNO-1474244
-Axon guidance	KEGG:04360
-cytoplasm	GO:0005737
-blood vessel morphogenesis	GO:0048514
 membrane	GO:0016020
-enzyme-linked receptor protein signaling pathway	GO:0007167
-integrin binding	GO:0005178
-tube morphogenesis	GO:0035239
-cell adhesion	GO:0007155
-response to endogenous stimulus	GO:0009719
+cell motility	GO:0048870
+developmental process	GO:0032502
+Axon guidance	KEGG:04360
+extracellular matrix	GO:0031012
+cell adhesion molecule binding	GO:0050839
+vesicle	GO:0031982
+endomembrane system	GO:0012505
+positive regulation of biological process	GO:0048518
+protein binding	GO:0005515
+regulation of cellular process	GO:0050794
+blood vessel morphogenesis	GO:0048514
+biological regulation	GO:0065007
+cytoplasm	GO:0005737
 extracellular matrix assembly	GO:0085029
-regulation of biological quality	GO:0065008
-extracellular matrix organization	GO:0030198
-external encapsulating structure organization	GO:0045229
-extracellular structure organization	GO:0043062
-cell surface receptor signaling pathway	GO:0007166
-regulation of cellular component organization	GO:0051128
-regulation of response to stimulus	GO:0048583
-localization	GO:0051179
-somatodendritic compartment	GO:0036477
-regulation of endothelial cell migration	GO:0010594
+myelin sheath	GO:0043209
+cell adhesion	GO:0007155
 olfactory bulb interneuron development	GO:0021891
-negative regulation of cell projection organization	GO:0031345
-tissue morphogenesis	GO:0048729
-cell-matrix adhesion	GO:0007160
-response to chemical	GO:0042221
-cellular response to growth factor stimulus	GO:0071363
-embryo development	GO:0009790
-apical part of cell	GO:0045177
+Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs)	REAC:R-RNO-381426
+cell surface receptor signaling pathway	GO:0007166
+Post-translational protein phosphorylation	REAC:R-RNO-8957275
+positive regulation of chemotaxis	GO:0050921
+forebrain neuron development	GO:0021884
+regulation of endothelial cell migration	GO:0010594
+Schmidt-Lanterman incisure	GO:0043220
+regulation of response to external stimulus	GO:0032101
 axon extension involved in axon guidance	GO:0048846
 neuron projection extension involved in neuron projection guidance	GO:1902284
-bounding membrane of organelle	GO:0098588
-regulation of signaling	GO:0023051
-regulation of cell communication	GO:0010646
-response to stimulus	GO:0050896
-myelin sheath	GO:0043209
-negative chemotaxis	GO:0050919
-early endosome	GO:0005769
+somatodendritic compartment	GO:0036477

@@ -1,17 +1,17 @@
-Axon Guidance and Growth Cone Signaling:
-Cntn6, Ntn1, Sema4f, Sema3g, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl3, Dpysl5, Srgap1, Tnik, Itga8, Lrrtm3,
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Slit2, Robo2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Itga8, Srgap1, Dpysl3, Dpysl5, Kif1a, Lrrtm3, Gldn, Tnik, Gnai1,
 
-Synaptic Vesicle Trafficking and Neurotransmitter Release:
-Serpini1, Sncg, Synpr, Ppp1r14c, Dyrk1a, Prkar2b, Cpe, Pam, Kif1a, Map1lc3a, Pfn2, Slc9a9, Ryr3, Itpripl1, Pmp22, Riox2, Frrs1, Msi1,
+Myelination and Node Formation:
+Mpz, Mag, Pmp22, Drp2, Mal, Gldn, Kif1a, Cers6, Septin5, Itpripl1, Lrrtm3,
 
-Myelination and Axo-Glial Interaction:
-Mag, Mpz, Pmp22, Gldn, Drp2, Mal, Cldn19, Cldnd1, Gja1, Ntn1, Aif1l,
+Synaptic Transmission and Plasticity:
+Synpr, Sncg, Pfn2, Ryr3, Kif1a, Dyrk1a, Frrs1, Tubb4a, Map1lc3a, Inpp5a, Numb, Psap, Ppp1r14c,
 
-Neural Extracellular Matrix Remodeling and Perineuronal Nets:
-Hapln1, Col15a1, Col20a1, Col11a1, Col9a3, Col8a2, Matn3, Bgn, Efemp2, Emilin1, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Mfap5, Timp1, Has2, Hs6st1, Hs6st2, Chst2, Tspan5, Qsox1, Pxdn,
+Semaphorin-Plexin Signaling:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1,
 
-Wnt Signaling in Neural Development:
-Wnt5a, Lef1, Tnik, Ppard, Dyrk1a,
+Non-Canonical Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Rhoj, Prkd3,
 
-Neuro-Immune Modulation and Inflammatory Signaling:
-Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Nlrp1a, Selplg, A2m, Serpinf1, Serinc5, Ighm, C1qtnf1,
+Neurotrophin/PI3K-Akt-MAPK Signaling:
+Met, Prkar2b, Grb14, Gnai1, Epas1, Atf3, Atf5, Id2, Nampt,

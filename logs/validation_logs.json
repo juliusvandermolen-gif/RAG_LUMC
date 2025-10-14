@@ -1,5 +1,21 @@
 [
   [
+    "Slit proteins bind Robo receptors and have an evolutionarily conserved role in repulsive axon guidance",
+    {
+      "citation": "(1999, Brose et al., \"Slit proteins bind Robo receptors and have an evolutionarily conserved role in repulsive axon guidance.\", Cell)",
+      "count": 6,
+      "is_real": true
+    }
+  ],
+  [
+    "Neuropilin-1 is a receptor for the axonal chemorepellent Semaphorin III",
+    {
+      "citation": "(1997, He and Tessier-Lavigne, \"Neuropilin-1 is a receptor for the axonal chemorepellent Semaphorin III\", Cell<br)",
+      "count": 5,
+      "is_real": false
+    }
+  ],
+  [
     "Down syndrome and DYRK1A overexpression: relationships and future therapeutic directions",
     {
       "citation": "(2024, Murphy et al., \"Down syndrome and DYRK1A overexpression: relationships and future therapeutic directions.\", Frontiers in molecular neuroscience)",
@@ -35,6 +51,14 @@
     "Expression of Genes Involved in Axon Guidance: How Much Have We Learned?",
     {
       "citation": "(2020, Kim et al., \"Expression of Genes Involved in Axon Guidance: How Much Have We Learned?\", International journal of molecular sciences)",
+      "count": 3,
+      "is_real": true
+    }
+  ],
+  [
+    "Netrins are diffusible chemotropic factors for commissural axons in the embryonic spinal cord",
+    {
+      "citation": "(1994, Kennedy et al., \"Netrins are diffusible chemotropic factors for commissural axons in the embryonic spinal cord.\", Cell)",
       "count": 3,
       "is_real": true
     }
@@ -128,6 +152,78 @@
     }
   ],
   [
+    "Peripheral myelin protein 22 alters membrane architecture",
+    {
+      "citation": "(2017, Mittendorf et al., \"Peripheral myelin protein 22 alters membrane architecture.\", Science advances)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Immunological functions of the neuropilins and plexins as receptors for semaphorins",
+    {
+      "citation": "(2013, Kumanogoh et al., \"Immunological functions of the neuropilins and plexins as receptors for semaphorins.\", Nature reviews. Immunology)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "SLIT2/ROBO signaling in tumor-associated microglia and macrophages drives glioblastoma immunosuppression and vascular dysmorphia",
+    {
+      "citation": "(2021, Geraldo et al., \"SLIT2/ROBO signaling in tumor-associated microglia and macrophages drives glioblastoma immunosuppression and vascular dysmorphia.\", The Journal of clinical investigation)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
+    "Netrin-1 and DCC: axon guidance and beyond",
+    {
+      "citation": "(2011, Ypsilanti et al., \"Netrin-1 and DCC: axon guidance and beyond\", *Nature Reviews Molecular Cell Biology*<br)",
+      "count": 2,
+      "is_real": false
+    }
+  ],
+  [
+    "Slit proteins bind Robo receptors and have complementary roles in axon guidance at the midline",
+    {
+      "citation": "(1999, Brose et al., \"Slit proteins bind Robo receptors and have complementary roles in axon guidance at the midline\", Cell<br)",
+      "count": 2,
+      "is_real": false
+    }
+  ],
+  [
+    "Plexin-B1 is a receptor for semaphorin 4D",
+    {
+      "citation": "(1999, Tamagnone et al., \"Plexin-B1 is a receptor for semaphorin 4D\", Cell<br)",
+      "count": 2,
+      "is_real": false
+    }
+  ],
+  [
+    "Slit proteins are chemorepellents for Robo-expressing axons",
+    {
+      "citation": "(1999, Brose et al., \"Slit proteins are chemorepellents for Robo-expressing axons\", Cell<br)",
+      "count": 2,
+      "is_real": false
+    }
+  ],
+  [
+    "Netrin-1 is required for commissural axon guidance in the developing spinal cord",
+    {
+      "citation": "(1996, Serafini et al., \"Netrin-1 is required for commissural axon guidance in the developing spinal cord\", Cell<br)",
+      "count": 2,
+      "is_real": false
+    }
+  ],
+  [
+    "The neuron-specific kinesin superfamily protein KIF1A is a unique monomeric motor for anterograde axonal transport of synaptic vesicle precursors",
+    {
+      "citation": "(1995, Okada et al., \"The neuron-specific kinesin superfamily protein KIF1A is a unique monomeric motor for anterograde axonal transport of synaptic vesicle precursors.\", Cell)",
+      "count": 2,
+      "is_real": true
+    }
+  ],
+  [
     "Recombinant Slit2 suppresses neuroinflammation and Cdc42-mediated brain infiltration of peripheral immune cells via Robo1\u2013srGAP1 pathway in a rat model of germinal matrix hemorrhage",
     {
       "citation": "(2023, Li et al., \"Recombinant Slit2 suppresses neuroinflammation and Cdc42-mediated brain infiltration of peripheral immune cells via Robo1-srGAP1 pathway in a rat model of germinal matrix hemorrhage.\", Journal of neuroinflammation)",
@@ -179,14 +275,6 @@
     "Novel insights into the GCN2 pathway and its targeting. Therapeutic value in cancer and lessons from lung fibrosis development",
     {
       "citation": "(2024, Piecyk et al., \"Novel insights into the GCN2 pathway and its targeting. Therapeutic value in cancer and lessons from lung fibrosis development.\", The FEBS journal)",
-      "count": 1,
-      "is_real": true
-    }
-  ],
-  [
-    "Peripheral myelin protein 22 alters membrane architecture",
-    {
-      "citation": "(2017, Mittendorf et al., \"Peripheral myelin protein 22 alters membrane architecture.\", Science advances)",
       "count": 1,
       "is_real": true
     }
@@ -269,6 +357,614 @@
       "citation": "(2024, Piecyk et al., \"Novel insights into the GCN2 pathway and its targeting. Therapeutic value in cancer and lessons from lung fibrosis development.\", The FEBS journal)",
       "count": 1,
       "is_real": true
+    }
+  ],
+  [
+    "Changes in expression of Class 3 Semaphorins and their receptors during development of the rat retina and superior colliculus",
+    {
+      "citation": "(2014, Sharma et al., \"Changes in expression of Class 3 Semaphorins and their receptors during development of the rat retina and superior colliculus.\", BMC developmental biology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Neuropilin 2/Plexin-A3 Receptors Regulate the Functional Connectivity and the Excitability in the Layers 4 and 5 of the Cerebral Cortex",
+    {
+      "citation": "(2022, Khdour et al., \"Neuropilin 2/Plexin-A3 Receptors Regulate the Functional Connectivity and the Excitability in the Layers 4 and 5 of the Cerebral Cortex.\", The Journal of neuroscience : the official journal of the Society for Neuroscience)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Structural basis of myelin-associated glycoprotein adhesion and signalling",
+    {
+      "citation": "(2016, Pronker et al., \"Structural basis of myelin-associated glycoprotein adhesion and signalling.\", Nature communications)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Disrupting the transmembrane domain interface between PMP22 and MPZ causes peripheral neuropathy",
+    {
+      "citation": "(2025, Pashkova et al., \"Disrupting the transmembrane domain interface between PMP22 and MPZ causes peripheral neuropathy.\", iScience)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Gliomedin is essential for the formation of nodal complexes at the nodes of Ranvier",
+    {
+      "citation": "(2015, Eshed-Eisenbach et al., \"Gliomedin is essential for the formation of nodal complexes at the nodes of Ranvier\", *Neuron*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Kif1a and intact microtubules maintain synaptic-vesicle populations at ribbon synapses in zebrafish hair cells",
+    {
+      "citation": "(2024, David et al., \"Kif1a and intact microtubules maintain synaptic-vesicle populations at ribbon synapses in zebrafish hair cells.\", The Journal of physiology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Wnt5a Promotes Axon Elongation in Coordination with the Wnt\u2013Planar Cell Polarity Pathway",
+    {
+      "citation": "(2024, Ahmad et al., \"Wnt5a Promotes Axon Elongation in Coordination with the Wnt-Planar Cell Polarity Pathway.\", Cells)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Genetic analysis of Wnt/PCP genes in neural tube defects",
+    {
+      "citation": "(2021, Chen et al., \"Correction to: Genetic analysis of Wnt/PCP genes in neural tube defects.\", BMC medical genomics)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "New evidence supports RYR3 as a candidate gene for developmental and epileptic encephalopathy",
+    {
+      "citation": "(2024, Li et al., \"New evidence supports \", Frontiers in neurology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Orai, RyR, and IP3R channels cooperatively regulate calcium signaling in brain mid-capillary pericytes",
+    {
+      "citation": "(2023, Yamazaki et al., \"Orai, RyR, and IP3R channels cooperatively regulate calcium signaling in brain mid-capillary pericytes\", *Communications Biology*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Functional and distinct roles of Piezo2-mediated mechanotransduction in dental primary afferent neurons",
+    {
+      "citation": "(2025, Lee et al., \"Functional and distinct roles of Piezo2-mediated mechanotransduction in dental primary afferent neurons.\", International journal of oral science)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "New Insights into ADAMTS Metalloproteases in the Central Nervous System",
+    {
+      "citation": "(2020, Mohamedi et al., \"New Insights into ADAMTS Metalloproteases in the Central Nervous System.\", Biomolecules)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "ADAMTSL3 knock-out mice develop cardiac dysfunction and dilatation with increased TGF\u03b2 signalling after pressure overload",
+    {
+      "citation": "(2022, Rypdal et al., \"ADAMTSL3 knock-out mice develop cardiac dysfunction and dilatation with increased TGF\u03b2 signalling after pressure overload.\", Communications biology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Neural ECM molecules in synaptic plasticity, learning, and memory",
+    {
+      "citation": "(2014, Senkov et al., \"Neural ECM molecules in synaptic plasticity, learning, and memory.\", Progress in brain research)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The dual role of the extracellular matrix in synaptic plasticity and homeostasis",
+    {
+      "citation": "(2010, Dityatev et al., \"The dual role of the extracellular matrix in synaptic plasticity and homeostasis.\", Nature reviews. Neuroscience)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Extracellular matrix recycling as a novel plasticity mechanism with a potential role in disease",
+    {
+      "citation": "(2022, Dankovich et al., \"Extracellular Matrix Recycling as a Novel Plasticity Mechanism With a Potential Role in Disease.\", Frontiers in cellular neuroscience)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The ADAMTS (L) family and human genetic disorders",
+    {
+      "citation": "(2011, Le Goff et al., \"The ADAMTS(L) family and human genetic disorders.\", Human molecular genetics)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Netrin-1: Diverse roles in angiogenesis",
+    {
+      "citation": "(2018, Xu et al., \"Netrin-1: Diverse roles in angiogenesis\", *Trends in Molecular Medicine*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Neuropilin-1 modulates p53/caspases axis to promote glioma progression",
+    {
+      "citation": "(2017, Gu et al., \"Neuropilin-1 modulates p53/caspases axis to promote glioma progression\", *Neoplasia*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Neuropilin-2 contributes to tumorigenicity in a mouse model of Hedgehog pathway medulloblastoma",
+    {
+      "citation": "(2013, Hayden Gephart et al., \"Neuropilin-2 contributes to tumorigenicity in a mouse model of Hedgehog pathway medulloblastoma.\", Journal of neuro-oncology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Signaling switch of the axon guidance receptor Robo3 during vertebrate evolution",
+    {
+      "citation": "(2014, Zelina et al., \"Signaling switch of the axon guidance receptor Robo3 during vertebrate evolution.\", Neuron)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Slit2/Robo1 signaling promotes intestinal tumorigenesis through Src-mediated activation of the Wnt/\u03b2-catenin pathway",
+    {
+      "citation": "(2015, Zhang et al., \"Slit2/Robo1 signaling promotes intestinal tumorigenesis through Src-mediated activation of the Wnt/\u03b2-catenin pathway.\", Oncotarget)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Synaptoporin regulates plasticity of synaptic transmission",
+    {
+      "citation": "(2018, Zhang et al., \"Synaptoporin regulates plasticity of synaptic transmission\", *Neuroscience Letters*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "KIF1A, an axonal transporter of synaptic vesicles, is mutated in hereditary sensory and autonomic neuropathy type 2",
+    {
+      "citation": "(2011, Rivi\u00e8re et al., \"KIF1A, an axonal transporter of synaptic vesicles, is mutated in hereditary sensory and autonomic neuropathy type 2.\", American journal of human genetics)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Myelin-associated glycoprotein and myelin galactolipids stabilize developing axo-glial interactions",
+    {
+      "citation": "(2002, Marcus et al., \"Myelin-associated glycoprotein and myelin galactolipids stabilize developing axo-glial interactions.\", The Journal of cell biology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Myelin Membrane Wrapping of CNS Axons by PI(3,4,5)P3-Dependent Polarized Growth at the Inner Tongue",
+    {
+      "citation": "(2014, Snaidero et al., \"Myelin membrane wrapping of CNS axons by PI(3,4,5)P3-dependent polarized growth at the inner tongue.\", Cell)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Soluble neuregulin-1 modulates disease pathogenesis in rodent models of Charcot-Marie-Tooth disease 1A",
+    {
+      "citation": "(2014, Fledrich et al., \"Soluble neuregulin-1 modulates disease pathogenesis in rodent models of Charcot-Marie-Tooth disease 1A.\", Nature medicine)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Mal is a crucial regulator of myelin formation in the central nervous system",
+    {
+      "citation": "(2017, Frank et al., \"Mal is a crucial regulator of myelin formation in the central nervous system\", *Glia*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "A glial signal consisting of gliomedin and NrCAM clusters axonal Na+ channels during the formation of nodes of Ranvier",
+    {
+      "citation": "(2010, Feinberg et al., \"A glial signal consisting of gliomedin and NrCAM clusters axonal Na+ channels during the formation of nodes of Ranvier.\", Neuron)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Connexin43-dependent neurovascular coupling regulates synaptic plasticity",
+    {
+      "citation": "(2015, Chever et al., \"Connexin43-dependent neurovascular coupling regulates synaptic plasticity\", *Glia*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Schwann cell precursors: a favourable cell for myelin repair in the Central Nervous System",
+    {
+      "citation": "(2007, Woodhoo et al., \"Schwann cell precursors: a favourable cell for myelin repair in the Central Nervous System.\", Brain : a journal of neurology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Canonical and noncanonical Wnts use a common mechanism to activate completely unrelated coreceptors",
+    {
+      "citation": "(2010, Grumolato et al., \"Canonical and noncanonical Wnts use a common mechanism to activate completely unrelated coreceptors.\", Genes & development)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The kinase TNIK is an essential activator of Wnt target genes",
+    {
+      "citation": "(2025, Mahmoudi et al., \"Author Correction: The kinase TNIK is an essential activator of Wnt target genes.\", The EMBO journal)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Ryanodine receptors: structure, expression, molecular details, and function in calcium release",
+    {
+      "citation": "(2010, Lanner et al., \"Ryanodine receptors: structure, expression, molecular details, and function in calcium release.\", Cold Spring Harbor perspectives in biology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "When cAMP signaling in cardiac myocytes becomes a team player: the role of subsarcolemmal signal compartments",
+    {
+      "citation": "(2017, Skroblin et al., \"When cAMP signaling in cardiac myocytes becomes a team player: the role of subsarcolemmal signal compartments\", *Journal of Molecular and Cellular Cardiology*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "G protein-mediated signaling: same receptor, multiple effectors",
+    {
+      "citation": "(2009, Woehler et al., \"G protein--mediated signaling: same receptor, multiple effectors.\", Current molecular pharmacology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Chemokines and chemokine receptors: new actors in neuroendocrine regulations",
+    {
+      "citation": "(2010, Rost\u00e8ne et al., \"Chemokines and chemokine receptors: new actors in neuroendocrine regulations.\", Frontiers in neuroendocrinology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "CXCL14 is a natural inhibitor of the CXCL12-CXCR4 signaling axis",
+    {
+      "citation": "(2013, Tanegashima et al., \"CXCL14 is a natural inhibitor of the CXCL12-CXCR4 signaling axis.\", FEBS letters)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Memory B cells",
+    {
+      "citation": "(2025, Li et al., \"Mendelian randomization analyses support causal relationships between unswitched memory B cells and lung squamous cell carcinoma.\", Discover oncology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "ICOSL expression in human bone marrow-derived mesenchymal stem cells promotes induction of regulatory T cells",
+    {
+      "citation": "(2017, Lee et al., \"ICOSL expression in human bone marrow-derived mesenchymal stem cells promotes induction of regulatory T cells.\", Scientific reports)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Shared and Distinct Functions of Type I and Type III Interferons",
+    {
+      "citation": "(2019, Lazear et al., \"Shared and Distinct Functions of Type I and Type III Interferons.\", Immunity)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The TNF receptor family",
+    {
+      "citation": "(2018, Hersh et al., \"The TNF receptor family member Fn14 is highly expressed in recurrent glioblastoma and in GBM patient-derived xenografts with acquired temozolomide resistance.\", Neuro-oncology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Ageing, neurodegeneration and brain rejuvenation",
+    {
+      "citation": "(2016, Wyss-Coray, \"Ageing, neurodegeneration and brain rejuvenation.\", Nature)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Phosphatidylserine exposure during apoptosis reflects bidirectional trafficking between plasma membrane and cytoplasm",
+    {
+      "citation": "(2012, Lee et al., \"Phosphatidylserine exposure during apoptosis reflects bidirectional trafficking between plasma membrane and cytoplasm.\", Cell death and differentiation)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The eIF2\u03b1 kinases: their structures and functions",
+    {
+      "citation": "(2013, Donnelly et al., \"The eIF2\u03b1 kinases: their structures and functions.\", Cellular and molecular life sciences : CMLS)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "DDX1 promotes proliferation and survival of leukemia cells by regulating RNA splicing and response to genotoxic stress",
+    {
+      "citation": "(2018, Li et al., \"DDX1 promotes proliferation and survival of leukemia cells by regulating RNA splicing and response to genotoxic stress\", *Leukemia*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "ATF3, a hub of the cellular adaptive-response network, in the pathogenesis of diseases: is modulation of inflammation a unifying component?",
+    {
+      "citation": "(2010, Hai et al., \"ATF3, a hub of the cellular adaptive-response network, in the pathogenesis of diseases: is modulation of inflammation a unifying component?\", Gene expression)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "ATF5 Connects the Pericentriolar Materials to the Proximal End of the Mother Centriole",
+    {
+      "citation": "(2015, Madarampalli et al., \"ATF5 Connects the Pericentriolar Materials to the Proximal End of the Mother Centriole.\", Cell)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "PARP14 promotes the Warburg effect in hepatocellular carcinoma by inhibiting JNK1-dependent PKM2 phosphorylation and activation",
+    {
+      "citation": "(2015, Iansante et al., \"PARP14 promotes the Warburg effect in hepatocellular carcinoma by inhibiting JNK1-dependent PKM2 phosphorylation and activation.\", Nature communications)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "The Co-chaperone Cdc37 regulates the rabies virus phosphoprotein stability by targeting to Hsp90AA1 machinery",
+    {
+      "citation": "(2016, Xu et al., \"The co-chaperone Cdc37 regulates the rabies virus phosphoprotein stability by targeting to Hsp90AA1 machinery.\", Scientific reports)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition)",
+    {
+      "citation": "(2016, Klionsky et al., \"Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).\", Autophagy)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "PNPT1 Release from Mitochondria during Apoptosis Triggers Decay of Poly(A) RNAs",
+    {
+      "citation": "(2018, Liu et al., \"PNPT1 Release from Mitochondria during Apoptosis Triggers Decay of Poly(A) RNAs.\", Cell)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Neuropilin-1 is a receptor for the semaphorin Sema III",
+    {
+      "citation": "(1997, He and Tessier-Lavigne, \"Neuropilin-1 is a receptor for the semaphorin Sema III\", Cell<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Neuropilin-2 is a high affinity receptor for the semaphorins Sema E and Sema IV",
+    {
+      "citation": "(1998, Chen et al., \"Neuropilin-2 is a high affinity receptor for the semaphorins Sema E and Sema IV\", Neuron<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Semaphorin 4D receptor Plexin-B1 is a GTPase-activating protein for R-Ras",
+    {
+      "citation": "(2004, Oinuma et al., \"The Semaphorin 4D receptor Plexin-B1 is a GTPase activating protein for R-Ras.\", Science (New York, N.Y.))",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Topographic mapping in the retinocollicular projection requires ephrin-A2 and ephrin-A5",
+    {
+      "citation": "(2000, Feldheim et al., \"Topographic mapping in the retinocollicular projection requires ephrin-A2 and ephrin-A5\", Nature<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Carboxypeptidase E is a sorting receptor for prohormones",
+    {
+      "citation": "(1998, Cool et al., \"Carboxypeptidase E is a sorting receptor for prohormones: binding and kinetic studies.\", Molecular and cellular endocrinology)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Neuropilin is a receptor for the axonal chemorepellent Semaphorin III",
+    {
+      "citation": "(1997, He et al., \"Neuropilin is a receptor for the axonal chemorepellent Semaphorin III.\", Cell)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Neuropilin-2, a novel member of the neuropilin family, is a high affinity receptor for the chemorepellent semaphorin Sema3F",
+    {
+      "citation": "(1998, Chen et al., \"Neuropilin-2, a novel member of the neuropilin family, is a high affinity receptor for the chemorepellent semaphorin Sema3F\", Neuron<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Periaxin is required for maintenance of peripheral nerve myelin",
+    {
+      "citation": "(2000, Gillespie et al., \"Periaxin is required for maintenance of peripheral nerve myelin\", Neuron<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Gliomedin is a Schwann cell extracellular matrix protein that promotes the formation of nodes of Ranvier",
+    {
+      "citation": "(2007, Eshed et al., \"Gliomedin is a Schwann cell extracellular matrix protein that promotes the formation of nodes of Ranvier\", Neuron<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Animals lacking link protein have attenuated perineuronal nets and persistent plasticity in the adult visual cortex",
+    {
+      "citation": "(2010, Carulli et al., \"Animals lacking link protein have attenuated perineuronal nets and persistent plasticity in the adult visual cortex\", The Journal of Neuroscience<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Robo1 and Robo2 cooperate to control the guidance of major axon tracts in the mammalian forebrain",
+    {
+      "citation": "(2007, L\u00f3pez-Bendito et al., \"Robo1 and Robo2 cooperate to control the guidance of major axon tracts in the mammalian forebrain\", *The Journal of Neuroscience*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "The neuron-specific kinesin superfamily protein KIF1A is a unique monomeric motor for the anterograde axonal transport of synaptic vesicle precursors",
+    {
+      "citation": "(1995, Okada et al., \"The neuron-specific kinesin superfamily protein KIF1A is a unique monomeric motor for anterograde axonal transport of synaptic vesicle precursors.\", Cell)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "KIF1A is a unique monomeric motor for anterograde axonal transport of synaptic vesicle precursors",
+    {
+      "citation": "(1995, Okada et al., \"The neuron-specific kinesin superfamily protein KIF1A is a unique monomeric motor for anterograde axonal transport of synaptic vesicle precursors.\", Cell)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Identification of Carboxypeptidase E as a Sorting Receptor for the Regulated Secretory Pathway",
+    {
+      "citation": "(1997, Cool et al., \"Identification of Carboxypeptidase E as a Sorting Receptor for the Regulated Secretory Pathway\", Nature<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Neuropilin is a receptor for the axonal chemorepellent Semaphorin III.",
+    {
+      "citation": "(1997, He et al., \"Neuropilin is a receptor for the axonal chemorepellent Semaphorin III.\", Cell)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Plexins are a large family of receptors for semaphorins",
+    {
+      "citation": "(1999, Tamagnone et al., \"Plexins are a large family of receptors for semaphorins\", Cell<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Netrin-1 is a chemoattractant for commissural axons in the embryonic spinal cord",
+    {
+      "citation": "(1994, Serafini et al., \"Netrin-1 is a chemoattractant for commissural axons in the embryonic spinal cord\", Cell<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Piezo2 is required for Merkel-cell mechanotransduction",
+    {
+      "citation": "(2014, Woo et al., \"Piezo2 is required for Merkel-cell mechanotransduction.\", Nature)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Induction and activation of the transcription factor NFATc1 (NFAT2) integrate RANKL signaling in terminal differentiation of osteoclasts",
+    {
+      "citation": "(2002, Takayanagi et al., \"Induction and activation of the transcription factor NFATc1 (NFAT2) integrate RANKL signaling in terminal differentiation of osteoclasts.\", Developmental cell)",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "KLF family members regulate intrinsic axon regeneration ability",
+    {
+      "citation": "(2009, Moore et al., \"KLF family members regulate intrinsic axon regeneration ability.\", Science (New York, N.Y.))",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "Piezo1 and Piezo2 are essential components of distinct mechanically activated cation channels",
+    {
+      "citation": "(2010, Coste et al., \"Piezo1 and Piezo2 are essential components of distinct mechanically activated cation channels.\", Science (New York, N.Y.))",
+      "count": 1,
+      "is_real": true
+    }
+  ],
+  [
+    "NAADP mobilizes calcium from lysosomes",
+    {
+      "citation": "(2009, Calcraft et al., \"NAADP mobilizes calcium from lysosomes\", Nature<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Verified Exact Title",
+    {
+      "citation": "(2010, Doe et al., \"Verified Exact Title\", *Journal Name*<br)",
+      "count": 1,
+      "is_real": false
+    }
+  ],
+  [
+    "Hyaluronan synthase 2 regulates neural crest migration",
+    {
+      "citation": "(2010, Smith et al., \"Hyaluronan synthase 2 regulates neural crest migration\", *Development*<br)",
+      "count": 1,
+      "is_real": false
     }
   ]
 ]

@@ -1,60 +1,63 @@
-|Reference 1 (BM25) with RRF Score: 12.4114
+|Reference 1 (BM25) with RRF Score: 14.3101
 ENSRNOG00000017052,Pianp,PILR alpha associated neural protein 
 
-|Reference 2 (BM25) with RRF Score: 11.4004
-ENSRNOG00000013721,Nepro,nucleolus and neural progenitor protein 
-
-|Reference 3 (BM25) with RRF Score: 11.4004
-ENSRNOG00000018528,Nrl,neural retina leucine zipper 
-
-|Reference 4 (BM25) with RRF Score: 11.4004
-ENSRNOG00000006235,Nell2,neural EGFL like 2 
-
-|Reference 5 (BM25) with RRF Score: 11.4004
+|Reference 2 (BM25) with RRF Score: 12.3834
 ENSRNOG00000015675,Nell1,neural EGFL like 1 
 
-|Reference 6 (BM25) with RRF Score: 10.6138
+|Reference 3 (BM25) with RRF Score: 12.3834
+ENSRNOG00000013721,Nepro,nucleolus and neural progenitor protein 
+
+|Reference 4 (BM25) with RRF Score: 12.3834
+ENSRNOG00000018528,Nrl,neural retina leucine zipper 
+
+|Reference 5 (BM25) with RRF Score: 12.3834
+ENSRNOG00000006235,Nell2,neural EGFL like 2 
+
+|Reference 6 (BM25) with RRF Score: 11.9125
 ENSRNOG00000013102,Npdc1,"neural proliferation, differentiation and control, 1" 
 
-|Reference 7 (BM25) with RRF Score: 10.6138
-ENSRNOG00000031890,Ncam1,neural cell adhesion molecule 1 
-
-|Reference 8 (BM25) with RRF Score: 10.6138
-ENSRNOG00000002126,Ncam2,neural cell adhesion molecule 2 
-
-|Reference 9 (BM25) with RRF Score: 10.6138
+|Reference 7 (BM25) with RRF Score: 11.9125
 ENSRNOG00000016944,Rax,retina and anterior neural fold homeobox 
 
-|Reference 10 (BM25) with RRF Score: 9.9286
+|Reference 8 (BM25) with RRF Score: 11.9125
+ENSRNOG00000002126,Ncam2,neural cell adhesion molecule 2 
+
+|Reference 9 (BM25) with RRF Score: 11.9125
+ENSRNOG00000031890,Ncam1,neural cell adhesion molecule 1 
+
+|Reference 10 (BM25) with RRF Score: 11.4761
 ENSRNOG00000002582,Hand1,heart and neural crest derivatives expressed 1 
 
-|Reference 11 (BM25) with RRF Score: 9.9286
+|Reference 11 (BM25) with RRF Score: 11.4761
 ENSRNOG00000060448,Hand2,heart and neural crest derivatives expressed 2 
 
-|Reference 12 (BM25) with RRF Score: 9.9286
+|Reference 12 (BM25) with RRF Score: 11.4761
 ENSRNOG00000010205,Mturn,"maturin, neural progenitor differentiation regulator homolog" 
 
-|Reference 13 (BM25) with RRF Score: 9.3267
-ENSRNOG00000005561,Brinp1,BMP/retinoic acid inducible neural specific 1 
-
-|Reference 14 (BM25) with RRF Score: 9.3267
+|Reference 13 (BM25) with RRF Score: 11.0706
 ENSRNOG00000014548,Nedd9,"neural precursor cell expressed, developmentally down-regulated 9" 
 
-|Reference 15 (BM25) with RRF Score: 9.3267
-ENSRNOG00000005592,Brinp2,BMP/retinoic acid inducible neural specific 2 
-
-|Reference 16 (BM25) with RRF Score: 9.3267
+|Reference 14 (BM25) with RRF Score: 11.0706
 ENSRNOG00000002811,Brinp3,BMP/retinoic acid inducible neural specific 3 
 
-|Reference 17 (BM25) with RRF Score: 8.4014
+|Reference 15 (BM25) with RRF Score: 11.0706
+ENSRNOG00000005592,Brinp2,BMP/retinoic acid inducible neural specific 2 
+
+|Reference 16 (BM25) with RRF Score: 11.0706
+ENSRNOG00000005561,Brinp1,BMP/retinoic acid inducible neural specific 1 
+
+|Reference 17 (BM25) with RRF Score: 10.7884
 ENSRNOG00000001314,Fam20c,"FAM20C, golgi associated secretory pathway kinase" 
 
-|Reference 18 (BM25) with RRF Score: 7.9816
-ENSRNOG00000019556,Cd9,CD9 molecule 
+|Reference 18 (BM25) with RRF Score: 10.3512
+Thus, by analogy with epithelial cell polar -
+ity, the abaxonal membrane of myelinated fibers is defined as a basolateral-like region, whereas the adaxonal membrane, SLI, paranodes and microvilli are considered apical-like regions [18, 19]. Schwann Cell Development
+During early vertebrate development, neural crest cells delaminate from the neural tube, proliferate, and migrate to generate a broad spectrum of cell types including, among others, Schwann cells, melanocytes, sympathetic neurons, sensory neurons, and skeletal and connective tissues of the head [24– 26]. The cell fate largely depends from the region 
+of origin of the neural tube from which neural crest cells migrate. These regions are defined in an anterior–posterior axis direction as cranial, cardiac, vagal, trunk, and sacral. In particular, Schwann cells, dorsal root ganglia (DRG) sensory neurons, sympathetic neurons, and satellite cells associated with sensory neurons, all originate from ventrally migrating trunk neural crest cells [27]. 
 
-|Reference 19 (BM25) with RRF Score: 7.9816
-ENSRNOG00000006076,Steap2,STEAP2 metalloreductase 
+|Reference 19 (BM25) with RRF Score: 9.4337
+ENSRNOG00000054186,Krtap1-5,keratin associated protein 1-5 
 
-|Reference 20 (BM25) with RRF Score: 7.9612
-ENSRNOG00000062503,, 
+|Reference 20 (BM25) with RRF Score: 9.4337
+ENSRNOG00000015505,Mfap5,microfibril associated protein 5 
 

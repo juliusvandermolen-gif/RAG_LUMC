@@ -42,63 +42,66 @@ When assisting the user, you should:
 role: user, content: Based on the following documents, answer the question using both your knowledge and the provided documents: I have the following list of genes identified in a recent study related to neural development in rats, based on insights from academic literature, these genes are suspected to be involved in synaptic plasticity and neural signaling pathways. Please identify the associated biological pathways, particularly those related to neural genetic mechanisms, and present the findings as a clear, concise list of pathway names. The genes:Zpld1, Cntn6, Prss12, Gldc, Adamts17, Aldh1a1, Cobll1, Pcsk5, Tex101, Qsox1, Sema4f, Cpe, Hapln1, Marveld1, Tuba4a, Parm1, Sqor, Sbspon, Col9a3, Peg3, Emp2, Clca4l, Chst2, Acta2, Htra1, Igfbp3, Tril, Synpr, A2m, Myo1d, Ccn3, Prss23, Sumo3, Grb14, Steap2, Id2, Tf, Adamtsl3, Ltbp1, Prx, Defb29, Cdca7l, Gypc, Manba, Serpini1, Ntn1, Mag, Nrbp1, Srgap1, Ptgfr, Vopp1, Pltp, Man1a1, Drp2, Slc22a17, Tagln, Cep295nl, Aif1l, Mfap5, Mpz, Ctbs, P2ry2, Hs6st2, Tubb4a, Abca8a, Cxcl14, Ighm, Pxdn, Serinc5, Tent5c, Nrp1, Piezo2, Apod, Matn3, Sncg, Slc9a9, Riox2, Cdh13, Abcb4, Scn7a, Magec2l1, Pkp1, Epas1, Gprc5b, Efemp2, Ddx1, Aig1, Pappa, Eif2ak2, Rrm2, Ecel1, Serpinf1, Atf3, Icoslg, Ppp1r36, Trim35, Gldn, Krtap1-5, Alpl, Robo2, Tspan4, Nrp2, Gprc5a, Rnf144a, Frrs1, St3gal5, Kif1a, Adamtsl1, Lifr, Slit2, Tnik, Gnai1, Col20a1, Snx6, Mageb16, Prkd3, Dpysl5, Prkar2b, Cd9, Ebf1, Cldn19, Lrp2, Col15a1, Sipa1l1, Emilin1, Ppp1r14c, Tmem26, Dyrk1a, Ryr3, Septin4, Lrrtm3, Nek9, Cd151, Pfn2, Selplg, Psmd2, Ifnar1, Fhod3, Nfatc1, Cggbp1, Sgpl1, Runx3, Vps26c, Itpripl1, Fbxo11, Msi1, Slco3a1, Zfp518a, Hs6st1, Agpat5, Pam, Phldb2, Pnpt1, Poglut1, Acap2, Gja1, Tspan5, Tpcn1, Nes, Sema3g, Met, Nampt, Pmp22, Aff3, Ccn4, Taf9b, Magea4, Dpysl3, Rhoj, Asap1, Itga8, Mef2c, Cldnd1, Olfm2, Magea9, Msh2, Cers6, Hadhb, Atf5, Vash1, Smc6, ENSRNOG00000062503, Ppm1f, Klf9, Psap, Fth1, Numb, Klhl29, Itga7, Mal, C1qtnf1, Arsg, Timp1, Rcn3, Ppfia4, Cxcl12, Nlrp1a, Vrk1, Fam20c, Wnt5a, Plxnb1, Arsb, Ano5, Cenpo, ENSRNOG00000063649, Ppard, Has2, Fut10, Slitrk6, Lef1, Inpp5a, Tnfrsf1a, Parp14, Ghr, Zfyve28, Pgm1, Chmp2b, Olfml1, Bace2, Gpnmb, Mybl1, Col11a1, Efna5, Papola, Pals1, Col8a2, Hspa12a, Hmx3, Vps8, Dhrs1, Hsp90aa1, Bgn, Snx4, Ptrh1, Ckap4, Slc35a2, Gcnt1, Klhdc2, Slc39a13, Rab10, Septin5, Stard13, Cpsf2, Tbccd1, Map1lc3a, Stk39, Igf2bp2, Steap1, Gtf2e1, Cpm
 
 Documents:
-|Reference 1 (BM25) with RRF Score: 12.4114
+|Reference 1 (BM25) with RRF Score: 14.3101
 ENSRNOG00000017052,Pianp,PILR alpha associated neural protein
 
-|Reference 2 (BM25) with RRF Score: 11.4004
-ENSRNOG00000013721,Nepro,nucleolus and neural progenitor protein
-
-|Reference 3 (BM25) with RRF Score: 11.4004
-ENSRNOG00000018528,Nrl,neural retina leucine zipper
-
-|Reference 4 (BM25) with RRF Score: 11.4004
-ENSRNOG00000006235,Nell2,neural EGFL like 2
-
-|Reference 5 (BM25) with RRF Score: 11.4004
+|Reference 2 (BM25) with RRF Score: 12.3834
 ENSRNOG00000015675,Nell1,neural EGFL like 1
 
-|Reference 6 (BM25) with RRF Score: 10.6138
+|Reference 3 (BM25) with RRF Score: 12.3834
+ENSRNOG00000013721,Nepro,nucleolus and neural progenitor protein
+
+|Reference 4 (BM25) with RRF Score: 12.3834
+ENSRNOG00000018528,Nrl,neural retina leucine zipper
+
+|Reference 5 (BM25) with RRF Score: 12.3834
+ENSRNOG00000006235,Nell2,neural EGFL like 2
+
+|Reference 6 (BM25) with RRF Score: 11.9125
 ENSRNOG00000013102,Npdc1,"neural proliferation, differentiation and control, 1"
 
-|Reference 7 (BM25) with RRF Score: 10.6138
-ENSRNOG00000031890,Ncam1,neural cell adhesion molecule 1
-
-|Reference 8 (BM25) with RRF Score: 10.6138
-ENSRNOG00000002126,Ncam2,neural cell adhesion molecule 2
-
-|Reference 9 (BM25) with RRF Score: 10.6138
+|Reference 7 (BM25) with RRF Score: 11.9125
 ENSRNOG00000016944,Rax,retina and anterior neural fold homeobox
 
-|Reference 10 (BM25) with RRF Score: 9.9286
+|Reference 8 (BM25) with RRF Score: 11.9125
+ENSRNOG00000002126,Ncam2,neural cell adhesion molecule 2
+
+|Reference 9 (BM25) with RRF Score: 11.9125
+ENSRNOG00000031890,Ncam1,neural cell adhesion molecule 1
+
+|Reference 10 (BM25) with RRF Score: 11.4761
 ENSRNOG00000002582,Hand1,heart and neural crest derivatives expressed 1
 
-|Reference 11 (BM25) with RRF Score: 9.9286
+|Reference 11 (BM25) with RRF Score: 11.4761
 ENSRNOG00000060448,Hand2,heart and neural crest derivatives expressed 2
 
-|Reference 12 (BM25) with RRF Score: 9.9286
+|Reference 12 (BM25) with RRF Score: 11.4761
 ENSRNOG00000010205,Mturn,"maturin, neural progenitor differentiation regulator homolog"
 
-|Reference 13 (BM25) with RRF Score: 9.3267
-ENSRNOG00000005561,Brinp1,BMP/retinoic acid inducible neural specific 1
-
-|Reference 14 (BM25) with RRF Score: 9.3267
+|Reference 13 (BM25) with RRF Score: 11.0706
 ENSRNOG00000014548,Nedd9,"neural precursor cell expressed, developmentally down-regulated 9"
 
-|Reference 15 (BM25) with RRF Score: 9.3267
-ENSRNOG00000005592,Brinp2,BMP/retinoic acid inducible neural specific 2
-
-|Reference 16 (BM25) with RRF Score: 9.3267
+|Reference 14 (BM25) with RRF Score: 11.0706
 ENSRNOG00000002811,Brinp3,BMP/retinoic acid inducible neural specific 3
 
-|Reference 17 (BM25) with RRF Score: 8.4014
+|Reference 15 (BM25) with RRF Score: 11.0706
+ENSRNOG00000005592,Brinp2,BMP/retinoic acid inducible neural specific 2
+
+|Reference 16 (BM25) with RRF Score: 11.0706
+ENSRNOG00000005561,Brinp1,BMP/retinoic acid inducible neural specific 1
+
+|Reference 17 (BM25) with RRF Score: 10.7884
 ENSRNOG00000001314,Fam20c,"FAM20C, golgi associated secretory pathway kinase"
 
-|Reference 18 (BM25) with RRF Score: 7.9816
-ENSRNOG00000019556,Cd9,CD9 molecule
+|Reference 18 (BM25) with RRF Score: 10.3512
+Thus, by analogy with epithelial cell polar -
+ity, the abaxonal membrane of myelinated fibers is defined as a basolateral-like region, whereas the adaxonal membrane, SLI, paranodes and microvilli are considered apical-like regions [18, 19]. Schwann Cell Development
+During early vertebrate development, neural crest cells delaminate from the neural tube, proliferate, and migrate to generate a broad spectrum of cell types including, among others, Schwann cells, melanocytes, sympathetic neurons, sensory neurons, and skeletal and connective tissues of the head [24– 26]. The cell fate largely depends from the region 
+of origin of the neural tube from which neural crest cells migrate. These regions are defined in an anterior–posterior axis direction as cranial, cardiac, vagal, trunk, and sacral. In particular, Schwann cells, dorsal root ganglia (DRG) sensory neurons, sympathetic neurons, and satellite cells associated with sensory neurons, all originate from ventrally migrating trunk neural crest cells [27].
 
-|Reference 19 (BM25) with RRF Score: 7.9816
-ENSRNOG00000006076,Steap2,STEAP2 metalloreductase
+|Reference 19 (BM25) with RRF Score: 9.4337
+ENSRNOG00000054186,Krtap1-5,keratin associated protein 1-5
 
-|Reference 20 (BM25) with RRF Score: 7.9612
-ENSRNOG00000062503,,
+|Reference 20 (BM25) with RRF Score: 9.4337
+ENSRNOG00000015505,Mfap5,microfibril associated protein 5
 )
