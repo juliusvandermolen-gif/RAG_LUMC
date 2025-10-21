@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="Dependabot alleen pip.">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/sync-dependencies.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/environment.yml" afterDir="false" />
-    </list>
+    <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="pywin change for linus use and not only windows test branch." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="juliusvandermolen-dependabot.yml" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,7 +74,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "git-widget-placeholder": "juliusvandermolen-dependabot.yml",
+    "git-widget-placeholder": "juliusvandermolen-dependabot.yml-test-lock",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "/Users/julius/Desktop/Bio-Informatica/Bio-informatica_jaar3/Bxext/RAG_LUMC",
     "node.js.detected.package.eslint": "true",
@@ -312,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761066232950</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pywin change for linus use and not only windows test branch.">
+      <option name="closed" value="true" />
+      <created>1761071494156</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761071494156</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +338,8 @@
     <MESSAGE value="Dependabot add beta version. Test case" />
     <MESSAGE value="Dependabot test conda." />
     <MESSAGE value="Dependabot alleen pip." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dependabot alleen pip." />
+    <MESSAGE value="pywin change for linus use and not only windows test branch." />
+    <option name="LAST_COMMIT_MESSAGE" value="pywin change for linus use and not only windows test branch." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/plotting_py$plotting.coverage" NAME="plotting Coverage Results" MODIFIED="1744836289975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
