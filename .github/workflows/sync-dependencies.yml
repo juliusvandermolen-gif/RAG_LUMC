@@ -1,0 +1,39 @@
+# .github/workflows/sync-dependencies.yml
+
+name: Sync Pip Dependencies
+
+# Deze Action draait op pull requests
+on:
+  pull_request:
+
+jobs:
+  sync-lock-file:
+    # We draaien de job alleen als de pull request van Dependabot komt
+    #if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      # Stap 1: Haal de code uit de pull request op
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          # We moeten de branch van de PR gebruiken om wijzigingen te kunnen pushen
+          ref: ${{ github.head_ref }}
+
+      # Stap 2: Zet Python op
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.9' # Pas dit aan naar jouw Python-versie
+
+      # Stap 3: Genereer het lock-bestand op basis van de nieuwe requirements.txt
+      - name: Generate lock file
+        run: |
+          pip install pip-tools
+          pip-compile requirements.txt --output-file=requirements.lock.txt
+
+      # Stap 4: Voeg het bijgewerkte lock-bestand toe aan de pull request
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Update requirements.lock.txt"
+          file_pattern: "requirements.lock.txt"
