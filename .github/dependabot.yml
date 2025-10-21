@@ -11,18 +11,9 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-      time: "12:19"
+      time: "19:05"
       timezone: "Europe/Amsterdam"
     allow:
       - dependency-name: "transformers"
       - dependency-name: "protobuf"
-
-  - package-ecosystem: "conda"
-    directory: "/"
-    schedule:
-      interval: "daily"
-      time: "12:19"
-      timezone: "Europe/Amsterdam"
-    allow:
-      - dependency-name: "transformers"
-      - dependency-name: "protobuf"
+      - dependency-name: "urllib3"
