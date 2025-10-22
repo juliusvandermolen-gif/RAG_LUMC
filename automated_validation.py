@@ -261,6 +261,11 @@ def main():
     for model in validation_models:
         for i in range(1):
             print("Validating pathways... using g:Profiler")
+
+            global total_matches, credible_matches
+            total_matches = 0
+            credible_matches = 0
+            
             comparison_summary = validate_pathways(llm_output, ground_truth,
                                                    comparison_instruction, generation_model=generation_model)
             pathways, pathway_dict = extract_pathways(llm_output)
