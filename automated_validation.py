@@ -251,69 +251,77 @@ def main():
         else 0.0
     )
 
-    for i in range(1):
-        print("Validating pathways... using g:Profiler")
-        comparison_summary = validate_pathways(llm_output, ground_truth,
-                                               comparison_instruction, generation_model=generation_model)
-        pathways, pathway_dict = extract_pathways(llm_output)
+    # Variable model name change. Overlaying config GSEA.json file with
+    # new model.
+    validation_models = [
+        "gpt-5-mini",
+        "gpt-5",
+    ]
 
-        academic_results = academic_validation(
-            pathways, pathway_dict,
-            academic_instruction,
-            validation_model=validation_model
-        )
+    for model in validation_models:
+        for i in range(1):
+            print("Validating pathways... using g:Profiler")
+            comparison_summary = validate_pathways(llm_output, ground_truth,
+                                                   comparison_instruction, generation_model=generation_model)
+            pathways, pathway_dict = extract_pathways(llm_output)
 
-        base_name = os.path.splitext(os.path.basename(latest_file))[0]
-        md_filename = os.path.join(
-            output_directory,
-            f"validation_{base_name}_{validation_model}_{i}.md"
-        )
-
-        processed_results = []
-        for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
-            new_summary = pattern.sub(replace_entry, summary)
-            processed_results.append((pathway, genes, new_summary))
-
-        with open(md_filename, 'w', encoding="utf8") as md:
-            md.write(f"# Pathway Validation Report for {base_name}\n\n")
-            md.write("## Hallucination statistics\n")
-            md.write(f"- **Input gene‐count (size)**: {size}\n")
-            md.write(f"- **Total unique output genes**: {total_output}\n")
-            md.write(f"- **Matched (non‐hallucinated)**: {matched}\n")
-            md.write(f"- **Hallucination percentage**: {hallucination_perc:.2f}%\n\n")
-
-            md.write("## Table of Contents\n")
-            toc = [
-                ("Credible sources found", "#credible-sources-found"),
-                ("Original genes / pathways", "#original-genes--pathways"),
-                ("Automated validation of pathways", "#automated-validation-of-pathways"),
-                ("g:Profiler comparison summary", "#gprofiler-comparison-summary"),
-            ]
-            for title, anchor in toc:
-                md.write(f"- [{title}]({anchor})\n")
-            md.write("\n")
-
-            percent_credible = (credible_matches / total_matches * 100) if total_matches else 0.0
-            md.write("## Credible sources found\n")
-            md.write(
-                f"**{percent_credible:.1f}% credible matches ({credible_matches} out of {total_matches})**\n\n"
+            academic_results = academic_validation(
+                pathways, pathway_dict,
+                academic_instruction,
+                validation_model= model
             )
 
-            md.write("## Original genes / pathways\n")
-            for pathway, genes in pathway_dict.items():
-                md.write(f"- **{pathway}**: {', '.join(genes)}\n")
-            md.write("\n")
+            base_name = os.path.splitext(os.path.basename(latest_file))[0]
+            md_filename = os.path.join(
+                output_directory,
+                f"validation_{base_name}_{model}_{i}.md"
+            )
 
-            md.write("## Automated validation of pathways\n")
-            for pathway, genes, new_summary in processed_results:
-                md.write(f"### {pathway}\n")
-                md.write(f"**Genes involved:** {', '.join(genes)}\n\n")
-                md.write(f"{new_summary}\n\n")
+            processed_results = []
+            for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
+                new_summary = pattern.sub(replace_entry, summary)
+                processed_results.append((pathway, genes, new_summary))
 
-            md.write("## g:Profiler comparison summary\n")
-            md.write(f"{comparison_summary}\n\n")
+            with open(md_filename, 'w', encoding="utf8") as md:
+                md.write(f"# Pathway Validation Report for {base_name}\n\n")
+                md.write("## Hallucination statistics\n")
+                md.write(f"- **Input gene‐count (size)**: {size}\n")
+                md.write(f"- **Total unique output genes**: {total_output}\n")
+                md.write(f"- **Matched (non‐hallucinated)**: {matched}\n")
+                md.write(f"- **Hallucination percentage**: {hallucination_perc:.2f}%\n\n")
 
-        print(f"Markdown validation report created: {md_filename}")
+                md.write("## Table of Contents\n")
+                toc = [
+                    ("Credible sources found", "#credible-sources-found"),
+                    ("Original genes / pathways", "#original-genes--pathways"),
+                    ("Automated validation of pathways", "#automated-validation-of-pathways"),
+                    ("g:Profiler comparison summary", "#gprofiler-comparison-summary"),
+                ]
+                for title, anchor in toc:
+                    md.write(f"- [{title}]({anchor})\n")
+                md.write("\n")
+
+                percent_credible = (credible_matches / total_matches * 100) if total_matches else 0.0
+                md.write("## Credible sources found\n")
+                md.write(
+                    f"**{percent_credible:.1f}% credible matches ({credible_matches} out of {total_matches})**\n\n"
+                )
+
+                md.write("## Original genes / pathways\n")
+                for pathway, genes in pathway_dict.items():
+                    md.write(f"- **{pathway}**: {', '.join(genes)}\n")
+                md.write("\n")
+
+                md.write("## Automated validation of pathways\n")
+                for pathway, genes, new_summary in processed_results:
+                    md.write(f"### {pathway}\n")
+                    md.write(f"**Genes involved:** {', '.join(genes)}\n\n")
+                    md.write(f"{new_summary}\n\n")
+
+                md.write("## g:Profiler comparison summary\n")
+                md.write(f"{comparison_summary}\n\n")
+
+            print(f"Markdown validation report created: {md_filename}")
 
 
 if __name__ == "__main__":
