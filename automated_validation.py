@@ -276,7 +276,7 @@ def main():
             academic_results = academic_validation(
                 pathways, pathway_dict,
                 academic_instruction,
-                validation_model= model
+                validation_model=model
             )
 
             base_name = os.path.splitext(os.path.basename(latest_file))[0]
