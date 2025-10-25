@@ -13,6 +13,7 @@ from pymed import PubMed
 import pymed
 from dotenv import load_dotenv
 from plotting import normalize_gene, load_input_gene_set, create_input_dir
+import pandas as pd
 
 load_dotenv()
 
