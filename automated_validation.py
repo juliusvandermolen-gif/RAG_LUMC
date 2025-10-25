@@ -258,6 +258,8 @@ def main():
         "gpt-5",
     ]
 
+    # List with results for visualisation
+    list_results_vis = []
     for model in validation_models:
         for i in range(1):
             print("Validating pathways... using g:Profiler")
@@ -287,6 +289,26 @@ def main():
                 new_summary = pattern.sub(replace_entry, summary)
                 processed_results.append((pathway, genes, new_summary))
 
+            run_result = {
+                "model": model,
+                "hallucination_percentage": hallucination_perc,
+                "total_matches": total_matches,
+                "credible_matches": credible_matches,
+                "percent_credible": (credible_matches / total_matches *
+                                     100) if total_matches > 0 else 0.0
+            }
+
+            list_results_vis.append(run_result)
+
+    # Data to CSV
+    df = pd.DataFrame(results_data)
+    output_csv_path = os.path.join(output_directory,
+                                           "validation_summary.csv")
+    df.to_csv(output_csv_path, index=False)
+    print(f"\n📈 Succesfully generated in:"
+          f" {output_csv_path}")
+
+            """
             with open(md_filename, 'w', encoding="utf8") as md:
                 md.write(f"# Pathway Validation Report for {base_name}\n\n")
                 md.write("## Hallucination statistics\n")
@@ -327,6 +349,7 @@ def main():
                 md.write(f"{comparison_summary}\n\n")
 
             print(f"Markdown validation report created: {md_filename}")
+        """
 
 
 if __name__ == "__main__":
