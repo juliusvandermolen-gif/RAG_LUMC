@@ -303,9 +303,9 @@ def main():
 
     # Data to CSV
     df = pd.DataFrame(list_results_vis)
-    output_csv_path = output_directory / "validation_summary.csv"  # Pathlib versie
+    output_csv_path = os.path.join(output_directory,
+                                           "validation_summary.csv")
     df.to_csv(output_csv_path, index=False)
-    print("CSV successfully written to:", output_csv_path.resolve())
     print(f"\n📈 Succesfully generated in:"
           f" {output_csv_path}")
 
