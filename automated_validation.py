@@ -270,7 +270,7 @@ def main():
             credible_matches = 0
             
             # comparison_summary = validate_pathways(llm_output, ground_truth,
-              #                                     comparison_instruction, generation_model=generation_model)
+            #                                     comparison_instruction, generation_model=generation_model)
             pathways, pathway_dict = extract_pathways(llm_output)
 
             academic_results = academic_validation(
@@ -292,6 +292,8 @@ def main():
 
             run_result = {
                 "model": model,
+                "total_matches": total_matches,
+                "credible_matches": credible_matches,
                 "hallucination_percentage": hallucination_perc,
                 "percent_credible": (credible_matches / total_matches *
                                      100) if total_matches > 0 else 0.0
@@ -300,6 +302,7 @@ def main():
             list_results_vis.append(run_result)
 
     # Data to CSV
+    print(f"list results vis: {list_results_vis}")
     df = pd.DataFrame(list_results_vis)
     output_csv_path = os.path.join(output_directory,
                                            "validation_summary.csv")
