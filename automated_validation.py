@@ -292,8 +292,6 @@ def main():
             run_result = {
                 "model": model,
                 "hallucination_percentage": hallucination_perc,
-                "total_matches": total_matches,
-                "credible_matches": credible_matches,
                 "percent_credible": (credible_matches / total_matches *
                                      100) if total_matches > 0 else 0.0
             }
