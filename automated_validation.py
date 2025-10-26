@@ -257,6 +257,9 @@ def main():
     validation_models = [
         "gpt-5-mini",
         "gpt-5",
+        "gpt-5-nano",
+        "gpt-4.1",
+        "gpt-4.1-mini"
     ]
 
     # List with results for visualisation
@@ -302,7 +305,6 @@ def main():
             list_results_vis.append(run_result)
 
     # Data to CSV
-    print(f"list results vis: {list_results_vis}")
     df = pd.DataFrame(list_results_vis)
     output_csv_path = os.path.join(output_directory,
                                            "validation_summary.csv")
