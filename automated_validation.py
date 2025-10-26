@@ -264,7 +264,7 @@ def main():
     # List with results for visualisation
     list_results_vis = []
     for model in validation_models:
-        for i in range(5):  # Hoeveel keer testen
+        for i in range(10):  # Hoeveel keer testen
             print("Validating pathways... using g:Profiler")
 
             global total_matches, credible_matches
