@@ -13,6 +13,7 @@ from pymed import PubMed
 import pymed
 from dotenv import load_dotenv
 from plotting import normalize_gene, load_input_gene_set, create_input_dir
+import pandas as pd
 
 load_dotenv()
 
@@ -268,8 +269,8 @@ def main():
             total_matches = 0
             credible_matches = 0
             
-            comparison_summary = validate_pathways(llm_output, ground_truth,
-                                                   comparison_instruction, generation_model=generation_model)
+            # comparison_summary = validate_pathways(llm_output, ground_truth,
+              #                                     comparison_instruction, generation_model=generation_model)
             pathways, pathway_dict = extract_pathways(llm_output)
 
             academic_results = academic_validation(
@@ -279,10 +280,10 @@ def main():
             )
 
             base_name = os.path.splitext(os.path.basename(latest_file))[0]
-            md_filename = os.path.join(
-                output_directory,
-                f"validation_{base_name}_{model}_{i}.md"
-            )
+            # md_filename = os.path.join(
+            #     output_directory,
+            #     f"validation_{base_name}_{model}_{i}.md"
+            # )
 
             processed_results = []
             for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
