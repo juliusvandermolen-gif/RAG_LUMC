@@ -261,7 +261,7 @@ def main():
     # List with results for visualisation
     list_results_vis = []
     for model in validation_models:
-        for i in range(100):#Hoeveel keer testen
+        for i in range(1):  # Hoeveel keer testen
             print("Validating pathways... using g:Profiler")
 
             global total_matches, credible_matches
@@ -275,7 +275,7 @@ def main():
             academic_results = academic_validation(
                 pathways, pathway_dict,
                 academic_instruction,
-                validation_model= model
+                validation_model=model
             )
 
             base_name = os.path.splitext(os.path.basename(latest_file))[0]
@@ -305,7 +305,7 @@ def main():
     output_csv_path = os.path.join(output_directory,
                                            "validation_summary.csv")
     df.to_csv(output_csv_path, index=False)
-    print(f"\n📈 Succesfully generated in:"
+    print(f"\nSuccesfully generated in:"
           f" {output_csv_path}")
 
 
