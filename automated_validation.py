@@ -257,7 +257,6 @@ def main():
     validation_models = [
         "gpt-5-mini",
         "gpt-5",
-        "gpt-5-nano",
         "gpt-4.1",
         "gpt-4.1-mini"
     ]
@@ -265,7 +264,7 @@ def main():
     # List with results for visualisation
     list_results_vis = []
     for model in validation_models:
-        for i in range(1):  # Hoeveel keer testen
+        for i in range(5):  # Hoeveel keer testen
             print("Validating pathways... using g:Profiler")
 
             global total_matches, credible_matches
