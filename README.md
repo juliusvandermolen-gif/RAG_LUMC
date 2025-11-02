@@ -172,7 +172,17 @@ To adapt the LLM to domain specifics, use the **fine\_tune.ipynb** notebook:
 * **Memory errors:** Lower `batch_size` in your config.
 * **Index load failures:** Verify `faiss_index.bin` exists and matches embedding dims.
 
+---
 
+## Dependencies update
+
+Dependabot alert on github will give you alerts to open pull request and update the package used in the project.
+
+Dependabot alert:
+1. Go to setting
+2. Click on advanced security
+3. Enable dependabot alerts
+4. Click on security and dependabot for all the alerts
 ---
 
 ## Contact
