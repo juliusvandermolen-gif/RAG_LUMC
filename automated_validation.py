@@ -14,6 +14,7 @@ import pymed
 from dotenv import load_dotenv
 from plotting import normalize_gene, load_input_gene_set, create_input_dir
 import pandas as pd
+import subprocess
 
 load_dotenv()
 
@@ -263,35 +264,63 @@ def main():
 
     # List with results for visualisation
     list_results_vis = []
-    for model in validation_models:
-        for i in range(10):  # Hoeveel keer testen
-            print("Validating pathways... using g:Profiler")
+    for i in range(2):  # Amount of generations
+        print(f"\n=== Iteration: {i + 1}/2: Generating new LLM output ===")
+
+        before_files = set(os.listdir(answer_dir))
+
+        # Generate new output
+        subprocess.run([
+            "python", "RAG_workflow.py",
+            "--config", "./configs_system_instruction/GSEA.json"
+        ], check=True)
+
+        after_files = set(os.listdir(answer_dir))
+        new_files = list(after_files - before_files)
+        if not new_files:
+            print(
+                f"Found no new output file at iteration {i + 1}")
+        else:
+            print(f"New output file: {new_files[-1]}")
+
+        # Lees de nieuw gegenereerde output
+        llm_output, latest_file = read_latest_llm_output(answer_dir)
+        print(f"Validating generation from {os.path.basename(latest_file)} with {model}")
+        _, pathway_dict = extract_pathways(llm_output)
+        output_genes = {normalize_gene(g) for g in pathway_dict.values()}
+
+        total_output = len(output_genes)
+        matched = sum(1 for g in output_genes if g in input_set)
+        hallucination_perc = ((total_output - matched) / total_output * 100.0) if total_output > 0 else 0.0
+
+        # comparison_summary = validate_pathways(llm_output, ground_truth,
+        #                                     comparison_instruction, generation_model=generation_model)
+
+        for model in validation_models:
+            print(f"Validating with {model}")
 
             global total_matches, credible_matches
             total_matches = 0
             credible_matches = 0
-            
-            # comparison_summary = validate_pathways(llm_output, ground_truth,
-            #                                     comparison_instruction, generation_model=generation_model)
-            pathways, pathway_dict = extract_pathways(llm_output)
 
+            pathways, pathway_dict = extract_pathways(llm_output)
             academic_results = academic_validation(
                 pathways, pathway_dict,
                 academic_instruction,
                 validation_model=model
             )
 
-            base_name = os.path.splitext(os.path.basename(latest_file))[0]
+            # base_name = os.path.splitext(os.path.basename(latest_file))[0]
             # md_filename = os.path.join(
             #     output_directory,
             #     f"validation_{base_name}_{model}_{i}.md"
             # )
 
-            processed_results = []
-            for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
-                new_summary = pattern.sub(replace_entry, summary)
-                processed_results.append((pathway, genes, new_summary))
-
+            # processed_results = []
+            # for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
+            #     new_summary = pattern.sub(replace_entry, summary)
+            #     processed_results.append((pathway, genes, new_summary))
+            #
             run_result = {
                 "model": model,
                 "total_matches": total_matches,
