@@ -52,7 +52,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # # Seeing the available gpt models
 # print('\nAvailable GPT models:')
-# client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client_open_ai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # models = client_open_ai.models.list()
 # for m in models:
 #     print(m.id)
