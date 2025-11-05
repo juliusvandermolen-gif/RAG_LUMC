@@ -174,9 +174,10 @@ To adapt the LLM to domain specifics, use the **fine\_tune.ipynb** notebook:
 
 ---
 
-## Dependencies update
+## Dependencies update alerts
 
 Dependabot alert on github will give you alerts to open pull request and update the package used in the project.
+Check if the new package is compatible with other packages used in the project. 
 
 Dependabot alert:
 1. Go to setting
