@@ -248,8 +248,8 @@ def main():
     # new model.
     validation_models = [
         "gpt-5-mini",
-        "gpt-5",
-        "gpt-4.1",
+        #"gpt-5",
+       # "gpt-4.1",
         "gpt-4.1-mini"
     ]
 
@@ -298,11 +298,15 @@ def main():
 
         total_output = len(output_genes)
         matched = sum(1 for g in output_genes if g in input_set)
-        hallucination_perc = (
-            (total_output - matched) / total_output * 100.0
-            if total_output > 0
-            else 0.0
-        )
+        matched_genes = {g for g in output_genes if g in input_set}
+        hallucinated_genes = output_genes - matched_genes
+
+        hallucination_perc_generation = ((total_output - matched) / total_output * 100)
+
+        num_hallucinated = len(hallucinated_genes)
+        num_matched = len(matched_genes)
+
+        print(f"Iteration {iteration_num}: {num_hallucinated} hallucinated genes, {num_matched} matches")
 
         comparison_summary = validate_pathways(llm_output, ground_truth,
                                             comparison_instruction, generation_model=generation_model)
@@ -343,12 +347,17 @@ def main():
                 "model": model,
                 "total_matches": total_matches,
                 "credible_matches": credible_matches,
-                "hallucination_percentage_val": ((total_matches - credible_matches) / total_matches * 100.0) if total_matches > 0 else 0.0,
+                "hallucination_perc_validation": ((total_matches - credible_matches) / total_matches * 100.0) if total_matches > 0 else 0.0,
+                "hallucination_perc_generation": hallucination_perc_generation,
                 "percent_credible": (credible_matches / total_matches *
-                                     100) if total_matches > 0 else 0.0
+                                     100) if total_matches > 0 else 0.0,
+                "matched_genes": len(matched_genes),
+                "hallucinated_genes": len(hallucinated_genes),
+                "hallucinated_genes_list": list(hallucinated_genes)
             }
 
             list_results_vis.append(run_result)
+            print(run_result)
 
     # Data to CSV, combine with cache
     combined_results = cache + list_results_vis if cache else list_results_vis
