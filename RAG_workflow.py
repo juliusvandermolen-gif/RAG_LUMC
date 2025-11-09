@@ -1776,7 +1776,8 @@ def generate_response_and_save(
     weight_faiss: float,
     weight_bm25: float,
     system_instruction_for_response: str,
-    gene_count: Optional[int] = None
+    gene_count: Optional[int] = None,
+    iteration: Optional[int] = None
 ) -> None:
     """
     Orchestrates a full retrieval‐augmented generation (RAG) workflow:
@@ -1811,10 +1812,11 @@ def generate_response_and_save(
     )
 
     if answer and answer != "Processing complete.":
-        save_answer_to_file(answer, document_references)
+        file_name = f"./output/results/answer_iter{iteration}.txt"
+        save_answer_to_file(answer, document_references, file_name=file_name)
         support_dir = Path("./output/support")
         support_dir.mkdir(parents=True, exist_ok=True)
-        output_file = support_dir / "scores.xlsx"
+        output_file = support_dir / "scores{suffix}.xlsx"
         export_scores_to_excel(
             rrf_scores,
             bm25_scores,
@@ -2047,6 +2049,12 @@ def main() -> None:
         default="./configs_system_instruction/GSEA.json",
         help="Path to the configuration JSON file"
     )
+    parser.add_argument(
+        "--iteration",
+        type=int,
+        default=None,
+        help="Iteration number"
+    )
     args = parser.parse_args()
 
     config_dict = load_config(args.config, print_settings=True)
@@ -2170,6 +2178,7 @@ def main() -> None:
                 continue
 
             print("\nGenerating response...")
+            iteration = args.iteration
             generate_response_and_save(
                 query,
                 gene_list_string,
@@ -2177,7 +2186,7 @@ def main() -> None:
                 bm25_index, bm25_chunk_ids,
                 weight_faiss, weight_bm25,
                 system_instruction_response,
-                gene_count
+                gene_count, iteration
             )
 
             pbar.update()

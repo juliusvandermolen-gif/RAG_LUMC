@@ -352,8 +352,7 @@ def main():
 
             list_results_vis.append(run_result)
 
-    # Data to CSV
-    # Combine with cache
+    # Data to CSV, combine with cache
     combined_results = cache + list_results_vis if cache else list_results_vis
     df = pd.DataFrame(combined_results)
     df.to_csv(cache_csv_path, index=False)
