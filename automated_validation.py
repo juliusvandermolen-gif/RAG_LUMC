@@ -261,12 +261,11 @@ def main():
     cache = pd.read_csv(cache_csv_path).to_dict("records") if args.use_cache and os.path.exists(cache_csv_path) else []
     existing_cache_keys = {(r["iteration"], r["model"]) for r in cache}
 
-    for i in range(10):  # Amount of generations
+    for i in range(1):  # Amount of generations
         iteration_num = i + 1
-        print(f"\n=== Iteration: {iteration_num}: Generating new LLM output ===")
 
         # Skip regeneration if cached
-        expected_output_file = Path(answer_dir) / f"llm_output_iteration_{iteration_num}.txt"
+        expected_output_file = Path(answer_dir) / f"answer_iter{iteration_num}.txt"
         if not expected_output_file.exists() or not args.use_cache:
             print(
                 f"Generating new LLM output for iteration {iteration_num}...")
@@ -305,8 +304,8 @@ def main():
             else 0.0
         )
 
-        # comparison_summary = validate_pathways(llm_output, ground_truth,
-        #                                     comparison_instruction, generation_model=generation_model)
+        comparison_summary = validate_pathways(llm_output, ground_truth,
+                                            comparison_instruction, generation_model=generation_model)
 
         for model in validation_models:
             if (iteration_num, model) in existing_cache_keys:
@@ -334,18 +333,17 @@ def main():
             #     f"validation_{base_name}_{model}_{i}.md"
             # )
 
-            # processed_results = []
-            # for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
-            #     new_summary = pattern.sub(replace_entry, summary)
-            #     processed_results.append((pathway, genes, new_summary))
-            #
+            processed_results = []
+            for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
+                new_summary = pattern.sub(replace_entry, summary)
+                processed_results.append((pathway, genes, new_summary))
 
             run_result = {
                 "iteration": iteration_num,
                 "model": model,
                 "total_matches": total_matches,
                 "credible_matches": credible_matches,
-                "hallucination_percentage": hallucination_perc,
+                "hallucination_percentage_val": ((total_matches - credible_matches) / total_matches * 100.0) if total_matches > 0 else 0.0,
                 "percent_credible": (credible_matches / total_matches *
                                      100) if total_matches > 0 else 0.0
             }
