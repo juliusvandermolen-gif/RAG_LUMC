@@ -32,12 +32,18 @@ except FileNotFoundError:
     validation_logs = {}
 
 
-def read_latest_llm_output(answer_dir):
-    answer_path = os.path.join(answer_dir, "answer.txt")
+def read_latest_llm_output(answer_dir, iteration=None):
+    if iteration is not None:
+        answer_path = os.path.join(answer_dir, f"answer_iter{iteration}.txt")
+    else:
+        answer_path = os.path.join(answer_dir, "answer.txt")
+
     if not os.path.isfile(answer_path):
-        raise FileNotFoundError(f"No 'answer.txt' found in {answer_dir!r}")
+        raise FileNotFoundError(f"No '{answer_path}' found in {answer_dir!r}")
+
     with open(answer_path, "r", encoding="utf8") as file:
         content = file.read().strip()
+
     return content, answer_path
 
 
@@ -209,7 +215,13 @@ def main():
         default="./configs_system_instruction/GSEA.json",
         help="Path to the configuration JSON file"
     )
+    parser.add_argument(
+        "--use_cache",
+        action="store_true",
+        help="Use cached results if available to skip regeneration/validation"
+    )
     args = parser.parse_args()
+
     config = load_config(args.config, print_settings=False)
     config_name = os.path.splitext(os.path.basename(args.config))[0]
     size = config["max_genes"][0]
@@ -232,27 +244,6 @@ def main():
         print("Academic instruction file not found. Exiting program")
         sys.exit(1)
 
-    try:
-        llm_output, latest_file = read_latest_llm_output(answer_dir)
-    except FileNotFoundError as e:
-        print(e)
-        return
-    _, pathway_dict = extract_pathways(llm_output)
-    output_genes = {
-        normalize_gene(g)
-        for genes in pathway_dict.values()
-        for g in genes
-        if g.strip()
-    }
-
-    total_output = len(output_genes)
-    matched = sum(1 for g in output_genes if g in input_set)
-    hallucination_perc = (
-        (total_output - matched) / total_output * 100.0
-        if total_output > 0
-        else 0.0
-    )
-
     # Variable model name change. Overlaying config GSEA.json file with
     # new model.
     validation_models = [
@@ -264,40 +255,67 @@ def main():
 
     # List with results for visualisation
     list_results_vis = []
-    for i in range(2):  # Amount of generations
-        print(f"\n=== Iteration: {i + 1}/2: Generating new LLM output ===")
 
-        before_files = set(os.listdir(answer_dir))
+    # Cache file path
+    cache_csv_path = os.path.join(output_directory, "validation_summary.csv")
+    cache = pd.read_csv(cache_csv_path).to_dict("records") if args.use_cache and os.path.exists(cache_csv_path) else []
+    existing_cache_keys = {(r["iteration"], r["model"]) for r in cache}
 
-        # Generate new output
-        subprocess.run([
-            "python", "RAG_workflow.py",
-            "--config", "./configs_system_instruction/GSEA.json"
-        ], check=True)
+    for i in range(10):  # Amount of generations
+        iteration_num = i + 1
+        print(f"\n=== Iteration: {iteration_num}: Generating new LLM output ===")
 
-        after_files = set(os.listdir(answer_dir))
-        new_files = list(after_files - before_files)
-        if not new_files:
+        # Skip regeneration if cached
+        expected_output_file = Path(answer_dir) / f"llm_output_iteration_{iteration_num}.txt"
+        if not expected_output_file.exists() or not args.use_cache:
             print(
-                f"Found no new output file at iteration {i + 1}")
+                f"Generating new LLM output for iteration {iteration_num}...")
+            subprocess.run([
+                "python", "RAG_workflow.py",
+                "--config", args.config,
+                "--iteration", str(iteration_num)
+            ], check=True)
         else:
-            print(f"New output file: {new_files[-1]}")
+            print(
+                f"✅ Using cached LLM output: {expected_output_file.name}")
 
-        # Lees de nieuw gegenereerde output
-        llm_output, latest_file = read_latest_llm_output(answer_dir)
-        print(f"Validating generation from {os.path.basename(latest_file)} with {model}")
+
+        # Load LLM output
+        try:
+            llm_output, latest_file = read_latest_llm_output(answer_dir,
+                                                             iteration=iteration_num)
+        except FileNotFoundError as e:
+            print(e)
+            continue
+
+        # Extract pathways and genes
         _, pathway_dict = extract_pathways(llm_output)
-        output_genes = {normalize_gene(g) for g in pathway_dict.values()}
+        output_genes = {
+            normalize_gene(g)
+            for genes in pathway_dict.values()
+            for g in genes
+            if g.strip()
+        }
 
         total_output = len(output_genes)
         matched = sum(1 for g in output_genes if g in input_set)
-        hallucination_perc = ((total_output - matched) / total_output * 100.0) if total_output > 0 else 0.0
+        hallucination_perc = (
+            (total_output - matched) / total_output * 100.0
+            if total_output > 0
+            else 0.0
+        )
 
         # comparison_summary = validate_pathways(llm_output, ground_truth,
         #                                     comparison_instruction, generation_model=generation_model)
 
         for model in validation_models:
-            print(f"Validating with {model}")
+            if (iteration_num, model) in existing_cache_keys:
+                print(
+                    f"⏩ Skipping cached validation for iteration {iteration_num}, model {model}")
+                continue
+
+            print(
+                f"Validating generation from {os.path.basename(latest_file)} with {model}")
 
             global total_matches, credible_matches
             total_matches = 0
@@ -321,7 +339,9 @@ def main():
             #     new_summary = pattern.sub(replace_entry, summary)
             #     processed_results.append((pathway, genes, new_summary))
             #
+
             run_result = {
+                "iteration": iteration_num,
                 "model": model,
                 "total_matches": total_matches,
                 "credible_matches": credible_matches,
@@ -333,12 +353,13 @@ def main():
             list_results_vis.append(run_result)
 
     # Data to CSV
-    df = pd.DataFrame(list_results_vis)
-    output_csv_path = os.path.join(output_directory,
-                                           "validation_summary.csv")
-    df.to_csv(output_csv_path, index=False)
-    print(f"\nSuccesfully generated in:"
-          f" {output_csv_path}")
+    # Combine with cache
+    combined_results = cache + list_results_vis if cache else list_results_vis
+    df = pd.DataFrame(combined_results)
+    df.to_csv(cache_csv_path, index=False)
+
+    print(f"\nValidation results saved to:"
+          f" {cache_csv_path}")
 
 
 if __name__ == "__main__":
