@@ -1,0 +1,23 @@
+Axon Guidance and Neurite Outgrowth:
+Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Ntn1, Sema3g, Sema4f, Srgap1, Dpysl3, Dpysl5, Tnik, Gnai1, Itpripl1
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Cpe, Kif1a, Pam, Psap, Msi1, Prkar2b, Prkd3, Ppp1r36, Sumo3, Tuba4a, Tubb4a, Map1lc3a
+
+Myelination and Axonal Ensheathment:
+Mpz, Pmp22, Mag, Gldn, Drp2, Mal, Plp1l (Mpz?), Prx, Scn7a
+
+Extracellular Matrix and Perineuronal Net Remodeling:
+Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Efemp2, Emilin1, Bgn, Timp1, Pxdn, Adamtsl3
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Dyrk1a, Tnik, Sgpl1, Ppp1r14c, Vash1, Frizzled-like (Frrs1), Ccn4
+
+Calcium and Mechanosensory Signaling:
+Ryr3, Itpripl1, P2ry2, Piezo2, Scn7a, Nrp1, Nrp2, Met
+
+Growth Factor and IGF Axis:
+Igfbp3, Igf2bp2, Ghr, Pappa, Lrp2, Epas1, Nampt, Lifr, Ecel1
+
+Neuroimmune and Chemokine Signaling:
+Cxcl12, Cxcl14, Ighm, Ifnar1, Tnfrsf1a, Nlrp1a, Selplg, A2m

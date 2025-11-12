@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Sema4f, Sema3g, Efna5, Ntn1, Dpysl5, Dpysl3, Itga8, Lrrtm3, Tnik,
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Drp2, Cldn19, Gldn, Tubb4a, Tuba4a, Gja1, Prx,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Synpr, Cpe, Pam, Kif1a, Slc9a9, Ppp1r36, Map1lc3a, Prkar2b, Gnai1, Frrs1, Ppfia4,
+
+Extracellular Matrix Remodeling and Synaptic Stabilization:
+Col9a3, Col11a1, Col15a1, Col20a1, Adamts17, Adamtsl1, Adamtsl3, Hapln1, Bgn, Efemp2, Mfap5, Emilin1,
+
+Calcium Signaling and Long-Term Potentiation:
+Ryr3, Itpripl1, Wnt5a, Lef1, Hs6st1, Hs6st2, P2ry2, Gprc5b, Gprc5a, Gnai1,
+
+Neurotrophic and Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Dyrk1a, Lef1, Ccn3, Ccn4, Met, Epas1, Nampt,

@@ -1,0 +1,20 @@
+Axon Guidance and Synaptogenesis:
+Cntn6, Sema4f, Ntn1, Robo2, Slit2, Efna5, Nrp1, Nrp2, Plxnb1, Srgap1, Dpysl3, Dpysl5, Tnik, Itga8, Itga7, Kif1a, Lrrtm3,
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Drp2, Mal, Gldn, Cldn19, Gja1,
+
+Synaptic Vesicle Trafficking and Neurotransmitter Release:
+Synpr, Kif1a, Cpe, Serpini1, Ryr3, Pfn2, Numb, Psap, Ppp1r14c, Map1lc3a,
+
+Extracellular Matrix Remodeling and Neural Adhesion:
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Efemp2, Emilin1, Bgn, Timp1, Qsox1, Htra1,
+
+Wnt/Planar Cell Polarity and Retinoic Acid Signaling:
+Wnt5a, Lef1, Tnik, Dyrk1a, Aldh1a1,
+
+Calcium‐Dependent Mechanotransduction and Purinergic Signaling:
+Ryr3, Itpripl1, Piezo2, P2ry2, Gnai1,
+
+Neuropeptide Maturation and Secretory Processing:
+Cpe, Pam, Pcsk5, Serpini1, Pappa,

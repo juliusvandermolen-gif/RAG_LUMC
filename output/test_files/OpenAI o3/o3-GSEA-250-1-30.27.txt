@@ -1,0 +1,20 @@
+Axon Guidance and Growth Cone Dynamics:
+Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Sema3g, Sema4f, Ntn1, Dpysl3, Dpysl5, Srgap1, Tnik, Gnai1, Itga8,
+
+Myelination and Axonal Ensheathment:
+Mag, Mpz, Pmp22, Drp2, Cldn19, Tubb4a, Kif1a, Itga7, Mal, Gldn,
+
+Synaptic Vesicle Trafficking and Plasticity:
+Synpr, Kif1a, Pfn2, Psap, Map1lc3a, Pam, Ryr3, Cers6, Sumo3, Atf5, Dyrk1a, Prkar2b, Ppp1r14c, Slc9a9, Dpysl3, Dpysl5,
+
+Extracellular Matrix Remodeling in Neural Development:
+Itga8, Itga7, Col11a1, Col15a1, Col9a3, Col20a1, Adamts17, Adamtsl3, Adamtsl1, Mfap5, Ltbp1, Efemp2, Emilin1, Bgn, Matn3, Hapln1, Has2, Pxdn,
+
+Wnt/Planar Cell Polarity Signaling in Neurogenesis:
+Wnt5a, Lef1, Tnik, Dyrk1a, Mef2c, Ppm1f,
+
+Calcium/Ion Mechanotransduction Signaling:
+Ryr3, Piezo2, Scn7a, Itpripl1, Gnai1,
+
+Neuroimmune and Cytokine Signaling in CNS:
+Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Nlrp1a, Selplg, A2m, Serpinf1, Igfbp3,

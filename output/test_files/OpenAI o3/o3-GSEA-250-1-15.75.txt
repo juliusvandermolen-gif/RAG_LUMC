@@ -1,0 +1,14 @@
+Axon Guidance and Growth Cone Dynamics:  
+Nrp1, Nrp2, Slit2, Robo2, Sema4f, Sema3g, Plxnb1, Efna5, Ntn1, Srgap1, Dpysl3, Dpysl5, Cntn6, Itga8, Tnik, Kif1a
+
+Synaptic Vesicle Trafficking and Neurotransmitter Release:  
+Synpr, Cpe, Kif1a, Pfn2, Scn7a, Ryr3, Piezo2, Cers6, Gnai1, Prkar2b
+
+Myelination and Glial Differentiation:  
+Mpz, Mag, Pmp22, Drp2, Mal, Gldn, Cldn19, Itga7, Lrrtm3, Gja1
+
+Extracellular Matrix and Adhesion Molecule Signaling in Neural Development:  
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Efemp2, Timp1, Hapln1, Gpnmb, Bgn, Pxdn, Qsox1, Mfap5, Emilin1
+
+Wnt/Planar Cell Polarity Signaling in Neurogenesis:  
+Wnt5a, Lef1, Tnik, Dyrk1a, Rhoj, Asap1

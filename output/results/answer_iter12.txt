@@ -1,0 +1,20 @@
+Synaptic Vesicle Trafficking and Plasticity:
+Cpe, Synpr, Slc9a9, Frrs1, Kif1a, Rab10, Map1lc3a, Numb, Psap, Ppfia4, Tnik, Srgap1, Dpysl3, Dpysl5
+
+Axon Guidance and Growth Cone Remodeling:
+Ntn1, Robo2, Slit2, Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Efna5, Itga7, Itga8, Dpysl3, Dpysl5, Rhoj, Asap1, Srgap1, Gldn, Lrrtm3, Gnai1, Tuba4a, Tubb4a
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Drp2, Gldn, Mal
+
+Extracellular Matrix Remodeling in Neural Tissue:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Efemp2, Emilin1, Bgn, Mfap5, Ltbp1, Pxdn, Timp1
+
+Wnt/Planar Cell Polarity Signaling in Neurodevelopment:
+Wnt5a, Lef1, Tnik, Ccn4, Ccn3
+
+Neurotrophic Growth Factor and IGF Signaling:
+Met, Lifr, Igfbp3, Igf2bp2, Pappa, Ghr, Nampt, Atf3, Epas1
+
+Calcium and Mechanosensory Signaling:
+Ryr3, Itpripl1, P2ry2, Piezo2, Tpcn1

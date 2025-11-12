@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Robo2, Slit2, Efna5, Lrrtm3, Srgap1, Dpysl3, Dpysl5, Tnik, Gnai1, Itga7, Itga8, Kif1a,
+
+Synaptic Transmission and Plasticity:
+Synpr, Serpini1, Ryr3, Prkar2b, Kif1a, Dyrk1a, Mef2c, Numb, Ppfia4, Cers6, Psap, P2ry2, Ppp1r14c, Tubb4a, Tuba4a, Map1lc3a, Tnik, Sumo3, Gnai1, Frrs1,
+
+Myelination and Node of Ranvier Formation:
+Mag, Mpz, Pmp22, Drp2, Gldn, Mal, Prx, Cntn6, Itpripl1, Tubb4a, Septin5,
+
+Extracellular Matrix Remodeling and Cell Adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Col11a1, Col15a1, Col20a1, Col9a3, Col8a2, Matn3, Hapln1, Bgn, Ltbp1, Efemp2, Emilin1, Pxdn, Pappa, Timp1, Cdh13, Clca4l, Cldn19, Cldnd1, Gja1, Pkp1,
+
+Non-Canonical Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Rhoj, Asap1, Tnik,
+
+Neuroimmune and Cytokine Signaling:
+Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Serpinf1, Atf3, Eif2ak2, Nlrp1a, Pappa, Timp1, A2m, Ptgfr, Selplg, Ighm,

@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Sema4f, Sema3g, Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Dpysl5, Kif1a, Lrrtm3,
+
+Myelination and Schwann Cell Differentiation:
+Mag, Mpz, Pmp22, Drp2, Gldn, Cntn6, Mal, Prx,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Cpe, Synpr, Pfn2, Kif1a, Ryr3, Prkar2b, Gnai1, Dpysl3, Tuba4a, Tubb4a, Map1lc3a,
+
+Extracellular Matrix Remodeling in Neural Development:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Mfap5, Bgn, Hapln1, Timp1, Emilin1,
+
+Wnt/Planar Cell Polarity Signaling in Neural Patterning:
+Wnt5a, Lef1, Dyrk1a, Mef2c, Runx3,
+
+Calcium-Dependent Mechanisms of Synaptic Plasticity:
+Ryr3, Itpripl1, Piezo2, Gnai1, Prkar2b, Nrp1, Nrp2, Atf3,
+
+Neuroinflammatory and Complement Pathway in CNS:
+A2m, C1qtnf1, Cxcl12, Tnfrsf1a, Ifnar1, Nlrp1a, Selplg, Igfbp3,

@@ -1,0 +1,26 @@
+Axon Guidance and Growth Cone Dynamics:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Dpysl3, Dpysl5, Kif1a, Tubb4a, Tuba4a, Srgap1,
+
+Myelination and Node of Ranvier Organization:
+Mpz, Pmp22, Mag, Drp2, Gldn, Cldn19, Gja1, Mal, Prx, Kif1a,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Cpe, Pcsk5, Pam, Ppfia4, Kif1a, Ryr3, P2ry2, Prkar2b, Synpr, Sumo3, Numb, Psap,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Efemp2, Hapln1, Ltbp1, Matn3, Mfap5, Bgn, Timp1, Has2, Pxdn, Pappa,
+
+Wnt/Planar Cell Polarity Signaling in Neuronal Differentiation:
+Wnt5a, Lef1, Tnik, Gnai1, Rhoj,
+
+Calcium and cAMP Signaling for Synaptic Plasticity:
+Ryr3, Prkar2b, Gnai1, Itpripl1, Ppp1r14c,
+
+Neuroimmune and Cytokine Signaling in the CNS:
+Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Nlrp1a, Serpinf1, A2m, C1qtnf1, Ighm, Selplg,
+
+Endosomal Trafficking and Autophagy in Neurons:
+Snx6, Snx4, Rab10, Vps8, Vps26c, Chmp2b, Map1lc3a, Tpcn1, Pnpt1,
+
+Neural Stem Cell Proliferation and Differentiation:
+Id2, Mef2c, Lef1, Runx3, Ebf1, Klf9, Atf3, Atf5, Dyrk1a, Ppm1f,

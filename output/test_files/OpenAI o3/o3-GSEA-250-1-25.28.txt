@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Ntn1, Efna5, Plxnb1, Itga8, Lrrtm3, Dpysl5, Dpysl3, Kif1a, Gldn, Tnik, Inpp5a, Ryr3, Srgap1,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Synpr, Cpe, Kif1a, Pfn2, Tuba4a, Tubb4a, Map1lc3a, P2ry2, Prkar2b, Pam, Psap, Gnai1, Msi1, Acap2, Piezo2,
+
+Extracellular Matrix Remodeling and Cell Adhesion in Neural Development:
+Cntn6, Adamts17, Adamtsl1, Adamtsl3, Hapln1, Col15a1, Col11a1, Col20a1, Col9a3, Col8a2, Efemp2, Timp1, Mag, Mpz, Igfbp3, Emilin1, Bgn,
+
+Non-canonical Wnt Signaling in Neurons:
+Wnt5a, Lef1, Dyrk1a, Tnik, Gnai1, Id2, Klf9, Ppard, Inpp5a, Runx3, Mef2c,
+
+Calcium-dependent Neural Plasticity:
+Ryr3, Piezo2, P2ry2, Gnai1, Tpcn1, Itpripl1, Prkar2b, Ppm1f, Prkd3, Eif2ak2,
+
+Myelination and Axon Ensheathment:
+Mag, Mpz, Pmp22, Mal, Gldn, Drp2, Cldn19,

@@ -1,0 +1,23 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Ntn1, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Srgap1, Tnik, Dpysl3, Dpysl5, Itga8, Kif1a, Sema3g, Sema4f
+
+Semaphorin-Plexin Signaling:
+Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Itga8, Srgap1
+
+Slit-Robo Signaling:
+Slit2, Robo2, Srgap1, Cntn6, Efna5
+
+Netrin Signaling:
+Ntn1, Dpysl3, Dpysl5, Kif1a, Srgap1, Tnik, Itga8
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Synpr, Cpe, Frrs1, Kif1a, P2ry2, Ryr3, Numb, Pfn2, Pam, Map1lc3a, Tubb4a, Tuba4a, Prkar2b, Gnai1, Pcsk5
+
+Myelination and Node of Ranvier Assembly:
+Mpz, Pmp22, Mag, Mal, Drp2, Gldn, Prx, Adamtsl1, Adamtsl3
+
+Non-Canonical Wnt / Planar Cell Polarity:
+Wnt5a, Vangl? (none listed), Dvl? (none), but genes list: Wnt5a, Itga8, Celsr? none, Dpysl3, Rhoj, Tnik, Dyrk1a, Mef2c
+
+Calcium-Dependent Neuronal Signaling:
+Ryr3, Itpripl1, P2ry2, Gnai1, Prkar2b, Numb, Efna5, Nrp1, Nrp2

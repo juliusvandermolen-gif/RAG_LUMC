@@ -1,0 +1,20 @@
+Axon Guidance and Growth Cone Dynamics:  
+Cntn6, Efna5, Lrrtm3, Kif1a, Dpysl5, Dpysl3, Tuba4a, Tubb4a, Srgap1, Rhoj, Asap1, Acap2, Tnik, Gnai1, Robo2, Slit2, Ntn1, Plxnb1, Nrp1, Nrp2, Sema4f, Sema3g,
+
+Semaphorin–Neuropilin/Plexin Signaling:  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Dpysl5, Dpysl3, Rhoj, Tnik,
+
+Slit–Robo Signaling:  
+Slit2, Robo2, Srgap1, Rhoj,
+
+Netrin Signaling:  
+Ntn1, Dpysl5, Dpysl3, Kif1a, Tuba4a, Gnai1,
+
+Myelination and Schwann Cell Differentiation:  
+Mpz, Mag, Pmp22, Drp2, Gldn, Mal, Cldn19, Lrrtm3, Itga7, Prx,
+
+Synaptic Vesicle and Plasticity Machinery:  
+Synpr, Pfn2, Sumo3, Tuba4a, Tubb4a, Map1lc3a, Kif1a, Ryr3, Prkar2b, Prkd3, Ppp1r14c, Pam,
+
+Non-canonical Wnt/Planar Cell Polarity Signaling:  
+Wnt5a, Lef1, Tnik, Rhoj, Asap1, Acap2,

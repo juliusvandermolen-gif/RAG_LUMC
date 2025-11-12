@@ -1,0 +1,23 @@
+Axon Guidance & Neurite Outgrowth:  
+Ntn1, Robo2, Slit2, Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Efna5, Lrrtm3, Srgap1, Tnik, Rhoj, Itga7, Itga8, Met, Dpysl3, Dpysl5, Gldn,
+
+Synaptic Vesicle Trafficking & Neurotransmitter Release:  
+Cpe, Synpr, Pfn2, Kif1a, Map1lc3a, Dpysl3, Dpysl5, Ryr3, Prkar2b, Gnai1, Ppp1r14c, Sumo3, Frrs1, Ppfia4, Slc9a9, Tuba4a, Tubb4a,
+
+Myelination & Node of Ranvier Assembly:  
+Mag, Mpz, Pmp22, Drp2, Mal, Gldn, Prx, Cldn19, Scn7a, Tspan5,
+
+Extracellular Matrix Remodeling in Synaptic Plasticity:  
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Efemp2, Bgn, Mfap5, Emilin1, Timp1, Pxdn, Vash1,
+
+Neurotrophic and Wnt Signaling:  
+Wnt5a, Lef1, Lifr, Ghr, Runx3, Dyrk1a, Klf9, Mef2c, Epas1,
+
+Calcium Signaling & Second Messenger Dynamics:  
+Ryr3, Itpripl1, Tpcn1, Gnai1, Prkar2b, Ppp1r14c, Prkd3, Tnik,
+
+Neuroimmune & Cytokine Interaction:  
+Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Nlrp1a, Atf3, Eif2ak2, Serpinf1,
+
+Cell Adhesion Molecules in Neural Tissue:  
+Cntn6, Cdh13, Cd9, Cd151, Nrp1, Nrp2, Gja1, Itga7, Itga8, Pkp1,

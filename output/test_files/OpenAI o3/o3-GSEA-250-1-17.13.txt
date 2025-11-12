@@ -1,0 +1,11 @@
+Axon Guidance and Repulsive Cues (Netrin-Slit-Semaphorin):
+Ntn1, Slit2, Robo2, Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2, Efna5, Dpysl3, Dpysl5, Tnik, Srgap1,
+
+Synaptic Vesicle Trafficking and Synaptogenesis:
+Synpr, Kif1a, Lrrtm3, Frrs1, Ppfia4, Sipa1l1, Pfn2, Cers6, Prkar2b, Grb14, Map1lc3a,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Prx, Drp2, Gldn, Cldn19, Gjc? (not present) remove, Add Lrrtm..., Actually only list above.
+
+Let's craft final properly:
+

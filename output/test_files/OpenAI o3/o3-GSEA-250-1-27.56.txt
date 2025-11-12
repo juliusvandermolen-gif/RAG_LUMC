@@ -1,0 +1,29 @@
+Axon Guidance and Semaphorin-Plexin Signaling:  
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Robo2, Slit2, Efna5, Ntn1, Dpysl5
+
+Synaptic Vesicle Transport and Plasticity:  
+Cpe, Kif1a, Dpysl3, Dpysl5, Synpr, Ppfia4, Pam, Map1lc3a, Pfn2, Srgap1
+
+Myelination and Node of Ranvier Formation:  
+Mag, Mpz, Pmp22, Drp2, Gldn, Lrrtm3, Cldn19
+
+Extracellular Matrix / Perineuronal Net Assembly:  
+Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Adamts17, Adamtsl1, Adamtsl3, Bgn, Efemp2, Mfap5, Timp1, Pxdn
+
+Wnt / Planar Cell Polarity Signaling:  
+Wnt5a, Lef1, Tnik, Lrp2, Dyrk1a, Ppp1r36, Gnai1
+
+Calcium and IP3-Mediated Signaling:  
+Ryr3, Itpripl1, Tpcn1, Inpp5a, Gnai1, Prkd3, Prkar2b
+
+PI3K-Akt / Insulin-Like Growth Factor Signaling:  
+Igfbp3, Igf2bp2, Grb14, Ghr, Nampt, Ppp1r14c, Epas1
+
+Neuroimmune and Complement Signaling:  
+C1qtnf1, Cxcl12, Cxcl14, Ighm, A2m, Tnfrsf1a, Ifnar1, Nlrp1a, Selplg
+
+Mechanosensory Ion Channel Activity:  
+Piezo2, Scn7a, P2ry2
+
+Neural Cell Adhesion Molecules:  
+Cntn6, Cdh13, Lrrtm3, Nrp1, Nrp2, Robo2, Slit2, Sema4f

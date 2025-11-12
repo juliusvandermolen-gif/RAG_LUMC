@@ -248,8 +248,8 @@ def main():
     # new model.
     validation_models = [
         "gpt-5-mini",
-        #"gpt-5",
-       # "gpt-4.1",
+        "gpt-5",
+        "gpt-4.1",
         "gpt-4.1-mini"
     ]
 
@@ -261,7 +261,7 @@ def main():
     cache = pd.read_csv(cache_csv_path).to_dict("records") if args.use_cache and os.path.exists(cache_csv_path) else []
     existing_cache_keys = {(r["iteration"], r["model"]) for r in cache}
 
-    for i in range(1):  # Amount of generations
+    for i in range(13):  # Amount of generations
         iteration_num = i + 1
 
         # Skip regeneration if cached
@@ -301,15 +301,30 @@ def main():
         matched_genes = {g for g in output_genes if g in input_set}
         hallucinated_genes = output_genes - matched_genes
 
-        hallucination_perc_generation = ((total_output - matched) / total_output * 100)
+        print(f"total output genes: {total_output}: {output_genes}")
+        print(f"Matched genes: {matched}: {matched_genes}")
+        print(f"Hallucinated genes: {len(hallucinated_genes)}: {hallucinated_genes}")
 
+        hallucination_perc_generation = ((total_output - matched) / total_output * 100)
         num_hallucinated = len(hallucinated_genes)
         num_matched = len(matched_genes)
 
         print(f"Iteration {iteration_num}: {num_hallucinated} hallucinated genes, {num_matched} matches")
 
-        comparison_summary = validate_pathways(llm_output, ground_truth,
-                                            comparison_instruction, generation_model=generation_model)
+        print("\n=== DEBUG GENERATION MATCH ===")
+        print(
+            f"Total output genes ({len(output_genes)}): {sorted(list(output_genes))[:30]}")
+        print(
+            f"Input set ({len(input_set)}): {sorted(list(input_set))[:30]}")
+        print(
+            f"Matched genes ({len(matched_genes)}): {sorted(list(matched_genes))[:30]}")
+        print(
+            f"Hallucinated genes ({len(hallucinated_genes)}): {sorted(list(hallucinated_genes))[:30]}")
+        print(
+            f"Extra (output - input): {sorted(list(output_genes - input_set))[:30]}")
+        print(
+            f"Missing (input - output): {sorted(list(input_set - output_genes))[:30]}")
+        print("===")
 
         for model in validation_models:
             if (iteration_num, model) in existing_cache_keys:
@@ -331,33 +346,39 @@ def main():
                 validation_model=model
             )
 
-            # base_name = os.path.splitext(os.path.basename(latest_file))[0]
-            # md_filename = os.path.join(
-            #     output_directory,
-            #     f"validation_{base_name}_{model}_{i}.md"
-            # )
-
             processed_results = []
             for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
                 new_summary = pattern.sub(replace_entry, summary)
                 processed_results.append((pathway, genes, new_summary))
+
+            credible_pathways = [
+                pathway for pathway, genes, response in
+                processed_results
+                if 'color:green' in response.lower()
+            ]
+
+            all_pathways = [pathway for pathway, genes, response in
+                            processed_results]
 
             run_result = {
                 "iteration": iteration_num,
                 "model": model,
                 "total_matches": total_matches,
                 "credible_matches": credible_matches,
-                "hallucination_perc_validation": ((total_matches - credible_matches) / total_matches * 100.0) if total_matches > 0 else 0.0,
+                "hallucination_perc_validation": ((total_matches - credible_matches) /
+                                                  total_matches * 100.0) if total_matches > 0 else 0.0,
                 "hallucination_perc_generation": hallucination_perc_generation,
                 "percent_credible": (credible_matches / total_matches *
                                      100) if total_matches > 0 else 0.0,
                 "matched_genes": len(matched_genes),
                 "hallucinated_genes": len(hallucinated_genes),
-                "hallucinated_genes_list": list(hallucinated_genes)
+                "hallucinated_genes_list": list(hallucinated_genes),
+                "credible_pathways": len(credible_pathways),
+                "credible_pathways_list": list(credible_pathways),
+                "all_pathways_list": all_pathways
             }
 
             list_results_vis.append(run_result)
-            print(run_result)
 
     # Data to CSV, combine with cache
     combined_results = cache + list_results_vis if cache else list_results_vis

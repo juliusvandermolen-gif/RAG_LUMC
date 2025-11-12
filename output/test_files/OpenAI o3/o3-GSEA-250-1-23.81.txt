@@ -1,0 +1,20 @@
+Axon Guidance and Neuronal Pathfinding:
+Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Srgap1, Lrrtm3, Dpysl3, Dpysl5, Tnik, Itga8, Itga7,
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Mag, Prx, Drp2, Pmp22, Gldn, Mal, Cldn19, Cntn6,
+
+Synaptic Vesicle Trafficking and Plasticity:
+Kif1a, Synpr, Cpe, Serpini1, Dyrk1a, Ryr3, Pfn2, Pam, Map1lc3a, Itpripl1, Ppp1r36, Psap, Numb,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Sipa1l1, Rhoj, Asap1,
+
+Extracellular Matrix Remodeling and Axon Extension:
+Cntn6, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col11a1, Col15a1, Col20a1, Efemp2, Emilin1, Mfap5, Pxdn, Hapln1,
+
+Calcium Ion Channel and Mechanosensory Signaling:
+Ryr3, Piezo2, Scn7a, Itpripl1, Gja1, P2ry2,
+
+Neuroimmune Modulation of Synaptic Function:
+C1qtnf1, Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Nlrp1a, Serpinf1, A2m,

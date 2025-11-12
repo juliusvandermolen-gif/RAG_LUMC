@@ -1,0 +1,14 @@
+Axon Guidance:
+Ntn1, Robo2, Slit2, Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2, Efna5, Lrrtm3, Dpysl3, Dpysl5, Kif1a, Rhoj
+
+Synaptic Plasticity and Neurotransmission:
+Serpini1, Cpe, Prkar2b, Ppfia4, Piezo2, Ryr3, Itpripl1, Pfn2, Msi1, Kif1a, Map1lc3a, Tubb4a, Dyrk1a, Gnai1
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Pmp22, Mag, Drp2, Gldn, Mal, Lrrtm3
+
+Extracellular Matrix Organization and Neural Migration:
+Col15a1, Col20a1, Col9a3, Col11a1, Col8a2, Hapln1, Bgn, Ltbp1, Adamts17, Adamtsl1, Adamtsl3, Pxdn, Has2, Efemp2, Matn3, Emilin1, Itga8, Itga7, Cdh13
+
+Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Dyrk1a, Ppm1f, Rhoj, Ccn4

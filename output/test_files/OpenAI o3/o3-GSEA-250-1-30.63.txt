@@ -1,0 +1,17 @@
+Axon Guidance and Semaphorin/Slit/Netrin Signaling:
+Slit2, Robo2, Ntn1, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Efna5, Tnik, Dpysl3, Dpysl5, Itga8, Itga7, Rhoj, Asap1, Gnai1, Lrrtm3, Kif1a, Tuba4a, Tubb4a,
+
+Synaptic Vesicle Trafficking and Neurotransmitter Release:
+Kif1a, Cpe, Sncg, Srgap1, Ppfia4, Prkar2b, Map1lc3a, Sumo3, Ryr3, Itpripl1, Frrs1, P2ry2, Slc9a9, Pfn2, Dpysl3, Dpysl5,
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Gldn, Drp2, Cldn19, Mal, Gja1, Cldnd1,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col15a1, Col20a1, Col11a1, Col8a2, Bgn, Hapln1, Efemp2, Emilin1, Matn3, Pxdn, Timp1,
+
+Wnt/β-Catenin Signaling in Neural Patterning:
+Wnt5a, Lef1, Dyrk1a, Tnik, Klf9,
+
+Neurotrophic PI3K/PKA/MAPK Signaling:
+Met, Gprc5b, Gprc5a, Prkd3, Atf3, Mef2c, Eif2ak2, Ppp1r36, Prkar2b, Gnai1, Nampt, Ppard,

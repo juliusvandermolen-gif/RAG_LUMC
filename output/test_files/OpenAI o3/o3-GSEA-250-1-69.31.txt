@@ -1,0 +1,17 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Slit2, Robo2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Itga8, Srgap1, Dpysl3, Dpysl5, Kif1a, Lrrtm3, Gldn, Tnik, Gnai1,
+
+Myelination and Node Formation:
+Mpz, Mag, Pmp22, Drp2, Mal, Gldn, Kif1a, Cers6, Septin5, Itpripl1, Lrrtm3,
+
+Synaptic Transmission and Plasticity:
+Synpr, Sncg, Pfn2, Ryr3, Kif1a, Dyrk1a, Frrs1, Tubb4a, Map1lc3a, Inpp5a, Numb, Psap, Ppp1r14c,
+
+Semaphorin-Plexin Signaling:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1,
+
+Non-Canonical Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Rhoj, Prkd3,
+
+Neurotrophin/PI3K-Akt-MAPK Signaling:
+Met, Prkar2b, Grb14, Gnai1, Epas1, Atf3, Atf5, Id2, Nampt,

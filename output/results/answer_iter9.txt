@@ -1,0 +1,17 @@
+Axon Guidance and Neuronal Migration:
+Nrp1, Nrp2, Ntn1, Slit2, Robo2, Plxnb1, Efna5, Sema4f, Sema3g, Cntn6, Lrrtm3, Itga8, Dpysl3, Dpysl5,
+
+Synaptic Vesicle Trafficking and Neurotransmitter Release:
+Synpr, Sncg, Cpe, Kif1a, Dpysl3, Dpysl5, Ppfia4, Ryr3, Itpripl1, Prkar2b, Pcsk5, Nes, Pfn2,
+
+Myelination and Node of Ranvier Formation:
+Mag, Mpz, Pmp22, Mal, Drp2, Gldn, Cldn19,
+
+Wnt/β-Catenin and Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Tnik, Dyrk1a, Rhoj,
+
+Extracellular Matrix Remodeling in Synaptic Plasticity:
+Adamts17, Adamtsl3, Adamtsl1, Col20a1, Col15a1, Col11a1, Col9a3, Col8a2, Hapln1, Matn3, Emilin1, Efemp2, Bgn, Ltbp1, Timp1, Peg3, Mfap5,
+
+Calcium-Dependent Signal Transduction:
+Ryr3, Itpripl1, P2ry2, Gnai1, Prkar2b, Ptgfr, Piezo2, Pam,

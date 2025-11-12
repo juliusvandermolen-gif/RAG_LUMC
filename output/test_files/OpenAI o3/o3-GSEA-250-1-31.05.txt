@@ -1,0 +1,20 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Dpysl3, Dpysl5, Srgap1, Itga8, Lrrtm3, Kif1a, Piezo2, Gnai1, Tnik, Sema3g, Gldn, Wnt5a,
+
+Synaptic Vesicle Trafficking and Neurotransmitter Release:
+Synpr, Sncg, Cpe, Pam, Kif1a, Tuba4a, Tubb4a, P2ry2, Scn7a, Ryr3, Slc9a9, Ppfia4, Prss12, Serpini1, Dyrk1a, Prkar2b, Sumo3, Pfn2, Map1lc3a, Numb, Vps26c, Vps8, Rab10, Snx6, Snx4,
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Drp2, Mal, Gldn,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Rhoj, Prkd3, Mef2c,
+
+Calcium-Mediated Neuronal Signaling:
+Ryr3, Piezo2, P2ry2, Inpp5a, Itpripl1, Gnai1, Prkar2b, Slc9a9,
+
+ECM-Integrin Signaling in Neural Development:
+Itga8, Itga7, Cdh13, Col15a1, Col11a1, Col20a1, Col9a3, Col8a2, Ltbp1, Emilin1, Efemp2, Adamtsl1, Adamtsl3, Adamts17, Timp1, Hapln1, Pxdn, Bgn,
+
+Neuropeptide Processing and Secretory Pathway:
+Cpe, Pam, Pcsk5, Prss12, Serpini1, Psap, Cpm,

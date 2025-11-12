@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Nrp1, Nrp2, Robo2, Slit2, Sema4f, Sema3g, Efna5, Ntn1, Plxnb1, Kif1a, Dpysl3, Dpysl5, Srgap1, Tnik, Itga8, Gldn, Lrrtm3, Met, Mag, Mpz, Drp2
+
+Synaptic Vesicle Cycle and Plasticity:
+Synpr, Serpini1, Pfn2, Dyrk1a, Kif1a, Map1lc3a, Prkar2b, Ppp1r36, Gnai1, Ryr3, Cpe, Psap, Numb, Atf3, Cers6
+
+Myelination and Schwann Cell Differentiation:
+Mpz, Mag, Pmp22, Drp2, Gldn, Ntn1, Lrrtm3, Itga8, Plxnb1, Ryr3
+
+Extracellular Matrix and Cell Adhesion in Neural Development:
+Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Bgn, Ltbp1, Efemp2, Emilin1, Has2, Timp1, Pxdn, Cdh13, Gja1
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Tnik, Rhoj, Dyrk1a, Ppp1r14c, Vash1
+
+GPCR-Mediated Neuromodulatory Signaling:
+P2ry2, Gprc5a, Gprc5b, Ptgfr, Gnai1, Ryr3, Piezo2, Scn7a
+
+Calcium/Ion Channel Signaling in Neurons:
+Ryr3, Piezo2, Scn7a, Itpripl1, Nfatc1, Hs6st1

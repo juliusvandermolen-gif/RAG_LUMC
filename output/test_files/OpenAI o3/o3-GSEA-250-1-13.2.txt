@@ -1,0 +1,23 @@
+Axon Guidance and Semaphorin/Slit/Netrin Signaling:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Robo2, Slit2, Efna5, Lrrtm3, Dpysl3, Dpysl5, Gnai1, Tnik, Itga7, Itga8,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Synpr, Kif1a, Ppfia4, Pfn2, Tubb4a, Map1lc3a, Prkar2b, Ryr3, Gnai1, Sumo3, Srgap1, Dyrk1a, Numb, Msi1, Ppp1r14c,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Mal, Gldn, Drp2, Cldn19, Septin5, Gja1, Prx,
+
+Extracellular Matrix Remodeling and Integrin Signaling:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Timp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Efemp2, Emilin1, Bgn, Mfap5, Hapln1, Has2, Ccn3, Ccn4, Peg3, Tspan5, Itga7, Itga8, Cd151,
+
+Noncanonical Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Tnik, Gnai1,
+
+Calcium and cAMP Second Messenger Signaling:
+Ryr3, Prkar2b, Gnai1, Itpripl1, Ppp1r14c,
+
+Neuroimmune and Cytokine Response:
+Cxcl12, Cxcl14, Ighm, Icoslg, Ifnar1, Tnfrsf1a, Nlrp1a, C1qtnf1, A2m, Selplg,
+
+RNA Processing and Cellular Stress Response:
+Eif2ak2, Ddx1, Rrm2, Atf3, Atf5, Parp14, Hsp90aa1, Map1lc3a, Pnpt1, Gtf2e1,

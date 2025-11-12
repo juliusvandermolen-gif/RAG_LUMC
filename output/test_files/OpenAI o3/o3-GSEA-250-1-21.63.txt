@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Robo2, Slit2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Lrrtm3, Dpysl3, Dpysl5, Srgap1, Gnai1, Itga8, Kif1a,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Cpe, Synpr, Kif1a, Pam, Ppfia4, Psap, Sipa1l1, Map1lc3a, Numb, Tubb4a, Tuba4a,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Drp2, Mal, Gldn, Septin5, Gja1,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Hapln1, Qsox1, Ltbp1, Efemp2, Matn3, Timp1, Bgn, Pxdn,
+
+Wnt/Planar Cell Polarity Signaling in Neurogenesis:
+Wnt5a, Lef1, Tnik, Dyrk1a, Itga8, Ppp1r14c,
+
+Calcium and Mechanotransduction Signaling:
+Ryr3, Itpripl1, Tpcn1, Piezo2, Scn7a, P2ry2, Gnai1, Inpp5a,
+
+IGF and Growth Factor Signaling in Neural Plasticity:
+Igfbp3, Igf2bp2, Pappa, Ccn3, Ccn4, Nampt, Epas1, Ghr, Lifr,

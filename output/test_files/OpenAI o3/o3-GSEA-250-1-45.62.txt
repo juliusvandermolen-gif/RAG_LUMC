@@ -1,0 +1,29 @@
+Axon Guidance:
+Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Sema3g, Sema4f, Cntn6, Srgap1, Tnik, Gnai1, Dpysl3, Dpysl5, Kif1a,
+
+Synaptic Vesicle and Neurotransmitter Release:
+Synpr, Pfn2, Kif1a, Cpe, Pcsk5, Sumo3, Ryr3, Ppp1r36, Ppfia4, Msi1, Dpysl3, Dpysl5, Psap, Map1lc3a,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Prx, Drp2, Gldn, Mal, Cntn6, Lrrtm3,
+
+Semaphorin-Plexin Signaling:
+Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Tnik, Gnai1,
+
+Slit-Robo Signaling:
+Slit2, Robo2, Srgap1, Cntn6, Efna5,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Ppard, Dyrk1a, Tnik, Rhoj,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Ltbp1, Bgn, Matn3, Emilin1, Pxdn,
+
+Calcium Signaling in Neurons:
+Ryr3, Itpripl1, Scn7a, Piezo2, Gnai1, Nrp1,
+
+Integrin-Mediated Neural Cell Adhesion:
+Itga7, Itga8, Cd151, Tagln, Acta2, Tspan4, Tspan5, Cd9, Emp2,
+
+Neuroinflammatory Response Modulating Synaptic Plasticity:
+Cxcl12, Tnfrsf1a, Ifnar1, Nlrp1a, Timp1, Serpinf1,

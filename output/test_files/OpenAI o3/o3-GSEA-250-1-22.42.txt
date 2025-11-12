@@ -1,0 +1,23 @@
+Axon Guidance and Semaphorin/Slit Signaling:  
+Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Robo2, Slit2, Ntn1, Efna5, Dpysl3, Dpysl5, Srgap1, Tnik,
+
+Myelination and Node of Ranvier Organization:  
+Mag, Mpz, Pmp22, Gldn, Mal, Drp2, Cldn19, Col11a1, Itpripl1,
+
+Synaptic Vesicle Transport and Presynaptic Assembly:  
+Kif1a, Synpr, Ppfia4, Dyrk1a, Tnik, Ryr3, Itpripl1, Pfn2, Dpysl3, Dpysl5, Lrrtm3, Srgap1,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:  
+Wnt5a, Lef1, Rhoj, Asap1, Ppp1r14c,
+
+Extracellular Matrix Remodeling and Integrin Interaction in Synapses:  
+Adamts17, Adamtsl3, Adamtsl1, Ltbp1, Efemp2, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Mfap5, Bgn, Itga7, Itga8, Tagln,
+
+Neuropeptide and Hormone Processing:  
+Pcsk5, Cpe, Pam, Pappa, Igfbp3, Serpini1, A2m, Tf, Nampt,
+
+Calcium and GPCR-Mediated Neuronal Signaling:  
+Ryr3, Itpripl1, P2ry2, Ptgfr, Gnai1, Scn7a, Piezo2,
+
+Immune Modulation at the Neural Interface:  
+Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Nlrp1a, Selplg, Cd9, Cd151,

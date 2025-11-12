@@ -1,0 +1,14 @@
+Axon Guidance and Semaphorin/Netrin Signaling:
+Ntn1, Slit2, Robo2, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Cntn6, Lrrtm3, Tnik, Dpysl3, Dpysl5, Srgap1, Gnai1,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Prx, Mal, Drp2, Gldn, Cldn19, Itga7, Itga8, Efemp2, Adamtsl1, Septin5,
+
+Synaptic Transmission and Vesicle Dynamics:
+Kif1a, Synpr, Pfn2, Sumo3, Psap, Ppp1r14c, Tuba4a, Tubb4a, Itpripl1, Ryr3, Cers6, Slc9a9, Acap2, Pam, Map1lc3a,
+
+Non-canonical Wnt/PCP Signaling in Neural Development:
+Wnt5a, Lef1, Ppard, Tnik, Rhoj,
+
+Extracellular Matrix Remodeling in Synaptic Plasticity:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Adamts17, Adamtsl3, Adamtsl1, Bgn, Ltbp1, Mfap5, Emilin1, Efemp2, Has2, Matn3, Gpnmb, Pxdn,

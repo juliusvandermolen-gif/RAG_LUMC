@@ -1,0 +1,23 @@
+Axon Guidance and Growth Cone Dynamics:
+Cntn6, Ntn1, Robo2, Slit2, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Efna5, Itga8, Dpysl3, Dpysl5, Srgap1, Lrrtm3, Kif1a, Nes, Gldn, Tnik, Rhoj, Acap2, Klf9,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Synpr, Sncg, Cpe, Serpini1, Dpysl3, Dpysl5, Pfn2, Ppp1r14c, Prkar2b, Ryr3, Itpripl1, Tpcn1, Tuba4a, Tubb4a, Kif1a, Map1lc3a, Ppfia4, St3gal5,
+
+Myelination and Glial Axon Interaction:
+Mag, Mpz, Pmp22, Mal, Drp2, Gldn, Lrrtm3, Kif1a, Cldn19, Plxnb1, Itga8,
+
+Extracellular Matrix Organization and Neural Adhesion:
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Ltbp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Efemp2, Emilin1, Hapln1, Matn3, Mfap5, Pxdn, Vash1, Has2,
+
+Wnt/Non-Canonical Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Ppm1f, Mef2c, Klf9, Rhoj,
+
+PI3K-Akt/MAPK Neurotrophin Survival Pathway:
+Met, Grb14, Gnai1, Prkd3, Prkar2b, Id2, Atf3, Atf5, Mef2c, Epas1, Nampt, Ghr, Igfbp3, Igf2bp2, Ppm1f, Sgpl1, Ppard, Tf,
+
+Calcium and cAMP Signaling:
+Ryr3, Inpp5a, Prkar2b, Gnai1, Itpripl1, P2ry2, Piezo2, Tpcn1,
+
+Neuroimmune and Chemokine Modulation of Synaptic Plasticity:
+Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Nlrp1a, Selplg, C1qtnf1, A2m,

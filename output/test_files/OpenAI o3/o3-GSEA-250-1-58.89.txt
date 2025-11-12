@@ -1,0 +1,17 @@
+Axon Guidance and Neuronal Navigation:
+Cntn6, Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Efna5, Lrrtm3, Dpysl3, Dpysl5, Kif1a, Srgap1, Rhoj, Itga8, Tnik, Tuba4a, Tubb4a,
+
+Synaptic Formation and Plasticity:
+Synpr, Lrrtm3, Prkar2b, Ppp1r14c, Ppp1r36, Pam, Ppfia4, Psap, Pfn2, Map1lc3a, Msi1, Dyrk1a, Ryr3, Itpripl1, Kif1a, Sumo3, Gnai1, Id2, Acap2, Asap1,
+
+Myelination and Node Organization:
+Mag, Mpz, Pmp22, Mal, Drp2, Gldn, Septin5, Abca8a, Itga7, Gja1, Lrp2, Cldn19,
+
+Extracellular Matrix and Cell Adhesion in Neural Development:
+Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Efemp2, Bgn, Hapln1, Mfap5, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Emilin1, Cdh13, Itga8, Itga7, Lrp2, Timp1,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Tnik, Dyrk1a, Ppard, Prkd3,
+
+Calcium and Ion Channel Signaling:
+Ryr3, Scn7a, Piezo2, P2ry2, Itpripl1, Tpcn1, Ptgfr,

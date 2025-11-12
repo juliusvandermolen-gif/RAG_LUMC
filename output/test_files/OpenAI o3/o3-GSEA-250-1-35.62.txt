@@ -1,0 +1,20 @@
+Axon Guidance and Growth Cone Navigation:
+Nrp1, Nrp2, Slit2, Robo2, Sema4f, Sema3g, Plxnb1, Ntn1, Efna5, Dpysl3, Dpysl5, Srgap1, Tnik, Itga8, Rhoj, Wnt5a
+
+Synaptic Vesicle Transport and Plasticity:
+Serpini1, Cpe, Kif1a, Dpysl3, Dpysl5, Ryr3, Prkar2b, Gnai1, Pam, Map1lc3a, Pfn2, Ppp1r14c, Numb, Gldn, Sncg, Synpr, Frrs1, Ppfia4, Slc9a9, Tuba4a, Tubb4a
+
+Myelination and Axon Ensheathment:
+Mpz, Mag, Pmp22, Drp2, Mal, Cers6, Gldn, Itga7, Plp1, Has2
+
+Extracellular Matrix Remodeling and Perineuronal Net Formation:
+Peg3, Hapln1, Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Efemp2, Ltbp1, Ccn3, Bgn, Matn3, Emilin1, Mfap5, Sbspon, Timp1, Has2, Pxdn
+
+Calcium-Dependent Mechanotransduction and Intracellular Signaling:
+Piezo2, Ryr3, Itpripl1, Tpcn1, P2ry2, Prkd3, Inpp5a, Ppard, Eif2ak2
+
+Wnt/Neurotrophin Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Dyrk1a, Met, Epas1, Ghr, Runx3
+
+Neuro-Immune Crosstalk and Cytokine Signaling:
+Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Nlrp1a, Selplg, A2m, Ighm

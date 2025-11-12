@@ -1,0 +1,29 @@
+Axon Guidance and Growth Cone Navigation:
+Nrp1, Nrp2, Sema3g, Sema4f, Slit2, Robo2, Efna5, Plxnb1, Ntn1, Srgap1, Dpysl3, Dpysl5, Kif1a, Pfn2, Sipa1l1,
+
+Semaphorin–Plexin Signaling:
+Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Dpysl3, Dpysl5,
+
+Slit–Robo Signaling:
+Slit2, Robo2, Srgap1,
+
+Ephrin Signaling:
+Efna5, Dpysl3, Dpysl5, Kif1a,
+
+Myelination and Schwann Cell Differentiation:
+Pmp22, Mpz, Mal, Drp2, Mag, Gldn, Tf, Itga7, Itga8, Lrp2,
+
+Synaptic Vesicle Trafficking and Neurotransmitter Release:
+Synpr, Serpini1, Ppfia4, Pfn2, Kif1a, Pam, Cpe, Prkar2b, Dyrk1a, Sumo3,
+
+cAMP/PKA Signaling in Neurons:
+Prkar2b, Atf3, Atf5, Ppp1r36, Tnik, Dyrk1a, Eif2ak2, Gnai1,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Dyrk1a, Ppp1f,
+
+Extracellular Matrix–Integrin Signaling Influencing Neural Plasticity:
+Itga7, Itga8, Col15a1, Col20a1, Col11a1, Col9a3, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Mfap5, Emilin1, Timp1, Bgn, Hapln1, Has2,
+
+Calcium Signaling in Neurons:
+Ryr3, Itpripl1, Piezo2, P2ry2, Nrp1, Nrp2,

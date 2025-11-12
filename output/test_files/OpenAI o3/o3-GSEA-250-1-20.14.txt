@@ -1,0 +1,14 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Ntn1, Slit2, Robo2, Sema4f, Sema3g, Plxnb1, Nrp1, Nrp2, Efna5, Lrrtm3, Dpysl3, Dpysl5, Kif1a, Tnik, Gnai1, Itga8, Itga7, Srgap1, Gldn
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Synpr, Cpe, Pam, Prkar2b, Prkd3, Sumo3, Numb, Slc9a9, P2ry2, Gnai1, Gprc5b, Piezo2, Vps26c, Vps8, Snx6, Snx4, Map1lc3a, Kif1a, Tuba4a, Tubb4a
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Gldn, Drp2, Prx, Mal, Septin5, Lrrtm3, Itpripl1, Scn7a
+
+Extracellular Matrix Remodeling in Neural Development:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Hapln1, Bgn, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Mfap5, Efemp2, Emilin1, Timp1, Pxdn, Qsox1, Has2, Wnt5a
+
+Calcium and Mechanotransduction Signaling in Neurons:
+Ryr3, Piezo2, Scn7a, Itpripl1, Gnai1, P2ry2, Gprc5b, Inpp5a, Lef1, Nrp1

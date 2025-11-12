@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Outgrowth:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Efna5, Sema4f, Sema3g, Dpysl3, Dpysl5, Lrrtm3, Itga8, Kif1a, Gnai1,
+
+Synaptic Vesicle Dynamics and Plasticity:
+Synpr, Kif1a, Prkar2b, Ryr3, P2ry2, Cers6, Numb, Ppfia4, Map1lc3a, Pfn2, Tuba4a, Tubb4a, Srgap1, Sipa1l1, Vps8, Vps26c, Rab10, Snx4, Snx6,
+
+Myelination and Axon Ensheathment:
+Mpz, Mag, Pmp22, Gldn, Mal, Drp2, Cldn19, Prx, Gja1,
+
+Extracellular Matrix Remodeling and Perineuronal Net Formation:
+Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Emilin1, Matn3, Ltbp1, Adamts17, Adamtsl1, Adamtsl3, Efemp2, Timp1, Pxdn,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Ppard, Klf9, Rhoj, Prkd3, Ccn4,
+
+Calcium and Mechanotransduction Signaling:
+Ryr3, Piezo2, Tpcn1, Itpripl1, Slc9a9, Nfatc1, P2ry2,
+
+Neuropeptide Processing and Secretion:
+Pcsk5, Cpe, Pam, Serpini1, Ecel1, Pappa, Psap, Igfbp3,

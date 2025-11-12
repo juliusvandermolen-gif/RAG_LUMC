@@ -1,0 +1,23 @@
+Axon Guidance and Growth Cone Dynamics:
+Ntn1, Robo2, Slit2, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Efna5, Cntn6, Dpysl3, Dpysl5, Srgap1, Kif1a, Tnik, Gnai1, Rhoj, Acap2, Itga8, Lrrtm3,
+
+Synaptic Vesicle Trafficking and Neurotransmitter Release:
+Synpr, Cpe, Pam, Ppfia4, Kif1a, Pfn2, Map1lc3a, Frrs1, Psap, Serpini1, Vps8, Vps26c, Snx6, Snx4, Rab10, Tuba4a, Septin5, Sumo3,
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Pmp22, Drp2, Mal, Gldn, Cntn6, Scn7a,
+
+Extracellular Matrix Remodeling and Synapse Stabilization:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Bgn, Efemp2, Mfap5, Emilin1, Pxdn, Hapln1, Has2, Timp1, Qsox1, Pappa, Pcsk5,
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Dyrk1a, Tnik, Ccn3, Ccn4, Runx3,
+
+Calcium and Mechanosensitive Signaling in Neurons:
+Ryr3, Itpripl1, P2ry2, Piezo2, Scn7a, Prkar2b, Gnai1, Tpcn1, Inpp5a,
+
+Integrin/Tetraspanin-Mediated Neurite Outgrowth:
+Itga8, Itga7, Cd151, Cd9, Tspan4, Tspan5, Emp2, Pkp1, Selplg, Gja1,
+
+Innate Immune Modulation of Synaptic Plasticity:
+C1qtnf1, Cxcl12, Cxcl14, Ifnar1, Nlrp1a, Tnfrsf1a, Parp14, Timp1, Hsp90aa1, Serpinf1,

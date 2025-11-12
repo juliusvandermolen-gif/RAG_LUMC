@@ -1,0 +1,14 @@
+Axon Guidance and Neurite Outgrowth:
+Nrp1, Nrp2, Robo2, Slit2, Efna5, Plxnb1, Sema3g, Sema4f, Ntn1, Dpysl3, Dpysl5, Srgap1, Kif1a, Tnik, Wnt5a, Itga8, Itga7, Lrrtm3, Gldn, Rhoj, Asap1, Acap2, Tuba4a, Tubb4a, Pfn2
+
+Synaptic Vesicle Transport and Neurotransmission:
+Synpr, Cpe, Pam, Ppfia4, Kif1a, Prkar2b, Ryr3, Gnai1, Pfn2, Map1lc3a, Psap, Tspan5, Tspan4, P2ry2, Slc9a9, Slc22a17, Piezo2, Slc35a2, Slitrk6, Inpp5a, Nes, Dyrk1a, Hspa12a, Hsp90aa1
+
+Myelination and Node of Ranvier Organization:
+Mag, Mpz, Prx, Gldn, Pmp22, Drp2, Cldn19, Mal, Tubb4a, Tuba4a, Kif1a, Septin5, Tf
+
+Extracellular Matrix Modulation in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Timp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Efemp2, Emilin1, Hapln1, Bgn, Pxdn, Mfap5, Vash1, Has2, Gcnt1
+
+Neurotrophin and Growth Factor Signaling:
+Igfbp3, Ghr, Lifr, Cxcl12, Epas1, Met, Wnt5a, Itga8, Itga7, Mef2c, Atf3, Atf5, Nfatc1, Runx3, Dyrk1a, Lef1, Ppard, Klf9, Ebf1
