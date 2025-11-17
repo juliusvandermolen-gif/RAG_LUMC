@@ -247,10 +247,8 @@ def main():
     # Variable model name change. Overlaying config GSEA.json file with
     # new model.
     validation_models = [
-        "gpt-5-mini",
         "gpt-5",
         "gpt-4.1",
-        "gpt-4.1-mini"
     ]
 
     # List with results for visualisation
