@@ -249,13 +249,14 @@ def main():
     validation_models = [
         "gpt-5",
         "gpt-4.1",
+        "gpt-5-mini"
     ]
 
     # List with results for visualisation
     list_results_vis = []
 
     # Cache file path
-    cache_csv_path = os.path.join(output_directory, "validation_summary.csv")
+    cache_csv_path = os.path.join(output_directory, "validation_summary_run3.csv")
     cache = pd.read_csv(cache_csv_path).to_dict("records") if args.use_cache and os.path.exists(cache_csv_path) else []
     existing_cache_keys = {(r["iteration"], r["model"]) for r in cache}
 
@@ -339,7 +340,7 @@ def main():
 
             comparison_summary = validate_pathways(llm_output, ground_truth,
                                                    comparison_instruction,
-                                                   generation_model=generation_model)
+                                                   generation_model= model)
 
             pathways, pathway_dict = extract_pathways(llm_output)
             academic_results = academic_validation(
