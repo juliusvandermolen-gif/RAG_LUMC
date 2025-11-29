@@ -247,16 +247,14 @@ def main():
     # Variable model name change. Overlaying config GSEA.json file with
     # new model.
     validation_models = [
-        "gpt-5",
-        "gpt-4.1",
-        "gpt-5-mini"
+        "gpt-4.1-mini",
     ]
 
     # List with results for visualisation
     list_results_vis = []
 
     # Cache file path
-    cache_csv_path = os.path.join(output_directory, "validation_summary_run3.csv")
+    cache_csv_path = os.path.join(output_directory, "validation_summary_test_mini.csv")
     cache = pd.read_csv(cache_csv_path).to_dict("records") if args.use_cache and os.path.exists(cache_csv_path) else []
     existing_cache_keys = {(r["iteration"], r["model"]) for r in cache}
 
