@@ -383,7 +383,7 @@ def main():
             md_filename = os.path.join(
                 output_directory,
                 # Maakt een uniek bestand per iteratie EN per model
-                f"validation_{base_name}_{model}.md"
+                f"validation_{base_name}_{model}_{iteration_num}.md"
             )
 
             with open(md_filename, 'w', encoding="utf8") as md:
