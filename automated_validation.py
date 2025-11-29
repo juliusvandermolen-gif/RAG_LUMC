@@ -260,7 +260,7 @@ def main():
     cache = pd.read_csv(cache_csv_path).to_dict("records") if args.use_cache and os.path.exists(cache_csv_path) else []
     existing_cache_keys = {(r["iteration"], r["model"]) for r in cache}
 
-    for i in range(13):  # Amount of generations
+    for i in range(18):  # Amount of generations
         iteration_num = i + 1
 
         # Skip regeneration if cached
@@ -373,7 +373,9 @@ def main():
                 "hallucination_perc_generation": hallucination_perc_generation,
                 "percent_credible": (credible_matches / total_matches *
                                      100) if total_matches > 0 else 0.0,
-                "matched_genes": len(matched_genes),
+                "output_genes": list(output_genes),
+                "matched_genes": matched,
+                "matched_genes_names": list(matched_genes),
                 "hallucinated_genes": len(hallucinated_genes),
                 "hallucinated_genes_list": list(hallucinated_genes),
                 "credible_pathways": len(credible_pathways),
