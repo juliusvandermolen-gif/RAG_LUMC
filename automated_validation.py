@@ -337,6 +337,10 @@ def main():
             total_matches = 0
             credible_matches = 0
 
+            comparison_summary = validate_pathways(llm_output, ground_truth,
+                                                   comparison_instruction,
+                                                   generation_model=generation_model)
+
             pathways, pathway_dict = extract_pathways(llm_output)
             academic_results = academic_validation(
                 pathways, pathway_dict,
