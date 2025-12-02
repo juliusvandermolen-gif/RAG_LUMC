@@ -189,9 +189,9 @@ def replace_entry(match):
 
     # Style output
     styled = (
-        f'<span style="color:green;" >\n{citation_str}</span>'
+        f'<span style="color:green;" >{citation_str}</span><br>'
         if is_real else
-        f'<span style="color:red;" >\n{citation_str}</span>'
+        f'<span style="color:red;" >\n{citation_str}</span><br>'
     )
     if is_real:
         credible_matches += 1
@@ -247,7 +247,9 @@ def main():
     # Variable model name change. Overlaying config GSEA.json file with
     # new model.
     validation_models = [
-        "gpt-4.1-mini",
+        "gpt-5-mini",
+        "gpt-5",
+        "gpt-4.1"
     ]
 
     # List with results for visualisation
