@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Pathfinding:
+Nrp1, Nrp2, Slit2, Robo2, Sema4f, Sema3g, Ntn1, Plxnb1, Efna5, Cntn6, Dpysl3, Dpysl5, Srgap1, Itga8, Lrrtm3,
+
+Synaptic Vesicle Trafficking and Plasticity:
+Cpe, Synpr, Kif1a, Prkar2b, Ppp1r14c, Dpysl3, Dpysl5, Pfn2, Sumo3, Msi1, Numb, Grb14, Gnai1,
+
+Myelination and Node of Ranvier Formation:
+Mag, Mpz, Pmp22, Drp2, Gldn, Mal, Prx, Cldn19, Tspan5, Col11a1,
+
+Neurotrophin and Growth Factor Signaling:
+Ghr, Lifr, Igfbp3, Runx3, Mef2c, Epas1, Pam, Atf3, Atf5, Tf, Efemp2, Ppp1f, Gprc5b,
+
+Calcium-Mediated Neuronal Excitability:
+Ryr3, Itpripl1, P2ry2, Scn7a, Piezo2, Tubb4a, Nrp1, Nrp2,
+
+Wnt/Planar Cell Polarity in Neural Development:
+Wnt5a, Lef1, Dyrk1a, Tnik, Tspan4, Vash1, Ppp1r36,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Hapln1, Col9a3, Col15a1, Col20a1, Col8a2, Col11a1, Matn3, Bgn, Efemp2, Emilin1, Mfap5, Olfml1, Has2, Pxdn,

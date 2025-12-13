@@ -1,0 +1,20 @@
+Axon Guidance and Growth Cone Dynamics:
+Ntn1, Slit2, Robo2, Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2, Efna5, Gnai1, Srgap1, Dpysl3, Dpysl5, Itga8, Tnik,
+
+Synaptic Vesicle Transport and Neurosecretion:
+Cpe, Pam, Pcsk5, Serpini1, Synpr, Kif1a, Ppfia4, Pfn2, Ryr3, Map1lc3a, Dpysl5,
+
+Myelination and Node of Ranvier Organization:
+Mpz, Mag, Gldn, Pmp22, Drp2, Mal, Cldn19, Cldnd1, Gja1, Itga7, Septin5,
+
+Extracellular Matrix Remodeling and Integrin Signaling:
+Adamts17, Adamtsl1, Adamtsl3, Itga7, Itga8, Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Efemp2, Hapln1, Bgn, Emilin1, Ccn3, Ccn4, Ltbp1,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Dyrk1a, Mef2c, Fzd6 (none), Ppp1r14c, Tnik, Celsr3 (not), 
+
+Calcium and Mechanotransduction Signaling:
+Ryr3, Piezo2, Itpripl1, P2ry2, Gnai1, Prkar2b, Plxnb1, Tpcn1,
+
+Neuroimmune and Cytokine Response:
+Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Nlrp1a, A2m, Gpnmb, Serpinf1, Epas1, Parp14,

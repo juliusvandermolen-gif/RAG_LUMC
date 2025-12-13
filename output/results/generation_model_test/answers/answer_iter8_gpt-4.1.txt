@@ -1,0 +1,53 @@
+Synaptic Plasticity and Long-Term Potentiation:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Dpysl3, Dpysl5, Kif1a, Prkar2b, Ryr3, Tubb4a, Tuba4a, Mef2c, Dyrk1a, Atf3, Atf5, Numb, Msi1, Pfn2, Gnai1, Itga8, Itga7, Lrrtm3, Synpr, Prss12, Serpini1, Gldn, Mag, Mpz, Pmp22, Plxnb1, Efna5, Wnt5a, Lef1, Srgap1, Sipa1l1, Sgpl1, Map1lc3a, Gja1, Cdh13, Cldn19, Cldnd1, Slitrk6, Sncg, Snx6, Snx4, Tnik, Tspan4, Tspan5, Frrs1, Gprc5b, Gprc5a, Piezo2, Prkd3, Prx, Nfatc1, Nlrp1a, Numb, Pam, Ppp1r14c, Ppp1r36, Ppm1f, Rhoj, Runx3, Sumo3, Tpcn1, Vash1, Vps8, Vps26c, Zfp518a
+
+Axon Guidance and Neural Connectivity:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Lrrtm3, Dpysl3, Dpysl5, Kif1a, Srgap1, Sipa1l1, Gldn, Mag, Mpz, Pmp22, Itga8, Itga7, Cdh13, Cldn19, Cldnd1, Slitrk6, Sncg, Snx6, Snx4, Tnik, Tspan4, Tspan5
+
+Cell Adhesion and Extracellular Matrix in Neural Development:
+Cntn6, Cdh13, Nrp1, Nrp2, Robo2, Lrrtm3, Gldn, Mag, Mpz, Pmp22, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Efemp2, Emilin1, Bgn, Adamts17, Adamtsl1, Adamtsl3, Adamtsl1, Adamtsl3, Timp1, Tspan4, Tspan5, Ccn3, Ccn4, Parm1, Marveld1, Sbspon, Sqor, Sema4f, Sema3g, Plxnb1, Efna5, Wnt5a, Lef1, Srgap1, Sipa1l1
+
+Neurotransmitter Release and Synaptic Vesicle Cycling:
+Cpe, Synpr, Prkar2b, Kif1a, Tubb4a, Tuba4a, Map1lc3a, Pfn2, Gnai1, Numb, Pam, Ppp1r14c, Ppp1r36, Sumo3, Tpcn1, Vash1, Vps8, Vps26c, Zfp518a
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Ghr, Lifr, Epas1, Atf3, Atf5, Mef2c, Dyrk1a, Nfatc1, Nlrp1a, Numb, Pam, Ppp1r14c, Ppp1r36, Sumo3, Tpcn1, Vash1, Vps8, Vps26c, Zfp518a
+
+Myelination and Glial Cell Function:
+Mag, Mpz, Pmp22, Gldn, Plp1, Mal, Drp2, Cldn19, Cldnd1, Emilin1, Efemp2, Bgn
+
+Wnt Signaling in Neural Patterning:
+Wnt5a, Lef1, Efna5, Plxnb1, Srgap1, Sipa1l1, Dyrk1a, Mef2c, Atf3, Atf5
+
+Calcium Signaling in Neurons:
+Ryr3, Prkar2b, Gnai1, Nfatc1, Itpripl1, Ppp1r14c, Ppp1r36
+
+Neural Progenitor and Stem Cell Regulation:
+Nes, Msi1, Dyrk1a, Atf3, Atf5, Ebf1, Klf9, Numb, Sipa1l1, Sgpl1, Map1lc3a
+
+Immune Modulation in Neural Tissue:
+C1qtnf1, Tnfrsf1a, Ifnar1, Nlrp1a, Selplg, Cxcl12, Cxcl14, Ighm, Serpinf1, Serpini1, A2m, Timp1, Defb29
+
+Circadian and Transcriptional Regulation in Neural Cells:
+Epas1, Atf3, Atf5, Mef2c, Dyrk1a, Klf9, Runx3, Taf9b, Ebf1, Numb, Sipa1l1, Sgpl1, Map1lc3a
+
+Neural Ion Channel and Transporter Function:
+Scn7a, Slc9a9, Slc22a17, Slc35a2, Slc39a13, Slco3a1, Abca8a, Abcb4, Piezo2, P2ry2, Pltp, Tf, Fth1, Gja1
+
+Ubiquitin-Proteasome and Protein Homeostasis in Neurons:
+Psmd2, Fbxo11, Trim35, Rnf144a, Klhdc2, Gtf2e1, Ddx1, Rrm2, Cggbp1, Stard13, Chmp2b, Map1lc3a, Sumo3
+
+Apoptosis and Cell Survival in Neural Contexts:
+Bace2, Parp14, Atf3, Atf5, Numb, Pam, Ppp1r14c, Ppp1r36, Sumo3, Tpcn1, Vash1, Vps8, Vps26c, Zfp518a
+
+Oligodendrocyte Differentiation and Function:
+Mag, Mpz, Pmp22, Gldn, Plp1, Mal, Drp2, Cldn19, Cldnd1
+
+Neural Metabolism and Mitochondrial Function:
+Hadhb, Sqor, Nampt, Pgm1, Pnpt1, Dhrs1, Fth1, Apod, Psap, Rrm2, Ppard, Hspa12a, Hsp90aa1
+
+Neural Developmental Transcription Factors:
+Ebf1, Klf9, Runx3, Mef2c, Dyrk1a, Atf3, Atf5, Nfatc1, Lef1, Taf9b, Numb
+
+Neural Cell Surface and Synaptic Organization:
+Cntn6, Cdh13, Nrp1, Nrp2, Robo2, Lrrtm3, Gldn, Mag, Mpz, Pmp22, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Efemp2, Emilin1, Bgn, Adamts17, Adamtsl1, Adamtsl3, Timp1, Tspan4, Tspan5, Ccn3, Ccn4, Parm1, Marveld1, Sbspon, Sqor, Sema4f, Sema3g, Plxnb1, Efna5, Wnt5a, Lef1, Srgap1, Sipa1l1

@@ -1,0 +1,36 @@
+Synaptic Plasticity and Neurotransmission:
+Cntn6, Prss12, Sema4f, Cpe, Synpr, Ntn1, Mag, Srgap1, Nrp1, Nrp2, Robo2, Slit2, Dpysl5, Prkar2b, Kif1a, Dyrk1a, Ryr3, Lrrtm3, Pfn2, Msi1, Nes, Sema3g, Met, Dpysl3, Itga8, Mef2c, Olfm2, Cers6, Atf5, Numb, Gja1, Map1lc3a, Pam, Efna5, Plxnb1, Wnt5a, Gprc5b, Gprc5a, Tnik, Gnai1, Prkd3, Sipa1l1, Tubb4a, Tuba4a, Tspan4, Tspan5, P2ry2, Scn7a, Piezo2, Slc9a9, Slc22a17, Slc35a2, Slc39a13, Slco3a1, Itpripl1, Inpp5a, Nfatc1, Nlrp1a
+
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl5, Dpysl3, Lrrtm3, Srgap1, Itga8, Olfm2, Wnt5a, Met, Sema3g, Kif1a, Tnik, Gnai1, Prkd3, Sipa1l1
+
+Cell Adhesion and Extracellular Matrix in Neural Development:
+Cntn6, Hapln1, Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Matn3, Emp2, Cdh13, Cldn19, Cldnd1, Efemp2, Emilin1, Gldn, Pkp1, Pals1, Timp1, Bgn, Mpz, Prx, Gja1, Ncam1, Ncam2
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Lifr, Ghr, Cpe, Pam, Pappa, Epas1, Atf3, Atf5, Mef2c, Numb, Nfatc1, Runx3, Lef1, Eif2ak2, Dyrk1a, Rrm2, Ppm1f, Klf9, Psap, Fth1, Hsp90aa1, Hspa12a
+
+Myelination and Glial Function:
+Mag, Mpz, Prx, Mal, Pmp22, Gldn, Plp1, Drp2, Cldn19, Cldnd1
+
+Neural Progenitor and Differentiation Pathways:
+Nes, Msi1, Dyrk1a, Atf5, Lef1, Runx3, Ebf1, Klf9, Numb, Sipa1l1, Sgpl1, Tubb4a, Tuba4a
+
+Ion Channel and Neurotransmitter Regulation:
+Scn7a, Ryr3, Piezo2, P2ry2, Slc9a9, Slc22a17, Slc35a2, Slc39a13, Slco3a1, Itpripl1, Inpp5a
+
+Immune Modulation in Neural Context:
+A2m, Serpini1, Serpinf1, Timp1, Cxcl12, Cxcl14, Ighm, Ifnar1, Nlrp1a, Selplg
+
+Wnt and Related Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Prkd3, Dyrk1a, Efna5, Plxnb1
+
+Ubiquitin and SUMO Pathways in Neural Regulation:
+Sumo3, Trim35, Rnf144a, Fbxo11, Psmd2
+
+Cytoskeletal Dynamics and Synaptic Structure:
+Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Fhod3, Myo1d, Acap2, Stard13
+
+Emerging/Novel Neural Pathways (based on literature and gene function):
+Pianp, Nrl, Nepro, Nell1, Nell2, Ncam1, Ncam2
+

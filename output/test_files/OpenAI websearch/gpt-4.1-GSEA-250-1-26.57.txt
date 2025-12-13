@@ -1,0 +1,36 @@
+Synaptic Plasticity and Long-Term Potentiation:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Dpysl3, Dpysl5, Kif1a, Prkar2b, Ryr3, Tubb4a, Tuba4a, Mef2c, Dyrk1a, Atf3, Atf5, Numb, Msi1, Pfn2, Map1lc3a, Gnai1, Itga8, Itga7, Lrrtm3, Synpr, Serpini1, Gldn, Mag, Mpz, Prx, Drp2, Pmp22, Cpe, Pam, Frrs1, Sgpl1, Plxnb1, Efna5, Wnt5a, Lef1, Sipa1l1, Srgap1, Tnik, Tspan4, Tspan5, Gja1, Slitrk6, Slc9a9, Slc22a17, Slco3a1, Slc35a2, Slc39a13, Piezo2, P2ry2, Gprc5a, Gprc5b, Prkd3, Prss12, Prss23, Prss23, Parm1, Hapln1, Cdh13, Cldn19, Cldnd1, Cxcl12, Cxcl14, Tagln, Acta2, Myo1d, Mal, Nes, Nfatc1, Nlrp1a, Nrbp1, Numb, Nrp1, Nrp2, Ntn1, Olfm2, Olfml1, Peg3, Pfn2, Phldb2, Piezo2, Pltp, Plxnb1, Pmp22, Pnpt1, Poglut1, Ppfia4, Ppp1r14c, Ppp1r36, Prkar2b, Prkd3, Prx, Ptgfr, Ptk2, Qsox1, Rab10, Rhoj, Rrm2, Ryr3, Sbspon, Scn7a, Selplg, Sema3g, Sema4f, Serinc5, Serpinf1, Serpini1, Sgpl1, Sipa1l1, Slc22a17, Slc35a2, Slc39a13, Slc9a9, Slitrk6, Sncg, Snx4, Snx6, Sqor, Stard13, Steap1, Steap2, Stk39, St3gal5, Synpr, Taf9b, Tagln, Tcf7l2, Tent5c, Tex101, Tf, Timp1, Tmem26, Tnik, Tnfrsf1a, Tpcn1, Tpp1, Tspan4, Tspan5, Tubb4a, Tuba4a, Vash1, Vopp1, Vps8, Vps26c, Wnt5a, Zfp518a
+
+Axon Guidance and Neurite Outgrowth:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Dpysl3, Dpysl5, Kif1a, Srgap1, Lrrtm3, Gldn, Mag, Mpz, Prx, Drp2, Pmp22, Gja1, Itga8, Itga7, Mef2c, Sipa1l1, Tnik, Tspan4, Tspan5, Wnt5a, Lef1, Slitrk6
+
+Cell Adhesion and Extracellular Matrix Organization:
+Cntn6, Cdh13, Ncam1, Ncam2, Lrrtm3, Gldn, Mag, Mpz, Prx, Drp2, Pmp22, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Efemp2, Emilin1, Bgn, Adamts17, Adamtsl1, Adamtsl3, Adamtsl1, Adamtsl3, Timp1, Mfap5, Sbspon, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Efna5, Robo2, Slit2, Srgap1, Sipa1l1, Tnik, Tspan4, Tspan5, Gja1, Itga8, Itga7, Parm1, Marveld1, Cpe, Pam, Frrs1, Sgpl1, Plxnb1, Efna5, Wnt5a, Lef1, Sipa1l1, Srgap1, Tnik, Tspan4, Tspan5, Gja1, Slitrk6
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Ghr, Lifr, Epas1, Ccn3, Ccn4, Pappa, Igf2bp2, Ntf3, Ntf4, Ntrk2, Ntrk3, Met, Pam, Cpe, Serpini1, Serpinf1, Atf3, Atf5, Mef2c, Dyrk1a, Numb, Msi1, Pfn2, Map1lc3a, Gnai1, Itga8, Itga7, Lrrtm3, Synpr
+
+Myelination and Glial Cell Function:
+Mag, Mpz, Prx, Drp2, Pmp22, Gldn, Mal, Plp1, Cldn19, Cldnd1, Gja1, Tspan4, Tspan5, Sgpl1, Sipa1l1, Tnik, Tubb4a, Tuba4a
+
+Wnt and Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Efna5, Plxnb1, Srgap1, Tnik, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2
+
+Calcium and cAMP Signaling in Neurons:
+Ryr3, Prkar2b, Gnai1, Itpripl1, P2ry2, Piezo2, Tpcn1, Prkd3, Dyrk1a, Atf3, Atf5, Mef2c
+
+Ubiquitin-Proteasome and SUMOylation Pathways in Neural Function:
+Sumo3, Psmd2, Fbxo11, Trim35, Rnf144a, Klhdc2
+
+Neural Progenitor Cell Maintenance and Differentiation:
+Nes, Msi1, Dyrk1a, Atf3, Atf5, Klf9, Ebf1, Lef1, Runx3, Numb, Sipa1l1, Srgap1, Tnik
+
+Neuroimmune and Neuroinflammatory Signaling:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, Tnfrsf1a, Selplg, A2m, Serpinf1, Serpini1, Timp1, C1qtnf1
+
+Circadian and Transcriptional Regulation in Neural Tissues:
+Epas1, Atf3, Atf5, Klf9, Mef2c, Dyrk1a, Numb, Ebf1, Runx3, Taf9b, Gtf2e1
+
+Emerging/Novel Neural Pathways (based on literature and gene function):
+Pianp, Nrl, Nepro, Nell1, Nell2, Ncam1, Ncam2
+

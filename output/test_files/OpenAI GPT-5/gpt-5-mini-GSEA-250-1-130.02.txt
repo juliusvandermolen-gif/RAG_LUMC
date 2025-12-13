@@ -1,0 +1,88 @@
+Axon guidance (broad):
+Sema4f, Sema3g, Ntn1, Slit2, Robo2, Plxnb1, Nrp1, Nrp2, Efna5, Cntn6, Dpysl3, Dpysl5, Srgap1, Rhoj, Asap1
+
+Semaphorin–Neuropilin–Plexin signaling:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1
+
+Slit–Robo signaling:
+Slit2, Robo2
+
+Netrin and netrin-related guidance:
+Ntn1, Dpysl3, Dpysl5, Srgap1
+
+Synapse organization and synaptic plasticity:
+Synpr, Lrrtm3, Cdh13, Numb, Mef2c, Dpysl3, Dpysl5, Sncg, Ppfia4, Pfn2, Septin5, Kif1a, Sipa1l1, Ppp1r14c, Prkar2b
+
+Synaptic vesicle cycle, neuropeptide processing and neurotransmitter regulation:
+Synpr, Cpe, Pcsk5, Bace2, Pam, Sncg, Pltp, Apod, Psap
+
+Calcium signaling and neuronal excitability:
+Ryr3, Itpripl1, Scn7a, P2ry2, Piezo2, Gnai1, Gprc5b, Gprc5a, Gja1, Tpcn1
+
+Myelination and peripheral myelin maintenance:
+Mag, Mpz, Pmp22, Prx, Gldn, Mal, Cldn19, Cldnd1
+
+Extracellular matrix (ECM) remodeling and perineuronal net components:
+Hapln1, Adamts17, Adamtsl1, Adamtsl3, Mfap5, Bgn, Emilin1, Matn3, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Timp1, Has2, Chst2, Hs6st1, Hs6st2
+
+Wnt signaling and developmental patterning:
+Wnt5a, Lef1
+
+Neurotrophic / receptor tyrosine kinase signaling and growth factor pathways:
+Met, Igfbp3, Igf2bp2, Lifr, Ghr, Pappa
+
+GPCR, chemokine, and G-protein signaling in neural contexts:
+Gnai1, Gprc5a, Gprc5b, P2ry2, Cxcl12, Cxcl14, Selplg
+
+Ion channels and solute transporters:
+Scn7a, Piezo2, Slc9a9, Slc22a17, Slc35a2, Slc39a13, Abca8a, Abcb4, Slco3a1, Tpcn1
+
+Cytoskeleton, axonal transport, motor proteins and structural dynamics:
+Kif1a, Tuba4a, Tubb4a, Septin4, Septin5, Pfn2, Stard13, Acta2, Kif1a
+
+Transcriptional regulators and neuronal development transcription factors:
+Mef2c, Nfatc1, Atf3, Atf5, Klf9, Runx3, Ebf1, Taf9b, Gtf2e1
+
+RNA binding, RNA processing and translational control in neurons:
+Msi1, Igf2bp2, Pnpt1, Cpsf2, Eif2ak2, Ddx1, Gtf2e1
+
+Ubiquitin–proteasome system, E3 ligases and SUMOylation relevant to neuronal proteostasis:
+Fbxo11, Rnf144a, Trim35, Psmd2, Sumo3
+
+Autophagy, mitochondrial function and neuronal metabolism:
+Map1lc3a, Pnpt1, Sqor, Hadhb, Nampt, Dhrs1
+
+Neuroinflammation, innate immune signaling and complement-related pathways in brain:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, C1qtnf1, Aif1l, Ighm, Selplg, Tnfrsf1a, Tril
+
+Lipid metabolism, ganglioside biosynthesis and membrane lipid handling in neurons:
+St3gal5, Pltp, Apod, Psap, Abca8a, Steap2
+
+Proteases, protease inhibitors and extracellular proteolytic remodeling influencing synaptic structure:
+Prss12, Prss23, Adamts17, Adamtsl1, Adamtsl3, Htra1, Serpini1, Serpinf1, A2m, Timp1
+
+Cell adhesion molecules and synaptic adhesion complexes:
+Cntn6, Cdh13, Pkp1, Cd9, Cd151, Itga7, Itga8, Gja1, Gypc
+
+Receptor kinase and intracellular kinase signaling cascades (MAPK/PKA/PKC-related) affecting neuronal signaling:
+Met, Prkd3, Tnik, Stk39, Nek9, Dyrk1a, Prkar2b, Ppm1f
+
+Endosomal trafficking, vesicle sorting and membrane remodeling relevant to synapses:
+Rab10, Vps8, Vps26c, Snx4, Snx6, Chmp2b, Ckap4
+
+Neuronal adhesion/ECM–receptor crosstalk and synaptic scaffolding:
+Lrrtm3, Pals1, Ppfia4, Cd9, Cd151, Olfm2, Efemp2
+
+Autocrine/paracrine modulators and secreted signaling peptides in neural development:
+Ccn3, Ccn4, Serpinf1, Igfbp3, Apod, Pltp, Efna5
+
+Ion homeostasis and acid/base transport relevant to neuronal function:
+Slc9a9, Slc22a17, Slc35a2, Slc39a13, Abcb4, Abca8a
+
+DNA damage response, cell cycle and neural progenitor maintenance:
+Smc6, Cenpo, Vrk1, Mybl1, Msh2
+
+Developmental signaling modulators and neural crest/ear/retina related factors:
+Hmx3, Nrl (from references), Nepro (from references), Nell1, Nell2
+
+(Note: gene symbols listed are from the provided gene set.)

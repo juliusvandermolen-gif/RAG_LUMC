@@ -1,0 +1,17 @@
+Axon Guidance & Neurite Outgrowth:
+Ntn1, Robo2, Slit2, Efna5, Nrp1, Nrp2, Plxnb1, Sema3g, Sema4f, Cntn6, Lrrtm3, Gldn, Dpysl3, Dpysl5, Tnik, Kif1a, Itga8, Srgap1, Gnai1,
+
+Synaptic Vesicle Transport & Neurotransmission:
+Cpe, Synpr, Psap, Ppfia4, Map1lc3a, Pfn2, Kif1a, Prkar2b, Ryr3, Scn7a, Piezo2, Tuba4a, Tubb4a, Numb, Nes, Msi1, Gnai1,
+
+Myelination & Node Formation:
+Mag, Mpz, Pmp22, Drp2, Cntn6, Gldn, Cldn19, Lrrtm3,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Efemp2, Ltbp1, Mfap5, Matn3, Emilin1, Timp1, Pxdn, Has2, Vash1,
+
+Wnt/Calcium & Neurotrophic Signaling:
+Wnt5a, Lef1, Mef2c, Ghr, Pappa, Igfbp3, Epas1, Gnai1, Ryr3, Itpripl1, Tnik, Nampt,
+
+Neuro-Immune Interaction in CNS:
+Cxcl12, Cxcl14, Selplg, Ifnar1, Nlrp1a, Tnfrsf1a, Aif1l, C1qtnf1, Timp1,

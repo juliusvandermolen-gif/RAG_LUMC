@@ -1,0 +1,38 @@
+Axon Guidance and Neuronal Pathfinding:  
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl3, Dpysl5, Gldn, Lrrtm3, Srgap1, Itga8, Met, Wnt5a, Kif1a, Tnik, Ryr3, Gnai1, Mef2c, Dyrk1a, Nes, Nrp1, Nrp2  
+
+Synapse Formation, Maintenance, and Plasticity:  
+Cntn6, Lrrtm3, Synpr, Srgap1, Kif1a, Dpysl3, Dpysl5, Gldn, Ppfia4, Psap, Map1lc3a, Pfn2, Numb, Sipa1l1, Tnik, Dyrk1a, Mef2c, St3gal5, Gprc5b, Gprc5a  
+
+Myelination and Axoglial Interaction:  
+Mag, Mpz, Pmp22, Gldn, Drp2, Mal, Lrp2, Col11a1, Col9a3, Col8a2, Col15a1, Col20a1, Efemp2, Emilin1, Bgn  
+
+Extracellular Matrix Remodeling and Perineuronal Nets:  
+Adamts17, Adamtsl3, Adamtsl1, Hapln1, Col9a3, Col11a1, Col8a2, Col15a1, Col20a1, Matn3, Bgn, Efemp2, Emilin1, Has2, Pxdn, Hsp90aa1, Timp1, Ccn3, Ccn4  
+
+Neurotrophic and Growth Factor Signaling:  
+Igfbp3, Igf2bp2, Lifr, Ghr, Wnt5a, Met, Nrp1, Nrp2, Cxcl12, Cxcl14, Epas1, Runx3, Lef1, Ppard, Mef2c, Dyrk1a, Atf3, Atf5, Klf9  
+
+Calcium and Phosphoinositide Signaling in Neurons:  
+Ryr3, Itpripl1, Gnai1, Inpp5a, Stk39, Prkar2b, Eif2ak2, Tpcn1, Tnik, Acap2, Agpat5, Sgpl1, Slc9a9, Piezo2  
+
+Cell Adhesion and Neurite Outgrowth:  
+Cntn6, Cdh13, Gja1, Cd9, Cd151, Pkp1, Itga8, Itga7, Cldn19, Cldnd1, Olfm2, Emilin1, Efemp2, Plxnb1, Robo2, Slit2, Nrp1, Nrp2  
+
+Glial and Neuroimmune Modulation:  
+Aif1l, Tnfrsf1a, Ifnar1, Nlrp1a, Cxcl12, Cxcl14, Icoslg, Serpinf1, Serpini1, Gpnmb, A2m, Timp1, Vash1, Epas1, Ppard, Runx3  
+
+Synaptic Vesicle and Neurotransmitter Handling:  
+Kif1a, Synpr, Psap, Pam, Ecel1, Cpe, Map1lc3a, Tspan5, Tspan4, Slc22a17, Slc35a2, Slc39a13, Slco3a1  
+
+Cytoskeletal Dynamics and Growth Cone Motility:  
+Tuba4a, Tubb4a, Septin4, Septin5, Pfn2, Fhod3, Rhoj, Asap1, Acap2, Stard13, Nek9, Vrk1, Nes, Kif1a, Dyrk1a, Tnik, Sipa1l1  
+
+Transcriptional and Epigenetic Regulation in Neural Development:  
+Mef2c, Runx3, Lef1, Ppard, Klf9, Atf3, Atf5, Mybl1, Ebf1, Taf9b, Papola, Parp14, Smc6, Cggbp1, Zfp518a, Rrm2, Vps26c  
+
+Neural Stem/Progenitor Maintenance and Differentiation:  
+Nes, Msi1, Nepro (ENSRNOG00000013721), Nrl, Hmx3, Mef2c, Dyrk1a, Klf9, Runx3, Lef1, Ppard, Atf3, Atf5, Lifr, Ghr, Wnt5a, Cxcl12, Cxcl14, C1qtnf1  
+
+Axon–Node of Ranvier and Paranodal Organization:  
+Cntn6, Gldn, Drp2, Mag, Mpz, Pmp22, Mal, Nrp1, Nrp2, Plxnb1, Robo2, Slit2, Kif1a, Tnik

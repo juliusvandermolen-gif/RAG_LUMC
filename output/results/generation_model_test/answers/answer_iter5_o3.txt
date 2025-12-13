@@ -1,0 +1,20 @@
+Axon Guidance and Neurite Outgrowth:
+Ntn1, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Nrp1, Nrp2, Efna5, Cntn6, Lrrtm3, Dpysl3, Dpysl5, Srgap1, Itga8, Gnai1, Tnik, Mag, Pmp22, Gldn, Drp2
+
+Synaptic Transmission and Plasticity:
+Synpr, Kif1a, Prkar2b, Prkd3, Ppfia4, Pfn2, Map1lc3a, Dyrk1a, Ryr3, Itpripl1, P2ry2, Slc9a9, Piezo2, Cers6, Tuba4a, Tubb4a, Sumo3, Atf5, Msi1, Numb
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Drp2, Gldn, Cntn6, Cldn19, Tspan5, Mal
+
+Extracellular Matrix Remodeling and Integrin Signaling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Timp1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Mfap5, Efemp2, Htra1, Itga8, Itga7
+
+Wnt/β-Catenin and Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Dyrk1a, Ppard, Tnik, Runx3, Ccn4
+
+Calcium and Ion Channel Signaling:
+Ryr3, Scn7a, Piezo2, P2ry2, Tpcn1, Itpripl1, Gja1
+
+Neuroimmune and Cytokine Modulation of Synapses:
+C1qtnf1, Cxcl12, Cxcl14, Ifnar1, Tnfrsf1a, Nlrp1a, Parp14, Selplg, A2m

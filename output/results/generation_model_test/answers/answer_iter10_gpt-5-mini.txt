@@ -1,0 +1,47 @@
+Synaptic plasticity & neurotransmission:
+Synpr, Sncg, Kif1a, Ryr3, Itpripl1, Dpysl3, Dpysl5, Mef2c, Lrrtm3, Serpini1, Pfn2, Septin5, Gja1, P2ry2, Scn7a, Piezo2, Cpe, Bace2, Prkar2b, Prkd3, Grb14
+
+Axon guidance & neuronal migration:
+Sema4f, Sema3g, Slit2, Robo2, Ntn1, Plxnb1, Efna5, Nrp1, Nrp2, Srgap1, Dpysl3, Dpysl5, Rhoj, Tnik, Itga8, Cdh13, Olfm2, Olfml1, Slitrk6
+
+Extracellular matrix (ECM), perineuronal nets & matrix remodeling:
+Hapln1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Bgn, Emilin1, Mfap5, Matn3, Adamts17, Adamtsl1, Adamtsl3, Timp1, Has2, Hapln1, Htra1
+
+Myelination & peripheral myelin sheath:
+Mpz, Pmp22, Mal, Prx, Gldn, Drp2, Cldn19, Mag
+
+Proteolysis, secreted proteases & neuropeptide processing:
+Prss12, Prss23, Pcsk5, Cpe, Htra1, Bace2, A2m, Ctbs, Papola, Timp1, Serpini1, Serpinf1
+
+Wnt signaling & developmental patterning:
+Wnt5a, Lef1, Tnik, Lrp2, Mef2c
+
+Semaphorin / Plexin / Neuropilin signaling:
+Sema4f, Sema3g, Plxnb1, Nrp1, Nrp2
+
+Neuroinflammation & innate immune signaling:
+C1qtnf1, Nlrp1a, Ifnar1, Aif1l, Ighm, Cxcl12, Cxcl14, Tnfrsf1a, Selplg, Icoslg
+
+Vesicle trafficking, endosomal sorting & autophagy:
+Kif1a, Rab10, Vps8, Vps26c, Snx4, Snx6, Pals1, Septin5, Map1lc3a, Psmd2, Vps26c
+
+Calcium signaling & intracellular Ca2+ regulation:
+Ryr3, Itpripl1, P2ry2, Piezo2, Scn7a, Slc9a9
+
+Transcriptional regulation & neuronal differentiation:
+Mef2c, Atf3, Atf5, Runx3, Klf9, Ebf1, Numb, Taf9b, Ddx1, Nes
+
+Ubiquitin–proteasome system, SUMOylation & E3 ligases:
+Sumo3, Psmd2, Fbxo11, Rnf144a, Trim35
+
+Glycosylation, heparan sulfate & proteoglycan biosynthesis:
+Hs6st1, Hs6st2, Man1a1, Manba, St3gal5, Fut10, Slc35a2, Gcnt1
+
+Lipid metabolism, myelin lipid biology & membrane remodeling:
+Pltp, Apod, Abca8a, Abcb4, Cers6, Steap1, Steap2, Serinc5, Nampt
+
+GPCR, G-protein & second messenger signaling:
+Gnai1, P2ry2, Gprc5a, Gprc5b, Rhoj, Prkar2b, Ppp1r36
+
+Cytoskeleton, microtubule dynamics & axonal transport:
+Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Pfn2, Fhod3, Nek9, Cep295nl

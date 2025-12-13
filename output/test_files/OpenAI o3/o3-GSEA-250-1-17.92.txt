@@ -1,17 +1,23 @@
-Axon Guidance and Synaptic Connectivity:
-Nrp1, Nrp2, Sema3g, Sema4f, Slit2, Robo2, Plxnb1, Efna5, Ntn1, Dpysl3, Dpysl5, Lrrtm3, Kif1a, Srgap1, Synpr, Gldn,
+Axon Guidance & Neurite Outgrowth:
+Cntn6, Ntn1, Sema4f, Sema3g, Slit2, Robo2, Plxnb1, Efna5, Nrp1, Nrp2, Lrrtm3, Dpysl3, Dpysl5, Tnik, Itga8, Itga7, Srgap1, Gnai1, Wnt5a, Tuba4a,
 
-Myelination and Glial Cell Differentiation:
-Mag, Mpz, Pmp22, Mal, Gldn, Drp2,
+Synaptic Vesicle Transport & Exocytosis:
+Cpe, Synpr, Kif1a, Rab10, Vps8, Vps26c, Snx4, Snx6, Map1lc3a, Pam, Ppp1r14c, Sumo3, Ppfia4, Tpcn1, Frrs1,
 
-Extracellular Matrix–Integrin Signaling:
-Adamts17, Adamtsl1, Adamtsl3, Htra1, Timp1, Ltbp1, Bgn, Col11a1, Col15a1, Col20a1, Col8a2, Col9a3, Hapln1, Efemp2, Itga7, Itga8,
+Myelination & Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Gldn, Drp2, Mal, Cldn19, Gja1, Itpripl1,
 
-Wnt/Planar Cell Polarity Signaling:
-Wnt5a, Lef1, Tnik, Dyrk1a,
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Efemp2, Hapln1, Bgn, Mfap5, Emilin1, Timp1, Has2, Ltbp1, Pxdn,
 
-Calcium and cAMP Second Messenger Signaling:
-Ryr3, Itpripl1, Piezo2, Gnai1, Prkar2b, P2ry2, Ptgfr,
+Calcium-Mediated Neural Signaling:
+Ryr3, Itpripl1, Piezo2, P2ry2, Scn7a, Gnai1, Gprc5b, Gprc5a,
 
-Neurotrophin and Receptor Tyrosine Kinase Signaling:
-Met, Nrp1, Nrp2, Efna5, Plxnb1, Robo2, Slit2,
+Wnt/Planar Cell Polarity Signaling in Neurodevelopment:
+Wnt5a, Lef1, Tnik, Dyrk1a, Ppm1f,
+
+cAMP/PKA-Dependent Transcriptional Regulation:
+Prkar2b, Gnai1, Pam, Ppp1r14c, Atf3, Atf5, Klf9, Mef2c,
+
+Neuroimmune & Chemokine Interaction:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, Selplg, Tnfrsf1a, C1qtnf1, Icoslg, A2m, Serpinf1,

@@ -1,0 +1,17 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Nrp1, Nrp2, Slit2, Robo2, Efna5, Ntn1, Plxnb1, Sema4f, Sema3g, Lrrtm3, Dpysl3, Dpysl5, Srgap1, Tnik, Itga8, Gnai1, Kif1a,
+
+Synaptic Transmission and Vesicle Trafficking:
+Cpe, Synpr, Serpini1, Slc9a9, Kif1a, Ppfia4, Pfn2, Ryr3, Dyrk1a, Msi1, Frrs1, St3gal5, Scn7a,
+
+Myelination and Glial Differentiation:
+Mag, Mpz, Drp2, Pmp22, Gldn, Mal, Tubb4a, Tuba4a, Itpripl1,
+
+Extracellular Matrix Remodeling in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col15a1, Col20a1, Col8a2, Col11a1, Efemp2, Hapln1, Matn3, Emilin1, Mfap5, Bgn, Pxdn, Timp1,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Tnik, Dyrk1a, Ppard,
+
+Calcium and cAMP Mediated Neural Signaling:
+Ryr3, Piezo2, Prkar2b, Ppp1r14c, Itpripl1, P2ry2, Gnai1, Pam,

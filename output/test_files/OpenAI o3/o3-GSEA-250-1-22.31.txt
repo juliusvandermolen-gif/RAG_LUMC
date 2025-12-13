@@ -1,0 +1,23 @@
+Axon Guidance and Growth Cone Dynamics:
+Nrp1, Nrp2, Ntn1, Slit2, Robo2, Sema4f, Sema3g, Plxnb1, Efna5, Dpysl3, Dpysl5, Srgap1, Tnik, Lrrtm3, Itga8, Gnai1, Rhoj, Asap1,
+
+Synaptic Vesicle Trafficking and Plasticity:
+Synpr, Kif1a, Prkar2b, Ppp1r14c, Dyrk1a, Msi1, Pfn2, Numb, Map1lc3a, Tubb4a, Sumo3, Frrs1, Slc9a9, Psap, P2ry2, Piezo2,
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Gldn, Drp2, Cldn19, Gja1, Mal, Itga7,
+
+Neuro-Immune Modulation of Neural Circuits:
+Cxcl12, Cxcl14, Tnfrsf1a, Ifnar1, Selplg, Nlrp1a, A2m,
+
+Mitochondrial Metabolism and Oxidative Stress Response in Neurons:
+Sqor, Hadhb, Nampt, Hspa12a, Hsp90aa1, Fth1, Pnpt1, Psmd2, Rrm2, Vash1,
+
+Extracellular Matrix Remodeling and Synaptic Stabilization:
+Col9a3, Col11a1, Col15a1, Col20a1, Matn3, Hapln1, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Emilin1, Mfap5, Bgn, Pxdn,
+
+Neuroactive Ligand–GPCR Signaling:
+Gprc5b, Gprc5a, P2ry2, Gnai1, Cxcl12, Cxcl14,
+
+Non-Canonical Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Rhoj, Dyrk1a,

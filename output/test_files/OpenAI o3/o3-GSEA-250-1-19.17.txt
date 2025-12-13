@@ -1,0 +1,17 @@
+Axon Guidance and Semaphorin-Netrin-Slit Signaling:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Sema4f, Sema3g, Efna5, Cntn6, Lrrtm3, Dpysl3, Dpysl5, Tnik, Itga8, Gnai1,
+
+Synaptic Vesicle Transport and Neurotransmitter Release:
+Synpr, Cpe, Serpini1, Kif1a, Tuba4a, Tubb4a, Numb, Ppfia4, Pam, Psap, Map1lc3a, Ryr3, Itpripl1, P2ry2, Pfn2, Dpysl3,
+
+Myelination and Node of Ranvier Formation:
+Mpz, Pmp22, Mag, Gldn, Drp2, Mal, Gja1, Itga7, Itga8,
+
+Non-Canonical Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Tnik, Dyrk1a, Lef1, Rhoj, Asap1, Prkd3, Ppm1f,
+
+Purinergic and Calcium-Dependent Synaptic Plasticity:
+P2ry2, Ryr3, Itpripl1, Piezo2, Gnai1, Prkar2b, Nfatc1, Pam,
+
+Extracellular Matrix and Integrin Signaling in Axon Extension:
+Itga7, Itga8, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Efemp2, Emilin1,

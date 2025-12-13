@@ -1,0 +1,65 @@
+Synaptic Plasticity and Long-Term Potentiation:
+Cntn6, Prss12, Sema4f, Cpe, Synpr, Ntn1, Mag, Srgap1, Nrp1, Nrp2, Robo2, Slit2, Tnik, Gnai1, Dpysl5, Prkar2b, Dyrk1a, Ryr3, Lrrtm3, Kif1a, Dpysl3, Mef2c, Efna5, Map1lc3a, Pam, Numb, Msi1, Nes, Plxnb1, Wnt5a, Sipa1l1, Gldn, Pfn2, Sgpl1, Itga8, Itga7, Pmp22, Mpz, Drp2, Mal
+
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl5, Dpysl3, Srgap1, Lrrtm3, Kif1a, Mef2c, Gldn, Itga8, Itga7, Mag, Mpz, Drp2, Mal
+
+Cell Adhesion and Extracellular Matrix Organization:
+Cntn6, Hapln1, Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Matn3, Efemp2, Emilin1, Bgn, Timp1, Cdh13, Cldn19, Cldnd1, Pkp1, Pals1, Gja1, Tspan4, Tspan5, Cd151, Cd9, Ppfia4, Sbspon, Marveld1, Parm1, Sqor, Sgpl1, Mpz, Pmp22, Mal
+
+Neurotransmitter Release and Synaptic Vesicle Cycle:
+Cpe, Synpr, Prkar2b, Dyrk1a, Ryr3, Kif1a, Map1lc3a, Pam, Numb, Msi1, Nes, Pfn2, Sgpl1, Tubb4a, Tuba4a
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Ghr, Lifr, Epas1, Ccn3, Ccn4, Atf3, Atf5, Nfatc1, Lef1, Wnt5a, Mef2c, Eif2ak2, Ppp1r14c, Ppp1r36, Ppm1f, Runx3, Dyrk1a, Ebf1, Taf9b
+
+Myelination and Glial Cell Function:
+Mpz, Pmp22, Mag, Mal, Drp2, Plp1, Gldn, Nfatc1, Sgpl1
+
+Calcium Signaling and Second Messenger Pathways:
+Ryr3, Prkar2b, Gnai1, Itpripl1, Tnik, Inpp5a, Ppp1r14c, Ppp1r36, Ppm1f, Dyrk1a, Eif2ak2
+
+Wnt and Planar Cell Polarity Pathways:
+Wnt5a, Lef1, Dyrk1a, Mef2c, Efna5, Plxnb1, Srgap1, Sipa1l1
+
+Neural Cell Fate and Differentiation:
+Nes, Msi1, Dyrk1a, Mef2c, Ebf1, Runx3, Atf3, Atf5, Klf9, Numb, Sipa1l1, Lef1, Ppp1r14c, Ppp1r36, Ppm1f
+
+Immune Modulation in Neural Context:
+A2m, Serpini1, Serpinf1, Timp1, Cxcl12, Cxcl14, Ighm, Ifnar1, Nlrp1a, Selplg, Tnfrsf1a, Parp14
+
+Ion Channel and Transporter Activity:
+Scn7a, Slc22a17, Slc9a9, Slc35a2, Slc39a13, Abca8a, Abcb4, Pltp, Tf, Fth1, Gja1, Piezo2, P2ry2, Steap1, Steap2, Vps26c, Tpcn1
+
+Ubiquitin-Proteasome and Protein Homeostasis:
+Sumo3, Psmd2, Fbxo11, Rnf144a, Trim35, Gtf2e1, Rrm2, Ddx1, Klhdc2, Stard13, Chmp2b, Map1lc3a, Cpsf2
+
+Cytoskeletal Dynamics and Intracellular Transport:
+Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Myo1d, Pfn2, Fhod3, Acap2, Rab10, Klhl29, Nek9, Phldb2, Asap1, Gnai1, Gypc
+
+Oligodendrocyte Differentiation and Myelin Maintenance:
+Mpz, Pmp22, Mag, Mal, Drp2, Gldn, Plp1
+
+Notch and Neural Progenitor Regulation:
+Numb, Msi1, Hes1, Dyrk1a, Sipa1l1
+
+Apoptosis and Cell Survival in Neural Tissue:
+Atf3, Atf5, Eif2ak2, Parp14, Nfatc1, Runx3, Ppp1r14c, Ppp1r36, Ppm1f, Dyrk1a, Ebf1, Klf9
+
+Neural Inflammation and Response to Injury:
+A2m, Serpini1, Serpinf1, Timp1, Cxcl12, Cxcl14, Ighm, Ifnar1, Nlrp1a, Selplg, Tnfrsf1a, Parp14, Aif1l
+
+Retinoic Acid and Neural Patterning:
+Aldh1a1, Lef1, Wnt5a, Dyrk1a, Mef2c, Efna5, Plxnb1
+
+Glycosylation and Neural Cell Surface Modification:
+Chst2, Gcnt1, St3gal5, Fut10, Man1a1, Manba, Slc35a2, Poglut1, Qsox1, Serinc5, Gja1, Tspan4, Tspan5
+
+Neural Extracellular Matrix Remodeling:
+Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Matn3, Efemp2, Emilin1, Bgn, Timp1, Hapln1, Sbspon, Marveld1, Parm1, Sqor
+
+Neural Stem Cell Maintenance and Proliferation:
+Nes, Msi1, Dyrk1a, Sipa1l1, Ebf1, Runx3, Atf3, Atf5, Klf9, Numb, Lef1, Ppp1r14c, Ppp1r36, Ppm1f
+
+Neural Cell Migration:
+Ntn1, Sema4f, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl5, Dpysl3, Srgap1, Lrrtm3, Kif1a, Mef2c, Gldn, Itga8, Itga7, Mag, Mpz, Drp2, Mal

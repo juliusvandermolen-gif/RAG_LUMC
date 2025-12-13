@@ -1,0 +1,44 @@
+Axon Guidance and Neuronal Pathfinding:  
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Efna5, Plxnb1, Wnt5a, Met, Dpysl3, Dpysl5, Lrrtm3, Srgap1, Itga7, Itga8, Gja1, Kif1a, Nes, Msi1  
+
+Synapse Formation, Maintenance, and Synaptic Plasticity:  
+Cntn6, Lrrtm3, Gldn, Synpr, Ppfia4, Kif1a, Dpysl3, Dpysl5, Psap, Map1lc3a, Tnik, Prkar2b, Gnai1, Pfn2, Numb, Mef2c, Dyrk1a, Atf3, Atf5, Klf9  
+
+Myelination and Axon–Glia Interaction:  
+Mag, Mpz, Pmp22, Drp2, Gldn, Mal, Lrp2, Nrp1, Nrp2, Cpe, Psap, Hsp90aa1  
+
+Neurotrophin, Neuregulin, and Growth Factor Signaling:  
+Met, Lifr, Ghr, Igfbp3, Pappa, Igf2bp2, Tnik, Prkar2b, Gnai1, Nrp1, Nrp2, Cxcl12, Cxcl14, Epas1, Ifnar1, Tnfrsf1a  
+
+Calcium Signaling and Excitability in Neurons:  
+Ryr3, Itpripl1, Scn7a, P2ry2, Gnai1, Ecel1, Tpcn1, Piezo2  
+
+Cell Adhesion and Extracellular Matrix Organization in Neural Tissue:  
+Cntn6, Cdh13, Itga7, Itga8, Cldn19, Cldnd1, Cd9, Cd151, Gja1, Col9a3, Col11a1, Col8a2, Col15a1, Col20a1, Hapln1, Bgn, Efemp2, Emilin1, Matn3, Pxdn, Olfm2, Olfml1, Pkp1  
+
+Axon Outgrowth, Cytoskeleton Dynamics, and Growth Cone Motility:  
+Tuba4a, Tubb4a, Septin4, Septin5, Fhod3, Stard13, Rhoj, Kif1a, Dpysl3, Dpysl5, Pfn2, Acap2, Asap1, Nes, Vash1  
+
+Vesicle Trafficking, Endocytosis, and Membrane Turnover at Synapses:  
+Snx4, Snx6, Rab10, Chmp2b, Tspan4, Tspan5, Cd9, Pltp, Steap1, Steap2, Abca8a, Abcb4, Slc22a17, Slco3a1, Slc35a2, Slc39a13, Slc9a9, Tpcn1  
+
+Transcriptional and Translational Control of Neural Development:  
+Mef2c, Runx3, Lef1, Ppard, Ebf1, Mybl1, Atf3, Atf5, Klf9, Taf9b, Dyrk1a, Eif2ak2, Igf2bp2, Rrm2, Vrk1, Papola, Cpsf2, Gtf2e1  
+
+Wnt and Non‑Canonical Wnt Signaling in Neural Patterning:  
+Wnt5a, Lef1, Ppard, Tnik, Dvl‑associated (implied), Cgn‑related (implied scaffold), Ccnd‑related (implied cell‑cycle link)  
+
+Notch and Neural Stem/Progenitor Regulation:  
+Numb, Msi1, Nes, Id2, Runx3, Klf9, Atf5  
+
+Innate Immune and Neuroinflammatory Modulation of Synapses:  
+Cxcl12, Cxcl14, Aif1l, Nlrp1a, Tnfrsf1a, Ifnar1, A2m, Serpinf1, Serpini1, Timp1, C1qtnf1  
+
+Lipid Metabolism and Sphingolipid Signaling in Neurons and Myelin:  
+Cers6, St3gal5, Psap, Abca8a, Abcb4, Agpat5, Nampt, Sqor, Hadhb, Apod  
+
+Autophagy, Proteostasis, and Synaptic Protein Turnover:  
+Map1lc3a, Psmd2, Hsp90aa1, Hspa12a, Chmp2b, Smc6, Parp14, Fbxo11, Ubiquitin/SUMO (Sumo3, Rnf144a, Trim35)  
+
+Axon Injury Response and Regeneration‑Related Programs:  
+Atf3, Dyrk1a, Mef2c, Nrp1, Nrp2, Met, Cxcl12, Cxcl14, Psap, Gpnmb, Vash1, Timp1, Serpini1

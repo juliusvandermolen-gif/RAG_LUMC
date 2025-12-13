@@ -1,0 +1,51 @@
+Synaptic Plasticity and Long-Term Potentiation:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Dpysl3, Dpysl5, Kif1a, Prkar2b, Ryr3, Tubb4a, Tuba4a, Mef2c, Dyrk1a, Atf3, Atf5, Numb, Pfn2, Sipa1l1, Gnai1, Itga8, Itga7, Cdh13, Lrrtm3, Synpr, Serpini1, Mag, Mpz, Prx, Gldn, Pmp22, Mal, Plxnb1, Efna5, Wnt5a, Lef1, Srgap1, Sgpl1, Nfatc1, Gja1, Map1lc3a, Nes, Msi1
+
+Axon Guidance and Neural Connectivity:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Lrrtm3, Dpysl3, Dpysl5, Kif1a, Srgap1, Gldn, Itga8, Itga7, Cdh13, Gja1, Sipa1l1, Mef2c, Wnt5a, Lef1
+
+Cell Adhesion and Synapse Organization:
+Cntn6, Cdh13, Lrrtm3, Nrp1, Nrp2, Gja1, Gldn, Mpz, Mag, Prx, Pmp22, Mal, Plxnb1, Efna5, Robo2, Slit2, Sema4f, Sema3g, Dpysl3, Dpysl5, Itga8, Itga7, Tspan4, Tspan5, Cd151, Cldn19, Cldnd1, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Emp2, Pkp1
+
+Neurotransmitter Release and Synaptic Vesicle Cycle:
+Cpe, Synpr, Prkar2b, Kif1a, Tubb4a, Tuba4a, Pfn2, Map1lc3a, Numb, Sipa1l1, Gnai1, Dyrk1a, Atf3, Atf5, Msi1
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Ghr, Lifr, Efemp2, Ccn3, Ccn4, Pappa, Igf2bp2, Epas1, Nfatc1, Wnt5a, Lef1, Met, Pam, Nampt
+
+Myelination and Glial Function:
+Mag, Mpz, Prx, Pmp22, Mal, Gldn, Plp1, Efna5, Sgpl1, Tubb4a, Tuba4a
+
+Extracellular Matrix and Synaptic Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Adamtsl1, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Emp2, Bgn, Efemp2, Mfap5, Emilin1, Timp1, Sbspon, Sqor, Parm1, Marveld1
+
+Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Dyrk1a, Efna5, Plxnb1, Srgap1, Sgpl1, Nfatc1
+
+Calcium Signaling in Neurons:
+Ryr3, Itpripl1, Prkar2b, Gnai1, Nfatc1, P2ry2, Tpcn1
+
+Neural Progenitor Maintenance and Differentiation:
+Nes, Msi1, Dyrk1a, Atf3, Atf5, Ebf1, Klf9, Runx3, Lef1, Mef2c, Numb, Sipa1l1, Sgpl1
+
+Immune Modulation in Neural Tissue:
+Aif1l, Cxcl12, Cxcl14, Ighm, Ifnar1, Nlrp1a, Tnfrsf1a, Selplg, A2m, Serpinf1, Serpini1, Timp1
+
+Ion Channel and Transporter Activity in Neural Function:
+Scn7a, Slc9a9, Slc22a17, Slc35a2, Slc39a13, Abca8a, Abcb4, Pltp, Tf, Fth1, P2ry2, Tpcn1, Piezo2, Gja1
+
+Ubiquitin-Proteasome and Protein Homeostasis in Neurons:
+Sumo3, Psmd2, Fbxo11, Rnf144a, Trim35, Gtf2e1, Rrm2, Ddx1, Cpsf2, Chmp2b, Stard13, Klhdc2, Klhl29, Smc6
+
+Neural Metabolism and Mitochondrial Function:
+Sqor, Hadhb, Nampt, Pnpt1, Dhrs1, Fth1, Pgm1, Apod, Hspa12a, Hsp90aa1
+
+Emerging/Novel Neural Pathways (based on gene set coherence and literature):
+Neural Cell Adhesion Molecule Signaling:
+Cntn6, Cdh13, Lrrtm3, Nrp1, Nrp2, Gja1, Gldn, Mpz, Mag, Prx, Pmp22, Mal
+
+Neural EGFL-like Protein Pathways:
+Efna5, Nell1, Nell2, Efemp2
+
+Neural Progenitor and Differentiation Pathways:
+Nes, Msi1, Dyrk1a, Atf3, Atf5, Ebf1, Klf9, Runx3, Lef1, Mef2c, Numb, Sipa1l1, Sgpl1

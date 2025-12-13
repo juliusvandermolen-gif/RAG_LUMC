@@ -1,0 +1,41 @@
+Synaptic Plasticity and Long-Term Potentiation:
+Cntn6, Prss12, Sema4f, Cpe, Synpr, Ntn1, Mag, Srgap1, Nrp1, Nrp2, Robo2, Slit2, Dpysl5, Dpysl3, Kif1a, Prkar2b, Tnik, Gnai1, Sipa1l1, Dyrk1a, Ryr3, Lrrtm3, Pfn2, Msi1, Nes, Sema3g, Met, Plxnb1, Efna5, Map1lc3a, Pam, Numb, Cxcl12, Wnt5a, Lef1, Inpp5a, Atf5, Gja1, Tspan5, Tpcn1, Itga8, Mef2c, Olfm2, Cers6, Psap, Slitrk6, Slc9a9, Gprc5b, Gprc5a, Frrs1, Prkd3, Tubb4a, Tuba4a, Timp1, Hsp90aa1, Hspa12a
+
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl5, Dpysl3, Kif1a, Srgap1, Lrrtm3, Sema3g, Met, Itga8, Olfm2, Slitrk6, Gja1, Tspan5, Tpcn1, Pfn2, Msi1, Nes, Map1lc3a, Pam, Numb, Cxcl12, Wnt5a, Lef1, Inpp5a
+
+Neural Cell Adhesion and Extracellular Matrix Organization:
+Cntn6, Hapln1, Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Matn3, Efemp2, Emilin1, Timp1, Cdh13, Cldn19, Cldnd1, Mpz, Gldn, Pmp22, Nrp1, Nrp2, Robo2, Slit2, Lrrtm3, Sema3g, Sema4f, Plxnb1, Efna5, Olfm2, Slitrk6, Gja1, Tspan5, Tpcn1, Pfn2, Msi1, Nes
+
+Neurotransmitter Release and Synaptic Vesicle Cycling:
+Cpe, Synpr, Prkar2b, Kif1a, Dpysl5, Dpysl3, Tubb4a, Tuba4a, Numb, Pam, Map1lc3a, Pfn2, Sipa1l1, Frrs1, Prkd3, Gnai1
+
+Neural Progenitor Maintenance and Differentiation:
+Id2, Msi1, Nes, Dyrk1a, Atf5, Lef1, Wnt5a, Ebf1, Klf9, Runx3, Mef2c, Numb, Sipa1l1, Sgpl1, Ppp1r14c, Ppp1r36, Eif2ak2, Rrm2, Taf9b, Gtf2e1
+
+Myelination and Glial Cell Function:
+Mag, Mpz, Pmp22, Mal, Plp1, Gldn, Drp2, Cldn19, Timp1, Efemp2, Emilin1, Col11a1, Col8a2, Col15a1, Col9a3
+
+Wnt Signaling in Neural Development:
+Wnt5a, Lef1, Dyrk1a, Tnik, Sgpl1, Fzd1, Fzd2, Fzd3, Fzd6, Fzd7, Fzd8, Fzd9, Fzd10, Lrp2, Ctnnb1, Tcf7l2
+
+Calcium Signaling in Neurons:
+Ryr3, Itpripl1, Prkar2b, Gnai1, Numb, Pam, Map1lc3a, Pfn2, Sipa1l1, Frrs1, Prkd3
+
+Neurotrophic Factor Signaling:
+Ntn1, Met, Cxcl12, Igfbp3, Ghr, Epas1, Atf3, Atf5, Nfatc1, Lifr
+
+Neural Immune Modulation and Inflammation:
+Aif1l, Cxcl14, Cxcl12, Tnfrsf1a, Ifnar1, Nlrp1a, Serpinf1, Serpini1, A2m, Ighm, Selplg, Timp1, C1qtnf1
+
+Circadian and Stress Response in Neural Tissue:
+Atf3, Atf5, Epas1, Hspa12a, Hsp90aa1, Dyrk1a, Klf9, Nfatc1, Parp14, Ppard
+
+Neural Metabolism and Mitochondrial Function:
+Sqor, Hadhb, Nampt, Pnpt1, Fth1, Dhrs1, Stard13, Pgm1, Rrm2, Psap, Htra1, Gldc, Aldh1a1, Abca8a, Abcb4, Agpat5, Serinc5, Slc22a17, Slc35a2, Slc39a13, Slc9a9, Slco3a1, Pltp, Apod, Qsox1, Cers6, Manba, Man1a1, Ppm1f, Fam20c, Papola, Dpysl5, Dpysl3, Map1lc3a, Pam, Numb, Sipa1l1, Frrs1, Prkd3
+
+Neural Cytoskeleton and Axonal Transport:
+Tuba4a, Tubb4a, Kif1a, Dpysl5, Dpysl3, Septin4, Septin5, Pfn2, Myo1d, Acap2, Klhl29, Klhdc2, Nek9, Fhod3, Stard13, Map1lc3a, Pam, Numb, Sipa1l1, Frrs1, Prkd3
+
+Neural Synaptic Organization and Maintenance:
+Cntn6, Lrrtm3, Sema4f, Sema3g, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl5, Dpysl3, Kif1a, Srgap1, Lrrtm3, Sema3g, Met, Itga8, Olfm2, Slitrk6, Gja1, Tspan5, Tpcn1, Pfn2, Msi1, Nes, Map1lc3a, Pam, Numb, Cxcl12, Wnt5a, Lef1, Inpp5a

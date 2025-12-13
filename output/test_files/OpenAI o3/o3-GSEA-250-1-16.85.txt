@@ -1,0 +1,32 @@
+Axon Guidance:
+Ntn1, Slit2, Robo2, Srgap1, Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Efna5, Itga8, Dpysl3, Dpysl5,
+
+Semaphorin-Plexin Signaling:
+Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Itga8, Dpysl3, Dpysl5,
+
+Slit-Robo Signaling:
+Slit2, Robo2, Srgap1, Efna5, Itga8,
+
+Netrin Signaling:
+Ntn1, Dpysl3, Dpysl5, Itga8,
+
+Synaptic Vesicle Transport and Plasticity:
+Cpe, Kif1a, Dpysl3, Dpysl5, Tuba4a, Tubb4a, Pfn2, Synpr, Map1lc3a, Prkar2b, Ryr3, Gnai1,
+
+Myelination and Axonal Ensheathment:
+Mpz, Mag, Pmp22, Gldn, Drp2, Mal, Prx,
+
+Calcium and Mechanosensory Signaling:
+Ryr3, Piezo2, P2ry2, Scn7a, Itpripl1,
+
+Extracellular Matrix–Integrin Signaling:
+Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Timp1, Htra1, Efemp2, Emilin1, Mfap5, Bgn, Has2, Itga7, Itga8,
+
+Wnt Signaling:
+Wnt5a, Lef1, Tnik, Ppard,
+
+PI3K–Akt/mTOR Signaling:
+Igfbp3, Pam, Eif2ak2, Nampt, Ghr, Atf3, Mef2c,
+
+Neuroinflammatory Cytokine Signaling:
+Tnfrsf1a, Ifnar1, Cxcl12, Cxcl14, Selplg, Parp14, Nlrp1a, Nampt, Epas1, Timp1,

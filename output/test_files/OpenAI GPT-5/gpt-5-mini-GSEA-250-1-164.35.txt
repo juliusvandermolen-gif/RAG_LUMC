@@ -1,0 +1,44 @@
+Axon guidance & neurite outgrowth:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Dpysl3, Dpysl5, Srgap1, Cntn6, Slitrk6, Asap1, Rhoj, Lrrtm3, Efna5, Olfm2
+
+Synaptic transmission & plasticity:
+Synpr, Sncg, Cpe, Serpini1, Mef2c, Ppfia4, Ppp1r36, Ppp1r14c, Grb14, Numb, Lrp2, St3gal5, Cdh13
+
+Myelination & peripheral nerve sheath formation:
+Mpz, Pmp22, Mal, Prx, Drp2, Gldn, Mag, Cldn19
+
+Extracellular matrix & cell adhesion (synaptic ECM / perineuronal nets):
+Hapln1, Matn3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Efemp2, Emilin1, Mfap5, Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Has2, Hs6st1, Hs6st2, Chst2, Timp1, Pxdn
+
+Vesicle trafficking, endosomal sorting & receptor recycling:
+Snx4, Snx6, Vps8, Vps26c, Rab10, Chmp2b, Slc9a9, Slc35a2, Pals1, Pltp, Slco3a1
+
+Cytoskeleton, axonal transport & growth cone dynamics:
+Kif1a, Tuba4a, Tubb4a, Septin5, Septin4, Acta2, Pfn2, Fhod3, Cep295nl
+
+Calcium signaling & neuronal excitability:
+Itpripl1, Ryr3, Scn7a, P2ry2, Piezo2, Nfatc1
+
+Semaphorin / Neuropilin / Plexin signaling:
+Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Gnai1, Rhoj, Asap1, Srgap1
+
+Wnt signaling & neuronal differentiation:
+Wnt5a, Lef1, Tnik, Dyrk1a, Mef2c, Klf9, Ppard
+
+Proteolysis, secretases & extracellular proteases influencing synapses:
+Prss12, Prss23, Htra1, Bace2, Adamts17, Adamtsl1, Adamtsl3, Ctbs, Cpe, Papola, Ecel1
+
+Neuroinflammation & immune signaling in CNS:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, Ighm, Tnfrsf1a, Selplg, Tril, Aif1l, C1qtnf1, Igfbp3, Gpnmb
+
+Transcriptional regulation & neuronal identity:
+Mef2c, Dyrk1a, Atf3, Atf5, Runx3, Ebf1, Klf9, Nfatc1, Nes, Msi1, Taf9b, Epas1
+
+Lipid metabolism, ganglioside biosynthesis & myelin lipid composition:
+St3gal5, Pltp, Abca8a, Abcb4, Cers6, Apod, Psap, Nampt, Steap2, Steap1
+
+Autophagy, proteostasis & mitochondrial function:
+Map1lc3a, Psmd2, Pnpt1, Hsp90aa1, Hspa12a, Eif2ak2, Rnf144a, Fbxo11, Trim35
+
+Synapse adhesion organizers & scaffolding complexes:
+Cntn6, Lrrtm3, Cdh13, Pals1, Cd9, Tspan4, Tspan5, Cd151, Ppfia4, Lrp2

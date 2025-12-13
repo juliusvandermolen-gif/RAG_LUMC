@@ -1,0 +1,56 @@
+Synaptic plasticity, postsynaptic signaling and synaptogenesis:
+Lrrtm3, Synpr, Sncg, Cntn6, Cdh13, Ppfia4, Mef2c, Dyrk1a, Eif2ak2, Ppp1r14c, Ppp1r36, Atf3, Atf5, Nfatc1, Pfn2, Grb14, Msi1,
+
+Axon guidance and neuronal migration:
+Ntn1, Slit2, Robo2, Dpysl3, Dpysl5, Srgap1, Rhoj, Asap1, Itga8, Itga7, Efna5, Plxnb1, Nrp1, Nrp2, Sema3g, Sema4f, Sipa1l1, Cdh13,
+
+Semaphorin–Plexin signaling (axon guidance / cytoskeleton regulation):
+Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2, Rhoj, Asap1, Srgap1,
+
+Extracellular matrix organization, perineuronal nets and ECM remodeling:
+Col9a3, Col20a1, Col11a1, Col15a1, Col8a2, Hapln1, Mfap5, Bgn, Emilin1, Matn3, Efemp2, Olfml1, Adamts17, Adamtsl1, Adamtsl3, Has2, Timp1, Ltbp1, Htra1, Serpinf1,
+
+Myelination and peripheral nerve sheath:
+Mpz, Prx, Pmp22, Mal, Drp2, Cldn19, Mag, Gldn,
+
+Synaptic vesicle trafficking, axonal transport and endosomal/retromer trafficking:
+Kif1a, Rab10, Vps8, Vps26c, Snx4, Snx6, Tpcn1, Map1lc3a, Tuba4a, Tubb4a, Septin5, Septin4, Myo1d, Cep295nl,
+
+Calcium signaling and intracellular calcium handling:
+Ryr3, Itpripl1, P2ry2, Tpcn1, Piezo2,
+
+Neurotrophin / IGF / growth factor receptor signaling:
+Igfbp3, Igf2bp2, Lifr, Met, Ghr, Pappa, Tf, Nampt, Ltbp1, Ccn3, Ccn4,
+
+Wnt signaling and developmental patterning:
+Wnt5a, Lef1,
+
+Neuroimmune signaling, inflammation and microglial/immune modulators:
+Ifnar1, Nlrp1a, Cxcl12, Cxcl14, Tnfrsf1a, Icoslg, Selplg, Aif1l, Gpnmb, C1qtnf1, Trim35, Psmd2,
+
+Lipid metabolism, ganglioside biosynthesis and myelin lipid handling:
+St3gal5, Abca8a, Abcb4, Cers6, Pltp, Apod, Psap,
+
+Proteolytic processing of neuropeptides and extracellular proteins (secreted proteases/inhibitors):
+Cpe, Pcsk5, Prss12, Prss23, Bace2, Serpini1, Htra1, Ctbs, A2m, Cpm,
+
+Ion channels, mechanosensation and gap junction signaling:
+Scn7a, Piezo2, Gja1,
+
+Cell adhesion, membrane organization and synaptic assembly:
+Cntn6, Cd9, Cd151, Itga8, Itga7, Pkp1, Lrrtm3, Cdh13, Ppfia4,
+
+Ubiquitin-proteasome system and SUMOylation (protein turnover/regulation):
+Sumo3, Psmd2, Fbxo11, Rnf144a, Trim35,
+
+Transcriptional control of neuronal differentiation, plasticity and activity-dependent programs:
+Mef2c, Atf3, Atf5, Nfatc1, Klf9, Runx3, Ebf1, Taf9b, Gtf2e1, Mybl1, Vrk1,
+
+RNA binding, processing and translational regulation in neurons:
+Ddx1, Igf2bp2, Pnpt1, Eif2ak2, Gtf2e1, Taf9b, Cpsf2, Msi1,
+
+Autophagy, lysosomal function and synaptic protein turnover:
+Map1lc3a, Ctbs, Psap, Vps8, Vps26c, Rab10,
+
+Mitochondrial function, redox metabolism and metabolic support for neurons:
+Sqor, Hadhb, Pnpt1, Fth1, Nampt

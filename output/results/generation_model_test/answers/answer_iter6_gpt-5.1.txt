@@ -1,0 +1,44 @@
+Axon Guidance and Neuronal Pathfinding:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Efna5, Plxnb1, Dpysl3, Dpysl5, Srgap1, Itga8, Wnt5a, Met, Kif1a, Lrrtm3, Sipa1l1, Gldn, Gja1, Nes
+
+Synapse Formation, Maintenance, and Plasticity:
+Cntn6, Lrrtm3, Srgap1, Dpysl3, Dpysl5, Kif1a, Ppfia4, Synpr, Psap, Pfn2, Map1lc3a, Tnik, Prkar2b, Mef2c, Dyrk1a, Numb, Sumo3, Psmd2
+
+Myelination and Axon–Glia Interaction:
+Mag, Mpz, Pmp22, Gldn, Drp2, Mal, Lrp2, Col11a1, Col15a1, Col9a3, Col8a2, Col20a1, Efemp2, Emilin1, Bgn, Hapln1
+
+Neurotrophin and Growth Factor Signaling (PI3K–AKT, MAPK, JAK–STAT):
+Met, Lifr, Ghr, Igfbp3, Igf2bp2, Grb14, Prkd3, Stk39, Dyrk1a, Tnik, Ppard, Runx3, Mef2c, Atf3, Atf5, Klf9, Taf9b, Eif2ak2, Hsp90aa1
+
+Calcium Signaling in Neurons:
+Ryr3, Itpripl1, Gnai1, P2ry2, Gprc5b, Gprc5a, Tpcn1, Slc8/Slc9 family (Slc9a9), Piezo2, Nfatc1
+
+Voltage-Gated and Ligand-Gated Ion Channel Regulation:
+Scn7a, Ryr3, Piezo2, P2ry2, Gprc5b, Gprc5a, Tpcn1, Gja1, Tuba4a, Tubb4a, Septin4, Septin5
+
+Cell Adhesion and Extracellular Matrix Organization in Neural Tissues:
+Cntn6, Cdh13, Gja1, Cd9, Cd151, Itga7, Itga8, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Hapln1, Bgn, Emilin1, Efemp2, Matn3, Pxdn, Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1
+
+Wnt and Planar Cell Polarity–Related Neural Development:
+Wnt5a, Lef1, Ppard, Tnik, Dvl-associated adaptors (Acap2), Celsr-related adhesion context (Olfm2), Dyrk1a
+
+Neural Progenitor Maintenance and Differentiation:
+Nes, Msi1, Dyrk1a, Mef2c, Runx3, Lef1, Klf9, Atf3, Atf5, Numb, Ebf1, Smc6, Vrk1, Cenpo
+
+Axonal Transport and Cytoskeletal Dynamics:
+Kif1a, Map1lc3a, Pfn2, Fhod3, Tuba4a, Tubb4a, Septin4, Septin5, Stard13, Rhoj, Asap1, Acap2, Nek9
+
+Synaptic Vesicle Cycling and Neurosecretion:
+Kif1a, Synpr, Psap, Cpe, Ecel1, Pam, Pltp, Apod, Map1lc3a, Rab10
+
+Glutamatergic and GABAergic Synapse Modulation (Supportive Pathways):
+Dyrk1a, Mef2c, Tnik, Psap, Psmd2, St3gal5, Cers6, Sgpl1, Agpat5
+
+Neuroimmune and Neuroinflammatory Signaling:
+Ifnar1, Nlrp1a, Tnfrsf1a, Cxcl12, Cxcl14, A2m, Serpinf1, Serpini1, Timp1, Aif1l, Eif2ak2
+
+Retinoic Acid and Metabolic Regulation of Neural Development:
+Aldh1a1, Nampt, Pgm1, Hadhb, Sqor, Apod, Igf2bp2, Ppard, Pgm1
+
+Protein Quality Control and DNA Repair in Neural Cells:
+Hsp90aa1, Hspa12a, Psmd2, Smc6, Msh2, Parp14, Rrm2, Papola, Cpsf2, Ddx1

@@ -1,0 +1,35 @@
+Axon guidance, neuronal migration and growth cone dynamics:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Ntn1, Srgap1, Dpysl3, Dpysl5, Rhoj, Asap1, Cntn6, Efna5, Cdh13, Itga7, Itga8, Kif1a, Tuba4a, Tubb4a, Septin4, Septin5, Pfn2, Cxcl12, Cxcl14
+
+Synapse formation, adhesion and synaptic organizing molecules:
+Lrrtm3, Synpr, Sncg, Cntn6, Cdh13, Cd9, Tspan4, Tspan5, Pals1, Ppfia4, Pfn2, Gja1, Numb
+
+Synaptic vesicle trafficking, neurotransmitter processing and presynaptic machinery:
+Kif1a, Rab10, Septin5, Synpr, Sncg, Cpe, Pcsk5, Bace2, Scn7a, P2ry2, Gnai1, Prkar2b, Prkd3, Rab10, Stx? (note: use only listed genes), Prkar2b
+
+Calcium signaling, excitability and activity-dependent plasticity:
+Itpripl1, Ryr3, Scn7a, Piezo2, P2ry2, Gnai1, Prkar2b, Prkd3, Nfatc1, Mef2c, Dyrk1a
+
+Myelination, Schwann cell / peripheral nerve structure and node of Ranvier organization:
+Mpz, Pmp22, Prx, Mal, Mag, Drp2, Gldn, Cldn19, Cldnd1, Periaxin (Prx), Mpz
+
+Extracellular matrix, protease network and perineuronal net modulation:
+Adamts17, Adamtsl1, Adamtsl3, Hapln1, Htra1, A2m, Timp1, Bgn, Mfap5, Emilin1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Has2, Hs6st1, Hs6st2, St3gal5, Gcnt1, Fut10, Chst2, Prss12, Prss23, Serpini1, Serpinf1, Cpe, Pcsk5
+
+Wnt signaling and developmental morphogen pathways:
+Wnt5a, Lef1, Ccn4, Lifr, Ppard
+
+Transcriptional regulators and neurodevelopmental gene programs:
+Mef2c, Nfatc1, Dyrk1a, Klf9, Runx3, Ebf1, Atf3, Atf5, Msi1, Nes, Peg3, Id2, Numb, Epas1
+
+Proteostasis, ubiquitin-proteasome system and autophagy:
+Psmd2, Fbxo11, Rnf144a, Sumo3, Map1lc3a, Cpsf2, Pnpt1, Ppm1f
+
+Neuroimmune signaling, inflammatory mediators and glial-related responses:
+Aif1l, Ifnar1, Nlrp1a, C1qtnf1, Cxcl12, Cxcl14, Selplg, Ighm, Gpnmb, Tnfrsf1a, Serpinf1
+
+Lipid, glycosphingolipid and membrane composition pathways impacting synaptic function:
+St3gal5, Abca8a, Abcb4, Psap, Cers6, Pltp, Apod, Nampt, Steap1, Steap2, Agpat5, Hadhb
+
+Cell adhesion, junctional complexes and cytoskeletal coupling:
+Cntn6, Cdh13, Itga7, Itga8, Cd151, Pkp1, Gypc, Cldn19, Cldnd1, Tuba4a, Tubb4a, Acta2, Septin4, Septin5, Pfn2

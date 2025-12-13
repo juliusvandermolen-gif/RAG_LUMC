@@ -1,0 +1,47 @@
+Axon guidance, neuronal migration and guidance cues:
+Slit2, Robo2, Nrp1, Nrp2, Sema3g, Sema4f, Plxnb1, Ntn1, Efna5, Srgap1, Dpysl3, Dpysl5, Rhoj, Asap1, Cntn6, Cdh13, Itga8, Itga7, Mag, Gldn,
+
+Synapse formation, synaptic organization and plasticity:
+Lrrtm3, Synpr, Sncg, Frrs1, Kif1a, Pfn2, Mef2c, Numb, Dyrk1a, Prkar2b, Atf3, Atf5, Nfatc1, Ryr3, Itpripl1, P2ry2, Gnai1, Slc9a9, Gprc5b, Gprc5a, Septin5, Septin4, Cpe, Ppp1r36, Ppp1r14c,
+
+Extracellular matrix, perineuronal nets and ECM remodeling:
+Hapln1, Bgn, Mfap5, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Adamts17, Adamtsl1, Adamtsl3, Timp1, Has2, Hs6st1, Hs6st2, Chst2, Efemp2, Emilin1, Matn3, Pxdn, Serpinf1, Htra1, Prss12, Prss23, A2m, Serpini1,
+
+Myelination, Schwann cell and peripheral myelin structure:
+Mpz, Pmp22, Prx, Drp2, Gldn, Mal, Mag, Cldn19,
+
+Cytoskeleton, microtubule dynamics and axonal transport:
+Kif1a, Tuba4a, Tubb4a, Septin5, Septin4, Pfn2, Tnik, Fhod3, Stard13, Asap1, Acta2, Tagln, Cep295nl, Nek9, Map1lc3a, Tbccd1,
+
+Calcium signaling and intracellular calcium handling:
+Ryr3, Itpripl1, Piezo2, P2ry2, Gja1,
+
+Wnt and developmental morphogen signaling:
+Wnt5a, Lef1, Lrp2, Dyrk1a, Ccn3, Ccn4,
+
+GPCR, heterotrimeric G-protein signaling and neuromodulation:
+Gnai1, Gprc5b, Gprc5a, P2ry2, Plxnb1,
+
+Neuroinflammation, innate immune and cytokine signaling in brain:
+Nlrp1a, Ifnar1, Ighm, C1qtnf1, Aif1l, Selplg, Tnfrsf1a, Cxcl12, Cxcl14, Tril,
+
+Lipid metabolism, sphingolipid and ganglioside pathways affecting neural membranes:
+St3gal5, Sgpl1, Cers6, Agpat5, Pltp, Apod, Abca8a, Abcb4, Steap1, Steap2, Nampt,
+
+Transcriptional regulators and nuclear programs in neurodevelopment and plasticity:
+Mef2c, Nfatc1, Runx3, Ebf1, Atf3, Atf5, Id2, Klf9, Taf9b, Mybl1, Numb, Zfp518a,
+
+Endocytosis, vesicular trafficking, autophagy and proteostasis:
+Rab10, Snx4, Snx6, Vps8, Vps26c, Chmp2b, Psmd2, Fbxo11, Map1lc3a, Pnpt1, Cpsf2, Papola,
+
+Synaptic adhesion and cell adhesion molecules:
+Cntn6, Lrrtm3, Slitrk6, Cdh13, Cd9, Cd151, Pkp1, Gja1,
+
+Proteolytic processing of neuropeptides and APP-related proteolysis:
+Cpe, Pcsk5, Bace2, Prss12, Prss23, Htra1, Ctbs,
+
+Metabolic support, mitochondrial function and neuronal bioenergetics:
+Pnpt1, Sqor, Aldh1a1, Nampt, Hadhb, Dhrs1, Pgm1, Rrm2, Eif2ak2,
+
+Synaptic vesicle trafficking, exocytosis and vesicle assembly:
+Sncg, Synpr, Kif1a, Septin5, Frrs1, Rab10, Vps26c, Vps8, Snx6

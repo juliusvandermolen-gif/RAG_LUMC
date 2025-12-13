@@ -1,0 +1,44 @@
+Synaptic transmission and plasticity:
+Kif1a, Mef2c, Dyrk1a, Prkar2b, Eif2ak2, Nfatc1, Atf3, Atf5, Pfn2, Septin5, Sncg, Gnai1, Ryr3, Itpripl1, P2ry2, Scn7a, Rab10, Cpe, Pcsk5, Pam, Lrrtm3, Cdh13, Synpr
+
+Axon guidance and neurite outgrowth (Semaphorin/Slit/Netrin/Eph):
+Sema4f, Sema3g, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Ntn1, Efna5, Dpysl3, Dpysl5, Srgap1, Rhoj, Asap1, Kif1a
+
+Cell adhesion, extracellular matrix and perineuronal nets:
+Cntn6, Hapln1, Adamts17, Adamtsl1, Adamtsl3, Htra1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Mfap5, Emilin1, Matn3, Gldn, Mal, Mpz, Pmp22, Prx, Drp2, Itga7, Itga8, Cd9, Cd151, Cldn19, Cldnd1, Pkp1, Gja1, Timp1, Has2
+
+Myelination and Schwann cell function:
+Mpz, Pmp22, Prx, Mal, Mag, Drp2, Gldn, Cldn19, Tubb4a, Kif1a
+
+Axonal and dendritic cytoskeleton & transport:
+Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Pfn2, Fhod3, Myo1d, Dpysl3, Dpysl5
+
+Proteases and extracellular proteolysis (synaptic remodeling):
+Prss12, Prss23, Htra1, Adamts17, Adamtsl1, Adamtsl3, Bace2, Ctbs, Timp1, Serpini1, Serpinf1, A2m, Qsox1
+
+Synaptic adhesion and scaffold complexes:
+Lrrtm3, Cntn6, Cdh13, Pals1, Ppfia4, Pkp1, Cd9, Cd151
+
+Lipid, ganglioside and membrane lipid metabolism (myelin/synapse):
+St3gal5, Cers6, Pltp, Apod, Abca8a, Abcb4, Psap, Nampt, Steap1, Steap2, Agpat5, Hadhb
+
+Heparan sulfate and glycosaminoglycan biosynthesis/modification:
+Hs6st1, Hs6st2, Chst2, Gcnt1, Fut10, Has2, Slc35a2, St3gal5
+
+Vesicle trafficking, endocytosis, autophagy and ESCRT-related pathways:
+Vps8, Vps26c, Snx4, Snx6, Chmp2b, Rab10, Map1lc3a, Psmd2
+
+Signal transduction kinases/phosphatases regulating neuronal signaling:
+Prkd3, Dyrk1a, Stk39, Nek9, Vrk1, Ppm1f, Prkar2b, Ppp1r14c, Parp14, Rnf144a, Fbxo11
+
+Transcriptional regulation and neurodevelopmental TFs:
+Mef2c, Nfatc1, Runx3, Ebf1, Klf9, Nes, Atf3, Atf5, Epas1, Mybl1, Taf9b, Gtf2e1, Zfp518a
+
+Neuroinflammation and immune signaling in neural tissue:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, Ighm, Selplg, Tnfrsf1a, Aif1l, Trim35, C1qtnf1
+
+Growth factor, IGF and trophic signaling:
+Igfbp3, Igf2bp2, Lifr, Met, Wnt5a, Lef1, Ghr, Pappa
+
+Endosomal sorting, receptor recycling and synaptic protein turnover:
+Vps8, Vps26c, Snx4, Snx6, Chmp2b, Rab10, Psmd2, Cpsf2, Vps8

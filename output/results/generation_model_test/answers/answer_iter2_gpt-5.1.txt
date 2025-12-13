@@ -1,0 +1,41 @@
+Axon Guidance and Growth Cone Signaling:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl5, Dpysl3, Srgap1, Kif1a, Itga8, Wnt5a, Met, Gnai1, Tnik, Pfn2, Nes
+
+Synapse Formation, Adhesion, and Organization:
+Cntn6, Lrrtm3, Gldn, Cdh13, Ppfia4, Gja1, Cd9, Cd151, Pkp1, Sipa1l1, Olfm2, Tspan4, Tspan5, Itga7, Itga8, Gprc5b, Gprc5a, Nrp1, Nrp2
+
+Synaptic Vesicle Cycling and Neurotransmission:
+Kif1a, Synpr, Map1lc3a, Pam, Psap, Pmp22, Tpcn1, Ryr3, Itpripl1, P2ry2, Scn7a, Piezo2, Gnai1, Ryr3, Numb
+
+Neurotrophin, Growth Factor, and JAK/STAT Signaling:
+Igfbp3, Pappa, Lifr, Ghr, Nampt, Epas1, Mef2c, Atf3, Atf5, Dyrk1a, Prkd3, Stk39, Eif2ak2, Ifnar1, Tnfrsf1a, Ppard, Runx3
+
+Calcium Signaling in Neurons:
+Ryr3, Itpripl1, Gnai1, P2ry2, Piezo2, Scn7a, Met, Nrp1, Nrp2, Wnt5a, Tnik
+
+Extracellular Matrix, Perineuronal Nets, and Synaptic Microenvironment:
+Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Bgn, Matn3, Efemp2, Emilin1, Mfap5, Adamts17, Adamtsl3, Adamtsl1, Prss12, Prss23, Serpini1, Serpinf1, Timp1, Has2, Pxdn, Bace2
+
+Myelination and Axoglial Interactions:
+Mag, Mpz, Drp2, Pmp22, Gldn, Mal, Cldn19, Hsp90aa1, Hspa12a, Lrp2
+
+Neural Stem/Progenitor Regulation and Neurogenesis:
+Nes, Msi1, Klf9, Mef2c, Dyrk1a, Runx3, Ebf1, Vrk1, Smc6, Mybl1, Taf9b, Rrm2, Cenpo, Cdca7l
+
+Cytoskeletal Dynamics and Neurite Outgrowth:
+Tuba4a, Tubb4a, Septin4, Septin5, Fhod3, Rhoj, Acap2, Asap1, Stard13, Sipa1l1, Kif1a, Dpysl5, Dpysl3, Pfn2
+
+Wnt and β‑Catenin–Related Neural Patterning:
+Wnt5a, Lef1, Tnik, Ppard, Klf9, Mef2c, Runx3
+
+Glutamatergic / GABAergic Synapse Modulation and Plasticity Support:
+Psap, Cpe, St3gal5, Sncg, Cers6, Sgpl1, Hadhb, Nampt, Igf2bp2
+
+Cell–Cell and Neuroimmune Signaling in the Nervous System:
+Cxcl12, Cxcl14, A2m, Timp1, Nlrp1a, Ifnar1, Tnfrsf1a, Selplg, Aif1l, Icoslg, C1qtnf1
+
+Endocytosis, Vesicular and Receptor Trafficking in Neurons:
+Snx6, Snx4, Chmp2b, Rab10, Vps8, Vps26c, Lrp2, Gja1, Tf, Pltp, Abca8a, Abcb4
+
+Stress Response and Activity‑Dependent Transcription in Neurons:
+Atf3, Atf5, Hsp90aa1, Hspa12a, Eif2ak2, Parp14, Klf9, Mef2c, Dyrk1a, Nfatc1, Psmd2

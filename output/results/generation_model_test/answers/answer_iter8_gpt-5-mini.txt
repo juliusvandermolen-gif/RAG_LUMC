@@ -1,0 +1,59 @@
+Axon guidance / Guidance cue signaling:
+Ntn1, Slit2, Robo2, Sema3g, Sema4f, Plxnb1, Nrp1, Nrp2, Efna5, Srgap1, Dpysl3, Dpysl5, Asap1, Rhoj, Stard13, Tnik, Kif1a, Lrrtm3, Cdh13, Itga8, Itga7, Slitrk6, Numb,
+
+Synaptic transmission and plasticity:
+Sncg, Synpr, Cpe, Kif1a, Gnai1, Prkar2b, Ppp1r14c, Ppp1r36, Grb14, Dyrk1a, Mef2c, Itpripl1, Ryr3, P2ry2, Gja1, Lrrtm3, Cdh13, Pfn2, Septin5, Septin4,
+
+Myelination and peripheral nerve / Schwann cell pathways:
+Mag, Mpz, Pmp22, Mal, Prx, Drp2, Gldn, Cldn19, Periaxin? (Prx), Mpz,
+
+Extracellular matrix organization & ADAMTS-mediated ECM remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Hapln1, Mfap5, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Bgn, Emilin1, Matn3, Efemp2, Sbspon, Htra1, Timp1, Has2, Chst2, Arsb, Hs6st1, Hs6st2, St3gal5, Fut10, Gcnt1,
+
+Proteolysis, neuropeptide processing and secretory pathway:
+Prss12, Prss23, Pcsk5, Cpe, Bace2, Htra1, Qsox1, Pam, Cpm, Ctbs, Serpini1, Serpinf1, A2m, Papola, Cts? (CTBS), Peg3, Papola,
+
+Axon growth, neurotrophic and receptor tyrosine kinase signaling:
+Wnt5a, Lef1, Met, Lifr, Igfbp3, Igf2bp2, Ghr, Ptgfr, Epas1, Ccn3, Ccn4, Ppard,
+
+Semaphorin/neuropilin/plexin signaling (axon repulsion/attraction and synapse organization):
+Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Rhoj, Srgap1, Dpysl3, Dpysl5, Asap1,
+
+Neuroimmune and neuroinflammation signaling:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, Icoslg, Selplg, Ighm, C1qtnf1, Tnfrsf1a, Aif1l, Timp1, Serpinf1, A2m,
+
+Vesicle trafficking, endocytosis, autophagy and endolysosomal system:
+Rab10, Vps8, Vps26c, Snx4, Snx6, Chmp2b, Map1lc3a, Kif1a, Tpcn1, Septin5, Septin4, Pnpt1, Vps26c, Vps8,
+
+Ion channel, calcium signaling and excitability regulation:
+Scn7a, Ryr3, Piezo2, Tpcn1, Itpripl1, P2ry2, Slc9a9, Slc22a17, Slc39a13, Slc35a2, Slc3? (Slc35a2),
+
+Transcriptional regulators of neural development, plasticity and differentiation:
+Mef2c, Dyrk1a, Atf3, Atf5, Klf9, Runx3, Ebf1, Numb, Nes, Msi1, Taf9b, Mybl1, Vrk1, Smc6, Hmx3, Id2, Peg3,
+
+Synaptic adhesion, cell adhesion molecules and synapse organization:
+Cntn6, Lrrtm3, Cdh13, Itga7, Itga8, Cd9, Cd151, Pals1, Slitrk6, Gja1, Gypc, Ppfia4,
+
+Ubiquitin–proteasome system, E3 ligases and protein turnover:
+Trim35, Rnf144a, Fbxo11, Psmd2, Parp14, Rnf144a, Fbxo11,
+
+Lipid metabolism, myelin lipid handling and membrane composition:
+Pltp, Abca8a, Abcb4, Cers6, Apod, Steap1, Steap2, Nampt, Agpat5, Stard13, Pltp, Abca8a,
+
+Mitochondrial, energy metabolism and redox regulation relevant to neuronal function:
+Sqor, Hadhb, Pnpt1, Rrm2, Pgm1, Nampt, Pf? (limited list), Sqor,
+
+Wnt signaling, developmental patterning and synaptic regulation:
+Wnt5a, Lef1, Dyrk1a, Mef2c, Ccn3, Ccn4, Ppard,
+
+Cytoskeleton, axonal transport and morphogenesis:
+Tuba4a, Tubb4a, Kif1a, Pfn2, Myo1d, Fhod3, Septin4, Septin5, Cep295nl, Kif1a, Tbccd1,
+
+Glycosylation, sulfation and extracellular matrix carbohydrate modification impacting guidance and signaling:
+Hs6st1, Hs6st2, St3gal5, Fut10, Gcnt1, Chst2, Slc35a2,
+
+Autophagy, proteostasis and lysosomal function impacting synaptic homeostasis:
+Map1lc3a, Psmd2, Ctbs, Cts? (CTBS), Chmp2b, Fbxo11, Trim35,
+
+Neurodevelopmental signaling hubs and scaffolding (polarity, scaffolds, synapse assembly):
+Pals1, Dpysl3, Dpysl5, Lrrtm3, Msi1, Nes, Numb, Gja1, Ppfia4, Pfn2, Rnf144a, Vps26c, Snx6

@@ -1,0 +1,49 @@
+Synaptic Plasticity and Long-Term Potentiation:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Dpysl3, Dpysl5, Kif1a, Ryr3, Prkar2b, Tnik, Mef2c, Dyrk1a, Atf3, Atf5, Numb, Msi1, Pfn2, Synpr, Lrrtm3, Gldn, Prss12, Serpini1, Mag, Mpz, Drp2, Pmp22, Cpe, Pam, Psap, Gprc5b, Gprc5a, Plxnb1, Efna5, Wnt5a, Lef1, Srgap1, Sipa1l1, Sgpl1, Itga8, Itga7, Tubb4a, Tuba4a, Map1lc3a, Nes
+
+Axon Guidance and Neural Connectivity:
+Ntn1, Sema4f, Sema3g, Nrp1, Nrp2, Slit2, Robo2, Plxnb1, Efna5, Dpysl3, Dpysl5, Kif1a, Srgap1, Sipa1l1, Lrrtm3, Gldn, Itga8, Itga7, Tubb4a, Tuba4a
+
+Cell Adhesion and Synapse Formation:
+Cntn6, Cdh13, Lrrtm3, Gldn, Nrp1, Nrp2, Robo2, Slit2, Sema4f, Sema3g, Plxnb1, Efna5, Mag, Mpz, Drp2, Pmp22, Gja1, Cldn19, Cldnd1, Pkp1, Tspan4, Tspan5, Cd151, Cd9
+
+Neurotransmitter Release and Synaptic Vesicle Cycle:
+Cpe, Pam, Synpr, Prkar2b, Kif1a, Tubb4a, Tuba4a, Map1lc3a, Pfn2, Psap
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Ghr, Lifr, Efemp2, Ccn3, Ccn4, Epas1, Atf3, Atf5, Mef2c, Dyrk1a, Numb, Msi1, Ppp1r14c, Ppp1r36, Sgpl1, Sipa1l1, Srgap1
+
+Myelination and Glial Function:
+Mag, Mpz, Drp2, Pmp22, Mal, Plp1, Gldn, Cldn19, Cldnd1
+
+Extracellular Matrix and Synaptic Remodeling:
+Adamts17, Adamtsl1, Adamtsl3, Adamtsl1, Hapln1, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Matn3, Bgn, Efemp2, Emilin1, Mfap5, Timp1, Htra1, Sqor, Sbspon, Parm1, Marveld1
+
+Wnt and Ephrin Signaling in Neural Development:
+Wnt5a, Lef1, Efna5, Plxnb1, Srgap1, Sipa1l1
+
+Calcium Signaling in Neurons:
+Ryr3, Itpripl1, Prkar2b, Prkd3, Tnik, Gnai1
+
+Neural Stem Cell Maintenance and Differentiation:
+Nes, Msi1, Dyrk1a, Atf3, Atf5, Klf9, Ebf1, Runx3, Lef1, Numb
+
+Immune Modulation in Neural Tissue:
+C1qtnf1, Tnfrsf1a, Ifnar1, Nlrp1a, Selplg, Cxcl12, Cxcl14, Ighm
+
+Lipid Metabolism and Myelin Maintenance:
+Abca8a, Abcb4, Apod, Pltp, Serinc5, Agpat5, Nampt, Psap, Cers6, Hadhb
+
+Ubiquitin-Proteasome and Protein Homeostasis:
+Sumo3, Psmd2, Fbxo11, Rnf144a, Trim35, Gtf2e1, Rrm2, Ddx1, Klhdc2
+
+RNA Processing and Translation in Neurons:
+Eif2ak2, Rrm2, Ddx1, Papola, Taf9b, Gtf2e1, Cggbp1
+
+Oxidative Stress and Mitochondrial Function:
+Sqor, Hadhb, Fth1, Dhrs1, Stard13, Hsp90aa1, Hspa12a
+
+Chromatin Remodeling and Epigenetic Regulation:
+Ebf1, Runx3, Smc6, Parp14, Zfp518a, Taf9b
+
+(Note: Only gene symbols from your provided list are included in each pathway.)

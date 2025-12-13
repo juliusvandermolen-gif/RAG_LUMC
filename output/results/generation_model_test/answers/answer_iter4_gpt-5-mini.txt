@@ -1,0 +1,64 @@
+Synaptic transmission & synaptic plasticity:
+Synpr, Sncg, Kif1a, Dpysl3, Dpysl5, Lrrtm3, Cdh13, Pfn2, Prkar2b, Gnai1, Ppp1r36
+
+Axon guidance & neurite outgrowth:
+Ntn1, Sema4f, Sema3g, Plxnb1, Robo2, Slit2, Dpysl3, Dpysl5, Srgap1, Nrp1, Nrp2, Efna5, Rhoj, Asap1
+
+Cell adhesion, extracellular matrix & perineuronal net:
+Hapln1, Bgn, Mfap5, Emilin1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Matn3, Efemp2, Ccn3, Ccn4, Has2, Timp1, Serpinf1, Serpini1, A2m
+
+Myelination & Schwann cell / peripheral myelin function:
+Mpz, Mag, Prx, Mal, Gldn, Pmp22, Cldn19
+
+Proteases, protease inhibitors & extracellular proteolytic processing:
+Adamts17, Adamtsl1, Adamtsl3, Htra1, Prss12, Prss23, Pcsk5, Bace2, Cpe, Ctbs, Cpm, Timp1, Serpini1, Serpinf1, A2m, Pappa, Qsox1
+
+Cytoskeleton dynamics, Rho GTPase & actin remodeling:
+Rhoj, Pfn2, Acta2, Septin4, Septin5, Stard13, Asap1, Fhod3, Myo1d, Kif1a, Tubb4a, Tuba4a
+
+Ion channels, calcium signaling & mechanotransduction:
+Ryr3, Scn7a, Piezo2, Itpripl1, Tpcn1, P2ry2, Gja1, Slc9a9
+
+Neurotrophic & receptor tyrosine kinase signaling (IGF/MET/LIF/WNT):
+Igfbp3, Igf2bp2, Pappa, Met, Lifr, Wnt5a, Lrp2, Epas1
+
+Semaphorin / Plexin / Neuropilin guidance and synaptic modulation:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1
+
+Slit/Robo / Netrin axon guidance module:
+Slit2, Robo2, Ntn1
+
+Transcriptional regulation, immediate-early & developmental TF signaling:
+Atf3, Atf5, Mef2c, Nfatc1, Runx3, Dyrk1a, Klf9, Ebf1, Taf9b, Eif2ak2, Vrk1, Mybl1, Smc6
+
+Vesicle trafficking, endocytosis, ESCRT & autophagy:
+Rab10, Vps8, Vps26c, Snx4, Snx6, Chmp2b, Map1lc3a, Pnpt1
+
+Neuroinflammation, innate immune & chemokine signaling:
+Ifnar1, Nlrp1a, Aif1l, C1qtnf1, Cxcl12, Cxcl14, Ighm, Selplg, Tnfrsf1a
+
+Lipid metabolism, myelin lipid composition & cholesterol transport:
+Pltp, Abca8a, Abcb4, St3gal5, Cers6, Apod, Nampt, Steap2, Steap1, Psap
+
+TGF-β / LTBP, ECM signaling & integrin interactions:
+Ltbp1, Itga7, Itga8, Col15a1, Col20a1, Col11a1, Col9a3, Emilin1, Mfap5
+
+Synaptic adhesion, synaptogenesis & scaffolding:
+Lrrtm3, Cntn6, Cdh13, Ppfia4, Numb, Ppfia4
+
+Ubiquitin-proteasome, E3 ligases & protein turnover:
+Fbxo11, Rnf144a, Psmd2, Trim35
+
+Glycosylation, heparan sulfate & glycan remodeling (modulators of guidance cues):
+Hs6st1, Hs6st2, St3gal5, Fut10, Gcnt1, Man1a1, Manba, Slc35a2
+
+Mitochondrial metabolism, redox & bioenergetics impacting neural function:
+Sqor, Pnpt1, Hadhb, Nampt, Apod
+
+Wnt / non-canonical Wnt signaling and developmental patterning:
+Wnt5a, Lef1, Ppard
+
+Autism/neuronal connectivity–related candidate module (synapse formation, pruning, cell adhesion):
+Ntrk? (not in list), Lrrtm3, Cntn6, Cdh13, Nrx? (not in list), Ppfia4, Dpysl3, Dpysl5
+
+(Note: last pathway lists user-provided candidate genes relevant to connectivity phenotypes)

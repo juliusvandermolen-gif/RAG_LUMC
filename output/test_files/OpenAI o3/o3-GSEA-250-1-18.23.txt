@@ -1,0 +1,23 @@
+Axon Guidance and Neurite Outgrowth:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Lrrtm3, Dpysl5, Dpysl3, Srgap1, Tnik, Itga8, Gldn, Kif1a, Cdh13,
+
+Synaptic Vesicle Cycling and Neurotransmitter Release:
+Cpe, Synpr, Serpini1, Kif1a, Ppfia4, Pfn2, Map1lc3a, Pam, Sncg,
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Drp2, Prx, Gldn, Mal, Cldn19, Septin5,
+
+Extracellular Matrix and Cell Adhesion in Neural Development:
+Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Matn3, Efemp2, Bgn, Hapln1, Ltbp1, Mfap5, Emilin1, Vash1, Has2, Timp1, Pxdn, Htra1,
+
+Wnt/Planar Cell Polarity Signaling:
+Wnt5a, Lef1, Dyrk1a, Tnik, Rhoj,
+
+Neurotrophin and cAMP Response Pathway:
+Id2, Atf3, Dyrk1a, Eif2ak2, Mef2c, Prkar2b, Gnai1, Nampt, Klf9, Nfatc1,
+
+Calcium Signaling Modulation:
+Ryr3, Itpripl1, Piezo2, Tpcn1, Gnai1,
+
+Purinergic and GPCR Signaling:
+P2ry2, Gnai1, Gprc5b, Gprc5a,

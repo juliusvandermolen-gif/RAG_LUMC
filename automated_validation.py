@@ -12,12 +12,12 @@ from RAG_workflow import query_llm, load_config
 from pymed import PubMed
 import pymed
 from dotenv import load_dotenv
-from plotting import normalize_gene, load_input_gene_set, create_input_dir
+from plotting import normalize_gene, load_input_gene_set, \
+    create_input_dir
 import pandas as pd
 import subprocess
 
 load_dotenv()
-
 
 log_dir = './logs'
 log_file = os.path.join(log_dir, 'validation_logs.json')
@@ -32,14 +32,16 @@ except FileNotFoundError:
     validation_logs = {}
 
 
-def read_latest_llm_output(answer_dir, iteration=None):
-    if iteration is not None:
-        answer_path = os.path.join(answer_dir, f"answer_iter{iteration}.txt")
-    else:
-        answer_path = os.path.join(answer_dir, "answer.txt")
+def read_latest_llm_output(answer_dir, iteration=None, model=None):
+    if iteration is None or model is None:
+        raise ValueError("iteration and model must be provided")
+    answer_path = os.path.join(
+        answer_dir,
+        f"answer_iter{iteration}_{model}.txt"
+    )
 
     if not os.path.isfile(answer_path):
-        raise FileNotFoundError(f"No '{answer_path}' found in {answer_dir!r}")
+        raise FileNotFoundError(f"No file found: {answer_path}")
 
     with open(answer_path, "r", encoding="utf8") as file:
         content = file.read().strip()
@@ -50,19 +52,22 @@ def read_latest_llm_output(answer_dir, iteration=None):
 def extract_pathways(answer_text):
     pathways = []
     pathway_dict = {}
-    lines = [line.strip() for line in answer_text.splitlines() if line.strip()]
+    lines = [line.strip() for line in answer_text.splitlines() if
+             line.strip()]
     it = iter(lines)
     for line in it:
         if line.endswith(":"):
             pathway = line[:-1].strip()
             pathways.append(pathway)
             genes_line = next(it, "")
-            genes = [gene.strip() for gene in genes_line.split(",") if gene.strip()]
+            genes = [gene.strip() for gene in genes_line.split(",") if
+                     gene.strip()]
             pathway_dict[pathway] = genes
     return pathways, pathway_dict
 
 
-def validate_pathways(gpt_answer, ground_truth, instruction, generation_model):
+def validate_pathways(gpt_answer, ground_truth, instruction,
+                      generation_model):
     _, pathway_dict = extract_pathways(gpt_answer)
     prompt = (
         "Based on the identified pathways, confirm whether they match the ground truth pathways. "
@@ -76,7 +81,8 @@ def validate_pathways(gpt_answer, ground_truth, instruction, generation_model):
         {"role": "system", "content": instruction},
         {"role": "user", "content": prompt}
     ]
-    answer = query_llm(messages, instruction, prompt, save=False, generation_model=generation_model, query_range=1)
+    answer = query_llm(messages, instruction, prompt, save=False,
+                       generation_model=generation_model, query_range=1)
     return answer
 
 
@@ -94,7 +100,9 @@ def academic_validation(pathways, pathway_dict, academic_instruction,
             {"role": "system", "content": academic_instruction},
             {"role": "user", "content": prompt}
         ]
-        response = query_llm(messages, academic_instruction, prompt, save=False, generation_model=validation_model,
+        response = query_llm(messages, academic_instruction, prompt,
+                             save=False,
+                             generation_model=validation_model,
                              query_range=1)
         if response is None:
             response = "No academic validation response returned."
@@ -107,15 +115,14 @@ pubmed = PubMed(tool="MyTool", email="my@email.address")
 total_matches = 0
 credible_matches = 0
 
-
 pattern = re.compile(
-    r'\(?\s*'                    # optional opening parenthesis
-    r'(\d{4})\s*,\s*'            # 1) year
-    r'([^,]+?)\s*,\s*'           # 2) authors
-    r'"([^"]+)"\s*,\s*'          # 3) title
-    r'([^\)>]+?)\s*'             # 4) journal (up to ')' or '>')
-    r'\)?\s*>\s*'                # optional closing parenthesis + '>'
-    r'(.+)',                     # 5) rest of summary
+    r'\(?\s*'  # optional opening parenthesis
+    r'(\d{4})\s*,\s*'  # 1) year
+    r'([^,]+?)\s*,\s*'  # 2) authors
+    r'"([^"]+)"\s*,\s*'  # 3) title
+    r'([^\)>]+?)\s*'  # 4) journal (up to ')' or '>')
+    r'\)?\s*>\s*'  # optional closing parenthesis + '>'
+    r'(.+)',  # 5) rest of summary
     re.MULTILINE
 )
 
@@ -158,7 +165,8 @@ def replace_entry(match):
             if art.authors:
                 first = art.authors[0]
                 last = first.get('lastname', '').strip()
-                author_label = f"{last} et al." if len(art.authors) > 1 else last
+                author_label = f"{last} et al." if len(
+                    art.authors) > 1 else last
             else:
                 author_label = authors_str
 
@@ -175,8 +183,8 @@ def replace_entry(match):
 
         validation_logs[key] = {
             'citation': citation_str,
-            'count':    1,
-            'is_real':  is_real
+            'count': 1,
+            'is_real': is_real
         }
 
     sorted_entries = sorted(
@@ -201,12 +209,13 @@ def replace_entry(match):
 
 
 def main():
-    answer_dir = "./output/results/"
+    output_directory = "./output/results/generation_model_test"
+    answer_dir = output_directory + "/answers"
     ground_truth_file = "./output/results/ground_truth_pathways.txt"
     system_instruction_file = "./configs_system_instruction/system_instruction_comparison_pathways.txt"
     academic_instruction_file = "./configs_system_instruction/system_instruction_academic_validation_test.txt"
-    output_directory = "./output/results/validation_and_reporting"
     os.makedirs(output_directory, exist_ok=True)
+    os.makedirs(answer_dir, exist_ok=True)
 
     parser = argparse.ArgumentParser(description="Run the RAG workflow tests for varying gene counts.")
     parser.add_argument(
@@ -238,7 +247,8 @@ def main():
         comparison_instruction = file.read().strip()
 
     if os.path.exists(academic_instruction_file):
-        with open(academic_instruction_file, 'r', encoding="utf8") as file:
+        with open(academic_instruction_file, 'r',
+                  encoding="utf8") as file:
             academic_instruction = file.read().strip()
     else:
         print("Academic instruction file not found. Exiting program")
@@ -246,208 +256,217 @@ def main():
 
     # Variable model name change. Overlaying config GSEA.json file with
     # new model.
-    validation_models = [
-        "gpt-5-mini",
-        "gpt-5",
-        "gpt-4.1"
-    ]
+    generation_models = ["o3", "gpt-4.1", "gpt-5-mini", "gpt-5.1"]
+    validation_models = ["gpt-4.1"]
 
     # List with results for visualisation
     list_results_vis = []
 
     # Cache file path
-    cache_csv_path = os.path.join(output_directory, "validation_summary_test_mini.csv")
-    cache = pd.read_csv(cache_csv_path).to_dict("records") if args.use_cache and os.path.exists(cache_csv_path) else []
-    existing_cache_keys = {(r["iteration"], r["model"]) for r in cache}
+    cache_csv_path = os.path.join(output_directory, "generation_model_summary.csv")
+    # cache = pd.read_csv(cache_csv_path).to_dict("records") if args.use_cache and os.path.exists(cache_csv_path) else []
+    cache = []
+    existing_cache_keys = set()
 
-    for i in range(18):  # Amount of generations
-        iteration_num = i + 1
+    for gen_model in generation_models:
+        for i in range(10):  # Amount of generations
+            iteration_num = i + 1
+            print(f"Running model {gen_model}, iteration {iteration_num}")
 
-        # Skip regeneration if cached
-        expected_output_file = Path(answer_dir) / f"answer_iter{iteration_num}.txt"
-        if not expected_output_file.exists() or not args.use_cache:
-            print(
-                f"Generating new LLM output for iteration {iteration_num}...")
-            subprocess.run([
-                "python", "RAG_workflow.py",
-                "--config", args.config,
-                "--iteration", str(iteration_num)
-            ], check=True)
-        else:
-            print(
-                f"✅ Using cached LLM output: {expected_output_file.name}")
+            expected_output_file = Path(answer_dir) / f"answer_iter{iteration_num}_{gen_model}.txt"
 
+            # Skip regeneration if cached
+            if expected_output_file.exists() and args.use_cache:
+                print(
+                    f"Using existing answer for iteration {iteration_num}, model {gen_model}")
+            if not expected_output_file.exists() or not args.use_cache:
+                print(f"Generating new LLM output for iteration {iteration_num}...")
+                subprocess.run([
+                    "python", "RAG_workflow.py",
+                    "--config", args.config,
+                    "--iteration", str(iteration_num),
+                    "--generation_model", gen_model,
+                    "--output_dir", output_directory
+                ], check=True)
 
         # Load LLM output
-        try:
-            llm_output, latest_file = read_latest_llm_output(answer_dir,
-                                                             iteration=iteration_num)
-        except FileNotFoundError as e:
-            print(e)
-            continue
-
-        # Extract pathways and genes
-        _, pathway_dict = extract_pathways(llm_output)
-        output_genes = {
-            normalize_gene(g)
-            for genes in pathway_dict.values()
-            for g in genes
-            if g.strip()
-        }
-
-        total_output = len(output_genes)
-        matched = sum(1 for g in output_genes if g in input_set)
-        matched_genes = {g for g in output_genes if g in input_set}
-        hallucinated_genes = output_genes - matched_genes
-
-        print(f"total output genes: {total_output}: {output_genes}")
-        print(f"Matched genes: {matched}: {matched_genes}")
-        print(f"Hallucinated genes: {len(hallucinated_genes)}: {hallucinated_genes}")
-
-        hallucination_perc_generation = ((total_output - matched) / total_output * 100)
-        num_hallucinated = len(hallucinated_genes)
-        num_matched = len(matched_genes)
-
-        print(f"Iteration {iteration_num}: {num_hallucinated} hallucinated genes, {num_matched} matches")
-
-        print("\n=== DEBUG GENERATION MATCH ===")
-        print(
-            f"Total output genes ({len(output_genes)}): {sorted(list(output_genes))[:30]}")
-        print(
-            f"Input set ({len(input_set)}): {sorted(list(input_set))[:30]}")
-        print(
-            f"Matched genes ({len(matched_genes)}): {sorted(list(matched_genes))[:30]}")
-        print(
-            f"Hallucinated genes ({len(hallucinated_genes)}): {sorted(list(hallucinated_genes))[:30]}")
-        print(
-            f"Extra (output - input): {sorted(list(output_genes - input_set))[:30]}")
-        print(
-            f"Missing (input - output): {sorted(list(input_set - output_genes))[:30]}")
-        print("===")
-
-        for model in validation_models:
-            if (iteration_num, model) in existing_cache_keys:
-                print(
-                    f"⏩ Skipping cached validation for iteration {iteration_num}, model {model}")
+            try:
+                llm_output, latest_file = read_latest_llm_output(answer_dir, iteration=iteration_num, model=gen_model)
+                print(f"Latest file for MD: {latest_file}")
+            except FileNotFoundError as e:
+                print(e)
                 continue
 
-            print(
-                f"Validating generation from {os.path.basename(latest_file)} with {model}")
-
-            global total_matches, credible_matches
-            total_matches = 0
-            credible_matches = 0
-
-            comparison_summary = validate_pathways(llm_output, ground_truth,
-                                                   comparison_instruction,
-                                                   generation_model= model)
-
-            pathways, pathway_dict = extract_pathways(llm_output)
-            academic_results = academic_validation(
-                pathways, pathway_dict,
-                academic_instruction,
-                validation_model=model
-            )
-
-            processed_results = []
-            for pathway, genes, summary in tqdm(academic_results, desc="Processing academic results"):
-                new_summary = pattern.sub(replace_entry, summary)
-                processed_results.append((pathway, genes, new_summary))
-
-            credible_pathways = [
-                pathway for pathway, genes, response in
-                processed_results
-                if 'color:green' in response.lower()
-            ]
-
-            all_pathways = [pathway for pathway, genes, response in
-                            processed_results]
-
-            run_result = {
-                "iteration": iteration_num,
-                "model": model,
-                "total_matches": total_matches,
-                "credible_matches": credible_matches,
-                "hallucination_perc_validation": ((total_matches - credible_matches) /
-                                                  total_matches * 100.0) if total_matches > 0 else 0.0,
-                "hallucination_perc_generation": hallucination_perc_generation,
-                "percent_credible": (credible_matches / total_matches *
-                                     100) if total_matches > 0 else 0.0,
-                "output_genes": list(output_genes),
-                "matched_genes": matched,
-                "matched_genes_names": list(matched_genes),
-                "hallucinated_genes": len(hallucinated_genes),
-                "hallucinated_genes_list": list(hallucinated_genes),
-                "credible_pathways": len(credible_pathways),
-                "credible_pathways_list": list(credible_pathways),
-                "all_pathways_list": all_pathways
+            # Extract pathways and genes
+            _, pathway_dict = extract_pathways(llm_output)
+            output_genes = {
+                normalize_gene(g)
+                for genes in pathway_dict.values()
+                for g in genes
+                if g.strip()
             }
 
-            list_results_vis.append(run_result)
+            total_output = len(output_genes)
+            matched = sum(1 for g in output_genes if g in input_set)
+            matched_genes = {g for g in output_genes if g in input_set}
+            hallucinated_genes = output_genes - matched_genes
 
-            base_name = os.path.splitext(os.path.basename(latest_file))[
-                0]  # Bv. "answer_iter1"
-            md_filename = os.path.join(
-                output_directory,
-                # Maakt een uniek bestand per iteratie EN per model
-                f"validation_{base_name}_{model}_{iteration_num}.md"
-            )
+            print(f"total output genes: {total_output}: {output_genes}")
+            print(f"Matched genes: {matched}: {matched_genes}")
+            print(f"Hallucinated genes: {len(hallucinated_genes)}: {hallucinated_genes}")
 
-            with open(md_filename, 'w', encoding="utf8") as md:
-                md.write(
-                    f"# Pathway Validation Report for {base_name} (Model: {model})\n\n")
-                md.write("## Hallucination statistics\n")
-                md.write(f"- **Input gene‐count (size)**: {size}\n")
-                md.write(f"- **Total unique output genes**: {total_output}\n")
-                md.write(f"- **Matched (non‐hallucinated)**: {matched}\n")
-                md.write(
-                    f"- **Hallucination percentage (Generation)**: {hallucination_perc_generation:.2f}%\n\n")
+            hallucination_perc_generation = (
+                        (total_output - matched) / total_output * 100)
+            num_hallucinated = len(hallucinated_genes)
+            num_matched = len(matched_genes)
 
-                md.write("## Table of Contents\n")
-                toc = [
-                    ("Credible sources found", "#credible-sources-found"),
-                    ("Original genes / pathways", "#original-genes--pathways"),
-                    ("Automated validation of pathways",
-                     "#automated-validation-of-pathways"),
-                    ("g:Profiler comparison summary",
-                     "#gprofiler-comparison-summary"),
-                ]
-                for title, anchor in toc:
-                    md.write(f"- [{title}]({anchor})\n")
-                md.write("\n")
+            print(f"Iteration {iteration_num}: {num_hallucinated} hallucinated genes, {num_matched} matches")
+            print("\n=== DEBUG GENERATION MATCH ===")
+            print(f"Total output genes ({len(output_genes)}): {sorted(list(output_genes))[:30]}")
+            print(f"Input set ({len(input_set)}): {sorted(list(input_set))[:30]}")
+            print(f"Matched genes ({len(matched_genes)}): {sorted(list(matched_genes))[:30]}")
+            print(f"Hallucinated genes ({len(hallucinated_genes)}): {sorted(list(hallucinated_genes))[:30]}")
+            print(f"Missing (input - output): {sorted(list(input_set - output_genes))[:30]}")
+            print("===")
 
-                # Haal percent_credible uit het run_result dat net is gemaakt
-                percent_credible = run_result['percent_credible']
-                md.write("## Credible sources found\n")
-                md.write(
-                    f"**{percent_credible:.1f}% credible matches ({credible_matches} out of {total_matches})**\n\n"
+            for model in validation_models:
+                if (iteration_num, model) in existing_cache_keys:
+                    print(
+                        f"⏩ Skipping cached validation for iteration {iteration_num}, model {model}")
+                    continue
+
+                print(f"Validating generation from {os.path.basename(latest_file)} with {model}")
+
+                global total_matches, credible_matches
+                total_matches = 0
+                credible_matches = 0
+
+                comparison_summary = validate_pathways(llm_output,
+                                                       ground_truth,
+                                                       comparison_instruction,
+                                                       generation_model=model)
+
+                pathways, pathway_dict = extract_pathways(llm_output)
+                academic_results = academic_validation(
+                    pathways, pathway_dict,
+                    academic_instruction,
+                    validation_model=model
                 )
 
-                md.write("## Original genes / pathways\n")
-                # pathway_dict is van de 'llm_output', wat correct is
-                for pathway, genes in pathway_dict.items():
-                    md.write(f"- **{pathway}**: {', '.join(genes)}\n")
-                md.write("\n")
+                processed_results = []
+                for pathway, genes, summary in tqdm(academic_results,
+                                                    desc="Processing academic results"):
+                    new_summary = pattern.sub(replace_entry, summary)
+                    processed_results.append((pathway, genes, new_summary))
 
-                md.write("## Automated validation of pathways\n")
-                # processed_results is zojuist berekend in deze loop
-                for pathway, genes, new_summary in processed_results:
-                    md.write(f"### {pathway}\n")
-                    md.write(f"**Genes involved:** {', '.join(genes)}\n\n")
-                    md.write(f"{new_summary}\n\n")
+                credible_pathways = [
+                    pathway for pathway, genes, response in
+                    processed_results
+                    if 'color:green' in response.lower()
+                ]
 
-                md.write("## g:Profiler comparison summary\n")
-                # comparison_summary is berekend in de buitenste 'iteratie' loop
-                md.write(f"{comparison_summary}\n\n")
+                all_pathways = [pathway for pathway, genes, response in
+                                processed_results]
 
-            print(f"Markdown validation report created: {md_filename}")
+                run_result = {
+                    "iteration": iteration_num,
+                    "generation_model": gen_model,
+
+                    # Generation metrics
+                    "num_input_genes": len(input_set),
+                    "num_output_genes": total_output,
+                    "output_genes": list(output_genes),
+                    "matched_genes": matched,
+                    "matched_genes_names": list(matched_genes),
+                    "num_hallucinated_genes": num_hallucinated,
+                    "hallucinated_genes_list": list(hallucinated_genes),
+                    "hallucination_perc_generation": hallucination_perc_generation,
+
+                    # Pathway statistics
+                    "num_pathways_output": len(pathways),
+                    "credible_pathways_list": list(credible_pathways),
+                    "all_pathways_list": all_pathways,
+                    "total_matches": total_matches,
+                    "credible_matches": credible_matches,
+                    "percent_credible": (credible_matches / total_matches *
+                                         100) if total_matches > 0 else 0.0
+                }
+
+                list_results_vis.append(run_result)
+
+                base_name = os.path.splitext(os.path.basename(latest_file))[
+                    0]  # Bv. "answer_iter1"
+                md_filename = os.path.join(
+                    output_directory,
+                    # Maakt een uniek bestand per iteratie EN per model
+                    f"validation_{gen_model}_inter{iteration_num}.md"
+                )
+
+                print("--MARKDOWN DEBUG--")
+                print(f"Creating markdown for iteration {iteration_num}, generation model {gen_model}, validation model {model}")
+                print(f"Writing to: {md_filename}")
+                print(f"Processed results length: {len(processed_results)}")
+
+                with open(md_filename, 'w', encoding="utf8") as md:
+                    md.write(
+                        f"# Pathway Validation Report for {base_name} (Model: {model})\n\n")
+                    md.write("## Hallucination statistics\n")
+                    md.write(f"- **Input gene‐count (size)**: {size}\n")
+                    md.write(
+                        f"- **Total unique output genes**: {total_output}\n")
+                    md.write(
+                        f"- **Matched (non‐hallucinated)**: {matched}\n")
+                    md.write(
+                        f"- **Hallucination percentage (Generation)**: {hallucination_perc_generation:.2f}%\n\n")
+
+                    md.write("## Table of Contents\n")
+                    toc = [
+                        ("Credible sources found",
+                         "#credible-sources-found"),
+                        ("Original genes / pathways",
+                         "#original-genes--pathways"),
+                        ("Automated validation of pathways",
+                         "#automated-validation-of-pathways"),
+                        ("g:Profiler comparison summary",
+                         "#gprofiler-comparison-summary"),
+                    ]
+                    for title, anchor in toc:
+                        md.write(f"- [{title}]({anchor})\n")
+                    md.write("\n")
+
+                    # Haal percent_credible uit het run_result dat net is gemaakt
+                    percent_credible = run_result['percent_credible']
+                    md.write("## Credible sources found\n")
+                    md.write(
+                        f"**{percent_credible:.1f}% credible matches ({credible_matches} out of {total_matches})**\n\n"
+                    )
+
+                    md.write("## Original genes / pathways\n")
+                    # pathway_dict is van de 'llm_output', wat correct is
+                    for pathway, genes in pathway_dict.items():
+                        md.write(f"- **{pathway}**: {', '.join(genes)}\n")
+                    md.write("\n")
+
+                    md.write("## Automated validation of pathways\n")
+                    # processed_results is zojuist berekend in deze loop
+                    for pathway, genes, new_summary in processed_results:
+                        md.write(f"### {pathway}\n")
+                        md.write(
+                            f"**Genes involved:** {', '.join(genes)}\n\n")
+                        md.write(f"{new_summary}\n\n")
+
+                    md.write("## g:Profiler comparison summary\n")
+                    # comparison_summary is berekend in de buitenste 'iteratie' loop
+                    md.write(f"{comparison_summary}\n\n")
+
+                print(f"Markdown validation report created: {md_filename}")
+
     # Data to CSV, combine with cache
     combined_results = cache + list_results_vis if cache else list_results_vis
     df = pd.DataFrame(combined_results)
     df.to_csv(cache_csv_path, index=False)
 
-    print(f"\nValidation results saved to:"
-          f" {cache_csv_path}")
+    print(f"\nValidation results saved to: {cache_csv_path}")
 
 
 if __name__ == "__main__":

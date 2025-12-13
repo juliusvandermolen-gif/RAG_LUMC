@@ -1,0 +1,17 @@
+Axon Guidance and Growth Cone Dynamics:
+Ntn1, Slit2, Robo2, Sema3g, Sema4f, Nrp1, Nrp2, Plxnb1, Efna5, Cntn6, Dpysl3, Dpysl5, Tnik, Gnai1, Lrrtm3, Itga8, Itga7, Srgap1, Rhoj
+
+Synaptic Vesicle Transport and Plasticity:
+Synpr, Kif1a, Ryr3, Pfn2, Tubb4a, Tuba4a, Dpysl3, Dpysl5, Lrrtm3, Srgap1, Map1lc3a, Ppp1r14c, Prkar2b, Gprc5b, Piezo2, Cers6, Sgpl1
+
+Myelination and Node of Ranvier Assembly:
+Mag, Mpz, Pmp22, Gldn, Drp2, Mal, Slc9a9, Cntn6, Septin5, Cldn19
+
+Extracellular Matrix Remodeling in Nervous System:
+Adamts17, Adamtsl1, Adamtsl3, Col9a3, Col11a1, Col15a1, Col20a1, Col8a2, Efemp2, Emilin1, Hapln1, Ltbp1, Bgn, Mfap5, Timp1, Matn3, Vash1
+
+Wnt/Planar Cell Polarity Signaling in Neural Development:
+Wnt5a, Lef1, Tnik, Rhoj, Dyrk1a, Gnai1, Cers6
+
+Calcium-Dependent Neural Signaling:
+Ryr3, Itpripl1, Piezo2, P2ry2, Prkd3

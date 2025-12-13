@@ -1672,7 +1672,8 @@ def generate_llm_response(
     weight_faiss: float,
     weight_bm25: float,
     system_instruction_for_response: str,
-    gene_count: Optional[int] = None
+    gene_count: Optional[int] = None,
+    generation_model: Optional[str] = None
 ) -> Tuple[
     Optional[str],
     List[str],
@@ -1777,7 +1778,9 @@ def generate_response_and_save(
     weight_bm25: float,
     system_instruction_for_response: str,
     gene_count: Optional[int] = None,
-    iteration: Optional[int] = None
+    iteration: Optional[int] = None,
+    output_dir: Optional[str] = None,
+    generation_model: str = None
 ) -> None:
     """
     Orchestrates a full retrieval‐augmented generation (RAG) workflow:
@@ -1787,6 +1790,8 @@ def generate_response_and_save(
       4. Closes the database connection.
 
     Args:
+        output_dir:
+        iteration:
         query: The original user query (str).
         gene_list_string: A comma‐separated string of gene names (str).
         conn: An active SQLite database connection.
@@ -1803,20 +1808,28 @@ def generate_response_and_save(
     Returns:
         None. Writes the LLM answer, document references, and scores to disk, then closes 'conn'.
     """
+
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     answer, document_references, rrf_scores, bm25_scores, faiss_scores = generate_llm_response(
         query,  gene_list_string,
         conn, index, tokenizer, embeddings_model,
         bm25_index, bm25_chunk_ids,
         weight_faiss, weight_bm25,
-        system_instruction_for_response, gene_count
+        system_instruction_for_response, gene_count,
+        generation_model=generation_model
     )
 
+    answers_dir = Path(output_dir) / "answers"
+    answers_dir.mkdir(parents=True, exist_ok=True)
+
     if answer and answer != "Processing complete.":
-        file_name = f"./output/results/answer_iter{iteration}.txt"
+        file_name = answers_dir / f"answer_iter{iteration}_{generation_model}.txt"
         save_answer_to_file(answer, document_references, file_name=file_name)
-        support_dir = Path("./output/support")
+        support_dir = output_dir / "support"
         support_dir.mkdir(parents=True, exist_ok=True)
-        output_file = support_dir / "scores{suffix}.xlsx"
+        output_file = support_dir / f"scores_iter{iteration}.xlsx"
         export_scores_to_excel(
             rrf_scores,
             bm25_scores,
@@ -1832,7 +1845,7 @@ def generate_response_and_save(
 def save_answer_to_file(
     answer: str,
     document_references: List[str],
-    file_name: str = "./output/results/answer.txt"
+    file_name: str = "./output/results/answer.txt",
 ) -> None:
 
     """
@@ -1871,8 +1884,7 @@ def process_files_in_directory(
 
             converted_lines, unknown_genes = convert_gene_id_to_symbols(file,
                                                                         data_dir, ncbi_json_dir)
-            print(
-                f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
+            print(f"Unknown genes saved to 'unknown_genes.txt'. Total unknown genes: {len(unknown_genes)}")
 
 
 def embed_documents_and_save(
@@ -2055,6 +2067,18 @@ def main() -> None:
         default=None,
         help="Iteration number"
     )
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        default="./output/results/",
+        help="Directory to store the LLM output"
+    )
+    parser.add_argument(
+        "--generation_model",
+        type=str,
+        default=None,
+        help="LLM model to use for generation (e.g., o3, gpt-4, gpt-5)"
+    )
     args = parser.parse_args()
 
     config_dict = load_config(args.config, print_settings=True)
@@ -2062,6 +2086,11 @@ def main() -> None:
     config_name = os.path.splitext(os.path.basename(args.config))[0]
     globals()['config_name'] = config_name
     globals().update(config_dict)
+
+    output_dir = args.output_dir
+    os.makedirs(output_dir, exist_ok=True)
+
+    generation_model = args.generation_model
 
     # Debug: Check data directories at start
     print("\n=== Checking data directories ===")
@@ -2186,7 +2215,9 @@ def main() -> None:
                 bm25_index, bm25_chunk_ids,
                 weight_faiss, weight_bm25,
                 system_instruction_response,
-                gene_count, iteration
+                gene_count, iteration,
+                output_dir=output_dir,
+                generation_model=generation_model
             )
 
             pbar.update()

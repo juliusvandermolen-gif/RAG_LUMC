@@ -1,0 +1,20 @@
+Axon Guidance:
+Ntn1, Slit2, Robo2, Nrp1, Nrp2, Plxnb1, Sema3g, Sema4f, Efna5, Itga8, Dpysl3, Dpysl5, Srgap1,
+
+Myelination:
+Mag, Mpz, Pmp22, Drp2, Gldn, Mal,
+
+Synaptic Vesicle Transport and Plasticity:
+Kif1a, Lrrtm3, Prkar2b, Ryr3, Itpripl1, Piezo2, P2ry2, Scn7a, Synpr, Numb, Msi1, Pfn2,
+
+Extracellular Matrix Organization in Neural Development:
+Adamts17, Adamtsl1, Adamtsl3, Ltbp1, Col9a3, Col15a1, Col20a1, Col11a1, Col8a2, Hapln1, Matn3, Efemp2, Bgn,
+
+Wnt Signaling in Neural Patterning:
+Wnt5a, Lef1, Tnik, Dyrk1a,
+
+Neurotrophic and Growth Factor Signaling:
+Cpe, Igfbp3, Tf, Ghr, Lifr, Nampt, Pam, Epas1,
+
+Calcium-Mediated Neural Signal Transduction:
+Ryr3, Itpripl1, Nfatc1, P2ry2, Piezo2, Ptgfr,

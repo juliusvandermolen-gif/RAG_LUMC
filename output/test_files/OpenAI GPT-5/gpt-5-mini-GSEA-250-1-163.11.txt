@@ -1,0 +1,59 @@
+Axon guidance / Growth‑cone signaling:
+Sema4f, Sema3g, Nrp1, Nrp2, Plxnb1, Slit2, Robo2, Ntn1, Dpysl3, Dpysl5, Srgap1, Rhoj, Asap1, Kif1a, Cntn6, Efna5, Lrrtm3, Cdh13, Olfm2, Itga8, Itga7
+
+Synaptic transmission & plasticity:
+Synpr, Sncg, Cpe, Pcsk5, Pam, Prkar2b, Ppp1r14c, Ppp1r36, Pfn2, Rab10, Ppfia4, Bace2, Serpini1, Serpinf1, St3gal5, Mef2c, Nfatc1, Atf3, Atf5, Dyrk1a, Grb14, Prkd3, Map1lc3a
+
+Extracellular matrix, perineuronal nets & ECM remodeling:
+Hapln1, Adamts17, Adamtsl1, Adamtsl3, Htra1, Mfap5, Matn3, Col9a3, Col11a1, Col15a1, Col8a2, Col20a1, Emilin1, Efemp2, Bgn, Timp1, Has2, Pxdn
+
+Myelination & axon‑glia interactions:
+Mpz, Mag, Pmp22, Mal, Prx, Drp2, Gldn, Cldn19, Cldnd1
+
+Neuropeptide processing & regulated secretion:
+Cpe, Pcsk5, Pam, Pappa, Pltp, Apod, Psap, Ecel1, Serpini1, Serpinf1, Cpm, Papola
+
+Cytoskeleton, axonal transport & vesicle trafficking:
+Tuba4a, Tubb4a, Kif1a, Septin4, Septin5, Pfn2, Myo1d, Rab10, Cep295nl, Tbccd1, Ckap4, Map1lc3a
+
+Ion channels, calcium signaling & excitability:
+Ryr3, Itpripl1, Scn7a, Piezo2, Tpcn1, P2ry2, Slc9a9
+
+Wnt / developmental signaling & morphogenesis:
+Wnt5a, Lef1, Mef2c, Dyrk1a, Lifr, Runx3, Ebf1, Klf9, Numb, Hmx3, Ppard, Epas1
+
+Proteolysis & extracellular proteases (synaptic remodeling):
+Prss12, Prss23, Htra1, Bace2, Adamts17, Adamtsl1, Adamtsl3, Ctbs, A2m, Serpini1, Timp1
+
+Neuroinflammation, chemokine & immune signaling in brain:
+Cxcl12, Cxcl14, Ifnar1, Nlrp1a, Tnfrsf1a, Ighm, C1qtnf1, Aif1l, Selplg, Vopp1, A2m, Tf, Fth1
+
+Transcriptional regulators of neuronal differentiation & plasticity:
+Mef2c, Nfatc1, Atf3, Atf5, Runx3, Ebf1, Klf9, Id2, Ddx1, Eif2ak2, Smc6, Vrk1, Taf9b, Gtf2e1, Mybl1
+
+Lipid metabolism, glycosylation & membrane composition affecting synapses:
+St3gal5, Pltp, Abca8a, Abcb4, Apod, Cers6, Agpat5, Nampt, Slc35a2, Gcnt1, Slc39a13
+
+Autophagy, ubiquitin‑proteasome & proteostasis:
+Psmd2, Fbxo11, Rnf144a, Trim35, Map1lc3a, Hsp90aa1, Hspa12a, Pnpt1
+
+Synapse adhesion & organization (trans‑synaptic organizers):
+Lrrtm3, Slitrk6, Cntn6, Cdh13, Pals1, Olfm2, Itga7, Itga8
+
+Growth factor & receptor signaling relevant to neuronal survival/plasticity:
+Met, Lifr, Ghr, Igfbp3, Grb14, Tril, Nrp1, Nrp2, Igf2bp2
+
+Metabolic & mitochondrial support influencing neuronal function:
+Sqor, Nampt, Pgm1, Tf, Fth1, Apod, Pltp, Hadhb, Rrm2
+
+Proteoglycan, glycan & secretory pathway modifiers (extracellular signaling):
+Man1a1, Manba, St3gal5, Fut10, Has2, Gcnt1, Slc35a2, Gcnt1, Pappa
+
+Autonomous / neuronal excitability modulators & scaffolds:
+Ryr3, Itpripl1, Scn7a, Piezo2, Tpcn1, P2ry2, Pfn2, Septin5, Septin4
+
+Neuronal apoptosis / stress response & injury markers:
+Atf3, Atf5, Eif2ak2, Hsp90aa1, Hspa12a, Serpinf1, Psap
+
+Neurodevelopmental disorder–linked signaling & synaptic regulators:
+Dyrk1a, Mef2c, Numb, Nrp1, Nrp2, Kif1a, Lrrtm3, Slitrk6, Cntn6

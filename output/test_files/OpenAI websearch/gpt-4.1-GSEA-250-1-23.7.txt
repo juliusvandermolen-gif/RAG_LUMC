@@ -1,0 +1,53 @@
+Synaptic Plasticity and Neurotransmission:
+Cntn6, Prss12, Sema4f, Cpe, Synpr, Ntn1, Mag, Srgap1, Nrp1, Nrp2, Robo2, Slit2, Tnik, Gnai1, Dpysl5, Prkar2b, Dyrk1a, Ryr3, Lrrtm3, Kif1a, Dpysl3, Mef2c, Efna5, Plxnb1, Wnt5a, Sipa1l1, Numb, Msi1, Nes, Gldn, Pfn2, Tubb4a, Tuba4a, Map1lc3a, Pam, Prx, Mpz, Pmp22, Drp2, Mal, Sncg, Sgpl1, Cers6, Hspa12a, Hsp90aa1
+
+Axon Guidance and Neural Connectivity:
+Cntn6, Sema4f, Ntn1, Nrp1, Nrp2, Robo2, Slit2, Plxnb1, Efna5, Dpysl5, Dpysl3, Lrrtm3, Kif1a, Srgap1, Gldn, Sipa1l1, Tnik, Gnai1, Wnt5a
+
+Cell Adhesion and Extracellular Matrix in Neural Development:
+Cntn6, Hapln1, Adamts17, Adamtsl3, Adamtsl1, Col9a3, Col20a1, Col15a1, Col11a1, Col8a2, Matn3, Efemp2, Emilin1, Bgn, Cdh13, Cldn19, Cldnd1, Pkp1, Tspan4, Tspan5, Gja1, Mpz, Pmp22, Drp2, Mal, Gldn, Sema4f, Nrp1, Nrp2, Robo2, Slit2
+
+Neurotrophic and Growth Factor Signaling:
+Igfbp3, Lifr, Ghr, Epas1, Pappa, Ccn3, Ccn4, Efemp2, Nfatc1, Atf3, Atf5, Mef2c, Lef1, Eif2ak2, Prkar2b, Dyrk1a, Ppard
+
+Neural Crest and Glial Development:
+Hand2, Hand1, Mpz, Pmp22, Drp2, Mal, Sgpl1, Cers6, Numb, Msi1, Nes, Gldn, Efna5, Plxnb1, Wnt5a
+
+Ion Channel and Neurotransmitter Receptor Activity:
+Scn7a, Ryr3, P2ry2, Slc9a9, Slc22a17, Slc35a2, Slc39a13, Slco3a1, Piezo2, Itpripl1
+
+Synaptic Vesicle Cycle and Neurotransmitter Release:
+Cpe, Synpr, Pam, Prkar2b, Dpysl5, Dpysl3, Kif1a, Map1lc3a, Tubb4a, Tuba4a
+
+Wnt and Semaphorin Signaling in Neural Patterning:
+Wnt5a, Sema4f, Sema3g, Plxnb1, Efna5, Nrp1, Nrp2, Robo2, Slit2
+
+Myelination and Oligodendrocyte Function:
+Mpz, Pmp22, Drp2, Mal, Mag, Sncg
+
+Transcriptional and Epigenetic Regulation in Neural Development:
+Peg3, Ebf1, Runx3, Mef2c, Lef1, Atf3, Atf5, Taf9b, Dyrk1a, Rrm2, Klf9, Smc6, Mybl1, Nfatc1, Parp14
+
+Neural Stem Cell Maintenance and Differentiation:
+Msi1, Nes, Numb, Sipa1l1, Gldn, Dyrk1a, Atf3, Atf5, Eif2ak2, Mef2c
+
+Neuroimmune and Inflammatory Signaling:
+Aif1l, Cxcl12, Cxcl14, Ighm, Ifnar1, Nlrp1a, Tnfrsf1a, Selplg, A2m, Serpinf1, Serpini1, Timp1
+
+Retinoic Acid and Metabolic Regulation in Neural Development:
+Aldh1a1, Gldc, Nampt, Hadhb, Pgm1, Ppard, Sqor, Dhrs1, Apod
+
+Cytoskeletal Dynamics and Neurite Outgrowth:
+Tuba4a, Tubb4a, Kif1a, Pfn2, Septin4, Septin5, Fhod3, Stard13, Acap2, Rhoj, Asap1, Phldb2
+
+Notch and Cell Fate Determination:
+Numb, Hes1 (implied), Msi1, Nes, Sipa1l1
+
+Glutamatergic and GABAergic Synapse Regulation:
+Gnai1, Prkar2b, Dpysl5, Dpysl3, Ryr3, Nfatc1
+
+Oxidative Stress and Neuroprotection:
+Fth1, Hspa12a, Hsp90aa1, Psap, Apod, Sqor, Dhrs1, Serpinf1
+
+Emerging/Novel Neural Pathways:
+ENSRNOG00000062503, ENSRNOG00000063649, Magec2l1, Mageb16, Magea4, Magea9 (potential roles in neural differentiation and plasticity)
