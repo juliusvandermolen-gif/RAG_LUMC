@@ -354,11 +354,11 @@ def main():
                 new_summary = pattern.sub(replace_entry, summary)
                 processed_results.append((pathway, genes, new_summary))
 
-            credible_pathways = [
-                pathway for pathway, genes, response in
-                processed_results
-                if 'color:green' in response.lower()
-            ]
+            # credible_pathways = [
+            #     pathway for pathway, genes, response in
+            #     processed_results
+            #     if 'color:green' in response.lower()
+            # ]
 
             all_pathways = [pathway for pathway, genes, response in
                             processed_results]
@@ -378,8 +378,8 @@ def main():
                 "matched_genes_names": list(matched_genes),
                 "hallucinated_genes": len(hallucinated_genes),
                 "hallucinated_genes_list": list(hallucinated_genes),
-                "credible_pathways": len(credible_pathways),
-                "credible_pathways_list": list(credible_pathways),
+                # "credible_pathways": len(credible_pathways),
+                # "credible_pathways_list": list(credible_pathways),
                 "all_pathways_list": all_pathways
             }
 
