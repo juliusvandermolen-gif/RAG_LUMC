@@ -380,7 +380,7 @@ def main():
                 "hallucinated_genes_list": list(hallucinated_genes),
                 # "credible_pathways": len(credible_pathways),
                 # "credible_pathways_list": list(credible_pathways),
-                "all_pathways_list": all_pathways
+                # "all_pathways_list": all_pathways
             }
 
             list_results_vis.append(run_result)
