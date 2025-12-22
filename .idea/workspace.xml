@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="Added hallucinated genes percentage and list. Also added hallucination percentage of generation model.">
-      <change beforePath="$PROJECT_DIR$/.idea/RAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5841c752-3e92-4698-9778-284efe398bd7" name="Changes" comment="Removed pathway statistics because they became irrelevant. We focused more on genes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/results/ground_truth_pathways.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/results/ground_truth_pathways.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automated_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automated_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validation_model_testing/Validation_model_testing_visualisation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/validation_model_testing/Validation_model_testing_visualisation.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="output-punkt-genereren" />
+        <entry key="$PROJECT_DIR$" value="generation_model_test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,7 +125,7 @@
       <recent name="$PROJECT_DIR$/output/support" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.RAG_workflow">
     <configuration name="RAG_workflow" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
@@ -277,7 +276,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-c69650fc56ca-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15619.17" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26574.90" />
+        <option value="bundled-python-sdk-c1fac28bca04-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26574.90" />
       </set>
     </attachedChunks>
   </component>
@@ -306,6 +306,17 @@
       <workItem from="1762853317723" duration="21000" />
       <workItem from="1762952267356" duration="18109000" />
       <workItem from="1763654036201" duration="3779000" />
+      <workItem from="1765103145847" duration="28574000" />
+      <workItem from="1765200514704" duration="11060000" />
+      <workItem from="1765653276244" duration="103000" />
+      <workItem from="1765653389484" duration="129000" />
+      <workItem from="1765654238815" duration="344000" />
+      <workItem from="1765654609831" duration="70000" />
+      <workItem from="1765655106343" duration="1555000" />
+      <workItem from="1765659384940" duration="2000" />
+      <workItem from="1765815030085" duration="519000" />
+      <workItem from="1765872810876" duration="1452000" />
+      <workItem from="1765969167311" duration="597000" />
     </task>
     <task id="LOCAL-00001" summary="Dependabot add beta version. Test case">
       <option name="closed" value="true" />
@@ -395,18 +406,61 @@
       <option name="project" value="LOCAL" />
       <updated>1762725396348</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Generated 10 new answers for these models: &quot;o3&quot;, &quot;gpt-4.1&quot;, &quot;gpt-5-mini&quot;, &quot;gpt-5.1&quot;. Visualized the results in &quot;generation_model_test_visualization.ipynb&quot;.">
+      <option name="closed" value="true" />
+      <created>1765653507912</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1765653507912</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updated &quot;generation_model_test_visualization.ipynb&quot;: better layout and added extra table that shows the hallucinated genes per model.">
+      <option name="closed" value="true" />
+      <created>1765654662164</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1765654662164</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="generation_model_test" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="generation_model_test" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -423,15 +477,17 @@
     <MESSAGE value="Inplemented caching. Ran code in terminal using the following command: python automated_validation.py --use_cache" />
     <MESSAGE value="Fixed the total_matches, credible_matches, hallucination_percentage_val and percent_credible." />
     <MESSAGE value="Added hallucinated genes percentage and list. Also added hallucination percentage of generation model." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added hallucinated genes percentage and list. Also added hallucination percentage of generation model." />
+    <MESSAGE value="Generated 10 new answers for these models: &quot;o3&quot;, &quot;gpt-4.1&quot;, &quot;gpt-5-mini&quot;, &quot;gpt-5.1&quot;. Visualized the results in &quot;generation_model_test_visualization.ipynb&quot;." />
+    <MESSAGE value="Updated &quot;generation_model_test_visualization.ipynb&quot;: better layout and added extra table that shows the hallucinated genes per model." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated &quot;generation_model_test_visualization.ipynb&quot;: better layout and added extra table that shows the hallucinated genes per model." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RAG_workflow_py$RAG_workflow.coverage" NAME="RAG_workflow Coverage Results" MODIFIED="1745517997124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/run_all_files_py$RAG_workflow.coverage" NAME="RAG_workflow Coverage Results" MODIFIED="1760430575896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/plotting_py$plotting.coverage" NAME="plotting Coverage Results" MODIFIED="1744836289975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/run_all_files_py$run_all_files.coverage" NAME="run_all_files Coverage Results" MODIFIED="1763930402516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/automated_validation_py$automated_validation.coverage" NAME="automated_validation Coverage Results" MODIFIED="1747343332649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/run_all_files_py$automated_validation.coverage" NAME="automated_validation Coverage Results" MODIFIED="1765135857499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/run_all_files_py$RAG_workflow.coverage" NAME="RAG_workflow Coverage Results" MODIFIED="1760430575896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RAG_workflow_py$RAG_workflow.coverage" NAME="RAG_workflow Coverage Results" MODIFIED="1745517997124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/automated_validation_py$plotting.coverage" NAME="plotting Coverage Results" MODIFIED="1744911308540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/run_all_files_py$automated_validation.coverage" NAME="automated_validation Coverage Results" MODIFIED="1762720071184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
