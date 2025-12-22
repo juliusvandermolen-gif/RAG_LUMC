@@ -381,11 +381,9 @@ def main():
                     "num_hallucinated_genes": num_hallucinated,
                     "hallucinated_genes_list": list(hallucinated_genes),
                     "hallucination_perc_generation": hallucination_perc_generation,
-
-                    # Pathway statistics
-                    "num_pathways_output": len(pathways),
-                    "credible_pathways_list": list(credible_pathways),
-                    "all_pathways_list": all_pathways,
+                    # "num_pathways_output": len(pathways),
+                    # "credible_pathways_list": list(credible_pathways),
+                    # "all_pathways_list": all_pathways,
                     "total_matches": total_matches,
                     "credible_matches": credible_matches,
                     "percent_credible": (credible_matches / total_matches *
